@@ -29,6 +29,16 @@ REQUIRE_PREDICATE GAME_IS ~bgee eet~ @1 /* ~This mod requires the EET mod to be 
 COMPILE EVALUATE_BUFFER ~lichdom/d~
 COMPILE EVALUATE_BUFFER ~lichdom/baf~ 
 
+//{ BMP
+	COPY ~lichdom/bmp/xaplichl.bmp~ ~override~
+	COPY ~lichdom/bmp/xaplichm.bmp~ ~override~
+	COPY ~lichdom/bmp/xaplichs.bmp~ ~override~
+//}
+
+//{ CRE
+	COPY ~lichdom/cre/xabdbg.cre~ ~override~
+//}
+
 //{ SPL
 	//{ Portrait Change (Lich)
 	COPY ~lichdom/spl/xaplich.spl~ ~override~
