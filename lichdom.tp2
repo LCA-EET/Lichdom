@@ -46,6 +46,8 @@ COMPILE EVALUATE_BUFFER ~lichdom/d~
 
 //{ ITM
 	COPY ~lichdom/itm/xaphyl.itm~ ~override~
+	SAY NAME2 @2
+	SAY DESC @3
 //}
 
 //{ SPL
