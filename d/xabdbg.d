@@ -17,6 +17,24 @@ IF ~
 	~
 	EXIT
 	
+	IF ~~ THEN REPLY @4
+	DO ~
+		ActionOverride(Player1, ChangeAnimationNoEffect("LICH01"))
+	~
+	EXIT
+	
+	IF ~~ THEN REPLY @5
+	DO ~
+		ActionOverride(Player1, ChangeAnimation("LICH01"))
+	~
+	EXIT
+	
+	IF ~~ THEN REPLY @6
+	DO ~
+		ActionOverride(Player1, Polymorph(BEHOLDER))
+	~
+	EXIT
+	
 	IF ~~ THEN REPLY @2
 	EXIT	
 END
