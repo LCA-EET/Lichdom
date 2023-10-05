@@ -11,6 +11,12 @@ IF ~
 	~
 	EXIT
 	
+	IF ~~ THEN REPLY @3
+	DO ~
+		GiveItemCreate("xaphyl", LastTalkedToBy(Myself),1,0,0)
+	~
+	EXIT
+	
 	IF ~~ THEN REPLY @2
 	EXIT	
 END
