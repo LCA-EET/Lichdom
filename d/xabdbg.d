@@ -35,6 +35,12 @@ IF ~
 	~
 	EXIT
 	
+	IF ~~ THEN REPLY @7
+	DO ~
+		ActionOverride(Player1, PolymorphCopy("lich01"))
+	~
+	EXIT
+	
 	IF ~~ THEN REPLY @2
 	EXIT	
 END
