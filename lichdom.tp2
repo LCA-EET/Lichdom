@@ -27,7 +27,13 @@ BEGIN
 REQUIRE_PREDICATE GAME_IS ~bgee eet~ @1 /* ~This mod requires the EET mod to be installed.~ */
 
 COMPILE EVALUATE_BUFFER ~lichdom/d~
-//COMPILE EVALUATE_BUFFER ~lichdom/baf~ 
+COMPILE EVALUATE_BUFFER ~lichdom/baf~ 
+
+//{ BAF
+	EXTEND_TOP ~BALDUR.BCS~ ~lichdom/baf/xabaldur.baf~
+	EXTEND_TOP ~BDBALDUR.BCS~ ~lichdom/baf/xabaldur.baf~
+	EXTEND_TOP ~BALDUR25.BCS~ ~lichdom/baf/xabaldur.baf~
+//}
 
 //{ BAM
 	COPY ~lichdom/bam/xaiphyl.bam~ ~override~
