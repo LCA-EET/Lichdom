@@ -1,25 +1,53 @@
 IF
 	!InParty(Player1)
 	Global("XA_LD_PlayerIsLich", "GLOBAL", 1)
+	GlobalLT("XA_LC_LichRezTimerSet", "GLOBAL", 1)
 THEN
 	RESPONSE #100
-		SetGlobalTimer("XA_LD_LichResurrectionTimer", "GLOBAL", ONE_ROUND)
+		SetInterrupt(FALSE)
+		SetGlobalTimer("XA_LD_LichResurrectionTimer", "GLOBAL", EIGHT_HOURS)
+		SetGlobal("XA_LC_LichRezTimerSet", "GLOBAL", 1)
+		SetInterrupt(FALSE)
+		Continue()
+END
+
+IF
+	GlobalTimerExpired("XA_LD_LichResurrectionTimer", "GLOBAL")
+	Global("XA_LC_LichRezTimerSet", "GLOBAL", 1)
+THEN
 	RESPONSE #100
-		SetGlobalTimer("XA_LD_LichResurrectionTimer", "GLOBAL", TWO_ROUNDS)
+		SetInterrupt(FALSE)
+		SetGlobal("XA_LC_LichRezTimerSet", "GLOBAL", 0)
+		ReallyForceSpellRES("SPPR712", Player1)
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	ActionListEmpty()
+	Global("XA_LD_PlayerIsLich", "GLOBAL", 1)
+	CheckStatGT(Player1, 4, FATIGUE)
+THEN
 	RESPONSE #100
-		SetGlobalTimer("XA_LD_LichResurrectionTimer", "GLOBAL", THREE_ROUNDS)
+		ChangeStat(Player1, FATIGUE, 0, SET)
+		Continue()
+END
+
+IF
+	ActionListEmpty()
+	Global("XA_LD_PlayerIsLich", "GLOBAL", 1)
+	!Race(Player1, LICH)
+THEN
 	RESPONSE #100
-		SetGlobalTimer("XA_LD_LichResurrectionTimer", "GLOBAL", FOUR_ROUNDS)
+		ChangeRace(Player1, LICH)
+		Continue()
+END
+
+/* Block other execution if the player (lich) is dead, including the default game over. */
+IF
+	!InParty(Player1)
+	Global("XA_LD_PlayerIsLich", "GLOBAL", 1)	
+THEN
 	RESPONSE #100
-		SetGlobalTimer("XA_LD_LichResurrectionTimer", "GLOBAL", FIVE_ROUNDS)
-	RESPONSE #100
-		SetGlobalTimer("XA_LD_LichResurrectionTimer", "GLOBAL", SIX_ROUNDS)
-	RESPONSE #100
-		SetGlobalTimer("XA_LD_LichResurrectionTimer", "GLOBAL", SEVEN_ROUNDS)
-	RESPONSE #100
-		SetGlobalTimer("XA_LD_LichResurrectionTimer", "GLOBAL", EIGHT_ROUNDS)
-	RESPONSE #100
-		SetGlobalTimer("XA_LD_LichResurrectionTimer", "GLOBAL", NINE_ROUNDS)
-	RESPONSE #100
-		GameOver(@0)
+		NoAction()
 END

@@ -51,9 +51,14 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 //}
 
 //{ ITM
-	COPY ~lichdom/itm/xaphyl.itm~ ~override~
+	COPY ~lichdom/itm/xaldphyl.itm~ ~override~
 	SAY NAME2 @2
 	SAY DESC @3
+	
+	COPY ~lichdom/itm/xalddust.itm~ ~override~
+	SAY NAME1 @4
+	SAY NAME2 @4
+	SAY DESC @5
 //}
 
 //{ SPL
@@ -62,3 +67,46 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 	//}
 //}
 
+//{ Lich modifications to add xalddust as an unstealable item
+	COPY_EXISTING ~bdcoldh.cre~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~bddlich.cre~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~cedelich.cre~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~demilich.cre~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~dpmon02.cre~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~firlch01.cre~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~grvlch01.cre~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~hldemi.cre~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~hlkang.cre~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~hllich.cre~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~hlshade.cre~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~lich01.cre~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~lichel01.cre~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~ohhdecoy.cre~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+//}
