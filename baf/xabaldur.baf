@@ -1,0 +1,25 @@
+IF
+	!InParty(Player1)
+	Global("XA_LD_PlayerIsLich", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("XA_LD_LichResurrectionTimer", "GLOBAL", ONE_ROUND)
+	RESPONSE #100
+		SetGlobalTimer("XA_LD_LichResurrectionTimer", "GLOBAL", TWO_ROUNDS)
+	RESPONSE #100
+		SetGlobalTimer("XA_LD_LichResurrectionTimer", "GLOBAL", THREE_ROUNDS)
+	RESPONSE #100
+		SetGlobalTimer("XA_LD_LichResurrectionTimer", "GLOBAL", FOUR_ROUNDS)
+	RESPONSE #100
+		SetGlobalTimer("XA_LD_LichResurrectionTimer", "GLOBAL", FIVE_ROUNDS)
+	RESPONSE #100
+		SetGlobalTimer("XA_LD_LichResurrectionTimer", "GLOBAL", SIX_ROUNDS)
+	RESPONSE #100
+		SetGlobalTimer("XA_LD_LichResurrectionTimer", "GLOBAL", SEVEN_ROUNDS)
+	RESPONSE #100
+		SetGlobalTimer("XA_LD_LichResurrectionTimer", "GLOBAL", EIGHT_ROUNDS)
+	RESPONSE #100
+		SetGlobalTimer("XA_LD_LichResurrectionTimer", "GLOBAL", NINE_ROUNDS)
+	RESPONSE #100
+		GameOver(@0)
+END
