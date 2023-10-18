@@ -65,6 +65,20 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 	//{ Portrait Change (Lich)
 	COPY ~lichdom/spl/xaplich.spl~ ~override~
 	//}
+	
+	//{ Lich Transformation 
+	COPY ~lichdom/spl/xaldlich.spl~ ~override~
+	SAY NAME1 @6
+	SAY DESC @6
+	//}
+	
+	//{ Rename Paladin to Fallen Paladin
+	COPY ~lichdom/spl/xaldfpal.spl~ ~override~
+	//}
+	
+	//{ Rename Paladin to Fallen Ranger
+	COPY ~lichdom/spl/xaldfran.spl~ ~override~
+	//}
 //}
 
 //{ Lich modifications to add xalddust as an unstealable item
