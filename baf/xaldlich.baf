@@ -1,0 +1,159 @@
+IF
+	ActionListEmpty()
+	Race(Myself, LICH)
+	GlobalLT("XA_LD_ChangeAlignment", "LOCALS", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 1)
+		Continue()
+END
+
+//{ Change Title, if Paladin or Ranger
+IF
+	ActionListEmpty()
+	!FallenPaladin(Myself)
+	Class(Myself, PALADIN)
+	!Alignment(Myself, MASK_EVIL)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		RemovePaladinHood()
+		ReallyForceSpellRes("xaldfpal", Myself)
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	ActionListEmpty()
+	!FallenRanger(Myself)
+	Class(Myself, RANGER)
+	!Alignment(Myself, MASK_EVIL)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		RemoveRangerHood()
+		ReallyForceSpellRes("xaldfran", Myself)
+		SetInterrupt(TRUE)
+		Continue()
+END
+//}
+
+//{ Change Alignment
+	//{ LG
+	IF
+		ActionListEmpty()
+		Global("XA_LD_ChangeAlignment", "LOCALS", 1)
+		Alignment(Myself, LAWFUL_GOOD)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ChangeAlignment(Myself, LAWFUL_EVIL)
+			SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 2)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	//}
+	
+	//{ NG
+	IF
+		ActionListEmpty()
+		Global("XA_LD_ChangeAlignment", "LOCALS", 1)
+		Alignment(Myself, NEUTRAL_GOOD)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ChangeAlignment(Myself, NEUTRAL_EVIL)
+			SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 2)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	//}
+	
+	//{ CG
+	IF
+		ActionListEmpty()
+		Global("XA_LD_ChangeAlignment", "LOCALS", 1)
+		Alignment(Myself, CHAOTIC_GOOD)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ChangeAlignment(Myself, CHAOTIC_EVIL)
+			SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 2)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	//}
+	
+	//{ LN
+	IF
+		ActionListEmpty()
+		Global("XA_LD_ChangeAlignment", "LOCALS", 1)
+		Alignment(Myself, LAWFUL_NEUTRAL)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ChangeAlignment(Myself, LAWFUL_EVIL)
+			SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 2)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	//}
+	
+	//{ TN
+	IF
+		ActionListEmpty()
+		Global("XA_LD_ChangeAlignment", "LOCALS", 1)
+		Alignment(Myself, NEUTRAL)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ChangeAlignment(Myself, NEUTRAL_EVIL)
+			SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 2)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	//}
+	
+	//{ CN
+	IF
+		ActionListEmpty()
+		Global("XA_LD_ChangeAlignment", "LOCALS", 1)
+		Alignment(Myself, CHAOTIC_NEUTRAL)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ChangeAlignment(Myself, CHAOTIC_EVIL)
+			SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 2)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	//}
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_ChangeAlignment", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 2)
+			Continue()
+	END
+//}
+
+IF
+	ActionListEmpty()
+	Global("XA_LD_ChangeAlignment", "LOCALS", 2)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_LichWrapUp", "LOCALS", 1)
+END
+
+IF
+	ActionListEmpty()
+	Global("XA_LD_LichWrapUp", "LOCALS", 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ReallyForceSpellRES("xaldlich", Myself)
+		SetGlobal("XA_LD_LichWrapUp", "LOCALS", 2)
+		SetInterrupt(TRUE)
+END

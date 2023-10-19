@@ -7,7 +7,8 @@ IF ~
 	
 	IF ~~ THEN REPLY @8
 	DO ~
-		ActionOverride(Player1, ReallyForceSpellRES("xaldlich", Myself))
+		ChangeRace(Player1, LICH)
+		ChangeAIScript(Player1, ChangeAIScript("xaldlich", CLASS))
 	~
 	EXIT
 	
