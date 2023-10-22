@@ -139,6 +139,73 @@ END
 	END
 //}
 
+//{ AC Adjustment
+	IF
+		ActionListEmpty()
+		Global("XA_LD_LichAC", "GLOBAL", 0)
+		GlobalLT("XA_LD_LichAC_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			SetGlobal("XA_LD_LichAC_Done", "LOCALS", 1)
+			ReallyForceSpellRES("xaldac00", Myself)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+
+	IF
+		ActionListEmpty()
+		Global("XA_LD_LichAC", "GLOBAL", 1)
+		GlobalLT("XA_LD_LichAC_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			SetGlobal("XA_LD_LichAC_Done", "LOCALS", 1)
+			ReallyForceSpellRES("xaldac01", Myself)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_LichAC", "GLOBAL", 2)
+		GlobalLT("XA_LD_LichAC_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			SetGlobal("XA_LD_LichAC_Done", "LOCALS", 1)
+			ReallyForceSpellRES("xaldac02", Myself)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_LichAC", "GLOBAL", 3)
+		GlobalLT("XA_LD_LichAC_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			SetGlobal("XA_LD_LichAC_Done", "LOCALS", 1)
+			ReallyForceSpellRES("xaldac03", Myself)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_LichAC", "GLOBAL", 4)
+		GlobalLT("XA_LD_LichAC_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			SetGlobal("XA_LD_LichAC_Done", "LOCALS", 1)
+			ReallyForceSpellRES("xaldac04", Myself)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+//}
+
 IF
 	ActionListEmpty()
 	Global("XA_LD_ChangeAlignment", "LOCALS", 2)

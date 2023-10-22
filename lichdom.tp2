@@ -63,12 +63,41 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 //}
 
 //{ SPL
+	//{ Lich AC Modification
+	COPY ~lichdom/spl/xaldac00.spl~ ~override~
+	SAY NAME1 @9
+	SAY UNIDENTIFIED_DESC @9
+	SAY DESC @9
+	
+	COPY ~lichdom/spl/xaldac01.spl~ ~override~
+	SAY NAME1 @9
+	SAY UNIDENTIFIED_DESC @9
+	SAY DESC @9
+	
+	COPY ~lichdom/spl/xaldac02.spl~ ~override~
+	SAY NAME1 @9
+	SAY UNIDENTIFIED_DESC @9
+	SAY DESC @9
+	
+	COPY ~lichdom/spl/xaldac03.spl~ ~override~
+	SAY NAME1 @9
+	SAY UNIDENTIFIED_DESC @9
+	SAY DESC @9
+	
+	COPY ~lichdom/spl/xaldac04.spl~ ~override~
+	SAY NAME1 @9
+	SAY UNIDENTIFIED_DESC @9
+	SAY DESC @9
+	//}
+	
 	//{ Lichdom Assistant
 	COPY ~lichdom/spl/xaldasst.spl~ ~override~
 	SAY NAME1 @7
 	SAY UNIDENTIFIED_DESC @8
 	SAY DESC @8
 	//}
+	
+	
 
 	//{ Portrait Change (Lich)
 	COPY ~lichdom/spl/xaplich.spl~ ~override~
