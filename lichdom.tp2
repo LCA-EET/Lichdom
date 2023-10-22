@@ -63,31 +63,43 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 //}
 
 //{ SPL
+	//{ Lich Mental Boost
+		COPY ~lichdom/spl/xaldiwc0.spl~ ~override~
+		SAY NAME1 @10
+		SAY UNIDENTIFIED_DESC @10
+		SAY DESC @10
+		
+		COPY ~lichdom/spl/xaldiwc1.spl~ ~override~
+		SAY NAME1 @10
+		SAY UNIDENTIFIED_DESC @10
+		SAY DESC @10
+	//}
+	
 	//{ Lich AC Modification
-	COPY ~lichdom/spl/xaldac00.spl~ ~override~
-	SAY NAME1 @9
-	SAY UNIDENTIFIED_DESC @9
-	SAY DESC @9
-	
-	COPY ~lichdom/spl/xaldac01.spl~ ~override~
-	SAY NAME1 @9
-	SAY UNIDENTIFIED_DESC @9
-	SAY DESC @9
-	
-	COPY ~lichdom/spl/xaldac02.spl~ ~override~
-	SAY NAME1 @9
-	SAY UNIDENTIFIED_DESC @9
-	SAY DESC @9
-	
-	COPY ~lichdom/spl/xaldac03.spl~ ~override~
-	SAY NAME1 @9
-	SAY UNIDENTIFIED_DESC @9
-	SAY DESC @9
-	
-	COPY ~lichdom/spl/xaldac04.spl~ ~override~
-	SAY NAME1 @9
-	SAY UNIDENTIFIED_DESC @9
-	SAY DESC @9
+		COPY ~lichdom/spl/xaldac00.spl~ ~override~
+		SAY NAME1 @9
+		SAY UNIDENTIFIED_DESC @9
+		SAY DESC @9
+		
+		COPY ~lichdom/spl/xaldac01.spl~ ~override~
+		SAY NAME1 @9
+		SAY UNIDENTIFIED_DESC @9
+		SAY DESC @9
+		
+		COPY ~lichdom/spl/xaldac02.spl~ ~override~
+		SAY NAME1 @9
+		SAY UNIDENTIFIED_DESC @9
+		SAY DESC @9
+		
+		COPY ~lichdom/spl/xaldac03.spl~ ~override~
+		SAY NAME1 @9
+		SAY UNIDENTIFIED_DESC @9
+		SAY DESC @9
+		
+		COPY ~lichdom/spl/xaldac04.spl~ ~override~
+		SAY NAME1 @9
+		SAY UNIDENTIFIED_DESC @9
+		SAY DESC @9
 	//}
 	
 	//{ Lichdom Assistant

@@ -206,6 +206,43 @@ END
 	END
 //}
 
+//{ Mental Adjustment
+	IF
+		ActionListEmpty()
+		Global("XA_LD_MentalBoost", "GLOBAL", 0)
+		GlobalLT("XA_LD_MentalBoost_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldiwc0", Myself)
+			SetGlobal("XA_LD_LichAC_MentalBoost", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_MentalBoost", "GLOBAL", 1)
+		GlobalLT("XA_LD_MentalBoost_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldiwc1", Myself)
+			SetGlobal("XA_LD_LichAC_MentalBoost", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_MentalBoost", "GLOBAL", 2)
+		GlobalLT("XA_LD_MentalBoost_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetGlobal("XA_LD_LichAC_MentalBoost", "LOCALS", 1)
+			Continue()
+	END
+//}
 IF
 	ActionListEmpty()
 	Global("XA_LD_ChangeAlignment", "LOCALS", 2)
