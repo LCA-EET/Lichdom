@@ -147,8 +147,8 @@ END
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
-			SetGlobal("XA_LD_LichAC_Done", "LOCALS", 1)
 			ReallyForceSpellRES("xaldac00", Myself)
+			SetGlobal("XA_LD_LichAC_Done", "LOCALS", 1)
 			SetInterrupt(TRUE)
 			Continue()
 	END
@@ -160,8 +160,8 @@ END
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
-			SetGlobal("XA_LD_LichAC_Done", "LOCALS", 1)
 			ReallyForceSpellRES("xaldac01", Myself)
+			SetGlobal("XA_LD_LichAC_Done", "LOCALS", 1)
 			SetInterrupt(TRUE)
 			Continue()
 	END
@@ -173,8 +173,8 @@ END
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
-			SetGlobal("XA_LD_LichAC_Done", "LOCALS", 1)
 			ReallyForceSpellRES("xaldac02", Myself)
+			SetGlobal("XA_LD_LichAC_Done", "LOCALS", 1)
 			SetInterrupt(TRUE)
 			Continue()
 	END
@@ -186,8 +186,8 @@ END
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
-			SetGlobal("XA_LD_LichAC_Done", "LOCALS", 1)
 			ReallyForceSpellRES("xaldac03", Myself)
+			SetGlobal("XA_LD_LichAC_Done", "LOCALS", 1)
 			SetInterrupt(TRUE)
 			Continue()
 	END
@@ -199,8 +199,8 @@ END
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
-			SetGlobal("XA_LD_LichAC_Done", "LOCALS", 1)
 			ReallyForceSpellRES("xaldac04", Myself)
+			SetGlobal("XA_LD_LichAC_Done", "LOCALS", 1)
 			SetInterrupt(TRUE)
 			Continue()
 	END
@@ -243,6 +243,201 @@ END
 			Continue()
 	END
 //}
+
+//{ Magic Resistance Adjustment
+	IF
+		ActionListEmpty()
+		Global("XA_LD_SpellResistance", "GLOBAL", 0)
+		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_SpellResistance", "GLOBAL", 1)
+		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldmr01", Myself)
+			SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_SpellResistance", "GLOBAL", 2)
+		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldmr02", Myself)
+			SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_SpellResistance", "GLOBAL", 3)
+		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldmr03", Myself)
+			SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_SpellResistance", "GLOBAL", 4)
+		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldmr04", Myself)
+			SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_SpellResistance", "GLOBAL", 5)
+		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldmr05", Myself)
+			SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_SpellResistance", "GLOBAL", 6)
+		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldmr06", Myself)
+			SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_SpellResistance", "GLOBAL", 7)
+		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldmr07", Myself)
+			SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_SpellResistance", "GLOBAL", 8)
+		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldmr08", Myself)
+			SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_SpellResistance", "GLOBAL", 9)
+		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldmr09", Myself)
+			SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_SpellResistance", "GLOBAL", 10)
+		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldmr10", Myself)
+			SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_SpellResistance", "GLOBAL", 11)
+		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldmr11", Myself)
+			SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_SpellResistance", "GLOBAL", 12)
+		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldmr12", Myself)
+			SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_SpellResistance", "GLOBAL", 13)
+		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldmr13", Myself)
+			SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_SpellResistance", "GLOBAL", 14)
+		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldmr14", Myself)
+			SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+//}
+
 IF
 	ActionListEmpty()
 	Global("XA_LD_ChangeAlignment", "LOCALS", 2)

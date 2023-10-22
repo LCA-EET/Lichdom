@@ -63,6 +63,78 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 //}
 
 //{ SPL
+	//{ Lich Magic Resistance Boost
+		COPY ~lichdom/spl/xaldmr01.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+	
+		COPY ~lichdom/spl/xaldmr02.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~lichdom/spl/xaldmr03.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~lichdom/spl/xaldmr04.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~lichdom/spl/xaldmr05.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~lichdom/spl/xaldmr06.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~lichdom/spl/xaldmr07.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~lichdom/spl/xaldmr08.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~lichdom/spl/xaldmr09.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~lichdom/spl/xaldmr10.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~lichdom/spl/xaldmr11.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~lichdom/spl/xaldmr12.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~lichdom/spl/xaldmr13.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~lichdom/spl/xaldmr14.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+	//}
+	
 	//{ Lich Mental Boost
 		COPY ~lichdom/spl/xaldiwc0.spl~ ~override~
 		SAY NAME1 @10
