@@ -14,8 +14,176 @@ APPEND ~PLAYER1~
 		IF ~~ THEN REPLY @20 /*~Change spell level immunities.~*/
 		GOTO XA_SpellImmunities
 		
+		IF ~~ THEN REPLY @44 /*~Change lich spell resistance.~*/
+		GOTO XA_SpellResistance
+		
+		IF ~~ THEN REPLY @45 /*~Change lich mental ability boosts (INT, WIS, CHA).~*/
+		GOTO XA_MentalBoosts
+		
+		IF ~~ THEN REPLY @49
+		GOTO XA_ChangeACCharacteristics
+		
 		IF ~~ THEN REPLY @1 /*~Exit.~*/
 		GOTO XA_ExitAssistant
+	END
+	
+	IF ~~ THEN BEGIN XA_ChangeACCharacteristics
+		SAY @49 /*~Change lich natural AC characteristics.~*/
+		
+		IF ~~ THEN REPLY @50 /*~+1 to Slashing / Piercing, -1 to Crushing.~*/
+		DO ~
+			SetGlobal("XA_LD_LichAC", "GLOBAL", 1)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @51 /*~+2 to Slashing / Piercing, -2 to Crushing.~*/
+		DO ~
+			SetGlobal("XA_LD_LichAC", "GLOBAL", 2)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @52 /*~+3 to Slashing / Piercing, -3 to Crushing (Default).~*/
+		DO ~
+			SetGlobal("XA_LD_LichAC", "GLOBAL", 0)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @53 /*~+4 to Slashing / Piercing, -4 to Crushing.~*/
+		DO ~
+			SetGlobal("XA_LD_LichAC", "GLOBAL", 3)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @54 /*~+5 to Slashing / Piercing, -5 to Crushing.~*/
+		DO ~
+			SetGlobal("XA_LD_LichAC", "GLOBAL", 4)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @28 /*Back to main menu.*/
+		GOTO XA_MainMenu
+	END
+	
+	IF ~~ THEN BEGIN XA_MentalBoosts
+		SAY @45 /*~Change lich mental ability boosts (INT, WIS, CHA).~*/
+		
+		IF ~~ THEN REPLY @46 /*~+1 (Default).~*/
+		DO ~
+			SetGlobal("XA_LD_MentalBoost", "GLOBAL", 0)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @47 /*~+2.~*/
+		DO ~
+			SetGlobal("XA_LD_MentalBoost", "GLOBAL", 1)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @48 /*~None.~*/
+		DO ~
+			SetGlobal("XA_LD_MentalBoost", "GLOBAL", 2)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @28 /*Back to main menu.*/
+		GOTO XA_MainMenu
+	END
+
+	IF ~~ THEN BEGIN XA_SpellResistance
+		SAY @44 /*~Change lich spell resistance.~*/
+	
+		IF ~~ THEN REPLY @29 /*~None (Default).~*/
+		DO ~
+			SetGlobal("XA_LD_SpellResistance", "GLOBAL", 0)
+		~
+		GOTO XA_ChangeProcessed
+	
+		IF ~~ THEN REPLY @30 /*~5%.~*/
+		DO ~
+			SetGlobal("XA_LD_SpellResistance", "GLOBAL", 1)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @31 /*~10%.~*/
+		DO ~
+			SetGlobal("XA_LD_SpellResistance", "GLOBAL", 2)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @32 /*~20%.~*/
+		DO ~
+			SetGlobal("XA_LD_SpellResistance", "GLOBAL", 3)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @33 /*~25%.~*/
+		DO ~
+			SetGlobal("XA_LD_SpellResistance", "GLOBAL", 4)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @34 /*~30%.~*/
+		DO ~
+			SetGlobal("XA_LD_SpellResistance", "GLOBAL", 5)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @35 /*~33%.~*/
+		DO ~
+			SetGlobal("XA_LD_SpellResistance", "GLOBAL", 6)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @36 /*~40%.~*/
+		DO ~
+			SetGlobal("XA_LD_SpellResistance", "GLOBAL", 7)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @37 /*~50%.~*/
+		DO ~
+			SetGlobal("XA_LD_SpellResistance", "GLOBAL", 8)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @38 /*~60%.~*/
+		DO ~
+			SetGlobal("XA_LD_SpellResistance", "GLOBAL", 9)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @39 /*~70%.~*/
+		DO ~
+			SetGlobal("XA_LD_SpellResistance", "GLOBAL", 10)
+		~
+		GOTO XA_ChangeProcessed
+	
+		IF ~~ THEN REPLY @40 /*~75%.~*/
+		DO ~
+			SetGlobal("XA_LD_SpellResistance", "GLOBAL", 11)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @41 /*~80%.~*/
+		DO ~
+			SetGlobal("XA_LD_SpellResistance", "GLOBAL", 12)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @42 /*~90%.~*/
+		DO ~
+			SetGlobal("XA_LD_SpellResistance", "GLOBAL", 13)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @43 /*~100%.~*/
+		DO ~
+			SetGlobal("XA_LD_SpellResistance", "GLOBAL", 14)
+		~
+		GOTO XA_ChangeProcessed
+	
+		IF ~~ THEN REPLY @28 /*Back to main menu.*/
+		GOTO XA_MainMenu
 	END
 
 	IF ~~ THEN BEGIN XA_SpellImmunities
