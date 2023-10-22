@@ -63,6 +63,33 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 //}
 
 //{ SPL
+	//{ Lich Spell Immunities
+		COPY ~lichdom/spl/xaldsi01.spl~ ~override~
+		SAY NAME1 @12
+		SAY UNIDENTIFIED_DESC @12
+		SAY DESC @12
+		
+		COPY ~lichdom/spl/xaldsi02.spl~ ~override~
+		SAY NAME1 @12
+		SAY UNIDENTIFIED_DESC @12
+		SAY DESC @12
+		
+		COPY ~lichdom/spl/xaldsi03.spl~ ~override~
+		SAY NAME1 @12
+		SAY UNIDENTIFIED_DESC @12
+		SAY DESC @12
+		
+		COPY ~lichdom/spl/xaldsi04.spl~ ~override~
+		SAY NAME1 @12
+		SAY UNIDENTIFIED_DESC @12
+		SAY DESC @12
+		
+		COPY ~lichdom/spl/xaldsi05.spl~ ~override~
+		SAY NAME1 @12
+		SAY UNIDENTIFIED_DESC @12
+		SAY DESC @12
+	//}
+
 	//{ Lich Magic Resistance Boost
 		COPY ~lichdom/spl/xaldmr01.spl~ ~override~
 		SAY NAME1 @11

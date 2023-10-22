@@ -12,6 +12,36 @@ IF ~
 	~
 	EXIT
 	
+	IF ~~ THEN REPLY @31
+	DO ~
+		ActionOverride(Player1, ReallyForceSpellRES("xaldsi01", Myself))
+	~
+	EXIT
+	
+	IF ~~ THEN REPLY @32
+	DO ~
+		ActionOverride(Player1, ReallyForceSpellRES("xaldsi02", Myself))
+	~
+	EXIT
+	
+	IF ~~ THEN REPLY @33
+	DO ~
+		ActionOverride(Player1, ReallyForceSpellRES("xaldsi03", Myself))
+	~
+	EXIT
+	
+	IF ~~ THEN REPLY @34
+	DO ~
+		ActionOverride(Player1, ReallyForceSpellRES("xaldsi04", Myself))
+	~
+	EXIT
+	
+	IF ~~ THEN REPLY @35
+	DO ~
+		ActionOverride(Player1, ReallyForceSpellRES("xaldsi05", Myself))
+	~
+	EXIT
+	
 	IF ~~ THEN REPLY @14
 	DO ~
 		ActionOverride(Player1, ReallyForceSpellRES("xaldiwc0", Myself))

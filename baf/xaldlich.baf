@@ -438,6 +438,82 @@ END
 	END
 //}
 
+//{ Spell Immunity Adjustment
+	IF
+		ActionListEmpty()
+		Global("XA_LD_SpellImmunityLevel", "GLOBAL", 0)
+		GlobalLT("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetGlobal("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1)
+			Continue()
+	END
+
+	IF
+		ActionListEmpty()
+		Global("XA_LD_SpellImmunityLevel", "GLOBAL", 1)
+		GlobalLT("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldsi01", Myself)
+			SetGlobal("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_SpellImmunityLevel", "GLOBAL", 2)
+		GlobalLT("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldsi02", Myself)
+			SetGlobal("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_SpellImmunityLevel", "GLOBAL", 3)
+		GlobalLT("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldsi03", Myself)
+			SetGlobal("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_SpellImmunityLevel", "GLOBAL", 4)
+		GlobalLT("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldsi04", Myself)
+			SetGlobal("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_SpellImmunityLevel", "GLOBAL", 5)
+		GlobalLT("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldsi05", Myself)
+			SetGlobal("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+//}
 IF
 	ActionListEmpty()
 	Global("XA_LD_ChangeAlignment", "LOCALS", 2)
