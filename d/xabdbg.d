@@ -8,7 +8,7 @@ IF ~
 	IF ~~ THEN REPLY @8
 	DO ~
 		ChangeRace(Player1, LICH)
-		ChangeAIScript(Player1, ChangeAIScript("xaldlich", CLASS))
+		ActionOverride(Player1, ChangeAIScript("xaldlich", CLASS))
 	~
 	EXIT
 	

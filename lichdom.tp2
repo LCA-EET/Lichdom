@@ -38,6 +38,7 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 //{ BAM
 	COPY ~lichdom/bam/xaiphyl.bam~ ~override~
 	COPY ~lichdom/bam/xaphyl.bam~ ~override~
+	COPY ~lichdom/bam/xaldasst.bam~ ~override~
 //}
 
 //{ BMP
@@ -62,6 +63,13 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 //}
 
 //{ SPL
+	//{ Lichdom Assistant
+	COPY ~lichdom/spl/xaldasst.spl~ ~override~
+	SAY NAME1 @7
+	SAY UNIDENTIFIED_DESC @8
+	SAY DESC @8
+	//}
+
 	//{ Portrait Change (Lich)
 	COPY ~lichdom/spl/xaplich.spl~ ~override~
 	//}

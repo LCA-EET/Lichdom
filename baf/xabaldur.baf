@@ -1,3 +1,39 @@
+//{ Launch Lichdom Assistant
+	IF
+		Global("xaldasst", "GLOBAL", 1)
+	THEN
+		RESPONSE #100
+			ActionOverride(Player1,StartDialog("player1",Player1))
+	END
+//}
+
+//{ Add Lichdom Assistant
+	IF
+		ActionListEmpty()
+		!TriggerOverride(Player1,HaveSpellRES("xaldasst")) 
+		GlobalLT("XA_LD_AddAssistantTimerSet", "GLOBAL", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			SetGlobal("XA_LD_AddAssistantTimerSet", "GLOBAL", 1)
+			SetGlobalTimer("XA_LD_AddAssistantTimer", "GLOBAL", ONE_ROUND)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		GlobalTimerExpired("XA_LD_AddAssistantTimer", "GLOBAL")
+		Global("XA_LD_AddAssistantTimerSet", "GLOBAL", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ActionOverride(Player1, AddSpecialAbility("xaldasst"))
+			SetGlobal("XA_LD_AddAssistantTimerSet", "GLOBAL", 0)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+//}
 
 IF
 	!InParty(Player1)
