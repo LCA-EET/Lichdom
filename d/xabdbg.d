@@ -12,6 +12,12 @@ IF ~
 	~
 	EXIT
 	
+	IF ~~ THEN REPLY @36
+	DO ~
+		ActionOverride(Player1, ReallyForceSpellRES("xaldanim", Myself))
+	~
+	EXIT
+	
 	IF ~~ THEN REPLY @31
 	DO ~
 		ActionOverride(Player1, ReallyForceSpellRES("xaldsi01", Myself))
@@ -116,7 +122,7 @@ IF ~
 	
 	IF ~~ THEN REPLY @7
 	DO ~
-		ActionOverride(Player1, PolymorphCopy("lich01"))
+		ActionOverride(Player1, Polymorph(LICH))
 	~
 	EXIT
 	

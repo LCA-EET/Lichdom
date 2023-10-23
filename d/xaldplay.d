@@ -23,8 +23,30 @@ APPEND ~PLAYER1~
 		IF ~~ THEN REPLY @49
 		GOTO XA_ChangeACCharacteristics
 		
+		IF ~~ THEN REPLY @57
+		GOTO XA_ChangeAnimation
+		
 		IF ~~ THEN REPLY @1 /*~Exit.~*/
 		GOTO XA_ExitAssistant
+	END
+	
+	IF ~~ THEN BEGIN XA_ChangeAnimation
+		SAY @57 /*~Change animation options.~*/
+		
+		IF ~~ THEN REPLY @55 /*~Use Lich animation.~*/
+		DO ~
+			SetGlobal("XA_LD_LichAnimation", "GLOBAL", 1)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @56 /*~Retain normal character animation (Default).~*/
+		DO ~
+			SetGlobal("XA_LD_LichAnimation", "GLOBAL", 0)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @28 /*Back to main menu.*/
+		GOTO XA_MainMenu
 	END
 	
 	IF ~~ THEN BEGIN XA_ChangeACCharacteristics

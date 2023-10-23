@@ -201,6 +201,13 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 		SAY DESC @9
 	//}
 	
+	//{ Lich Amination
+		COPY ~lichdom/spl/xaldanim.spl~ ~override~
+		SAY NAME1 @13
+		SAY UNIDENTIFIED_DESC @13
+		SAY DESC @13
+	//}
+	
 	//{ Lichdom Assistant
 	COPY ~lichdom/spl/xaldasst.spl~ ~override~
 	SAY NAME1 @7

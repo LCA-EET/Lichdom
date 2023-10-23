@@ -514,6 +514,32 @@ END
 			Continue()
 	END
 //}
+
+//{ Animation Adjustment
+	IF
+		ActionListEmpty()
+		Global("XA_LD_Animation", "GLOBAL", 0)
+		GlobalLT("XA_LD_Animation_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetGlobal("XA_LD_Animation_Done", "LOCALS", 1)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		Global("XA_LD_Animation", "GLOBAL", 0)
+		GlobalLT("XA_LD_Animation_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldanim", Myself)
+			SetGlobal("XA_LD_Animation_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+//}
+
 IF
 	ActionListEmpty()
 	Global("XA_LD_ChangeAlignment", "LOCALS", 2)
