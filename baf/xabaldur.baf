@@ -1,3 +1,133 @@
+//{ Check if a player is a lich. If so, apply the lich transformation script.
+	//{ Player1
+	IF
+		Race(Player1, LICH)
+		TriggerOverride(Player1, GlobalLT("XA_LD_LichTransformDone", "LOCALS", 1))
+		TriggerOverride(Player1, GlobalLT("XA_LD_LichTransformUnderway", "LOCALS", 1))
+	THEN
+		RESPONSE #100
+			ActionOverride(Player1, ChangeAIScript("xaldlich", CLASS))
+			Continue()
+	END
+	//}
+	
+	//{ Player2
+	IF
+		Race(Player2, LICH)
+		TriggerOverride(Player2, GlobalLT("XA_LD_LichTransformDone", "LOCALS", 1))
+		TriggerOverride(Player2, GlobalLT("XA_LD_LichTransformUnderway", "LOCALS", 1))
+	THEN
+		RESPONSE #100
+			ActionOverride(Player2, ChangeAIScript("xaldlich", CLASS))
+			Continue()
+	END
+	//}
+	
+	//{ Player3
+	IF
+		Race(Player3, LICH)
+		TriggerOverride(Player3, GlobalLT("XA_LD_LichTransformDone", "LOCALS", 1))
+		TriggerOverride(Player3, GlobalLT("XA_LD_LichTransformUnderway", "LOCALS", 1))
+	THEN
+		RESPONSE #100
+			ActionOverride(Player3, ChangeAIScript("xaldlich", CLASS))
+			Continue()
+	END
+	//}
+	
+	//{ Player4
+	IF
+		Race(Player4, LICH)
+		TriggerOverride(Player4, GlobalLT("XA_LD_LichTransformDone", "LOCALS", 1))
+		TriggerOverride(Player4, GlobalLT("XA_LD_LichTransformUnderway", "LOCALS", 1))
+	THEN
+		RESPONSE #100
+			ActionOverride(Player4, ChangeAIScript("xaldlich", CLASS))
+			Continue()
+	END
+	//}
+	
+	//{ Player5
+	IF
+		Race(Player5, LICH)
+		TriggerOverride(Player5, GlobalLT("XA_LD_LichTransformDone", "LOCALS", 1))
+		TriggerOverride(Player5, GlobalLT("XA_LD_LichTransformUnderway", "LOCALS", 1))
+	THEN
+		RESPONSE #100
+			ActionOverride(Player5, ChangeAIScript("xaldlich", CLASS))
+			Continue()
+	END
+	//}
+	
+	//{ Player6
+	IF
+		Race(Player6, LICH)
+		TriggerOverride(Player6, GlobalLT("XA_LD_LichTransformDone", "LOCALS", 1))
+		TriggerOverride(Player6, GlobalLT("XA_LD_LichTransformUnderway", "LOCALS", 1))
+	THEN
+		RESPONSE #100
+			ActionOverride(Player6, ChangeAIScript("xaldlich", CLASS))
+			Continue()
+	END
+	//}
+//}
+
+//{ Death Scripting
+	IF
+		HPPercentLT(Player1, 10)
+		HasItemEquiped("xaldphyl", Player1)
+	THEN
+		RESPONSE #100
+			ActionOverride(Player1, ChangeAIScript("xalddead", CLASS)
+			Continue()
+	END
+	
+	IF
+		HPPercentLT(Player2, 10)
+		HasItemEquiped("xaldphyl", Player2)
+	THEN
+		RESPONSE #100
+			ActionOverride(Player2, ChangeAIScript("xalddead", CLASS)
+			Continue()
+	END
+	
+	IF
+		HPPercentLT(Player3, 10)
+		HasItemEquiped("xaldphyl", Player3)
+	THEN
+		RESPONSE #100
+			ActionOverride(Player3, ChangeAIScript("xalddead", CLASS)
+			Continue()
+	END
+	
+	IF
+		HPPercentLT(Player4, 10)
+		HasItemEquiped("xaldphyl", Player4)
+	THEN
+		RESPONSE #100
+			ActionOverride(Player4, ChangeAIScript("xalddead", CLASS)
+			Continue()
+	END
+	
+	IF
+		HPPercentLT(Player5, 10)
+		HasItemEquiped("xaldphyl", Player5)
+	THEN
+		RESPONSE #100
+			ActionOverride(Player5, ChangeAIScript("xalddead", CLASS)
+			Continue()
+	END
+	
+	IF
+		HPPercentLT(Player6, 10)
+		HasItemEquiped("xaldphyl", Player6)
+	THEN
+		RESPONSE #100
+			ActionOverride(Player6, ChangeAIScript("xalddead", CLASS)
+			Continue()
+	END
+//}
+
 //{ Launch Lichdom Assistant
 	IF
 		Global("xaldasst", "GLOBAL", 1)
@@ -35,34 +165,9 @@
 	END
 //}
 
-IF
-	!InParty(Player1)
-	Global("XA_LD_IsLich_Player1", "GLOBAL", 1)
-	GlobalLT("XA_LC_LichRezTimerSet", "GLOBAL", 1)
-THEN
-	RESPONSE #100
-		SetInterrupt(FALSE)
-		SetGlobalTimer("XA_LD_LichResurrectionTimer", "GLOBAL", EIGHT_HOURS)
-		SetGlobal("XA_LC_LichRezTimerSet", "GLOBAL", 1)
-		SetInterrupt(FALSE)
-		Continue()
-END
-
-IF
-	GlobalTimerExpired("XA_LD_LichResurrectionTimer", "GLOBAL")
-	Global("XA_LC_LichRezTimerSet", "GLOBAL", 1)
-THEN
-	RESPONSE #100
-		SetInterrupt(FALSE)
-		SetGlobal("XA_LC_LichRezTimerSet", "GLOBAL", 0)
-		ReallyForceSpellRES("SPPR712", Player1)
-		SetInterrupt(TRUE)
-		Continue()
-END
-
 //{ Fatigue Override
 IF
-	ActionListEmpty()
+	TriggerOverride(Player1, ActionListEmpty())
 	Race(Player1, LICH)
 	CheckStatGT(Player1, 4, FATIGUE)
 THEN

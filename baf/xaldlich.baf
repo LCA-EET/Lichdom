@@ -1,11 +1,9 @@
 IF
 	ActionListEmpty()
-	Race(Myself, LICH)
-	GlobalLT("XA_LD_ChangeAlignment", "LOCALS", 1)
+	GlobalLT("XA_LD_LichTransformUnderway", "LOCALS", 1)
 THEN
 	RESPONSE #100
-		SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 1)
-		Continue()
+		SetGlobal("XA_LD_LichTransformUnderway", "LOCALS", 1)
 END
 
 //{ Change Title, if Paladin or Ranger
@@ -42,13 +40,13 @@ END
 	//{ LG
 	IF
 		ActionListEmpty()
-		Global("XA_LD_ChangeAlignment", "LOCALS", 1)
+		GlobalLT("XA_LD_ChangeAlignment", "LOCALS", 1)
 		Alignment(Myself, LAWFUL_GOOD)
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			ChangeAlignment(Myself, LAWFUL_EVIL)
-			SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 2)
+			SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 1)
 			SetInterrupt(TRUE)
 			Continue()
 	END
@@ -57,13 +55,13 @@ END
 	//{ NG
 	IF
 		ActionListEmpty()
-		Global("XA_LD_ChangeAlignment", "LOCALS", 1)
+		GlobalLT("XA_LD_ChangeAlignment", "LOCALS", 1)
 		Alignment(Myself, NEUTRAL_GOOD)
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			ChangeAlignment(Myself, NEUTRAL_EVIL)
-			SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 2)
+			SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 1)
 			SetInterrupt(TRUE)
 			Continue()
 	END
@@ -72,13 +70,13 @@ END
 	//{ CG
 	IF
 		ActionListEmpty()
-		Global("XA_LD_ChangeAlignment", "LOCALS", 1)
+		GlobalLT("XA_LD_ChangeAlignment", "LOCALS", 1)
 		Alignment(Myself, CHAOTIC_GOOD)
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			ChangeAlignment(Myself, CHAOTIC_EVIL)
-			SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 2)
+			SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 1)
 			SetInterrupt(TRUE)
 			Continue()
 	END
@@ -87,13 +85,13 @@ END
 	//{ LN
 	IF
 		ActionListEmpty()
-		Global("XA_LD_ChangeAlignment", "LOCALS", 1)
+		GlobalLT("XA_LD_ChangeAlignment", "LOCALS", 1)
 		Alignment(Myself, LAWFUL_NEUTRAL)
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			ChangeAlignment(Myself, LAWFUL_EVIL)
-			SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 2)
+			SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 1)
 			SetInterrupt(TRUE)
 			Continue()
 	END
@@ -102,13 +100,13 @@ END
 	//{ TN
 	IF
 		ActionListEmpty()
-		Global("XA_LD_ChangeAlignment", "LOCALS", 1)
+		GlobalLT("XA_LD_ChangeAlignment", "LOCALS", 1)
 		Alignment(Myself, NEUTRAL)
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			ChangeAlignment(Myself, NEUTRAL_EVIL)
-			SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 2)
+			SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 1)
 			SetInterrupt(TRUE)
 			Continue()
 	END
@@ -117,13 +115,13 @@ END
 	//{ CN
 	IF
 		ActionListEmpty()
-		Global("XA_LD_ChangeAlignment", "LOCALS", 1)
+		GlobalLT("XA_LD_ChangeAlignment", "LOCALS", 1)
 		Alignment(Myself, CHAOTIC_NEUTRAL)
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			ChangeAlignment(Myself, CHAOTIC_EVIL)
-			SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 2)
+			SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 1)
 			SetInterrupt(TRUE)
 			Continue()
 	END
@@ -131,10 +129,10 @@ END
 	
 	IF
 		ActionListEmpty()
-		Global("XA_LD_ChangeAlignment", "LOCALS", 1)
+		GlobalLT("XA_LD_ChangeAlignment", "LOCALS", 1)
 	THEN
 		RESPONSE #100
-			SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 2)
+			SetGlobal("XA_LD_ChangeAlignment", "LOCALS", 1)
 			Continue()
 	END
 //}
@@ -215,7 +213,7 @@ END
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			ReallyForceSpellRES("xaldiwc0", Myself)
-			SetGlobal("XA_LD_LichAC_MentalBoost", "LOCALS", 1)
+			SetGlobal("XA_LD_MentalBoost_Done", "LOCALS", 1)
 			SetInterrupt(TRUE)
 			Continue()
 	END
@@ -228,7 +226,7 @@ END
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			ReallyForceSpellRES("xaldiwc1", Myself)
-			SetGlobal("XA_LD_LichAC_MentalBoost", "LOCALS", 1)
+			SetGlobal("XA_LD_MentalBoost_Done", "LOCALS", 1)
 			SetInterrupt(TRUE)
 			Continue()
 	END
@@ -239,7 +237,7 @@ END
 		GlobalLT("XA_LD_MentalBoost_Done", "LOCALS", 1)
 	THEN
 		RESPONSE #100
-			SetGlobal("XA_LD_LichAC_MentalBoost", "LOCALS", 1)
+			SetGlobal("XA_LD_MentalBoost_Done", "LOCALS", 1)
 			Continue()
 	END
 //}
@@ -528,7 +526,7 @@ END
 	
 	IF
 		ActionListEmpty()
-		Global("XA_LD_Animation", "GLOBAL", 0)
+		Global("XA_LD_Animation", "GLOBAL", 1)
 		GlobalLT("XA_LD_Animation_Done", "LOCALS", 1)
 	THEN
 		RESPONSE #100
@@ -540,21 +538,39 @@ END
 	END
 //}
 
+//{ Create and Equip Phylactery
 IF
 	ActionListEmpty()
-	Global("XA_LD_ChangeAlignment", "LOCALS", 2)
+	GlobalLT("XA_PhylacteryEquipped", "LOCALS", 1)
 THEN
 	RESPONSE #100
-		SetGlobal("XA_LD_LichWrapUp", "LOCALS", 1)
+		CreateItem("xaldphyl", 0,0,0)
+		XEquipItem("",Myself,SLOT_AMULET,EQUIP)
+		XEquipItem("xaldphyl",Myself,SLOT_AMULET,EQUIP)
+		SetGlobal("XA_PhylacteryEquipped", "LOCALS", 1)
 END
 
 IF
 	ActionListEmpty()
-	Global("XA_LD_LichWrapUp", "LOCALS", 1)
+	Global("XA_LD_ChangeAlignment", "LOCALS", 1)
+	Global("XA_LD_Animation_Done", "LOCALS", 1)
+	Global("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1)
+	Global("XA_LD_SpellResistance_Done", "LOCALS", 1)
+	Global("XA_LD_MentalBoost_Done", "LOCALS", 1)
+	Global("XA_LD_LichAC_Done", "LOCALS", 1)
+	Global("XA_PhylacteryEquipped", "LOCALS", 1)
+	GlobalLT("XA_LD_LichTransformDone", "LOCALS", 1)
 THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
 		ReallyForceSpellRES("xaldlich", Myself)
-		SetGlobal("XA_LD_LichWrapUp", "LOCALS", 2)
+		SetGlobal("XA_LD_LichTransformDone", "LOCALS", 1)
 		SetInterrupt(TRUE)
+END
+
+IF
+	Global("XA_LD_LichTransformDone", "LOCALS", 1)
+THEN
+	RESPONSE #100
+		ChangeAIScript("", CLASS)
 END

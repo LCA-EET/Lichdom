@@ -5,10 +5,9 @@ IF ~
 ~ THEN BEGIN XA_DebugInit
 	SAY @0
 	
-	IF ~~ THEN REPLY @8
+	IF ~~ THEN REPLY @37
 	DO ~
 		ChangeRace(Player1, LICH)
-		ActionOverride(Player1, ChangeAIScript("xaldlich", CLASS))
 	~
 	EXIT
 	
