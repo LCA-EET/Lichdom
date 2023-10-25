@@ -11,6 +11,36 @@ IF ~
 	~
 	EXIT
 	
+	IF ~~ THEN REPLY @38
+	DO ~
+		ChangeRace(Player2, LICH)
+	~
+	EXIT
+	
+	IF ~~ THEN REPLY @39
+	DO ~
+		ChangeRace(Player3, LICH)
+	~
+	EXIT
+	
+	IF ~~ THEN REPLY @40
+	DO ~
+		ChangeRace(Player4, LICH)
+	~
+	EXIT
+	
+	IF ~~ THEN REPLY @41
+	DO ~
+		ChangeRace(Player5, LICH)
+	~
+	EXIT
+	
+	IF ~~ THEN REPLY @42
+	DO ~
+		ChangeRace(Player6, LICH)
+	~
+	EXIT
+	
 	IF ~~ THEN REPLY @36
 	DO ~
 		ActionOverride(Player1, ReallyForceSpellRES("xaldanim", Myself))

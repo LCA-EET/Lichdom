@@ -1,0 +1,236 @@
+IF
+	!HasItemEquiped("xaldphyl", Myself)
+	GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+END
+
+//{ See if Phylactery Broke
+
+	//{ 1%
+	IF
+		HasItemEquiped("xaldphyl", Myself)
+		Global("XA_LD_PhylacteryBreak", "GLOBAL", 1)
+		RandomNumGT(100,99)
+		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			DisplayStringHead(Myself, @0)
+			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetInterrupt(TRUE)
+	END
+	//}
+	
+	//{ 3%
+	IF
+		HasItemEquiped("xaldphyl", Myself)
+		Global("XA_LD_PhylacteryBreak", "GLOBAL", 2)
+		RandomNumGT(100,97)
+		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			DisplayStringHead(Myself, @0)
+			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetInterrupt(TRUE)
+	END
+	//}
+	
+	//{ 5%
+	IF
+		HasItemEquiped("xaldphyl", Myself)
+		Global("XA_LD_PhylacteryBreak", "GLOBAL", 3)
+		RandomNumGT(100,95)
+		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			DisplayStringHead(Myself, @0)
+			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetInterrupt(TRUE)
+	END
+	//}
+	
+	//{ 10%
+	IF
+		HasItemEquiped("xaldphyl", Myself)
+		Global("XA_LD_PhylacteryBreak", "GLOBAL", 4)
+		RandomNumGT(100,90)
+		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			DisplayStringHead(Myself, @0)
+			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetInterrupt(TRUE)
+	END
+	//}
+	
+	//{ 15%
+	IF
+		HasItemEquiped("xaldphyl", Myself)
+		Global("XA_LD_PhylacteryBreak", "GLOBAL", 5)
+		RandomNumGT(100,85)
+		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			DisplayStringHead(Myself, @0)
+			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetInterrupt(TRUE)
+	END
+	//}
+	
+	//{ 20%
+	IF
+		HasItemEquiped("xaldphyl", Myself)
+		Global("XA_LD_PhylacteryBreak", "GLOBAL", 6)
+		RandomNumGT(100,80)
+		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			DisplayStringHead(Myself, @0)
+			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetInterrupt(TRUE)
+	END
+	//}
+	
+	//{ 25%
+	IF
+		HasItemEquiped("xaldphyl", Myself)
+		Global("XA_LD_PhylacteryBreak", "GLOBAL", 7)
+		RandomNumGT(100,75)
+		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			DisplayStringHead(Myself, @0)
+			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetInterrupt(TRUE)
+	END
+	//}
+	
+	//{ 33%
+	IF
+		HasItemEquiped("xaldphyl", Myself)
+		Global("XA_LD_PhylacteryBreak", "GLOBAL", 8)
+		RandomNumGT(100,67)
+		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			DisplayStringHead(Myself, @0)
+			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetInterrupt(TRUE)
+	END
+	//}
+	
+	//{ 50%
+	IF
+		HasItemEquiped("xaldphyl", Myself)
+		Global("XA_LD_PhylacteryBreak", "GLOBAL", 9)
+		RandomNumGT(100,50)
+		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			DisplayStringHead(Myself, @0)
+			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetInterrupt(TRUE)
+	END
+	//}
+	
+	//{ 67%
+	IF
+		HasItemEquiped("xaldphyl", Myself)
+		Global("XA_LD_PhylacteryBreak", "GLOBAL", 10)
+		RandomNumGT(100,33)
+		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			DisplayStringHead(Myself, @0)
+			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetInterrupt(TRUE)
+	END
+	//}
+	
+	//{ 80%
+	IF
+		HasItemEquiped("xaldphyl", Myself)
+		Global("XA_LD_PhylacteryBreak", "GLOBAL", 11)
+		RandomNumGT(100,20)
+		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			DisplayStringHead(Myself, @0)
+			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetInterrupt(TRUE)
+	END
+	//}
+	
+	//{ 100%
+	IF
+		HasItemEquiped("xaldphyl", Myself)
+		Global("XA_LD_PhylacteryBreak", "GLOBAL", 12)
+		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			DisplayStringHead(Myself, @0)
+			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetInterrupt(TRUE)
+	END
+	//}
+//}
+
+IF
+	GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+	GlobalLT("XA_LD_TempDeath", "LOCALS", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_TempDeath", "LOCALS", 1)
+END
+
+IF
+	Global("XA_LD_TempDeath", "LOCALS", 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("XA_LD_LichDeathScript", "LOCALS", 0) 
+		ChangeAIScript("", CLASS)
+		SetGlobal("XA_LD_TempDeath", "LOCALS", 0)
+		Kill(Myself)
+		SetInterrupt(TRUE)
+END
+
+IF
+	Global("XA_LD_PermaDeath", "LOCALS", 1)
+	!InPartySlot(Myself, 0)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("XA_LD_LichDeathScript", "LOCALS", 0)
+		ChangeAIScript("", CLASS)
+		SetGlobal("XA_LD_PermaDeath", "LOCALS", 0)
+		LeaveParty()
+		Kill(Myself)
+		SetInterrupt(TRUE)
+END
+
+IF
+	Global("XA_LD_PermaDeath", "LOCALS", 1)
+	InPartySlot(Myself, 0)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ChangeAIScript("", CLASS)
+		SetGlobal("XA_LD_PermaDeath", "LOCALS", 0)
+		Kill(Myself)
+		GameOver(19377)
+		SetInterrupt(TRUE)
+END

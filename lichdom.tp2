@@ -220,6 +220,12 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 	//{ Portrait Change (Lich)
 	COPY ~lichdom/spl/xaplich.spl~ ~override~
 	//}
+
+	//{ Lich Death
+	COPY ~lichdom/spl/xalddest.spl~ ~override~
+	SAY NAME1 @14
+	SAY DESC @14
+	//}
 	
 	//{ Lich Transformation 
 	COPY ~lichdom/spl/xaldlich.spl~ ~override~

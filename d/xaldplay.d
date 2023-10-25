@@ -254,63 +254,81 @@ APPEND ~PLAYER1~
 	IF ~~ THEN BEGIN XA_PhylacteryBreak
 		SAY @9 /*~Change phylactery chance to shatter on death.~*/
 		
-		IF ~~ THEN REPLY @10
+		IF ~~ THEN REPLY @10 /*~0% (Default).~*/
 		DO ~
 			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 0)
 		~
 		GOTO XA_ChangeProcessed
 		
-		IF ~~ THEN REPLY @11
+		IF ~~ THEN REPLY @11 /*~1%.~*/
 		DO ~
 			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 1)
 		~
 		GOTO XA_ChangeProcessed
 		
-		IF ~~ THEN REPLY @12
+		IF ~~ THEN REPLY @12 /*~3%.~*/
 		DO ~
 			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 2)
 		~
 		GOTO XA_ChangeProcessed
 		
-		IF ~~ THEN REPLY @13
+		IF ~~ THEN REPLY @13 /*~5%.~*/
 		DO ~
 			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 3)
 		~
 		GOTO XA_ChangeProcessed
 		
-		IF ~~ THEN REPLY @14
+		IF ~~ THEN REPLY @14 /*~10%.~*/
 		DO ~
 			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 4)
 		~
 		GOTO XA_ChangeProcessed
 		
-		IF ~~ THEN REPLY @15
+		IF ~~ THEN REPLY @15 /*~15%.~*/
 		DO ~
 			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 5)
 		~
 		GOTO XA_ChangeProcessed
 		
-		IF ~~ THEN REPLY @16
+		IF ~~ THEN REPLY @16 /*~20%.~*/
 		DO ~
 			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 6)
 		~
 		GOTO XA_ChangeProcessed
 		
-		IF ~~ THEN REPLY @17
+		IF ~~ THEN REPLY @17 /*~25%.~*/
 		DO ~
 			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 7)
 		~
 		GOTO XA_ChangeProcessed
 		
-		IF ~~ THEN REPLY @18
+		IF ~~ THEN REPLY @18 /*~33%.~*/
 		DO ~
 			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 8)
 		~
 		GOTO XA_ChangeProcessed
 		
-		IF ~~ THEN REPLY @19
+		IF ~~ THEN REPLY @19 /*~50%.~*/
 		DO ~
 			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 9)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @20 /*~67%.~*/
+		DO ~
+			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 10)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @21 /*~80%.~*/
+		DO ~
+			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 11)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @22 /*~100%.~*/
+		DO ~
+			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 12)
 		~
 		GOTO XA_ChangeProcessed
 		

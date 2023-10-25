@@ -75,55 +75,67 @@
 //{ Death Scripting
 	IF
 		HPPercentLT(Player1, 10)
-		HasItemEquiped("xaldphyl", Player1)
+		Race(Player1, LICH)
+		TriggerOverride(Player1, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
 		RESPONSE #100
 			ActionOverride(Player1, ChangeAIScript("xalddead", CLASS)
+			ActionOverride(Player1, SetGLobal("XA_LD_LichDeathScript", "LOCALS", 1)
 			Continue()
 	END
 	
 	IF
 		HPPercentLT(Player2, 10)
-		HasItemEquiped("xaldphyl", Player2)
+		Race(Player2, LICH)
+		TriggerOverride(Player2, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
 		RESPONSE #100
 			ActionOverride(Player2, ChangeAIScript("xalddead", CLASS)
+			ActionOverride(Player2, SetGLobal("XA_LD_LichDeathScript", "LOCALS", 1)
 			Continue()
 	END
 	
 	IF
 		HPPercentLT(Player3, 10)
-		HasItemEquiped("xaldphyl", Player3)
+		Race(Player3, LICH)
+		TriggerOverride(Player3, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
 		RESPONSE #100
 			ActionOverride(Player3, ChangeAIScript("xalddead", CLASS)
+			ActionOverride(Player3, SetGLobal("XA_LD_LichDeathScript", "LOCALS", 1)
 			Continue()
 	END
 	
 	IF
 		HPPercentLT(Player4, 10)
-		HasItemEquiped("xaldphyl", Player4)
+		Race(Player4, LICH)
+		TriggerOverride(Player4, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
 		RESPONSE #100
 			ActionOverride(Player4, ChangeAIScript("xalddead", CLASS)
+			ActionOverride(Player4, SetGLobal("XA_LD_LichDeathScript", "LOCALS", 1)
 			Continue()
 	END
 	
 	IF
 		HPPercentLT(Player5, 10)
-		HasItemEquiped("xaldphyl", Player5)
+		Race(Player5, LICH)
+		TriggerOverride(Player5, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
 		RESPONSE #100
 			ActionOverride(Player5, ChangeAIScript("xalddead", CLASS)
+			ActionOverride(Player5, SetGLobal("XA_LD_LichDeathScript", "LOCALS", 1)
 			Continue()
 	END
 	
 	IF
 		HPPercentLT(Player6, 10)
-		HasItemEquiped("xaldphyl", Player6)
+		Race(Player6, LICH)
+		TriggerOverride(Player6, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
 		RESPONSE #100
 			ActionOverride(Player6, ChangeAIScript("xalddead", CLASS)
+			ActionOverride(Player6, SetGLobal("XA_LD_LichDeathScript", "LOCALS", 1)
 			Continue()
 	END
 //}
