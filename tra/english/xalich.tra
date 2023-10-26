@@ -1,7 +1,7 @@
 @0 = ~Lichdom, for Baldur's Gate EET.~
 @1 = ~This mod requires the EET mod to be installed.~
-@2 = ~Phylactery~
-@3 = ~The phylactery is simultaneously the source of the lich's greatest power and its greatest, indeed its only significant physical weakness. Any independent lich should take pains to ensure its phylactery is kept secure at all times. Though not strictly necessary, the transition from mortal to lich is more easily achieved if the item which will store the transformee's soul (ie, the phylactery) is something with which they are familiar. This is particularly the case in Rituals of Becoming that are performed by a party other than the one undergoing transformation.~
+@2 = ~Shroud of the Lich~
+@3 = ~The phylactery is simultaneously the source of the lich's greatest power and its greatest, indeed its only significant physical weakness. Any independent lich should take pains to ensure its phylactery is kept secure at all times. Though not strictly necessary, the transition from mortal to lich is more easily achieved if the item which will store the transformee's soul (ie, the phylactery) is something with which they are familiar. This is particularly the case in Rituals of Becoming that are performed by a party other than the one undergoing transformation. The phylactery is small enough to be hidden within an unassuming item, as is the case here; it has been discreetly woven into the fibers of this cloak.~
 @4 = ~Lich Dust~
 @5 = ~This gathering of dust is seemingly all that remains of a powerful Undead spellcaster known as a Lich.~
 @6 = ~Lich Transformation~
@@ -13,3 +13,4 @@
 @12 = ~Lich Spell Immunity~
 @13 = ~Lich Animation~
 @14 = ~True Death~
+@15 = ~Lich~

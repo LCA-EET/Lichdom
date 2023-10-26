@@ -545,8 +545,9 @@ IF
 THEN
 	RESPONSE #100
 		CreateItem("xaldphyl", 0,0,0)
-		XEquipItem("",Myself,SLOT_AMULET,EQUIP)
-		XEquipItem("xaldphyl",Myself,SLOT_AMULET,EQUIP)
+		SetItemFlags("xaldphyl", IDENTIFIED, TRUE)
+		XEquipItem("",Myself,SLOT_CLOAK,EQUIP)
+		XEquipItem("xaldphyl",Myself,SLOT_CLOAK,EQUIP)
 		SetGlobal("XA_PhylacteryEquipped", "LOCALS", 1)
 END
 

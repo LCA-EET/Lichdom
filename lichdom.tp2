@@ -29,6 +29,12 @@ REQUIRE_PREDICATE GAME_IS ~bgee eet~ @1 /* ~This mod requires the EET mod to be 
 COMPILE EVALUATE_BUFFER ~lichdom/d~
 COMPILE EVALUATE_BUFFER ~lichdom/baf~ 
 
+//{ 2DA 
+	OUTER_SET %lichref% = RESOLVE_STR_REF(@15)
+	COPY_EXISTING ~enginest.2da~ ~override~
+	INSERT_2DA_ROW 1337 2 ~STRREF_GUI_MIXED_LICH %lichref%~  
+//}
+
 //{ BAF
 	EXTEND_TOP ~BALDUR.BCS~ ~lichdom/baf/xabaldur.baf~
 	EXTEND_TOP ~BDBALDUR.BCS~ ~lichdom/baf/xabaldur.baf~
@@ -37,7 +43,7 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 
 //{ BAM
 	COPY ~lichdom/bam/xaiphyl.bam~ ~override~
-	COPY ~lichdom/bam/xaphyl.bam~ ~override~
+	//COPY ~lichdom/bam/xaphyl.bam~ ~override~
 	COPY ~lichdom/bam/xaldasst.bam~ ~override~
 //}
 

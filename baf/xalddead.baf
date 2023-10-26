@@ -198,12 +198,28 @@ END
 
 IF
 	Global("XA_LD_TempDeath", "LOCALS", 1)
+	InPartySlot(Myself, 0)
 THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
 		SetGlobal("XA_LD_LichDeathScript", "LOCALS", 0) 
 		ChangeAIScript("", CLASS)
 		SetGlobal("XA_LD_TempDeath", "LOCALS", 0)
+		SetGlobalTimer("XA_LD_RezTimer", "GLOBAL", EIGHT_HOURS)
+		DestroyItem("xaldphyl")
+		Kill(Myself)
+		SetInterrupt(TRUE)
+END
+
+IF
+	Global("XA_LD_TempDeath", "LOCALS", 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("XA_LD_LichDeathScript", "LOCALS", 0) 
+		ChangeAIScript("", CLASS)
+		SetGlobal("XA_LD_TempDeath", "LOCALS", 0)
+		DestroyItem("xaldphyl")
 		Kill(Myself)
 		SetInterrupt(TRUE)
 END
@@ -219,6 +235,7 @@ THEN
 		SetGlobal("XA_LD_PermaDeath", "LOCALS", 0)
 		ReallyForceSpellRES("xalddest", Myself)
 		LeaveParty()
+		DestroyItem("xaldphyl")
 		Kill(Myself)
 		SetInterrupt(TRUE)
 END

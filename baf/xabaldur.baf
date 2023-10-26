@@ -1,3 +1,7 @@
+//{ Rolling Eight Hour Timer
+
+//}
+
 //{ Check if a player is a lich. If so, apply the lich transformation script.
 	//{ Player1
 	IF

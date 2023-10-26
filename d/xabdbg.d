@@ -5,6 +5,9 @@ IF ~
 ~ THEN BEGIN XA_DebugInit
 	SAY @0
 	
+	IF ~~ THEN REPLY @43
+	GOTO XA_ReportRace
+	
 	IF ~~ THEN REPLY @37
 	DO ~
 		ChangeRace(Player1, LICH)
@@ -157,4 +160,11 @@ IF ~
 	
 	IF ~~ THEN REPLY @2
 	EXIT	
+END
+
+IF ~~ THEN BEGIN XA_ReportRace
+	SAY @44
+	
+	IF ~~ THEN
+	GOTO XA_DebugInit
 END
