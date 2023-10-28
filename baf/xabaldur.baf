@@ -16,10 +16,12 @@ IF
 	HPLT(Player1, 1)
 THEN
 	RESPONSE #100
+		SetInterrupt(FALSE)
 		ActionOverride(Player1, SetGlobal("XA_LD_AmDead", "LOCALS", 0)
 		ReallyForceSpellRES("SPPR712", Player1)
 		ActionOverride(Player1, CreateItem("xaldphyl", 0,0,0))
 		ActionOverride(Player1, SetItemFlags("xaldphyl", IDENTIFIED, TRUE))
+		ActionOverride(Player1, XEquipItem("xaldphyl",Myself,SLOT_CLOAK,EQUIP))
 		Continue()
 END
 
@@ -30,10 +32,13 @@ IF
 	HPLT(Player2, 1)
 THEN
 	RESPONSE #100
+		SetInterrupt(FALSE)
 		ActionOverride(Player2, SetGlobal("XA_LD_AmDead", "LOCALS", 0)
 		ReallyForceSpellRES("SPPR712", Player2)
 		ActionOverride(Player2, CreateItem("xaldphyl", 0,0,0))
 		ActionOverride(Player2, SetItemFlags("xaldphyl", IDENTIFIED, TRUE))
+		ActionOverride(Player2, XEquipItem("xaldphyl",Myself,SLOT_CLOAK,EQUIP))
+		SetInterrupt(TRUE)
 		Continue()
 END
 
@@ -44,10 +49,13 @@ IF
 	HPLT(Player3, 1)
 THEN
 	RESPONSE #100
+		SetInterrupt(FALSE)
 		ActionOverride(Player3, SetGlobal("XA_LD_AmDead", "LOCALS", 0)
 		ReallyForceSpellRES("SPPR712", Player3)
 		ActionOverride(Player3, CreateItem("xaldphyl", 0,0,0))
 		ActionOverride(Player3, SetItemFlags("xaldphyl", IDENTIFIED, TRUE))
+		ActionOverride(Player3, XEquipItem("xaldphyl",Myself,SLOT_CLOAK,EQUIP))
+		SetInterrupt(TRUE)
 		Continue()
 END
 
@@ -58,10 +66,13 @@ IF
 	HPLT(Player4, 1)
 THEN
 	RESPONSE #100
+		SetInterrupt(FALSE)
 		ActionOverride(Player4, SetGlobal("XA_LD_AmDead", "LOCALS", 0)
 		ReallyForceSpellRES("SPPR712", Player4)
 		ActionOverride(Player4, CreateItem("xaldphyl", 0,0,0))
 		ActionOverride(Player4, SetItemFlags("xaldphyl", IDENTIFIED, TRUE))
+		ActionOverride(Player5, XEquipItem("xaldphyl",Myself,SLOT_CLOAK,EQUIP))
+		SetInterrupt(TRUE)
 		Continue()
 END
 
@@ -72,10 +83,13 @@ IF
 	HPLT(Player5, 1)
 THEN
 	RESPONSE #100
+		SetInterrupt(FALSE)
 		ActionOverride(Player5, SetGlobal("XA_LD_AmDead", "LOCALS", 0)
 		ReallyForceSpellRES("SPPR712", Player5)
 		ActionOverride(Player5, CreateItem("xaldphyl", 0,0,0))
 		ActionOverride(Player5, SetItemFlags("xaldphyl", IDENTIFIED, TRUE))
+		ActionOverride(Player5, XEquipItem("xaldphyl",Myself,SLOT_CLOAK,EQUIP))
+		SetInterrupt(TRUE)
 		Continue()
 END
 
@@ -86,10 +100,13 @@ IF
 	HPLT(Player6, 1)
 THEN
 	RESPONSE #100
+		SetInterrupt(FALSE)
 		ActionOverride(Player6, SetGlobal("XA_LD_AmDead", "LOCALS", 0)
 		ReallyForceSpellRES("SPPR712", Player6)
 		ActionOverride(Player6, CreateItem("xaldphyl", 0,0,0))
 		ActionOverride(Player6, SetItemFlags("xaldphyl", IDENTIFIED, TRUE))
+		ActionOverride(Player6, XEquipItem("xaldphyl",Myself,SLOT_CLOAK,EQUIP))
+		SetInterrupt(TRUE)
 		Continue()
 END
 
@@ -109,6 +126,7 @@ END
 	//{ Player1
 	IF
 		Race(Player1, LICH)
+		TriggerOverride(Player1, ActionListEmpty())
 		TriggerOverride(Player1, GlobalLT("XA_LD_LichTransformDone", "LOCALS", 1))
 		TriggerOverride(Player1, GlobalLT("XA_LD_LichTransformUnderway", "LOCALS", 1))
 	THEN
@@ -121,6 +139,7 @@ END
 	//{ Player2
 	IF
 		Race(Player2, LICH)
+		TriggerOverride(Player2, ActionListEmpty())
 		TriggerOverride(Player2, GlobalLT("XA_LD_LichTransformDone", "LOCALS", 1))
 		TriggerOverride(Player2, GlobalLT("XA_LD_LichTransformUnderway", "LOCALS", 1))
 	THEN
@@ -133,6 +152,7 @@ END
 	//{ Player3
 	IF
 		Race(Player3, LICH)
+		TriggerOverride(Player3, ActionListEmpty())
 		TriggerOverride(Player3, GlobalLT("XA_LD_LichTransformDone", "LOCALS", 1))
 		TriggerOverride(Player3, GlobalLT("XA_LD_LichTransformUnderway", "LOCALS", 1))
 	THEN
@@ -145,6 +165,7 @@ END
 	//{ Player4
 	IF
 		Race(Player4, LICH)
+		TriggerOverride(Player4, ActionListEmpty())
 		TriggerOverride(Player4, GlobalLT("XA_LD_LichTransformDone", "LOCALS", 1))
 		TriggerOverride(Player4, GlobalLT("XA_LD_LichTransformUnderway", "LOCALS", 1))
 	THEN
@@ -157,6 +178,7 @@ END
 	//{ Player5
 	IF
 		Race(Player5, LICH)
+		TriggerOverride(Player5, ActionListEmpty())
 		TriggerOverride(Player5, GlobalLT("XA_LD_LichTransformDone", "LOCALS", 1))
 		TriggerOverride(Player5, GlobalLT("XA_LD_LichTransformUnderway", "LOCALS", 1))
 	THEN
@@ -169,6 +191,7 @@ END
 	//{ Player6
 	IF
 		Race(Player6, LICH)
+		TriggerOverride(Player6, ActionListEmpty())
 		TriggerOverride(Player6, GlobalLT("XA_LD_LichTransformDone", "LOCALS", 1))
 		TriggerOverride(Player6, GlobalLT("XA_LD_LichTransformUnderway", "LOCALS", 1))
 	THEN
@@ -183,78 +206,90 @@ END
 	IF
 		HPPercentLT(Player1, 10)
 		Race(Player1, LICH)
-		TriggerOveridde(Player1, GlobalLT("XA_LD_AmDead", "LOCALS", 1))
+		TriggerOverride(Player1, GlobalLT("XA_LD_AmDead", "LOCALS", 1))
 		TriggerOverride(Player1, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
 		RESPONSE #100
-			ActionOveridde(Player1, SetGlobal("XA_LD_AmDead", "LOCALS", 1))
+			SetInterrupt(FALSE)
+			ActionOverride(Player1, SetGlobal("XA_LD_AmDead", "LOCALS", 1))
 			ActionOverride(Player1, ChangeAIScript("xalddead", CLASS)
 			ActionOverride(Player1, SetGLobal("XA_LD_LichDeathScript", "LOCALS", 1)
+			SetInterrupt(TRUE)
 			Continue()
 	END
 	
 	IF
 		HPPercentLT(Player2, 10)
 		Race(Player2, LICH)
-		TriggerOveridde(Player2, GlobalLT("XA_LD_AmDead", "LOCALS", 1))
+		TriggerOverride(Player2, GlobalLT("XA_LD_AmDead", "LOCALS", 1))
 		TriggerOverride(Player2, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
 		RESPONSE #100
-			ActionOveridde(Player2, SetGlobal("XA_LD_AmDead", "LOCALS", 1))
+			SetInterrupt(FALSE)
+			ActionOverride(Player2, SetGlobal("XA_LD_AmDead", "LOCALS", 1))
 			ActionOverride(Player2, ChangeAIScript("xalddead", CLASS)
 			ActionOverride(Player2, SetGLobal("XA_LD_LichDeathScript", "LOCALS", 1)
+			SetInterrupt(TRUE)
 			Continue()
 	END
 	
 	IF
 		HPPercentLT(Player3, 10)
 		Race(Player3, LICH)
-		TriggerOveridde(Player3, GlobalLT("XA_LD_AmDead", "LOCALS", 1))
+		TriggerOverride(Player3, GlobalLT("XA_LD_AmDead", "LOCALS", 1))
 		TriggerOverride(Player3, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
 		RESPONSE #100
-			ActionOveridde(Player3, SetGlobal("XA_LD_AmDead", "LOCALS", 1))
+			SetInterrupt(FALSE)
+			ActionOverride(Player3, SetGlobal("XA_LD_AmDead", "LOCALS", 1))
 			ActionOverride(Player3, ChangeAIScript("xalddead", CLASS)
 			ActionOverride(Player3, SetGLobal("XA_LD_LichDeathScript", "LOCALS", 1)
+			SetInterrupt(TRUE)
 			Continue()
 	END
 	
 	IF
 		HPPercentLT(Player4, 10)
 		Race(Player4, LICH)
-		TriggerOveridde(Player4, GlobalLT("XA_LD_AmDead", "LOCALS", 1))
+		TriggerOverride(Player4, GlobalLT("XA_LD_AmDead", "LOCALS", 1))
 		TriggerOverride(Player4, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
 		RESPONSE #100
-			ActionOveridde(Player4, SetGlobal("XA_LD_AmDead", "LOCALS", 1))
+			SetInterrupt(FALSE)
+			ActionOverride(Player4, SetGlobal("XA_LD_AmDead", "LOCALS", 1))
 			ActionOverride(Player4, ChangeAIScript("xalddead", CLASS)
 			ActionOverride(Player4, SetGLobal("XA_LD_LichDeathScript", "LOCALS", 1)
+			SetInterrupt(TRUE)
 			Continue()
 	END
 	
 	IF
 		HPPercentLT(Player5, 10)
 		Race(Player5, LICH)
-		TriggerOveridde(Player5, GlobalLT("XA_LD_AmDead", "LOCALS", 1))
+		TriggerOverride(Player5, GlobalLT("XA_LD_AmDead", "LOCALS", 1))
 		TriggerOverride(Player5, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
 		RESPONSE #100
-			ActionOveridde(Player5, SetGlobal("XA_LD_AmDead", "LOCALS", 1))
+			SetInterrupt(FALSE)
+			ActionOverride(Player5, SetGlobal("XA_LD_AmDead", "LOCALS", 1))
 			ActionOverride(Player5, ChangeAIScript("xalddead", CLASS)
 			ActionOverride(Player5, SetGLobal("XA_LD_LichDeathScript", "LOCALS", 1)
+			SetInterrupt(TRUE)
 			Continue()
 	END
 	
 	IF
 		HPPercentLT(Player6, 10)
 		Race(Player6, LICH)
-		TriggerOveridde(Player6, GlobalLT("XA_LD_AmDead", "LOCALS", 1))
+		TriggerOverride(Player6, GlobalLT("XA_LD_AmDead", "LOCALS", 1))
 		TriggerOverride(Player6, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
 		RESPONSE #100
-			ActionOveridde(Player6, SetGlobal("XA_LD_AmDead", "LOCALS", 1))
+			SetInterrupt(FALSE)
+			ActionOverride(Player6, SetGlobal("XA_LD_AmDead", "LOCALS", 1))
 			ActionOverride(Player6, ChangeAIScript("xalddead", CLASS)
 			ActionOverride(Player6, SetGLobal("XA_LD_LichDeathScript", "LOCALS", 1)
+			SetInterrupt(TRUE)
 			Continue()
 	END
 //}

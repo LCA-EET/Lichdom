@@ -5,6 +5,9 @@ APPEND ~PLAYER1~
 	~ BEGIN XA_MainMenu
 		SAY @0 /*~Welcome to the Lichdom assistant. Select one of the options below.~*/
 		
+		IF ~~ THEN REPLY @61  /* ~Advance the Time.~*/
+		GOTO XA_AdvanceTime
+		
 		IF ~~ THEN REPLY @3 /*~Change Lichdom transformation cost.~*/
 		GOTO XA_LichCost
 		
@@ -28,6 +31,43 @@ APPEND ~PLAYER1~
 		
 		IF ~~ THEN REPLY @1 /*~Exit.~*/
 		GOTO XA_ExitAssistant
+	END
+	
+	IF ~~ THEN BEGIN XA_AdvanceTime
+		SAY @61
+		
+		IF ~~ THEN REPLY @62
+		DO ~
+			AdvanceTime(ONE_HOUR)
+		~
+		GOTO XA_MainMenu
+		
+		IF ~~ THEN REPLY @63
+		DO ~
+			AdvanceTime(TWO_HOURS)
+		~
+		GOTO XA_MainMenu
+		
+		IF ~~ THEN REPLY @64
+		DO ~
+			AdvanceTime(FOUR_HOURS)
+		~
+		GOTO XA_MainMenu
+		
+		IF ~~ THEN REPLY @65
+		DO ~
+			AdvanceTime(EIGHT_HOURS)
+		~
+		GOTO XA_MainMenu
+		
+		IF ~~ THEN REPLY @66
+		DO ~
+			AdvanceTime(ONE_DAY)
+		~
+		GOTO XA_MainMenu
+		
+		IF ~~ THEN REPLY @28 /*Back to main menu.*/
+		GOTO XA_MainMenu
 	END
 	
 	IF ~~ THEN BEGIN XA_ChangeAnimation
