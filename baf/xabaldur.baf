@@ -16,7 +16,10 @@ IF
 	HPLT(Player1, 1)
 THEN
 	RESPONSE #100
+		ActionOverride(Player1, SetGlobal("XA_LD_AmDead", "LOCALS", 0)
 		ReallyForceSpellRES("SPPR712", Player1)
+		ActionOverride(Player1, CreateItem("xaldphyl", 0,0,0))
+		ActionOverride(Player1, SetItemFlags("xaldphyl", IDENTIFIED, TRUE))
 		Continue()
 END
 
@@ -27,7 +30,10 @@ IF
 	HPLT(Player2, 1)
 THEN
 	RESPONSE #100
+		ActionOverride(Player2, SetGlobal("XA_LD_AmDead", "LOCALS", 0)
 		ReallyForceSpellRES("SPPR712", Player2)
+		ActionOverride(Player2, CreateItem("xaldphyl", 0,0,0))
+		ActionOverride(Player2, SetItemFlags("xaldphyl", IDENTIFIED, TRUE))
 		Continue()
 END
 
@@ -38,7 +44,10 @@ IF
 	HPLT(Player3, 1)
 THEN
 	RESPONSE #100
+		ActionOverride(Player3, SetGlobal("XA_LD_AmDead", "LOCALS", 0)
 		ReallyForceSpellRES("SPPR712", Player3)
+		ActionOverride(Player3, CreateItem("xaldphyl", 0,0,0))
+		ActionOverride(Player3, SetItemFlags("xaldphyl", IDENTIFIED, TRUE))
 		Continue()
 END
 
@@ -49,7 +58,10 @@ IF
 	HPLT(Player4, 1)
 THEN
 	RESPONSE #100
+		ActionOverride(Player4, SetGlobal("XA_LD_AmDead", "LOCALS", 0)
 		ReallyForceSpellRES("SPPR712", Player4)
+		ActionOverride(Player4, CreateItem("xaldphyl", 0,0,0))
+		ActionOverride(Player4, SetItemFlags("xaldphyl", IDENTIFIED, TRUE))
 		Continue()
 END
 
@@ -60,7 +72,10 @@ IF
 	HPLT(Player5, 1)
 THEN
 	RESPONSE #100
+		ActionOverride(Player5, SetGlobal("XA_LD_AmDead", "LOCALS", 0)
 		ReallyForceSpellRES("SPPR712", Player5)
+		ActionOverride(Player5, CreateItem("xaldphyl", 0,0,0))
+		ActionOverride(Player5, SetItemFlags("xaldphyl", IDENTIFIED, TRUE))
 		Continue()
 END
 
@@ -71,7 +86,10 @@ IF
 	HPLT(Player6, 1)
 THEN
 	RESPONSE #100
+		ActionOverride(Player6, SetGlobal("XA_LD_AmDead", "LOCALS", 0)
 		ReallyForceSpellRES("SPPR712", Player6)
+		ActionOverride(Player6, CreateItem("xaldphyl", 0,0,0))
+		ActionOverride(Player6, SetItemFlags("xaldphyl", IDENTIFIED, TRUE))
 		Continue()
 END
 
