@@ -202,7 +202,7 @@ IF
 THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
-		SetGlobal("XA_LD_LichDeathScript", "LOCALS", 0) 
+		SetGlobal("XA_LD_LichDeathScript", "LOCALS", 0)
 		ChangeAIScript("", CLASS)
 		SetGlobal("XA_LD_TempDeath", "LOCALS", 0)
 		SetGlobalTimer("XA_LD_RezTimer", "GLOBAL", EIGHT_HOURS)

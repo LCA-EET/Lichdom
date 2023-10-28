@@ -1,6 +1,91 @@
 //{ Rolling Eight Hour Timer
+IF
+	GlobalLT("XA_LD_RezTimerSet", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("XA_LD_RezTimerSet", "GLOBAL", 1)
+		SetGlobalTimer("XA_LD_RezTimer", "GLOBAL", EIGHT_HOURS)
+		SetInterrupt(TRUE)
+END
 
+IF
+	!ActuallyInCombat()
+	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
+	Race(Player1, Lich)
+	HPLT(Player1, 1)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("SPPR712", Player1)
+		Continue()
+END
+
+IF
+	!ActuallyInCombat()
+	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
+	Race(Player2, Lich)
+	HPLT(Player2, 1)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("SPPR712", Player2)
+		Continue()
+END
+
+IF
+	!ActuallyInCombat()
+	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
+	Race(Player3, Lich)
+	HPLT(Player3, 1)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("SPPR712", Player3)
+		Continue()
+END
+
+IF
+	!ActuallyInCombat()
+	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
+	Race(Player4, Lich)
+	HPLT(Player4, 1)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("SPPR712", Player4)
+		Continue()
+END
+
+IF
+	!ActuallyInCombat()
+	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
+	Race(Player5, Lich)
+	HPLT(Player5, 1)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("SPPR712", Player5)
+		Continue()
+END
+
+IF
+	!ActuallyInCombat()
+	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
+	Race(Player6, Lich)
+	HPLT(Player6, 1)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("SPPR712", Player6)
+		Continue()
+END
+
+IF
+	!ActuallyInCombat()
+	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobalTimer("XA_LD_RezTimer", "GLOBAL", EIGHT_HOURS)
+		Continue()
+END
 //}
+
+
 
 //{ Check if a player is a lich. If so, apply the lich transformation script.
 	//{ Player1
@@ -80,9 +165,11 @@
 	IF
 		HPPercentLT(Player1, 10)
 		Race(Player1, LICH)
+		TriggerOveridde(Player1, GlobalLT("XA_LD_AmDead", "LOCALS", 1))
 		TriggerOverride(Player1, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
 		RESPONSE #100
+			ActionOveridde(Player1, SetGlobal("XA_LD_AmDead", "LOCALS", 1))
 			ActionOverride(Player1, ChangeAIScript("xalddead", CLASS)
 			ActionOverride(Player1, SetGLobal("XA_LD_LichDeathScript", "LOCALS", 1)
 			Continue()
@@ -91,9 +178,11 @@
 	IF
 		HPPercentLT(Player2, 10)
 		Race(Player2, LICH)
+		TriggerOveridde(Player2, GlobalLT("XA_LD_AmDead", "LOCALS", 1))
 		TriggerOverride(Player2, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
 		RESPONSE #100
+			ActionOveridde(Player2, SetGlobal("XA_LD_AmDead", "LOCALS", 1))
 			ActionOverride(Player2, ChangeAIScript("xalddead", CLASS)
 			ActionOverride(Player2, SetGLobal("XA_LD_LichDeathScript", "LOCALS", 1)
 			Continue()
@@ -102,9 +191,11 @@
 	IF
 		HPPercentLT(Player3, 10)
 		Race(Player3, LICH)
+		TriggerOveridde(Player3, GlobalLT("XA_LD_AmDead", "LOCALS", 1))
 		TriggerOverride(Player3, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
 		RESPONSE #100
+			ActionOveridde(Player3, SetGlobal("XA_LD_AmDead", "LOCALS", 1))
 			ActionOverride(Player3, ChangeAIScript("xalddead", CLASS)
 			ActionOverride(Player3, SetGLobal("XA_LD_LichDeathScript", "LOCALS", 1)
 			Continue()
@@ -113,9 +204,11 @@
 	IF
 		HPPercentLT(Player4, 10)
 		Race(Player4, LICH)
+		TriggerOveridde(Player4, GlobalLT("XA_LD_AmDead", "LOCALS", 1))
 		TriggerOverride(Player4, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
 		RESPONSE #100
+			ActionOveridde(Player4, SetGlobal("XA_LD_AmDead", "LOCALS", 1))
 			ActionOverride(Player4, ChangeAIScript("xalddead", CLASS)
 			ActionOverride(Player4, SetGLobal("XA_LD_LichDeathScript", "LOCALS", 1)
 			Continue()
@@ -124,9 +217,11 @@
 	IF
 		HPPercentLT(Player5, 10)
 		Race(Player5, LICH)
+		TriggerOveridde(Player5, GlobalLT("XA_LD_AmDead", "LOCALS", 1))
 		TriggerOverride(Player5, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
 		RESPONSE #100
+			ActionOveridde(Player5, SetGlobal("XA_LD_AmDead", "LOCALS", 1))
 			ActionOverride(Player5, ChangeAIScript("xalddead", CLASS)
 			ActionOverride(Player5, SetGLobal("XA_LD_LichDeathScript", "LOCALS", 1)
 			Continue()
@@ -135,9 +230,11 @@
 	IF
 		HPPercentLT(Player6, 10)
 		Race(Player6, LICH)
+		TriggerOveridde(Player6, GlobalLT("XA_LD_AmDead", "LOCALS", 1))
 		TriggerOverride(Player6, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
 		RESPONSE #100
+			ActionOveridde(Player6, SetGlobal("XA_LD_AmDead", "LOCALS", 1))
 			ActionOverride(Player6, ChangeAIScript("xalddead", CLASS)
 			ActionOverride(Player6, SetGLobal("XA_LD_LichDeathScript", "LOCALS", 1)
 			Continue()
