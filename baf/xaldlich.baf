@@ -1,14 +1,17 @@
-IF
-	ActionListEmpty()
-	GlobalLT("XA_LD_LichTransformUnderway", "LOCALS", 1)
+//{
+
+/*
+IF 
+	True()
 THEN
 	RESPONSE #100
-		SetGlobal("XA_LD_LichTransformUnderway", "LOCALS", 1)
+		DisplayStringHead(Myself, @0)
+		Continue()
 END
+*/
 
 //{ Change Title, if Paladin or Ranger
 IF
-	ActionListEmpty()
 	!FallenPaladin(Myself)
 	Class(Myself, PALADIN)
 	!Alignment(Myself, MASK_EVIL)
@@ -22,7 +25,6 @@ THEN
 END
 
 IF
-	ActionListEmpty()
 	!FallenRanger(Myself)
 	Class(Myself, RANGER)
 	!Alignment(Myself, MASK_EVIL)
@@ -39,7 +41,6 @@ END
 //{ Change Alignment
 	//{ LG
 	IF
-		ActionListEmpty()
 		GlobalLT("XA_LD_ChangeAlignment", "LOCALS", 1)
 		Alignment(Myself, LAWFUL_GOOD)
 	THEN
@@ -54,7 +55,6 @@ END
 	
 	//{ NG
 	IF
-		ActionListEmpty()
 		GlobalLT("XA_LD_ChangeAlignment", "LOCALS", 1)
 		Alignment(Myself, NEUTRAL_GOOD)
 	THEN
@@ -69,7 +69,6 @@ END
 	
 	//{ CG
 	IF
-		ActionListEmpty()
 		GlobalLT("XA_LD_ChangeAlignment", "LOCALS", 1)
 		Alignment(Myself, CHAOTIC_GOOD)
 	THEN
@@ -84,7 +83,6 @@ END
 	
 	//{ LN
 	IF
-		ActionListEmpty()
 		GlobalLT("XA_LD_ChangeAlignment", "LOCALS", 1)
 		Alignment(Myself, LAWFUL_NEUTRAL)
 	THEN
@@ -99,7 +97,6 @@ END
 	
 	//{ TN
 	IF
-		ActionListEmpty()
 		GlobalLT("XA_LD_ChangeAlignment", "LOCALS", 1)
 		Alignment(Myself, NEUTRAL)
 	THEN
@@ -114,7 +111,6 @@ END
 	
 	//{ CN
 	IF
-		ActionListEmpty()
 		GlobalLT("XA_LD_ChangeAlignment", "LOCALS", 1)
 		Alignment(Myself, CHAOTIC_NEUTRAL)
 	THEN
@@ -128,7 +124,6 @@ END
 	//}
 	
 	IF
-		ActionListEmpty()
 		GlobalLT("XA_LD_ChangeAlignment", "LOCALS", 1)
 	THEN
 		RESPONSE #100
@@ -139,7 +134,6 @@ END
 
 //{ AC Adjustment
 	IF
-		ActionListEmpty()
 		Global("XA_LD_LichAC", "GLOBAL", 0)
 		GlobalLT("XA_LD_LichAC_Done", "LOCALS", 1)
 	THEN
@@ -152,7 +146,6 @@ END
 	END
 
 	IF
-		ActionListEmpty()
 		Global("XA_LD_LichAC", "GLOBAL", 1)
 		GlobalLT("XA_LD_LichAC_Done", "LOCALS", 1)
 	THEN
@@ -165,7 +158,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_LichAC", "GLOBAL", 2)
 		GlobalLT("XA_LD_LichAC_Done", "LOCALS", 1)
 	THEN
@@ -178,7 +170,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_LichAC", "GLOBAL", 3)
 		GlobalLT("XA_LD_LichAC_Done", "LOCALS", 1)
 	THEN
@@ -191,7 +182,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_LichAC", "GLOBAL", 4)
 		GlobalLT("XA_LD_LichAC_Done", "LOCALS", 1)
 	THEN
@@ -204,9 +194,21 @@ END
 	END
 //}
 
+//{ Paralyzing Touch
+	IF
+		GlobalLT("XA_LD_TouchAbility_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ActionOverride(Player1, AddSpecialAbility("xaldattk"))
+			SetGlobal("XA_LD_TouchAbility_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+//}
+
 //{ Mental Adjustment
 	IF
-		ActionListEmpty()
 		Global("XA_LD_MentalBoost", "GLOBAL", 0)
 		GlobalLT("XA_LD_MentalBoost_Done", "LOCALS", 1)
 	THEN
@@ -219,7 +221,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_MentalBoost", "GLOBAL", 1)
 		GlobalLT("XA_LD_MentalBoost_Done", "LOCALS", 1)
 	THEN
@@ -232,7 +233,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_MentalBoost", "GLOBAL", 2)
 		GlobalLT("XA_LD_MentalBoost_Done", "LOCALS", 1)
 	THEN
@@ -244,7 +244,6 @@ END
 
 //{ Magic Resistance Adjustment
 	IF
-		ActionListEmpty()
 		Global("XA_LD_SpellResistance", "GLOBAL", 0)
 		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
 	THEN
@@ -254,7 +253,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_SpellResistance", "GLOBAL", 1)
 		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
 	THEN
@@ -267,7 +265,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_SpellResistance", "GLOBAL", 2)
 		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
 	THEN
@@ -280,7 +277,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_SpellResistance", "GLOBAL", 3)
 		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
 	THEN
@@ -293,7 +289,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_SpellResistance", "GLOBAL", 4)
 		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
 	THEN
@@ -306,7 +301,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_SpellResistance", "GLOBAL", 5)
 		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
 	THEN
@@ -319,7 +313,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_SpellResistance", "GLOBAL", 6)
 		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
 	THEN
@@ -332,7 +325,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_SpellResistance", "GLOBAL", 7)
 		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
 	THEN
@@ -345,7 +337,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_SpellResistance", "GLOBAL", 8)
 		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
 	THEN
@@ -358,7 +349,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_SpellResistance", "GLOBAL", 9)
 		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
 	THEN
@@ -371,7 +361,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_SpellResistance", "GLOBAL", 10)
 		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
 	THEN
@@ -384,7 +373,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_SpellResistance", "GLOBAL", 11)
 		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
 	THEN
@@ -397,7 +385,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_SpellResistance", "GLOBAL", 12)
 		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
 	THEN
@@ -410,7 +397,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_SpellResistance", "GLOBAL", 13)
 		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
 	THEN
@@ -423,7 +409,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_SpellResistance", "GLOBAL", 14)
 		GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1)
 	THEN
@@ -438,7 +423,6 @@ END
 
 //{ Spell Immunity Adjustment
 	IF
-		ActionListEmpty()
 		Global("XA_LD_SpellImmunityLevel", "GLOBAL", 0)
 		GlobalLT("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1)
 	THEN
@@ -448,7 +432,6 @@ END
 	END
 
 	IF
-		ActionListEmpty()
 		Global("XA_LD_SpellImmunityLevel", "GLOBAL", 1)
 		GlobalLT("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1)
 	THEN
@@ -461,7 +444,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_SpellImmunityLevel", "GLOBAL", 2)
 		GlobalLT("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1)
 	THEN
@@ -474,7 +456,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_SpellImmunityLevel", "GLOBAL", 3)
 		GlobalLT("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1)
 	THEN
@@ -487,7 +468,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_SpellImmunityLevel", "GLOBAL", 4)
 		GlobalLT("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1)
 	THEN
@@ -500,7 +480,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_SpellImmunityLevel", "GLOBAL", 5)
 		GlobalLT("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1)
 	THEN
@@ -515,7 +494,6 @@ END
 
 //{ Animation Adjustment
 	IF
-		ActionListEmpty()
 		Global("XA_LD_Animation", "GLOBAL", 0)
 		GlobalLT("XA_LD_Animation_Done", "LOCALS", 1)
 	THEN
@@ -525,7 +503,6 @@ END
 	END
 	
 	IF
-		ActionListEmpty()
 		Global("XA_LD_Animation", "GLOBAL", 1)
 		GlobalLT("XA_LD_Animation_Done", "LOCALS", 1)
 	THEN
@@ -540,38 +517,62 @@ END
 
 //{ Create and Equip Phylactery
 IF
-	ActionListEmpty()
-	GlobalLT("XA_PhylacteryEquipped", "LOCALS", 1)
+	!HasItem("xaldphyl", Myself)
 THEN
 	RESPONSE #100
+		SetInterrupt(FALSE)
 		CreateItem("xaldphyl", 0,0,0)
 		SetItemFlags("xaldphyl", IDENTIFIED, TRUE)
-		XEquipItem("",Myself,SLOT_CLOAK,EQUIP)
-		XEquipItem("xaldphyl",Myself,SLOT_CLOAK,EQUIP)
-		SetGlobal("XA_PhylacteryEquipped", "LOCALS", 1)
+		SetInterrupt(TRUE) 
+		Continue()
 END
 
 IF
-	ActionListEmpty()
+	!HasItemEquiped("xaldphyl", Myself)
+THEN
+	RESPONSE #100
+		XEquipItem("xaldphyl",Myself,SLOT_CLOAK,EQUIP)
+		Continue()
+END
+//}
+
+//{ Create and Equip Paralyzing Touch
+IF
+	!HasItem("xaldclaw", Myself)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		CreateItem("xaldclaw", 0,0,0)
+		SetItemFlags("xaldclaw", IDENTIFIED, TRUE)
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	!HasItemEquiped("xaldclaw", Myself)
+THEN
+	RESPONSE #100
+		XEquipItem("xaldclaw",Myself,SLOT_WEAPON,EQUIP)
+		Continue()
+END
+//}
+
+IF
 	Global("XA_LD_ChangeAlignment", "LOCALS", 1)
 	Global("XA_LD_Animation_Done", "LOCALS", 1)
 	Global("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1)
 	Global("XA_LD_SpellResistance_Done", "LOCALS", 1)
 	Global("XA_LD_MentalBoost_Done", "LOCALS", 1)
 	Global("XA_LD_LichAC_Done", "LOCALS", 1)
-	Global("XA_PhylacteryEquipped", "LOCALS", 1)
+	HasItemEquiped("xaldphyl", Myself)
+	HasItemEquiped("xaldclaw", Myself)
 	GlobalLT("XA_LD_LichTransformDone", "LOCALS", 1)
 THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
 		ReallyForceSpellRES("xaldlich", Myself)
 		SetGlobal("XA_LD_LichTransformDone", "LOCALS", 1)
+		ChangeAIScript("", CLASS)
 		SetInterrupt(TRUE)
 END
 
-IF
-	Global("XA_LD_LichTransformDone", "LOCALS", 1)
-THEN
-	RESPONSE #100
-		ChangeAIScript("", CLASS)
-END

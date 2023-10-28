@@ -1,3 +1,253 @@
+//{ Paralyzing Touch Toggle
+IF
+	TriggerOverride(Player1, ActionListEmpty())
+	TriggerOverride(Player1, Global("xaldattk", "LOCALS", 1))
+	!HasItemEquiped("xaldclaw", Player1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player1, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player1, CreateItem("xaldclaw", 0,0,0))
+		ActionOverride(Player1, SetItemFlags("xaldclaw", IDENTIFIED, TRUE))
+		ActionOverride(Player1, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player1, XEquipItem("xaldclaw",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player1, ActionListEmpty())
+	TriggerOverride(Player1, Global("xaldattk", "LOCALS", 1))
+	HasItemEquiped("xaldclaw", Player1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player1, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player1, DestroyItem("xaldclaw"))
+		ActionOverride(Player1, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player2, ActionListEmpty())
+	TriggerOverride(Player2, Global("xaldattk", "LOCALS", 1))
+	!HasItemEquiped("xaldclaw", Player2)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player2, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player2, CreateItem("xaldclaw", 0,0,0))
+		ActionOverride(Player2, SetItemFlags("xaldclaw", IDENTIFIED, TRUE))
+		ActionOverride(Player2, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player2, XEquipItem("xaldclaw",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player2, ActionListEmpty())
+	TriggerOverride(Player2, Global("xaldattk", "LOCALS", 1))
+	HasItemEquiped("xaldclaw", Player2)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player2, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player2, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player2, DestroyItem("xaldclaw"))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player3, ActionListEmpty())
+	TriggerOverride(Player3, Global("xaldattk", "LOCALS", 1))
+	!HasItemEquiped("xaldclaw", Player3)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player3, SetGlobal("xaldattk", "LOCALS",2))
+		ActionOverride(Player3, CreateItem("xaldclaw", 0,0,0))
+		ActionOverride(Player3, SetItemFlags("xaldclaw", IDENTIFIED, TRUE))
+		ActionOverride(Player3, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player3, XEquipItem("xaldclaw",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player3, ActionListEmpty())
+	TriggerOverride(Player3, Global("xaldattk", "LOCALS", 1))
+	HasItemEquiped("xaldclaw", Player3)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player3, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player3, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player3, DestroyItem("xaldclaw"))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player4, ActionListEmpty())
+	TriggerOverride(Player4, Global("xaldattk", "LOCALS", 1))
+	!HasItemEquiped("xaldclaw", Player4)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player4, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player4, CreateItem("xaldclaw", 0,0,0))
+		ActionOverride(Player4, SetItemFlags("xaldclaw", IDENTIFIED, TRUE))
+		ActionOverride(Player4, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player4, XEquipItem("xaldclaw",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player4, ActionListEmpty())
+	TriggerOverride(Player4, Global("xaldattk", "LOCALS", 1))
+	HasItemEquiped("xaldclaw", Player4)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player4, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player4, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player4, DestroyItem("xaldclaw"))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player5, ActionListEmpty())
+	TriggerOverride(Player5, Global("xaldattk", "LOCALS", 1))
+	!HasItemEquiped("xaldclaw", Player5)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player5, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player5, CreateItem("xaldclaw", 0,0,0))
+		ActionOverride(Player5, SetItemFlags("xaldclaw", IDENTIFIED, TRUE))
+		ActionOverride(Player5, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player5, XEquipItem("xaldclaw",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player5, ActionListEmpty())
+	TriggerOverride(Player5, Global("xaldattk", "LOCALS", 1))
+	HasItemEquiped("xaldclaw", Player5)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player5, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player5, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player5, DestroyItem("xaldclaw"))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player6, ActionListEmpty())
+	TriggerOverride(Player6, Global("xaldattk", "LOCALS", 1))
+	!HasItemEquiped("xaldclaw", Player6)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player6, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player6, CreateItem("xaldclaw", 0,0,0))
+		ActionOverride(Player6, SetItemFlags("xaldclaw", IDENTIFIED, TRUE))
+		ActionOverride(Player6, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player6, XEquipItem("xaldclaw",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player6, ActionListEmpty())
+	TriggerOverride(Player6, Global("xaldattk", "LOCALS", 1))
+	HasItemEquiped("xaldclaw", Player6)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player6, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player6, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player6, DestroyItem("xaldclaw"))
+		SetInterrupt(TRUE)
+END
+//}
+
+//{ Re-add the Paralyzing Touch Ability once used
+IF
+	ActionListEmpty()
+	!TriggerOverride(Player1,HaveSpellRES("xaldattk"))
+	TriggerOverride(Player1, Global("XA_LD_LichTransformDone", "LOCALS", 1)) 	
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player1, SetGlobal("xaldattk", "LOCALS", 0))
+		ActionOverride(Player1, AddSpecialAbility("xaldattk"))
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	ActionListEmpty()
+	!TriggerOverride(Player2,HaveSpellRES("xaldattk"))
+	TriggerOverride(Player2, Global("XA_LD_LichTransformDone", "LOCALS", 1)) 	
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player2, SetGlobal("xaldattk", "LOCALS", 0))
+		ActionOverride(Player2, AddSpecialAbility("xaldattk"))
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	ActionListEmpty()
+	!TriggerOverride(Player3,HaveSpellRES("xaldattk"))
+	TriggerOverride(Player3, Global("XA_LD_LichTransformDone", "LOCALS", 1)) 	
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player3, SetGlobal("xaldattk", "LOCALS", 0))
+		ActionOverride(Player3, AddSpecialAbility("xaldattk"))
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	ActionListEmpty()
+	!TriggerOverride(Player4,HaveSpellRES("xaldattk"))
+	TriggerOverride(Player4, Global("XA_LD_LichTransformDone", "LOCALS", 1)) 	
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player4, SetGlobal("xaldattk", "LOCALS", 0))
+		ActionOverride(Player5, AddSpecialAbility("xaldattk"))
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	ActionListEmpty()
+	!TriggerOverride(Player5,HaveSpellRES("xaldattk"))
+	TriggerOverride(Player5, Global("XA_LD_LichTransformDone", "LOCALS", 1)) 	
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player5, SetGlobal("xaldattk", "LOCALS", 0))
+		ActionOverride(Player5, AddSpecialAbility("xaldattk"))
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	ActionListEmpty()
+	!TriggerOverride(Player6,HaveSpellRES("xaldattk"))
+	TriggerOverride(Player6, Global("XA_LD_LichTransformDone", "LOCALS", 1)) 	
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player6, SetGlobal("xaldattk", "LOCALS", 0))
+		ActionOverride(Player6, AddSpecialAbility("xaldattk"))
+		SetInterrupt(TRUE)
+		Continue()
+END
+//}
+
 //{ Rolling Eight Hour Timer
 IF
 	GlobalLT("XA_LD_RezTimerSet", "GLOBAL", 1)
@@ -128,7 +378,6 @@ END
 		Race(Player1, LICH)
 		TriggerOverride(Player1, ActionListEmpty())
 		TriggerOverride(Player1, GlobalLT("XA_LD_LichTransformDone", "LOCALS", 1))
-		TriggerOverride(Player1, GlobalLT("XA_LD_LichTransformUnderway", "LOCALS", 1))
 	THEN
 		RESPONSE #100
 			ActionOverride(Player1, ChangeAIScript("xaldlich", CLASS))
@@ -141,7 +390,6 @@ END
 		Race(Player2, LICH)
 		TriggerOverride(Player2, ActionListEmpty())
 		TriggerOverride(Player2, GlobalLT("XA_LD_LichTransformDone", "LOCALS", 1))
-		TriggerOverride(Player2, GlobalLT("XA_LD_LichTransformUnderway", "LOCALS", 1))
 	THEN
 		RESPONSE #100
 			ActionOverride(Player2, ChangeAIScript("xaldlich", CLASS))
@@ -154,7 +402,6 @@ END
 		Race(Player3, LICH)
 		TriggerOverride(Player3, ActionListEmpty())
 		TriggerOverride(Player3, GlobalLT("XA_LD_LichTransformDone", "LOCALS", 1))
-		TriggerOverride(Player3, GlobalLT("XA_LD_LichTransformUnderway", "LOCALS", 1))
 	THEN
 		RESPONSE #100
 			ActionOverride(Player3, ChangeAIScript("xaldlich", CLASS))
@@ -167,7 +414,6 @@ END
 		Race(Player4, LICH)
 		TriggerOverride(Player4, ActionListEmpty())
 		TriggerOverride(Player4, GlobalLT("XA_LD_LichTransformDone", "LOCALS", 1))
-		TriggerOverride(Player4, GlobalLT("XA_LD_LichTransformUnderway", "LOCALS", 1))
 	THEN
 		RESPONSE #100
 			ActionOverride(Player4, ChangeAIScript("xaldlich", CLASS))
@@ -180,7 +426,6 @@ END
 		Race(Player5, LICH)
 		TriggerOverride(Player5, ActionListEmpty())
 		TriggerOverride(Player5, GlobalLT("XA_LD_LichTransformDone", "LOCALS", 1))
-		TriggerOverride(Player5, GlobalLT("XA_LD_LichTransformUnderway", "LOCALS", 1))
 	THEN
 		RESPONSE #100
 			ActionOverride(Player5, ChangeAIScript("xaldlich", CLASS))
@@ -193,7 +438,6 @@ END
 		Race(Player6, LICH)
 		TriggerOverride(Player6, ActionListEmpty())
 		TriggerOverride(Player6, GlobalLT("XA_LD_LichTransformDone", "LOCALS", 1))
-		TriggerOverride(Player6, GlobalLT("XA_LD_LichTransformUnderway", "LOCALS", 1))
 	THEN
 		RESPONSE #100
 			ActionOverride(Player6, ChangeAIScript("xaldlich", CLASS))

@@ -58,6 +58,10 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 //}
 
 //{ ITM
+	COPY ~lichdom/itm/xaldclaw.itm~ ~override~
+	SAY NAME1 @16
+	SAY NAME2 @16
+
 	COPY ~lichdom/itm/xaldphyl.itm~ ~override~
 	SAY NAME2 @2
 	SAY DESC @3
@@ -69,6 +73,13 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 //}
 
 //{ SPL
+	//{ Paralyzing Touch
+		COPY ~lichdom/spl/xaldattk.spl~ ~override~
+		SAY NAME1 @16
+		SAY UNIDENTIFIED_DESC @17
+		SAY DESC @17
+	//}
+	
 	//{ Lich Spell Immunities
 		COPY ~lichdom/spl/xaldsi01.spl~ ~override~
 		SAY NAME1 @12
