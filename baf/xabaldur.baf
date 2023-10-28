@@ -71,7 +71,7 @@ THEN
 		ReallyForceSpellRES("SPPR712", Player4)
 		ActionOverride(Player4, CreateItem("xaldphyl", 0,0,0))
 		ActionOverride(Player4, SetItemFlags("xaldphyl", IDENTIFIED, TRUE))
-		ActionOverride(Player5, XEquipItem("xaldphyl",Myself,SLOT_CLOAK,EQUIP))
+		ActionOverride(Player4, XEquipItem("xaldphyl",Myself,SLOT_CLOAK,EQUIP))
 		SetInterrupt(TRUE)
 		Continue()
 END
