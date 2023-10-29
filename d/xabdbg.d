@@ -8,6 +8,12 @@ IF ~
 	IF ~~ THEN REPLY @43
 	GOTO XA_ReportRace
 	
+	IF ~~ THEN REPLY @45
+	DO ~
+		CreateCreature("xaldgd", [-1.-1], S)
+	~
+	EXIT
+	
 	IF ~~ THEN REPLY @37
 	DO ~
 		ChangeRace(Player1, LICH)
