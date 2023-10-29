@@ -8,6 +8,9 @@ APPEND ~PLAYER1~
 		IF ~~ THEN REPLY @61  /* ~Advance the Time.~*/
 		GOTO XA_AdvanceTime
 		
+		IF ~~ THEN REPLY @71 /*~Change Lichdom resurrection options.~*/
+		GOTO XA_LichResurrection
+		
 		IF ~~ THEN REPLY @3 /*~Change Lichdom transformation cost.~*/
 		GOTO XA_LichCost
 		
@@ -34,6 +37,25 @@ APPEND ~PLAYER1~
 		
 		IF ~~ THEN REPLY @1 /*~Exit.~*/
 		GOTO XA_ExitAssistant
+	END
+	
+	IF ~~ THEN BEGIN XA_LichResurrection
+		SAY @71 /*~Change Lichdom resurrection options.~*/
+		
+		IF ~~ THEN REPLY @72 /*~Rolling eight hour timer (Default.)~*/
+		DO ~
+			SetGlobal("XA_LD_LichResurrection", "GLOBAL", 0)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @73 /*~Resurrect after the conclusion of the battle.~*/
+		DO ~
+			SetGlobal("XA_LD_LichResurrection", "GLOBAL", 1)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @28 /*Back to main menu.*/
+		GOTO XA_MainMenu
 	END
 	
 	IF ~~ THEN BEGIN XA_ChangeMentalSenses

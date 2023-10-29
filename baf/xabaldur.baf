@@ -259,6 +259,7 @@ END
 //{ Rolling Eight Hour Timer
 IF
 	GlobalLT("XA_LD_RezTimerSet", "GLOBAL", 1)
+	Global("XA_LD_LichResurrection", "GLOBAL", 0)
 THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
@@ -269,6 +270,7 @@ END
 
 IF
 	!ActuallyInCombat()
+	Global("XA_LD_LichResurrection", "GLOBAL", 0)
 	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
 	Race(Player1, Lich)
 	HPLT(Player1, 1)
@@ -285,6 +287,7 @@ END
 
 IF
 	!ActuallyInCombat()
+	Global("XA_LD_LichResurrection", "GLOBAL", 0)
 	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
 	Race(Player2, Lich)
 	HPLT(Player2, 1)
@@ -302,6 +305,7 @@ END
 
 IF
 	!ActuallyInCombat()
+	Global("XA_LD_LichResurrection", "GLOBAL", 0)
 	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
 	Race(Player3, Lich)
 	HPLT(Player3, 1)
@@ -319,6 +323,7 @@ END
 
 IF
 	!ActuallyInCombat()
+	Global("XA_LD_LichResurrection", "GLOBAL", 0)
 	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
 	Race(Player4, Lich)
 	HPLT(Player4, 1)
@@ -336,6 +341,7 @@ END
 
 IF
 	!ActuallyInCombat()
+	Global("XA_LD_LichResurrection", "GLOBAL", 0)
 	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
 	Race(Player5, Lich)
 	HPLT(Player5, 1)
@@ -353,6 +359,7 @@ END
 
 IF
 	!ActuallyInCombat()
+	Global("XA_LD_LichResurrection", "GLOBAL", 0)
 	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
 	Race(Player6, Lich)
 	HPLT(Player6, 1)
@@ -370,6 +377,7 @@ END
 
 IF
 	!ActuallyInCombat()
+	Global("XA_LD_LichResurrection", "GLOBAL", 0)
 	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
 THEN
 	RESPONSE #100
@@ -378,7 +386,109 @@ THEN
 END
 //}
 
+//{ Resurrect After Battle
 
+IF
+	!ActuallyInCombat()
+	Global("XA_LD_LichResurrection", "GLOBAL", 1)
+	Race(Player1, Lich)
+	HPLT(Player1, 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player1, SetGlobal("XA_LD_AmDead", "LOCALS", 0)
+		ReallyForceSpellRES("SPPR712", Player1)
+		ActionOverride(Player1, CreateItem("xaldphyl", 0,0,0))
+		ActionOverride(Player1, SetItemFlags("xaldphyl", IDENTIFIED, TRUE))
+		ActionOverride(Player1, XEquipItem("xaldphyl",Myself,SLOT_CLOAK,EQUIP))
+		Continue()
+END
+
+IF
+	!ActuallyInCombat()
+	Global("XA_LD_LichResurrection", "GLOBAL", 1)
+	Race(Player2, Lich)
+	HPLT(Player2, 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player2, SetGlobal("XA_LD_AmDead", "LOCALS", 0)
+		ReallyForceSpellRES("SPPR712", Player2)
+		ActionOverride(Player2, CreateItem("xaldphyl", 0,0,0))
+		ActionOverride(Player2, SetItemFlags("xaldphyl", IDENTIFIED, TRUE))
+		ActionOverride(Player2, XEquipItem("xaldphyl",Myself,SLOT_CLOAK,EQUIP))
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	!ActuallyInCombat()
+	Global("XA_LD_LichResurrection", "GLOBAL", 1)
+	Race(Player3, Lich)
+	HPLT(Player3, 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player3, SetGlobal("XA_LD_AmDead", "LOCALS", 0)
+		ReallyForceSpellRES("SPPR712", Player3)
+		ActionOverride(Player3, CreateItem("xaldphyl", 0,0,0))
+		ActionOverride(Player3, SetItemFlags("xaldphyl", IDENTIFIED, TRUE))
+		ActionOverride(Player3, XEquipItem("xaldphyl",Myself,SLOT_CLOAK,EQUIP))
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	!ActuallyInCombat()
+	Global("XA_LD_LichResurrection", "GLOBAL", 1)
+	Race(Player4, Lich)
+	HPLT(Player4, 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player4, SetGlobal("XA_LD_AmDead", "LOCALS", 0)
+		ReallyForceSpellRES("SPPR712", Player4)
+		ActionOverride(Player4, CreateItem("xaldphyl", 0,0,0))
+		ActionOverride(Player4, SetItemFlags("xaldphyl", IDENTIFIED, TRUE))
+		ActionOverride(Player4, XEquipItem("xaldphyl",Myself,SLOT_CLOAK,EQUIP))
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	!ActuallyInCombat()
+	Global("XA_LD_LichResurrection", "GLOBAL", 1)
+	Race(Player5, Lich)
+	HPLT(Player5, 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player5, SetGlobal("XA_LD_AmDead", "LOCALS", 0)
+		ReallyForceSpellRES("SPPR712", Player5)
+		ActionOverride(Player5, CreateItem("xaldphyl", 0,0,0))
+		ActionOverride(Player5, SetItemFlags("xaldphyl", IDENTIFIED, TRUE))
+		ActionOverride(Player5, XEquipItem("xaldphyl",Myself,SLOT_CLOAK,EQUIP))
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	!ActuallyInCombat()
+	Global("XA_LD_LichResurrection", "GLOBAL", 1)
+	Race(Player6, Lich)
+	HPLT(Player6, 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player6, SetGlobal("XA_LD_AmDead", "LOCALS", 0)
+		ReallyForceSpellRES("SPPR712", Player6)
+		ActionOverride(Player6, CreateItem("xaldphyl", 0,0,0))
+		ActionOverride(Player6, SetItemFlags("xaldphyl", IDENTIFIED, TRUE))
+		ActionOverride(Player6, XEquipItem("xaldphyl",Myself,SLOT_CLOAK,EQUIP))
+		SetInterrupt(TRUE)
+		Continue()
+END
+//}
 
 //{ Check if a player is a lich. If so, apply the lich transformation script.
 	//{ Player1
