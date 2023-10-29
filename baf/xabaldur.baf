@@ -222,7 +222,7 @@ THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
 		ActionOverride(Player4, SetGlobal("xaldattk", "LOCALS", 0))
-		ActionOverride(Player5, AddSpecialAbility("xaldattk"))
+		ActionOverride(Player4, AddSpecialAbility("xaldattk"))
 		SetInterrupt(TRUE)
 		Continue()
 END

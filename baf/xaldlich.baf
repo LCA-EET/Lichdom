@@ -250,7 +250,7 @@ END
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
-			ActionOverride(Player1, AddSpecialAbility("xaldattk"))
+			AddSpecialAbility("xaldattk")
 			SetGlobal("XA_LD_TouchAbility_Done", "LOCALS", 1)
 			SetInterrupt(TRUE)
 			Continue()
