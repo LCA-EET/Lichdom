@@ -10,6 +10,21 @@ THEN
 END
 */
 
+IF
+	GlobalLT("XA_LD_LichTransformation", "LOCALS", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_LichTransformation", "LOCALS", 1)
+		Continue()
+END
+
+IF
+	Global("XA_LD_LichTransformation", "LOCALS", 2)
+THEN
+	RESPONSE #100
+		ChangeAIScript("", CLASS)
+END
+
 //{ Change Title, if Paladin or Ranger
 IF
 	!FallenPaladin(Myself)
@@ -566,13 +581,12 @@ IF
 	Global("XA_LD_LichAC_Done", "LOCALS", 1)
 	HasItemEquiped("xaldphyl", Myself)
 	HasItemEquiped("xaldclaw", Myself)
-	GlobalLT("XA_LD_LichTransformDone", "LOCALS", 1)
+	Global("XA_LD_LichTransformation", "LOCALS", 1)
 THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
+		SetGlobal("XA_LD_LichTransformation", "LOCALS", 2)
 		ReallyForceSpellRES("xaldlich", Myself)
-		SetGlobal("XA_LD_LichTransformDone", "LOCALS", 1)
-		ChangeAIScript("", CLASS)
 		SetInterrupt(TRUE)
 END
 
