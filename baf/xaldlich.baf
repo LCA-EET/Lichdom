@@ -147,6 +147,41 @@ END
 	END
 //}
 
+//{ Mental Senses
+	IF
+		Global("XA_LD_LichSenses", "GLOBAL", 0)
+		GlobalLT("XA_LD_LichSenses_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldls00", Myself)
+			SetGlobal("XA_LD_LichSenses_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		Global("XA_LD_LichSenses", "GLOBAL", 1)
+		GlobalLT("XA_LD_LichSenses_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ReallyForceSpellRES("xaldls01", Myself)
+			SetGlobal("XA_LD_LichSenses_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		Global("XA_LD_LichSenses", "GLOBAL", 2)
+		GlobalLT("XA_LD_LichSenses_Done", "LOCALS", 1)
+	THEN
+		RESPONSE #100
+			SetGlobal("XA_LD_LichSenses_Done", "LOCALS", 1)
+			Continue()
+	END
+//}
+
 //{ AC Adjustment
 	IF
 		Global("XA_LD_LichAC", "GLOBAL", 0)
@@ -579,6 +614,7 @@ IF
 	Global("XA_LD_SpellResistance_Done", "LOCALS", 1)
 	Global("XA_LD_MentalBoost_Done", "LOCALS", 1)
 	Global("XA_LD_LichAC_Done", "LOCALS", 1)
+	Global("XA_LD_LichSenses_Done", "LOCALS", 1)
 	HasItemEquiped("xaldphyl", Myself)
 	HasItemEquiped("xaldclaw", Myself)
 	Global("XA_LD_LichTransformation", "LOCALS", 1)

@@ -23,14 +23,42 @@ APPEND ~PLAYER1~
 		IF ~~ THEN REPLY @45 /*~Change lich mental ability boosts (INT, WIS, CHA).~*/
 		GOTO XA_MentalBoosts
 		
-		IF ~~ THEN REPLY @49
+		IF ~~ THEN REPLY @49 /*~Change lich natural AC characteristics.~*/
 		GOTO XA_ChangeACCharacteristics
 		
-		IF ~~ THEN REPLY @57
+		IF ~~ THEN REPLY @67 /*~Change lich mental senses.~*/
+		GOTO XA_ChangeMentalSenses
+		
+		IF ~~ THEN REPLY @57 /*~Change animation options.~*/
 		GOTO XA_ChangeAnimation
 		
 		IF ~~ THEN REPLY @1 /*~Exit.~*/
 		GOTO XA_ExitAssistant
+	END
+	
+	IF ~~ THEN BEGIN XA_ChangeMentalSenses
+		SAY @67 /*~Change lich mental senses.~*/
+		
+		IF ~~ THEN REPLY @68
+		DO ~
+			SetGlobal("XA_LD_LichSenses", "GLOBAL", 0)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @69
+		DO ~
+			SetGlobal("XA_LD_LichSenses", "GLOBAL", 1)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @70
+		DO ~
+			SetGlobal("XA_LD_LichSenses", "GLOBAL", 2)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @28 /*Back to main menu.*/
+		GOTO XA_MainMenu
 	END
 	
 	IF ~~ THEN BEGIN XA_AdvanceTime

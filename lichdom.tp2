@@ -73,6 +73,18 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 //}
 
 //{ SPL
+	//{ Lich Mental Senses
+		COPY ~lichdom/spl/xaldls00.spl~ ~override~
+		SAY NAME1 @18
+		SAY UNIDENTIFIED_DESC @18
+		SAY DESC @18
+		
+		COPY ~lichdom/spl/xaldls01.spl~ ~override~
+		SAY NAME1 @18
+		SAY UNIDENTIFIED_DESC @18
+		SAY DESC @18
+	//}
+
 	//{ Paralyzing Touch
 		COPY ~lichdom/spl/xaldattk.spl~ ~override~
 		SAY NAME1 @16
