@@ -14,6 +14,9 @@ APPEND ~PLAYER1~
 		IF ~~ THEN REPLY @3 /*~Change Lichdom transformation cost.~*/
 		GOTO XA_LichCost
 		
+		IF ~~ THEN REPLY @74 /* ~Lich equipment options.~ */
+		GOTO XA_LichEquip
+		
 		IF ~~ THEN REPLY @9 /*~Change phylactery chance to shatter on death.~*/
 		GOTO XA_PhylacteryBreak
 		
@@ -37,6 +40,25 @@ APPEND ~PLAYER1~
 		
 		IF ~~ THEN REPLY @1 /*~Exit.~*/
 		GOTO XA_ExitAssistant
+	END
+	
+	IF ~~ THEN BEGIN XA_LichEquip
+		SAY @75 /*~Is a lich allergic to (unable to equip, regardless of proficiencies) to items that harm undead such as a Mace of Disruption, a Flame Tongue/Burning Earth Sword, a Protection from Undead scroll, or an Azuredge Axe?  Note that your normal proficiencies apply, regardless of this option, and if you enable this option with anti-Undead items equipped, you will immediately unequip or drop them.~*/
+		
+		IF ~~ THEN REPLY @76
+		DO ~
+			SetGlobal("XA_LD_LichEquip", "GLOBAL", 0)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @77
+		DO ~
+			SetGlobal("XA_LD_LichEquip", "GLOBAL", 1)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @28 /*Back to main menu.*/
+		GOTO XA_MainMenu
 	END
 	
 	IF ~~ THEN BEGIN XA_LichResurrection

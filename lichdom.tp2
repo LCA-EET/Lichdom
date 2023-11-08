@@ -33,7 +33,20 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 	//OUTER_SET %lichref% = RESOLVE_STR_REF(@15)
 	//COPY_EXISTING ~enginest.2da~ ~override~
 	//INSERT_2DA_ROW 1337 2 ~STRREF_GUI_MIXED_LICH %lichref%~  
+
+	OUTER_SET %desc% = RESOLVE_STR_REF(@21)
+	OUTER_SET %upper% = RESOLVE_STR_REF(@22)
+
+	COPY_EXISTING ~racetext.2da~ ~override~
+	INSERT_2DA_ROW 0 6 ~LICH 150 8457 %desc% %upper% -1~
+	
+	COPY_EXISTING ~sodrace.2da~ ~override~
+	INSERT_2DA_ROW 0 6 ~LICH 150 8457 %desc% %upper% -1~
+	
+	COPY_EXISTING ~bgractxt.2da~ ~override~
+	INSERT_2DA_ROW 0 6 ~LICH 150 8457 %desc% %upper% -1~
 //}
+
 
 //{ BAF
 	EXTEND_TOP ~BALDUR.BCS~ ~lichdom/baf/xabaldur.baf~

@@ -1,3 +1,137 @@
+//{ Drop "allergic" Items
+IF
+	Race(Player1, LICH)
+	Global("XA_LD_LichEquip", "GLOBAL", 1)
+	OR(5)
+		HasItem("AX1H10", Player1)
+		HasItem("SW1H24", Player1)
+		HasItem("BLUN12", Player1)
+		HasItem("BLUN25", Player1)
+		HasItem("SCRL09", Player1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player1, DropItem("AX1H10", [-1.-1]))
+		ActionOverride(Player1, DropItem("SW1H24", [-1.-1]))
+		ActionOverride(Player1, DropItem("BLUN12", [-1.-1]))
+		ActionOverride(Player1, DropItem("BLUN25", [-1.-1]))
+		ActionOverride(Player1, DropItem("SCRL09", [-1.-1]))
+		DisplayStringHead(Player1, @1)
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	Race(Player2, LICH)
+	Global("XA_LD_LichEquip", "GLOBAL", 1)
+	OR(5)
+		HasItem("AX1H10", Player2)
+		HasItem("SW1H24", Player2)
+		HasItem("BLUN12", Player2)
+		HasItem("BLUN25", Player2)
+		HasItem("SCRL09", Player2)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player2, DropItem("AX1H10", [-1.-1]))
+		ActionOverride(Player2, DropItem("SW1H24", [-1.-1]))
+		ActionOverride(Player2, DropItem("BLUN12", [-1.-1]))
+		ActionOverride(Player2, DropItem("BLUN25", [-1.-1]))
+		ActionOverride(Player2, DropItem("SCRL09", [-1.-1]))
+		DisplayStringHead(Player2, @1)
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	Race(Player3, LICH)
+	Global("XA_LD_LichEquip", "GLOBAL", 1)
+	OR(5)
+		HasItem("AX1H10", Player3)
+		HasItem("SW1H24", Player3)
+		HasItem("BLUN12", Player3)
+		HasItem("BLUN25", Player3)
+		HasItem("SCRL09", Player3)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player3, DropItem("AX1H10", [-1.-1]))
+		ActionOverride(Player3, DropItem("SW1H24", [-1.-1]))
+		ActionOverride(Player3, DropItem("BLUN12", [-1.-1]))
+		ActionOverride(Player3, DropItem("BLUN25", [-1.-1]))
+		ActionOverride(Player3, DropItem("SCRL09", [-1.-1]))
+		DisplayStringHead(Player3, @1)
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	Race(Player4, LICH)
+	Global("XA_LD_LichEquip", "GLOBAL", 1)
+	OR(5)
+		HasItem("AX1H10", Player4)
+		HasItem("SW1H24", Player4)
+		HasItem("BLUN12", Player4)
+		HasItem("BLUN25", Player4)
+		HasItem("SCRL09", Player4)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player4, DropItem("AX1H10", [-1.-1]))
+		ActionOverride(Player4, DropItem("SW1H24", [-1.-1]))
+		ActionOverride(Player4, DropItem("BLUN12", [-1.-1]))
+		ActionOverride(Player4, DropItem("BLUN25", [-1.-1]))
+		ActionOverride(Player4, DropItem("SCRL09", [-1.-1]))
+		DisplayStringHead(Player4, @1)
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	Race(Player5, LICH)
+	Global("XA_LD_LichEquip", "GLOBAL", 1)
+	OR(5)
+		HasItem("AX1H10", Player5)
+		HasItem("SW1H24", Player5)
+		HasItem("BLUN12", Player5)
+		HasItem("BLUN25", Player5)
+		HasItem("SCRL09", Player5)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player5, DropItem("AX1H10", [-1.-1]))
+		ActionOverride(Player5, DropItem("SW1H24", [-1.-1]))
+		ActionOverride(Player5, DropItem("BLUN12", [-1.-1]))
+		ActionOverride(Player5, DropItem("BLUN25", [-1.-1]))
+		ActionOverride(Player5, DropItem("SCRL09", [-1.-1]))
+		DisplayStringHead(Player5, @1)
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	Race(Player6, LICH)
+	Global("XA_LD_LichEquip", "GLOBAL", 1)
+	OR(5)
+		HasItem("AX1H10", Player6)
+		HasItem("SW1H24", Player6)
+		HasItem("BLUN12", Player6)
+		HasItem("BLUN25", Player6)
+		HasItem("SCRL09", Player6)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player6, DropItem("AX1H10", [-1.-1]))
+		ActionOverride(Player6, DropItem("SW1H24", [-1.-1]))
+		ActionOverride(Player6, DropItem("BLUN12", [-1.-1]))
+		ActionOverride(Player6, DropItem("BLUN25", [-1.-1]))
+		ActionOverride(Player6, DropItem("SCRL09", [-1.-1]))
+		DisplayStringHead(Player6, @1)
+		SetInterrupt(TRUE)
+		Continue()
+END
+//}
+
 //{ Paralyzing Touch Toggle
 IF
 	TriggerOverride(Player1, ActionListEmpty())

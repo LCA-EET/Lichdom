@@ -72,3 +72,7 @@
 @71 = ~Change Lichdom resurrection options.~
 @72 = ~Rolling eight hour timer (Default.)~
 @73 = ~Resurrect after the conclusion of the battle.~
+@74 = ~Lich equipment options.~
+@75 = ~Is a lich allergic to (unable to equip, regardless of proficiencies) to items that harm undead such as a Mace of Disruption, a Flame Tongue/Burning Earth Sword, a Protection from Undead scroll, or an Azuredge Axe?  Note that your normal proficiencies apply, regardless of this option, and if you enable this option with anti-Undead items equipped, you will immediately unequip or drop them.~
+@76 = ~No. (Default)~
+@77 = ~Yes.~
