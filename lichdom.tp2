@@ -85,6 +85,10 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 	SAY NAME2 @2
 	SAY DESC @3
 	
+	COPY ~lichdom/itm/xaldphyd.itm~ ~override~
+	SAY NAME2 @23
+	SAY DESC @24
+	
 	COPY ~lichdom/itm/xalddust.itm~ ~override~
 	SAY NAME1 @4
 	SAY NAME2 @4

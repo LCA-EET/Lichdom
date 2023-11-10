@@ -1,11 +1,3 @@
-IF
-	!HasItemEquiped("xaldphyl", Myself)
-	GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
-THEN
-	RESPONSE #100
-		SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
-END
-
 //{ See if Phylactery Broke
 
 	//{ 1%
@@ -13,12 +5,12 @@ END
 		HasItemEquiped("xaldphyl", Myself)
 		Global("XA_LD_PhylacteryBreak", "GLOBAL", 1)
 		RandomNumGT(100,99)
-		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+		GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1)
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			DisplayStringHead(Myself, @0)
-			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1)
 			SetInterrupt(TRUE)
 	END
 	//}
@@ -28,12 +20,12 @@ END
 		HasItemEquiped("xaldphyl", Myself)
 		Global("XA_LD_PhylacteryBreak", "GLOBAL", 2)
 		RandomNumGT(100,97)
-		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+		GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1)
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			DisplayStringHead(Myself, @0)
-			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1)
 			SetInterrupt(TRUE)
 	END
 	//}
@@ -43,12 +35,12 @@ END
 		HasItemEquiped("xaldphyl", Myself)
 		Global("XA_LD_PhylacteryBreak", "GLOBAL", 3)
 		RandomNumGT(100,95)
-		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+		GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1)
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			DisplayStringHead(Myself, @0)
-			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1)
 			SetInterrupt(TRUE)
 	END
 	//}
@@ -58,12 +50,12 @@ END
 		HasItemEquiped("xaldphyl", Myself)
 		Global("XA_LD_PhylacteryBreak", "GLOBAL", 4)
 		RandomNumGT(100,90)
-		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+		GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1)
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			DisplayStringHead(Myself, @0)
-			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1)
 			SetInterrupt(TRUE)
 	END
 	//}
@@ -73,12 +65,12 @@ END
 		HasItemEquiped("xaldphyl", Myself)
 		Global("XA_LD_PhylacteryBreak", "GLOBAL", 5)
 		RandomNumGT(100,85)
-		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+		GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1)
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			DisplayStringHead(Myself, @0)
-			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1)
 			SetInterrupt(TRUE)
 	END
 	//}
@@ -88,12 +80,12 @@ END
 		HasItemEquiped("xaldphyl", Myself)
 		Global("XA_LD_PhylacteryBreak", "GLOBAL", 6)
 		RandomNumGT(100,80)
-		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+		GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1)
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			DisplayStringHead(Myself, @0)
-			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1)
 			SetInterrupt(TRUE)
 	END
 	//}
@@ -103,12 +95,12 @@ END
 		HasItemEquiped("xaldphyl", Myself)
 		Global("XA_LD_PhylacteryBreak", "GLOBAL", 7)
 		RandomNumGT(100,75)
-		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+		GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1)
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			DisplayStringHead(Myself, @0)
-			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1)
 			SetInterrupt(TRUE)
 	END
 	//}
@@ -118,12 +110,12 @@ END
 		HasItemEquiped("xaldphyl", Myself)
 		Global("XA_LD_PhylacteryBreak", "GLOBAL", 8)
 		RandomNumGT(100,67)
-		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+		GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1)
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			DisplayStringHead(Myself, @0)
-			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1)
 			SetInterrupt(TRUE)
 	END
 	//}
@@ -133,12 +125,12 @@ END
 		HasItemEquiped("xaldphyl", Myself)
 		Global("XA_LD_PhylacteryBreak", "GLOBAL", 9)
 		RandomNumGT(100,50)
-		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+		GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1)
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			DisplayStringHead(Myself, @0)
-			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1)
 			SetInterrupt(TRUE)
 	END
 	//}
@@ -148,12 +140,12 @@ END
 		HasItemEquiped("xaldphyl", Myself)
 		Global("XA_LD_PhylacteryBreak", "GLOBAL", 10)
 		RandomNumGT(100,33)
-		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+		GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1)
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			DisplayStringHead(Myself, @0)
-			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1)
 			SetInterrupt(TRUE)
 	END
 	//}
@@ -163,12 +155,12 @@ END
 		HasItemEquiped("xaldphyl", Myself)
 		Global("XA_LD_PhylacteryBreak", "GLOBAL", 11)
 		RandomNumGT(100,20)
-		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+		GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1)
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			DisplayStringHead(Myself, @0)
-			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1)
 			SetInterrupt(TRUE)
 	END
 	//}
@@ -177,79 +169,42 @@ END
 	IF
 		HasItemEquiped("xaldphyl", Myself)
 		Global("XA_LD_PhylacteryBreak", "GLOBAL", 12)
-		GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
+		GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1)
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			DisplayStringHead(Myself, @0)
-			SetGlobal("XA_LD_PermaDeath", "LOCALS", 1)
+			SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1)
 			SetInterrupt(TRUE)
 	END
 	//}
 //}
 
-IF
-	GlobalLT("XA_LD_PermaDeath", "LOCALS", 1)
-	GlobalLT("XA_LD_TempDeath", "LOCALS", 1)
-THEN
-	RESPONSE #100
-		SetGlobal("XA_LD_TempDeath", "LOCALS", 1)
-END
 
+//{ If the player dies without a phylactery, game over. 
 IF
-	Global("XA_LD_TempDeath", "LOCALS", 1)
+	!HasItem("xaldphyl", Player1)
 	InPartySlot(Myself, 0)
 THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
-		SetGlobal("XA_LD_LichDeathScript", "LOCALS", 0)
-		ChangeAIScript("", CLASS)
-		SetGlobal("XA_LD_TempDeath", "LOCALS", 0)
-		SetGlobalTimer("XA_LD_RezTimer", "GLOBAL", EIGHT_HOURS)
-		DestroyItem("xaldphyl")
-		Kill(Myself)
-		SetInterrupt(TRUE)
-END
-
-IF
-	Global("XA_LD_TempDeath", "LOCALS", 1)
-THEN
-	RESPONSE #100
-		SetInterrupt(FALSE)
-		SetGlobal("XA_LD_LichDeathScript", "LOCALS", 0) 
-		ChangeAIScript("", CLASS)
-		SetGlobal("XA_LD_TempDeath", "LOCALS", 0)
-		DestroyItem("xaldphyl")
-		Kill(Myself)
-		SetInterrupt(TRUE)
-END
-
-IF
-	Global("XA_LD_PermaDeath", "LOCALS", 1)
-	!InPartySlot(Myself, 0)
-THEN
-	RESPONSE #100
-		SetInterrupt(FALSE)
-		SetGlobal("XA_LD_LichDeathScript", "LOCALS", 0)
-		ChangeAIScript("", CLASS)
-		SetGlobal("XA_LD_PermaDeath", "LOCALS", 0)
 		ReallyForceSpellRES("xalddest", Myself)
-		LeaveParty()
-		DestroyItem("xaldphyl")
-		Kill(Myself)
-		SetInterrupt(TRUE)
-END
-
-IF
-	Global("XA_LD_PermaDeath", "LOCALS", 1)
-	InPartySlot(Myself, 0)
-THEN
-	RESPONSE #100
-		SetInterrupt(FALSE)
 		ChangeAIScript("", CLASS)
-		SetGlobal("XA_LD_PermaDeath", "LOCALS", 0)
-		ReallyForceSpellRES("xalddest", Myself)
 		Kill(Myself)
 		GameOver(19377)
 		SetInterrupt(TRUE)
 END
+//}
+
+//{ Normal Death
+IF
+	True()
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ChangeAIScript("", CLASS)
+		DestroyItem("xaldphyl")
+		Kill(Myself)
+		SetInterrupt(TRUE)
+END
+//}

@@ -426,19 +426,19 @@ APPEND ~PLAYER1~
 		~
 		GOTO XA_ChangeProcessed
 		
-		IF ~~ THEN REPLY @20 /*~67%.~*/
+		IF ~~ THEN REPLY @58 /*~67%.~*/
 		DO ~
 			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 10)
 		~
 		GOTO XA_ChangeProcessed
 		
-		IF ~~ THEN REPLY @21 /*~80%.~*/
+		IF ~~ THEN REPLY @59 /*~80%.~*/
 		DO ~
 			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 11)
 		~
 		GOTO XA_ChangeProcessed
 		
-		IF ~~ THEN REPLY @22 /*~100%.~*/
+		IF ~~ THEN REPLY @60 /*~100%.~*/
 		DO ~
 			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 12)
 		~
