@@ -1,5 +1,5 @@
 # Lichdom
-**Design, writing, and voice acting by Endarire.  Coding by LCA with use of k4thos's Protagonist Can Die mod with permission.  Images in this documentation are from Wizards of the Coast.**
+Design, writing, and voice acting by Endarire.  Coding by LCA with use of k4thos's Protagonist Can Die mod with permission.  Images in this documentation are from Wizards of the Coast.
 
 ![If you wanna be a lich, this is the right place!](https://static.wikia.nocookie.net/forgottenrealms/images/2/2e/Runestonecarverns.png/revision/latest?cb=20191004102509)
 
@@ -21,3 +21,9 @@ Regardless of their reasoning, with this mod, you too can become a Lich with the
 
 - A series of tasks given by Gravetender Morris.  Notably, you will need at least 3 Lich Dusts (a new key item from this mod) from the corpses of Alhoons, Liches, and Demiliches.  (This item is droppable, but unstealable.)  If Dracoliches were in the game, they would also carry Lich Dust.
 
+- The character can't have the Undead flag active.  Thus, for example, Hexxat isn't eligible because of this.
+
+- Accepting the strong possibility that this process is irreversible.
+
+# Effects of Lichdom (Default)
+- Since the process of Lichdom is so varied within D&D's decades of canon, and much of it is left to intrepretation, various aspects of Lichdom are configurable in-game via **WHAT METHOD?**.
