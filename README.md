@@ -3,7 +3,7 @@
 
 ![If you wanna be a lich, this is the right place!](https://static.wikia.nocookie.net/forgottenrealms/images/2/2e/Runestonecarverns.png/revision/latest?cb=20191004102509)
 
-# So, you wanna be a Lich
+# So, you wanna be a Lich.
 You're in the right place!  You're also late to the party.
 
 Throughout the realms and the planes, many have already become Liches or Demiliches of some sort.  Perhaps they sought immortality.  Perhaps they had enough of  needing to eat and breathe.  Perhaps they were tired of being chilled, shocked, diseased, entangled, level drained, paralyzed, petrified, poisoned, polymorphed into squirrels, stunned, and webbed.
@@ -19,4 +19,5 @@ Regardless of their reasoning, with this mod, you too can become a Lich with the
 
 - Note that many recruitable NPCs simply refuse to undergo this Lichdom ritual for personal reasons.  (This too is configurable if you just want to ignore the story ramifications of Valygar, Minsc, and Jaheira becoming Liches, for example.)
 
-- A series of tasks given by Gravetender Morris.  Notably, you will need at least 3 Lich Dusts (a new item from this mod) from the corpses of Alhoons, Liches, and Demiliches.  (This item is droppable, but unstealable.)
+- A series of tasks given by Gravetender Morris.  Notably, you will need at least 3 Lich Dusts (a new key item from this mod) from the corpses of Alhoons, Liches, and Demiliches.  (This item is droppable, but unstealable.)  If Dracoliches were in the game, they would also carry Lich Dust.
+
