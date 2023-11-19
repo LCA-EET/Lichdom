@@ -280,7 +280,7 @@ The truest answer is, "Adventure!"  Remember, you don't NEED to undergo the Lich
 # License, Editing, and Redistribution/Rehosting
 - This mod (Lichdom) is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
-In short, this license means that, so long as you link to the original mod (https://github.com/LCA-EET/Lichdom/ or one of its official mirrors) AND you preserve the ENTIRE credits section, you can otherwise redistribute and edit this mod.
+In short, this license means that, so long as you link to the original mod (https://github.com/LCA-EET/Lichdom/ or one of its official mirrors if there are any) AND you preserve the ENTIRE credits section, you can otherwise redistribute and edit this mod.
 
 Cross-mod AKA crossmod content is also allowed and encouraged!  Don't ask permission for this:  Just do it and pweath send us a link as an Issue on this GitHub repository or/and a linked forum thread! (Linking your crossmod content isn't required, but encouraged!)
 
