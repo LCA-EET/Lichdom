@@ -292,6 +292,9 @@ The truest answer is, "Adventure!"  Remember, you don't NEED to undergo the Lich
 
 Shroud of the Lich is also an intentional reference to [an ability of the same name from DDO AKA _Dungeons & Dragons Online_](https://ddocompendium.com/w/Shroud_of_the_Lich).
 
+**Why does a Lich drop its items on the ground, even if it's about to auto-revive?**
+- That's how the base game was coded.  if you use a mod to change that behavior so that dead party members don't drop their items, let us know!
+
 **Why make a mod about becoming a Lich?**
 - In Infinity Engine games, Lichdom is like _dimension door_ - it seems like plenty of creatures can use it _except_ you!  Also, the notion of being able to use this option that's been in the D&D books for decades in various forms appealed to me.
 
