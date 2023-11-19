@@ -28,6 +28,8 @@ Regardless of their reasoning, with this mod, you too can become a Lich with the
 
 - The character can't have the Undead flag active.  Thus, for example, Hexxat isn't eligible because of this.
 
+- The character's soul must be in their body.
+
 - Accepting the strong possibility that this process is irreversible.
 
 # Effects of Lichdom (Default)
@@ -35,7 +37,28 @@ Regardless of their reasoning, with this mod, you too can become a Lich with the
 
 - The default effects and requirements were heavily inspired by [Liches in _Baldur's Gate_](https://baldursgate.fandom.com/wiki/Lich) as well as [3.5's Liches](https://www.d20srd.org/srd/monsters/lich.htm).
 
--
+- Immunity to damage from nonmagical weapons.
+
+- Immune (100% resistant) to HP damage from cold, electricity, and poison.
+
+- Immune to the negative statuses of Berserk, Charm, Confusion, Domination, Disease, Fatigue/Exhaustion, Fear, Grease, Entangle, Hold/Paralysis, Level Drain/Negative Levels, Petrification, Polymorph Other, Sleep/Unconsciousness, Stun, and Web.  Also immune to at least most instant death effects such as Disintegrate and Finger of Death.
+
+- Continual Detect Invisibliity.
+
+- +1 to INT, WIS, and CHA scores.
+
+- Natural AC improves by 3.
+
+- You gain the innate ability of Lich Touch, usable at will but only once per turn.  Lich Touch deals d10 cold damage in melee range (no save), and the subject must save vs. paralysis or be paralyzed for 5 rounds.  Undead and other subjects immune to paralysis are immune to Lich Touch, and spell resistance applies.
+
+- Unlike a typical Lich in BG2, you have no racial immunity to spells of a certain level.
+
+- All Liches start with their phylactery - a cloak called the Shroud of the Lich.  This shroud is unstealable and undroppable.  (For technical reasons, the Lich's abilities are put onto an item instead of something else like a slotless script.)
+
+- The UI changes your displayed race to Lich.  Mechanically, you're still a member of your original race such as Human or Gnome.
+
+# Configurable Lichdom Options
+Since 
 
 # Install Order Notes
 As of this writing, Lichdom has no mod prerequisites.
@@ -60,10 +83,15 @@ Specifically, Lichdom has a small amount of cross-mod content AKA crossmod conte
 
 - [Sir Neh'taniel](https://www.nexusmods.com/baldursgate2ee/mods/60?tab=description)
 
-- Mods that BG1 NPCs to BG2
+- Mods that BG1 NPCs to BG2EE.
 
 # Q & A (FAQ)
+**How lore friendly is this mod?**
+- While I tried to make the premise of this mod fit within existing Faerun and _Baldur's Gate_ series lore, I am not sure off-hand how accurate this is.  The plot makes a big deal about certain characters dying, but Imoen can die and be raised freely in the games with no long-term story impact.  Let's just say BioWare - and, by extension, BeamDog - were inconsitent in their writing in this regard.
 
+NPCs the world over were NOT recoded to treat characters drastically differently after becoming a Lich.  In vanilla BG2, you could walk fairly freely through the streets and countrysides of Amn with a [vampire](https://baldursgate.fandom.com/wiki/Hexxat), a [drow](https://baldursgate.fandom.com/wiki/Viconia_DeVir), and a [cackling Red Wizard](https://baldursgate.fandom.com/wiki/Edwin) spamming [undead animating spells](https://baldursgate.fandom.com/wiki/Animate_Dead_(wizard)) and NPCs would probably complain most about the drow, not the small army that acts as a Faerunian version of a weapon of mass destruction (WMD) in their midst.
+
+Ultimately, this Lichdom mod is mostly about the mechanical side of being a Lich.  If you want a game that was built from the ground up to account for NPCs' reactions to becoming a Lich and the associated necromancy, play [_Pathfinder: Wrath of the Righteous_](https://store.steampowered.com/app/1184370/Pathfinder_Wrath_of_the_Righteous__Enhanced_Edition/) or another such game, if that exists.
 
 # License, Editing, and Redistribution/Rehosting
 - This mod (Lichdom) is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
