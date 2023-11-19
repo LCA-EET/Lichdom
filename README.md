@@ -232,7 +232,7 @@ Note that configuration options in this section ONLY apply to Lich characters fr
 # Install Order Notes
 As of this writing, Lichdom has no mod prerequisites.
 
-Lichdom should be installed AFTER these mods if you use them:  [EET Start AKA EET Core](https://github.com/Gibberlings3/EET), all mods that add quests or areas, and all mods that add recruitable NPCs.
+Lichdom should be installed AFTER these mods if you use them:  [EET Start AKA EET Core](https://github.com/Gibberlings3/EET), all mods that add quests or areas, all mods that add items, and all mods that add recruitable NPCs.
 
 Specifically, Lichdom has a small amount of cross-mod content AKA crossmod content with these mods, generally included with permission from authors of original NPCs:
 
