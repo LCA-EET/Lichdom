@@ -272,10 +272,19 @@ The truest answer is, "Adventure!"  Remember, you don't NEED to undergo the Lich
 
 - As a solo single-classed character, reaching level 12 is probably easy in BG2, even if you start in SoA.  Reaching it as a triple-classed character in a party of 6, depending on your mod wad and the content you do, may take you until late SoA or even ToB to reach this point.  In short, Lichdom is meant to be attainable by characters in SoA with a variety of play styles.
 
+**Why make the phylactery a cloak instead of a more traditional amulet or crown?**
+- Amulets: Edwin's Amulet is normally glued to his neck, and I wanted Liches to be able to use [https://baldursgate.fandom.com/wiki/Amulet_of_Power](Amulets of Power).
+
+- Crown: I like Ioun Stones.
+
+- Cloak: Cloaks are generally a low-power item slot.  (Maybe there are mods which give high-powered cloaks to casters.)  In short, giving up a cloak slot is easier than giving up most other slots.
+
+Shroud of the Lich is also an intentional reference to [an ability of the same name from DDO AKA _Dungeons & Dragons Online_](https://ddocompendium.com/w/Shroud_of_the_Lich).
+
 **Why make a mod about becoming a Lich?**
 - In Infinity Engine games, Lichdom is like _dimension door_ - it seems like plenty of creatures can use it _except_ you!  Also, the notion of being able to use this option that's been in the D&D books for decades in various forms appealed to me.
 
-- In short, it's unique.  For the EE games, I know of no other mods which apply 'templates' to player characters like Lycanthrope, Lich, or Vampire.  (I'm not counting recruitable NPCs that are these sorts of creatures, nor shapeshifting abilities to mimic these templates.)  Maybe someone will soon make and public release a mod to turn characters into werechihuahuas or other Lycanthropes!
+- In short, it's unique.  For the EE games, I know of no other mods which apply 'templates' to player characters like Lycanthrope, Lich, or Vampire.  (I'm not counting recruitable NPCs that are these sorts of creatures, nor shapeshifting abilities to mimic these templates.)  Maybe someone will soon make and public release a mod to turn characters into Werechihuahuas or other Lycanthropes, or into Angels, Constructs Demons, Devils, Elementals, Genies, Oozes, or Plants!
 
 # License, Editing, and Redistribution/Rehosting
 - This mod (Lichdom) is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
