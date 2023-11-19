@@ -51,21 +51,138 @@ Regardless of their reasoning, with this mod, you too can become a Lich with the
 
 - You gain the innate ability of Lich Touch, usable at will but only once per turn.  Lich Touch deals d10 cold damage in melee range (no save), and the subject must save vs. paralysis or be paralyzed for 5 rounds.  Undead and other subjects immune to paralysis are immune to Lich Touch, and spell resistance applies.
 
+- You gain the innate ability of Lich Form, usable at will but only once per turn.  This is purely a cosmetic ability which changes the character's appearance to that of a typical Lich.  By default, a Lich made by Morris's method looks identical to a typical character.
+
 - Unlike a typical Lich in BG2, you have no racial immunity to spells of a certain level.
 
 - All Liches start with their phylactery - a cloak called the Shroud of the Lich.  This shroud is unstealable and undroppable.  (For technical reasons, the Lich's abilities are put onto an item instead of something else like a slotless script.)
+
+Your phylactery must be in your inventory for you to auto-revive out of combat.  (This auto-revival normally happens immediately after combat ends, but the script may need a few seconds to catch up.)  Note that depending on your settings, your phylactery may break upon death.  Regardless of settings, certain SoA events _will_ remove CHARNAME's (the protagonist's) phylactery for a time.
 
 - The UI changes your displayed race to Lich.  Mechanically, you're still a member of your original race such as Human or Gnome.
 
 # Configurable Lichdom Options
 Since Lichdom's requirements and effects throughout the editions and decades of D&D have varied so much, it seemed fitting to include a variety of options to better suit your play style.
 
+**Lichdom Monetary Cost Per Transformation (Install Option)**
+- 120,000G (Default)
 
+- 100,00G
+
+- 75,000G
+
+- 50,000G
+
+- 40,000G
+
+- Custom: Enter a whole number for a gold piece cost.
+
+**Upon character death, your phylactery will break _% of the time. (In-Game Config Option)**
+- 0% (Default)
+
+- 1%
+
+- 3%
+
+- 5%
+
+- 10%
+
+- 15%
+
+- 20%
+
+- 25%
+
+- 33%
+
+- 50%
+
+- Custom
+
+**Can a broken phylactery be replaced? (In-Game Config Option)**
+- Yes, but it costs the same as a new phylactery. (Default)
+
+- No.
+
+**What happens to a Lich if it dies without its phylactery in inventory? (In-Game Config Option)**
+- The Lich dies but can be revived via Raise Dead, Resurrection, etc. (Default)
+
+- The Lich permanently dies.
+
+**Is a Lich allergic to (unable to equip, regardless of proficiencies) to items that harm undead such as a Mace of Disruption, a Flame Tongue/Burning Earth Sword, a Protection from Undead scroll, or an Azuredge Axe?  Note that your normal proficiencies apply, regardless of this option, and if you enable this option with anti-Undead items equipped, you will immediately unequip or drop them. (In-Game Config Option)**
+- Yes (Default)
+
+- No
+
+**What's the highest level of hostile spells to which a Lich should be immune?  Note that friendly spells such as heals and buffs work normally, regardless of this setting. (In-Game Config Option)**
+- None (Default)
+
+- 1
+
+- 2
+
+- 3
+
+- 4
+
+- 5
+
+**What bonus to all mental ability scores (INT, WIS, and CHA) should apply to Liches? (In-Game Config Option)**
+- +1 (Default)
+
+- +2
+
+- None
+
+**What bonus to natural AC (crushing, piercing, and slashing) should Liches receive? (In-Game Config Option)**
+- 1
+
+- 2
+
+- 3 (Default)
+
+- 4
+
+- 5
+
+- None
+
+**What bonus to spell resistance should Liches receive? (In-Game Config Option)**
+- None (Default)
+
+- +5%
+
+- +10%
+
+- +20%
+
+- +25%
+
+- +30%
+
+- +33%
+
+- +40%
+
+- +50%
+
+- +60%
+
+- +70%
+
+- +75%
+
+- +80%
+
+- +90%
+
+- +100%
 
 # Install Order Notes
 As of this writing, Lichdom has no mod prerequisites.
 
-- Lichdom should be installed AFTER these mods if you use them:  [EET Start AKA EET Core](https://github.com/Gibberlings3/EET) and all mods that add recruitable NPCs.
+- Lichdom should be installed AFTER these mods if you use them:  [EET Start AKA EET Core](https://github.com/Gibberlings3/EET), all mods that add quests or areas, and all mods that add recruitable NPCs.
 
 - Lichdom should be installed BEFORE these mods if you use them:  [EET End](https://github.com/Gibberlings3/EET).
 
