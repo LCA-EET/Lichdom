@@ -55,9 +55,9 @@ Regardless of their reasoning, with this mod, you too can become a Lich with the
 
 - Unlike a typical Lich in BG2, you have no racial immunity to spells of a certain level.
 
-- All Liches start with their phylactery - a cloak called the Shroud of the Lich.  This shroud is unstealable and undroppable.  (For technical reasons, the Lich's abilities are put onto an item instead of something else like a slotless script.)
+- All Liches start with their phylactery - a cloak called the Shroud of the Lich.  This shroud is unstealable and undroppable.  (For technical reasons, the Lich's phylactery is put onto an item instead of something else like a slotless script.)
 
-- Your phylactery must be in your inventory for you to auto-revive out of combat.  (This auto-revival normally happens immediately after combat ends, but the script may need a few seconds to catch up.)
+- Your phylactery must be in your inventory - but not necessarily equipped - for you to auto-revive out of combat.  (This auto-revival normally happens immediately after combat ends, but the script may need a few seconds to catch up.)
 
 By default, your phylactery can't break upon your character's death, but this can be configured to have a chance of breaking upon death, or you may have a finite number of auto-revivals.  
 
