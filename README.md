@@ -38,7 +38,29 @@ Regardless of their reasoning, with this mod, you too can become a Lich with the
 -
 
 # Install Order Notes
+As of this writing, Lichdom has no mod prerequisites.
 
+- Lichdom should be installed AFTER these mods if you use them:  [EET Start AKA EET Core](https://github.com/Gibberlings3/EET) and all mods that add recruitable NPCs.
+
+- Lichdom should be installed BEFORE these mods if you use them:  [EET End](https://github.com/Gibberlings3/EET).
+
+Specifically, Lichdom has a small amount of cross-mod content AKA crossmod content with these mods, included with permission from their authors:
+
+- [Afaaq](https://github.com/Argent77/DjinniCompanion)
+
+- [Hubelpot](https://github.com/SpellholdStudios/Hubelpot_the_Vegetable_Merchant_NPC)
+
+- [Longer Road (Bodhi & Irenicus)](https://github.com/InfinityMods/LongerRoadEE)
+
+- [Love Conquers All AKA LCA (Caelar & Corwin)](https://github.com/LCA-EET/LCA)
+
+- [Region of Terror (Drizzt)](https://github.com/SpellholdStudios/Region_of_Terror)
+
+- [Saradas Magic II (Saradas)](https://github.com/SpellholdStudios/Saradas_Magic_for_BG2)
+
+- [Sir Neh'taniel](https://www.nexusmods.com/baldursgate2ee/mods/60?tab=description)
+
+- Mods that BG1 NPCs to BG2
 
 # Q & A (FAQ)
 
@@ -46,7 +68,9 @@ Regardless of their reasoning, with this mod, you too can become a Lich with the
 # License, Editing, and Redistribution/Rehosting
 - This mod (Lichdom) is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
-In short, this license means that, so long as you link to the original mod (https://github.com/LCA-EET/Lichdom/ or one of its official mirrors) AND you preserve the ENTIRE credits section, you can otherwise redistribute and edit this mod.  Cross-mod (crossmod) content is also allowed and encouraged!
+In short, this license means that, so long as you link to the original mod (https://github.com/LCA-EET/Lichdom/ or one of its official mirrors) AND you preserve the ENTIRE credits section, you can otherwise redistribute and edit this mod.
+
+Cross-mod AKA crossmod content is also allowed and encouraged!  Don't ask permission for this:  Just do it and pweath send us a link as an Issue on this GitHub repository or/and a linked forum thread! (Linking your crossmod content isn't required, but encouraged!)
 
 Just remember that this mod was made for non-commercial purposes, and Wizards of the Coast would probably very much NOT like you if you tried selling your mods for money.
 
