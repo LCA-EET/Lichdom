@@ -232,11 +232,9 @@ Note that configuration options in this section ONLY apply to Lich characters fr
 # Install Order Notes
 As of this writing, Lichdom has no mod prerequisites.
 
-- Lichdom should be installed AFTER these mods if you use them:  [EET Start AKA EET Core](https://github.com/Gibberlings3/EET), all mods that add quests or areas, and all mods that add recruitable NPCs.
+Lichdom should be installed AFTER these mods if you use them:  [EET Start AKA EET Core](https://github.com/Gibberlings3/EET), all mods that add quests or areas, and all mods that add recruitable NPCs.
 
-- Lichdom should be installed BEFORE these mods if you use them:  [EET End](https://github.com/Gibberlings3/EET).
-
-Specifically, Lichdom has a small amount of cross-mod content AKA crossmod content with these mods, included with permission from authors of original NPCs:
+Specifically, Lichdom has a small amount of cross-mod content AKA crossmod content with these mods, generally included with permission from authors of original NPCs:
 
 - [Afaaq](https://github.com/Argent77/DjinniCompanion)
 
@@ -248,11 +246,15 @@ Specifically, Lichdom has a small amount of cross-mod content AKA crossmod conte
 
 - [Region of Terror (Drizzt)](https://github.com/SpellholdStudios/Region_of_Terror)
 
+- [Sandrah Saga](https://github.com/RoxanneSHS/SandrahEET)
+
 - [Saradas Magic II (Saradas)](https://github.com/SpellholdStudios/Saradas_Magic_for_BG2)
 
 - [Sir Neh'taniel](https://www.nexusmods.com/baldursgate2ee/mods/60?tab=description)
 
 - Mods that BG1 NPCs to BG2EE.
+
+Lichdom should be installed BEFORE these mods if you use them:  [EET End](https://github.com/Gibberlings3/EET).
 
 # New Item Descriptions
 
