@@ -1,6 +1,8 @@
 # Lichdom
 Design, writing, and voice acting by Endarire.  Coding by LCA with use of k4thos's Protagonist Can Die mod with permission.  Images in this documentation are from Wizards of the Coast.
 
+GIBBERLINGS3 FORUM THREAD: **INSERT**
+
 ![If you wanna be a lich, this is the right place!](https://static.wikia.nocookie.net/forgottenrealms/images/2/2e/Runestonecarverns.png/revision/latest?cb=20191004102509)
 
 # So, you wanna be a Lich.
@@ -29,4 +31,20 @@ Regardless of their reasoning, with this mod, you too can become a Lich with the
 - Accepting the strong possibility that this process is irreversible.
 
 # Effects of Lichdom (Default)
-- Since the process of Lichdom is so varied within D&D's decades of canon, and much of it is left to intrepretation, various aspects of Lichdom are configurable in-game via **WHAT METHOD?**.
+- Since the process of Lichdom is so varied within D&D's decades of canon, and much of it is left to intrepretation, various aspects of Lichdom are configurable in-game via **WHAT METHOD?**.  
+
+- The default effects and requirements were heavily inspired by [Liches in _Baldur's Gate_](https://baldursgate.fandom.com/wiki/Lich) as well as [3.5's Liches](https://www.d20srd.org/srd/monsters/lich.htm).
+
+-
+
+# Install Order Notes
+
+
+# Q & A (FAQ)
+
+
+# License
+
+- 
+
+# Credits
