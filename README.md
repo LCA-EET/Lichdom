@@ -43,8 +43,11 @@ Regardless of their reasoning, with this mod, you too can become a Lich with the
 # Q & A (FAQ)
 
 
-# License
+# License, Editing, and Redistribution/Rehosting
+- This mod (Lichdom) is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
-- 
+In short, this license means that, so long as you link to the original mod (https://github.com/LCA-EET/Lichdom/ or one of its official mirrors) AND you preserve the ENTIRE credits section, you can otherwise redistribute and edit this mod.  Cross-mod (crossmod) content is also allowed and encouraged!
+
+Just remember that this mod was made for non-commercial purposes, and Wizards of the Coast would probably very much NOT like you if you tried selling your mods for money.
 
 # Credits
