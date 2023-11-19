@@ -222,3 +222,16 @@ Cross-mod AKA crossmod content is also allowed and encouraged!  Don't ask permis
 Just remember that this mod was made for non-commercial purposes, and Wizards of the Coast would probably very much NOT like you if you tried selling your mods for money.
 
 # Credits
+- Endarire: He did the design, voice acting, and writing for this mod - including this documentation!
+
+- LCA: He coded this mod and proofread various documentation.
+
+- k4thos and others involved in making and publishing [Protagonist Can Die](https://forums.beamdog.com/discussion/74528/mod-player1-can-die) which was sometimes called Player1 Can Die.  This mod was instrumental in the auto-revival ability of the Lich.
+
+- Aaron Williams, author of Nodwick Comic: He was the first to use the phrase "Son of a Lich" regarding undeath.
+
+- Angel and SubtleDoctor: Their discussions about the importance of lore adherence in mods helped in this mod's refinement.
+
+- The Infinity Engine Modding Community.
+
+- The Lord Jesus Christ.  Many D&D spells and other things are inspired by Bible passages, such as [Elijah calling down fire from heaven a la _flame strike_ in 1 Kings 18](https://www.biblegateway.com/passage/?search=1%20Kings%2018&version=NIV), [water being created from a rock in Exodus 17 a la _create water_](https://www.biblegateway.com/passage/?search=Exodus 17&version=NkJV), [pillars of cloud and fire tagging along with the Israelites in the desert wilderness for years a la an air elemental and a fire elemental](https://www.biblegateway.com/passage/?search=Exodus%2013%3A17-14%3A29&version=ESV), and [The Lord thundering loudly, confusing the Philistines into killing themselves a la _confusion_](https://www.biblegateway.com/passage/?search=1%20Samuel%207&version=nKJV).
