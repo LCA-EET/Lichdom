@@ -179,6 +179,50 @@ Since Lichdom's requirements and effects throughout the editions and decades of 
 
 - +100%
 
+**How long should the paraylsis effect from your Lich Touch innate ability last? (In-Game Config)**
+- 3 rounds
+
+- 5 rounds (Default)
+
+- 10 rounds
+
+- 25 rounds
+
+- 50 rounds
+
+- 100 rounds
+
+- 8 hours
+
+- 24 hours
+
+- Permanent until dispelled or removed
+
+**What should the saving throw penalty be for your Lich Touch ability? (In-Game Config)**
+- 1 per 2 levels
+
+- 1 per 3 levels
+
+- 1 per 4 levels (Default)
+
+- 1 per 5 levels
+
+- 1 per 6 levels
+
+- 2 total
+
+- 3 total
+
+- 4 total
+   
+- None
+
+**Should spell resistance apply to your Lich Touch innate ability? (In-Game Config)**
+
+- Yes (Default)
+
+- No
+
 # Install Order Notes
 As of this writing, Lichdom has no mod prerequisites.
 
@@ -186,7 +230,7 @@ As of this writing, Lichdom has no mod prerequisites.
 
 - Lichdom should be installed BEFORE these mods if you use them:  [EET End](https://github.com/Gibberlings3/EET).
 
-Specifically, Lichdom has a small amount of cross-mod content AKA crossmod content with these mods, included with permission from their authors:
+Specifically, Lichdom has a small amount of cross-mod content AKA crossmod content with these mods, included with permission from authors of original NPCs:
 
 - [Afaaq](https://github.com/Argent77/DjinniCompanion)
 
@@ -204,6 +248,9 @@ Specifically, Lichdom has a small amount of cross-mod content AKA crossmod conte
 
 - Mods that BG1 NPCs to BG2EE.
 
+# New Item Descriptions
+
+
 # Q & A (FAQ)
 **How lore friendly is this mod?**
 - While I tried to make the premise of this mod fit within existing Faerun and _Baldur's Gate_ series lore, I am not sure off-hand how accurate this is.  The plot makes a big deal about certain characters dying, but Imoen can die and be raised freely in the games with no long-term story impact.  Let's just say BioWare - and, by extension, BeamDog - were inconsitent in their writing in this regard.
@@ -211,6 +258,24 @@ Specifically, Lichdom has a small amount of cross-mod content AKA crossmod conte
 NPCs the world over were NOT recoded to treat characters drastically differently after becoming a Lich.  In vanilla BG2, you could walk fairly freely through the streets and countrysides of Amn with a [vampire](https://baldursgate.fandom.com/wiki/Hexxat), a [drow](https://baldursgate.fandom.com/wiki/Viconia_DeVir), and a [cackling Red Wizard](https://baldursgate.fandom.com/wiki/Edwin) spamming [undead animating spells](https://baldursgate.fandom.com/wiki/Animate_Dead_(wizard)) and NPCs would probably complain most about the drow, not the small army that acts as a Faerunian version of a weapon of mass destruction (WMD) in their midst.
 
 Ultimately, this Lichdom mod is mostly about the mechanical side of being a Lich.  If you want a game that was built from the ground up to account for NPCs' reactions to becoming a Lich and the associated necromancy, play [_Pathfinder: Wrath of the Righteous_](https://store.steampowered.com/app/1184370/Pathfinder_Wrath_of_the_Righteous__Enhanced_Edition/) or another such game, if that exists.
+
+**120,000 coins per Lich transformation?  Boy, that sure is expensive!**
+- Lichdom is intended as a high initial cost, high long-time return for the character who undergoes this transformation.  The auto-revival aspect matters more in no reload runs.
+
+**How am I meant to get 120,000 or more coins by level 12?!  That's nuts!**
+- I wondered the same thing about the [D&D 3.5 Lich](https://www.d20srd.org/srd/monsters/lich.htm) that only needs caster level 11 to undergo the ritual when the expected wealth by level means that characters who become Liches are likely doing it MUCH later, like level 15+.
+
+The truest answer is, "Adventure!"  Remember, you don't NEED to undergo the Lichdom ritual ASAP!
+
+**Why require only level 12 in a casting class to become a Lich?**
+- That's inspired by the [D&D 3.5 Lich](https://www.d20srd.org/srd/monsters/lich.htm) which requires caster level 11.  Since caster levels don't work well as prerequisites in the Infinity Engine, I rounded up to 12 since that's when full casters (Cleric, Druid/Shaman, and Sorcerer/Wizard) start to get their level 6 spell slots.
+
+- As a solo single-classed character, reaching level 12 is probably easy in BG2, even if you start in SoA.  Reaching it as a triple-classed character in a party of 6, depending on your mod wad and the content you do, may take you until late SoA or even ToB to reach this point.  In short, Lichdom is meant to be attainable by characters in SoA with a variety of play styles.
+
+**Why make a mod about becoming a Lich?**
+- In Infinity Engine games, Lichdom is like _dimension door_ - it seems like plenty of creatures can use it _except_ you!  Also, the notion of being able to use this option that's been in the D&D books for decades in various forms appealed to me.
+
+- In short, it's unique.  For the EE games, I know of no other mods which apply 'templates' to player characters like Lycanthrope, Lich, or Vampire.  (I'm not counting recruitable NPCs that are these sorts of creatures, nor shapeshifting abilities to mimic these templates.)  Maybe someone will soon make and public release a mod to turn characters into werechihuahuas or other Lycanthropes!
 
 # License, Editing, and Redistribution/Rehosting
 - This mod (Lichdom) is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
@@ -234,4 +299,4 @@ Just remember that this mod was made for non-commercial purposes, and Wizards of
 
 - The Infinity Engine Modding Community.
 
-- The Lord Jesus Christ.  Many D&D spells and other things are inspired by Bible passages, such as [Elijah calling down fire from heaven a la _flame strike_ in 1 Kings 18](https://www.biblegateway.com/passage/?search=1%20Kings%2018&version=NIV), [water being created from a rock in Exodus 17 a la _create water_](https://www.biblegateway.com/passage/?search=Exodus 17&version=NkJV), [pillars of cloud and fire tagging along with the Israelites in the desert wilderness for years a la an air elemental and a fire elemental](https://www.biblegateway.com/passage/?search=Exodus%2013%3A17-14%3A29&version=ESV), and [The Lord thundering loudly, confusing the Philistines into killing themselves a la _confusion_](https://www.biblegateway.com/passage/?search=1%20Samuel%207&version=nKJV).
+- The Lord Jesus Christ.  Many D&D spells and other things are inspired by Bible passages, such as [Elijah calling down fire from heaven a la _flame strike_ in 1 Kings 18](https://www.biblegateway.com/passage/?search=1%20Kings%2018&version=NIV), [water being created from a rock in Exodus 17 a la _create water_](https://www.biblegateway.com/passage/?search=Exodus 17&version=NkJV), [pillars of cloud and fire tagging along with the Israelites in the desert wilderness for years a la an air elemental and a fire elemental](https://www.biblegateway.com/passage/?search=Exodus%2013%3A17-14%3A29&version=ESV), and [The Lord thundering loudly, confusing the Philistines into killing themselves a la _confusion_](https://www.biblegateway.com/passage/?search=1%20Samuel%207&version=nKJV).  Even the idol Bhaal/Baal is mentioned in various places in the Old Testament.
