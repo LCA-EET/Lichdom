@@ -280,6 +280,9 @@ The truest answer is, "Adventure!"  Remember, you don't NEED to undergo the Lich
 
 - As a solo single-classed character, reaching level 12 is probably easy in BG2, even if you start in SoA.  Reaching it as a triple-classed character in a party of 6, depending on your mod wad and the content you do, may take you until late SoA or even ToB to reach this point.  In short, Lichdom is meant to be attainable by characters in SoA with a variety of play styles.
 
+**What plans do you have for BG1 (BGEE) or SoD content for Liches?**
+- None.  Lichdom is simply a high-level thing, just like ascending to godhood is assumed to be for high levels.
+
 **Why make the phylactery a cloak instead of a more traditional amulet or crown?**
 - Amulets: Edwin's Amulet is normally glued to his neck, and I wanted Liches to be able to use [https://baldursgate.fandom.com/wiki/Amulet_of_Power](Amulets of Power).
 
