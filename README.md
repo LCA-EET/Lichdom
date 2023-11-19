@@ -58,7 +58,9 @@ Regardless of their reasoning, with this mod, you too can become a Lich with the
 - The UI changes your displayed race to Lich.  Mechanically, you're still a member of your original race such as Human or Gnome.
 
 # Configurable Lichdom Options
-Since 
+Since Lichdom's requirements and effects throughout the editions and decades of D&D have varied so much, it seemed fitting to include a variety of options to better suit your play style.
+
+
 
 # Install Order Notes
 As of this writing, Lichdom has no mod prerequisites.
