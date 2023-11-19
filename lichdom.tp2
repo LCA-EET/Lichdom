@@ -132,6 +132,12 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 	COPY ~lichdom/wav/xald1099.wav~ ~override~
 	COPY ~lichdom/wav/xald1100.wav~ ~override~
 	COPY ~lichdom/wav/xald1101.wav~ ~override~
+	COPY ~lichdom/wav/xald1102.wav~ ~override~
+	COPY ~lichdom/wav/xald1103.wav~ ~override~
+	COPY ~lichdom/wav/xald1104.wav~ ~override~
+	COPY ~lichdom/wav/xald1105.wav~ ~override~
+	COPY ~lichdom/wav/xald1106.wav~ ~override~
+	COPY ~lichdom/wav/xald1107.wav~ ~override~
 
 
 //}

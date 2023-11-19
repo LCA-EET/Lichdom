@@ -7,28 +7,89 @@ IF ~
 	SAY @0 /*~<You see a man in ornate robes whose every motion seems intentional, calm, and slow.  His voice seems wise with a tone that reminds you of Gorion’s voice, but with more crackle and spoken more slowly.  He smells clean despite his nearness to the dead  His demeanor is of one of great importance who seems to be in absolutely no hurry.>~ [xald0000]*/
 	
 	IF ~~ THEN
+	DO ~
+		SetGlobal("XA_LD_MetMorrisInAthkatla", "GLOBAL", 1)
+	~
 	GOTO XA_LD_IntroAthkatla
 END
 
 IF ~
-	AreaCheck("AR0800")
+	NumTimesTalkedTo(0)
+	AreaCheck("AR5000")
+	Global("XA_LD_MetMorrisInAthkatla", "GLOBAL", 1)
+~ THEN BEGIN XA_LD_IntroSaradush_0
+	SAY @39  /* ~(You see a man who looks familiar to you.  His name soon comes to mind - Morris the Gravetender - and you last met him in Athkatla.  He again seems to be in absolutely no hurry.)~  [xald1059]*/
+	
+	= @40  /* ~"Ah, there you are.  I remember you, CHARNAME."~ [xald1060]*/
+	
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+END
+
+IF ~
+	NumTimesTalkedTo(0)
+	AreaCheck("AR5000")
+	Global("XA_LD_MetMorrisInAthkatla", "GLOBAL", 0)
+~ THEN BEGIN XA_LD_IntroSaradush_1
+	SAY @41  /* ~(You see a man in ornate robes whose every motion seems intentional, calm, and slow.  His voice seems wise with a tone that reminds you of Gorion’s voice, but with more cracks and spoken more slowly.  He smells clean despite his nearness to the dead  His demeanor is of one of great importance who seems to be in absolutely no hurry.)~ [eemor100] */
+	
+	= @42  /* ~~"Ah, there you are.  You are one of the many people to have been curious about me.  I am Morris, a gravetender in Athkatla and now here in Saradush."~ [xald1076]*/
+	
+	IF ~~ THEN REPLY @43  /* ~What made you come here?~*/
+	GOTO XA_LD_WhyComeToSaradush
+	
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+END
+
+
+IF ~~ THEN BEGIN XA_LD_WhyComeToSaradush
+	SAY @44  /* ~"Wars and rumors of wars," Morris says with a sly smile.  "Death and destruction are at our heels, and the chance to witness death on a massive scale seemed like too rare of an opportunity nowadays."~ [xald1061]*/
+	
+	IF ~~ THEN REPLY @45 /* ~Where do you plan to go next?~*/
+	GOTO XA_LD_WhereToNext
+	
+END
+
+IF ~~ THEN BEGIN XA_LD_WhereToNext
+	SAY @46  /* ~"Wherever my whims carry me - most likely to another warzone, for war never changes."  Morris slyly smiles at you.  "But you, CHARNAME, are going to the Throne of Bhaal.  I -sense- it.  There, you will pay the fourth price - a decision - but one -far- greater than becoming a lich.  I cannot say more."~ [xald1062]*/
+	
+	IF ~~ THEN REPLY @47  /* ~Wait! What?~*/
+	GOTO XA_LD_WhereToNext_End1
+	
+	IF ~~ THEN REPLY @48 /* ~How do you know this?~*/
+	GOTO XA_LD_WhereToNext_End2
+	
+	IF ~~ THEN REPLY @49 /* ~Thanks, I think.~*/
+	GOTO XA_LD_WhereToNext_End3
+END
+
+
+IF ~~ THEN BEGIN XA_LD_WhereToNext_End1
+	SAY @50 /*~Morris smugly smiles at you.  "Reflect on what I have said, CHARNAME."~ [xald1063] */
+
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+END
+
+IF ~~ THEN BEGIN XA_LD_WhereToNext_End2
+	SAY @51 /* ~Morris smiles at you as he says, "-I- am a -Wizard.-  Knowledge is my duty."~ [xald1064]*/
+
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+END
+
+IF ~~ THEN BEGIN XA_LD_WhereToNext_End3
+	SAY @52 /* ~Morris kindly nods.~ [xald1065]*/
+
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+END
+
+IF ~
+	True()
 ~ THEN BEGIN XA_LD_IntroAthkatla
 	SAY @1 /*~Ah, there you are.  I am Morris, and you are one of many people to have been curious about me.~ [xald0001]*/
 	
-	IF ~
-		GlobalLT("XA_LD_WhoAreYou", "LOCALS", 1)
-	~ THEN REPLY @2 /*~I am curious.  Who are you?~*/
-	DO ~
-		SetGlobal("XA_LD_WhoAreYou", "LOCALS", 1)
-	~
+	IF ~~ THEN REPLY @2 /*~I am curious.  Who are you?~*/
 	GOTO XA_LD_WhoAreYou
 	
-	IF ~
-		GlobalLT("XA_LD_WhyAreYouHere", "LOCALS", 1)
-	~ THEN REPLY @4 /*~Why are you here among the dead?~ [xald0002]*/
-	DO ~
-		SetGlobal("XA_LD_WhyAreYouHere", "LOCALS", 1)
-	~
+	IF ~~ THEN REPLY @4 /*~Why are you here among the dead?~ [xald0002]*/
 	GOTO XA_LD_WhyAreYouHere
 	
 	IF ~~ THEN REPLY @6 /*~What do you think about death?~*/
@@ -38,12 +99,7 @@ END
 IF ~~ THEN BEGIN XA_LD_WhoAreYou
 	SAY @3 /*~"Morris, a gravetender," he says, grateful that you asked.~ [xald0002]*/
 	
-	IF ~
-		GlobalLT("XA_LD_WhyAreYouHere", "LOCALS", 1)
-	~ THEN REPLY @4 /*~Why are you here among the dead?~ [xald0002]*/
-	DO ~
-		SetGlobal("XA_LD_WhyAreYouHere", "LOCALS", 1)
-	~
+	IF ~~ THEN REPLY @4 /*~Why are you here among the dead?~ [xald0002]*/
 	GOTO XA_LD_WhyAreYouHere
 	
 	IF ~~ THEN REPLY @6 /*~What do you think about death?~*/
@@ -53,12 +109,7 @@ END
 IF ~~ THEN BEGIN XA_LD_WhyAreYouHere
 	SAY @5 /*~He says with a plain smile, "I have chosen to keep the dead - and the Undead - that should not be in the city out of it.  I ensure those who bring their dead here or who mourn for their dead here head in the right direction."~ [xald0003]*/
 	
-	IF ~
-		GlobalLT("XA_LD_WhoAreYou", "LOCALS", 1)
-	~ THEN REPLY @2 /*~I am curious.  Who are you?~*/
-	DO ~
-		SetGlobal("XA_LD_WhoAreYou", "LOCALS", 1)
-	~
+	IF ~~ THEN REPLY @2 /*~I am curious.  Who are you?~*/
 	GOTO XA_LD_WhoAreYou
 	
 	IF ~~ THEN REPLY @6 /*~What do you think about death?~*/

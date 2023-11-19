@@ -37,3 +37,17 @@
 @36 = ~“Good, good!” he says, with his eyes glowing and his face shining despite his slow movements.  He takes the lich dust from you slowly, almost dramatically slowly, as he inspects it.  “I knew each of them well.  Now, they can die the -true- death.”~ [xald1019]
 @37 = ~Wait!  Did you -make- these liches?~
 @38 = ~You seem like a necromancer -and- Undead!  Are you?~
+@39 = ~(You see a man who looks familiar to you.  His name soon comes to mind - Morris the Gravetender - and you last met him in Athkatla.  He again seems to be in absolutely no hurry.)~  [xald1059]
+@40 = ~"Ah, there you are.  I remember you, CHARNAME."~ [xald1060]
+@41 = ~(You see a man in ornate robes whose every motion seems intentional, calm, and slow.  His voice seems wise with a tone that reminds you of Gorion’s voice, but with more cracks and spoken more slowly.  He smells clean despite his nearness to the dead  His demeanor is of one of great importance who seems to be in absolutely no hurry.)~ [eemor100]
+@42 = ~"Ah, there you are.  You are one of the many people to have been curious about me.  I am Morris, a gravetender in Athkatla and now here in Saradush."~ [xald1076]
+@43 = ~What made you come here?~
+@44 = ~"Wars and rumors of wars," Morris says with a sly smile.  "Death and destruction are at our heels, and the chance to witness death on a massive scale seemed like too rare of an opportunity nowadays."~ [xald1061]
+@45 = ~Where do you plan to go next?~
+@46 = ~"Wherever my whims carry me - most likely to another warzone, for war never changes."  Morris slyly smiles at you.  "But you, CHARNAME, are going to the Throne of Bhaal.  I -sense- it.  There, you will pay the fourth price - a decision - but one -far- greater than becoming a lich.  I cannot say more."~ [xald1062]
+@47 = ~Wait! What?~
+@48 = ~How do you know this?~
+@49 = ~Thanks, I think.~
+@50 = ~Morris smugly smiles at you.  "Reflect on what I have said, CHARNAME."~ [xald1063]
+@51 = ~Morris smiles at you as he says, "-I- am a -Wizard.-  Knowledge is my duty."~ [xald1064]
+@52 = ~Morris kindly nods.~ [xald1065]
