@@ -57,12 +57,18 @@ Regardless of their reasoning, with this mod, you too can become a Lich with the
 
 - All Liches start with their phylactery - a cloak called the Shroud of the Lich.  This shroud is unstealable and undroppable.  (For technical reasons, the Lich's abilities are put onto an item instead of something else like a slotless script.)
 
-Your phylactery must be in your inventory for you to auto-revive out of combat.  (This auto-revival normally happens immediately after combat ends, but the script may need a few seconds to catch up.)  Note that depending on your settings, your phylactery may break upon death.  Regardless of settings, certain SoA events _will_ remove CHARNAME's (the protagonist's) phylactery for a time.
+- Your phylactery must be in your inventory for you to auto-revive out of combat.  (This auto-revival normally happens immediately after combat ends, but the script may need a few seconds to catch up.)
+
+By default, your phylactery can't break upon your character's death, but this can be configured to have a chance of breaking upon death, or you may have a finite number of auto-revivals.  
+
+Regardless of settings, certain SoA events _will_ remove CHARNAME's (the protagonist's) phylactery for a time.
 
 - The UI changes your displayed race to Lich.  Mechanically, you're still a member of your original race such as Human or Gnome.
 
 # Configurable Lichdom Options
 Since Lichdom's requirements and effects throughout the editions and decades of D&D have varied so much, it seemed fitting to include a variety of options to better suit your play style.
+
+Note that configuration options in this section ONLY apply to Lich characters from this mod and NOT to enemy/NPC Liches!
 
 **Lichdom Monetary Cost Per Transformation (Install Option)**
 - 120,000G (Default)
