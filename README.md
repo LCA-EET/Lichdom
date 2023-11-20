@@ -6,11 +6,11 @@ GIBBERLINGS3 FORUM THREAD: **INSERT**
 ![If you wanna be a lich, this is the right place!](https://github.com/LCA-EET/Lichdom/blob/main/Consumptive-Field.png)
 
 # So, you wanna be a Lich.
+![We're your friendly, neighborhood guide skeletons!  Walk this way!](https://github.com/LCA-EET/Lichdom/blob/main/Necromancer-Iron-Bones.png)
+
+_We're your friendly, neighborhood guide skeletons!  Walk this way!_
+
 You're in the right place!  You're also late to the party.
-
-![Szass Tam, the Famous Thay Necromancer Lich](https://github.com/LCA-EET/Lichdom/blob/main/Lich-Red-Outfit.png)
-
-_Szass Tam, the Famous Red Wizard Zulkir of Necromancy and Lich of Thay_
 
 Throughout the realms and the planes, many have already become Liches or Demiliches of some sort.  Perhaps they sought immortality.  Perhaps they had enough of  needing to eat and breathe.  Perhaps they were tired of being chilled, shocked, diseased, entangled, level drained, paralyzed, petrified, poisoned, polymorphed into squirrels, stunned, and webbed.
 
@@ -66,7 +66,7 @@ _This Lich is living his best unlife now!  Careful about that glowing hand:  If 
 
 - All Liches start with their phylactery - a cloak called the Shroud of the Lich.  This shroud is unstealable and undroppable.  (For technical reasons, the Lich's phylactery is put onto an item instead of something else like a slotless script.)
 
-- Your phylactery must be in your inventory - but not necessarily equipped - for you to auto-revive out of combat.  (This auto-revival normally happens immediately after combat ends, but the script may need a few seconds to catch up.)
+- Your phylactery must be in your inventory - but need not be equipped - for you to auto-revive out of combat.  (This auto-revival normally happens immediately after combat ends, but the script may need a few seconds to catch up.)
 
 By default, your phylactery can't break upon your character's death, but this can be configured to have a chance of breaking upon death, or you may have a finite number of auto-revivals.  
 
@@ -236,14 +236,17 @@ Note that configuration options in this section ONLY apply to Lich characters fr
    
 - None
 
-**Should spell resistance apply to your Lich Touch innate ability? (In-Game Config)**
-
+**Should spell resistance apply to your Lich Touch weapon? (In-Game Config)**
 - Yes (Default)
 
 - No
 
 # Install Order Notes
-As of this writing, Lichdom has no mod prerequisites.
+![This Lich is frazzled, having researched a proper mega mod installation for months now!](https://github.com/LCA-EET/Lichdom/blob/main/Lich-with-Books.png)
+
+_This Lich is frazzled, having researched a proper mega mod installation for months now!_
+
+As of this writing, Lichdom has no mod prerequisites.  The mod install order listed below is simply best practice to give you the best experience if you use these other mods.
 
 Lichdom should be installed AFTER these mods if you use them:  [EET Start AKA EET Core](https://github.com/Gibberlings3/EET), all mods that add quests or areas, all mods that add items, and all mods that add recruitable NPCs.
 
@@ -270,6 +273,10 @@ Specifically, Lichdom has a small amount of cross-mod content AKA crossmod conte
 Lichdom should be installed BEFORE these mods if you use them:  [EET End](https://github.com/Gibberlings3/EET).
 
 # New Item Descriptions
+![This Lich admires his new phylactery.  His life is in his hands.](https://github.com/LCA-EET/Lichdom/blob/main/Force-Chest-Phylactery.png)
+
+_This Lich admires his new phylactery.  His life is in his hands._
+
 
 
 # Q & A (FAQ)
