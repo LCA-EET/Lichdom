@@ -40,7 +40,7 @@ _Lichdom is not for everyone.  It is a great potential power but also has a sign
 - Accepting the strong possibility that this process is irreversible.
 
 # Effects of Lichdom (Default)
-![Life's a Lich and then you never die!](https://github.com/LCA-EET/Lichdom/blob/main/4e-Lich.png)
+![Life's a Lich and then you never die!](https://github.com/LCA-EET/Lichdom/blob/main/4e-Lich-White-BG-50.png)
 
 _This Lich is living his best unlife now!  Careful about that glowing hand:  If he touches you, that's the last thing you're likely to feel before you're paralyzed and dead, dead, dead!_
 
