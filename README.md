@@ -363,6 +363,9 @@ Shroud of the Lich is also an intentional reference to [an ability of the same n
 **Why does a Lich drop its items on the ground, even if it's about to auto-revive?**
 - That's how the base game was coded.  if you use a mod to change that behavior so that dead party members don't drop their items, let us know!
 
+**How much EXP should I expect to get from doing all the quests in this mod?**
+- This mod has exactly one EXP reward which is 25,000 Quest EXP for giving Morris 3 Lich Dusts when he asks for them.
+
 **Why make a mod about becoming a Lich?**
 - In Infinity Engine games, Lichdom is like _dimension door_ - it seems like plenty of creatures can use it _except_ you!  Also, the notion of being able to use this option that's been in the D&D books for decades in various forms appealed to me.
 
