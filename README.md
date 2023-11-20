@@ -1,4 +1,4 @@
-![Green-Cloak-Lich](https://github.com/LCA-EET/Lichdom/assets/10439725/9b3bce34-300b-4653-8525-57087fb1b4b4)![Green-Cloak-Lich](https://github.com/LCA-EET/Lichdom/assets/10439725/916ac1d6-734d-4c21-abf8-b428e6342d8d)# Lichdom
+# Lichdom
 Design, writing, and voice acting by Endarire.  Coding by LCA with use of k4thos's Protagonist Can Die mod with permission.  Images in this documentation are from Wizards of the Coast.
 
 GIBBERLINGS3 FORUM THREAD: **INSERT**
