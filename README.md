@@ -1,21 +1,26 @@
-# Lichdom
+![Green-Cloak-Lich](https://github.com/LCA-EET/Lichdom/assets/10439725/9b3bce34-300b-4653-8525-57087fb1b4b4)![Green-Cloak-Lich](https://github.com/LCA-EET/Lichdom/assets/10439725/916ac1d6-734d-4c21-abf8-b428e6342d8d)# Lichdom
 Design, writing, and voice acting by Endarire.  Coding by LCA with use of k4thos's Protagonist Can Die mod with permission.  Images in this documentation are from Wizards of the Coast.
 
 GIBBERLINGS3 FORUM THREAD: **INSERT**
 
-![If you wanna be a lich, this is the right place!](https://static.wikia.nocookie.net/forgottenrealms/images/2/2e/Runestonecarverns.png/revision/latest?cb=20191004102509)
+![If you wanna be a lich, this is the right place!](https://github.com/LCA-EET/Lichdom/blob/main/Consumptive-Field.png)
 
 # So, you wanna be a Lich.
 You're in the right place!  You're also late to the party.
 
-![Szass Tam, the Famous Thay Necromancer Lich](https://static.wikia.nocookie.net/forgottenrealms/images/9/98/Monster_Manual_5e_-_Lich_-_p202.jpg/revision/latest/scale-to-width-down/1000?cb=20141113093711)
-_Szass Tam, the Famous Necromancer Lich of Thay_
+![Szass Tam, the Famous Thay Necromancer Lich](https://github.com/LCA-EET/Lichdom/blob/main/Lich-Red-Outfit.png)
+
+_Szass Tam, the Famous Red Wizard Zulkir of Necromancy and Lich of Thay_
 
 Throughout the realms and the planes, many have already become Liches or Demiliches of some sort.  Perhaps they sought immortality.  Perhaps they had enough of  needing to eat and breathe.  Perhaps they were tired of being chilled, shocked, diseased, entangled, level drained, paralyzed, petrified, poisoned, polymorphed into squirrels, stunned, and webbed.
 
 Regardless of their reasoning, with this mod, you too can become a Lich with the help of Gravetender Morris in Athkatla's Graveyard District (SoA) or Saradush (ToB).  You have plenty of chances to decline, but because you came here, I assume you seek the secrets of a Lich transformation as performed by Gravetender Morris.
 
 # Requirements for Lichdom
+![Acererak, that Lich from the Tomb of Horrors module that helped kill thousands of characters!](https://github.com/LCA-EET/Lichdom/blob/main/Acererak-Lich.png?raw=true)
+
+_Lichdom is not for everyone.  It is a great potential power but also has a significant cost!_
+
 - Level 12 or higher in any casting class or kit.  This applies to Bard, Cleric, Druid, Paladin, Ranger, Shaman, Sorcerer, and Wizard (Mage).  Multiclassed or dual classed characters need at least 12 levels in one of these classes to undergo the ritual.
 
 - 120,000G per transformation.  (This amount is configurable.)
@@ -33,6 +38,10 @@ Regardless of their reasoning, with this mod, you too can become a Lich with the
 - Accepting the strong possibility that this process is irreversible.
 
 # Effects of Lichdom (Default)
+![Life's a Lich and then you never die!](https://github.com/LCA-EET/Lichdom/blob/main/4e-Lich.png)
+
+_This Lich is living his best unlife now!  Careful about that glowing hand:  If he touches you, that's the last thing you're likely to feel before you're paralyzed and dead, dead, dead!_
+
 - Since the process of Lichdom is so varied within D&D's decades of canon, and much of it is left to intrepretation, various aspects of Lichdom are configurable in-game via **WHAT METHOD?**.  
 
 - The default effects and requirements were heavily inspired by [Liches in _Baldur's Gate_](https://baldursgate.fandom.com/wiki/Lich) as well as [3.5's Liches](https://www.d20srd.org/srd/monsters/lich.htm).
@@ -66,6 +75,10 @@ Regardless of settings, certain SoA events _will_ remove CHARNAME's (the protago
 - The UI changes your displayed race to Lich.  Mechanically, you're still a member of your original race such as Human or Gnome.
 
 # Configurable Lichdom Options
+![This Lich grins, knowing he has many options!](https://github.com/LCA-EET/Lichdom/blob/main/Green-Cloak-Lich.png)
+
+_This Lich grins, knowing he has many options!_
+
 Since Lichdom's requirements and effects throughout the editions and decades of D&D have varied so much, it seemed fitting to include a variety of options to better suit your play style.
 
 Note that configuration options in this section ONLY apply to Lich characters from this mod and NOT to enemy/NPC Liches!
