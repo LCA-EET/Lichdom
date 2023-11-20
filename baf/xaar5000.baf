@@ -1,0 +1,10 @@
+IF
+	GlobalLT("XA_LD_MorrisSpawned", "AR5000", 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		CreateCreature("XALDGD", [1100.1020], S)
+		SetGlobal("XA_LD_MorrisSpawned", "AR5000", 1)
+		SetInterrupt(TRUE)
+		Continue()
+END
