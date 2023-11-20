@@ -371,6 +371,11 @@ Shroud of the Lich is also an intentional reference to [an ability of the same n
 
 - In short, it's unique.  For the EE games, I know of no other mods which apply 'templates' to player characters like Lycanthrope, Lich, or Vampire.  (I'm not counting recruitable NPCs that are these sorts of creatures, nor shapeshifting abilities to mimic these templates.)  Maybe someone will soon make and public release a mod to turn characters into Werechihuahuas or other Lycanthropes, or into Angels, Constructs Demons, Devils, Elementals, Genies, Oozes, or Plants!
 
+**What game versions and operating systems can run this mod?**
+- Lichdom will likely work on game version 2.5 or later.
+
+- Lichdom was not tested on every operating system, but if your operating system can run a version of _Baldur's Gate II: Enhanced Edition_ with WeiDU mods, it can likely also run Lichdom.
+
 # License, Editing, and Redistribution/Rehosting
 ![Just as there's more than one type of Lich, there are others who want to edit this Lichdom mod.](https://github.com/LCA-EET/Lichdom/blob/main/Documentation%20Images/Alhoon.png)
 
