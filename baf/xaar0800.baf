@@ -14,6 +14,6 @@ IF
 	GlobalLT("XA_LD_MorrisKilledInAthkatla", "GLOBAL", 1)
 THEN
 	RESPONSE #100
-		Global("XA_LD_MorrisKilledInAthkatla", "GLOBAL", 1)
+		SetGlobal("XA_LD_MorrisKilledInAthkatla", "GLOBAL", 1)
 		Continue()
 END

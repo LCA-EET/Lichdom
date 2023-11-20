@@ -1,45 +1,194 @@
 BEGIN ~XALDGD~
 
+//{ Introductions
+
+	IF ~
+		NumTimesTalkedTo(0)
+		AreaCheck("AR0800")
+	~ THEN BEGIN XA_LD_IntroAthkatla_0
+		SAY @0 /*~<You see a man in ornate robes whose every motion seems intentional, calm, and slow.  His voice seems wise with a tone that reminds you of Gorion’s voice, but with more crackle and spoken more slowly.  He smells clean despite his nearness to the dead  His demeanor is of one of great importance who seems to be in absolutely no hurry.>~ [xald0000]*/
+		
+		IF ~~ THEN
+		DO ~
+			SetGlobal("XA_LD_MetMorrisInAthkatla", "GLOBAL", 1)
+		~
+		GOTO XA_LD_IntroAthkatla
+	END
+
+	IF ~
+		NumTimesTalkedTo(0)
+		AreaCheck("AR5000")
+		Global("XA_LD_MetMorrisInAthkatla", "GLOBAL", 1)
+	~ THEN BEGIN XA_LD_IntroSaradush_0
+		SAY @39  /* ~(You see a man who looks familiar to you.  His name soon comes to mind - Morris the Gravetender - and you last met him in Athkatla.  He again seems to be in absolutely no hurry.)~  [xald1059]*/
+		
+		= @40  /* ~"Ah, there you are.  I remember you, CHARNAME."~ [xald1060]*/
+		
+		COPY_TRANS XALDGD XA_LD_IntroAthkatla
+	END
+
+	IF ~
+		NumTimesTalkedTo(0)
+		AreaCheck("AR5000")
+		Global("XA_LD_MetMorrisInAthkatla", "GLOBAL", 0)
+	~ THEN BEGIN XA_LD_IntroSaradush_1
+		SAY @41  /* ~(You see a man in ornate robes whose every motion seems intentional, calm, and slow.  His voice seems wise with a tone that reminds you of Gorion’s voice, but with more cracks and spoken more slowly.  He smells clean despite his nearness to the dead  His demeanor is of one of great importance who seems to be in absolutely no hurry.)~ [eemor100] */
+		
+		= @42  /* ~~"Ah, there you are.  You are one of the many people to have been curious about me.  I am Morris, a gravetender in Athkatla and now here in Saradush."~ [xald1076]*/
+		
+		IF ~~ THEN REPLY @43  /* ~What made you come here?~*/
+		GOTO XA_LD_WhyComeToSaradush
+		
+		COPY_TRANS XALDGD XA_LD_IntroAthkatla
+	END
+
+//}
+
 IF ~
-	NumTimesTalkedTo(0)
-	AreaCheck("AR0800")
-~ THEN BEGIN XA_LD_IntroAthkatla_0
-	SAY @0 /*~<You see a man in ornate robes whose every motion seems intentional, calm, and slow.  His voice seems wise with a tone that reminds you of Gorion’s voice, but with more crackle and spoken more slowly.  He smells clean despite his nearness to the dead  His demeanor is of one of great importance who seems to be in absolutely no hurry.>~ [xald0000]*/
+	True()
+~ THEN BEGIN XA_LD_IntroAthkatla
+	SAY @1 /*~Ah, there you are.  I am Morris, and you are one of many people to have been curious about me.~ [xald0001]*/
+	
+	IF ~~ THEN REPLY @2 /*~I am curious.  Who are you?~*/
+	GOTO XA_LD_WhoAreYou
+	
+	IF ~~ THEN REPLY @4 /*~Why are you here among the dead?~ [xald0002]*/
+	GOTO XA_LD_WhyAreYouHere
+	
+	IF ~~ THEN REPLY @6 /*~What do you think about death?~*/
+	GOTO XA_LD_ThoughtsOnDeath
+	
+	IF ~
+		Global("XA_LD_MorrisKilledInAthkatla", "GLOBAL", 1)
+	~ THEN REPLY @53 /*~You’re here!  And alive!  I thought you died!~*/
+	GOTO XA_LD_Alive
+	
+	IF ~
+		AreaCheck("AR5000")
+		GlobalGT("XA_LD_RitualsPerformed", "GLOBAL", 0)
+		GlobalLT("XA_LD_ThoughtsOnRitual", "LOCALS", 1)
+		OR(6)
+			Race(Player1, LICH)
+			Race(Player2, LICH)
+			Race(Player3, LICH)
+			Race(Player4, LICH)
+			Race(Player5, LICH)
+			Race(Player6, LICH)
+	~ THEN REPLY @67
+	DO ~
+		SetGlobal("XA_LD_ThoughtsOnRitual", "LOCALS", 1)
+	~
+	GOTO XA_LD_ThoughtsOnRitual
+END
+
+IF ~~ THEN BEGIN XA_LD_ThoughtsOnRitual
+	SAY @68 /*~Morris raises his eyebrow at you in curiosity.~ [xald1066]*/
+	
+	IF ~~ THEN REPLY @69 /*~It was absolutely worth it!  Thank you!~*/
+	GOTO XA_LD_ThoughtsOnRitual_1
+	
+	IF ~~ THEN REPLY @70 /*~I liked being a lich, but can I return to normal now?~*/
+	GOTO XA_LD_ThoughtsOnRitual_2
+	
+	IF ~~ THEN REPLY @71 /*~I already felt regret over becoming a lich.~*/
+	GOTO XA_LD_ThoughtsOnRitual_3
+	
+	IF ~~ THEN REPLY @72 /*~I just wanted to remind you that you did this.  That’s all.~*/
+	GOTO XA_LD_ThoughtsOnRitual_4
+	
+	IF ~~ THEN REPLY @73 /*~Did you find anyone else to lichify after you left Athkatla?~*/
+	GOTO XA_LD_ThoughtsOnRitual_5
+END
+
+IF ~~ THEN BEGIN XA_LD_ThoughtsOnRitual_1
+	SAY @74 /*~Morris slowly and proudly smiles at you.~ [xald1067]*/
+
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+END
+
+IF ~~ THEN BEGIN XA_LD_ThoughtsOnRitual_2
+	SAY @75 /*~Morris frowns.  "This is a path you have willingly chosen.  You have paid the fourth price of a decision and the fifth price of trusting me to properly perform this ritual.  I will not aid you in this, nor will I stop you from obtaining this if it is what you truly want."~ [xald1068]*/
+
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+END
+
+IF ~~ THEN BEGIN XA_LD_ThoughtsOnRitual_3
+	SAY @76 /*~Morris sighs and looks at you, his eyes sad.  "I am sorry you feel that way.  Regret is a common emotion among the Undead.  I recommend you counteract that for the sake of your long-term sanity, lest your mind shatter and your emotions drown you in negativity."~ [xald1069]*/
+
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+END
+
+IF ~~ THEN BEGIN XA_LD_ThoughtsOnRitual_4
+	SAY @77 /*~Morris sluggishly shrugs and nods.~ [xald1070]*/
+
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+END
+
+IF ~~ THEN BEGIN XA_LD_ThoughtsOnRitual_5
+	SAY @78 /*~"No," Morris says indifferently.  "No one asked like you did."~ [xald1071]*/
+
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+END
+
+IF ~~ THEN BEGIN XA_LD_Alive
+	SAY @54 /*~Morris merely slowly sighs.  "I -did- die and it was by -your- influence.  I offer you forgiveness for your foolishness.  I have already forgiven myself for my foolishness."~*/
+	
+	IF ~~ THEN REPLY @55 /*~Wait!  You aren’t mad about this?~*/
+	GOTO XA_LD_MadAboutBeingKilled
+	
+	IF ~~ THEN REPLY @57 /*~How did you survive?~*/
+	GOTO XA_LD_HowSurvive
+	
+	IF ~~ THEN REPLY @60 /*~I killed you once and I’ll do it again!~*/
+	GOTO XA_LD_KillAgain
+END
+
+IF ~~ THEN BEGIN XA_LD_MadAboutBeingKilled
+	SAY @56 /* ~Morris sighs and slowly chuckles.  "No, no, and no.  Undeath has given me a new perspective:  I would rather not hold onto regret the rest of eternity.  I advise you do the same."~  [xald1073] */
+	
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+END
+
+IF ~~ THEN BEGIN XA_LD_HowSurvive
+	SAY @58 /*~Morris slowly snickers.  "My phylactery is positioned -far- from here, and I regenerated and restocked in my safe, -private- place."~ [xald1074]*/
+
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+END
+
+IF ~~ THEN BEGIN XA_LD_KillAgain
+	SAY @59 /*~Morris shrugs and sighs.  "If I live, I win.  If I die, I win.  I have planned for these possibilities.  You… seemingly have not.  Will you still test my immortal patience?"~ [xald1075]*/
+	
+	IF ~~ THEN REPLY @61 /* ~Since you don’t seem threatened at all by this, then we won’t fight.~*/
+	GOTO XA_LD_WontFight
+	
+	IF ~~ THEN REPLY @63 /*~Die!  Again!~*/
+	GOTO XA_LD_FightAgain
+	
+	IF ~~ THEN REPLY @65 /*~I accept your forgiveness.  Thanks.~*/
+	GOTO XA_LD_Forgive
+END
+
+IF ~~ THEN BEGIN XA_LD_WontFight
+	SAY @62 /*~Morris nods and slowly says, "That was a -wise- decision."~ [xald1076]*/
+	
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+END
+
+IF ~~ THEN BEGIN XA_LD_FightAgain
+	SAY @64 /* ~Morris sighs as the air around him fills quickly and heavily with magical energy!~ [xald1077] */
 	
 	IF ~~ THEN
 	DO ~
-		SetGlobal("XA_LD_MetMorrisInAthkatla", "GLOBAL", 1)
+		Enemy()
 	~
-	GOTO XA_LD_IntroAthkatla
+	EXIT
 END
 
-IF ~
-	NumTimesTalkedTo(0)
-	AreaCheck("AR5000")
-	Global("XA_LD_MetMorrisInAthkatla", "GLOBAL", 1)
-~ THEN BEGIN XA_LD_IntroSaradush_0
-	SAY @39  /* ~(You see a man who looks familiar to you.  His name soon comes to mind - Morris the Gravetender - and you last met him in Athkatla.  He again seems to be in absolutely no hurry.)~  [xald1059]*/
-	
-	= @40  /* ~"Ah, there you are.  I remember you, CHARNAME."~ [xald1060]*/
+IF ~~ THEN BEGIN XA_LD_Forgive
+	SAY @65 /*~I accept your forgiveness.  Thanks.~*/
 	
 	COPY_TRANS XALDGD XA_LD_IntroAthkatla
 END
-
-IF ~
-	NumTimesTalkedTo(0)
-	AreaCheck("AR5000")
-	Global("XA_LD_MetMorrisInAthkatla", "GLOBAL", 0)
-~ THEN BEGIN XA_LD_IntroSaradush_1
-	SAY @41  /* ~(You see a man in ornate robes whose every motion seems intentional, calm, and slow.  His voice seems wise with a tone that reminds you of Gorion’s voice, but with more cracks and spoken more slowly.  He smells clean despite his nearness to the dead  His demeanor is of one of great importance who seems to be in absolutely no hurry.)~ [eemor100] */
-	
-	= @42  /* ~~"Ah, there you are.  You are one of the many people to have been curious about me.  I am Morris, a gravetender in Athkatla and now here in Saradush."~ [xald1076]*/
-	
-	IF ~~ THEN REPLY @43  /* ~What made you come here?~*/
-	GOTO XA_LD_WhyComeToSaradush
-	
-	COPY_TRANS XALDGD XA_LD_IntroAthkatla
-END
-
 
 IF ~~ THEN BEGIN XA_LD_WhyComeToSaradush
 	SAY @44  /* ~"Wars and rumors of wars," Morris says with a sly smile.  "Death and destruction are at our heels, and the chance to witness death on a massive scale seemed like too rare of an opportunity nowadays."~ [xald1061]*/
@@ -79,21 +228,6 @@ IF ~~ THEN BEGIN XA_LD_WhereToNext_End3
 	SAY @52 /* ~Morris kindly nods.~ [xald1065]*/
 
 	COPY_TRANS XALDGD XA_LD_IntroAthkatla
-END
-
-IF ~
-	True()
-~ THEN BEGIN XA_LD_IntroAthkatla
-	SAY @1 /*~Ah, there you are.  I am Morris, and you are one of many people to have been curious about me.~ [xald0001]*/
-	
-	IF ~~ THEN REPLY @2 /*~I am curious.  Who are you?~*/
-	GOTO XA_LD_WhoAreYou
-	
-	IF ~~ THEN REPLY @4 /*~Why are you here among the dead?~ [xald0002]*/
-	GOTO XA_LD_WhyAreYouHere
-	
-	IF ~~ THEN REPLY @6 /*~What do you think about death?~*/
-	GOTO XA_LD_ThoughtsOnDeath
 END
 
 IF ~~ THEN BEGIN XA_LD_WhoAreYou
