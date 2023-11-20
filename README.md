@@ -1,4 +1,4 @@
-# Lichdom
+# Lichdom: A Mod for _Baldur's Gate II: Enhanced Edition_ (BG2EE) & Enhanced Edition Trilogy (EET)!
 Design, writing, and voice acting by Endarire.  Coding by LCA with use of k4thos's Protagonist Can Die mod with permission.  Images in this documentation are from Wizards of the Coast.
 
 GIBBERLINGS3 FORUM THREAD: **INSERT**
@@ -404,3 +404,11 @@ _We don't go through life alone.  We all get by with a little help from our form
 - The Infinity Engine Modding Community.
 
 - The Lord Jesus Christ.  Many D&D spells and other things are inspired by Bible passages, such as [Elijah calling down fire from heaven a la _flame strike_ in 1 Kings 18](https://www.biblegateway.com/passage/?search=1%20Kings%2018&version=NIV), [water being created from a rock in Exodus 17 a la _create water_](https://www.biblegateway.com/passage/?search=Exodus 17&version=NkJV), [pillars of cloud and fire tagging along with the Israelites in the desert wilderness for years a la an air elemental and a fire elemental](https://www.biblegateway.com/passage/?search=Exodus%2013%3A17-14%3A29&version=ESV), and [The Lord thundering loudly, confusing the Philistines into killing themselves a la _confusion_](https://www.biblegateway.com/passage/?search=1%20Samuel%207&version=nKJV).  Even the idol Bhaal/Baal is mentioned in various places in the Old Testament.
+
+# Change Log
+![Even Liches change.](https://github.com/LCA-EET/Lichdom/blob/main/Documentation%20Images/Demilich-33.png)
+
+_Even Liches can change into Demiliches._
+
+**1.0: (DATE)**
+-Initial Release.  Enjoy your undeath!
