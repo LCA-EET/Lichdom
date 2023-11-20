@@ -44,9 +44,11 @@ _Lichdom is not for everyone.  It is a great potential power but also has a sign
 
 _This Lich is living his best unlife now!  Careful about that glowing hand:  If he touches you, that's the last thing you're likely to feel before you're paralyzed and dead, dead, dead!_
 
-- Since the process of Lichdom is so varied within D&D's decades of canon, and much of it is left to intrepretation, various aspects of Lichdom are configurable in-game via **WHAT METHOD?**.  
+Since the process of Lichdom is so varied within D&D's decades of canon, and much of it is left to intrepretation, various aspects of Lichdom are configurable in-game via **WHAT METHOD?**.  
 
-- The default effects and requirements were heavily inspired by [Liches in _Baldur's Gate_](https://baldursgate.fandom.com/wiki/Lich) as well as [3.5's Liches](https://www.d20srd.org/srd/monsters/lich.htm).
+The default effects and requirements were heavily inspired by [Liches in _Baldur's Gate_](https://baldursgate.fandom.com/wiki/Lich) as well as [3.5's Liches](https://www.d20srd.org/srd/monsters/lich.htm).
+
+- You gain the Undead flag, meaning you can be turned or rebuked.
 
 - Immunity to damage from nonmagical weapons.
 
@@ -60,7 +62,7 @@ _This Lich is living his best unlife now!  Careful about that glowing hand:  If 
 
 - Natural AC improves by 3.
 
-- You gain the innate ability of Lich Touch, usable at will but only once per turn.  Lich Touch deals d10 cold damage in melee range (no save), and the subject must save vs. paralysis or be paralyzed for 5 rounds.  Undead and other subjects immune to paralysis are immune to Lich Touch, and spell resistance applies.
+- You gain the innate ability of Lich Touch, usable at will as a melee weapon.  Stats are listed in a section below.
 
 - You gain the innate ability of Lich Form, usable at will but only once per turn.  This is purely a cosmetic ability which changes the character's appearance to that of a typical Lich.  By default, a Lich made by Morris's method looks identical to a typical character.
 
@@ -75,6 +77,8 @@ By default, your phylactery can't break upon your character's death, but this ca
 Regardless of settings, certain SoA events _will_ remove CHARNAME's (the protagonist's) phylactery for a time.
 
 - The UI changes your displayed race to Lich.  Mechanically, you're still a member of your original race such as Human or Gnome.
+
+- You gain an innate ability usable at will which changes your character's appearance to that of a typical Lich.  This ability is only cosmetic.
 
 # Configurable Lichdom Options
 ![This Lich grins, knowing he has many options!](https://github.com/LCA-EET/Lichdom/blob/main/Documentation%20Images/Green-Cloak-Lich.png)
@@ -274,17 +278,50 @@ Specifically, Lichdom has a small amount of cross-mod content AKA crossmod conte
 
 Lichdom should be installed BEFORE these mods if you use them:  [EET End](https://github.com/Gibberlings3/EET).
 
-# New Item Descriptions
+# New Ability and Item Descriptions
 ![This Lich admires his new phylactery.  His life is in his hands.](https://github.com/LCA-EET/Lichdom/blob/main/Documentation%20Images/Force-Chest-Phylactery-33.png)
 
 _This Lich admires his new phylactery.  His life is in his hands._
 
-**Lich Dust**
+**Lich Touch (Innate Melee Weapon)**
+This is a melee weapon usable at will.  It strikes as a +3 weapon initially, but improves to a +4 weapon at level 16 and a +5 weapon at level 20.
 
+It does piercing damage equal to your STR bonus (minimum 0) and d10 cold damage.  Each hit forces a save vs. death on the subject at a -1 penalty per 4 levels or be paralyzed.  (The default paralysis duration is 5 rounds.)  Spell resistance applies to paralysis.
+
+**Crown of the Lich (Base Market Value: 100,000G, 1 Sold by Sister Garlena atop Watcher's Keep)**
+With this crown equipped, you gain many of the benefits of being a Lich without the entire transformation.  While a Lich can equip this crown, most of its effects are redundant.
+
+Unlike a typical Lich, you have no phylactery and can't automatically revive if killed.  Your alignment does not change.  You don't gain the Lich Touch ability of a typical Lich.
+
+However, you gain many other abilities of a typical Lich:
+
+- You gain the Undead flag, meaning you can be turned or rebuked.
+
+- Immunity to damage from nonmagical weapons.
+
+- Immune (100% resistant) to HP damage from cold, electricity, and poison.
+
+- Immune to the negative statuses of Berserk, Charm, Confusion, Domination, Disease, Fatigue/Exhaustion, Fear, Grease, Entangle, Hold/Paralysis, Level Drain/Negative Levels, Petrification, Polymorph Other, Sleep/Unconsciousness, Stun, and Web.  Also immune to at least most instant death effects such as Disintegrate and Finger of Death.
+
+- Continual Detect Invisibliity.
+
+- +1 to INT, WIS, and CHA scores.
+
+- Natural AC improves by 3.
+
+- You gain an innate ability usable at will which changes your character's appearance to that of a typical Lich.  This ability is only cosmetic.
+
+Mod Source: Lichdom
+
+**Lich Dust (Base Market Value: 10,000G)**
+This gathering of dust is seemingly all that remains of a powerful Undead spellcaster known as a Lich.
+
+Mod Source: Lichdom
 
 **Shroud of the Lich**
+This ornate cloak is a phylactery that contains the soul of <UNIT>.  Equipping it or keeping it in inventory allows <UNIT> to automatically revive if <PRO_HESHE> is killed, <PRO_HESHE> is out of combat, and enough time has passed since <PRO_HISHER> death.  (By default, this auto-revival is near instant once the subject is out of combat.)
 
-
+Mod Source: Lichdom
 
 # Q & A (FAQ)
 ![What's going on here?  I too want to know!](https://github.com/LCA-EET/Lichdom/blob/main/Documentation%20Images/Vile-Death-Spell-Lich-33.png)
