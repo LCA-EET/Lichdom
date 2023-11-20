@@ -5,6 +5,8 @@ GIBBERLINGS3 FORUM THREAD: **INSERT**
 
 ![If you wanna be a lich, this is the right place!](https://github.com/LCA-EET/Lichdom/blob/main/Consumptive-Field.png)
 
+_Your souls are MINE!_
+
 # So, you wanna be a Lich.
 ![We're your friendly, neighborhood guide skeletons!  Walk this way!](https://github.com/LCA-EET/Lichdom/blob/main/Necromancer-Iron-Bones.png)
 
@@ -281,6 +283,10 @@ _This Lich admires his new phylactery.  His life is in his hands._
 
 # Q & A (FAQ)
 **How lore friendly is this mod?**
+![What's going on here?  I too want to know!](https://github.com/LCA-EET/Lichdom/blob/main/Vile-Death-Spell-Lich.png)
+
+_What's going on here?  I too want to know!_
+
 - While I tried to make the premise of this mod fit within existing Faerun and _Baldur's Gate_ series lore, I am not sure off-hand how accurate this is.  The plot makes a big deal about certain characters dying, but Imoen can die and be raised freely in the games with no long-term story impact.  Let's just say BioWare - and, by extension, BeamDog - were inconsitent in their writing in this regard.
 
 NPCs the world over were NOT recoded to treat characters drastically differently after becoming a Lich.  In vanilla BG2, you could walk fairly freely through the streets and countrysides of Amn with a [vampire](https://baldursgate.fandom.com/wiki/Hexxat), a [drow](https://baldursgate.fandom.com/wiki/Viconia_DeVir), and a [cackling Red Wizard](https://baldursgate.fandom.com/wiki/Edwin) spamming [undead animating spells](https://baldursgate.fandom.com/wiki/Animate_Dead_(wizard)) and NPCs would probably complain most about the drow, not the small army that acts as a Faerunian version of a weapon of mass destruction (WMD) in their midst.
@@ -321,6 +327,10 @@ Shroud of the Lich is also an intentional reference to [an ability of the same n
 - In short, it's unique.  For the EE games, I know of no other mods which apply 'templates' to player characters like Lycanthrope, Lich, or Vampire.  (I'm not counting recruitable NPCs that are these sorts of creatures, nor shapeshifting abilities to mimic these templates.)  Maybe someone will soon make and public release a mod to turn characters into Werechihuahuas or other Lycanthropes, or into Angels, Constructs Demons, Devils, Elementals, Genies, Oozes, or Plants!
 
 # License, Editing, and Redistribution/Rehosting
+![Just as there's more than one type of Lich, there are others who want to edit this Lichdom mod.](https://github.com/LCA-EET/Lichdom/blob/main/Alhoon.png)
+
+_Just as there's more than one type of Lich, there are others who want to edit this Lichdom mod._
+
 - This mod (Lichdom) is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 In short, this license means that, so long as you link to the original mod (https://github.com/LCA-EET/Lichdom/ or one of its official mirrors if there are any) AND you preserve the ENTIRE credits section, you can otherwise redistribute and edit this mod.
@@ -330,6 +340,8 @@ Cross-mod AKA crossmod content is also allowed and encouraged!  Don't ask permis
 Just remember that this mod was made for non-commercial purposes, and Wizards of the Coast would probably very much NOT like you if you tried selling your mods for money.
 
 # Credits
+![]()
+
 - Endarire: He did the design, voice acting, and writing for this mod - including this documentation!
 
 - LCA: He coded this mod and proofread various documentation.
