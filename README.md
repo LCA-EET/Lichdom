@@ -339,8 +339,15 @@ Cross-mod AKA crossmod content is also allowed and encouraged!  Don't ask permis
 
 Just remember that this mod was made for non-commercial purposes, and Wizards of the Coast would probably very much NOT like you if you tried selling your mods for money.
 
+# Requests of the Community
+![A mod where the party can fight a Dracolich seems wonderful!](https://github.com/LCA-EET/Lichdom/blob/main/Dracolich.png)
+_A mod where the party can fight a Dracolich seems wonderful!_
+
+I know I'm not the only Lich fan out there!  This section is meant as inspiration for the community for anyone else who wants to make a Lich-themed mod to please me.  Perhaps have a ship or an airship of adventurers fight a Dracolich mid-flight and prevent its corpse from crashing into a town below.  And of course tracking down its phylactery and handling that seems interesting.  But I've enjoyed Dracoliches.
+
 # Credits
-![]()
+![We all get by with a little help from our former enemies.](https://github.com/LCA-EET/Lichdom/blob/main/General-of-Undeath.png)
+_We don't go through life alone.  We all get by with a little help from our former enemies._
 
 - Endarire: He did the design, voice acting, and writing for this mod - including this documentation!
 
