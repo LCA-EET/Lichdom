@@ -275,18 +275,23 @@ Specifically, Lichdom has a small amount of cross-mod content AKA crossmod conte
 Lichdom should be installed BEFORE these mods if you use them:  [EET End](https://github.com/Gibberlings3/EET).
 
 # New Item Descriptions
-![This Lich admires his new phylactery.  His life is in his hands.](https://github.com/LCA-EET/Lichdom/blob/main/Force-Chest-Phylactery.png)
+![This Lich admires his new phylactery.  His life is in his hands.](https://github.com/LCA-EET/Lichdom/blob/main/Force-Chest-Phylactery-33.png)
 
 _This Lich admires his new phylactery.  His life is in his hands._
+
+**Lich Dust**
+
+
+**Shroud of the Lich**
 
 
 
 # Q & A (FAQ)
-**How lore friendly is this mod?**
-![What's going on here?  I too want to know!](https://github.com/LCA-EET/Lichdom/blob/main/Vile-Death-Spell-Lich.png)
+![What's going on here?  I too want to know!](https://github.com/LCA-EET/Lichdom/blob/main/Vile-Death-Spell-Lich-33.png)
 
 _What's going on here?  I too want to know!_
 
+**How lore friendly is this mod?**
 - While I tried to make the premise of this mod fit within existing Faerun and _Baldur's Gate_ series lore, I am not sure off-hand how accurate this is.  The plot makes a big deal about certain characters dying, but Imoen can die and be raised freely in the games with no long-term story impact.  Let's just say BioWare - and, by extension, BeamDog - were inconsitent in their writing in this regard.
 
 NPCs the world over were NOT recoded to treat characters drastically differently after becoming a Lich.  In vanilla BG2, you could walk fairly freely through the streets and countrysides of Amn with a [vampire](https://baldursgate.fandom.com/wiki/Hexxat), a [drow](https://baldursgate.fandom.com/wiki/Viconia_DeVir), and a [cackling Red Wizard](https://baldursgate.fandom.com/wiki/Edwin) spamming [undead animating spells](https://baldursgate.fandom.com/wiki/Animate_Dead_(wizard)) and NPCs would probably complain most about the drow, not the small army that acts as a Faerunian version of a weapon of mass destruction (WMD) in their midst.
