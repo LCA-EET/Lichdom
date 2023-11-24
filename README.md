@@ -260,6 +260,8 @@ Specifically, Lichdom has a small amount of cross-mod content AKA crossmod conte
 
 - [Afaaq](https://github.com/Argent77/DjinniCompanion)
 
+- [Dusk Aldant](https://github.com/RamosPabloA/NPC_Dusk_MOD)
+
 - [Hubelpot](https://github.com/SpellholdStudios/Hubelpot_the_Vegetable_Merchant_NPC)
 
 - [Longer Road (Bodhi & Irenicus)](https://github.com/InfinityMods/LongerRoadEE)
