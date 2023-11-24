@@ -1,0 +1,64 @@
+IF
+	Global("XA_LD_JournalEntry_0", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_JournalEntry_0", "GLOBAL", 2)
+		AddJournalEntry(@0, INFO)
+END
+
+IF
+	Global("XA_LD_JournalEntry_1", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_JournalEntry_1", "GLOBAL", 2)
+		AddJournalEntry(@1, INFO)
+END
+
+IF
+	Global("XA_LD_JournalEntry_2", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_JournalEntry_2", "GLOBAL", 2)
+		AddJournalEntry(@2, INFO)
+END
+
+IF
+	Global("XA_LD_JournalEntry_3", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_JournalEntry_3", "GLOBAL", 2)
+		AddJournalEntry(@3, INFO)
+END
+
+IF
+	Global("XA_LD_JournalEntry_4", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_JournalEntry_4", "GLOBAL", 2)
+		AddJournalEntry(@4, INFO)
+END
+
+IF
+	Global("XA_LD_JournalEntry_5", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_JournalEntry_5", "GLOBAL", 2)
+		AddJournalEntry(@5, INFO)
+END
+
+IF
+	Global("XA_LD_JournalEntry_6", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_JournalEntry_6", "GLOBAL", 2)
+		AddJournalEntry(@6, INFO)
+END
+
+IF
+	Global("XA_LD_JournalEntry_7", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_JournalEntry_7", "GLOBAL", 2)
+		AddJournalEntry(@7, INFO)
+END
+

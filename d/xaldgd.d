@@ -74,7 +74,7 @@ IF ~
 			Race(Player4, LICH)
 			Race(Player5, LICH)
 			Race(Player6, LICH)
-	~ THEN REPLY @67
+	~ THEN REPLY @67 /*~I have some things to say about that lichdom ritual you performed.~*/
 	DO ~
 		SetGlobal("XA_LD_ThoughtsOnRitual", "LOCALS", 1)
 	~
