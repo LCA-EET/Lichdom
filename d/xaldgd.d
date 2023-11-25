@@ -59,6 +59,51 @@ IF ~
 	GOTO XA_LD_ThoughtsOnDeath
 	
 	IF ~
+		Global("XA_LD_RitualsPerformed", "GLOBAL", 0)
+	~ THEN REPLY @38 /*~You seem like a necromancer -and- Undead!  Are you?~*/
+	GOTO XA_LD_AreYouUndead1
+	
+	IF ~
+		GlobalGT("XA_LD_RitualsPerformed", "GLOBAL", 0)
+	~ THEN REPLY @38 /*~You seem like a necromancer -and- Undead!  Are you?~*/
+	GOTO XA_LD_AreYouUndead2
+	
+	IF ~
+		AreaCheck("AR0800")
+	~ THEN REPLY @27 /* ~What do you think about killing the Undead here and looting these tombs?~ */
+	GOTO XA_LD_Looting
+	
+	IF ~
+		AreaCheck("AR5000")
+	~ THEN REPLY @31 /* ~What do you think about this city being under siege?~*/
+	GOTO XA_LD_Siege
+	
+	IF ~
+		NumItemsPartyGT("xalddust", 2)
+		Global("XA_LD_GaveDust", "GLOBAL", 0)
+	~ THEN REPLY @80  /* ~Your deed is done and these liches are slain.  Here’s your lich dust.  Now what?~ */
+	DO ~
+		SetGlobal("XA_LD_GaveDust", "GLOBAL", 1)
+		TakePartyItemNum("xalddust", 3)
+	~
+	GOTO XA_LD_GaveDust
+	
+	IF ~
+		AreaCheck("AR0800")
+		GlobalGT("BodhiAppear","GLOBAL",0)
+		!Dead("C6BODHI")
+	~ THEN REPLY @98  /* ~What do you think of the Undead creatures roaming the streets of Athkatla at night?~ */
+	GOTO XA_LD_MetBodhi
+	
+	IF ~
+		AreaCheck("AR0800")
+		!Dead("C6BODHI")
+		Global("ElhanFinishedSpeaking","GLOBAL",1)
+	~ THEN REPLY @100
+	GOTO XA_LD_WhoCares
+	
+	
+	IF ~
 		Global("XA_LD_MorrisKilledInAthkatla", "GLOBAL", 1)
 	~ THEN REPLY @53 /*~You’re here!  And alive!  I thought you died!~*/
 	GOTO XA_LD_Alive
@@ -79,6 +124,194 @@ IF ~
 		SetGlobal("XA_LD_ThoughtsOnRitual", "LOCALS", 1)
 	~
 	GOTO XA_LD_ThoughtsOnRitual
+	
+	IF ~
+		Global("XA_LD_GaveDust", "GLOBAL", 1)
+	~ THEN REPLY @103  /* ~Lichdom still interests me despite the monetary cost.  Let’s deal, my friend!~*/
+	GOTO XA_LD_StartRitual
+	
+END
+
+IF ~~ THEN BEGIN XA_LD_StartRitual
+	SAY @102  /* ~“Ah…” he says with a long, quiet exhale.  “Lichdom has -quite- the monetary price, but the allure of immortality is worth it.  Do you have the -entire- amount of gold on you now?  If so, we can proceed.” [xald1031]*/
+	
+	IF ~~ THEN REPLY @104  /* ~I have reconsidered.  Perhaps we shall handle this later.~*/
+	GOTO XA_LD_Reconsider
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 0)
+		PartyGoldGT(119999)
+	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
+	GOTO XA_LD_PayMoney
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 1)
+		PartyGoldGT(99999)
+	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
+	GOTO XA_LD_PayMoney
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 2)
+		PartyGoldGT(74999)
+	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
+	GOTO XA_LD_PayMoney
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 3)
+		PartyGoldGT(49999)
+	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
+	GOTO XA_LD_PayMoney
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 4)
+		PartyGoldGT(39999)
+	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
+	GOTO XA_LD_PayMoney
+END
+
+IF ~~ THEN BEGIN XA_LD_PayMoney
+	SAY @107  /* ~Morris looks at you eagerly.  “The fourth price is decision.  Who among you shall undergo this ritual?  You must be a sufficiently powerful spellcaster to benefit, or else your time is wasted.  Are you ready to begin?”~ [xald1033] */
+	
+	IF ~
+		!Class(Player1, FIGHTER)
+		!Class(Player1, THIEF)
+		LevelGT(Player1, 9)
+	~ THEN REPLY @108  /* ~(Choose <CHARNAME>.)~ */
+	GOTO XA_LD_Chain_ChooseCharname
+END
+
+IF ~~ THEN BEGIN XA_LD_Reconsider
+	SAY @105 /* ~"Later is no problem for me," he says with a coy smile.  "I am in no hurry." [xald1032]~*/
+	 
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+END
+
+IF ~~ THEN BEGIN XA_LD_WhoCares
+	SAY @101  /*  ~Morris simply shrugs.~ [xald1030]*/
+
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+END
+
+IF ~~ THEN BEGIN XA_LD_MetBodhi
+	SAY @99  /* ~"I am not with them," he says nonchalantly, "and I am not against them."  He looks you clearly in the eyes, "We have… an understanding."~ [xald1029]*/
+	
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+END
+
+IF ~~ THEN BEGIN XA_LD_GaveDust
+	SAY @79  /*~"Good, good!" he says, with his eyes glowing and his face shining despite his slow movements.  He takes the lich dust from you slowly, almost dramatically slowly, as he inspects it.  "I knew each of them well.  Now, they can die the -true- death."~ [xald1019] */
+	
+	IF ~~ THEN REPLY @81  /*~Wait!  Did you -make- these liches?~ */
+	GOTO XA_LD_MakeLiches
+	
+	IF ~~ THEN REPLY @90  /* ~-True death?-  Does that make you a… Dustman?~*/
+	GOTO XA_LD_Dustman
+	
+	IF ~~ THEN REPLY @84  /* ~What did you mean when you said the second price was understanding?~*/
+	GOTO XA_LD_SecondPrice
+	
+	IF ~~ THEN REPLY @88  /* ~Answer my previous question.  What happens next?~ */
+	GOTO XA_LD_WhatHappensNext
+END
+
+IF ~~ THEN BEGIN XA_LD_WhatHappensNext
+	SAY @89 /*  ~"The third price is money," he says, slowly holding out his hand.  "Lichdom is inherently expensive in costly ritual components.  That is why not every caster of weak or great power becomes one."  He raises his eyebrows at you.  "Each recipient of this ritual will require a substantial amount of gold."~ [xald1024]*/
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 0)
+	~ THEN
+	DO ~
+		GiveItemCreate("xaldlc00", LastTalkedToBy, 0,0,0)
+	~
+	GOTO XA_LD_GavePrice
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 1)
+	~ THEN
+	DO ~
+		GiveItemCreate("xaldlc01", LastTalkedToBy, 0,0,0)
+	~
+	GOTO XA_LD_GavePrice
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 2)
+	~ THEN
+	DO ~
+		GiveItemCreate("xaldlc02", LastTalkedToBy, 0,0,0)
+	~
+	GOTO XA_LD_GavePrice
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 3)
+	~ THEN
+	DO ~
+		GiveItemCreate("xaldlc03", LastTalkedToBy, 0,0,0)
+	~
+	GOTO XA_LD_GavePrice
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 4)
+	~ THEN
+	DO ~
+		GiveItemCreate("xaldlc04", LastTalkedToBy, 0,0,0)
+	~
+	GOTO XA_LD_GavePrice
+END
+
+IF ~~ THEN BEGIN XA_LD_GavePrice
+	SAY @91  /* ~He hands you a paper, saying, "This is my price.  There can be no discounts for any reason due to the nature of the ritual components."~ [eemor025] */
+	
+	IF ~~ THEN REPLY @92  /* ~That’s your price for EACH!?  That’s ridiculously high!~*/
+	GOTO XA_LD_PriceIsHigh
+	
+	IF ~~ THEN REPLY @93  /* ~I can buy immortality with money?  What a bargain!~*/
+	GOTO XA_LD_Bargain
+	
+	IF ~~ THEN REPLY @94  /* ~When should I pay you?~*/
+	GOTO XA_LD_WhenToPay
+END
+
+IF ~~ THEN BEGIN XA_LD_PriceIsHigh
+	SAY @95  /*~"-That- is the third price.  Pay it… or do not."  Morris looks at you smiling, almost grinning.~  [xald1026] */
+	
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+END
+
+IF ~~ THEN BEGIN XA_LD_Bargain
+	SAY @96  /*~Morris winks.  "Some would agree."~ [xald1027]*/
+	
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+END
+
+IF ~~ THEN BEGIN XA_LD_WhenToPay
+	SAY @97  /*~He leans in with his head slightly toward you.  "When you are ready, talk to me."~ [eemor028] */
+	
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+END
+
+IF ~~ THEN BEGIN XA_LD_SecondPrice
+	SAY @85  /* ~Morris smiles and nods at you, slowly.  “You will be like them - potent, Undead, alive - but -you-,” he says, staring at you as if staring directly into your soul, “will be -unlike- them:  -You- will -live!-”  He reaches his hand toward your shoulder.  “You -know- what these liches can do.  -You- will be better!”~ [xald1022] */
+	
+	IF ~~ THEN REPLY @86  /* ~How will I be better?~*/
+	GOTO XA_LD_Better
+END
+
+IF ~~ THEN BEGIN XA_LD_Better
+	SAY @87  /*~Morris looks at you blankly, and blinks.  "They are destroyed.  You are not.  You won."~ [xald1023] */
+	
+	COPY_TRANS XALDGD XA_LD_GaveDust
+END
+
+IF ~~ THEN BEGIN XA_LD_Dustman
+	SAY @83  /* ~Morris smirks at you - slowly.  "I pledged my allegiance to them… once.  I handled enough of their dead and beings that -should- have been dead to… question… their understanding of death.  They were -obsessed- with death, but afraid to pursue undeath to stop death for themselves.  I… quietly left in disagreement to focus on my own… pursuits."~ [xald1021]*/ 
+	
+	COPY_TRANS XALDGD XA_LD_GaveDust
+END
+
+IF ~~ THEN BEGIN XA_LD_MakeLiches
+	SAY @82 /*~Morris looks at you with a face that bespeaks only hints of indifference with strong, confident beratement.  "I will not say.  Those that I knew, I knew.  Those I knew not, I never knew.  You completed this task for an -unrelated- reason."~ [xald1020] */
+	
+	COPY_TRANS XALDGD XA_LD_GaveDust
 END
 
 IF ~~ THEN BEGIN XA_LD_ThoughtsOnRitual
@@ -249,25 +482,9 @@ IF ~~ THEN BEGIN XA_LD_WhyAreYouHere
 	IF ~~ THEN REPLY @6 /*~What do you think about death?~*/
 	GOTO XA_LD_ThoughtsOnDeath
 	
-	IF ~
-		Global("XA_LD_RitualsPerformed", "GLOBAL", 0)
-	~ THEN REPLY @38 /*~You seem like a necromancer -and- Undead!  Are you?~*/
-	GOTO XA_LD_AreYouUndead1
 	
-	IF ~
-		GlobalGT("XA_LD_RitualsPerformed", "GLOBAL", 0)
-	~ THEN REPLY @38 /*~You seem like a necromancer -and- Undead!  Are you?~*/
-	GOTO XA_LD_AreYouUndead2
 	
-	IF ~
-		AreaCheck("AR0800")
-	~ THEN REPLY @27 /* ~What do you think about killing the Undead here and looting these tombs?~ */
-	GOTO XA_LD_Looting
 	
-	IF ~
-		AreaCheck("AR5000")
-	~ THEN REPLY @31 /* ~What do you think about this city being under siege?~*/
-	GOTO XA_LD_Siege
 END
 
 IF ~~ THEN BEGIN XA_LD_Siege
@@ -359,7 +576,7 @@ IF ~~ THEN BEGIN XA_LD_Price
 	SAY @13 /*~He clearly and eagerly smiles at a pace that is fast for him.  “The first price is your peace.  Are you at peace with your god?  Many would disdain such a transformation, and I shall not be held accountable should your ‘transgressions’ result in harm toward you.  Merely considering this option without pursuing it should not count as a stain upon your soul.”~ [xald0007]*/
 	
 	IF ~~ THEN REPLY @14 /* ~I am willing.  Proceed!~ */
-	GOTO XA_LD_Proceed
+	GOTO XA_LD_Chain_ChooseCharname
 	
 	IF ~~ THEN REPLY @16 /* ~Perhaps later.~*/
 	GOTO XA_LD_Later
@@ -378,3 +595,140 @@ IF ~~ THEN BEGIN XA_LD_Later
 	IF ~~ THEN
 	EXIT
 END
+
+IF ~~ THEN BEGIN XA_LD_Chain_ChooseCharname_END
+	SAY @127  /* ~Morris stares at you as he awaits your decision.~ */
+
+	IF ~
+		Global("XA_LD_ObjectionRaised", "GLOBAL", 1)
+	~ THEN REPLY @128 /*~I understand your objections and have reconsidered.  I’ll not undergo this lichdom ritual now.~ */
+	DO ~
+		SetGlobal("XA_LD_ObjectionRaised", "GLOBAL", 0)
+	~
+	GOTO XA_LD_MeetAgain
+END
+
+IF ~~ THEN BEGIN XA_LD_MeetAgain
+	SAY @129 /*  ~“So be it, <CHARNAME>.  Perhaps we shall meet again.”~ [xald1035]*/
+	
+	IF ~~ THEN 
+	EXIT
+END
+
+CHAIN XALDGD XA_LD_Chain_ChooseCharname
+	@126  /* ~Morris nods approvingly.~*/ 
+	== ANOMENJ
+	IF ~
+		IsValidForPartyDialogue("Anomen")
+	~
+	@112  /* ~What fellowship can darkness have with the light?  One will overwhelm the other!~ */
+	DO ~
+		SetGlobal("XA_LD_ObjectionRaised", "GLOBAL", 1)
+	~
+	
+	== BAELOTHJ
+	IF ~
+		IsValidForPartyDialogue("Baeloth")
+	~
+	@113  /* ~<CHARNAME>, there is absolutely no shame in taking every advantage afforded to you!~ [xald1080]*/
+	
+	== CERNDJ
+	IF ~
+		IsValidForPartyDialogue("Cernd")
+	~
+	@114 /* ~<CHARNAME>, what you seek to become is... unnatural.  Tread lightly lest it overtake you.~*/
+	DO ~
+		SetGlobal("XA_LD_ObjectionRaised", "GLOBAL", 1)
+	~
+	
+	== EDWINJ
+	IF ~
+		IsValidForPartyDialogue("Edwin")
+	~
+	@115 /*  ~You seek the secrets to live forever in death like Szass Tam of Thay?  You are a -bold- one, <CHARNAME>.  Just remember how the great Edwin Odisseron helped you and reward your faithful advisor and companion with this same boon.  (This is gonna be worth a fortune!)~ [xald1083]*/
+	
+	== IMOEN2J
+	IF ~
+		IsValidForPartyDialogue("Imoen2")
+	~
+	@116 /*  ~<PRO_BROTHERSISTER>, you’re really gonna do it?  I was quietly hoping you wouldn’t!~ */
+	DO ~
+		SetGlobal("XA_LD_ObjectionRaised", "GLOBAL", 1)
+	~
+	
+	== JAHEIRAJ
+	IF ~
+		IsValidForPartyDialogue("Jaheira")
+	~
+	@117  /* ~<CHARNAME>, of all the things you could do for power, you would choose -this- most... unnatural solution?~*/
+	DO ~
+		SetGlobal("XA_LD_ObjectionRaised", "GLOBAL", 1)
+	~
+	
+	== JANJ
+	IF ~
+		IsValidForPartyDialogue("Jan")
+	~
+	@118  /*  ~<CHARNAME>, this reminds me of the time my second cousin twice removed on my mother’s side turned into a lich.  The process rendered her permanently, supernaturally, irrevocably mute.  It was the happiest day of our lives!~*/
+	
+	== KELDORJ
+	IF ~
+		IsValidForPartyDialogue("Keldorn")
+	~
+	@119  /* ~Careful, <CHARNAME>.  Whatever power you seek to control -will- take its toll on your soul!~*/
+	DO ~
+		SetGlobal("XA_LD_ObjectionRaised", "GLOBAL", 1)
+	~
+	
+	== MAZZYJ
+	IF ~
+		IsValidForPartyDialogue("Mazzy")
+	~
+	@120  /* ~<CHARNAME>, I cannot in good conscience just let you hurl yourself into foolish danger like that!~*/
+	DO ~
+		SetGlobal("XA_LD_ObjectionRaised", "GLOBAL", 1)
+	~
+	
+	== MINSCJ
+	IF ~
+		IsValidForPartyDialogue("Minsc")
+	~
+	@121  /* ~Boo says Undead reek of stinking evil!  We would hate to have to kick your butt for goodness!~ [xald1099]*/
+	DO ~
+		SetGlobal("XA_LD_ObjectionRaised", "GLOBAL", 1)
+	~
+	
+	== RASAADJ
+	IF ~
+		IsValidForPartyDialogue("Rasaad")
+	~
+	@122  /* ~I am deeply concerned for your well-being, <CHARNAME>.  You allow temptation to taint you to the very core!~*/
+	DO ~
+		SetGlobal("XA_LD_ObjectionRaised", "GLOBAL", 1)
+	~
+	
+	== SAREV25J
+	IF ~
+		IsValidForPartyDialogue("Sarevok")
+	~
+	@123  /* ~So, <PRO_BROTHERSISTER>, you really -are- like our father in loving death!~*/
+	
+	== VALYGARJ
+	IF ~
+		IsValidForPartyDialogue("Valygar")
+	~
+	@124  /* ~<CHARNAME>, what you propose for yourself is of the -most foul of magics!-~*/
+	DO ~
+		SetGlobal("XA_LD_ObjectionRaised", "GLOBAL", 1)
+	~
+	
+	== VICONIJ
+	IF ~
+		IsValidForPartyDialogue("Viconia")
+	~
+	@125  /* ~<CHARNAME>, be careful.  There is more to this immortal, undead life than you realize.  It makes you a pawn to a different set of actors.~*/
+	DO ~
+		SetGlobal("XA_LD_ObjectionRaised", "GLOBAL", 1)
+	~
+	
+END XALDGD XA_LD_Chain_ChooseCharname_END

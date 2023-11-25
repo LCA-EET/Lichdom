@@ -457,25 +457,25 @@ APPEND ~PLAYER1~
 		~
 		GOTO XA_ChangeProcessed
 		
-		IF ~~ THEN REPLY @5
+		IF ~~ THEN REPLY @5  /*~100,000 gold.~ */
 		DO ~
 			SetGlobal("XA_LD_TransformationCost", "GLOBAL", 1)
 		~
 		GOTO XA_ChangeProcessed
 		
-		IF ~~ THEN REPLY @6
+		IF ~~ THEN REPLY @6  /* ~75,000 gold.~*/
 		DO ~
 			SetGlobal("XA_LD_TransformationCost", "GLOBAL", 2)
 		~
 		GOTO XA_ChangeProcessed
 		
-		IF ~~ THEN REPLY @7
+		IF ~~ THEN REPLY @7  /*~50,000 gold.~ */
 		DO ~
 			SetGlobal("XA_LD_TransformationCost", "GLOBAL", 3)
 		~
 		GOTO XA_ChangeProcessed
 		
-		IF ~~ THEN REPLY @8
+		IF ~~ THEN REPLY @8  /* ~40,000 gold.~*/
 		DO ~
 			SetGlobal("XA_LD_TransformationCost", "GLOBAL", 4)
 		~
