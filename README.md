@@ -48,7 +48,7 @@ Since the process of Lichdom is so varied within D&D's decades of canon, and muc
 
 The default effects and requirements were heavily inspired by [Liches in _Baldur's Gate_](https://baldursgate.fandom.com/wiki/Lich) as well as [3.5's Liches](https://www.d20srd.org/srd/monsters/lich.htm).
 
-- You gain the Undead flag, meaning you can be turned or rebuked.
+- You gain the Undead flag, but for technical reasons you are immune to Turn Undead and Rebuke Undead.
 
 - Immunity to damage from nonmagical weapons.
 
@@ -353,7 +353,7 @@ The truest answer is, "Adventure!"  Remember, you don't NEED to undergo the Lich
 - As a solo single-classed character, reaching level 12 is probably easy in BG2, even if you start in SoA.  Reaching it as a triple-classed character in a party of 6, depending on your mod wad and the content you do, may take you until late SoA or even ToB to reach this point.  In short, Lichdom is meant to be attainable by characters in SoA with a variety of play styles.
 
 **What plans do you have for BG1 (BGEE) or SoD content for Liches?**
-- None.  Lichdom is simply a high-level thing, just like ascending to godhood is assumed to be for high levels.
+- None.  Lichdom is simply a high-level thing, just like ascending to godhood is assumed to only be for high levels.
 
 **Why make the phylactery a cloak instead of a more traditional amulet or crown?**
 - Amulets: Edwin's Amulet is normally glued to his neck, and I wanted Liches to be able to use [https://baldursgate.fandom.com/wiki/Amulet_of_Power](Amulets of Power).
@@ -369,6 +369,9 @@ Shroud of the Lich is also an intentional reference to [an ability of the same n
 
 **How much EXP should I expect to get from doing all the quests in this mod?**
 - This mod has exactly one EXP reward which is 25,000 Quest EXP for giving Morris 3 Lich Dusts when he asks for them.
+
+**If I'm a Lich via this mod, can my _project image_ and _simulacrum_ spells auto-revive?**
+- No.  This is done for technical reasons.  Besides, these spells are probably powerful enough without another life!
 
 **Why make a mod about becoming a Lich?**
 - In Infinity Engine games, Lichdom is like _dimension door_ - it seems like plenty of creatures can use it _except_ you!  Also, the notion of being able to use this option that's been in the D&D books for decades in various forms appealed to me.
