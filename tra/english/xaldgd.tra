@@ -128,3 +128,10 @@
 @127 = ~Morris stares at you as he awaits your decision.~
 @128 = ~I understand your objections and have reconsidered.  I’ll not undergo this lichdom ritual now.~
 @129 = ~“So be it, <CHARNAME>.  Perhaps we shall meet again.”~ [xald1035]
+@130 = ~Can you fix a damaged or broken phylactery?~
+@131 = ~Gravetender Morris frowns as he quietly and slowly sighs.  "I cannot.  I apologize for this.  However, I can craft another one for you for the same price as the original."~ [xald1049]
+@132 = ~Please do!~
+@133 = ~Let us discuss something else.~
+@134 = ~He nods.~ [xald1059]
+@135 = ~Morris looks at you intently.  "Whose phylactery should I replace?"~ [xald1050]
+@136 = ~Morris slowly shakes his head.  “My apologies, but I require more coins to craft a new phylactery.”~ [xald1052]

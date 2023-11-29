@@ -126,10 +126,103 @@ IF ~
 	GOTO XA_LD_ThoughtsOnRitual
 	
 	IF ~
+		OR(6)
+			TriggerOverride(Player1, Global("XA_LD_PhylacteryBroken", "LOCALS", 1))
+			TriggerOverride(Player2, Global("XA_LD_PhylacteryBroken", "LOCALS", 1))
+			TriggerOverride(Player3, Global("XA_LD_PhylacteryBroken", "LOCALS", 1))
+			TriggerOverride(Player4, Global("XA_LD_PhylacteryBroken", "LOCALS", 1))
+			TriggerOverride(Player5, Global("XA_LD_PhylacteryBroken", "LOCALS", 1))
+			TriggerOverride(Player6, Global("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	~ THEN REPLY @130 /* ~Can you fix a damaged or broken phylactery?~*/
+	GOTO XA_LD_CanYouFix
+	
+	IF ~
 		Global("XA_LD_GaveDust", "GLOBAL", 1)
 	~ THEN REPLY @103  /* ~Lichdom still interests me despite the monetary cost.  Let’s deal, my friend!~*/
 	GOTO XA_LD_StartRitual
 	
+END
+
+IF ~~ THEN BEGIN XA_LD_CanYouFix
+	SAY @131 /*~Gravetender Morris frowns as he quietly and slowly sighs.  "I cannot.  I apologize for this.  However, I can craft another one for you for the same price as the original."~ [xald1049]*/
+	
+	//{ Have Enough Money
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 0)
+		PartyGoldGT(119999)
+	~ THEN REPLY @132  /* ~Please do~ */
+	GOTO XA_LD_HasMoneyToFix
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 1)
+		PartyGoldGT(99999)
+	~ THEN REPLY @132  /* ~Please do~ */
+	GOTO XA_LD_HasMoneyToFix
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 2)
+		PartyGoldGT(74999)
+	~ THEN REPLY @132  /* ~Please do~ */
+	GOTO XA_LD_HasMoneyToFix
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 3)
+		PartyGoldGT(49999)
+	~ THEN REPLY @132  /* ~Please do~ */
+	GOTO XA_LD_HasMoneyToFix
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 4)
+		PartyGoldGT(39999)
+	~ THEN REPLY @132  /* ~Please do~ */
+	GOTO XA_LD_HasMoneyToFix
+	//}
+	
+	//{ Not Enough Money
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 0)
+		!PartyGoldGT(119999)
+	~ THEN REPLY @132  /* ~Please do~ */
+	GOTO XA_LD_NoMoneyToFix
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 1)
+		!PartyGoldGT(99999)
+	~ THEN REPLY @132  /* ~Please do~ */
+	GOTO XA_LD_NoMoneyToFix
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 2)
+		!PartyGoldGT(74999)
+	~ THEN REPLY @132  /* ~Please do~ */
+	GOTO XA_LD_NoMoneyToFix
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 3)
+		!PartyGoldGT(49999)
+	~ THEN REPLY @132  /* ~Please do~ */
+	GOTO XA_LD_NoMoneyToFix
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 4)
+		!PartyGoldGT(39999)
+	~ THEN REPLY @132  /* ~Please do~ */
+	GOTO XA_LD_NoMoneyToFix
+	//}
+	
+	IF ~~ THEN REPLY @133 /*~Let us discuss something else.~*/
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+END
+
+IF ~~ THEN BEGIN XA_LD_HasMoneyToFix
+	SAY @135 /*~Morris looks at you intently.  "Whose phylactery should I replace?"~ [xald1050]*/
+END
+
+IF ~~ THEN BEGIN XA_LD_NoMoneyToFix
+	SAY @136 /*~Morris slowly shakes his head.  “My apologies, but I require more coins to craft a new phylactery.”~ [xald1052]*/
+	
+	IF ~~ THEN REPLY @133 /*~Let us discuss something else.~*/
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
 END
 
 IF ~~ THEN BEGIN XA_LD_StartRitual
