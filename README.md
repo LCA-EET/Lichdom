@@ -335,9 +335,9 @@ _What's going on here?  I too want to know!_
 **How lore friendly is this mod?**
 - While I tried to make the premise of this mod fit within existing Faerun and _Baldur's Gate_ series lore, I am not sure off-hand how accurate this is.  The plot makes a big deal about certain characters dying, but Imoen can die and be raised freely in the games with no long-term story impact.  Let's just say BioWare - and, by extension, BeamDog - were inconsitent in their writing in this regard.
 
-NPCs the world over were NOT recoded to treat characters drastically differently after becoming a Lich.  In vanilla BG2, you could walk fairly freely through the streets and countrysides of Amn with a [vampire](https://baldursgate.fandom.com/wiki/Hexxat), a [drow](https://baldursgate.fandom.com/wiki/Viconia_DeVir), and a [cackling Red Wizard](https://baldursgate.fandom.com/wiki/Edwin) spamming [undead animating spells](https://baldursgate.fandom.com/wiki/Animate_Dead_(wizard)) and NPCs would probably complain most about the drow, not the small army that acts as a Faerunian version of a weapon of mass destruction (WMD) in their midst.
+- NPCs the world over were NOT recoded to treat characters drastically differently after becoming a Lich.  In vanilla BG2, you could walk fairly freely through the streets and countrysides of Amn with a [vampire](https://baldursgate.fandom.com/wiki/Hexxat), a [drow](https://baldursgate.fandom.com/wiki/Viconia_DeVir), and a [cackling Red Wizard](https://baldursgate.fandom.com/wiki/Edwin) spamming [undead animating spells](https://baldursgate.fandom.com/wiki/Animate_Dead_(wizard)) and NPCs would probably complain most about the drow, not the small army that acts as a Faerunian version of a weapon of mass destruction (WMD) in their midst.
 
-Ultimately, this Lichdom mod is mostly about the mechanical side of being a Lich.  If you want a game that was built from the ground up to account for NPCs' reactions to becoming a Lich and the associated necromancy, play [_Pathfinder: Wrath of the Righteous_](https://store.steampowered.com/app/1184370/Pathfinder_Wrath_of_the_Righteous__Enhanced_Edition/) or another such game, if that exists.
+- Ultimately, this Lichdom mod is mostly about the mechanical side of being a Lich.  If you want a game that was built from the ground up to account for NPCs' reactions to becoming a Lich and the associated necromancy, play [_Pathfinder: Wrath of the Righteous_](https://store.steampowered.com/app/1184370/Pathfinder_Wrath_of_the_Righteous__Enhanced_Edition/) or another such game, if that exists.
 
 **120,000 coins per Lich transformation?  Boy, that sure is expensive!**
 - Lichdom is intended as a high initial cost, high long-time return for the character who undergoes this transformation.  The auto-revival aspect matters more in no reload runs.
@@ -372,6 +372,9 @@ Shroud of the Lich is also an intentional reference to [an ability of the same n
 
 **If I'm a Lich via this mod, can my _project image_ and _simulacrum_ spells auto-revive?**
 - No.  This is done for technical reasons.  Besides, these spells are probably powerful enough without another life!
+
+**My character is formerly a non-Evil caster who could Turn Undead, but I'm turned Evil and I can still Turn Undead.  What about Rebuke Undead?**
+- If this happens to you, it's from a technical limitation.
 
 **Why make a mod about becoming a Lich?**
 - In Infinity Engine games, Lichdom is like _dimension door_ - it seems like plenty of creatures can use it _except_ you!  Also, the notion of being able to use this option that's been in the D&D books for decades in various forms appealed to me.
