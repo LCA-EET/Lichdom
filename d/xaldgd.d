@@ -99,7 +99,7 @@ IF ~
 		AreaCheck("AR0800")
 		!Dead("C6BODHI")
 		Global("ElhanFinishedSpeaking","GLOBAL",1)
-	~ THEN REPLY @100
+	~ THEN REPLY @100 /* ~I am about to slay this vampiric Bodhi.  What do you say to this?~*/
 	GOTO XA_LD_WhoCares
 	
 	
@@ -211,17 +211,138 @@ IF ~~ THEN BEGIN XA_LD_CanYouFix
 	//}
 	
 	IF ~~ THEN REPLY @133 /*~Let us discuss something else.~*/
-	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+	GOTO XA_LD_DiscussSomethingElse
 END
 
 IF ~~ THEN BEGIN XA_LD_HasMoneyToFix
 	SAY @135 /*~Morris looks at you intently.  "Whose phylactery should I replace?"~ [xald1050]*/
+	
+	IF ~~ THEN REPLY @145 /* Nevermind */
+	GOTO XA_LD_Nevermind 
+	
+	IF ~
+		TriggerOverride(Player1, Global("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	~ THEN REPLY @137 /*~(Repair Player 1's phylactery.)~*/
+	DO ~
+		ActionOverride(Player1, SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	~
+	GOTO XA_LD_RepairedPhylactery
+	
+	IF ~
+		TriggerOverride(Player2, Global("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	~ THEN REPLY @138 /*~(Repair Player 2's phylactery.)~*/
+	DO ~
+		ActionOverride(Player2, SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	~
+	GOTO XA_LD_RepairedPhylactery
+	
+	IF ~
+		TriggerOverride(Player3, Global("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	~ THEN REPLY @139 /*~(Repair Player 3's phylactery.)~*/
+	DO ~
+		ActionOverride(Player3, SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	~
+	GOTO XA_LD_RepairedPhylactery
+	
+	IF ~
+		TriggerOverride(Player4, Global("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	~ THEN REPLY @140 /*~(Repair Player 4's phylactery.)~*/
+	DO ~
+		ActionOverride(Player4, SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	~
+	GOTO XA_LD_RepairedPhylactery
+	
+	IF ~
+		TriggerOverride(Player5, Global("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	~ THEN REPLY @141 /*~(Repair Player 5's phylactery.)~*/
+	DO ~
+		ActionOverride(Player5, SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	~
+	GOTO XA_LD_RepairedPhylactery
+	
+	IF ~
+		TriggerOverride(Player6, Global("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	~ THEN REPLY @142 /*~(Repair Player 6's phylactery.)~*/
+	DO ~
+		ActionOverride(Player6, SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	~
+	GOTO XA_LD_RepairedPhylactery
+	
+	IF ~~ THEN REPLY @133 /*~Let us discuss something else.~*/
+	GOTO XA_LD_DiscussSomethingElse
+END
+
+IF ~~ THEN BEGIN XA_LD_Nevermind
+	SAY @147 /*~Acknowledged.~ [xald1051]*/
+	
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
+END
+
+IF ~~ THEN BEGIN XA_LD_RepairedPhylactery
+	SAY @143 /* ~It is done. Treat it with care.~ */
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 0)
+		PartyGoldGT(119999)
+	~ THEN REPLY @144 /* ~Thank you!~ */
+	DO ~
+		TakePartyGold(120000)
+	~
+	GOTO XA_LD_AnythingElse
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 1)
+		PartyGoldGT(99999)
+	~ THEN REPLY @144 /* ~Thank you!~ */
+	DO ~
+		TakePartyGold(100000)
+	~
+	GOTO XA_LD_AnythingElse
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 2)
+		PartyGoldGT(74999)
+	~ THEN REPLY @144 /* ~Thank you!~ */
+	DO ~
+		TakePartyGold(75000)
+	~
+	GOTO XA_LD_AnythingElse
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 3)
+		PartyGoldGT(49999)
+	~ THEN REPLY @144 /* ~Thank you!~ */
+	DO ~
+		TakePartyGold(50000)
+	~
+	GOTO XA_LD_AnythingElse
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 4)
+		PartyGoldGT(39999)
+	~ THEN REPLY @144 /* ~Thank you!~ */
+	DO ~
+		TakePartyGold(40000)
+	~
+	GOTO XA_LD_AnythingElse
+END
+
+IF ~~ THEN BEGIN XA_LD_AnythingElse
+	SAY @146 /*~Was there something else?~*/
+	
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
 END
 
 IF ~~ THEN BEGIN XA_LD_NoMoneyToFix
 	SAY @136 /*~Morris slowly shakes his head.  “My apologies, but I require more coins to craft a new phylactery.”~ [xald1052]*/
 	
 	IF ~~ THEN REPLY @133 /*~Let us discuss something else.~*/
+	GOTO XA_LD_DiscussSomethingElse
+END
+
+IF ~~ THEN BEGIN XA_LD_DiscussSomethingElse
+	SAY @148 /*~He nods.~ [xald1059]*/
+	
 	COPY_TRANS XALDGD XA_LD_IntroAthkatla
 END
 

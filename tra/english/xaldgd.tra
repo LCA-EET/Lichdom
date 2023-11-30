@@ -135,3 +135,15 @@
 @134 = ~He nods.~ [xald1059]
 @135 = ~Morris looks at you intently.  "Whose phylactery should I replace?"~ [xald1050]
 @136 = ~Morris slowly shakes his head.  “My apologies, but I require more coins to craft a new phylactery.”~ [xald1052]
+@137 = ~(Repair Player 1's phylactery.)~
+@138 = ~(Repair Player 2's phylactery.)~
+@139 = ~(Repair Player 3's phylactery.)~
+@140 = ~(Repair Player 4's phylactery.)~
+@141 = ~(Repair Player 5's phylactery.)~
+@142 = ~(Repair Player 6's phylactery.)~
+@143 = ~It is done. Treat it with care.~
+@144 = ~Thank you!~
+@145 = ~Nevermind.~
+@146 = ~Was there something else?~
+@147 = ~Acknowledged.~ [xald1051]
+@148 = ~He nods.~ [xald1059]
