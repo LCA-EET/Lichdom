@@ -224,7 +224,7 @@ IF ~~ THEN BEGIN XA_LD_HasMoneyToFix
 		TriggerOverride(Player1, Global("XA_LD_PhylacteryBroken", "LOCALS", 1))
 	~ THEN REPLY @137 /*~(Repair Player 1's phylactery.)~*/
 	DO ~
-		ActionOverride(Player1, SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1))
+		ActionOverride(Player1, SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 0))
 	~
 	GOTO XA_LD_RepairedPhylactery
 	
@@ -232,7 +232,7 @@ IF ~~ THEN BEGIN XA_LD_HasMoneyToFix
 		TriggerOverride(Player2, Global("XA_LD_PhylacteryBroken", "LOCALS", 1))
 	~ THEN REPLY @138 /*~(Repair Player 2's phylactery.)~*/
 	DO ~
-		ActionOverride(Player2, SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1))
+		ActionOverride(Player2, SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 0))
 	~
 	GOTO XA_LD_RepairedPhylactery
 	
@@ -240,7 +240,7 @@ IF ~~ THEN BEGIN XA_LD_HasMoneyToFix
 		TriggerOverride(Player3, Global("XA_LD_PhylacteryBroken", "LOCALS", 1))
 	~ THEN REPLY @139 /*~(Repair Player 3's phylactery.)~*/
 	DO ~
-		ActionOverride(Player3, SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1))
+		ActionOverride(Player3, SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 0))
 	~
 	GOTO XA_LD_RepairedPhylactery
 	
@@ -248,7 +248,7 @@ IF ~~ THEN BEGIN XA_LD_HasMoneyToFix
 		TriggerOverride(Player4, Global("XA_LD_PhylacteryBroken", "LOCALS", 1))
 	~ THEN REPLY @140 /*~(Repair Player 4's phylactery.)~*/
 	DO ~
-		ActionOverride(Player4, SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1))
+		ActionOverride(Player4, SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 0))
 	~
 	GOTO XA_LD_RepairedPhylactery
 	
@@ -256,7 +256,7 @@ IF ~~ THEN BEGIN XA_LD_HasMoneyToFix
 		TriggerOverride(Player5, Global("XA_LD_PhylacteryBroken", "LOCALS", 1))
 	~ THEN REPLY @141 /*~(Repair Player 5's phylactery.)~*/
 	DO ~
-		ActionOverride(Player5, SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1))
+		ActionOverride(Player5, SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 0))
 	~
 	GOTO XA_LD_RepairedPhylactery
 	
@@ -264,7 +264,7 @@ IF ~~ THEN BEGIN XA_LD_HasMoneyToFix
 		TriggerOverride(Player6, Global("XA_LD_PhylacteryBroken", "LOCALS", 1))
 	~ THEN REPLY @142 /*~(Repair Player 6's phylactery.)~*/
 	DO ~
-		ActionOverride(Player6, SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1))
+		ActionOverride(Player6, SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 0))
 	~
 	GOTO XA_LD_RepairedPhylactery
 	
