@@ -381,6 +381,11 @@ Shroud of the Lich is also an intentional reference to [an ability of the same n
 
 - In short, it's unique.  For the EE games, I know of no other mods which apply 'templates' to player characters like Lycanthrope, Lich, or Vampire.  (I'm not counting recruitable NPCs that are these sorts of creatures, nor shapeshifting abilities to mimic these templates.)  Maybe someone will soon make and public release a mod to turn characters into Werechihuahuas or other Lycanthropes, or into Angels, Constructs Demons, Devils, Elementals, Genies, Oozes, or Plants!
 
+**How does this mod interact with other mods that involve becoming a Lich?**
+- Most likely, they are totally separate.  Maybe they are also mechanically compatible.
+
+- For example, a Lichdom Lich and a quest in [The Beaurin Legacy](https://www.gibberlings3.net/files/file/998-beaurin-legacy/) to become a Lich are totally separate.  Becoming a Lich via one method does not affect your ability to become a Lich via another method.
+
 **What game versions and operating systems can run this mod?**
 - Lichdom will likely work on game version 2.5 or later.
 
