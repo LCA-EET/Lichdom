@@ -182,6 +182,16 @@ END
 	END
 //}
 
+//{ Change General to Undead
+	IF
+		!General(Myself, UNDEAD)
+	THEN
+		RESPONSE #100
+			ChangeGeneral(Myself, UNDEAD)
+			Continue()
+	END
+
+//}
 //{ AC Adjustment
 	IF
 		Global("XA_LD_LichAC", "GLOBAL", 0)
