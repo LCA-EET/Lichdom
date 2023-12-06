@@ -863,31 +863,31 @@ CHAIN XALDGD XA_LD_Chain_ConfirmCharname1
 	@151 /*~~It appears we are more kindred spirits than I first thought of you, <CHARNAME>.  I am still uncomfortable about this.~~*/
 	
 	== BAELOTHJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Baeloth")
 	~
 	@152 /* ~Aw, <CHARNAME>, you don’t wanna disappoint -Elminster- now, hmm?~ [xald1081]*/
 	
 	== CERNDJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Cernd")
 	~
 	@153 /*~<CHARNAME>, my stance is the same:  Be careful with this power, lest it overtake and taint you.~*/
 	
 	== EDWINJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Edwin")
 	~
 	@154 /*~Yes, yes, <CHARNAME>.  All this talk about the ‘greater good’ is just nonsense to make the weak-willed feel better.~ [xald1084]*/
 	
 	== IMOEN2J
-	~
+	IF ~
 		IsValidForPartyDialogue("Imoen2")
 	~
 	@155 /*~<PRO_BROTHERSISTER>, your mind is made up.  If that’s what you’re gonna do...  I guess I’ll stay for now.  I still think this necromantic stuff is kinda creepy.~*/
 	
 	== JAHEIRAJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Jaheira")
 	~
 	@156 /*~<CHARNAME>, I -hate- this.  I hate the pain I felt just thinking of my anger against our captor, how he tormented us and killed my beloved Khalid!  But, I’ve started to move on.~*/
@@ -895,13 +895,13 @@ CHAIN XALDGD XA_LD_Chain_ConfirmCharname1
 	= @158 /*~Still, <CHARNAME>, you want to become an Undead <PRO_MANWOMAN> so much?  Fine.  You go crazy and I’ll -gladly- kill you and stomp your phylactery to dust!~*/
 	
 	== JANJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Jan")
 	~
 	@159 /*~<CHARNAME>, I suppose this is a once-in-a-lifetime opportunity to definitely prove the effects of lichdom on Bhaalspawn!  I promise you I won’t profit off this without your consent!~*/
 	
 	== KELDORJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Keldorn")
 	~
 	@160 /*~<CHARNAME>, I have generally trusted you since we met.  I would hate for this apparent sacrifice of yours to cause you to lose your mind or your desire to do what is right for the sake of the world.~*/
@@ -910,7 +910,7 @@ CHAIN XALDGD XA_LD_Chain_ConfirmCharname1
 		SetGlobal("XA_LD_KeldornLeft", "GLOBAL", 1)
 	~
 	== MAZZYJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Mazzy")
 	~
 	@162 /*~<CHARNAME>, my heart goes out to you for all the pain you’ve experienced, but you should know that Lichdom won’t fix your past and won’t avenge those that wronged those you love!~*/
@@ -920,26 +920,26 @@ CHAIN XALDGD XA_LD_Chain_ConfirmCharname1
 	~
 	
 	== MINSCJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Minsc")
 	~
 	@164 /*~Boo knows the putrid stench of evil of our captor’s lair, and Boo knows you mean well in what you do!  I miss Dynaheir just as much as Boo, and we too wish we were stronger so Dynaheir was never killed!~ */
 	= @165 /*~But to do this?  My hamster and I do not know if we can stand for this!  Our footprint might be all over your butt -and- your head!~*/
 	
 	== RASAADJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Rasaad")
 	~
 	@166 /*~So, <CHARNAME>, it seems like you want me to keep you from the temptation of this new power for the good of us all.~*/
 	
 	== SAREV25J
-	~
+	IF ~
 		IsValidForPartyDialogue("Sarevok")
 	~
 	@167 /*~<PRO_BROTHERSISTER>, you are either naive or a schemer of my caliber!~*/
 	
 	== VALYGARJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Valygar")
 	~
 	@168 /*~<CHARNAME>, whatever your reasoning, if you go through with this, I simply cannot stay:  The tainted magic is too great!~*/
@@ -948,7 +948,7 @@ CHAIN XALDGD XA_LD_Chain_ConfirmCharname1
 	~
 	
 	== VICONIJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Viconia")
 	~
 	@169 /*~<CHARNAME>, I want to believe you made the right decision.~*/
@@ -970,73 +970,73 @@ CHAIN XALDGD XA_LD_Chain_ConfirmCharname2
 	@151 /*~~It appears we are more kindred spirits than I first thought of you, <CHARNAME>.  I am still uncomfortable about this.~~*/
 	
 	== BAELOTHJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Baeloth")
 	~
 	@152 /* ~Aw, <CHARNAME>, you don’t wanna disappoint -Elminster- now, hmm?~ [xald1081]*/
 	
 	== CERNDJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Cernd")
 	~
 	@153 /*~<CHARNAME>, my stance is the same:  Be careful with this power, lest it overtake and taint you.~*/
 	
 	== EDWINJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Edwin")
 	~
 	@154 /*~Yes, yes, <CHARNAME>.  All this talk about the ‘greater good’ is just nonsense to make the weak-willed feel better.~ [xald1084]*/
 	
 	== IMOEN2J
-	~
+	IF ~
 		IsValidForPartyDialogue("Imoen2")
 	~
 	@155 /*~<PRO_BROTHERSISTER>, your mind is made up.  If that’s what you’re gonna do...  I guess I’ll stay for now.  I still think this necromantic stuff is kinda creepy.~*/
 	
 	== JAHEIRAJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Jaheira")
 	~
 	@172 /*~<CHARNAME>, you want to become an undead <PRO_MANWOMAN> so much?  Fine.  You go crazy and I’ll -gladly- kill you and stomp your phylactery to dust!~ */
 	
 	== JANJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Jan")
 	~
 	@159 /*~<CHARNAME>, I suppose this is a once-in-a-lifetime opportunity to definitely prove the effects of lichdom on Bhaalspawn!  I promise you I won’t profit off this without your consent!~*/
 	
 	== KELDORJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Keldorn")
 	~
 	@160 /*~<CHARNAME>, I have generally trusted you since we met.  I would hate for this apparent sacrifice of yours to cause you to lose your mind or your desire to do what is right for the sake of the world.~*/
 	
 	== MAZZYJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Mazzy")
 	~
 	@173 /*~<CHARNAME>, perhaps I was wrong about you.  Do expect me to keep a close guard on you should this power get to your overly bony head!~*/
 	
 	== MINSCJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Minsc")
 	~
 	@174 /*~Boo says evil gods stink even more of putrid evil than an evil caster, like a diseased rat corpse that’s been in the sewer for days!  Minsc will stand by your side, for his foot is too small to kick a god’s butt to the ground!~ [xald1100] */
 	
 	== RASAADJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Rasaad")
 	~
 	@166 /*~So, <CHARNAME>, it seems like you want me to keep you from the temptation of this new power for the good of us all.~*/
 	
 	== SAREV25J
-	~
+	IF ~
 		IsValidForPartyDialogue("Sarevok")
 	~
 	@167 /*~<PRO_BROTHERSISTER>, you are either naive or a schemer of my caliber!~*/
 	
 	== VALYGARJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Valygar")
 	~
 	@168 /*~<CHARNAME>, whatever your reasoning, if you go through with this, I simply cannot stay:  The tainted magic is too great!~*/
@@ -1045,7 +1045,7 @@ CHAIN XALDGD XA_LD_Chain_ConfirmCharname2
 	~
 	
 	== VICONIJ
-	~
+	IF ~
 		IsValidForPartyDialogue("Viconia")
 	~
 	@169 /*~<CHARNAME>, I want to believe you made the right decision.~*/
