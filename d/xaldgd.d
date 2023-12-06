@@ -907,7 +907,7 @@ CHAIN XALDGD XA_LD_Chain_ConfirmCharname1
 	@160 /*~<CHARNAME>, I have generally trusted you since we met.  I would hate for this apparent sacrifice of yours to cause you to lose your mind or your desire to do what is right for the sake of the world.~*/
 	= @161 /*~It is ultimately your choice, <CHARNAME>, but if you go through with this, I shall not stay.  For the sake of our friendship, I shall not slay you this day.  Do not provoke those of my order to wrath, for if you do, we WILL hunt you down and slay you, as painful to us as it may be!~*/
 	DO ~
-		SetGlobal("XA_LD_KeldornLeft", "GLOBAL", 1)
+		SetGlobal("XA_LD_KeldornWillLeave", "GLOBAL", 1)
 	~
 	== MAZZYJ
 	IF ~
@@ -916,7 +916,7 @@ CHAIN XALDGD XA_LD_Chain_ConfirmCharname1
 	@162 /*~<CHARNAME>, my heart goes out to you for all the pain you’ve experienced, but you should know that Lichdom won’t fix your past and won’t avenge those that wronged those you love!~*/
 	= @163 /*~I just gotta say that I can’t stay if you do that.  Sorry, <CHARNAME>.~*/
 	DO ~
-		SetGlobal("XA_LD_MazzyLeft", "GLOBAL", 1)
+		SetGlobal("XA_LD_MazzyWillLeave", "GLOBAL", 1)
 	~
 	
 	== MINSCJ
@@ -944,7 +944,7 @@ CHAIN XALDGD XA_LD_Chain_ConfirmCharname1
 	~
 	@168 /*~<CHARNAME>, whatever your reasoning, if you go through with this, I simply cannot stay:  The tainted magic is too great!~*/
 	DO ~
-		SetGlobal("XA_LD_ValygarLeft", "GLOBAL", 1)
+		SetGlobal("XA_LD_ValygarWillLeave", "GLOBAL", 1)
 	~
 	
 	== VICONIJ
@@ -1041,7 +1041,7 @@ CHAIN XALDGD XA_LD_Chain_ConfirmCharname2
 	~
 	@168 /*~<CHARNAME>, whatever your reasoning, if you go through with this, I simply cannot stay:  The tainted magic is too great!~*/
 	DO ~
-		SetGlobal("XA_LD_ValygarLeft", "GLOBAL", 1)
+		SetGlobal("XA_LD_ValygarWillLeave", "GLOBAL", 1)
 	~
 	
 	== VICONIJ
