@@ -389,9 +389,116 @@ IF ~~ THEN BEGIN XA_LD_PayMoney
 	IF ~
 		!Class(Player1, FIGHTER)
 		!Class(Player1, THIEF)
+		!Class(Player1, FIGHTER_THIEF)
+		!Kit(Player1, WIZARDSLAYER)
+		!General(Player1, UNDEAD)
 		LevelGT(Player1, 9)
 	~ THEN REPLY @108  /* ~(Choose <CHARNAME>.)~ */
 	GOTO XA_LD_Chain_ChooseCharname
+	
+	IF ~
+		InParty("Cernd")
+		!General("Cernd", UNDEAD)
+		LevelGT("Cernd", 9)
+	~ THEN REPLY @186 /* ~(Choose Cernd.)~ */
+	EXTERN CERNDJ XA_LD_Chain_ChooseCernd
+	
+	IF ~
+		InParty("Dorn")
+		!General("Dorn", UNDEAD)
+		LevelGT("Dorn", 9)
+	~ THEN REPLY @187 /* ~(Choose Dorn.)~*/
+	EXTERN DORNJ XA_LD_Chain_ChooseDorn
+	
+	IF ~
+		InParty("Edwin")
+		!General("Edwin", UNDEAD)
+		LevelGT("Edwin", 9)
+	~ THEN REPLY @188 /* ~(Choose Edwin.)~*/
+	EXTERN EDWINJ XA_LD_Chain_ChooseEdwin
+	
+	IF ~
+		InParty("HaerDalis")
+		!General("HaerDalis", UNDEAD)
+		LevelGT("HaerDalis", 9)
+	~ THEN REPLY @189 /* ~(Choose HaerDalis.)~*/
+	EXTERN HAERDAJ XA_LD_Chain_ChooseHaerDalis
+	
+	IF ~
+		InParty("Imoen2")
+		!General("Imoen2", UNDEAD)
+		LevelGT("Imoen2", 9)
+		Dead("c6bodhi")
+	~ THEN REPLY @190 /*  ~(Choose Imoen.)~*/
+	EXTERN IMOEN2J XA_LD_Chain_ChooseImoen
+	
+	IF ~
+		InParty("Imoen2")
+		!General("Imoen2", UNDEAD)
+		LevelGT("Imoen2", 9)
+		!Dead("c6bodhi")
+	~ THEN REPLY @190 /*  ~(Choose Imoen.)~*/
+	EXTERN IMOEN2J XA_LD_Chain_ChooseImoen_NoSoul
+	
+	IF ~
+		InParty("Jaheira")
+		!General("Jaheira", UNDEAD)
+		LevelGT("Jaheira", 9)
+	~ THEN REPLY @191 /* ~(Choose Jaheira.)~*/
+	EXTERN JAHEIRAJ XA_LD_Chain_ChooseJaheira
+	
+	IF ~
+		InParty("Keldorn")
+		!General("Keldorn", UNDEAD)
+		LevelGT("Keldorn", 9)
+	~ THEN REPLY @192 /*~(Choose Keldorn.)~ */
+	EXTERN KELDORJ XA_LD_Chain_ChooseKeldorn
+	
+	IF ~
+		InParty("Neera")
+		!General("Neera", UNDEAD)
+		LevelGT("Neera", 9)
+	~ THEN REPLY @193 /* ~(Choose Neera.)~*/
+	EXTERN NEERAJ XA_LD_Chain_ChooseNeera
+	
+	IF ~
+		InParty("Nalia")
+		!General("Nalia", UNDEAD)
+		LevelGT("Nalia", 9)
+	~ THEN REPLY @194 /* ~(Choose Nalia.)~*/
+	EXTERN NEERAJ XA_LD_Chain_ChooseNalia
+	
+	IF ~
+		!Class("Sarevok", FIGHTER)
+		!Class("Sarevok", THIEF)
+		!Class("Sarevok", FIGHTER_THIEF)
+		!Kit("Sarevok", WIZARDSLAYER)
+		!General("Sarevok", UNDEAD)
+		LevelGT("Sarevok", 9)
+	~ THEN REPLY @195 /*~(Choose Sarevok.)~*/ 
+	EXTERN SAREV25J XA_LD_Chain_ChooseSarevok
+	
+	IF ~
+		InParty("Valygar")
+		!General("Valygar", UNDEAD)
+		LevelGT("Valygar", 9)
+	~ THEN REPLY @196 /*~(Choose Valygar.)~*/
+	EXTERN VALYGARJ XA_LD_Chain_ChooseValygar
+	
+	IF ~
+		InParty("Viconia")
+		!General("Viconia", UNDEAD)
+		LevelGT("Viconia", 9)
+	~ THEN REPLY @197 /*~(Choose Viconia.)~*/
+	EXTERN VICONIJ XA_LD_Chain_ChooseViconia
+	
+	IF ~
+		InParty("Yoshimo")
+		!General("Yoshimo", UNDEAD)
+		LevelGT("Yoshimo", 9)
+	~ THEN REPLY @198 /* (Choose Yosihmo.)*/
+	EXTERN YOSHJ XA_LD_Chain_ChooseYoshimo
+	
 END
 
 IF ~~ THEN BEGIN XA_LD_Reconsider
@@ -862,12 +969,6 @@ CHAIN XALDGD XA_LD_Chain_ConfirmCharname1
 	~
 	@151 /*~~It appears we are more kindred spirits than I first thought of you, <CHARNAME>.  I am still uncomfortable about this.~~*/
 	
-	== BAELOTHJ
-	IF ~
-		IsValidForPartyDialogue("Baeloth")
-	~
-	@152 /* ~Aw, <CHARNAME>, you don’t wanna disappoint -Elminster- now, hmm?~ [xald1081]*/
-	
 	== CERNDJ
 	IF ~
 		IsValidForPartyDialogue("Cernd")
@@ -969,12 +1070,6 @@ CHAIN XALDGD XA_LD_Chain_ConfirmCharname2
 	~
 	@151 /*~~It appears we are more kindred spirits than I first thought of you, <CHARNAME>.  I am still uncomfortable about this.~~*/
 	
-	== BAELOTHJ
-	IF ~
-		IsValidForPartyDialogue("Baeloth")
-	~
-	@152 /* ~Aw, <CHARNAME>, you don’t wanna disappoint -Elminster- now, hmm?~ [xald1081]*/
-	
 	== CERNDJ
 	IF ~
 		IsValidForPartyDialogue("Cernd")
@@ -1061,12 +1156,6 @@ CHAIN XALDGD XA_LD_Chain_ChooseCharname
 	DO ~
 		SetGlobal("XA_LD_ObjectionRaised", "GLOBAL", 1)
 	~
-	
-	== BAELOTHJ
-	IF ~
-		IsValidForPartyDialogue("Baeloth")
-	~
-	@113  /* ~<CHARNAME>, there is absolutely no shame in taking every advantage afforded to you!~ [xald1080]*/
 	
 	== CERNDJ
 	IF ~
