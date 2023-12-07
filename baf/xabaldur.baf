@@ -9,6 +9,8 @@ THEN
 		SetGlobal("JaheiraRomanceActive", "GLOBAL", 3)
 		SetGlobal("ViconiaRomanceActive", "GLOBAL", 3)
 		SetGlobal("AnomenRomanceActive", "GLOBAL", 3)
+		SetGlobal("RasaadRomanceActive", "GLOBAL", 3)
+		SetGlobal("NeeraRomanceActive", "GLOBAL", 3)
 		SetGlobal("XA_LD_RomanceTermination", "GLOBAL", 1)
 		SetInterrupt(TRUE)
 		Continue()
