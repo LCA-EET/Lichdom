@@ -408,7 +408,7 @@ IF ~~ THEN BEGIN XA_LD_PayMoney
 		!General("Dorn", UNDEAD)
 		LevelGT("Dorn", 9)
 	~ THEN REPLY @187 /* ~(Choose Dorn.)~*/
-	EXTERN DORNJ XA_LD_Chain_ChooseDorn
+	EXTERN DORNJ XA_LD_ChooseDorn
 	
 	IF ~
 		InParty("Edwin")
@@ -499,6 +499,12 @@ IF ~~ THEN BEGIN XA_LD_PayMoney
 	~ THEN REPLY @198 /* (Choose Yosihmo.)*/
 	EXTERN YOSHJ XA_LD_Chain_ChooseYoshimo
 	
+END
+
+IF ~~ THEN BEGIN XA_LD_ChooseAnother
+	SAY @206 /*~You must choose another.~*/
+
+	COPY_TRANS XALDGD XA_LD_PayMoney
 END
 
 IF ~~ THEN BEGIN XA_LD_Reconsider
@@ -1257,3 +1263,11 @@ CHAIN XALDGD XA_LD_Chain_ChooseCharname
 	~
 	
 END XALDGD XA_LD_Chain_ChooseCharname_END
+
+CHAIN CERNDJ XA_LD_Chain_ChooseCernd
+	@199 /*~<CHARNAME>, what you propose is powerful, yes, but it does not sit right with my spirit.  I decline your offer.~*/
+END XALDGD XA_LD_ChooseAnother
+
+CHAIN EDWINJ XA_LD_Chain_ChooseEdwin
+	@207 /*~<CHARNAME>, I am glad your superior intellect has so quickly led you to this decision.  I graciously and eagerly accept my new immortal life.~ [eemored3]*/
+END XALDGD XA_LD_EdwinLich
