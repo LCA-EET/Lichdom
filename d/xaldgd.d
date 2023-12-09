@@ -430,7 +430,7 @@ IF ~~ THEN BEGIN XA_LD_PayMoney
 		LevelGT("Imoen2", 9)
 		Dead("c6bodhi")
 	~ THEN REPLY @190 /*  ~(Choose Imoen.)~*/
-	EXTERN IMOEN2J XA_LD_Chain_ChooseImoen
+	EXTERN IMOEN2J XA_LD_ChooseImoen
 	
 	IF ~
 		InParty("Imoen2")
@@ -453,6 +453,20 @@ IF ~~ THEN BEGIN XA_LD_PayMoney
 		LevelGT("Keldorn", 9)
 	~ THEN REPLY @192 /*~(Choose Keldorn.)~ */
 	EXTERN KELDORJ XA_LD_Chain_ChooseKeldorn
+	
+	IF ~
+		InParty("Mazzy")
+		!General("Mazzy", UNDEAD)
+		LevelGT("Mazzy", 9)
+	~ THEN REPLY @214 /* ~(Choose Mazzy.)~*/
+	EXTERN MAZZYJ XA_LD_Chain_ChooseMazzy
+	
+	IF ~
+		InParty("Minsc")
+		!General("Minsc", UNDEAD)
+		LevelGT("Minsc", 9)
+	~ THEN REPLY @216 /* ~(Choose Minsc.)~*/
+	EXTERN MINSCJ XA_LD_Chain_ChooseMinsc
 	
 	IF ~
 		InParty("Neera")
@@ -490,15 +504,22 @@ IF ~~ THEN BEGIN XA_LD_PayMoney
 		!General("Viconia", UNDEAD)
 		LevelGT("Viconia", 9)
 	~ THEN REPLY @197 /*~(Choose Viconia.)~*/
-	EXTERN VICONIJ XA_LD_Chain_ChooseViconia
+	EXTERN VICONIJ XA_LD_ChooseViconia
 	
 	IF ~
 		InParty("Yoshimo")
 		!General("Yoshimo", UNDEAD)
 		LevelGT("Yoshimo", 9)
 	~ THEN REPLY @198 /* (Choose Yosihmo.)*/
-	EXTERN YOSHJ XA_LD_Chain_ChooseYoshimo
+	GOTO XA_LD_NoYoshimo
 	
+END
+
+IF ~~ THEN BEGIN XA_LD_NoYoshimo
+	SAY @221 /*~Morris responds, “Yoshimo…  There is… something about you that may nullify my… understanding… with your patrons.  I shall not do it for that sake.”~*/
+	
+	IF ~~ THEN
+	GOTO XA_LD_ChooseAnother
 END
 
 IF ~~ THEN BEGIN XA_LD_ChooseAnother
@@ -960,6 +981,49 @@ IF ~~ THEN BEGIN XA_LD_LastChance
 	EXIT
 END
 
+//{ Transformation Initiations
+IF ~~ THEN BEGIN XA_LD_EdwinLich
+	SAY @210 /*~[PENDING IMPLEMENTATION].~*/
+	
+	IF ~~ THEN
+	EXIT
+END
+
+IF ~~ THEN BEGIN XA_LD_HaerDalisLich
+	SAY @210 /*~[PENDING IMPLEMENTATION].~*/
+	
+	IF ~~ THEN
+	EXIT
+END
+
+IF ~~ THEN BEGIN XA_LD_ImoenLich
+	SAY @210 /*~[PENDING IMPLEMENTATION].~*/
+	
+	IF ~~ THEN
+	EXIT
+END
+
+IF ~~ THEN BEGIN XA_LD_NeeraLich
+	SAY @210 /*~[PENDING IMPLEMENTATION].~*/
+	
+	IF ~~ THEN
+	EXIT
+END
+
+IF ~~ THEN BEGIN XA_LD_SarevokLich
+	SAY @210 /*~[PENDING IMPLEMENTATION].~*/
+	
+	IF ~~ THEN
+	EXIT
+END
+
+IF ~~ THEN BEGIN XA_LD_ViconiaLich
+	SAY @210 /*~[PENDING IMPLEMENTATION].~*/
+	
+	IF ~~ THEN
+	EXIT
+END
+//}
 CHAIN XALDGD XA_LD_Chain_ConfirmCharname1
 	@150 /*~Morris nods in understanding.~*/
 	
@@ -1271,3 +1335,39 @@ END XALDGD XA_LD_ChooseAnother
 CHAIN EDWINJ XA_LD_Chain_ChooseEdwin
 	@207 /*~<CHARNAME>, I am glad your superior intellect has so quickly led you to this decision.  I graciously and eagerly accept my new immortal life.~ [eemored3]*/
 END XALDGD XA_LD_EdwinLich
+
+CHAIN HAERDAJ XA_LD_Chain_ChooseHaerDalis
+	@208 /*~<CHARNAME>, I have no need of undeath for immortality.  My tiefling heritage already grants me that.~*/
+	= @209 /*~But my heart is eager with curiosity to be able to write about this experience and set it to the stage!  For this, I accept.~*/
+END XALDGD XA_LD_HaerDalisLich
+
+CHAIN JAHEIRAJ XA_LD_Chain_ChooseJaheira
+	@211 /*~<CHARNAME>, I have no desire to become some undead abomination!  Stop asking!~*/
+END XALDGD XA_LD_ChooseAnother
+
+CHAIN KELDORJ XA_LD_Chain_ChooseKeldorn
+	@212 /*~I must adamantly decline your offer, <CHARNAME>, for I know what my god Torm requires of me.~*/
+END XALDGD XA_LD_ChooseAnother
+
+CHAIN MAZZYJ XA_LD_Chain_ChooseMazzy
+	@213 /*~No.  Those who wish to act like Paladins do -not- willingly become undead!~*/
+END XALDGD XA_LD_ChooseAnother
+
+CHAIN MINSCJ XA_LD_Chain_ChooseMinsc
+	@215 /*~Boo is grateful that you were concerned for his safety, but Minsc has other, -secret- plans on how to live long and prosper!  No boniness for us!~*/
+END XALDGD XA_LD_ChooseAnother
+
+CHAIN NEERAJ XA_LD_Chain_ChooseNeera
+	@217 /*~Now I wonder what’s better - wild magic or undeath.  I -suppose- that being undead would make me immune to a -lot- more oopsies!~*/
+	
+	= @218 /*~<CHARNAME>, I think what I’m trying to say is yes.  But if it hurts, expect me to scream and cry and maybe run away.~*/
+END XALDGD XA_LD_NeeraLich
+
+CHAIN SAREV25J XA_LD_Chain_ChooseSarevok
+	@219 /*~<PRO_BROTHERSISTER>, you would help me regain power like the divine essence I lost?  What a wise and gracious <PRO_MANWOMAN> you are!~*/
+END XALDGD XA_LD_SarevokLich
+
+CHAIN VALYGARJ XA_LD_Chain_ChooseValygar
+	@220 /*~<CHARNAME>, consider this your warning:  Had I not known and respected you as I have, your proposal would have driven me to violence against you.~*/
+END XALDGD XA_LD_ChooseAnother
+
