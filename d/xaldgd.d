@@ -438,7 +438,7 @@ IF ~~ THEN BEGIN XA_LD_PayMoney
 		LevelGT("Imoen2", 9)
 		!Dead("c6bodhi")
 	~ THEN REPLY @190 /*  ~(Choose Imoen.)~*/
-	EXTERN IMOEN2J XA_LD_Chain_ChooseImoen_NoSoul
+	GOTO XA_LD_ChooseImoen_NoSoul
 	
 	IF ~
 		InParty("Jaheira")
@@ -480,7 +480,7 @@ IF ~~ THEN BEGIN XA_LD_PayMoney
 		!General("Nalia", UNDEAD)
 		LevelGT("Nalia", 9)
 	~ THEN REPLY @194 /* ~(Choose Nalia.)~*/
-	EXTERN NEERAJ XA_LD_Chain_ChooseNalia
+	EXTERN NALIAJ XA_LD_ChooseNalia
 	
 	IF ~
 		!Class("Sarevok", FIGHTER)
@@ -513,6 +513,13 @@ IF ~~ THEN BEGIN XA_LD_PayMoney
 	~ THEN REPLY @198 /* (Choose Yosihmo.)*/
 	GOTO XA_LD_NoYoshimo
 	
+END
+
+IF ~~ THEN BEGIN XA_LD_ChooseImoen_NoSoul
+	SAY @222 /*Gravetender Morris slowly and deliberately raises an eyebrow.  “Her soul is not entirely with her.  I require this for the lichdom ritual.” [eemor036]*/
+	
+	IF ~~ THEN
+	GOTO XA_LD_ChooseAnother
 END
 
 IF ~~ THEN BEGIN XA_LD_NoYoshimo
@@ -982,6 +989,13 @@ IF ~~ THEN BEGIN XA_LD_LastChance
 END
 
 //{ Transformation Initiations
+IF ~~ THEN BEGIN XA_LD_DornLich
+	SAY @210 /*~[PENDING IMPLEMENTATION].~*/
+	
+	IF ~~ THEN
+	EXIT
+END
+
 IF ~~ THEN BEGIN XA_LD_EdwinLich
 	SAY @210 /*~[PENDING IMPLEMENTATION].~*/
 	

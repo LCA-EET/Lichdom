@@ -101,7 +101,11 @@ APPEND NALIAJ
 		
 		= @21 /*~I know.~*/
 		
-		COPY_TRANS XA_LD_ChooseNalia
+		IF ~~ THEN REPLY @22 /* ~What do you think about living forever?~*/
+		GOTO XA_LD_ChooseNalia2B
+		
+		IF ~~ THEN REPLY @25 /*~So, what do you say?~ */
+		GOTO XA_LD_ChooseNalia2C
 	END
 	
 	IF ~~ THEN BEGIN XA_LD_ChooseNalia2B
@@ -109,7 +113,11 @@ APPEND NALIAJ
 		
 		= @24 /*~I think it’s fine until you see all your friends and loved ones die.  Then what’s there to live for?  Serving your people who just keep dying of old age or famine or war?~*/
 		
-		COPY_TRANS XA_LD_ChooseNalia
+		IF ~~ THEN REPLY @19 /*~Nalia, you want to help your people.  You can’t do that if you’re -dead.-~ */
+		GOTO XA_LD_ChooseNalia2A
+		
+		IF ~~ THEN REPLY @25 /*~So, what do you say?~ */
+		GOTO XA_LD_ChooseNalia2C
 	END
 	
 	IF ~~ THEN BEGIN XA_LD_ChooseNalia2C
