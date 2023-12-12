@@ -1,0 +1,23 @@
+IF
+	AreaCheck("AR0800")
+	OR(2)
+		HPPercentLT(Myself, 100)
+		See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ReallyForceSpellRES("BDTELAW",Myself)  // Teleport Without Error
+		SetInterrupt(TRUE)
+END
+
+IF
+	AreaCheck("AR5000")
+	GlobalLT("XA_LD_Morris_1", "LOCALS", 1)
+	See(NearestEnemyOf(Myself))
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ForceSpell(NearestEnemyOf(Myself),WIZARD_ABI_DALZIMS_HORRID_WILTING) 
+		SetGlobal("XA_LD_Morris_1", "LOCALS", 1)
+		SetInterrupt(TRUE)
+END
