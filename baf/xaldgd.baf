@@ -1,5 +1,31 @@
 IF
 	AreaCheck("AR0800")
+	PickPocketFailed([ANYONE])
+	GlobalLT("XA_LD_PP0800", "LOCALS", 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("XA_LD_PP0800", "LOCALS", 1)
+		ReallyForceSpellRES("BDTELAW",Myself)
+		DisplayStringHead(Myself, @231)
+		SetInterrupt(TRUE)
+END
+
+IF
+	AreaCheck("AR5000")
+	PickPocketFailed([ANYONE])
+	GlobalLT("XA_LD_PP5000", "LOCALS", 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("XA_LD_PP5000", "LOCALS", 1)
+		DisplayStringHead(Myself, @232)
+		Enemy()
+		SetInterrupt(TRUE)
+END
+
+IF
+	AreaCheck("AR0800")
 	OR(2)
 		HPPercentLT(Myself, 100)
 		See(NearestEnemyOf(Myself))
