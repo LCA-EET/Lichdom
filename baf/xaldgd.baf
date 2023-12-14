@@ -167,9 +167,9 @@ THEN
 		IncrementGlobal("XA_LD_Morris", "LOCALS", 1)
 		DisplayString(Myself,39968)  // Spell Trigger—Fired
 		DisplayString(Myself,44901)
-		ApplySpell(StrongestOf([PC]), WIZARD_DOMINATE)
-		ApplySpell(StrongestOf([PC]), WIZARD_DOMINATE)
-		ApplySpell(StrongestOf([PC]), WIZARD_DOMINATE)	
+		ApplySpell(StrongestOf([PC]), WIZARD_DOMINATION)
+		ApplySpell(StrongestOf([PC]), WIZARD_DOMINATION)
+		ApplySpell(StrongestOf([PC]), WIZARD_DOMINATION)	
 		SetInterrupt(TRUE)
 END
 

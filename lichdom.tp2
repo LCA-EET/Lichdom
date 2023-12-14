@@ -161,6 +161,12 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 	
 	COPY_EXISTING ~bgractxt.2da~ ~override~
 	INSERT_2DA_ROW 0 6 ~LICH 150 8457 -1 %upper% -1~
+	
+	COPY ~lichdom/2da/xaldedw1.2da~ ~override~
+	SET_2DA_ENTRY 3 2 2 RESOLVE_STR_REF(@31)
+	
+	COPY ~lichdom/2da/xaldedw1.2da~ ~override~
+	SET_2DA_ENTRY 3 2 2 RESOLVE_STR_REF(@32)
 //}
 
 
@@ -170,6 +176,7 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 	EXTEND_TOP ~BALDUR25.BCS~ 	~lichdom/baf/xabaldur.baf~
 	EXTEND_TOP ~AR0800.BCS~ 	~lichdom/baf/xaar0800.baf~
 	EXTEND_TOP ~AR5000.BCS~ 	~lichdom/baf/xaar5000.baf~
+	EXTEND_TOP ~AR6200.BCS~		~lichdom/baf/xaar6200.baf~
 //}
 
 //{ BAM
