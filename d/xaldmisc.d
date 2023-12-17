@@ -11,7 +11,10 @@ APPEND DORNJ
 		SAY @2 /*~<CHARNAME>, that is a “Thanks, yes,” if your offer is true.~*/
 		
 		IF ~~ THEN REPLY @3 /*~Deal.~*/
-		EXTERN XALDGD XA_LD_DornLich
+		DO ~
+			SetGlobal("XA_LD_TransformLich", "LOCALS", 1)
+		~
+		EXTERN XALDGD XA_LD_Transform
 		
 		IF ~~ THEN REPLY @4 /*~No deal.  I don’t like wishy-washy.~*/
 		GOTO XA_LD_ChooseDorn3
@@ -78,7 +81,10 @@ APPEND IMOEN2J
 		SAY @17 /*~Well, <PRO_BROTHERSISTER>, when you put it -that- way...  I’ll do it.~*/
 	
 		IF ~~ THEN 
-		EXTERN XALDGD XA_LD_ImoenLich
+		DO ~
+			SetGlobal("XA_LD_TransformLich", "LOCALS", 1)
+		~
+		EXTERN XALDGD XA_LD_Transform
 	END
 END
 
@@ -145,7 +151,10 @@ APPEND VICONIJ
 		SAY @29 /*~(Viconia grins a sly, determined grin!)~*/
 		
 		IF ~~ THEN
-		EXTERN XALDGD XA_LD_ViconiaLich
+		DO ~
+			SetGlobal("XA_LD_TransformLich", "LOCALS", 1)
+		~
+		EXTERN XALDGD XA_LD_Transform
 	END
 	
 	IF ~~ THEN BEGIN XA_LD_ChooseViconia2B
@@ -169,6 +178,9 @@ APPEND VICONIJ
 		SAY @35 /*~You have my appreciation, <CHARNAME>.~*/
 		
 		IF ~~ THEN
-		EXTERN XALDGD XA_LD_ViconiaLich
+		DO ~
+			SetGlobal("XA_LD_TransformLich", "LOCALS", 1)
+		~
+		EXTERN XALDGD XA_LD_Transform
 	END
 END

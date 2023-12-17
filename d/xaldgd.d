@@ -836,10 +836,6 @@ IF ~~ THEN BEGIN XA_LD_WhyAreYouHere
 	
 	IF ~~ THEN REPLY @6 /*~What do you think about death?~*/
 	GOTO XA_LD_ThoughtsOnDeath
-	
-	
-	
-	
 END
 
 IF ~~ THEN BEGIN XA_LD_Siege
@@ -984,60 +980,107 @@ END
 IF ~~ THEN BEGIN XA_LD_LastChance
 	SAY @175 /*~“Then the -fifth- price is trust.”  He looks at you with his arms out and palms up as to signify friendship.  “Do you -trust- me now to properly perform this ritual?”~ [xald1043]*/
 	
-	IF ~~ THEN
-	EXIT
+	IF ~~ THEN REPLY @176 /* ~Will I lose my flesh?~*/
+	GOTO XA_LD_LoseFlesh
+	
+	IF ~~ THEN REPLY @178  /* ~How can this process be undone?~*/
+	GOTO XA_LD_Undo
+	
+	IF ~~ THEN REPLY @182  /* ~Now that you mention it, no.~*/
+	GOTO XA_LD_Cancel
+	
+	IF ~~ THEN REPLY @184  /* ~Yes!  I trust you, Gravetender Morris, to perform this lichdom ritual!~*/
+	DO ~
+		SetGlobal("XA_LD_TransformLich_P1", "GLOBAL", 1)
+	~
+	GOTO XA_LD_Transform
 END
 
-//{ Transformation Initiations
-IF ~~ THEN BEGIN XA_LD_DornLich
-	SAY @210 /*~[PENDING IMPLEMENTATION].~*/
+IF ~~ THEN BEGIN XA_LD_Cancel
+	SAY @183  /* ~Morris replies, “My trust awaits your trust.”~ [xald1047] */
 	
-	IF ~~ THEN
-	EXIT
+	IF ~~ THEN EXIT
 END
 
-IF ~~ THEN BEGIN XA_LD_EdwinLich
-	SAY @210 /*~[PENDING IMPLEMENTATION].~*/
+IF ~~ THEN BEGIN XA_LD_LoseFlesh
+	SAY @177  /* ~Morris slowly shakes his head as if to say “no” in an exaggerated fashion.~ [xald1044] */
 	
-	IF ~~ THEN
-	EXIT
+	COPY_TRANS XALDGD XA_LD_LastChance
 END
 
-IF ~~ THEN BEGIN XA_LD_HaerDalisLich
-	SAY @210 /*~[PENDING IMPLEMENTATION].~*/
+IF ~~ THEN BEGIN XA_LD_Undo
+	SAY @179  /* “If it can…” Morris says, slowly training off, “…you have asked the wrong person.”~ [xald1045]*/
 	
-	IF ~~ THEN
-	EXIT
+	IF ~~ THEN REPLY @180  /*~Who’s the right person?~ */
+	GOTO XA_LD_Undo2
 END
 
-IF ~~ THEN BEGIN XA_LD_ImoenLich
-	SAY @210 /*~[PENDING IMPLEMENTATION].~*/
+IF ~~ THEN BEGIN XA_LD_Undo2
+	SAY @181  /* ~Morris slowly shrugs.~ [xald1046]*/
 	
-	IF ~~ THEN
-	EXIT
+	COPY_TRANS XALDGD XA_LD_LastChance
 END
 
-IF ~~ THEN BEGIN XA_LD_NeeraLich
-	SAY @210 /*~[PENDING IMPLEMENTATION].~*/
-	
-	IF ~~ THEN
+IF ~~ THEN BEGIN XA_LD_Transform
+	SAY @233  /* ~Prepare yourself...~ */
+
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 0)
+		PartyGoldGT(119999)
+	~ THEN 
+	DO ~
+		TakePartyGold(120000)
+		SetGlobal("XA_LD_GaveDust", "GLOBAL", 0)
+		SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
+	~
 	EXIT
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 1)
+		PartyGoldGT(99999)
+	~ THEN
+	DO ~
+		TakePartyGold(100000)
+		SetGlobal("XA_LD_GaveDust", "GLOBAL", 0)
+		SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
+	~
+	EXIT
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 2)
+		PartyGoldGT(74999)
+	~ THEN
+	DO ~
+		TakePartyGold(75000)
+		SetGlobal("XA_LD_GaveDust", "GLOBAL", 0)
+		SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
+	~
+	EXIT
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 3)
+		PartyGoldGT(49999)
+	~ THEN
+	DO ~
+		TakePartyGold(50000)
+		SetGlobal("XA_LD_GaveDust", "GLOBAL", 0)
+		SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
+	~
+	EXIT
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 4)
+		PartyGoldGT(39999)
+	~ THEN
+	DO ~
+		TakePartyGold(40000)
+		SetGlobal("XA_LD_GaveDust", "GLOBAL", 0)
+		SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
+	~
+	EXIT
+
 END
 
-IF ~~ THEN BEGIN XA_LD_SarevokLich
-	SAY @210 /*~[PENDING IMPLEMENTATION].~*/
-	
-	IF ~~ THEN
-	EXIT
-END
-
-IF ~~ THEN BEGIN XA_LD_ViconiaLich
-	SAY @210 /*~[PENDING IMPLEMENTATION].~*/
-	
-	IF ~~ THEN
-	EXIT
-END
-//}
 CHAIN XALDGD XA_LD_Chain_ConfirmCharname1
 	@150 /*~Morris nods in understanding.~*/
 	
@@ -1348,12 +1391,18 @@ END XALDGD XA_LD_ChooseAnother
 
 CHAIN EDWINJ XA_LD_Chain_ChooseEdwin
 	@207 /*~<CHARNAME>, I am glad your superior intellect has so quickly led you to this decision.  I graciously and eagerly accept my new immortal life.~ [eemored3]*/
-END XALDGD XA_LD_EdwinLich
+	DO ~
+		SetGlobal("XA_LD_TransformLich", "LOCALS", 1)
+	~
+END XALDGD XA_LD_Transform
 
 CHAIN HAERDAJ XA_LD_Chain_ChooseHaerDalis
 	@208 /*~<CHARNAME>, I have no need of undeath for immortality.  My tiefling heritage already grants me that.~*/
 	= @209 /*~But my heart is eager with curiosity to be able to write about this experience and set it to the stage!  For this, I accept.~*/
-END XALDGD XA_LD_HaerDalisLich
+	DO ~
+		SetGlobal("XA_LD_TransformLich", "LOCALS", 1)
+	~
+END XALDGD XA_LD_Transform
 
 CHAIN JAHEIRAJ XA_LD_Chain_ChooseJaheira
 	@211 /*~<CHARNAME>, I have no desire to become some undead abomination!  Stop asking!~*/
@@ -1375,11 +1424,17 @@ CHAIN NEERAJ XA_LD_Chain_ChooseNeera
 	@217 /*~Now I wonder what’s better - wild magic or undeath.  I -suppose- that being undead would make me immune to a -lot- more oopsies!~*/
 	
 	= @218 /*~<CHARNAME>, I think what I’m trying to say is yes.  But if it hurts, expect me to scream and cry and maybe run away.~*/
-END XALDGD XA_LD_NeeraLich
+	DO ~
+		SetGlobal("XA_LD_TransformLich", "LOCALS", 1)
+	~
+END XALDGD XA_LD_Transform
 
 CHAIN SAREV25J XA_LD_Chain_ChooseSarevok
 	@219 /*~<PRO_BROTHERSISTER>, you would help me regain power like the divine essence I lost?  What a wise and gracious <PRO_MANWOMAN> you are!~*/
-END XALDGD XA_LD_SarevokLich
+	DO ~
+		SetGlobal("XA_LD_TransformLich", "LOCALS", 1)
+	~
+END XALDGD XA_LD_Transform
 
 CHAIN VALYGARJ XA_LD_Chain_ChooseValygar
 	@220 /*~<CHARNAME>, consider this your warning:  Had I not known and respected you as I have, your proposal would have driven me to violence against you.~*/
