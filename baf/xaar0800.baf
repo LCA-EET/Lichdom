@@ -17,3 +17,4 @@ THEN
 		SetGlobal("XA_LD_MorrisKilledInAthkatla", "GLOBAL", 1)
 		Continue()
 END
+

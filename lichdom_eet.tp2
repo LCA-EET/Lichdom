@@ -202,6 +202,13 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 //}
 
 //{ ITM
+	//{ Crown of the Lich
+		COPY ~lichdom/itm/xaldcrwn.itm~ ~override~
+		SAY NAME1 @33
+		SAY NAME2 @33
+		SAY DESC @33
+	//}
+	
 	COPY ~lichdom/itm/xaldclaw.itm~ ~override~
 	SAY NAME1 @16
 	SAY NAME2 @16

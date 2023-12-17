@@ -991,7 +991,7 @@ IF ~~ THEN BEGIN XA_LD_LastChance
 	
 	IF ~~ THEN REPLY @184  /* ~Yes!  I trust you, Gravetender Morris, to perform this lichdom ritual!~*/
 	DO ~
-		SetGlobal("XA_LD_TransformLich_P1", "GLOBAL", 1)
+		ActionOverride(Player1, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
 	~
 	GOTO XA_LD_Transform
 END

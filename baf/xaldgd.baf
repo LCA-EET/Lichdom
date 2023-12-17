@@ -1,4 +1,46 @@
 IF
+	TriggerOverride(Player1, Global("XA_LD_TransformLich", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		StartCutScene("xaldtr01")
+END
+
+IF
+	TriggerOverride(Player2, Global("XA_LD_TransformLich", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		StartCutScene("xaldtr02")
+END
+
+IF
+	TriggerOverride(Player3, Global("XA_LD_TransformLich", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		StartCutScene("xaldtr03")
+END
+
+IF
+	TriggerOverride(Player4, Global("XA_LD_TransformLich", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		StartCutScene("xaldtr04")
+END
+
+IF
+	TriggerOverride(Player5, Global("XA_LD_TransformLich", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		StartCutScene("xaldtr05")
+END
+
+IF
+	TriggerOverride(Player6, Global("XA_LD_TransformLich", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		StartCutScene("xaldtr06")
+END
+
+IF
 	AreaCheck("AR0800")
 	PickPocketFailed([ANYONE])
 	GlobalLT("XA_LD_PP0800", "LOCALS", 1)
