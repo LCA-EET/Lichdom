@@ -1,3 +1,126 @@
+//{ Crown of the Lich Undead Flag
+IF
+	!Race(Player1, LICH)
+	HasItemEquiped("xaldcrwn", Player1)
+	!General(Player1, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player1, UNDEAD)
+		Continue()
+END
+
+IF
+	!Race(Player2, LICH)
+	HasItemEquiped("xaldcrwn", Player2)
+	!General(Player2, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player2, UNDEAD)
+		Continue()
+END
+
+IF
+	!Race(Player3, LICH)
+	HasItemEquiped("xaldcrwn", Player3)
+	!General(Player3, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player3, UNDEAD)
+		Continue()
+END
+
+IF
+	!Race(Player4, LICH)
+	HasItemEquiped("xaldcrwn", Player4)
+	!General(Player4, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player4, UNDEAD)
+		Continue()
+END
+
+IF
+	!Race(Player5, LICH)
+	HasItemEquiped("xaldcrwn", Player5)
+	!General(Player5, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player5, UNDEAD)
+		Continue()
+END
+
+IF
+	!Race(Player6, LICH)
+	HasItemEquiped("xaldcrwn", Player6)
+	!General(Player6, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player6, UNDEAD)
+		Continue()
+END
+
+IF
+	!Race(Player1, LICH)
+	!HasItemEquiped("xaldcrwn", Player1)
+	General(Player1, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player1, HUMANOID)
+		Continue()
+END
+
+IF
+	!Race(Player2, LICH)
+	!HasItemEquiped("xaldcrwn", Player2)
+	General(Player2, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player2, HUMANOID)
+		Continue()
+END
+
+IF
+	!Race(Player3, LICH)
+	!HasItemEquiped("xaldcrwn", Player3)
+	General(Player3, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player3, HUMANOID)
+		Continue()
+END
+
+IF
+	!Race(Player4, LICH)
+	!HasItemEquiped("xaldcrwn", Player4)
+	General(Player4, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player4, HUMANOID)
+		Continue()
+END
+
+IF
+	!Race(Player5, LICH)
+	!HasItemEquiped("xaldcrwn", Player5)
+	General(Player5, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player5, HUMANOID)
+		Continue()
+END
+
+IF
+	!Race(Player6, LICH)
+	!HasItemEquiped("xaldcrwn", Player6)
+	General(Player6, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player6, HUMANOID)
+		Continue()
+END
+
+//}
+
 //{ Romance Termination
 IF
 	Race(Player1, LICH)

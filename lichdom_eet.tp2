@@ -26,8 +26,48 @@ BEGIN
 @0 /* ~Lichdom, for Baldur's Gate EET.~ */
 REQUIRE_PREDICATE GAME_IS ~bgee eet~ @1 /* ~This mod requires the EET mod to be installed.~ */
 
+
+
 COMPILE EVALUATE_BUFFER ~lichdom/d~
 COMPILE EVALUATE_BUFFER ~lichdom/baf~ 
+
+//{ Config file processing
+INCLUDE ~ldconfig.cfg~
+
+PATCH_IF (xald_crowns > 0) AND (xald_crowns < 7)
+	COPY_EXISTING ~garlena.sto~ ~override~
+	LPF ADD_STORE_ITEM_EX
+		STR_VAR
+		item_name = ~xaldcrwn~
+		INT_VAR
+		stack = xald_crowns
+	END
+END
+
+PATCH_IF (xald_cost = 1) 
+	EXTEND_TOP ~BALDUR.BCS~ 	~lichdom/baf/xaldc001.baf~
+	EXTEND_TOP ~BDBALDUR.BCS~ 	~lichdom/baf/xaldc001.baf~
+	EXTEND_TOP ~BALDUR25.BCS~ 	~lichdom/baf/xaldc001.baf~
+END
+
+PATCH_IF (xald_cost = 2) 
+	EXTEND_TOP ~BALDUR.BCS~ 	~lichdom/baf/xaldc002.baf~
+	EXTEND_TOP ~BDBALDUR.BCS~ 	~lichdom/baf/xaldc002.baf~
+	EXTEND_TOP ~BALDUR25.BCS~ 	~lichdom/baf/xaldc002.baf~
+END
+
+PATCH_IF (xald_cost = 3) 
+	EXTEND_TOP ~BALDUR.BCS~ 	~lichdom/baf/xaldc003.baf~
+	EXTEND_TOP ~BDBALDUR.BCS~ 	~lichdom/baf/xaldc003.baf~
+	EXTEND_TOP ~BALDUR25.BCS~ 	~lichdom/baf/xaldc003.baf~
+END
+
+PATCH_IF (xald_cost = 4) 
+	EXTEND_TOP ~BALDUR.BCS~ 	~lichdom/baf/xaldc004.baf~
+	EXTEND_TOP ~BDBALDUR.BCS~ 	~lichdom/baf/xaldc004.baf~
+	EXTEND_TOP ~BALDUR25.BCS~ 	~lichdom/baf/xaldc004.baf~
+END
+//}
 
 //{ WAV
 	COPY ~lichdom/wav/xald1000.wav~ ~override~
@@ -206,7 +246,7 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 		COPY ~lichdom/itm/xaldcrwn.itm~ ~override~
 		SAY NAME1 @33
 		SAY NAME2 @33
-		SAY DESC @33
+		SAY DESC @34
 	//}
 	
 	COPY ~lichdom/itm/xaldclaw.itm~ ~override~
