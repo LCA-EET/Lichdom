@@ -32,41 +32,57 @@ COMPILE EVALUATE_BUFFER ~lichdom/d~
 COMPILE EVALUATE_BUFFER ~lichdom/baf~ 
 
 //{ Config file processing
-INCLUDE ~ldconfig.cfg~
 
-PATCH_IF (xald_crowns > 0) AND (xald_crowns < 7)
-	COPY_EXISTING ~garlena.sto~ ~override~
-	LPF ADD_STORE_ITEM_EX
-		STR_VAR
-		item_name = ~xaldcrwn~
-		INT_VAR
-		stack = xald_crowns
-	END
+INCLUDE ~Lichdom/ldconfig.cfg~
+COPY_EXISTING ~garlena.sto~ ~override~
+PATCH_IF (xald_crowns = 1) THEN BEGIN
+	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #1
 END
 
-PATCH_IF (xald_cost = 1) 
+PATCH_IF (xald_crowns = 2) THEN BEGIN
+	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #2
+END
+
+PATCH_IF (xald_crowns = 3) THEN BEGIN
+	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #3
+END
+
+PATCH_IF (xald_crowns = 4) THEN BEGIN
+	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #4
+END
+
+PATCH_IF (xald_crowns = 5) THEN BEGIN
+	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #5
+END
+
+PATCH_IF (xald_crowns = 6) THEN BEGIN
+	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #6
+END
+
+ACTION_IF (xald_cost = 1) THEN BEGIN
 	EXTEND_TOP ~BALDUR.BCS~ 	~lichdom/baf/xaldc001.baf~
 	EXTEND_TOP ~BDBALDUR.BCS~ 	~lichdom/baf/xaldc001.baf~
 	EXTEND_TOP ~BALDUR25.BCS~ 	~lichdom/baf/xaldc001.baf~
 END
 
-PATCH_IF (xald_cost = 2) 
+ACTION_IF (xald_cost = 2) THEN BEGIN 
 	EXTEND_TOP ~BALDUR.BCS~ 	~lichdom/baf/xaldc002.baf~
 	EXTEND_TOP ~BDBALDUR.BCS~ 	~lichdom/baf/xaldc002.baf~
 	EXTEND_TOP ~BALDUR25.BCS~ 	~lichdom/baf/xaldc002.baf~
 END
 
-PATCH_IF (xald_cost = 3) 
+ACTION_IF (xald_cost = 3)  THEN BEGIN
 	EXTEND_TOP ~BALDUR.BCS~ 	~lichdom/baf/xaldc003.baf~
 	EXTEND_TOP ~BDBALDUR.BCS~ 	~lichdom/baf/xaldc003.baf~
 	EXTEND_TOP ~BALDUR25.BCS~ 	~lichdom/baf/xaldc003.baf~
 END
 
-PATCH_IF (xald_cost = 4) 
+ACTION_IF (xald_cost = 4)  THEN BEGIN
 	EXTEND_TOP ~BALDUR.BCS~ 	~lichdom/baf/xaldc004.baf~
 	EXTEND_TOP ~BDBALDUR.BCS~ 	~lichdom/baf/xaldc004.baf~
 	EXTEND_TOP ~BALDUR25.BCS~ 	~lichdom/baf/xaldc004.baf~
 END
+
 //}
 
 //{ WAV
