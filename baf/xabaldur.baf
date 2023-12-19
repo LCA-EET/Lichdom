@@ -1,3 +1,4 @@
+
 //{ Crown of the Lich Undead Flag
 IF
 	!Race(Player1, LICH)
@@ -1105,6 +1106,7 @@ END
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			ActionOverride(Player1, AddSpecialAbility("xaldasst"))
+			ActionOverride(Player1, AddSpecialAbility("xaldanim"))
 			SetGlobal("XA_LD_AddAssistantTimerSet", "GLOBAL", 0)
 			SetInterrupt(TRUE)
 			Continue()

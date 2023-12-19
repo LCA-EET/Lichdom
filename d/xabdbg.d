@@ -164,8 +164,20 @@ IF ~
 	~
 	EXIT
 	
+	IF ~~ THEN REPLY @46
+	DO ~
+		GiveItemCreate("xaldcrwn", LastTalkedToBy(Myself),1,0,0)
+	~
+	EXIT
+	
 	IF ~~ THEN REPLY @2
 	EXIT	
+	
+	IF ~~ THEN REPLY @47
+	DO ~
+		DestroySelf()
+	~
+	EXIT
 END
 
 IF ~~ THEN BEGIN XA_ReportRace

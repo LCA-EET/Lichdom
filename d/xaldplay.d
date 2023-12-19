@@ -38,6 +38,12 @@ APPEND ~PLAYER1~
 		IF ~~ THEN REPLY @57 /*~Change animation options.~*/
 		GOTO XA_ChangeAnimation
 		
+		IF ~~ THEN REPLY @78
+		DO ~
+			CreateCreature("xabdbg", [-1.-1], N)
+		~
+		GOTO XA_ExitAssistant
+		
 		IF ~~ THEN REPLY @1 /*~Exit.~*/
 		GOTO XA_ExitAssistant
 	END

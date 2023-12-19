@@ -473,6 +473,20 @@ END
 		SAY DESC @13
 	//}
 	
+	//{ Lich Amination
+		COPY ~lichdom/spl/xaldani2.spl~ ~override~
+		SAY NAME1 @13
+		SAY UNIDENTIFIED_DESC @13
+		SAY DESC @13
+	//}
+	
+	//{ Revert Amination
+		COPY ~lichdom/spl/xaldani3.spl~ ~override~
+		SAY NAME1 @35
+		SAY UNIDENTIFIED_DESC @35
+		SAY DESC @35
+	//}
+	
 	//{ Lichdom Assistant
 	COPY ~lichdom/spl/xaldasst.spl~ ~override~
 	SAY NAME1 @7
