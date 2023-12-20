@@ -403,6 +403,177 @@ END
 //{ Paralyzing Touch Toggle
 IF
 	TriggerOverride(Player1, ActionListEmpty())
+	TriggerOverride(Player1, Global("xaldatt2", "LOCALS", 1))
+	!HasItemEquiped("xaldcla2", Player1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player1, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player1, CreateItem("xaldcla2", 0,0,0))
+		ActionOverride(Player1, SetItemFlags("xaldcla2", IDENTIFIED, TRUE))
+		ActionOverride(Player1, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player1, XEquipItem("xaldcla2",Myself,SLOT_WEAPON,EQUIP))
+		//DisplayStringHead(Myself, ~A~)
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player1, ActionListEmpty())
+	TriggerOverride(Player1, Global("xaldatt2", "LOCALS", 1))
+	HasItemEquiped("xaldcla2", Player1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player1, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player1, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player1, DestroyItem("xaldcla2"))
+		//DisplayStringHead(Myself, ~B~)
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player2, ActionListEmpty())
+	TriggerOverride(Player2, Global("xaldatt2", "LOCALS", 1))
+	!HasItemEquiped("xaldcla2", Player2)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player2, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player2, CreateItem("xaldcla2", 0,0,0))
+		ActionOverride(Player2, SetItemFlags("xaldcla2", IDENTIFIED, TRUE))
+		ActionOverride(Player2, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player2, XEquipItem("xaldcla2",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player2, ActionListEmpty())
+	TriggerOverride(Player2, Global("xaldatt2", "LOCALS", 1))
+	HasItemEquiped("xaldcla2", Player2)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player2, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player2, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player2, DestroyItem("xaldcla2"))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player3, ActionListEmpty())
+	TriggerOverride(Player3, Global("xaldatt2", "LOCALS", 1))
+	!HasItemEquiped("xaldcla2", Player3)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player3, SetGlobal("xaldatt2", "LOCALS",2))
+		ActionOverride(Player3, CreateItem("xaldcla2", 0,0,0))
+		ActionOverride(Player3, SetItemFlags("xaldcla2", IDENTIFIED, TRUE))
+		ActionOverride(Player3, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player3, XEquipItem("xaldcla2",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player3, ActionListEmpty())
+	TriggerOverride(Player3, Global("xaldatt2", "LOCALS", 1))
+	HasItemEquiped("xaldcla2", Player3)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player3, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player3, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player3, DestroyItem("xaldcla2"))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player4, ActionListEmpty())
+	TriggerOverride(Player4, Global("xaldatt2", "LOCALS", 1))
+	!HasItemEquiped("xaldcla2", Player4)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player4, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player4, CreateItem("xaldcla2", 0,0,0))
+		ActionOverride(Player4, SetItemFlags("xaldcla2", IDENTIFIED, TRUE))
+		ActionOverride(Player4, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player4, XEquipItem("xaldcla2",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player4, ActionListEmpty())
+	TriggerOverride(Player4, Global("xaldatt2", "LOCALS", 1))
+	HasItemEquiped("xaldcla2", Player4)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player4, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player4, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player4, DestroyItem("xaldcla2"))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player5, ActionListEmpty())
+	TriggerOverride(Player5, Global("xaldatt2", "LOCALS", 1))
+	!HasItemEquiped("xaldcla2", Player5)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player5, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player5, CreateItem("xaldcla2", 0,0,0))
+		ActionOverride(Player5, SetItemFlags("xaldcla2", IDENTIFIED, TRUE))
+		ActionOverride(Player5, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player5, XEquipItem("xaldcla2",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player5, ActionListEmpty())
+	TriggerOverride(Player5, Global("xaldatt2", "LOCALS", 1))
+	HasItemEquiped("xaldcla2", Player5)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player5, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player5, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player5, DestroyItem("xaldcla2"))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player6, ActionListEmpty())
+	TriggerOverride(Player6, Global("xaldatt2", "LOCALS", 1))
+	!HasItemEquiped("xaldcla2", Player6)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player6, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player6, CreateItem("xaldcla2", 0,0,0))
+		ActionOverride(Player6, SetItemFlags("xaldcla2", IDENTIFIED, TRUE))
+		ActionOverride(Player6, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player6, XEquipItem("xaldcla2",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player6, ActionListEmpty())
+	TriggerOverride(Player6, Global("xaldatt2", "LOCALS", 1))
+	HasItemEquiped("xaldcla2", Player6)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player6, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player6, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player6, DestroyItem("xaldcla2"))
+		SetInterrupt(TRUE)
+END
+
+
+IF
+	TriggerOverride(Player1, ActionListEmpty())
 	TriggerOverride(Player1, Global("xaldattk", "LOCALS", 1))
 	!HasItemEquiped("xaldclaw", Player1)
 THEN

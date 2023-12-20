@@ -1032,6 +1032,7 @@ IF ~~ THEN BEGIN XA_LD_Transform
 		TakePartyGold(120000)
 		SetGlobal("XA_LD_GaveDust", "GLOBAL", 0)
 		SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
+		SetGlobal("XA_LD_Touch5", "GLOBAL", 1)
 	~
 	EXIT
 	

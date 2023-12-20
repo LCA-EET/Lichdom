@@ -1,15 +1,3 @@
-//{
-
-/*
-IF 
-	True()
-THEN
-	RESPONSE #100
-		DisplayStringHead(Myself, @0)
-		Continue()
-END
-*/
-
 IF
 	GlobalLT("XA_LD_LichTransformation", "LOCALS", 1)
 THEN
@@ -257,10 +245,24 @@ END
 //{ Paralyzing Touch
 	IF
 		GlobalLT("XA_LD_TouchAbility_Done", "LOCALS", 1)
+		GlobalLT("XA_LD_Touch5", "GLOBAL", 1)
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			AddSpecialAbility("xaldattk")
+			SetGlobal("XA_LD_TouchAbility_Done", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		GlobalLT("XA_LD_TouchAbility_Done", "LOCALS", 1)
+		Global("XA_LD_Touch5", "GLOBAL", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			AddSpecialAbility("xaldatt2")
+			SetGlobal("XA_LD_Touch5", "GLOBAL", 0)
 			SetGlobal("XA_LD_TouchAbility_Done", "LOCALS", 1)
 			SetInterrupt(TRUE)
 			Continue()
@@ -595,51 +597,6 @@ THEN
 		Continue()
 END
 //}
-
-//{ Create and Equip Paralyzing Touch
-IF
-	!HasItem("xaldclaw", Myself)
-	GlobalLT("XA_LD_Touch5", "LOCALS", 1)
-THEN
-	RESPONSE #100
-		SetInterrupt(FALSE)
-		CreateItem("xaldclaw", 0,0,0)
-		SetItemFlags("xaldclaw", IDENTIFIED, TRUE)
-		SetInterrupt(TRUE)
-		Continue()
-END
-
-IF
-	!HasItemEquiped("xaldclaw", Myself)
-	GlobalLT("XA_LD_Touch5", "LOCALS", 1)
-THEN
-	RESPONSE #100
-		XEquipItem("xaldclaw",Myself,SLOT_WEAPON,EQUIP)
-		Continue()
-END
-
-IF
-	!HasItem("xaldcla2", Myself)
-	Global("XA_LD_Touch5", "LOCALS", 1)
-THEN
-	RESPONSE #100
-		SetInterrupt(FALSE)
-		CreateItem("xaldcla2", 0,0,0)
-		SetItemFlags("xaldcla2", IDENTIFIED, TRUE)
-		SetInterrupt(TRUE)
-		Continue()
-END
-
-IF
-	!HasItemEquiped("xaldcla2", Myself)
-	Global("XA_LD_Touch5", "LOCALS", 1)
-THEN
-	RESPONSE #100
-		XEquipItem("xaldcla2",Myself,SLOT_WEAPON,EQUIP)
-		Continue()
-END
-//}
-
 IF
 	Global("XA_LD_ChangeAlignment", "LOCALS", 1)
 	Global("XA_LD_Animation_Done", "LOCALS", 1)
