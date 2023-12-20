@@ -269,6 +269,10 @@ END
 	SAY NAME1 @16
 	SAY NAME2 @16
 
+	COPY ~lichdom/itm/xaldcla2.itm~ ~override~
+	SAY NAME1 @16
+	SAY NAME2 @16
+	
 	COPY ~lichdom/itm/xaldphyl.itm~ ~override~
 	SAY NAME2 @2
 	SAY DESC @3

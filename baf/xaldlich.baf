@@ -599,6 +599,7 @@ END
 //{ Create and Equip Paralyzing Touch
 IF
 	!HasItem("xaldclaw", Myself)
+	GlobalLT("XA_LD_Touch5", "LOCALS", 1)
 THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
@@ -610,9 +611,31 @@ END
 
 IF
 	!HasItemEquiped("xaldclaw", Myself)
+	GlobalLT("XA_LD_Touch5", "LOCALS", 1)
 THEN
 	RESPONSE #100
 		XEquipItem("xaldclaw",Myself,SLOT_WEAPON,EQUIP)
+		Continue()
+END
+
+IF
+	!HasItem("xaldcla2", Myself)
+	Global("XA_LD_Touch5", "LOCALS", 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		CreateItem("xaldcla2", 0,0,0)
+		SetItemFlags("xaldcla2", IDENTIFIED, TRUE)
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	!HasItemEquiped("xaldcla2", Myself)
+	Global("XA_LD_Touch5", "LOCALS", 1)
+THEN
+	RESPONSE #100
+		XEquipItem("xaldcla2",Myself,SLOT_WEAPON,EQUIP)
 		Continue()
 END
 //}
