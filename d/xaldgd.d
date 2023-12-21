@@ -433,6 +433,9 @@ IF ~~ THEN BEGIN XA_LD_PayMoney_NoDialog
 		!Kit(Player1, WIZARDSLAYER)
 		!General(Player1, UNDEAD)
 		LevelGT(Player1, 11)
+		OR(2)
+			AreaCheck("AR5000")
+			GlobalLT("AsylumPlot","GLOBAL",40)
 	~ THEN REPLY @234 /*~(Choose Player 1)~*/
 	DO ~
 		ActionOverride(Player1, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
@@ -441,6 +444,8 @@ IF ~~ THEN BEGIN XA_LD_PayMoney_NoDialog
 	
 	IF ~
 		NumInPartyGT(1)
+		!Name("Imoen", Player2)
+		!Name("None", Player2)
 		!Class(Player2, FIGHTER)
 		!Class(Player2, THIEF)
 		!Class(Player2, FIGHTER_THIEF)
@@ -455,6 +460,8 @@ IF ~~ THEN BEGIN XA_LD_PayMoney_NoDialog
 	
 	IF ~
 		NumInPartyGT(2)
+		!Name("Imoen", Player3)
+		!Name("None", Player3)
 		!Class(Player3, FIGHTER)
 		!Class(Player3, THIEF)
 		!Class(Player3, FIGHTER_THIEF)
@@ -469,6 +476,8 @@ IF ~~ THEN BEGIN XA_LD_PayMoney_NoDialog
 	
 	IF ~
 		NumInPartyGT(3)
+		!Name("Imoen", Player4)
+		!Name("None", Player4)
 		!Class(Player4, FIGHTER)
 		!Class(Player4, THIEF)
 		!Class(Player4, FIGHTER_THIEF)
@@ -483,6 +492,8 @@ IF ~~ THEN BEGIN XA_LD_PayMoney_NoDialog
 	
 	IF ~
 		NumInPartyGT(4)
+		!Name("Imoen", Player5)
+		!Name("None", Player5)
 		!Class(Player5, FIGHTER)
 		!Class(Player5, THIEF)
 		!Class(Player5, FIGHTER_THIEF)
@@ -497,6 +508,8 @@ IF ~~ THEN BEGIN XA_LD_PayMoney_NoDialog
 	
 	IF ~
 		NumInPartyGT(5)
+		!Name("Imoen", Player6)
+		!Name("None", Player6)
 		!Class(Player6, FIGHTER)
 		!Class(Player6, THIEF)
 		!Class(Player6, FIGHTER_THIEF)
@@ -509,7 +522,8 @@ IF ~~ THEN BEGIN XA_LD_PayMoney_NoDialog
 	~
 	GOTO XA_LD_Transform
 	
-	
+	IF ~~ THEN REPLY @240 /*~I need more time to make a decision.~*/
+	GOTO XA_LD_Reconsider
 END
 
 IF ~~ THEN BEGIN XA_LD_PayMoney
@@ -522,6 +536,9 @@ IF ~~ THEN BEGIN XA_LD_PayMoney
 		!Kit(Player1, WIZARDSLAYER)
 		!General(Player1, UNDEAD)
 		LevelGT(Player1, 11)
+		OR(2)
+			AreaCheck("AR5000")
+			GlobalLT("AsylumPlot","GLOBAL",40)
 	~ THEN REPLY @108  /* ~(Choose <CHARNAME>.)~ */
 	GOTO XA_LD_Chain_ChooseCharname
 	
@@ -642,6 +659,8 @@ IF ~~ THEN BEGIN XA_LD_PayMoney
 	~ THEN REPLY @198 /* (Choose Yosihmo.)*/
 	GOTO XA_LD_NoYoshimo
 	
+	IF ~~ THEN REPLY @240 /*~I need more time to make a decision.~*/
+	GOTO XA_LD_Reconsider
 END
 
 IF ~~ THEN BEGIN XA_LD_ChooseImoen_NoSoul
