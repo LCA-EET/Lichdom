@@ -842,7 +842,7 @@ THEN
 END
 
 IF
-	//!ActuallyInCombat()
+	!TriggerOverride(Player1, See([ENEMY]))
 	GlobalLT("XA_LD_LichRez1", "GLOBAL", 1)
 	Global("XA_LD_LichResurrection", "GLOBAL", 0)
 	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
@@ -856,7 +856,7 @@ THEN
 END
 
 IF
-	//!ActuallyInCombat()
+	!TriggerOverride(Player2, See([ENEMY]))
 	GlobalLT("XA_LD_LichRez2", "GLOBAL", 1)
 	Global("XA_LD_LichResurrection", "GLOBAL", 0)
 	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
@@ -870,7 +870,7 @@ THEN
 END
 
 IF
-	//!ActuallyInCombat()
+	!TriggerOverride(Player3, See([ENEMY]))
 	GlobalLT("XA_LD_LichRez3", "GLOBAL", 1)
 	Global("XA_LD_LichResurrection", "GLOBAL", 0)
 	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
@@ -884,7 +884,7 @@ THEN
 END
 
 IF
-	//!ActuallyInCombat()
+	!TriggerOverride(Player4, See([ENEMY]))
 	GlobalLT("XA_LD_LichRez4", "GLOBAL", 1)
 	Global("XA_LD_LichResurrection", "GLOBAL", 0)
 	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
@@ -898,7 +898,7 @@ THEN
 END
 
 IF
-	//!ActuallyInCombat()
+	!TriggerOverride(Player5, See([ENEMY]))
 	GlobalLT("XA_LD_LichRez5", "GLOBAL", 1)
 	Global("XA_LD_LichResurrection", "GLOBAL", 0)
 	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
@@ -913,6 +913,8 @@ END
 
 IF
 	//!ActuallyInCombat()
+	NumInParty(6)
+	!TriggerOverride(Player6, See([ENEMY]))
 	GlobalLT("XA_LD_LichRez6", "GLOBAL", 1)
 	Global("XA_LD_LichResurrection", "GLOBAL", 0)
 	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
@@ -952,7 +954,7 @@ THEN
 END
 
 IF
-	!ActuallyInCombat()
+	!TriggerOverride(Player2, See([ENEMY]))
 	GlobalLT("XA_LD_LichRez2", "GLOBAL", 1)
 	Global("XA_LD_LichResurrection", "GLOBAL", 1)
 	TriggerOverride(Player2, GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1))
@@ -965,7 +967,7 @@ THEN
 END
 
 IF
-	!ActuallyInCombat()
+	!TriggerOverride(Player3, See([ENEMY]))
 	GlobalLT("XA_LD_LichRez3", "GLOBAL", 1)
 	Global("XA_LD_LichResurrection", "GLOBAL", 1)
 	TriggerOverride(Player3, GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1))
@@ -978,7 +980,7 @@ THEN
 END
 
 IF
-	!ActuallyInCombat()
+	!TriggerOverride(Player4, See([ENEMY]))
 	GlobalLT("XA_LD_LichRez4", "GLOBAL", 1)
 	Global("XA_LD_LichResurrection", "GLOBAL", 1)
 	TriggerOverride(Player4, GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1))
@@ -991,7 +993,7 @@ THEN
 END
 
 IF
-	!ActuallyInCombat()
+	!TriggerOverride(Player5, See([ENEMY]))
 	GlobalLT("XA_LD_LichRez5", "GLOBAL", 1)
 	Global("XA_LD_LichResurrection", "GLOBAL", 1)
 	TriggerOverride(Player5, GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1))
@@ -1004,7 +1006,7 @@ THEN
 END
 
 IF
-	!ActuallyInCombat()
+	!TriggerOverride(Player6, See([ENEMY]))
 	GlobalLT("XA_LD_LichRez6", "GLOBAL", 1)
 	Global("XA_LD_LichResurrection", "GLOBAL", 1)
 	TriggerOverride(Player6, GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1))
