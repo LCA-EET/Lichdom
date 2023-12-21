@@ -73,13 +73,13 @@ APPEND ~PLAYER1~
 	IF ~~ THEN BEGIN XA_LichEquip
 		SAY @75 /*~Is a lich allergic to (unable to equip, regardless of proficiencies) to items that harm undead such as a Mace of Disruption, a Flame Tongue/Burning Earth Sword, a Protection from Undead scroll, or an Azuredge Axe?  Note that your normal proficiencies apply, regardless of this option, and if you enable this option with anti-Undead items equipped, you will immediately unequip or drop them.~*/
 		
-		IF ~~ THEN REPLY @76
+		IF ~~ THEN REPLY @76 /* ~No. (Default)~*/
 		DO ~
 			SetGlobal("XA_LD_LichEquip", "GLOBAL", 0)
 		~
 		GOTO XA_ChangeProcessed
 		
-		IF ~~ THEN REPLY @77
+		IF ~~ THEN REPLY @77 /* ~Yes.~*/
 		DO ~
 			SetGlobal("XA_LD_LichEquip", "GLOBAL", 1)
 		~
@@ -136,31 +136,31 @@ APPEND ~PLAYER1~
 	IF ~~ THEN BEGIN XA_AdvanceTime
 		SAY @61
 		
-		IF ~~ THEN REPLY @62
+		IF ~~ THEN REPLY @62 /* ~One Hour.~*/
 		DO ~
 			AdvanceTime(ONE_HOUR)
 		~
 		GOTO XA_MainMenu
 		
-		IF ~~ THEN REPLY @63
+		IF ~~ THEN REPLY @63 /* ~Two Hours.~*/
 		DO ~
 			AdvanceTime(TWO_HOURS)
 		~
 		GOTO XA_MainMenu
 		
-		IF ~~ THEN REPLY @64
+		IF ~~ THEN REPLY @64 /* ~Four Hours.~*/
 		DO ~
 			AdvanceTime(FOUR_HOURS)
 		~
 		GOTO XA_MainMenu
 		
-		IF ~~ THEN REPLY @65
+		IF ~~ THEN REPLY @65 /* ~Eight Hours.~*/
 		DO ~
 			AdvanceTime(EIGHT_HOURS)
 		~
 		GOTO XA_MainMenu
 		
-		IF ~~ THEN REPLY @66
+		IF ~~ THEN REPLY @66 /* ~One Day.~*/
 		DO ~
 			AdvanceTime(ONE_DAY)
 		~

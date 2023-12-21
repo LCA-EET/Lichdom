@@ -85,6 +85,12 @@ IF ~
 	DO ~
 		SetGlobal("XA_LD_GaveDust", "GLOBAL", 1)
 		TakePartyItemNum("xalddust", 3)
+		AddXPObject(Player1, 25000)
+		AddXPObject(Player2, 25000)
+		AddXPObject(Player3, 25000)
+		AddXPObject(Player4, 25000)
+		AddXPObject(Player5, 25000)
+		AddXPObject(Player6, 25000)
 	~
 	GOTO XA_LD_GaveDust
 	
