@@ -41,7 +41,9 @@ THEN
 END
 
 IF
-	AreaCheck("AR0800")
+	OR(2)
+		AreaCheck("AR0800")
+		Global("XA_LD_AR0800", "GLOBAL", 1)
 	PickPocketFailed([ANYONE])
 	GlobalLT("XA_LD_PP0800", "LOCALS", 1)
 THEN
@@ -54,7 +56,9 @@ THEN
 END
 
 IF
-	AreaCheck("AR5000")
+	OR(2)
+		AreaCheck("AR5000")
+		Global("XA_LD_AR5000", "GLOBAL", 1)
 	PickPocketFailed([ANYONE])
 	GlobalLT("XA_LD_PP5000", "LOCALS", 1)
 THEN
@@ -67,7 +71,9 @@ THEN
 END
 
 IF
-	AreaCheck("AR0800")
+	OR(2)
+		AreaCheck("AR0800")
+		Global("XA_LD_AR0800", "GLOBAL", 1)
 	OR(2)
 		HPPercentLT(Myself, 100)
 		See(NearestEnemyOf(Myself))
@@ -91,7 +97,9 @@ THEN
 END
 
 IF
-	AreaCheck("AR5000")
+	OR(2)
+		AreaCheck("AR5000")
+		Global("XA_LD_AR5000", "GLOBAL", 1)
 	Global("XA_LD_Morris", "LOCALS", 0)
 	See(NearestEnemyOf(Myself))
 THEN
@@ -108,7 +116,9 @@ THEN
 END
 
 IF
-	AreaCheck("AR5000")
+	OR(2)
+		AreaCheck("AR5000")
+		Global("XA_LD_AR5000", "GLOBAL", 1)
 	Global("XA_LD_Morris", "LOCALS", 0)
 	See(NearestEnemyOf(Myself))
 THEN
@@ -120,7 +130,9 @@ THEN
 END
 
 IF
-	AreaCheck("AR5000")
+	OR(2)
+		AreaCheck("AR5000")
+		Global("XA_LD_AR5000", "GLOBAL", 1)
 	Global("XA_LD_Morris", "LOCALS", 1)
 	See(NearestEnemyOf(Myself))
 THEN
@@ -132,7 +144,9 @@ THEN
 END
 
 IF
-	AreaCheck("AR5000")
+	OR(2)
+		AreaCheck("AR5000")
+		Global("XA_LD_AR5000", "GLOBAL", 1)
 	Global("XA_LD_Morris", "LOCALS", 2)
 	See(NearestEnemyOf(Myself))
 THEN
@@ -144,7 +158,9 @@ THEN
 END
 
 IF
-	AreaCheck("AR5000")
+	OR(2)
+		AreaCheck("AR5000")
+		Global("XA_LD_AR5000", "GLOBAL", 1)
 	Global("XA_LD_Morris", "LOCALS", 3)
 	See(NearestEnemyOf(Myself))
 THEN
@@ -156,7 +172,9 @@ THEN
 END
 
 IF
-	AreaCheck("AR5000")
+	OR(2)
+		AreaCheck("AR5000")
+		Global("XA_LD_AR5000", "GLOBAL", 1)
 	Global("XA_LD_Morris", "LOCALS", 4)
 	See(NearestEnemyOf(Myself))
 THEN
@@ -173,7 +191,9 @@ THEN
 END
 
 IF
-	AreaCheck("AR5000")
+	OR(2)
+		AreaCheck("AR5000")
+		Global("XA_LD_AR5000", "GLOBAL", 1)
 	Global("XA_LD_Morris", "LOCALS", 4)
 	See(NearestEnemyOf(Myself))
 THEN
@@ -185,7 +205,9 @@ THEN
 END
 
 IF
-	AreaCheck("AR5000")
+	OR(2)
+		AreaCheck("AR5000")
+		Global("XA_LD_AR5000", "GLOBAL", 1)
 	Global("XA_LD_Morris", "LOCALS", 5)
 	See(NearestEnemyOf(Myself))
 THEN
@@ -201,7 +223,9 @@ THEN
 END
 
 IF
-	AreaCheck("AR5000")
+	OR(2)
+		AreaCheck("AR5000")
+		Global("XA_LD_AR5000", "GLOBAL", 1)
 	Global("XA_LD_Morris", "LOCALS", 5)
 THEN
 	RESPONSE #100
@@ -216,7 +240,9 @@ THEN
 END
 
 IF
-	AreaCheck("AR5000")
+	OR(2)
+		AreaCheck("AR5000")
+		Global("XA_LD_AR5000", "GLOBAL", 1)
 	Global("XA_LD_Morris", "LOCALS", 6)
 	See(NearestEnemyOf(Myself))
 THEN
@@ -228,7 +254,9 @@ THEN
 END
 
 IF
-	AreaCheck("AR5000")
+	OR(2)
+		AreaCheck("AR5000")
+		Global("XA_LD_AR5000", "GLOBAL", 1)
 	Global("XA_LD_Morris", "LOCALS", 7)
 	See(NearestEnemyOf(Myself))
 THEN
@@ -240,7 +268,9 @@ THEN
 END
 
 IF
-	AreaCheck("AR5000")
+	OR(2)
+		AreaCheck("AR5000")
+		Global("XA_LD_AR5000", "GLOBAL", 1)
 	Global("XA_LD_Morris", "LOCALS", 8)
 	See(NearestEnemyOf(Myself))
 THEN
@@ -252,7 +282,9 @@ THEN
 END
 
 IF
-	AreaCheck("AR5000")
+	OR(2)
+		AreaCheck("AR5000")
+		Global("XA_LD_AR5000", "GLOBAL", 1)
 	Global("XA_LD_Morris", "LOCALS", 9)
 	See(NearestEnemyOf(Myself))
 THEN
@@ -268,7 +300,9 @@ THEN
 END
 
 IF
-	AreaCheck("AR5000")
+	OR(2)
+		AreaCheck("AR5000")
+		Global("XA_LD_AR5000", "GLOBAL", 1)
 	Global("XA_LD_Morris", "LOCALS", 10)
 	See(NearestEnemyOf(Myself))
 THEN
@@ -280,7 +314,9 @@ THEN
 END
 
 IF
-	AreaCheck("AR5000")
+	OR(2)
+		AreaCheck("AR5000")
+		Global("XA_LD_AR5000", "GLOBAL", 1)
 	Global("XA_LD_Morris", "LOCALS", 11)
 	See(NearestEnemyOf(Myself))
 THEN
@@ -292,7 +328,9 @@ THEN
 END
 
 IF
-	AreaCheck("AR5000")
+	OR(2)
+		AreaCheck("AR5000")
+		Global("XA_LD_AR5000", "GLOBAL", 1)
 	Global("XA_LD_Morris", "LOCALS", 12)
 	See(NearestEnemyOf(Myself))
 THEN
@@ -301,6 +339,13 @@ THEN
 		IncrementGlobal("XA_LD_Morris", "LOCALS", 1)
 		Spell(Myself, WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
 		SetInterrupt(TRUE)
+END
+
+IF 
+	!AreaCheck("AR5000")
+THEN
+	RESPONSE #100
+		NoAction()
 END
 
 IF

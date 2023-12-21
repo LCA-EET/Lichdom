@@ -4,7 +4,9 @@ BEGIN ~XALDGD~
 
 	IF ~
 		NumTimesTalkedTo(0)
-		AreaCheck("AR0800")
+		OR(2)
+			AreaCheck("AR0800")
+			Global("XA_LD_AR0800", "GLOBAL", 1)
 	~ THEN BEGIN XA_LD_IntroAthkatla_0
 		SAY @0 /*~<You see a man in ornate robes whose every motion seems intentional, calm, and slow.  His voice seems wise with a tone that reminds you of Gorion’s voice, but with more crackle and spoken more slowly.  He smells clean despite his nearness to the dead  His demeanor is of one of great importance who seems to be in absolutely no hurry.>~ [xald0000]*/
 		
@@ -17,8 +19,10 @@ BEGIN ~XALDGD~
 
 	IF ~
 		NumTimesTalkedTo(0)
-		AreaCheck("AR5000")
 		Global("XA_LD_MetMorrisInAthkatla", "GLOBAL", 1)
+		OR(2)
+			AreaCheck("AR5000")
+			Global("XA_LD_AR5000", "GLOBAL", 1)
 	~ THEN BEGIN XA_LD_IntroSaradush_0
 		SAY @39  /* ~(You see a man who looks familiar to you.  His name soon comes to mind - Morris the Gravetender - and you last met him in Athkatla.  He again seems to be in absolutely no hurry.)~  [xald1059]*/
 		
@@ -29,8 +33,10 @@ BEGIN ~XALDGD~
 
 	IF ~
 		NumTimesTalkedTo(0)
-		AreaCheck("AR5000")
 		Global("XA_LD_MetMorrisInAthkatla", "GLOBAL", 0)
+		OR(2)
+			AreaCheck("AR5000")
+			Global("XA_LD_AR5000", "GLOBAL", 1)
 	~ THEN BEGIN XA_LD_IntroSaradush_1
 		SAY @41  /* ~(You see a man in ornate robes whose every motion seems intentional, calm, and slow.  His voice seems wise with a tone that reminds you of Gorion’s voice, but with more cracks and spoken more slowly.  He smells clean despite his nearness to the dead  His demeanor is of one of great importance who seems to be in absolutely no hurry.)~ [eemor100] */
 		
@@ -69,12 +75,16 @@ IF ~
 	GOTO XA_LD_AreYouUndead2
 	
 	IF ~
-		AreaCheck("AR0800")
+		OR(2)
+			AreaCheck("AR0800")
+			Global("XA_LD_AR0800", "GLOBAL", 1)
 	~ THEN REPLY @27 /* ~What do you think about killing the Undead here and looting these tombs?~ */
 	GOTO XA_LD_Looting
 	
 	IF ~
-		AreaCheck("AR5000")
+		OR(2)
+			AreaCheck("AR5000")
+			Global("XA_LD_AR5000", "GLOBAL", 1)
 	~ THEN REPLY @31 /* ~What do you think about this city being under siege?~*/
 	GOTO XA_LD_Siege
 	
@@ -95,16 +105,20 @@ IF ~
 	GOTO XA_LD_GaveDust
 	
 	IF ~
-		AreaCheck("AR0800")
 		GlobalGT("BodhiAppear","GLOBAL",0)
 		!Dead("C6BODHI")
+		OR(2)
+			AreaCheck("AR0800")
+			Global("XA_LD_AR0800", "GLOBAL", 1)
 	~ THEN REPLY @98  /* ~What do you think of the Undead creatures roaming the streets of Athkatla at night?~ */
 	GOTO XA_LD_MetBodhi
 	
 	IF ~
-		AreaCheck("AR0800")
 		!Dead("C6BODHI")
 		Global("ElhanFinishedSpeaking","GLOBAL",1)
+		OR(2)
+			AreaCheck("AR0800")
+			Global("XA_LD_AR0800", "GLOBAL", 1)
 	~ THEN REPLY @100 /* ~I am about to slay this vampiric Bodhi.  What do you say to this?~*/
 	GOTO XA_LD_WhoCares
 	
@@ -115,7 +129,9 @@ IF ~
 	GOTO XA_LD_Alive
 	
 	IF ~
-		AreaCheck("AR5000")
+		OR(2)
+			AreaCheck("AR5000")
+			Global("XA_LD_AR5000", "GLOBAL", 1)
 		GlobalGT("XA_LD_RitualsPerformed", "GLOBAL", 0)
 		GlobalLT("XA_LD_ThoughtsOnRitual", "LOCALS", 1)
 		OR(6)

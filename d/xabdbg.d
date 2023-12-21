@@ -8,6 +8,45 @@ IF ~
 	IF ~~ THEN REPLY @43
 	GOTO XA_ReportRace
 	
+	IF ~~ THEN REPLY @54
+	DO ~
+		CreateCreature("XALDGD", [-1.-1], N)
+	~
+	EXIT
+	
+	IF ~~ THEN REPLY @52
+	DO ~
+		SetGlobal("XA_LD_AR0800", "GLOBAL", 1)
+	~
+	EXIT
+	
+	IF ~~ THEN REPLY @53
+	DO ~
+		SetGlobal("XA_LD_AR5000", "GLOBAL", 1)
+	~
+	EXIT
+	
+	IF ~~ THEN REPLY @49
+	DO ~
+		GiveItemCreate("xalddust", Player1, 1,0,0)
+	~
+	EXIT
+	
+	IF ~~ THEN REPLY @50
+	DO ~
+		GiveItemCreate("xalddust", Player1, 2,0,0)
+	~
+	EXIT
+	
+	IF ~~ THEN REPLY @51
+	DO ~
+		GiveItemCreate("xalddust", Player1, 3,0,0)
+	~
+	EXIT
+	
+	IF ~~ THEN REPLY @55
+	GOTO XA_LD_AddCharacter
+	
 	IF ~~ THEN REPLY @45
 	DO ~
 		CreateCreature("xaldgd", [-1.-1], S)
@@ -185,6 +224,162 @@ IF ~
 		DestroySelf()
 	~
 	EXIT
+END
+
+IF ~~ THEN BEGIN XA_LD_AddCharacter
+	SAY @55
+	
+	IF ~~ THEN REPLY @56 /* ~Aerie (AERIE12).~*/
+	DO ~
+		CreateCreature("AERIE12", [-1.-1], S)
+		ActionOverride("Aerie", JoinParty())
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @57 /* Anomen */
+	DO ~
+		CreateCreature("ANOMEN9", [-1.-1], S)
+		ActionOverride("Anomen", JoinParty()) 
+	~
+	GOTO XA_DebugInit
+		
+	IF ~~ THEN REPLY @58 /* ~Cernd (CERND12.CRE)~ */
+	DO ~
+		CreateCreature("CERND12", [-1.-1], S)
+		ActionOverride("Cernd", JoinParty())
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @59 /* @86 = ~Dorn (DORN10.CRE)~*/
+	DO ~
+		CreateCreature("DORN10", [-1.-1], S)
+		ActionOverride("Dorn", JoinParty())
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @60 /* @88 = ~Edwin (EDWIN11.CRE)~*/
+	DO ~
+		CreateCreature("EDWIN11", [-1.-1], S)
+		ActionOverride("Edwin", JoinParty())
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @61 /* @87 = ~HaerDalis (HAER10.CRE)~*/
+	DO ~
+		CreateCreature("HAER10", [-1.-1], S)
+		ActionOverride("HaerDalis", JoinParty())
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @62 /* ~Hexxat (OHHEX15).~*/
+	DO ~
+		CreateCreature("OHHEX15", [-1.-1], S)
+		ActionOverride("Hexxat", JoinParty())
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @63 /* ~Imoen (IMOEN10).~*/
+	DO ~
+		CreateCreature("IMOEN10", [-1.-1], S)
+		ActionOverride("Imoen2", JoinParty())
+	~
+	GOTO XA_DebugInit
+		
+	IF ~~ THEN REPLY @64 /* ~Jaheira (JAHEIR11).~*/
+	DO ~
+		CreateCreature("JAHEIR11", [-1.-1], S)
+		ActionOverride("Jaheira", JoinParty())
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @65 /* ~Jan (JAN12).~*/
+	DO ~
+		CreateCreature("JAN12", [-1.-1], S)
+		ActionOverride("Jan", JoinParty())
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @66 /* ~Keldorn (KELDOR12).~*/
+	DO ~
+		CreateCreature("KELDOR12", [-1.-1], S)
+		ActionOverride("Keldorn", JoinParty())
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @67 /* ~Korgan (KORGAN11).~*/
+	DO ~
+		CreateCreature("KORGAN11", [-1.-1], S)
+		ActionOverride("Korgan", JoinParty())
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @68 /* ~Mazzy (MAZZY11).~*/
+	DO ~
+		CreateCreature("MAZZY11", [-1.-1], S)
+		ActionOverride("Mazzy", JoinParty())
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @69 /* ~Minsc (MINSC9).~*/
+	DO ~
+		CreateCreature("MINSC9", [-1.-1], S)
+		ActionOverride("Minsc", JoinParty())
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @70 /* ~Nalia (NALIA11).~*/
+	DO ~
+		CreateCreature("NALIA11", [-1.-1], S)
+		ActionOverride("Nalia", JoinParty())
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @71 /* ~Neera (NEERA8).~*/
+	DO ~
+		CreateCreature("NEERA8", [-1.-1], S)
+		ActionOverride("Neera", JoinParty())
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @72
+	DO ~
+		CreateCreature("RASAAD9", [-1.-1], S)
+		ActionOverride("Rasaad", JoinParty())
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @73 /* @503 = ~Sarevok (SAREVOK.CRE)~*/
+	DO ~
+		CreateCreature("SAREVOK", [-1.-1], S)
+		ActionOverride("Sarevok", JoinParty())
+	~
+	GOTO XA_DebugInit
+	
+	
+	
+	IF ~~ THEN REPLY @74 /* ~Valygar (VALYG9.CRE)~*/
+	DO ~
+		CreateCreature("VALYG9", [-1.-1], S)
+		ActionOverride("Valygar", JoinParty())
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @75 /* @7 = ~Viconia (VICONI13).~*/
+	DO ~
+		CreateCreature("VICONI13", [-1.-1], S)
+		ActionOverride("Viconia", JoinParty())
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @76 /* @84 = ~Yoshimo (YOSHI10.CRE)~*/
+	DO ~
+		CreateCreature("YOSHI10", [-1.-1], S)
+		ActionOverride("Yoshimo", JoinParty())
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @77
+	GOTO XA_DebugInit
 END
 
 IF ~~ THEN BEGIN XA_ReportRace
