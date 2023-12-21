@@ -842,7 +842,7 @@ THEN
 END
 
 IF
-	!ActuallyInCombat()
+	//!ActuallyInCombat()
 	GlobalLT("XA_LD_LichRez1", "GLOBAL", 1)
 	Global("XA_LD_LichResurrection", "GLOBAL", 0)
 	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
@@ -856,7 +856,7 @@ THEN
 END
 
 IF
-	!ActuallyInCombat()
+	//!ActuallyInCombat()
 	GlobalLT("XA_LD_LichRez2", "GLOBAL", 1)
 	Global("XA_LD_LichResurrection", "GLOBAL", 0)
 	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
@@ -870,7 +870,7 @@ THEN
 END
 
 IF
-	!ActuallyInCombat()
+	//!ActuallyInCombat()
 	GlobalLT("XA_LD_LichRez3", "GLOBAL", 1)
 	Global("XA_LD_LichResurrection", "GLOBAL", 0)
 	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
@@ -884,7 +884,7 @@ THEN
 END
 
 IF
-	!ActuallyInCombat()
+	//!ActuallyInCombat()
 	GlobalLT("XA_LD_LichRez4", "GLOBAL", 1)
 	Global("XA_LD_LichResurrection", "GLOBAL", 0)
 	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
@@ -898,7 +898,7 @@ THEN
 END
 
 IF
-	!ActuallyInCombat()
+	//!ActuallyInCombat()
 	GlobalLT("XA_LD_LichRez5", "GLOBAL", 1)
 	Global("XA_LD_LichResurrection", "GLOBAL", 0)
 	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
@@ -912,7 +912,7 @@ THEN
 END
 
 IF
-	!ActuallyInCombat()
+	//!ActuallyInCombat()
 	GlobalLT("XA_LD_LichRez6", "GLOBAL", 1)
 	Global("XA_LD_LichResurrection", "GLOBAL", 0)
 	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
@@ -926,7 +926,7 @@ THEN
 END
 
 IF
-	!ActuallyInCombat()
+	//!ActuallyInCombat()
 	Global("XA_LD_LichResurrection", "GLOBAL", 0)
 	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
 THEN
@@ -939,7 +939,7 @@ END
 //{ Resurrect After Battle
 
 IF
-	!ActuallyInCombat()
+	!TriggerOverride(Player1, See([ENEMY]))
 	GlobalLT("XA_LD_LichRez1", "GLOBAL", 1)
 	Global("XA_LD_LichResurrection", "GLOBAL", 1)
 	TriggerOverride(Player1, GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1))
@@ -1168,7 +1168,9 @@ END
 
 //{ Death Scripting
 	IF
-		HPPercentLT(Player1, 10)
+		OR(2)
+			HPPercentLT(Player1, 10)
+			HPLT(Player1, 2)
 		Race(Player1, LICH)
 		TriggerOverride(Player1, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
@@ -1181,7 +1183,9 @@ END
 	END
 	
 	IF
-		HPPercentLT(Player2, 10)
+		OR(2)
+			HPPercentLT(Player2, 10)
+			HPLT(Player2, 2)
 		Race(Player2, LICH)
 		TriggerOverride(Player2, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
@@ -1194,7 +1198,9 @@ END
 	END
 	
 	IF
-		HPPercentLT(Player3, 10)
+		OR(2)
+			HPPercentLT(Player3, 10)
+			HPLT(Player3, 2)
 		Race(Player3, LICH)
 		TriggerOverride(Player3, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
@@ -1207,7 +1213,9 @@ END
 	END
 	
 	IF
-		HPPercentLT(Player4, 10)
+		OR(2)
+			HPPercentLT(Player4, 10)
+			HPLT(Player4, 2)
 		Race(Player4, LICH)
 		TriggerOverride(Player4, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
@@ -1220,7 +1228,9 @@ END
 	END
 	
 	IF
-		HPPercentLT(Player5, 10)
+		OR(2)
+			HPPercentLT(Player5, 10)
+			HPLT(Player5, 2)
 		Race(Player5, LICH)
 		TriggerOverride(Player5, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
@@ -1233,7 +1243,9 @@ END
 	END
 	
 	IF
-		HPPercentLT(Player6, 10)
+		OR(2)
+			HPPercentLT(Player6, 10)
+			HPLT(Player6, 2)
 		Race(Player6, LICH)
 		TriggerOverride(Player6, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
 	THEN
@@ -1277,74 +1289,12 @@ END
 		RESPONSE #100
 			SetInterrupt(FALSE)
 			ActionOverride(Player1, AddSpecialAbility("xaldasst"))
-			ActionOverride(Player1, AddSpecialAbility("xaldanim"))
 			SetGlobal("XA_LD_AddAssistantTimerSet", "GLOBAL", 0)
 			SetInterrupt(TRUE)
 			Continue()
 	END
 //}
 
-//{ Fatigue Override
-IF
-	TriggerOverride(Player1, ActionListEmpty())
-	Race(Player1, LICH)
-	CheckStatGT(Player1, 4, FATIGUE)
-THEN
-	RESPONSE #100
-		ChangeStat(Player1, FATIGUE, 0, SET)
-		Continue()
-END
-
-IF
-	TriggerOverride(Player2, ActionListEmpty())
-	Race(Player2, LICH)
-	CheckStatGT(Player2, 4, FATIGUE)
-THEN
-	RESPONSE #100
-		ChangeStat(Player2, FATIGUE, 0, SET)
-		Continue()
-END
-
-IF
-	TriggerOverride(Player3, ActionListEmpty())
-	Race(Player3, LICH)
-	CheckStatGT(Player3, 4, FATIGUE)
-THEN
-	RESPONSE #100
-		ChangeStat(Player3, FATIGUE, 0, SET)
-		Continue()
-END
-
-IF
-	TriggerOverride(Player4, ActionListEmpty())
-	Race(Player4, LICH)
-	CheckStatGT(Player4, 4, FATIGUE)
-THEN
-	RESPONSE #100
-		ChangeStat(Player4, FATIGUE, 0, SET)
-		Continue()
-END
-
-IF
-	TriggerOverride(Player5, ActionListEmpty())
-	Race(Player5, LICH)
-	CheckStatGT(Player5, 4, FATIGUE)
-THEN
-	RESPONSE #100
-		ChangeStat(Player5, FATIGUE, 0, SET)
-		Continue()
-END
-
-IF
-	TriggerOverride(Player2, ActionListEmpty())
-	Race(Player2, LICH)
-	CheckStatGT(Player2, 4, FATIGUE)
-THEN
-	RESPONSE #100
-		ChangeStat(Player2, FATIGUE, 0, SET)
-		Continue()
-END
-//}
 
 /* Block other execution if the player (lich) is dead, including the default game over. */
 IF
@@ -1354,3 +1304,13 @@ THEN
 	RESPONSE #100
 		NoAction()
 END
+
+//{ ALlow the player to die if they are not a lich
+IF
+	!InParty(Player1)
+	!Global("XA_LD_Player1IsLich", "GLOBAL", 1)	
+THEN
+	RESPONSE #100
+		GameOver(19377)
+END
+

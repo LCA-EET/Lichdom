@@ -595,3 +595,9 @@ END
 	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
 	
 //}
+
+//{ Allows the protagonist to die (in conjunction with the modifications to BALDUR.BCS)~
+COPY_EXISTING_REGEXP GLOB ~^.+\.are$~ ~override~ 
+WRITE_LONG 0x14 THIS|16
+BUT_ONLY
+//}

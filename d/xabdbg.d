@@ -17,6 +17,7 @@ IF ~
 	IF ~~ THEN REPLY @37
 	DO ~
 		ChangeRace(Player1, LICH)
+		SetGlobal("XA_LD_Player1IsLich", "GLOBAL", 1)
 	~
 	EXIT
 	
@@ -167,6 +168,12 @@ IF ~
 	IF ~~ THEN REPLY @46
 	DO ~
 		GiveItemCreate("xaldcrwn", LastTalkedToBy(Myself),1,0,0)
+	~
+	EXIT
+	
+	IF ~~ THEN REPLY @48
+	DO ~
+		AdvanceTime(EIGHT_HOURS)
 	~
 	EXIT
 	

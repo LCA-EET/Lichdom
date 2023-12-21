@@ -188,6 +188,7 @@ IF
 THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
+		//DisplayStringHead(Player1, ~Death A~)
 		ReallyForceSpellRES("xalddest", Myself)
 		ChangeAIScript("", CLASS)
 		Kill(Myself)
@@ -202,6 +203,7 @@ IF
 THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
+		//DisplayStringHead(Player1, ~Death B~)
 		ChangeAIScript("", CLASS)
 		DestroyItem("xaldphyl")
 		Kill(Myself)
