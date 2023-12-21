@@ -38,6 +38,9 @@ APPEND ~PLAYER1~
 		IF ~~ THEN REPLY @57 /*~Change animation options.~*/
 		GOTO XA_ChangeAnimation
 		
+		IF ~~ THEN REPLY @79 /*~Lich Party Dialog Options.~*/
+		GOTO XA_ChangeDialogOptions
+		
 		IF ~~ THEN REPLY @78
 		DO ~
 			CreateCreature("xabdbg", [-1.-1], N)
@@ -46,6 +49,25 @@ APPEND ~PLAYER1~
 		
 		IF ~~ THEN REPLY @1 /*~Exit.~*/
 		GOTO XA_ExitAssistant
+	END
+	
+	IF ~~ THEN BEGIN XA_ChangeDialogOptions
+		SAY @79 /*~Lich Party Dialog Options.~*/
+		
+		IF ~~ THEN REPLY @81 /* ~Do not ignore party dialogs / objections concerning Lichdom. (Default)~ */
+		DO ~
+			SetGlobal("XA_LD_IgnoreDialog", "GLOBAL", 0)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @80 /* ~Ignore party dialogs / objections concerning Lichdom.~ */
+		DO ~
+			SetGlobal("XA_LD_IgnoreDialog", "GLOBAL", 1)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @28 /*Back to main menu.*/
+		GOTO XA_MainMenu
 	END
 	
 	IF ~~ THEN BEGIN XA_LichEquip

@@ -354,33 +354,162 @@ IF ~~ THEN BEGIN XA_LD_StartRitual
 	
 	IF ~
 		Global("XA_LD_TransformationCost", "GLOBAL", 0)
+		Global("XA_LD_IgnoreDialog", "GLOBAL", 0)
 		PartyGoldGT(119999)
 	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
 	GOTO XA_LD_PayMoney
 	
 	IF ~
 		Global("XA_LD_TransformationCost", "GLOBAL", 1)
+		Global("XA_LD_IgnoreDialog", "GLOBAL", 0)
 		PartyGoldGT(99999)
 	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
 	GOTO XA_LD_PayMoney
 	
 	IF ~
 		Global("XA_LD_TransformationCost", "GLOBAL", 2)
+		Global("XA_LD_IgnoreDialog", "GLOBAL", 0)
 		PartyGoldGT(74999)
 	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
 	GOTO XA_LD_PayMoney
 	
 	IF ~
 		Global("XA_LD_TransformationCost", "GLOBAL", 3)
+		Global("XA_LD_IgnoreDialog", "GLOBAL", 0)
 		PartyGoldGT(49999)
 	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
 	GOTO XA_LD_PayMoney
 	
 	IF ~
 		Global("XA_LD_TransformationCost", "GLOBAL", 4)
+		Global("XA_LD_IgnoreDialog", "GLOBAL", 0)
 		PartyGoldGT(39999)
 	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
 	GOTO XA_LD_PayMoney
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 0)
+		Global("XA_LD_IgnoreDialog", "GLOBAL", 1)
+		PartyGoldGT(119999)
+	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
+	GOTO XA_LD_PayMoney
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 1)
+		Global("XA_LD_IgnoreDialog", "GLOBAL", 1)
+		PartyGoldGT(99999)
+	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
+	GOTO XA_LD_PayMoney
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 2)
+		Global("XA_LD_IgnoreDialog", "GLOBAL", 1)
+		PartyGoldGT(74999)
+	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
+	GOTO XA_LD_PayMoney
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 3)
+		Global("XA_LD_IgnoreDialog", "GLOBAL", 1)
+		PartyGoldGT(49999)
+	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
+	GOTO XA_LD_PayMoney
+	
+	IF ~
+		Global("XA_LD_TransformationCost", "GLOBAL", 4)
+		Global("XA_LD_IgnoreDialog", "GLOBAL", 1)
+		PartyGoldGT(39999)
+	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
+	GOTO XA_LD_PayMoney_NoDialog
+END
+
+IF ~~ THEN BEGIN XA_LD_PayMoney_NoDialog
+	SAY @107  /* ~Morris looks at you eagerly.  “The fourth price is decision.  Who among you shall undergo this ritual?  You must be a sufficiently powerful spellcaster to benefit, or else your time is wasted.  Are you ready to begin?”~ [xald1033] */
+	
+	IF ~
+		!Class(Player1, FIGHTER)
+		!Class(Player1, THIEF)
+		!Class(Player1, FIGHTER_THIEF)
+		!Kit(Player1, WIZARDSLAYER)
+		!General(Player1, UNDEAD)
+		LevelGT(Player1, 11)
+	~ THEN REPLY @234 /*~(Choose Player 1)~*/
+	DO ~
+		ActionOverride(Player1, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+	~
+	GOTO XA_LD_Transform
+	
+	IF ~
+		NumInPartyGT(1)
+		!Class(Player2, FIGHTER)
+		!Class(Player2, THIEF)
+		!Class(Player2, FIGHTER_THIEF)
+		!Kit(Player2, WIZARDSLAYER)
+		!General(Player2, UNDEAD)
+		LevelGT(Player2, 11)
+	~ THEN REPLY @235 /*~(Choose Player 2)~*/
+	DO ~
+		ActionOverride(Player2, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+	~
+	GOTO XA_LD_Transform
+	
+	IF ~
+		NumInPartyGT(2)
+		!Class(Player3, FIGHTER)
+		!Class(Player3, THIEF)
+		!Class(Player3, FIGHTER_THIEF)
+		!Kit(Player3, WIZARDSLAYER)
+		!General(Player3, UNDEAD)
+		LevelGT(Player3, 11)
+	~ THEN REPLY @236 /*~(Choose Player 3)~*/
+	DO ~
+		ActionOverride(Player3, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+	~
+	GOTO XA_LD_Transform
+	
+	IF ~
+		NumInPartyGT(3)
+		!Class(Player4, FIGHTER)
+		!Class(Player4, THIEF)
+		!Class(Player4, FIGHTER_THIEF)
+		!Kit(Player4, WIZARDSLAYER)
+		!General(Player4, UNDEAD)
+		LevelGT(Player4, 11)
+	~ THEN REPLY @237 /*~(Choose Player 4)~*/
+	DO ~
+		ActionOverride(Player4, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+	~
+	GOTO XA_LD_Transform
+	
+	IF ~
+		NumInPartyGT(4)
+		!Class(Player5, FIGHTER)
+		!Class(Player5, THIEF)
+		!Class(Player5, FIGHTER_THIEF)
+		!Kit(Player5, WIZARDSLAYER)
+		!General(Player5, UNDEAD)
+		LevelGT(Player5, 11)
+	~ THEN REPLY @238 /*~(Choose Player 5)~*/
+	DO ~
+		ActionOverride(Player5, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+	~
+	GOTO XA_LD_Transform
+	
+	IF ~
+		NumInPartyGT(5)
+		!Class(Player6, FIGHTER)
+		!Class(Player6, THIEF)
+		!Class(Player6, FIGHTER_THIEF)
+		!Kit(Player6, WIZARDSLAYER)
+		!General(Player6, UNDEAD)
+		LevelGT(Player6, 11)
+	~ THEN REPLY @239 /*~(Choose Player 6)~*/
+	DO ~
+		ActionOverride(Player6, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+	~
+	GOTO XA_LD_Transform
+	
+	
 END
 
 IF ~~ THEN BEGIN XA_LD_PayMoney
@@ -392,42 +521,42 @@ IF ~~ THEN BEGIN XA_LD_PayMoney
 		!Class(Player1, FIGHTER_THIEF)
 		!Kit(Player1, WIZARDSLAYER)
 		!General(Player1, UNDEAD)
-		LevelGT(Player1, 9)
+		LevelGT(Player1, 11)
 	~ THEN REPLY @108  /* ~(Choose <CHARNAME>.)~ */
 	GOTO XA_LD_Chain_ChooseCharname
 	
 	IF ~
 		InParty("Cernd")
 		!General("Cernd", UNDEAD)
-		LevelGT("Cernd", 9)
+		LevelGT("Cernd", 11)
 	~ THEN REPLY @186 /* ~(Choose Cernd.)~ */
 	EXTERN CERNDJ XA_LD_Chain_ChooseCernd
 	
 	IF ~
 		InParty("Dorn")
 		!General("Dorn", UNDEAD)
-		LevelGT("Dorn", 9)
+		LevelGT("Dorn", 11)
 	~ THEN REPLY @187 /* ~(Choose Dorn.)~*/
 	EXTERN DORNJ XA_LD_ChooseDorn
 	
 	IF ~
 		InParty("Edwin")
 		!General("Edwin", UNDEAD)
-		LevelGT("Edwin", 9)
+		LevelGT("Edwin", 11)
 	~ THEN REPLY @188 /* ~(Choose Edwin.)~*/
 	EXTERN EDWINJ XA_LD_Chain_ChooseEdwin
 	
 	IF ~
 		InParty("HaerDalis")
 		!General("HaerDalis", UNDEAD)
-		LevelGT("HaerDalis", 9)
+		LevelGT("HaerDalis", 11)
 	~ THEN REPLY @189 /* ~(Choose HaerDalis.)~*/
 	EXTERN HAERDAJ XA_LD_Chain_ChooseHaerDalis
 	
 	IF ~
 		InParty("Imoen2")
 		!General("Imoen2", UNDEAD)
-		LevelGT("Imoen2", 9)
+		LevelGT("Imoen2", 11)
 		Dead("c6bodhi")
 	~ THEN REPLY @190 /*  ~(Choose Imoen.)~*/
 	EXTERN IMOEN2J XA_LD_ChooseImoen
@@ -435,7 +564,7 @@ IF ~~ THEN BEGIN XA_LD_PayMoney
 	IF ~
 		InParty("Imoen2")
 		!General("Imoen2", UNDEAD)
-		LevelGT("Imoen2", 9)
+		LevelGT("Imoen2", 11)
 		!Dead("c6bodhi")
 	~ THEN REPLY @190 /*  ~(Choose Imoen.)~*/
 	GOTO XA_LD_ChooseImoen_NoSoul
@@ -443,42 +572,42 @@ IF ~~ THEN BEGIN XA_LD_PayMoney
 	IF ~
 		InParty("Jaheira")
 		!General("Jaheira", UNDEAD)
-		LevelGT("Jaheira", 9)
+		LevelGT("Jaheira", 11)
 	~ THEN REPLY @191 /* ~(Choose Jaheira.)~*/
 	EXTERN JAHEIRAJ XA_LD_Chain_ChooseJaheira
 	
 	IF ~
 		InParty("Keldorn")
 		!General("Keldorn", UNDEAD)
-		LevelGT("Keldorn", 9)
+		LevelGT("Keldorn", 11)
 	~ THEN REPLY @192 /*~(Choose Keldorn.)~ */
 	EXTERN KELDORJ XA_LD_Chain_ChooseKeldorn
 	
 	IF ~
 		InParty("Mazzy")
 		!General("Mazzy", UNDEAD)
-		LevelGT("Mazzy", 9)
+		LevelGT("Mazzy", 11)
 	~ THEN REPLY @214 /* ~(Choose Mazzy.)~*/
 	EXTERN MAZZYJ XA_LD_Chain_ChooseMazzy
 	
 	IF ~
 		InParty("Minsc")
 		!General("Minsc", UNDEAD)
-		LevelGT("Minsc", 9)
+		LevelGT("Minsc", 11)
 	~ THEN REPLY @216 /* ~(Choose Minsc.)~*/
 	EXTERN MINSCJ XA_LD_Chain_ChooseMinsc
 	
 	IF ~
 		InParty("Neera")
 		!General("Neera", UNDEAD)
-		LevelGT("Neera", 9)
+		LevelGT("Neera", 11)
 	~ THEN REPLY @193 /* ~(Choose Neera.)~*/
 	EXTERN NEERAJ XA_LD_Chain_ChooseNeera
 	
 	IF ~
 		InParty("Nalia")
 		!General("Nalia", UNDEAD)
-		LevelGT("Nalia", 9)
+		LevelGT("Nalia", 11)
 	~ THEN REPLY @194 /* ~(Choose Nalia.)~*/
 	EXTERN NALIAJ XA_LD_ChooseNalia
 	
@@ -488,28 +617,28 @@ IF ~~ THEN BEGIN XA_LD_PayMoney
 		!Class("Sarevok", FIGHTER_THIEF)
 		!Kit("Sarevok", WIZARDSLAYER)
 		!General("Sarevok", UNDEAD)
-		LevelGT("Sarevok", 9)
+		LevelGT("Sarevok", 11)
 	~ THEN REPLY @195 /*~(Choose Sarevok.)~*/ 
 	EXTERN SAREV25J XA_LD_Chain_ChooseSarevok
 	
 	IF ~
 		InParty("Valygar")
 		!General("Valygar", UNDEAD)
-		LevelGT("Valygar", 9)
+		LevelGT("Valygar", 11)
 	~ THEN REPLY @196 /*~(Choose Valygar.)~*/
 	EXTERN VALYGARJ XA_LD_Chain_ChooseValygar
 	
 	IF ~
 		InParty("Viconia")
 		!General("Viconia", UNDEAD)
-		LevelGT("Viconia", 9)
+		LevelGT("Viconia", 11)
 	~ THEN REPLY @197 /*~(Choose Viconia.)~*/
 	EXTERN VICONIJ XA_LD_ChooseViconia
 	
 	IF ~
 		InParty("Yoshimo")
 		!General("Yoshimo", UNDEAD)
-		LevelGT("Yoshimo", 9)
+		LevelGT("Yoshimo", 11)
 	~ THEN REPLY @198 /* (Choose Yosihmo.)*/
 	GOTO XA_LD_NoYoshimo
 	
