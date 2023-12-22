@@ -1,5 +1,5 @@
 # Lichdom: A Mod for _Baldur's Gate II: Enhanced Edition_ (BG2EE) & Enhanced Edition Trilogy (EET)!
-Design, writing, and voice acting by Endarire.  Coding by LCA with use of k4thos's Protagonist Can Die mod with permission.  Images in this documentation are from Wizards of the Coast.
+Design, writing, and voice acting by Endarire.  Coding by LCA.  Images in this documentation are from Wizards of the Coast.
 
 GIBBERLINGS3 FORUM THREAD: **INSERT**
 
@@ -102,38 +102,10 @@ Note that configuration options in this section ONLY apply to Lich characters fr
 
 - Custom: Enter a whole number for a gold piece cost.
 
-**Upon character death, your phylactery will break _% of the time. (In-Game Config Option)**
-- 0% (Default)
-
-- 1%
-
-- 3%
-
-- 5%
-
-- 10%
-
-- 15%
-
-- 20%
-
-- 25%
-
-- 33%
-
-- 50%
-
-- Custom
-
 **Can a broken phylactery be replaced? (In-Game Config Option)**
 - Yes, but it costs the same as a new phylactery. (Default)
 
 - No.
-
-**What happens to a Lich if it dies without its phylactery in inventory? (In-Game Config Option)**
-- The Lich dies but can be revived via Raise Dead, Resurrection, etc. (Default)
-
-- The Lich permanently dies.
 
 **Is a Lich allergic to (unable to equip, regardless of proficiencies) to items that harm undead such as a Mace of Disruption, a Flame Tongue/Burning Earth Sword, a Protection from Undead scroll, or an Azuredge Axe?  Note that your normal proficiencies apply, regardless of this option, and if you enable this option with anti-Undead items equipped, you will immediately unequip or drop them. (In-Game Config Option)**
 - Yes (Default)
@@ -204,49 +176,6 @@ Note that configuration options in this section ONLY apply to Lich characters fr
 
 - +100%
 
-**How long should the paraylsis effect from your Lich Touch innate ability last? (In-Game Config)**
-- 3 rounds
-
-- 5 rounds (Default)
-
-- 10 rounds
-
-- 25 rounds
-
-- 50 rounds
-
-- 100 rounds
-
-- 8 hours
-
-- 24 hours
-
-- Permanent until dispelled or removed
-
-**What should the saving throw penalty be for your Lich Touch ability? (In-Game Config)**
-- 1 per 2 levels
-
-- 1 per 3 levels
-
-- 1 per 4 levels (Default)
-
-- 1 per 5 levels
-
-- 1 per 6 levels
-
-- 2 total
-
-- 3 total
-
-- 4 total
-   
-- None
-
-**Should spell resistance apply to your Lich Touch weapon? (In-Game Config)**
-- Yes (Default)
-
-- No
-
 # Install Order Notes
 ![This Lich is frazzled, having researched a proper mega mod installation for months now!](https://github.com/LCA-EET/Lichdom/blob/main/Documentation%20Images/Lich-with-Books.png)
 
@@ -254,7 +183,7 @@ _This Lich is frazzled, having researched a proper mega mod installation for mon
 
 As of this writing, Lichdom has no mod prerequisites.  The mod install order listed below is simply best practice to give you the best experience if you use these other mods.
 
-Lichdom should be installed AFTER these mods if you use them:  [EET Start AKA EET Core](https://github.com/Gibberlings3/EET), all mods that add quests or areas, all mods that add items, and all mods that add recruitable NPCs.
+Lichdom should be installed AFTER these mods if you use them:  [EET Start AKA EET Core](https://github.com/Gibberlings3/EET), all mods that add quests or areas, all mods that add items, and all mods that add recruitable NPCs.  Lichdom adds the key item Lich Dust - explained elsewhere in this document - to the inventories of Liches & Demiliches that fit certain code criteria, including ones added by mods.
 
 Specifically, Lichdom has a small amount of cross-mod content AKA crossmod content with these mods, generally included with permission from authors of original NPCs:
 
@@ -288,7 +217,7 @@ Lichdom should be installed BEFORE these mods if you use them:  [EET End](https:
 _This Lich admires his new phylactery.  His life is in his hands._
 
 **Lich Touch (Innate Melee Weapon)**
-This is a melee weapon usable at will.  It strikes as a +3 weapon initially, but improves to a +4 weapon at level 16 and a +5 weapon at level 20.
+This is a melee weapon usable at will.  It strikes as a +5 weapon.
 
 It does piercing damage equal to your STR bonus (minimum 0) and d10 cold damage.  Each hit forces a save vs. death on the subject at a -1 penalty per 4 levels or be paralyzed.  (The default paralysis duration is 5 rounds.)  Spell resistance applies to paralysis.
 
@@ -342,7 +271,7 @@ _What's going on here?  I too want to know!_
 **120,000 coins per Lich transformation?  Boy, that sure is expensive!**
 - Lichdom is intended as a high initial cost, high long-time return for the character who undergoes this transformation.  The auto-revival aspect matters more in no reload runs.
 
-**How am I meant to get 120,000 or more coins by level 12?!  That's nuts!**
+**How am I meant to get 120,000 or more coins to afford this transformation at the lowest possible level?!  That's nuts!**
 - I wondered the same thing about the [D&D 3.5 Lich](https://www.d20srd.org/srd/monsters/lich.htm) that only needs caster level 11 to undergo the ritual when the expected wealth by level means that characters who become Liches are likely doing it MUCH later, like level 15+.
 
 The truest answer is, "Adventure!"  Remember, you don't NEED to undergo the Lichdom ritual ASAP!
@@ -358,7 +287,7 @@ The truest answer is, "Adventure!"  Remember, you don't NEED to undergo the Lich
 **Why make the phylactery a cloak instead of a more traditional amulet or crown?**
 - Amulets: Edwin's Amulet is normally glued to his neck, and I wanted Liches to be able to use [https://baldursgate.fandom.com/wiki/Amulet_of_Power](Amulets of Power).
 
-- Crown: I like Ioun Stones.
+- Crown: I like Ioun Stones, and the Crown of the Lich mentioned elsewhere in this document allows anyone to temporarily get most of the effects of Lichdom.
 
 - Cloak: Cloaks are generally a low-power item slot.  (Maybe there are mods which give high-powered cloaks to casters.)  In short, giving up a cloak slot is easier than giving up most other slots.
 
@@ -384,7 +313,7 @@ Shroud of the Lich is also an intentional reference to [an ability of the same n
 **How does this mod interact with other mods that involve becoming a Lich?**
 - Most likely, they are totally separate.  Maybe they are also mechanically compatible.
 
-- For example, a Lichdom Lich and a quest in [The Beaurin Legacy](https://www.gibberlings3.net/files/file/998-beaurin-legacy/) to become a Lich are totally separate.  Becoming a Lich via one method does not affect your ability to become a Lich via another method.
+- For example, a Lichdom Lich and a quest in [The Beaurin Legacy](https://www.gibberlings3.net/files/file/998-beaurin-legacy/) to become a Lich are totally separate.  By default, becoming a Lich via one method does not affect your ability to become a Lich via another method.
 
 **What game versions and operating systems can run this mod?**
 - Lichdom will likely work on game version 2.5 or later.
@@ -418,7 +347,7 @@ _We don't go through life alone.  We all get by with a little help from our form
 
 - LCA: He coded this mod and proofread various documentation.
 
-- k4thos and others involved in making and publishing [Protagonist Can Die](https://forums.beamdog.com/discussion/74528/mod-player1-can-die) which was sometimes called Player1 Can Die.  This mod was instrumental in the auto-revival ability of the Lich.  k4thos also made EET, and there was much rejoicing!
+- k4thos and others involved in making and publishing [Protagonist Can Die](https://forums.beamdog.com/discussion/74528/mod-player1-can-die) which was sometimes called Player1 Can Die.  No code from this mod was used for Lichdom, but its existence was an inspiration for the possibility of Lichdom's auto-revival being implemented!  k4thos also made EET, and there was much rejoicing!
 
 - Aaron Williams, author of Nodwick Comic: He was the first to use the phrase "Son of a Lich" regarding undeath.
 
