@@ -207,7 +207,7 @@ Specifically, Lichdom has a small amount of cross-mod content AKA crossmod conte
 
 - [Skitia's NPCs for BG2 (Emily, Helga, Kale, Recorder, and Vienxay)](https://github.com/Skitia/SkitiaNPCs/)
 
-- Mods that BG1 NPCs to BG2EE.
+- Mods that port BG1 NPCs to BG2EE.
 
 Lichdom should be installed BEFORE these mods if you use them:  [EET End](https://github.com/Gibberlings3/EET).
 
