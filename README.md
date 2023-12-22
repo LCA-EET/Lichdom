@@ -62,7 +62,7 @@ The default effects and requirements were heavily inspired by [Liches in _Baldur
 
 - Natural AC improves by 3.
 
-- You gain the innate ability of Lich Touch, usable at will as a melee weapon.  Stats are listed in a section below.
+- You gain the ability of Lich Touch, usable at will as a melee weapon.  Stats are listed in a section below.
 
 - You gain the innate ability of Lich Form, usable at will but only once per turn.  This is purely a cosmetic ability which changes the character's appearance to that of a typical Lich.  By default, a Lich made by Morris's method looks identical to a typical character.
 
@@ -70,9 +70,9 @@ The default effects and requirements were heavily inspired by [Liches in _Baldur
 
 - All Liches start with their phylactery - a cloak called the Shroud of the Lich.  This shroud is unstealable and undroppable.  (For technical reasons, the Lich's phylactery is put onto an item instead of something else like a slotless script.)
 
-- Your phylactery must be in your inventory - but need not be equipped - for you to auto-revive out of combat.  (This auto-revival normally happens immediately after combat ends, but the script may need a few seconds to catch up.)
+- Because a phylactery is undroppable, it remains permanently equipped in your cloak slot while it is on your person.  Your phylactery must be on you for you to auto-revive out of combat.  (This auto-revival normally happens immediately after combat ends, but the script may need a few seconds to catch up.)
 
-By default, your phylactery can't break upon your character's death, but this can be configured to have a chance of breaking upon death, or you may have a finite number of auto-revivals.  
+By default, your phylactery can't break upon your character's death, but this can be configured to have a chance of breaking upon death.
 
 Regardless of settings, certain SoA events _will_ remove CHARNAME's (the protagonist's) phylactery for a time.
 
@@ -418,7 +418,7 @@ _We don't go through life alone.  We all get by with a little help from our form
 
 - LCA: He coded this mod and proofread various documentation.
 
-- k4thos and others involved in making and publishing [Protagonist Can Die](https://forums.beamdog.com/discussion/74528/mod-player1-can-die) which was sometimes called Player1 Can Die.  This mod was instrumental in the auto-revival ability of the Lich.
+- k4thos and others involved in making and publishing [Protagonist Can Die](https://forums.beamdog.com/discussion/74528/mod-player1-can-die) which was sometimes called Player1 Can Die.  This mod was instrumental in the auto-revival ability of the Lich.  k4thos also made EET, and there was much rejoicing!
 
 - Aaron Williams, author of Nodwick Comic: He was the first to use the phrase "Son of a Lich" regarding undeath.
 
