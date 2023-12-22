@@ -100,7 +100,26 @@ Note that configuration options in this section ONLY apply to Lich characters fr
 
 - 40,000G
 
-- Custom: Enter a whole number for a gold piece cost.
+**% Chance for Phylactery to Break Upon Lich's Death (Install Option)**
+- None (Default)
+
+- 1%
+
+- 3%
+
+- 5%
+
+- 10%
+
+- 15%
+
+- 20%
+
+- 25%
+
+- 33%
+
+- 50%
 
 **Can a broken phylactery be replaced? (In-Game Config Option)**
 - Yes, but it costs the same as a new phylactery. (Default)
