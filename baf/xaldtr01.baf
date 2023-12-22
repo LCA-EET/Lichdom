@@ -14,5 +14,6 @@ THEN
 		SetSequence(SEQ_AWAKE)
 		Wait(1)
 		ChangeRace(Myself, LICH)
+		ReputationInc(-4)
 		EndCutSceneMode()
 END

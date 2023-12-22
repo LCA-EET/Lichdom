@@ -165,7 +165,7 @@
 @164 = ~Boo knows the putrid stench of evil of our captor’s lair, and Boo knows you mean well in what you do!  I miss Dynaheir just as much as Boo, and we too wish we were stronger so Dynaheir was never killed!~ [xald1108]
 @165 = ~But to do this?  My hamster and I do not know if we can stand for this!  Our footprint might be all over your butt -and- your head!~
 @166 = ~So, <CHARNAME>, it seems like you want me to keep you from the temptation of this new power for the good of us all.~
-@167 = ~<PRO_BROTHERSISTER>, you are either naive or a schemer of my caliber!~
+@167 = ~My <PRO_BROTHERSISTER>, you are either naive or a schemer of my caliber!~
 @168 = ~<CHARNAME>, whatever your reasoning, if you go through with this, I simply cannot stay:  The tainted magic is too great!~
 @169 = ~<CHARNAME>, I want to believe you made the right decision.~
 @170 = ~(Lie) My foster father Gorion told me that the essence of dead Bhaalspawn return to Bhaal, and if Bhaal regains all of his essence, the Lord of Murder WILL return!  As an unwitting Bhaalspawn, lichdom is a means to the greater good by -preventing- this evil deity from returning!~
@@ -239,3 +239,4 @@
 @238 = ~(Choose Player 5)~
 @239 = ~(Choose Player 6)~
 @240 = ~I need more time to make a decision.~
+@241 = ~I... I understand.  I just... don’t like it.~

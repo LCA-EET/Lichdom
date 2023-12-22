@@ -160,6 +160,13 @@ IF ~
 	
 	IF ~
 		Global("XA_LD_GaveDust", "GLOBAL", 1)
+		OR(6)
+			!General(Player1, UNDEAD)
+			!General(Player2, UNDEAD)
+			!General(Player3, UNDEAD)
+			!General(Player4, UNDEAD)
+			!General(Player5, UNDEAD)
+			!General(Player6, UNDEAD)
 	~ THEN REPLY @103  /* ~Lichdom still interests me despite the monetary cost.  Let’s deal, my friend!~*/
 	GOTO XA_LD_StartRitual
 	
@@ -943,7 +950,7 @@ IF ~~ THEN BEGIN XA_LD_FightAgain
 END
 
 IF ~~ THEN BEGIN XA_LD_Forgive
-	SAY @65 /*~I accept your forgiveness.  Thanks.~*/
+	SAY @66 /*~Morris nods.~ [xald1078]*/
 	
 	COPY_TRANS XALDGD XA_LD_IntroAthkatla
 END
@@ -1096,8 +1103,17 @@ END
 IF ~~ THEN BEGIN XA_LD_Price
 	SAY @13 /*~He clearly and eagerly smiles at a pace that is fast for him.  “The first price is your peace.  Are you at peace with your god?  Many would disdain such a transformation, and I shall not be held accountable should your ‘transgressions’ result in harm toward you.  Merely considering this option without pursuing it should not count as a stain upon your soul.”~ [xald0007]*/
 	
-	IF ~~ THEN REPLY @14 /* ~I am willing.  Proceed!~ */
+	IF ~
+		NumInPartyAliveGT(1)
+		!General(Player1, UNDEAD)
+	~ THEN REPLY @14 /* ~I am willing.  Proceed!~ */
 	GOTO XA_LD_Chain_ChooseCharname
+	
+	IF ~
+		!NumInPartyAliveGT(1)
+		!General(Player1, UNDEAD)
+	~ THEN REPLY @14 /* ~I am willing.  Proceed!~ */
+	GOTO XA_LD_LastChance
 	
 	IF ~~ THEN REPLY @16 /* ~Perhaps later.~*/
 	GOTO XA_LD_Later
@@ -1125,16 +1141,21 @@ IF ~~ THEN BEGIN XA_LD_Chain_ChooseCharname_END
 
 	IF ~
 		Global("XA_LD_ObjectionRaised", "GLOBAL", 1)
+		NumInPartyAliveGT(1)
 	~ THEN REPLY @128 /*~I understand your objections and have reconsidered.  I’ll not undergo this lichdom ritual now.~ */
 	DO ~
 		SetGlobal("XA_LD_ObjectionRaised", "GLOBAL", 0)
 	~
 	GOTO XA_LD_MeetAgain
 	
-	IF ~~ THEN REPLY @149 /*~Becoming a Lich is an opportunity for me to take my life into my own hands for the benefit of others as well, even though someone else in my situation may have become a merchant or a priest instead  Before I left my home of Candlekeep, assassins were after me.  When I left Candlekeep with my foster father Gorion, I could do nothing to save him from a painful death by Sarevok and his minions.  While I was instrumental in defeating Sarevok and becoming the Hero of Baldur’s Gate, some of my friends and I were still captured, tortured, imprisoned, and killed and there was -nothing- I could do to stop it!  Elminster himself has taken an interest in my well-being, meaning my destiny -must- be important and I -must- be -alive- to fulfill it!  In short, I’m -tired- of people I care about being hurt because I was too weak to prevent these problems!~*/
+	IF ~
+		NumInPartyAliveGT(1)
+	~ THEN REPLY @149 /*~Becoming a Lich is an opportunity for me to take my life into my own hands for the benefit of others as well, even though someone else in my situation may have become a merchant or a priest instead  Before I left my home of Candlekeep, assassins were after me.  When I left Candlekeep with my foster father Gorion, I could do nothing to save him from a painful death by Sarevok and his minions.  While I was instrumental in defeating Sarevok and becoming the Hero of Baldur’s Gate, some of my friends and I were still captured, tortured, imprisoned, and killed and there was -nothing- I could do to stop it!  Elminster himself has taken an interest in my well-being, meaning my destiny -must- be important and I -must- be -alive- to fulfill it!  In short, I’m -tired- of people I care about being hurt because I was too weak to prevent these problems!~*/
 	GOTO XA_LD_Chain_ConfirmCharname1
 	
-	IF ~~ THEN REPLY @170 /*~(Lie) My foster father Gorion told me that the essence of dead Bhaalspawn return to Bhaal, and if Bhaal regains all of his essence, the Lord of Murder WILL return!  As an unwitting Bhaalspawn, lichdom is a means to the greater good by -preventing- this evil deity from returning!~*/
+	IF ~
+		NumInPartyAliveGT(1)
+	~ THEN REPLY @170 /*~(Lie) My foster father Gorion told me that the essence of dead Bhaalspawn return to Bhaal, and if Bhaal regains all of his essence, the Lord of Murder WILL return!  As an unwitting Bhaalspawn, lichdom is a means to the greater good by -preventing- this evil deity from returning!~*/
 	GOTO XA_LD_Chain_ConfirmCharname2
 END
 
@@ -1260,7 +1281,7 @@ CHAIN XALDGD XA_LD_Chain_ConfirmCharname1
 	IF ~
 		IsValidForPartyDialogue("Aerie")
 	~
-	@151 /*~I... I understand.  I just... don’t like it.~*/
+	@241 /*~I... I understand.  I just... don’t like it.~*/
 	
 	== ANOMENJ
 	IF ~
@@ -1361,7 +1382,7 @@ CHAIN XALDGD XA_LD_Chain_ConfirmCharname2
 	IF ~
 		IsValidForPartyDialogue("Aerie")
 	~
-	@151 /*~I... I understand.  I just... don’t like it.~*/
+	@241 /*~I... I understand.  I just... don’t like it.~*/
 	
 	== ANOMENJ
 	IF ~
