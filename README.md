@@ -176,6 +176,18 @@ Note that configuration options in this section ONLY apply to Lich characters fr
 
 - +100%
 
+**What special senses should a Lich have? (In-Game Config Option)**
+- Continual See Invisibility (Default)
+
+- Continual See Invisibility and True Seeing
+
+- None
+
+**What sprite should be used for this character's appearance? (In-Game Config Option)**
+- Normal (Default)
+
+- Standard Lich
+
 # Install Order Notes
 ![This Lich is frazzled, having researched a proper mega mod installation for months now!](https://github.com/LCA-EET/Lichdom/blob/main/Documentation%20Images/Lich-with-Books.png)
 
