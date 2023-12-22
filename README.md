@@ -219,7 +219,7 @@ _This Lich admires his new phylactery.  His life is in his hands._
 **Lich Touch (Innate Melee Weapon)**
 This is a melee weapon usable at will.  It strikes as a +5 weapon.
 
-It does piercing damage equal to your STR bonus (minimum 0) and d10 cold damage.  Each hit forces a save vs. death on the subject at a -1 penalty per 4 levels or be paralyzed.  (The default paralysis duration is 5 rounds.)  Spell resistance applies to paralysis.
+It does piercing damage equal to your d10 + STR bonus (minimum 0) as well as d10 cold damage.  Each hit forces a save vs. death on the subject at no penalty or be paralyzed for 5 rounds.  Spell resistance applies to paralysis.
 
 **Crown of the Lich (Base Market Value: 100,000G, 1 Sold by Sister Garlena atop Watcher's Keep)**
 With this crown equipped, you gain many of the benefits of being a Lich without the entire transformation.  While a Lich can equip this crown, most of its effects are redundant.
@@ -271,7 +271,7 @@ _What's going on here?  I too want to know!_
 **120,000 coins per Lich transformation?  Boy, that sure is expensive!**
 - Lichdom is intended as a high initial cost, high long-time return for the character who undergoes this transformation.  The auto-revival aspect matters more in no reload runs.
 
-**How am I meant to get 120,000 or more coins to afford this transformation at the lowest possible level?!  That's nuts!**
+**How am I meant to get 120,000 or more coins to afford this transformation at 12, the lowest possible level?!  That's nuts!**
 - I wondered the same thing about the [D&D 3.5 Lich](https://www.d20srd.org/srd/monsters/lich.htm) that only needs caster level 11 to undergo the ritual when the expected wealth by level means that characters who become Liches are likely doing it MUCH later, like level 15+.
 
 The truest answer is, "Adventure!"  Remember, you don't NEED to undergo the Lichdom ritual ASAP!
