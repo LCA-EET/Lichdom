@@ -26,7 +26,15 @@ BEGIN ~XALDGD~
 	~ THEN BEGIN XA_LD_IntroSaradush_0
 		SAY @39  /* ~(You see a man who looks familiar to you.  His name soon comes to mind - Morris the Gravetender - and you last met him in Athkatla.  He again seems to be in absolutely no hurry.)~  [xald1059]*/
 		
-		= @40  /* ~"Ah, there you are.  I remember you, CHARNAME."~ [xald1060]*/
+		IF ~~ THEN
+		DO ~
+			SetGlobal("XA_LD_JournalEntry_6", "GLOBAL", 1)
+		~
+		GOTO XA_LD_IntroSaradush_0A
+	END
+
+	IF ~~ THEN BEGIN XA_LD_IntroSaradush_0A
+		SAY @40   /* ~"Ah, there you are.  I remember you, CHARNAME."~ [xald1060]*/
 		
 		COPY_TRANS XALDGD XA_LD_IntroAthkatla
 	END
@@ -552,6 +560,9 @@ IF ~~ THEN BEGIN XA_LD_PayMoney_NoDialog
 	GOTO XA_LD_Transform
 	
 	IF ~~ THEN REPLY @240 /*~I need more time to make a decision.~*/
+	DO ~
+		SetGlobal("XA_LD_JournalEntry_4", "GLOBAL", 1)
+	~
 	GOTO XA_LD_Reconsider
 END
 
@@ -794,12 +805,21 @@ IF ~~ THEN BEGIN XA_LD_GavePrice
 	SAY @91  /* ~He hands you a paper, saying, "This is my price.  There can be no discounts for any reason due to the nature of the ritual components."~ [eemor025] */
 	
 	IF ~~ THEN REPLY @92  /* ~That’s your price for EACH!?  That’s ridiculously high!~*/
+	DO ~
+		SetGlobal("XA_LD_JournalEntry_2", "GLOBAL", 1)
+	~
 	GOTO XA_LD_PriceIsHigh
 	
 	IF ~~ THEN REPLY @93  /* ~I can buy immortality with money?  What a bargain!~*/
+	DO ~
+		SetGlobal("XA_LD_JournalEntry_2", "GLOBAL", 1)
+	~
 	GOTO XA_LD_Bargain
 	
 	IF ~~ THEN REPLY @94  /* ~When should I pay you?~*/
+	DO ~
+		SetGlobal("XA_LD_JournalEntry_2", "GLOBAL", 1)
+	~
 	GOTO XA_LD_WhenToPay
 END
 
@@ -1103,18 +1123,9 @@ END
 IF ~~ THEN BEGIN XA_LD_Price
 	SAY @13 /*~He clearly and eagerly smiles at a pace that is fast for him.  “The first price is your peace.  Are you at peace with your god?  Many would disdain such a transformation, and I shall not be held accountable should your ‘transgressions’ result in harm toward you.  Merely considering this option without pursuing it should not count as a stain upon your soul.”~ [xald0007]*/
 	
-	IF ~
-		NumInPartyAliveGT(1)
-		!General(Player1, UNDEAD)
-	~ THEN REPLY @14 /* ~I am willing.  Proceed!~ */
-	GOTO XA_LD_Chain_ChooseCharname
-	
-	IF ~
-		!NumInPartyAliveGT(1)
-		!General(Player1, UNDEAD)
-	~ THEN REPLY @14 /* ~I am willing.  Proceed!~ */
-	GOTO XA_LD_LastChance
-	
+	IF ~~ THEN REPLY @14 /* ~I am willing.  Proceed!~ */
+	GOTO XA_LD_Proceed
+		
 	IF ~~ THEN REPLY @16 /* ~Perhaps later.~*/
 	GOTO XA_LD_Later
 END
@@ -1123,6 +1134,9 @@ IF ~~ THEN BEGIN XA_LD_Proceed
 	SAY @15 /*~He silently nods at you.  “The second price is understanding.  Go find 3 liches or demiliches in any combination, slay them, and bring their lich dust to me.  We shall talk further then.”  Morris promptly stands up straight and looks you very intently in the eyes.~ [xald0008]*/
 	
 	IF ~~ THEN
+	DO ~
+		SetGlobal("XA_LD_JournalEntry_1", "GLOBAL", 1)
+	~
 	EXIT
 END
 
@@ -1184,6 +1198,7 @@ IF ~~ THEN BEGIN XA_LD_LastChance
 	DO ~
 		ActionOverride(Player1, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
 		SetGlobal("XA_LD_Player1IsLich", "GLOBAL", 1)
+		SetGlobal("XA_LD_JournalEntry_5", "GLOBAL", 1)
 	~
 	GOTO XA_LD_Transform
 END
