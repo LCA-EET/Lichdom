@@ -111,19 +111,19 @@ APPEND ~PLAYER1~
 	IF ~~ THEN BEGIN XA_ChangeMentalSenses
 		SAY @67 /*~Change lich mental senses.~*/
 		
-		IF ~~ THEN REPLY @68
+		IF ~~ THEN REPLY @68 /* ~Detect Invisibility (Default).~*/
 		DO ~
 			SetGlobal("XA_LD_LichSenses", "GLOBAL", 0)
 		~
 		GOTO XA_ChangeProcessed
 		
-		IF ~~ THEN REPLY @69
+		IF ~~ THEN REPLY @69 /* ~Detect Invisibility and True Sight.~*/
 		DO ~
 			SetGlobal("XA_LD_LichSenses", "GLOBAL", 1)
 		~
 		GOTO XA_ChangeProcessed
 		
-		IF ~~ THEN REPLY @70
+		IF ~~ THEN REPLY @70 /* ~None.~ */
 		DO ~
 			SetGlobal("XA_LD_LichSenses", "GLOBAL", 2)
 		~
