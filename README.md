@@ -121,6 +121,10 @@ Note that configuration options in this section ONLY apply to Lich characters fr
 
 - 50%
 
+- 80%
+
+- 100%
+
 **Can a broken phylactery be replaced? (In-Game Config Option)**
 - Yes, but it costs the same as a new phylactery. (Default)
 
