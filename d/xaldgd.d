@@ -421,28 +421,28 @@ IF ~~ THEN BEGIN XA_LD_StartRitual
 		Global("XA_LD_IgnoreDialog", "GLOBAL", 1)
 		PartyGoldGT(119999)
 	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
-	GOTO XA_LD_PayMoney
+	GOTO XA_LD_PayMoney_NoDialog
 	
 	IF ~
 		Global("XA_LD_TransformationCost", "GLOBAL", 1)
 		Global("XA_LD_IgnoreDialog", "GLOBAL", 1)
 		PartyGoldGT(99999)
 	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
-	GOTO XA_LD_PayMoney
+	GOTO XA_LD_PayMoney_NoDialog
 	
 	IF ~
 		Global("XA_LD_TransformationCost", "GLOBAL", 2)
 		Global("XA_LD_IgnoreDialog", "GLOBAL", 1)
 		PartyGoldGT(74999)
 	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
-	GOTO XA_LD_PayMoney
+	GOTO XA_LD_PayMoney_NoDialog
 	
 	IF ~
 		Global("XA_LD_TransformationCost", "GLOBAL", 3)
 		Global("XA_LD_IgnoreDialog", "GLOBAL", 1)
 		PartyGoldGT(49999)
 	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
-	GOTO XA_LD_PayMoney
+	GOTO XA_LD_PayMoney_NoDialog
 	
 	IF ~
 		Global("XA_LD_TransformationCost", "GLOBAL", 4)
