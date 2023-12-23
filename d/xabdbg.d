@@ -28,19 +28,22 @@ IF ~
 	
 	IF ~~ THEN REPLY @49
 	DO ~
-		GiveItemCreate("xalddust", Player1, 1,0,0)
+		GiveItemCreate("xalddust", Player1, 0,0,0)
 	~
 	EXIT
 	
 	IF ~~ THEN REPLY @50
 	DO ~
-		GiveItemCreate("xalddust", Player1, 2,0,0)
+		GiveItemCreate("xalddust", Player1, 0,0,0)
+		GiveItemCreate("xalddust", Player1, 0,0,0)
 	~
 	EXIT
 	
 	IF ~~ THEN REPLY @51
 	DO ~
-		GiveItemCreate("xalddust", Player1, 3,0,0)
+		GiveItemCreate("xalddust", Player1, 0,0,0)
+		GiveItemCreate("xalddust", Player1, 0,0,0)
+		GiveItemCreate("xalddust", Player1, 0,0,0)
 	~
 	EXIT
 	
