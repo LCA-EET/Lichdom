@@ -89,7 +89,7 @@ Since Lichdom's requirements and effects throughout the editions and decades of 
 
 Note that configuration options in this section ONLY apply to Lich characters from this mod and NOT to enemy/NPC Liches!
 
-**Lichdom Monetary Cost Per Transformation (Install Option)**
+**Lichdom Monetary Cost Per Transformation (In-Game Configuration Option - Only applies to Liches made after this option is set)**
 - 120,000G (Default)
 
 - 100,00G
@@ -100,7 +100,7 @@ Note that configuration options in this section ONLY apply to Lich characters fr
 
 - 40,000G
 
-**% Chance for Phylactery to Break Upon Lich's Death (Install Option)**
+**% Chance for Phylactery to Break Upon Lich's Death (In-Game Configuration Option - Applies to current character)**
 - None (Default)
 
 - 1%
@@ -125,17 +125,17 @@ Note that configuration options in this section ONLY apply to Lich characters fr
 
 - 100%
 
-**Can a broken phylactery be replaced? (In-Game Config Option)**
+**Can a broken phylactery be replaced? (In-Game Configuration Option - Applies to current character)**
 - Yes, but it costs the same as a new phylactery. (Default)
 
 - No.
 
-**Is a Lich allergic to (unable to equip, regardless of proficiencies) to items that harm undead such as a Mace of Disruption, a Flame Tongue/Burning Earth Sword, a Protection from Undead scroll, or an Azuredge Axe?  Note that your normal proficiencies apply, regardless of this option, and if you enable this option with anti-Undead items equipped, you will immediately unequip or drop them. (In-Game Config Option)**
+**Is a Lich allergic to (unable to equip, regardless of proficiencies) to items that harm undead such as a Mace of Disruption, a Flame Tongue/Burning Earth Sword, a Protection from Undead scroll, or an Azuredge Axe?  Note that your normal proficiencies apply, regardless of this option, and if you enable this option with anti-Undead items equipped, you will immediately unequip or drop them. (In-Game Config Option - Applies to current character)**
 - Yes (Default)
 
 - No
 
-**What's the highest level of hostile spells to which a Lich should be immune?  Note that friendly spells such as heals and buffs work normally, regardless of this setting. (In-Game Config Option)**
+**What's the highest level of hostile spells to which a Lich should be immune?  Note that friendly spells such as heals and buffs work normally, regardless of this setting. (In-Game Configuration Option - Only applies to Liches made after this option is set)**
 - None (Default)
 
 - 1
@@ -148,14 +148,14 @@ Note that configuration options in this section ONLY apply to Lich characters fr
 
 - 5
 
-**What bonus to all mental ability scores (INT, WIS, and CHA) should apply to Liches? (In-Game Config Option)**
+**What bonus to all mental ability scores (INT, WIS, and CHA) should apply to Liches? (In-Game Configuration Option - Only applies to Liches made after this option is set)**
 - +1 (Default)
 
 - +2
 
 - None
 
-**What bonus to natural AC (crushing, piercing, and slashing) should Liches receive? (In-Game Config Option)**
+**What bonus to natural AC (crushing, piercing, and slashing) should Liches receive? (In-Game Configuration Option - Only applies to Liches made after this option is set)**
 - 1
 
 - 2
@@ -168,7 +168,7 @@ Note that configuration options in this section ONLY apply to Lich characters fr
 
 - None
 
-**What bonus to spell resistance should Liches receive? (In-Game Config Option)**
+**What bonus to spell resistance should Liches receive? (In-Game Configuration Option - Only applies to Liches made after this option is set)**
 - None (Default)
 
 - +5%
@@ -199,14 +199,14 @@ Note that configuration options in this section ONLY apply to Lich characters fr
 
 - +100%
 
-**What special senses should a Lich have? (In-Game Config Option)**
+**What special senses should a Lich have? (In-Game Configuration Option - Only applies to Liches made after this option is set)**
 - Continual See Invisibility (Default)
 
 - Continual See Invisibility and True Seeing
 
 - None
 
-**What sprite should be used for this character's appearance? (In-Game Config Option)**
+**What sprite should be used for this character's appearance? (In-Game Configuration Option - Applies to current character)**
 - Normal (Default)
 
 - Standard Lich
