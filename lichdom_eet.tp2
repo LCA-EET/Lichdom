@@ -230,9 +230,15 @@ END
 	EXTEND_TOP ~BALDUR.BCS~ 	~lichdom/baf/xabaldur.baf~
 	EXTEND_TOP ~BDBALDUR.BCS~ 	~lichdom/baf/xabaldur.baf~
 	EXTEND_TOP ~BALDUR25.BCS~ 	~lichdom/baf/xabaldur.baf~
+	
+	EXTEND_TOP ~BALDUR.BCS~ 	~lichdom/baf/xaldjrnl.baf~
+	EXTEND_TOP ~BDBALDUR.BCS~ 	~lichdom/baf/xaldjrnl.baf~
+	EXTEND_TOP ~BALDUR25.BCS~ 	~lichdom/baf/xaldjrnl.baf~
+	
 	EXTEND_TOP ~AR0800.BCS~ 	~lichdom/baf/xaar0800.baf~
 	EXTEND_TOP ~AR5000.BCS~ 	~lichdom/baf/xaar5000.baf~
 	EXTEND_TOP ~AR6200.BCS~		~lichdom/baf/xaar6200.baf~
+	
 //}
 
 //{ BAM
