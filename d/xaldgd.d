@@ -387,7 +387,7 @@ IF ~~ THEN BEGIN XA_LD_StartRitual
 	SAY @102  /* ~“Ah…” he says with a long, quiet exhale.  “Lichdom has -quite- the monetary price, but the allure of immortality is worth it.  Do you have the -entire- amount of gold on you now?  If so, we can proceed.” [xald1031]*/
 	
 	IF ~~ THEN REPLY @104  /* ~I have reconsidered.  Perhaps we shall handle this later.~*/
-	GOTO XA_LD_Reconsider
+	GOTO XA_LD_Later
 	
 	IF ~
 		Global("XA_LD_TransformationCost", "GLOBAL", 0)
