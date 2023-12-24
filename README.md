@@ -241,7 +241,7 @@ Specifically, Lichdom has a small amount of cross-mod content AKA crossmod conte
 
 - [Skitia's NPCs for BG2 (Emily, Helga, Kale, Recorder, and Vienxay)](https://github.com/Skitia/SkitiaNPCs/)
 
-- Mods that port BG1 NPCs to BG2EE.
+- Mods that port BG1 NPCs to BG2EE.  Use of these characters is permissible as per [Wizards of the Coast's Fan Content Policy](https://company.wizards.com/en/legal/fancontentpolicy).
 
 Lichdom should be installed BEFORE these mods if you use them:  [EET End](https://github.com/Gibberlings3/EET).
 
@@ -377,6 +377,8 @@ In short, this license means that, so long as you link to the original mod (http
 Cross-mod AKA crossmod content is also allowed and encouraged!  Don't ask permission for this:  Just do it and pweath send us a link as an Issue on this GitHub repository or/and a linked forum thread! (Linking your crossmod content isn't required, but encouraged!)
 
 Just remember that this mod was made for non-commercial purposes, and Wizards of the Coast would probably very much NOT like you if you tried selling your mods for money.
+
+For clarity:  [This mod (Lichdom) is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC](https://company.wizards.com/en/legal/fancontentpolicy).
 
 # Requests of the Community
 ![A mod where the party can fight a Dracolich seems wonderful!](https://github.com/LCA-EET/Lichdom/blob/main/Documentation%20Images/Dracolich.png)
