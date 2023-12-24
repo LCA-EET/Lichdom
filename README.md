@@ -1,5 +1,4 @@
 # Lichdom: A Mod for _Baldur's Gate II: Enhanced Edition_ (BG2EE) & Enhanced Edition Trilogy (EET)!
-Design, writing, and voice acting by Endarire.  Coding by LCA.  Images in this documentation are from Wizards of the Coast.
 
 GIBBERLINGS3 FORUM THREAD: **INSERT**
 
