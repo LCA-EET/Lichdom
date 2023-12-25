@@ -1,4 +1,4 @@
-# Lichdom: A Mod for _Baldur's Gate II: Enhanced Edition_ (BG2EE) & Enhanced Edition Trilogy (EET)!
+# Lichdom: A Mod for the Enhanced Edition Trilogy (EET)!
 
 GIBBERLINGS3 FORUM THREAD: **INSERT**
 
