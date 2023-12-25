@@ -1,4 +1,4 @@
-# Lichdom: A Mod for _Baldur's Gate II: Enhanced Edition_ (BG2EE) & Enhanced Edition Trilogy (EET)!
+# Lichdom: A Mod for the Enhanced Edition Trilogy (EET)!
 
 GIBBERLINGS3 FORUM THREAD: **INSERT**
 
@@ -87,6 +87,30 @@ _This Lich grins, knowing he has many options!_
 Since Lichdom's requirements and effects throughout the editions and decades of D&D have varied so much, it seemed fitting to include a variety of options to better suit your play style.
 
 Note that configuration options in this section ONLY apply to Lich characters from this mod and NOT to enemy/NPC Liches!
+
+**How many Crowns of the Lich should be for sale in Sister Garlena's shop? (In-Game Configuration Option - Only applies to Liches made after this option is set)**
+- One (Default)
+
+- Two
+
+- Three
+
+- Four
+
+- Five
+
+- Six
+
+**Lichdom Monetary Cost Per Transformation (Install Option)**
+- 120,000G (Default)
+
+- 100,00G
+
+- 75,000G
+
+- 50,000G
+
+- 40,000G
 
 **Lichdom Monetary Cost Per Transformation (In-Game Configuration Option - Only applies to Liches made after this option is set)**
 - 120,000G (Default)
