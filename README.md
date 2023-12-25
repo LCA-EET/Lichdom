@@ -2,12 +2,12 @@
 
 GIBBERLINGS3 FORUM THREAD: **INSERT**
 
-![If you wanna be a lich, this is the right place!](https://github.com/LCA-EET/lichdom/Lichdom_EET/blob/main/Documentation%20Images/Consumptive-Field.png)
+![If you wanna be a lich, this is the right place!](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/Consumptive-Field.png)
 
 _Your souls are MINE!_
 
 # So, you wanna be a Lich.
-![We're your friendly, neighborhood guide skeletons!  Walk this way!](https://github.com/LCA-EET/lichdom/Lichdom_EET/blob/main/Documentation%20Images/Necromancer-Iron-Bones.png)
+![We're your friendly, neighborhood guide skeletons!  Walk this way!](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/Necromancer-Iron-Bones.png)
 
 _We're your friendly, neighborhood guide skeletons!  Walk this way!_
 
@@ -18,7 +18,7 @@ Throughout the realms and the planes, many have already become Liches or Demilic
 Regardless of their reasoning, with this mod, you too can become a Lich with the help of Gravetender Morris in Athkatla's Graveyard District (SoA) or Saradush (ToB).  You have plenty of chances to decline, but because you came here, I assume you seek the secrets of a Lich transformation as performed by Gravetender Morris.
 
 # Requirements for Lichdom
-![Acererak, that Lich from the Tomb of Horrors module that helped kill thousands of characters!](https://github.com/LCA-EET/lichdom/Lichdom_EET/blob/main/Documentation%20Images/Acererak-Lich.png?raw=true)
+![Acererak, that Lich from the Tomb of Horrors module that helped kill thousands of characters!](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/Acererak-Lich.png?raw=true)
 
 _Lichdom is not for everyone.  It is a great potential power but also has a significant cost!_
 
@@ -39,7 +39,7 @@ _Lichdom is not for everyone.  It is a great potential power but also has a sign
 - Accepting the strong possibility that this process is irreversible.
 
 # Effects of Lichdom (Default)
-![Life's a Lich and then you never die!](https://github.com/LCA-EET/lichdom/Lichdom_EET/blob/main/Documentation%20Images/4e-Lich-White-BG-50.png)
+![Life's a Lich and then you never die!](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/4e-Lich-White-BG-50.png)
 
 _This Lich is living his best unlife now!  Careful about that glowing hand:  If he touches you, that's the last thing you're likely to feel before you're paralyzed and dead, dead, dead!_
 
@@ -80,7 +80,7 @@ Regardless of settings, certain SoA events _will_ remove CHARNAME's (the protago
 - You gain an innate ability usable at will which changes your character's appearance to that of a typical Lich.  This ability is only cosmetic.
 
 # Configurable Lichdom Options
-![This Lich grins, knowing he has many options!](https://github.com/LCA-EET/lichdom/Lichdom_EET/blob/main/Documentation%20Images/Green-Cloak-Lich.png)
+![This Lich grins, knowing he has many options!](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/Green-Cloak-Lich.png)
 
 _This Lich grins, knowing he has many options!_
 
@@ -235,7 +235,7 @@ Note that configuration options in this section ONLY apply to Lich characters fr
 - Standard Lich
 
 # Install Order Notes
-![This Lich is frazzled, having researched a proper mega mod installation for months now!](https://github.com/LCA-EET/lichdom/Lichdom_EET/blob/main/Documentation%20Images/Lich-with-Books.png)
+![This Lich is frazzled, having researched a proper mega mod installation for months now!](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/Lich-with-Books.png)
 
 _This Lich is frazzled, having researched a proper mega mod installation for months now!_
 
@@ -270,7 +270,7 @@ Specifically, Lichdom has a small amount of cross-mod content AKA crossmod conte
 Lichdom should be installed BEFORE these mods if you use them:  [EET End](https://github.com/Gibberlings3/EET).
 
 # New Ability and Item Descriptions
-![This Lich admires his new phylactery.  His life is in his hands.](https://github.com/LCA-EET/lichdom/Lichdom_EET/blob/main/Documentation%20Images/Force-Chest-Phylactery-33.png)
+![This Lich admires his new phylactery.  His life is in his hands.](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/Force-Chest-Phylactery-33.png)
 
 _This Lich admires his new phylactery.  His life is in his hands._
 
@@ -315,7 +315,7 @@ This ornate cloak is a phylactery that contains the soul of <UNIT>.  Equipping i
 Mod Source: Lichdom
 
 # Q & A (FAQ)
-![What's going on here?  I too want to know!](https://github.com/LCA-EET/lichdom/Lichdom_EET/blob/main/Documentation%20Images/Vile-Death-Spell-Lich-33.png)
+![What's going on here?  I too want to know!](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/Vile-Death-Spell-Lich-33.png)
 
 _What's going on here?  I too want to know!_
 
@@ -390,13 +390,13 @@ Shroud of the Lich is also an intentional reference to [an ability of the same n
 - Lichdom was not tested on every operating system, but if your operating system can run a version of _Baldur's Gate II: Enhanced Edition_ with WeiDU mods, it can likely also run Lichdom.
 
 # License, Editing, and Redistribution/Rehosting
-![Just as there's more than one type of Lich, there are others who want to edit this Lichdom mod.](https://github.com/LCA-EET/lichdom/Lichdom_EET/blob/main/Documentation%20Images/Alhoon.png)
+![Just as there's more than one type of Lich, there are others who want to edit this Lichdom mod.](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/Alhoon.png)
 
 _Just as there's more than one type of Lich, there are others who want to edit this Lichdom mod._
 
 - This mod (Lichdom) is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
-In short, this license means that, so long as you link to the original mod (https://github.com/LCA-EET/lichdom/Lichdom_EET/ or one of its official mirrors if there are any) AND you preserve the ENTIRE credits section, you can otherwise redistribute and edit this mod.
+In short, this license means that, so long as you link to the original mod (https://github.com/LCA-EET/lichdom/ or one of its official mirrors if there are any) AND you preserve the ENTIRE credits section, you can otherwise redistribute and edit this mod.
 
 Cross-mod AKA crossmod content is also allowed and encouraged!  Don't ask permission for this:  Just do it and pweath send us a link as an Issue on this GitHub repository or/and a linked forum thread! (Linking your crossmod content isn't required, but encouraged!)
 
@@ -405,13 +405,13 @@ Just remember that this mod was made for non-commercial purposes, and Wizards of
 For clarity:  [This mod (Lichdom) is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC](https://company.wizards.com/en/legal/fancontentpolicy).
 
 # Requests of the Community
-![A mod where the party can fight a Dracolich seems wonderful!](https://github.com/LCA-EET/lichdom/Lichdom_EET/blob/main/Documentation%20Images/Dracolich.png)
+![A mod where the party can fight a Dracolich seems wonderful!](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/Dracolich.png)
 _A mod where the party can fight a Dracolich seems wonderful!_
 
 I know I'm not the only Lich fan out there!  This section is meant as inspiration for the community for anyone else who wants to make a Lich-themed mod to please me.  Perhaps have a ship or an airship of adventurers fight a Dracolich mid-flight and prevent its corpse from crashing into a town below.  And of course tracking down its phylactery and handling that seems interesting.  But I've enjoyed Dracoliches.
 
 # Credits
-![We all get by with a little help from our former enemies.](https://github.com/LCA-EET/lichdom/Lichdom_EET/blob/main/Documentation%20Images/General-of-Undeath.png)
+![We all get by with a little help from our former enemies.](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/General-of-Undeath.png)
 _We don't go through life alone.  We all get by with a little help from our former enemies._
 
 - [Endarire](https://paypal.me/Endarire/10): He did the design, voice acting, and writing for this mod - including this documentation!
@@ -429,7 +429,7 @@ _We don't go through life alone.  We all get by with a little help from our form
 - The Lord Jesus Christ.  Many D&D spells and other things are inspired by Bible passages, such as [Elijah calling down fire from heaven a la _flame strike_ in 1 Kings 18](https://www.biblegateway.com/passage/?search=1%20Kings%2018&version=NIV), [water being created from a rock in Exodus 17 a la _create water_](https://www.biblegateway.com/passage/?search=Exodus 17&version=NkJV), [pillars of cloud and fire tagging along with the Israelites in the desert wilderness for years a la an air elemental and a fire elemental](https://www.biblegateway.com/passage/?search=Exodus%2013%3A17-14%3A29&version=ESV), and [The Lord thundering loudly, confusing the Philistines into killing themselves a la _confusion_](https://www.biblegateway.com/passage/?search=1%20Samuel%207&version=nKJV).  Even the idol Bhaal/Baal is mentioned in various places in the Old Testament.
 
 # Change Log
-![Even Liches change.](https://github.com/LCA-EET/lichdom/Lichdom_EET/blob/main/Documentation%20Images/Demilich-33.png)
+![Even Liches change.](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/Demilich-33.png)
 
 _Even Liches can change into Demiliches._
 
