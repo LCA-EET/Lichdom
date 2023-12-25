@@ -1,5 +1,8 @@
 ## Lichdom Release Notes
 
+# v0.1.3 beta 2023-12-25
+* Adjusted mod title and installation options.
+
 # v0.1.2 beta 2023-12-25
 * Fixed a paths issue in the .tp2 file.
 
