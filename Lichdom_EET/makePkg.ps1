@@ -1,5 +1,5 @@
 $basePath = "Lichdom_EET"
-$modPath = $basePath + "/lichdom" 
+$modPath = $basePath + "/" + $basePath 
 $archive = $basePath + ".zip"
 $exePath = "setup-" + $basePath + ".exe"
 
