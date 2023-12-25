@@ -2,7 +2,6 @@ IF
 	True()
 THEN
 	RESPONSE #100
-		StartCutSceneMode()
 		CutSceneID(Player3)
 		SetGlobal("XA_LD_TransformLich", "LOCALS", 0)
 		SetSequence(SEQ_DIE)

@@ -8,6 +8,9 @@ IF ~
 	IF ~~ THEN REPLY @43
 	GOTO XA_ReportRace
 	
+	IF ~~ THEN REPLY @78
+	GOTO XA_UndeadCheck
+	
 	IF ~~ THEN REPLY @54
 	DO ~
 		CreateCreature("XALDGD", [-1.-1], N)
@@ -227,6 +230,70 @@ IF ~
 		DestroySelf()
 	~
 	EXIT
+END
+
+IF ~~ THEN BEGIN XA_UndeadCheck
+	SAY @78
+	
+	IF ~
+		General(Player1, UNDEAD)
+	~ THEN REPLY @79
+	GOTO XA_DebugInit
+	
+	IF ~
+		General(Player2, UNDEAD)
+	~ THEN REPLY @80
+	GOTO XA_DebugInit
+	
+	IF ~
+		General(Player3, UNDEAD)
+	~ THEN REPLY @81
+	GOTO XA_DebugInit
+	
+	IF ~
+		General(Player4, UNDEAD)
+	~ THEN REPLY @82
+	GOTO XA_DebugInit
+	
+	IF ~
+		General(Player5, UNDEAD)
+	~ THEN REPLY @83
+	GOTO XA_DebugInit
+	
+	IF ~
+		General(Player6, UNDEAD)
+	~ THEN REPLY @84
+	GOTO XA_DebugInit
+	
+	IF ~
+		!General(Player1, UNDEAD)
+	~ THEN REPLY @85
+	GOTO XA_DebugInit
+	
+	IF ~
+		!General(Player2, UNDEAD)
+	~ THEN REPLY @86
+	GOTO XA_DebugInit
+	
+	IF ~
+		!General(Player3, UNDEAD)
+	~ THEN REPLY @87
+	GOTO XA_DebugInit
+	
+	IF ~
+		!General(Player4, UNDEAD)
+	~ THEN REPLY @88
+	GOTO XA_DebugInit
+	
+	IF ~
+		!General(Player5, UNDEAD)
+	~ THEN REPLY @89
+	GOTO XA_DebugInit
+	
+	IF ~
+		!General(Player6, UNDEAD)
+	~ THEN REPLY @90
+	GOTO XA_DebugInit
 END
 
 IF ~~ THEN BEGIN XA_LD_AddCharacter

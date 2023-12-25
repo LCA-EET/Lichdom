@@ -1,43 +1,19 @@
 IF
-	TriggerOverride(Player1, Global("XA_LD_TransformLich", "LOCALS", 1))
+	!Allegiance(Myself, Enemy)
+	OnScreen(Myself)
 THEN
 	RESPONSE #100
-		StartCutScene("xaldtr01")
+		FaceObject(Player1)
+		Continue()
 END
 
 IF
-	TriggerOverride(Player2, Global("XA_LD_TransformLich", "LOCALS", 1))
+	!Allegiance(Myself, Enemy)
+	GlobalGT("XA_LD_Morris", "GLOBAL", 0)
 THEN
 	RESPONSE #100
-		StartCutScene("xaldtr02")
-END
-
-IF
-	TriggerOverride(Player3, Global("XA_LD_TransformLich", "LOCALS", 1))
-THEN
-	RESPONSE #100
-		StartCutScene("xaldtr03")
-END
-
-IF
-	TriggerOverride(Player4, Global("XA_LD_TransformLich", "LOCALS", 1))
-THEN
-	RESPONSE #100
-		StartCutScene("xaldtr04")
-END
-
-IF
-	TriggerOverride(Player5, Global("XA_LD_TransformLich", "LOCALS", 1))
-THEN
-	RESPONSE #100
-		StartCutScene("xaldtr05")
-END
-
-IF
-	TriggerOverride(Player6, Global("XA_LD_TransformLich", "LOCALS", 1))
-THEN
-	RESPONSE #100
-		StartCutScene("xaldtr06")
+		Enemy()
+		Continue()
 END
 
 IF
@@ -74,9 +50,10 @@ IF
 	OR(2)
 		AreaCheck("AR0800")
 		Global("XA_LD_AR0800", "GLOBAL", 1)
-	OR(2)
+	OR(3)
 		HPPercentLT(Myself, 100)
 		See(NearestEnemyOf(Myself))
+		AttackedBy([ANYONE], DEFAULT)
 THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
@@ -86,12 +63,15 @@ END
 
 IF
 	GlobalLT("XA_LD_EquipStaff", "LOCALS", 1)
-	See(NearestEnemyOf(Myself))
+	OR(2)
+		See(NearestEnemyOf(Myself))
+		AttackedBy([ANYONE], DEFAULT)
 THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
 		SetGlobal("XA_LD_EquipStaff", "LOCALS", 1)
 		EquipMostDamagingMelee()
+		Enemy()
 		SetInterrupt(TRUE)
 		Continue()
 END
@@ -101,7 +81,9 @@ IF
 		AreaCheck("AR5000")
 		Global("XA_LD_AR5000", "GLOBAL", 1)
 	Global("XA_LD_Morris", "LOCALS", 0)
-	See(NearestEnemyOf(Myself))
+	OR(2)
+		See(NearestEnemyOf(Myself))
+		AttackedBy([ANYONE], DEFAULT)
 THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
@@ -343,6 +325,7 @@ END
 
 IF 
 	!AreaCheck("AR5000")
+	!Global("XA_LD_AR5000", "GLOBAL", 1)
 THEN
 	RESPONSE #100
 		NoAction()
@@ -708,4 +691,5 @@ THEN
 	RESPONSE #100
 		AttackReevaluate(NearestEnemyOf(Myself),15)
 END
+
 

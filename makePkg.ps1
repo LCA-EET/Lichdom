@@ -1,5 +1,5 @@
 $basePath = "Lichdom_EET"
-$modPath = $basePath + "/" + $basePath
+$modPath = $basePath + "/lichdom" 
 $archive = $basePath + ".zip"
 $exePath = "setup-" + $basePath + ".exe"
 
@@ -26,6 +26,7 @@ foreach($folder in $folders){
 
 Copy-Item -Path ($basePath + ".tp2") -Destination $modPath 
 Copy-Item -Path "license.md" -Destination $modPath
+# Copy-Item -Path "ldconfig.cfg" -Destination $modPath
 
 Copy-Item -Path "weidu.exe" -Destination ($basePath + "/" + $exePath)
 Copy-Item -Path "Release Notes.md" -Destination ($basePath + "/Release Notes.md")

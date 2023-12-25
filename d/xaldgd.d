@@ -99,6 +99,7 @@ IF ~
 	IF ~
 		NumItemsPartyGT("xalddust", 2)
 		Global("XA_LD_GaveDust", "GLOBAL", 0)
+		Global("XA_LD_DustQuest", "GLOBAL", 1)
 	~ THEN REPLY @80  /* ~Your deed is done and these liches are slain.  Here’s your lich dust.  Now what?~ */
 	DO ~
 		SetGlobal("XA_LD_GaveDust", "GLOBAL", 1)
@@ -393,70 +394,70 @@ IF ~~ THEN BEGIN XA_LD_StartRitual
 		Global("XA_LD_TransformationCost", "GLOBAL", 0)
 		Global("XA_LD_IgnoreDialog", "GLOBAL", 0)
 		PartyGoldGT(119999)
-	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
+	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
 	GOTO XA_LD_PayMoney
 	
 	IF ~
 		Global("XA_LD_TransformationCost", "GLOBAL", 1)
 		Global("XA_LD_IgnoreDialog", "GLOBAL", 0)
 		PartyGoldGT(99999)
-	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
+	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
 	GOTO XA_LD_PayMoney
 	
 	IF ~
 		Global("XA_LD_TransformationCost", "GLOBAL", 2)
 		Global("XA_LD_IgnoreDialog", "GLOBAL", 0)
 		PartyGoldGT(74999)
-	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
+	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
 	GOTO XA_LD_PayMoney
 	
 	IF ~
 		Global("XA_LD_TransformationCost", "GLOBAL", 3)
 		Global("XA_LD_IgnoreDialog", "GLOBAL", 0)
 		PartyGoldGT(49999)
-	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
+	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
 	GOTO XA_LD_PayMoney
 	
 	IF ~
 		Global("XA_LD_TransformationCost", "GLOBAL", 4)
 		Global("XA_LD_IgnoreDialog", "GLOBAL", 0)
 		PartyGoldGT(39999)
-	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
+	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
 	GOTO XA_LD_PayMoney
 	
 	IF ~
 		Global("XA_LD_TransformationCost", "GLOBAL", 0)
 		Global("XA_LD_IgnoreDialog", "GLOBAL", 1)
 		PartyGoldGT(119999)
-	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
+	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
 	GOTO XA_LD_PayMoney_NoDialog
 	
 	IF ~
 		Global("XA_LD_TransformationCost", "GLOBAL", 1)
 		Global("XA_LD_IgnoreDialog", "GLOBAL", 1)
 		PartyGoldGT(99999)
-	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
+	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
 	GOTO XA_LD_PayMoney_NoDialog
 	
 	IF ~
 		Global("XA_LD_TransformationCost", "GLOBAL", 2)
 		Global("XA_LD_IgnoreDialog", "GLOBAL", 1)
 		PartyGoldGT(74999)
-	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
+	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
 	GOTO XA_LD_PayMoney_NoDialog
 	
 	IF ~
 		Global("XA_LD_TransformationCost", "GLOBAL", 3)
 		Global("XA_LD_IgnoreDialog", "GLOBAL", 1)
 		PartyGoldGT(49999)
-	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
+	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
 	GOTO XA_LD_PayMoney_NoDialog
 	
 	IF ~
 		Global("XA_LD_TransformationCost", "GLOBAL", 4)
 		Global("XA_LD_IgnoreDialog", "GLOBAL", 1)
 		PartyGoldGT(39999)
-	~ THEN REPLY @105  /* ~Here is your money.  Let’s do this!~ */
+	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
 	GOTO XA_LD_PayMoney_NoDialog
 END
 
@@ -1136,6 +1137,7 @@ IF ~~ THEN BEGIN XA_LD_Proceed
 	IF ~~ THEN
 	DO ~
 		SetGlobal("XA_LD_JournalEntry_1", "GLOBAL", 1)
+		SetGlobal("XA_LD_DustQuest", "GLOBAL", 1)
 	~
 	EXIT
 END

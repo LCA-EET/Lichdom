@@ -33,7 +33,23 @@ COMPILE EVALUATE_BUFFER ~lichdom/baf~
 
 //{ Config file processing
 
-INCLUDE ~Lichdom/ldconfig.cfg~
+//INCLUDE ~lichdom/ldconfig.cfg~
+
+PRINT @36 
+ACTION_READLN ~xald_crowns~
+
+OUTER_WHILE NOT(IS_AN_INT %xald_crowns%)
+BEGIN
+	PRINT @36
+	ACTION_READLN ~xald_crowns~
+END
+
+OUTER_WHILE (%xald_crowns% < 1) OR (%xald_crowns% > 6) 
+BEGIN
+	PRINT @36
+	ACTION_READLN ~xald_crowns~
+END
+
 COPY_EXISTING ~garlena.sto~ ~override~
 PATCH_IF (xald_crowns = 1) THEN BEGIN
 	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #1
@@ -57,6 +73,21 @@ END
 
 PATCH_IF (xald_crowns = 6) THEN BEGIN
 	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #6
+END
+
+PRINT @37 
+ACTION_READLN ~xald_cost~
+
+OUTER_WHILE NOT(IS_AN_INT %xald_cost%)
+BEGIN
+	PRINT @37
+	ACTION_READLN ~xald_cost~
+END
+
+OUTER_WHILE (%xald_cost% < 0) OR (%xald_cost% > 6) 
+BEGIN
+	PRINT @37
+	ACTION_READLN ~xald_cost~
 END
 
 ACTION_IF (xald_cost = 1) THEN BEGIN
@@ -236,7 +267,10 @@ END
 	EXTEND_TOP ~BALDUR25.BCS~ 	~lichdom/baf/xaldjrnl.baf~
 	
 	EXTEND_TOP ~AR0800.BCS~ 	~lichdom/baf/xaar0800.baf~
+	EXTEND_TOP ~AR0800.BCS~ 	~lichdom/baf/xaldprfm.baf~
 	EXTEND_TOP ~AR5000.BCS~ 	~lichdom/baf/xaar5000.baf~
+	EXTEND_TOP ~AR5000.BCS~ 	~lichdom/baf/xaldprfm.baf~
+	EXTEND_TOP ~BG2600.BCS~		~lichdom/baf/xaldprfm.baf~ //Debugging Only
 	EXTEND_TOP ~AR6200.BCS~		~lichdom/baf/xaar6200.baf~
 	
 //}
