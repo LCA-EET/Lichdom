@@ -1,6 +1,6 @@
 # Lichdom: A Mod for the Enhanced Edition Trilogy (EET)!
 
-GIBBERLINGS3 FORUM THREAD: **INSERT**
+BEAMDOG FORUM THREAD: **INSERT**
 
 ![If you wanna be a lich, this is the right place!](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/Consumptive-Field.png)
 
@@ -398,31 +398,31 @@ _Just as there's more than one type of Lich, there are others who want to edit t
 
 - This mod (Lichdom) is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
-In short, this license means that, so long as you link to the original mod (https://github.com/LCA-EET/lichdom/ or one of its official mirrors if there are any) AND you preserve the ENTIRE credits section, you can otherwise redistribute and edit this mod.
+In short, this license means that, so long as you link to the original mod (https://github.com/LCA-EET/lichdom/ or one of its official mirrors if there are any) AND you preserve the ENTIRE credits section AND you keep your version of this mod under this same license, you can otherwise redistribute and edit this mod.
 
-Cross-mod AKA crossmod content is also allowed and encouraged!  Don't ask permission for this:  Just do it and pweath send us a link as an Issue on this GitHub repository or/and a linked forum thread! (Linking your crossmod content isn't required, but encouraged!)
+Cross-mod AKA crossmod content is also allowed and encouraged!  Don't ask permission for this:  Just do it and pweath send us a link as an Issue on this GitHub repository or/and a linked forum thread! (Linking your crossmod content isn't required, but encouraged!)  If you want your crossmod content or other code to be considered for inclusion in a future version, let us know via the Issues tab.
 
 Just remember that this mod was made for non-commercial purposes, and Wizards of the Coast would probably very much NOT like you if you tried selling your mods for money.
 
-For clarity:  [This mod (Lichdom) is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC](https://company.wizards.com/en/legal/fancontentpolicy).
+For clarity:  This mod (Lichdom) is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
 
 # Requests of the Community
-![A mod where the party can fight a Dracolich seems wonderful!](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/Dracolich.png)
-_A mod where the party can fight a Dracolich seems wonderful!_
+![A mod where the party can fight a Dracolich seems wonderful!  Don't to expect to find it here!](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/Dracolich.png)
+_A mod where the party can fight a Dracolich seems wonderful!  Don't to expect to find it here!_
 
 I know I'm not the only Lich fan out there!  This section is meant as inspiration for the community for anyone else who wants to make a Lich-themed mod to please me.  Perhaps have a ship or an airship of adventurers fight a Dracolich mid-flight and prevent its corpse from crashing into a town below.  And of course tracking down its phylactery and handling that seems interesting.  But I've enjoyed Dracoliches.
 
 # Credits
-![We all get by with a little help from our former enemies.](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/General-of-Undeath.png)
+![We don't go through life alone.  We all get by with a little help from our former enemies.](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/General-of-Undeath.png)
 _We don't go through life alone.  We all get by with a little help from our former enemies._
 
 - [Endarire](https://paypal.me/Endarire/10): He did the design, voice acting, and writing for this mod - including this documentation!
 
-- LCA: He coded this mod and proofread various documentation.
+- [LCA](patreon.com/EETMods): He coded this mod and proofread various documentation.
 
 - k4thos and others involved in making and publishing [Protagonist Can Die](https://forums.beamdog.com/discussion/74528/mod-player1-can-die) which was sometimes called Player1 Can Die.  No code from this mod was used for Lichdom, but its existence was an inspiration for the possibility of Lichdom's auto-revival being implemented!  k4thos also made EET, and there was much rejoicing!
 
-- Aaron Williams, author of Nodwick Comic: He was the first to use the phrase "Son of a Lich" regarding undeath.
+- Aaron Williams, author of [Nodwick Comic](https://comic.nodwick.com/): He was the first to use the phrase "Son of a Lich" regarding undeath.
 
 - Angel and SubtleDoctor: Their discussions about the importance of lore adherence in mods helped in this mod's refinement.
 
@@ -435,6 +435,6 @@ _We don't go through life alone.  We all get by with a little help from our form
 
 _Even Liches can change into Demiliches._
 
-**1.0: (DATE)**
+**First Release: December 25, 2023 - Merry Lichmas!**
 
 -Initial Release.  Enjoy your undeath!
