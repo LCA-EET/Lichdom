@@ -1,6 +1,6 @@
 # Lichdom: A Mod for the Enhanced Edition Trilogy (EET)!
 
-BEAMDOG FORUM THREAD: **INSERT**
+[BEAMDOG FORUM THREAD](https://forums.beamdog.com/discussion/88122/lichdom-for-eet-bg2ee-side-merry-lichmas/p1?new=1)
 
 ![If you wanna be a lich, this is the right place!](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/Consumptive-Field.png)
 
