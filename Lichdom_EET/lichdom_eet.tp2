@@ -639,3 +639,10 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.are$~ ~override~
 WRITE_LONG 0x14 THIS|16
 BUT_ONLY
 //}
+
+//{ Mod Integration
+ACTION_IF FILE_EXISTS_IN_GAME ~XACORWIJ.dlg~ THEN BEGIN
+	PRINT @38 /* ~Love Conquers All (LCA) Mod detected. Updating dialogs accordingly...~ */ 
+	COMPILE ~compat/lca/d/xaldlca.d~ USING ~compat/lca/tra/xaldlca.tra~
+END
+//}
