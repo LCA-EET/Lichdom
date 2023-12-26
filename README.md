@@ -265,7 +265,7 @@ Specifically, Lichdom has a small amount of cross-mod content AKA crossmod conte
 
 - [Skitia's NPCs for BG2 (Emily, Helga, Kale, Recorder, and Vienxay)](https://github.com/Skitia/SkitiaNPCs/)
 
-- Mods that port BG1 NPCs to BG2EE.  Use of these characters is permissible as per [Wizards of the Coast's Fan Content Policy](https://company.wizards.com/en/legal/fancontentpolicy).
+- Mods that port BG1 NPCs to BG2EE.  Use of these characters is permissible as per Wizards of the Coast's Fan Content Policy.
 
 Lichdom should be installed BEFORE these mods if you use them:  [EET End](https://github.com/Gibberlings3/EET).
 
@@ -277,16 +277,16 @@ _This Lich admires his new phylactery.  His life is in his hands._
 **Lich Touch (Innate Melee Weapon)**
 This is a melee weapon usable at will.  It strikes as a +5 weapon.
 
-It does piercing damage equal to your d10 + STR bonus (minimum 0) as well as d10 cold damage.  Each hit forces a save vs. death on the subject at no penalty or be paralyzed for 5 rounds.  Spell resistance applies to paralysis.
+It does piercing damage equal to your d10 + STR bonus (minimum 0) as well as d10 cold damage.  Each hit forces a save vs. death on the subject at no penalty or be paralyzed for 5 rounds (30 seconds).  Spell resistance applies to this paralysis.
 
-**Crown of the Lich (Base Market Value: 100,000G, 1 Sold by Sister Garlena atop Watcher's Keep)**
+**Crown of the Lich (Base Market Value: 100,000G, 1 Sold by default by Sister Garlena atop Watcher's Keep)**
 With this crown equipped, you gain many of the benefits of being a Lich without the entire transformation.  While a Lich can equip this crown, most of its effects are redundant.
 
 Unlike a typical Lich, you have no phylactery and can't automatically revive if killed.  Your alignment does not change.  You don't gain the Lich Touch ability of a typical Lich.
 
-However, you gain many other abilities of a typical Lich:
+You gain the Undead flag, meaning you can be turned or rebuked.  (If you had immunity to turning or rebuking from another source, you still keep that immunity.)  This is unlike a typical Lichdom Lich who is immune to turning and rebuking.
 
-- You gain the Undead flag, meaning you can be turned or rebuked.
+However, you gain many other abilities of a typical Lich:
 
 - Immunity to damage from nonmagical weapons.
 
@@ -296,7 +296,7 @@ However, you gain many other abilities of a typical Lich:
 
 - Continual Detect Invisibliity.
 
-- +1 to INT, WIS, and CHA scores.
+- +1 to INT, WIS, and CHA scores to a maximum fo 25 each.
 
 - Natural AC improves by 3.
 
@@ -324,7 +324,9 @@ _What's going on here?  I too want to know!_
 
 - NPCs the world over were NOT recoded to treat characters drastically differently after becoming a Lich.  In vanilla BG2, you could walk fairly freely through the streets and countrysides of Amn with a [vampire](https://baldursgate.fandom.com/wiki/Hexxat), a [drow](https://baldursgate.fandom.com/wiki/Viconia_DeVir), and a [cackling Red Wizard](https://baldursgate.fandom.com/wiki/Edwin) spamming [undead animating spells](https://baldursgate.fandom.com/wiki/Animate_Dead_(wizard)) and NPCs would probably complain most about the drow, not the small army that acts as a Faerunian version of a weapon of mass destruction (WMD) in their midst.
 
-- Ultimately, this Lichdom mod is mostly about the mechanical side of being a Lich.  If you want a game that was built from the ground up to account for NPCs' reactions to becoming a Lich and the associated necromancy, play [_Pathfinder: Wrath of the Righteous_](https://store.steampowered.com/app/1184370/Pathfinder_Wrath_of_the_Righteous__Enhanced_Edition/) or another such game, if that exists.
+- Many recruitable NPCs will react to your earnlestly seeking to become a Lich if they're in your party when it happens.
+
+- Ultimately, this Lichdom mod is mostly about the mechanical side of being a Lich.  If you want a game that was built from the ground up to account for NPCs' reactions to becoming a Lich and the associated necromancy, play [_Pathfinder: Wrath of the Righteous_](https://store.steampowered.com/app/1184370/Pathfinder_Wrath_of_the_Righteous__Enhanced_Edition/) or another relevant game, if that exists.
 
 **120,000 coins per Lich transformation?  Boy, that sure is expensive!**
 - Lichdom is intended as a high initial cost, high long-time return for the character who undergoes this transformation.  The auto-revival aspect matters more in no reload runs.
