@@ -1,0 +1,37 @@
+//{ If the phylactery is not broken, recreate it upon the lich's resurrection
+IF
+	GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		CreateItem("xaldphyl", 0,0,0)
+		SetItemFlags("xaldphyl", IDENTIFIED, TRUE)
+		XEquipItem("xaldphyl",Myself,SLOT_CLOAK,EQUIP)
+		SetInterrupt(TRUE)
+		Continue()
+END
+//}
+
+//{ If the phylactery is broken, create the broken phylactery instead of the intact one
+IF
+	Global("XA_LD_PhylacteryBroken", "LOCALS", 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		CreateItem("xaldphyd", 0,0,0)
+		SetItemFlags("xaldphyd", IDENTIFIED, TRUE)
+		XEquipItem("xaldphyd",Myself,SLOT_CLOAK,EQUIP)
+		SetInterrupt(TRUE)
+		Continue()
+END
+//}
+
+IF
+	True()
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("XA_LD_LichDeathScript", "LOCALS", 0) 
+		ChangeAIScript("", CLASS)
+		SetInterrupt(TRUE)
+END

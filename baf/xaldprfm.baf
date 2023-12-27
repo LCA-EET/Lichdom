@@ -1,0 +1,54 @@
+
+IF
+	TriggerOverride(Player1, Global("XA_LD_TransformLich", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride(Player1, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+		StartCutSceneMode()
+		StartCutScene("xaldtr01")
+END
+
+IF
+	TriggerOverride(Player2, Global("XA_LD_TransformLich", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride(Player2, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+		StartCutSceneMode()
+		StartCutScene("xaldtr02")
+END
+
+IF
+	TriggerOverride(Player3, Global("XA_LD_TransformLich", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride(Player3, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+		StartCutSceneMode()
+		StartCutScene("xaldtr03")
+END
+
+IF
+	TriggerOverride(Player4, Global("XA_LD_TransformLich", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride(Player4, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+		StartCutSceneMode()
+		StartCutScene("xaldtr04")
+END
+
+IF
+	TriggerOverride(Player5, Global("XA_LD_TransformLich", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride(Player5, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+		StartCutSceneMode()
+		StartCutScene("xaldtr05")
+END
+
+IF
+	TriggerOverride(Player6, Global("XA_LD_TransformLich", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride(Player6, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+		StartCutSceneMode()
+		StartCutScene("xaldtr06")
+END

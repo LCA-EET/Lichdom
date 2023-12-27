@@ -1,8 +1,0 @@
-IF
-	GlobalLT("XA_LD_Config_Cost", "GLOBAL", 1)
-THEN
-	RESPONSE #100
-		SetGlobal("XA_LD_Config_Cost", "GLOBAL", 1)
-		SetGlobal("XA_LD_TransformationCost", "GLOBAL", 4)
-		Continue()
-END
