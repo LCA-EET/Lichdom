@@ -665,8 +665,18 @@ BUT_ONLY
 //}
 
 //{ Mod Integration
-ACTION_IF FILE_EXISTS_IN_GAME ~XACORWIJ.dlg~ THEN BEGIN
-	PRINT @38 /* ~Love Conquers All (LCA) Mod detected. Updating dialogs accordingly...~ */ 
-	COMPILE ~lichdom_eet/compat/lca/d/xaldlca.d~ USING ~lichdom_eet/compat/lca/tra/xaldlca.tra~
-END
+
+	//{ Love Conquers All (LCA)
+	ACTION_IF FILE_EXISTS_IN_GAME ~XACORWIJ.dlg~ THEN BEGIN
+		PRINT @38 /* ~Love Conquers All (LCA) Mod detected. Updating dialogs accordingly...~ */ 
+		COMPILE ~lichdom_eet/compat/lca/d/xaldlca.d~ USING ~lichdom_eet/compat/lca/tra/xaldlca.tra~
+	END
+	//}
+
+	//{ The Longer Road
+	ACTION_IF FILE_EXISTS_IN_GAME ~lrirenic.dlg~ THEN BEGIN
+		PRINT @39 /* ~The Longer Road mod detected. Updating dialogs accordingly...~*/ 
+		COMPILE ~lichdom_eet/compat/tlr/d/xaldtlr.d~ USING ~lichdom_eet/compat/tlr/tra/xaldtlr.tra~
+	END
+	//}
 //}

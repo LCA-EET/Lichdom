@@ -2,12 +2,16 @@
 EXTEND_BOTTOM XALDGD 15
 	IF ~
 		IsValidForPartyDialogue("XACORWIN")
+		!General("XACORWIN", UNDEAD)
+		LevelGT("XACORWIN", 11)
 	~
 	THEN REPLY @11 /*~(Choose Corwin.)~*/
 	EXTERN XACORWIJ XA_LD_ChooseCorwin
 	
 	IF ~
 		IsValidForPartyDialogue("XACAELAR")
+		!General("XACAELAR", UNDEAD)
+		LevelGT("XACAELAR", 11)
 	~
 	THEN REPLY @12 /*~(Choose Caelar.)~*/
 	EXTERN XACAELAJ XA_LD_ChooseCaelar
@@ -16,12 +20,16 @@ END
 EXTEND_BOTTOM XALDGD 18
 	IF ~
 		IsValidForPartyDialogue("XACORWIN")
+		!General("XACORWIN", UNDEAD)
+		LevelGT("XACORWIN", 11)
 	~
 	THEN REPLY @11 /*~(Choose Corwin.)~*/
 	EXTERN XACORWIJ XA_LD_ChooseCorwin
 	
 	IF ~
 		IsValidForPartyDialogue("XACAELAR")
+		!General("XACAELAR", UNDEAD)
+		LevelGT("XACAELAR", 11)
 	~
 	THEN REPLY @12 /*~(Choose Caelar.)~*/
 	EXTERN XACAELAJ XA_LD_ChooseCaelar

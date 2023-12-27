@@ -2,6 +2,7 @@
 
 # v0.1.6 beta 2023-12-27
 * Demiliches and Alhoons can now drop lich dust.
+* Added integration with The Longer Road mod.
 
 # v0.1.5 beta 2023-12-26
 * Added integration with the Love Conquers All (LCA) mod.
