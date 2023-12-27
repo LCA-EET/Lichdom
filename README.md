@@ -1,6 +1,6 @@
 # Lichdom: A Mod for the Enhanced Edition Trilogy (EET)!
 
-GIBBERLINGS3 FORUM THREAD: **INSERT**
+[BEAMDOG FORUM THREAD](https://forums.beamdog.com/discussion/88122/lichdom-for-eet-bg2ee-side-merry-lichmas/p1?new=1)
 
 ![If you wanna be a lich, this is the right place!](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/Consumptive-Field.png)
 
@@ -13,7 +13,7 @@ _We're your friendly, neighborhood guide skeletons!  Walk this way!_
 
 You're in the right place!  You're also late to the party.
 
-Throughout the realms and the planes, many have already become Liches or Demiliches of some sort.  Perhaps they sought immortality.  Perhaps they had enough of  needing to eat and breathe.  Perhaps they were tired of being chilled, shocked, diseased, entangled, level drained, paralyzed, petrified, poisoned, polymorphed into squirrels, stunned, and webbed.
+Throughout the realms and the planes, many have already become Liches or Demiliches of some sort.  Perhaps they sought immortality.  Perhaps they had enough of needing to eat and breathe.  Perhaps they were tired of being chilled, shocked, diseased, entangled, level drained, paralyzed, petrified, poisoned, polymorphed into squirrels, stunned, and webbed.
 
 Regardless of their reasoning, with this mod, you too can become a Lich with the help of Gravetender Morris in Athkatla's Graveyard District (SoA) or Saradush (ToB).  You have plenty of chances to decline, but because you came here, I assume you seek the secrets of a Lich transformation as performed by Gravetender Morris.
 
@@ -22,7 +22,7 @@ Regardless of their reasoning, with this mod, you too can become a Lich with the
 
 _Lichdom is not for everyone.  It is a great potential power but also has a significant cost!_
 
-- Level 12 or higher in any casting class or kit.  This applies to Bard, Cleric, Druid, Paladin, Ranger, Shaman, Sorcerer, and Wizard (Mage).  Multiclassed or dual classed characters need at least 12 levels in one of these classes to undergo the ritual.
+- Level 12 or higher in any casting class, kitted or not.  This applies to Bard, Cleric, Druid, Paladin, Ranger, Shaman, Sorcerer, and Wizard (Mage).  Multiclassed or dual classed characters need at least 12 levels in one of these classes to undergo the ritual.
 
 - 120,000G per transformation.  (This amount is configurable.)
 
@@ -43,7 +43,7 @@ _Lichdom is not for everyone.  It is a great potential power but also has a sign
 
 _This Lich is living his best unlife now!  Careful about that glowing hand:  If he touches you, that's the last thing you're likely to feel before you're paralyzed and dead, dead, dead!_
 
-Since the process of Lichdom is so varied within D&D's decades of canon, and much of it is left to intrepretation, various aspects of Lichdom are configurable in-game via **WHAT METHOD?**.  
+Since the process of Lichdom is so varied within D&D's decades of canon, and much of it is left to intrepretation, various aspects of Lichdom are configurable in-game via an in-game configuration menu.  (Check your innate abilities section.)  
 
 The default effects and requirements were heavily inspired by [Liches in _Baldur's Gate_](https://baldursgate.fandom.com/wiki/Lich) as well as [3.5's Liches](https://www.d20srd.org/srd/monsters/lich.htm).
 
@@ -67,7 +67,7 @@ The default effects and requirements were heavily inspired by [Liches in _Baldur
 
 - Unlike a typical Lich in BG2, you have no racial immunity to spells of a certain level.
 
-- All Liches start with their phylactery - a cloak called the Shroud of the Lich.  This shroud is unstealable and undroppable.  (For technical reasons, the Lich's phylactery is put onto an item instead of something else like a slotless script.)
+- All Liches start with their phylactery - a cloak called the Shroud of the Lich.  This shroud is unstealable and undroppable.  (For technical reasons, the Lich's phylactery - the Shroud of the Lich - is put onto an item instead of something else like a slotless script.)
 
 - Because a phylactery is undroppable, it remains permanently equipped in your cloak slot while it is on your person.  Your phylactery must be on you for you to auto-revive out of combat.  (This auto-revival normally happens immediately after combat ends, but the script may need a few seconds to catch up.)
 
@@ -86,9 +86,9 @@ _This Lich grins, knowing he has many options!_
 
 Since Lichdom's requirements and effects throughout the editions and decades of D&D have varied so much, it seemed fitting to include a variety of options to better suit your play style.
 
-Note that configuration options in this section ONLY apply to Lich characters from this mod and NOT to enemy/NPC Liches!
+Note that configuration options in this section ONLY apply to Lich characters from this mod and NOT to enemy/NPC Liches nor to any creature that becomes a Lich via any other method!
 
-**How many Crowns of the Lich should be for sale in Sister Garlena's shop? (In-Game Configuration Option - Only applies to Liches made after this option is set)**
+**How many Crowns of the Lich should be for sale in Sister Garlena's shop? (Install Option)**
 - One (Default)
 
 - Two
@@ -102,17 +102,6 @@ Note that configuration options in this section ONLY apply to Lich characters fr
 - Six
 
 **Lichdom Monetary Cost Per Transformation (Install Option)**
-- 120,000G (Default)
-
-- 100,00G
-
-- 75,000G
-
-- 50,000G
-
-- 40,000G
-
-**Lichdom Monetary Cost Per Transformation (In-Game Configuration Option - Only applies to Liches made after this option is set)**
 - 120,000G (Default)
 
 - 100,00G
@@ -149,7 +138,7 @@ Note that configuration options in this section ONLY apply to Lich characters fr
 - 100%
 
 **Can a broken phylactery be replaced? (In-Game Configuration Option - Applies to current character)**
-- Yes, but it costs the same as a new phylactery. (Default)
+- Yes, but it costs the same as a new phylactery.  Talk to Gravetender Morris for a replacement. (Default)
 
 - No.
 
@@ -265,9 +254,9 @@ Specifically, Lichdom has a small amount of cross-mod content AKA crossmod conte
 
 - [Skitia's NPCs for BG2 (Emily, Helga, Kale, Recorder, and Vienxay)](https://github.com/Skitia/SkitiaNPCs/)
 
-- Mods that port BG1 NPCs to BG2EE.  Use of these characters is permissible as per [Wizards of the Coast's Fan Content Policy](https://company.wizards.com/en/legal/fancontentpolicy).
+- Mods that port BG1 NPCs to BG2EE.  Use of these characters is permissible as per Wizards of the Coast's Fan Content Policy.
 
-Lichdom should be installed BEFORE these mods if you use them:  [EET End](https://github.com/Gibberlings3/EET).
+Lichdom should be installed BEFORE these mods if you use them:  [EET End](https://github.com/Gibberlings3/EET).  Installing most mods after EET End is a *bad idea* that an corrupt your game or otherwise produce undesirable effects!
 
 # New Ability and Item Descriptions
 ![This Lich admires his new phylactery.  His life is in his hands.](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/Force-Chest-Phylactery-33.png)
@@ -275,18 +264,18 @@ Lichdom should be installed BEFORE these mods if you use them:  [EET End](https:
 _This Lich admires his new phylactery.  His life is in his hands._
 
 **Lich Touch (Innate Melee Weapon)**
-This is a melee weapon usable at will.  It strikes as a +5 weapon.
+This is a melee weapon usable at will.  It strikes as a +5 weapon.  It has a range of 1, the default range for melee weapons.
 
-It does piercing damage equal to your d10 + STR bonus (minimum 0) as well as d10 cold damage.  Each hit forces a save vs. death on the subject at no penalty or be paralyzed for 5 rounds.  Spell resistance applies to paralysis.
+It does piercing damage equal to your d10 + STR bonus (minimum 0) as well as d10 cold damage.  Each hit forces a save vs. death on the subject at no penalty or be paralyzed for 5 rounds (30 seconds).  Spell resistance applies to this paralysis.
 
-**Crown of the Lich (Base Market Value: 100,000G, 1 Sold by Sister Garlena atop Watcher's Keep)**
+**Crown of the Lich (Base Market Value: 100,000G, 1 Sold by default by Sister Garlena atop Watcher's Keep)**
 With this crown equipped, you gain many of the benefits of being a Lich without the entire transformation.  While a Lich can equip this crown, most of its effects are redundant.
 
 Unlike a typical Lich, you have no phylactery and can't automatically revive if killed.  Your alignment does not change.  You don't gain the Lich Touch ability of a typical Lich.
 
-However, you gain many other abilities of a typical Lich:
+You gain the Undead flag, meaning you can be turned or rebuked.  (If you had immunity to turning or rebuking from another source, you still keep that immunity.)  This is unlike a typical Lichdom Lich who is immune to turning and rebuking.
 
-- You gain the Undead flag, meaning you can be turned or rebuked.
+However, you gain many other abilities of a typical Lich:
 
 - Immunity to damage from nonmagical weapons.
 
@@ -296,7 +285,7 @@ However, you gain many other abilities of a typical Lich:
 
 - Continual Detect Invisibliity.
 
-- +1 to INT, WIS, and CHA scores.
+- +1 to INT, WIS, and CHA scores to a maximum fo 25 each.
 
 - Natural AC improves by 3.
 
@@ -310,7 +299,7 @@ This gathering of dust is seemingly all that remains of a powerful Undead spellc
 Mod Source: Lichdom
 
 **Shroud of the Lich**
-This ornate cloak is a phylactery that contains the soul of <UNIT>.  Equipping it or keeping it in inventory allows <UNIT> to automatically revive if <PRO_HESHE> is killed, <PRO_HESHE> is out of combat, and enough time has passed since <PRO_HISHER> death.  (By default, this auto-revival is near instant once the subject is out of combat.)
+This ornate cloak is a phylactery that contains the soul of <UNIT>.  Equipping it or allows <UNIT> to automatically revive if <PRO_HESHE> is killed, <PRO_HESHE> is out of combat, and enough time has passed since <PRO_HISHER> death.  (By default, this auto-revival is near instant once the subject is out of combat.)
 
 Mod Source: Lichdom
 
@@ -324,7 +313,9 @@ _What's going on here?  I too want to know!_
 
 - NPCs the world over were NOT recoded to treat characters drastically differently after becoming a Lich.  In vanilla BG2, you could walk fairly freely through the streets and countrysides of Amn with a [vampire](https://baldursgate.fandom.com/wiki/Hexxat), a [drow](https://baldursgate.fandom.com/wiki/Viconia_DeVir), and a [cackling Red Wizard](https://baldursgate.fandom.com/wiki/Edwin) spamming [undead animating spells](https://baldursgate.fandom.com/wiki/Animate_Dead_(wizard)) and NPCs would probably complain most about the drow, not the small army that acts as a Faerunian version of a weapon of mass destruction (WMD) in their midst.
 
-- Ultimately, this Lichdom mod is mostly about the mechanical side of being a Lich.  If you want a game that was built from the ground up to account for NPCs' reactions to becoming a Lich and the associated necromancy, play [_Pathfinder: Wrath of the Righteous_](https://store.steampowered.com/app/1184370/Pathfinder_Wrath_of_the_Righteous__Enhanced_Edition/) or another such game, if that exists.
+- Many recruitable NPCs will react to your earnlestly seeking to become a Lich if they're in your party when it happens.
+
+- Ultimately, this Lichdom mod is mostly about the mechanical side of being a Lich.  If you want a game that was built from the ground up to account for NPCs' reactions to becoming a Lich and the associated necromancy, play [_Pathfinder: Wrath of the Righteous_](https://store.steampowered.com/app/1184370/Pathfinder_Wrath_of_the_Righteous__Enhanced_Edition/) or another relevant game, if that exists.
 
 **120,000 coins per Lich transformation?  Boy, that sure is expensive!**
 - Lichdom is intended as a high initial cost, high long-time return for the character who undergoes this transformation.  The auto-revival aspect matters more in no reload runs.
@@ -335,19 +326,22 @@ _What's going on here?  I too want to know!_
 The truest answer is, "Adventure!"  Remember, you don't NEED to undergo the Lichdom ritual ASAP!
 
 **Why require only level 12 in a casting class to become a Lich?**
-- That's inspired by the [D&D 3.5 Lich](https://www.d20srd.org/srd/monsters/lich.htm) which requires caster level 11.  Since caster levels don't work well as prerequisites in the Infinity Engine, I rounded up to 12 since that's when full casters (Cleric, Druid/Shaman, and Sorcerer/Wizard) start to get their level 6 spell slots.
+- That's inspired by the [D&D 3.5 Lich](https://www.d20srd.org/srd/monsters/lich.htm) which requires caster level 11.  Since caster levels don't work well as prerequisites in the Infinity Engine, I rounded up to 12 since that's when full casters (Cleric, Druid/Shaman, and Sorcerer/Wizard) start to get their level 6 spell slots in the Infinity Engine games.
 
 - As a solo single-classed character, reaching level 12 is probably easy in BG2, even if you start in SoA.  Reaching it as a triple-classed character in a party of 6, depending on your mod wad and the content you do, may take you until late SoA or even ToB to reach this point.  In short, Lichdom is meant to be attainable by characters in SoA with a variety of play styles.
 
 **What plans do you have for BG1 (BGEE) or SoD content for Liches?**
 - None.  Lichdom is simply a high-level thing, just like ascending to godhood is assumed to only be for high levels.
 
+**What plans do you have to make a BG2EE version of Lichdom that doesn't require EET??**
+- LCA, the coder of this mod, has an estimated release date of 2024 which he set to allow himself time for all relevant projects.
+
 **Why make the phylactery a cloak instead of a more traditional amulet or crown?**
 - Amulets: Edwin's Amulet is normally glued to his neck, and I wanted Liches to be able to use [https://baldursgate.fandom.com/wiki/Amulet_of_Power](Amulets of Power).
 
 - Crown: I like Ioun Stones, and the Crown of the Lich mentioned elsewhere in this document allows anyone to temporarily get most of the effects of Lichdom.
 
-- Cloak: Cloaks are generally a low-power item slot.  (Maybe there are mods which give high-powered cloaks to casters.)  In short, giving up a cloak slot is easier than giving up most other slots.
+- Cloak: Cloaks are generally a low-power item slot despite rare exceptions in vanilla.  Maybe there are mods which give high-powered cloaks to casters.)  In short, giving up a cloak slot is generally easier than giving up most other thematic slots.
 
 Shroud of the Lich is also an intentional reference to [an ability of the same name from DDO AKA _Dungeons & Dragons Online_](https://ddocompendium.com/w/Shroud_of_the_Lich).
 
@@ -357,11 +351,14 @@ Shroud of the Lich is also an intentional reference to [an ability of the same n
 **How much EXP should I expect to get from doing all the quests in this mod?**
 - This mod has exactly one EXP reward which is 25,000 Quest EXP for giving Morris 3 Lich Dusts when he asks for them.
 
-**If I'm a Lich via this mod, can my _project image_ and _simulacrum_ spells auto-revive?**
+**If I'm a Lich via this mod, can my _project image_ and _simulacrum_ spells auto-revive from my phylactery?**
 - No.  This is done for technical reasons.  Besides, these spells are probably powerful enough without another life!
 
-**My character is formerly a non-Evil caster who could Turn Undead, but I'm turned Evil and I can still Turn Undead.  What about Rebuke Undead?**
+**My character is formerly a non-Evil caster who could Turn Undead, but I've turned Evil and I can still Turn Undead.  What about Rebuke Undead?**
 - If this happens to you, it's from a technical limitation.
+
+**Why make Lichdom Liches immune to Turn Undead and Rebuke Undead?**
+- This way, classes that can use these abilities won't affect themselves nor their Lichdom Lich party members.
 
 **Why make a mod about becoming a Lich?**
 - In Infinity Engine games, Lichdom is like _dimension door_ - it seems like plenty of creatures can use it _except_ you!  Also, the notion of being able to use this option that's been in the D&D books for decades in various forms appealed to me.
@@ -385,42 +382,42 @@ Shroud of the Lich is also an intentional reference to [an ability of the same n
   - Minsc
 
 **What game versions and operating systems can run this mod?**
-- Lichdom will likely work on game version 2.5 or later.
+- Lichdom will likely work on game version 2.5 or later.  It was tested on game version 2.6.6.
 
 - Lichdom was not tested on every operating system, but if your operating system can run a version of _Baldur's Gate II: Enhanced Edition_ with WeiDU mods, it can likely also run Lichdom.
 
 # License, Editing, and Redistribution/Rehosting
-![Just as there's more than one type of Lich, there are others who want to edit this Lichdom mod.](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/Alhoon.png)
+![Just as there's more than one type of Lich, there are others who may want to edit this Lichdom mod.](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/Alhoon.png)
 
-_Just as there's more than one type of Lich, there are others who want to edit this Lichdom mod._
+_Just as there's more than one type of Lich, there are others who may want to edit this Lichdom mod._
 
 - This mod (Lichdom) is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
-In short, this license means that, so long as you link to the original mod (https://github.com/LCA-EET/lichdom/ or one of its official mirrors if there are any) AND you preserve the ENTIRE credits section, you can otherwise redistribute and edit this mod.
+In short, this license means that, so long as you link to the original mod (https://github.com/LCA-EET/lichdom/ or one of its official mirrors if there are any) AND you preserve the ENTIRE credits section AND you keep your version of this mod under this same license, you can otherwise redistribute and edit this mod.
 
-Cross-mod AKA crossmod content is also allowed and encouraged!  Don't ask permission for this:  Just do it and pweath send us a link as an Issue on this GitHub repository or/and a linked forum thread! (Linking your crossmod content isn't required, but encouraged!)
+Cross-mod AKA crossmod content is also allowed and encouraged!  Don't ask permission for this:  Just do it and pweath send us a link as an Issue on this GitHub repository or/and a linked forum thread! (Linking your crossmod content isn't required, but encouraged!)  If instead you want your crossmod content or other code to be considered for inclusion in a future version, let us know via the Issues tab or on a forum thread linked above.
 
-Just remember that this mod was made for non-commercial purposes, and Wizards of the Coast would probably very much NOT like you if you tried selling your mods for money.
+Just remember that this mod was made for non-commercial purposes, and Wizards of the Coast would probably very much NOT like you if you tried selling your Infinity Engine mods for money.
 
-For clarity:  [This mod (Lichdom) is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC](https://company.wizards.com/en/legal/fancontentpolicy).
+For clarity:  This mod (Lichdom) is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
 
 # Requests of the Community
-![A mod where the party can fight a Dracolich seems wonderful!](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/Dracolich.png)
-_A mod where the party can fight a Dracolich seems wonderful!_
+![A mod where the party can fight a Dracolich seems wonderful!  Don't to expect to find it here!](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/Dracolich.png)
+_A mod where the party can fight a Dracolich seems wonderful!  Don't to expect to find it here!_
 
 I know I'm not the only Lich fan out there!  This section is meant as inspiration for the community for anyone else who wants to make a Lich-themed mod to please me.  Perhaps have a ship or an airship of adventurers fight a Dracolich mid-flight and prevent its corpse from crashing into a town below.  And of course tracking down its phylactery and handling that seems interesting.  But I've enjoyed Dracoliches.
 
 # Credits
-![We all get by with a little help from our former enemies.](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/General-of-Undeath.png)
+![We don't go through life alone.  We all get by with a little help from our former enemies.](https://github.com/LCA-EET/lichdom/blob/main/Lichdom_EET/Documentation%20Images/General-of-Undeath.png)
 _We don't go through life alone.  We all get by with a little help from our former enemies._
 
 - [Endarire](https://paypal.me/Endarire/10): He did the design, voice acting, and writing for this mod - including this documentation!
 
-- LCA: He coded this mod and proofread various documentation.
+- [LCA](patreon.com/EETMods): He coded this mod and proofread various documentation.
 
 - k4thos and others involved in making and publishing [Protagonist Can Die](https://forums.beamdog.com/discussion/74528/mod-player1-can-die) which was sometimes called Player1 Can Die.  No code from this mod was used for Lichdom, but its existence was an inspiration for the possibility of Lichdom's auto-revival being implemented!  k4thos also made EET, and there was much rejoicing!
 
-- Aaron Williams, author of Nodwick Comic: He was the first to use the phrase "Son of a Lich" regarding undeath.
+- Aaron Williams, author of [Nodwick Comic](https://comic.nodwick.com/): He was the first to use the phrase "Son of a Lich" regarding undeath.
 
 - Angel and SubtleDoctor: Their discussions about the importance of lore adherence in mods helped in this mod's refinement.
 
@@ -433,6 +430,6 @@ _We don't go through life alone.  We all get by with a little help from our form
 
 _Even Liches can change into Demiliches._
 
-**1.0: (DATE)**
+**First Release: December 25, 2023 - Merry Lichmas!**
 
 -Initial Release.  Enjoy your undeath!
