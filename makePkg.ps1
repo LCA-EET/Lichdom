@@ -31,7 +31,7 @@ Copy-Item -Path ($modName + ".tp2") -Destination ($forArchival + "/" + $modName)
 
 Copy-Item -Path ("license.md") -Destination ($forArchival + "/"  )
 
-Copy-Item -Path ("Release Notes.md") -Destination ($forArchival + "/"  )
+Copy-Item -Path ("Release Notes.md") -Destination ($forArchival + "/Lichdom Release Notes.md"  )
 
 $7zipPath = "$env:ProgramFiles/7-Zip/7z.exe"
 
