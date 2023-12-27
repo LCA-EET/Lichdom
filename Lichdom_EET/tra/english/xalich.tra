@@ -1,7 +1,7 @@
 @0 = ~Lichdom for the Enhanced Edition Trilogy (EET) of Baldur's Gate.~
 @1 = ~This mod requires the EET mod to be installed.~
 @2 = ~Shroud of the Lich~
-@3 = ~The phylactery is simultaneously the source of the lich's greatest power and its greatest, indeed its only significant physical weakness. Any independent lich should take pains to ensure its phylactery is kept secure at all times. Though not strictly necessary, the transition from mortal to lich is more easily achieved if the item which will store the transformee's soul (ie, the phylactery) is something with which they are familiar. This is particularly the case in Rituals of Becoming that are performed by a party other than the one undergoing transformation. The phylactery is small enough to be hidden within an unassuming item, as is the case here; it has been discreetly woven into the fibers of this cloak.~
+@3 = ~This ornate cloak is a phylactery that contains the soul of its wearer. Equipping it allows the wearer to automatically revive if they are killed, once they are out of combat and enough time has passed since their death.~
 @4 = ~Lich Dust~
 @5 = ~This gathering of dust is seemingly all that remains of a powerful Undead spellcaster known as a Lich.~
 @6 = ~Lich Transformation~
@@ -52,16 +52,23 @@ Edwina, however, tends bar in a Waterdeep tavern. She is a bitter, bitter woman.
 
 Unlike a typical Lich, you have no phylactery and can't automatically revive if killed. Your alignment does not change. You don't gain the Lich Touch ability of a typical Lich.
 
+You gain the Undead flag, meaning you can be turned or rebuked. (If you had immunity to turning or rebuking from another source, you still keep that immunity.) This is unlike a typical Lichdom Lich who is immune to turning and rebuking.
+
 However, you gain many other abilities of a typical Lich:
 
-- You gain the Undead flag, meaning you can be turned or rebuked.
 - Immunity to damage from nonmagical weapons.
+
 - Immune (100% resistant) to HP damage from cold, electricity, and poison.
+
 - Immune to the negative statuses of Berserk, Charm, Confusion, Domination, Disease, Fatigue/Exhaustion, Fear, Grease, Entangle, Hold/Paralysis, Level Drain/Negative Levels, Petrification, Polymorph Other, Sleep/Unconsciousness, Stun, and Web. Also immune to at least most instant death effects such as Disintegrate and Finger of Death.
-- Continual Detect Invisibliity. 
-- +1 to INT, WIS, and CHA scores.
-- Natural AC improves by 3.
-- You gain an innate ability usable at will which changes your character's appearance to that of a typical Lich. This ability is only cosmetic.~
+
+- Continual Detect Invisibility.
+
++1 to INT, WIS, and CHA scores to a maximum of 25 each.
+
+Natural AC improves by 3.
+
+You gain an innate ability usable at will which changes your character's appearance to that of a typical Lich. This ability is only cosmetic.~
 @35 = ~Normal Form~
 @36 = ~How many Crowns of the Lich should be for sale in Sister Garlena's shop?
 1. One crown. (Default)

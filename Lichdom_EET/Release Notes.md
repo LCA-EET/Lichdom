@@ -1,5 +1,8 @@
 ## Lichdom Release Notes
 
+# v0.1.4 beta 2023-12-26
+* Updated item descriptions for Crown of the Lich and Shroud of the Lich.
+
 # v0.1.3 beta 2023-12-25
 * Adjusted mod title and installation options.
 
