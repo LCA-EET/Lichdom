@@ -29,7 +29,6 @@ END
 //}
 
 //{ XACORWIJ
-
 INTERJECT_COPY_TRANS2 XALDGD 75 XA_LD_XACORWIJ_75
 	== XACORWIJ
 	IF ~
@@ -63,3 +62,65 @@ APPEND XACORWIJ
 	END
 END
 //}
+
+//{ XACAELAJ
+INTERJECT_COPY_TRANS2 XALDGD 75 XA_LD_XACAELAJ_75
+	== XACAELAJ
+	IF ~
+		IsValidForPartyDialogue("XACAELAR")
+	~
+	@9 /*~<CHARNAME>, you would so eagerly side with the darkness and fall from the light?  I thought you were wiser than that!~*/
+END
+
+INTERJECT_COPY_TRANS2 XALDGD 76 XA_LD_XACAELAJ_76
+	== XACAELAJ
+	IF ~
+		IsValidForPartyDialogue("XACAELAR")
+	~
+	@5 /*~<CHARNAME>, I cannot fully agree with your desire to seek undeath as a solution, yet I cannot argue with your logic.  I shall tolerate this... for now.~*/
+END
+
+INTERJECT_COPY_TRANS2 XALDGD 77 XA_LD_XACAELAJ_77
+	== XACAELAJ
+	IF ~
+		IsValidForPartyDialogue("XACAELAR")
+	~
+	@10 /*~The taint on your soul will turn you into a beacon for evil!  I’ll not tolerate this!~*/
+	DO ~
+		SetLeavePartyDialogFile()
+		ChangeAIScript("", OVERRIDE)
+		ChangeAIScript("",DEFAULT)
+		LeaveParty()
+		EscapeArea()
+	~
+END
+
+APPEND XACAELAJ
+	IF ~~ THEN BEGIN XA_LD_ChooseCaelar
+		SAY @6 /*~<CHARNAME>, becoming undead is beneath me.  I -refuse!-~*/
+		
+		IF ~~ THEN
+		EXTERN XALDGD 18
+	END
+END
+
+ADD_STATE_TRIGGER XACAELAP 0
+~
+	!Race(Player1, LICH)
+~
+DO 1 2
+
+APPEND XACAELAP 
+	IF ~
+		Race(Player1, LICH)
+	~ THEN BEGIN XA_LD_PlayerIsLich
+		SAY @7 /*~<CHARNAME>, the scent of Undeath is on you, and I can detect the taint of temptation succumbed to!~*/
+		
+		= @8 /*~Light can have no fellowship with darkness!  Begone!~*/
+		
+		IF ~~ THEN
+		EXIT
+	END
+END
+//}
+
