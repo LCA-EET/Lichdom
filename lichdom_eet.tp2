@@ -632,6 +632,30 @@ END
 	COPY_EXISTING ~UDTRAP04.CRE~ ~override~
 	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
 	
+	COPY_EXISTING ~DEMILICH.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~HLDEMI.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~OHBDLI01.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~OHBDLI02.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~MELSUM06.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~MINDAL01.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~OHHALHOO.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~OHHGOXXA.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
 //}
 
 //{ Allows the protagonist to die (in conjunction with the modifications to BALDUR.BCS)~
