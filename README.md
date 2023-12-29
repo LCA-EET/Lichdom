@@ -413,7 +413,7 @@ _We don't go through life alone.  We all get by with a little help from our form
 
 - [Endarire](https://paypal.me/Endarire/10): He did the design, voice acting, and writing for this mod - including this documentation!
 
-- [LCA](patreon.com/EETMods): He coded this mod and proofread various documentation.
+- [LCA](https://patreon.com/EETMods): He coded this mod and proofread various documentation.
 
 - k4thos and others involved in making and publishing [Protagonist Can Die](https://forums.beamdog.com/discussion/74528/mod-player1-can-die) which was sometimes called Player1 Can Die.  No code from this mod was used for Lichdom, but its existence was an inspiration for the possibility of Lichdom's auto-revival being implemented!  k4thos also made EET, and there was much rejoicing!
 
