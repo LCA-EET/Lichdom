@@ -679,4 +679,12 @@ BUT_ONLY
 		COMPILE ~lichdom_eet/compat/tlr/d/xaldtlr.d~ USING ~lichdom_eet/compat/tlr/tra/xaldtlr.tra~
 	END
 	//}
+	
+	//{ Vegetable Merchant
+	ACTION_IF FILE_EXISTS_IN_GAME ~BSC#Hub.dlg~ THEN BEGIN
+		PRINT @40 /* ~Hubelpot the Vegetable Merchant mod detected. Updating dialogs accordingly...~*/ 
+		COMPILE ~lichdom_eet/compat/veg/d/xaldveg.d~ USING ~lichdom_eet/compat/veg/tra/xaldveg.tra~
+	END
+	
+	//}
 //}
