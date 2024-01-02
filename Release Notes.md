@@ -1,5 +1,8 @@
 ## Lichdom Release Notes
 
+# v0.1.8 beta 2024-01-02
+* Added partial integration with BG1 NPC mod (Alora, Branwen, Kivan to-date).
+
 # v0.1.7 beta 2024-01-01
 * Added integration with the Hubelpot Vegetable Merchant NPC mod.
 
