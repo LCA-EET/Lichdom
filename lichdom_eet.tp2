@@ -685,6 +685,43 @@ BUT_ONLY
 		PRINT @40 /* ~Hubelpot the Vegetable Merchant mod detected. Updating dialogs accordingly...~*/ 
 		COMPILE ~lichdom_eet/compat/veg/d/xaldveg.d~ USING ~lichdom_eet/compat/veg/tra/xaldveg.tra~
 	END
+	//}
 	
+	//{ BG1
+		//{ Alora
+		ACTION_IF FILE_EXISTS_IN_GAME ~7XAloraJ.dlg~ THEN BEGIN
+			PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/bg1/alora/xaldsoa.d~ USING ~lichdom_eet/compat/bg1/tra/xaldbg1.tra~
+		END
+		
+		ACTION_IF FILE_EXISTS_IN_GAME ~7XAlo25J.dlg~ THEN BEGIN
+			PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/bg1/alora/xaldtob.d~ USING ~lichdom_eet/compat/bg1/tra/xaldbg1.tra~
+		END
+		//}
+		
+		//{ Branwen
+		ACTION_IF FILE_EXISTS_IN_GAME ~7XBranJ.dlg~ THEN BEGIN
+			PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/bg1/branwen/xaldsoa.d~ USING ~lichdom_eet/compat/bg1/tra/xaldbg1.tra~
+		END
+		
+		ACTION_IF FILE_EXISTS_IN_GAME ~7XBra25J.dlg~ THEN BEGIN
+			PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/bg1/branwen/xaldtob.d~ USING ~lichdom_eet/compat/bg1/tra/xaldbg1.tra~
+		END
+		//}
+
+		//{ Kivan
+		ACTION_IF FILE_EXISTS_IN_GAME ~7XKIVAJ.dlg~ THEN BEGIN
+			PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/bg1/kivan/xaldsoa.d~ USING ~lichdom_eet/compat/bg1/tra/xaldbg1.tra~
+		END
+		
+		ACTION_IF FILE_EXISTS_IN_GAME ~7XKiv25J.dlg~ THEN BEGIN
+			PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/bg1/kivan/xaldtob.d~ USING ~lichdom_eet/compat/bg1/tra/xaldbg1.tra~
+		END
+		//}
 	//}
 //}

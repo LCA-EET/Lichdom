@@ -1,5 +1,8 @@
 ## Lichdom Release Notes
 
+# v0.1.7 beta 2024-01-01
+* Added integration with the Hubelpot Vegetable Merchant NPC mod.
+
 # v0.1.6 beta 2023-12-27
 * Demiliches and Alhoons can now drop lich dust.
 * Added integration with The Longer Road mod.
