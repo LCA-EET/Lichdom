@@ -370,6 +370,9 @@ Shroud of the Lich is also an intentional reference to [an ability of the same n
 
 - For example, a Lichdom Lich and a quest in [The Beaurin Legacy](https://www.gibberlings3.net/files/file/998-beaurin-legacy/) to become a Lich are totally separate.  By default, becoming a Lich via one method does not affect your ability to become a Lich via another method.
 
+**What game areas/maps does the Lichdom mod change?**
+- Lichdom changes but does not overwrite Athkatla's Graveyard District (AR0800) and Saradush (AR5000).  Lichdom also changes the scripts for these areas.
+
 **My main character became a Lich!  Why won't certain recruitable party members join me?**
 - A small number of recruitable NPCs simply *refuse* to (re)join your party if your main character is a Lich.  If they're in your party when you try justifying your reasoning for seeking Lichdom, your choice of reasoning may affect whether they stay or can be recruited again.  As of this writing, these characters are:
 
