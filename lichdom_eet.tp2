@@ -723,5 +723,17 @@ BUT_ONLY
 			COMPILE ~lichdom_eet/compat/bg1/kivan/xaldtob.d~ USING ~lichdom_eet/compat/bg1/tra/xaldbg1.tra~
 		END
 		//}
+		
+		//{ Ajantis
+		ACTION_IF FILE_EXISTS_IN_GAME ~7XAJANJ.dlg~ THEN BEGIN
+			PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/bg1/ajantis/xaldsoa.d~ USING ~lichdom_eet/compat/bg1/tra/xaldbg1.tra~
+		END
+		
+		ACTION_IF FILE_EXISTS_IN_GAME ~7XAJA25J.dlg~ THEN BEGIN
+			PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/bg1/ajantis/xaldtob.d~ USING ~lichdom_eet/compat/bg1/tra/xaldbg1.tra~
+		END
+		//}
 	//}
 //}

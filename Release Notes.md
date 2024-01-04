@@ -1,5 +1,8 @@
 ## Lichdom Release Notes
 
+# v0.1.9 beta 2024-01-03
+* Added partial integration with BG1 NPC mod (Alora, Branwen, Kivan, Ajantis to-date).
+
 # v0.1.8 beta 2024-01-02
 * Added partial integration with BG1 NPC mod (Alora, Branwen, Kivan to-date).
 
