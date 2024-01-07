@@ -687,6 +687,13 @@ BUT_ONLY
 	END
 	//}
 	
+	//{ RoT
+	ACTION_IF FILE_EXISTS_IN_GAME ~DRIZ2.dlg~ THEN BEGIN
+		PRINT @42 /* ~Reign of Terror (RoT) mod detected. Updating dialogs accordingly...~*/ 
+		COMPILE ~lichdom_eet/compat/rot/d/xaldrot.d~ USING ~lichdom_eet/compat/rot/tra/xaldrot.tra~
+	END
+	//}
+	
 	//{ BG1
 		//{ Alora
 		ACTION_IF FILE_EXISTS_IN_GAME ~7XAloraJ.dlg~ THEN BEGIN
