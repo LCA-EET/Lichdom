@@ -743,4 +743,16 @@ BUT_ONLY
 		END
 		//}
 	//}
+	
+	//{ Dusk
+		ACTION_IF FILE_EXISTS_IN_GAME ~P_DuskJ.dlg~ THEN BEGIN
+			PRINT @43 /* ~Dusk mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/dusk/d/xaldsoa.d~ USING ~lichdom_eet/compat/dusk/tra/xalddusk.tra~
+		END 
+		
+		ACTION_IF FILE_EXISTS_IN_GAME ~P_Dus25J.dlg~ THEN BEGIN
+			PRINT @43 /* ~Dusk mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/dusk/d/xaldtob.d~ USING ~lichdom_eet/compat/dusk/tra/xalddusk.tra~
+		END 
+	//}
 //}
