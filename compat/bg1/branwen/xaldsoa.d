@@ -4,7 +4,6 @@ EXTEND_BOTTOM XALDGD 15
 		IsValidForPartyDialogue("7XBRAN")
 		!General("7XBRAN", UNDEAD)
 		LevelGT("7XBRAN", 11)
-		AreaCheck("AR0800")
 	~
 	THEN REPLY @7 /*~(Choose Branwen.)~*/
 	EXTERN 7XBRANJ XA_LD_ChooseBranwen
@@ -17,7 +16,6 @@ EXTEND_BOTTOM XALDGD 18
 		IsValidForPartyDialogue("7XBRAN")
 		!General("7XBRAN", UNDEAD)
 		LevelGT("7XBRAN", 11)
-		AreaCheck("AR0800")
 	~
 	THEN REPLY @7 /*~(Choose Branwen.)~*/
 	EXTERN 7XBRANJ XA_LD_ChooseBranwen

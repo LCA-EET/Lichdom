@@ -1,6 +1,13 @@
 ## Lichdom Release Notes
 
-# v0.1.10 beta 2024-01-10
+# v0.1.12 beta 2024-01-09
+* Added partial integration with BG1 NPC mod (Alora, Branwen, Kivan, Ajantis, Garrick to-date).
+* Improved integration with the Hubelpot mod.
+
+# v0.1.11 beta 2024-01-08
+* Added integration with the Dusk mod.
+
+# v0.1.10 beta 2024-01-01
 * Added integration with the Reign of Terror (RoT) mod.
 
 # v0.1.9 beta 2024-01-03

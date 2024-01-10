@@ -4,7 +4,6 @@ EXTEND_BOTTOM XALDGD 15
 		IsValidForPartyDialogue("7XKIVA")
 		!General("7XKIVA", UNDEAD)
 		LevelGT("7XKIVA", 11)
-		AreaCheck("AR0800")
 	~
 	THEN REPLY @1 /*~(Choose Kivan.)~*/
 	EXTERN 7XKIV25J XA_LD_ChooseKivan
@@ -16,7 +15,6 @@ EXTEND_BOTTOM XALDGD 18
 		IsValidForPartyDialogue("7XKIVA")
 		!General("7XKIVA", UNDEAD)
 		LevelGT("7XKIVA", 11)
-		AreaCheck("AR0800")
 	~
 	THEN REPLY @1 /*~(Choose Kivan.)~*/
 	EXTERN 7XKIV25J XA_LD_ChooseKivan

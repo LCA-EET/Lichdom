@@ -4,7 +4,6 @@ EXTEND_BOTTOM XALDGD 15
 		IsValidForPartyDialogue("7XALORA")
 		!General("7XALORA", UNDEAD)
 		LevelGT("7XALORA", 11)
-		!AreaCheck("AR0800")
 	~
 	THEN REPLY @6 /*~(Choose Alora.)~*/
 	EXTERN 7XAlo25J XA_LD_ChooseAlora
@@ -18,7 +17,6 @@ EXTEND_BOTTOM XALDGD 18
 		IsValidForPartyDialogue("7XALORA")
 		!General("7XALORA", UNDEAD)
 		LevelGT("7XALORA", 11)
-		!AreaCheck("AR0800")
 	~
 	THEN REPLY @6 /*~(Choose Alora.)~*/
 	EXTERN 7XAlo25J XA_LD_ChooseAlora

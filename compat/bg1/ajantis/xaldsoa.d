@@ -4,7 +4,6 @@ EXTEND_BOTTOM XALDGD 15
 		IsValidForPartyDialogue("7XAJAN")
 		!General("7XAJAN", UNDEAD)
 		LevelGT("7XAJAN", 11)
-		AreaCheck("AR0800")
 	~
 	THEN REPLY @10 /*~(Choose Ajantis.)~*/
 	EXTERN 7XAJANJ XA_LD_ChooseAjantis
@@ -18,7 +17,6 @@ EXTEND_BOTTOM XALDGD 18
 		IsValidForPartyDialogue("7XAJAN")
 		!General("7XAJAN", UNDEAD)
 		LevelGT("7XAJAN", 11)
-		AreaCheck("AR0800")
 	~
 	THEN REPLY @10 /*~(Choose Ajantis.)~*/
 	EXTERN 7XAJANJ XA_LD_ChooseAjantis
