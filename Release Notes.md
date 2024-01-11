@@ -1,5 +1,8 @@
 ## Lichdom Release Notes
 
+# v0.1.13 beta 2024-01-10
+* Added partial integration with Skitia NPC mod (Kale, Helga to-date).
+
 # v0.1.12 beta 2024-01-09
 * Added partial integration with BG1 NPC mod (Alora, Branwen, Kivan, Ajantis, Garrick to-date).
 * Improved integration with the Hubelpot mod.
