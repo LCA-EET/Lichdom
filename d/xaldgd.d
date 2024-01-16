@@ -40,7 +40,7 @@ BEGIN ~XALDGD~
 	END
 
 	IF ~
-		NumTimesTalkedTo(0)
+		Global("XA_LD_MetMorrisInSaradush", "GLOBAL", 0)
 		Global("XA_LD_MetMorrisInAthkatla", "GLOBAL", 0)
 		OR(2)
 			AreaCheck("AR5000")
@@ -48,15 +48,25 @@ BEGIN ~XALDGD~
 	~ THEN BEGIN XA_LD_IntroSaradush_1
 		SAY @41  /* ~(You see a man in ornate robes whose every motion seems intentional, calm, and slow.  His voice seems wise with a tone that reminds you of Gorion’s voice, but with more cracks and spoken more slowly.  He smells clean despite his nearness to the dead  His demeanor is of one of great importance who seems to be in absolutely no hurry.)~ [eemor100] */
 		
-		= @42  /* ~~"Ah, there you are.  You are one of the many people to have been curious about me.  I am Morris, a gravetender in Athkatla and now here in Saradush."~ [xald1076]*/
+		IF ~~ THEN
+		DO ~
+			SetGlobal("XA_LD_MetMorrisInSaradush", "GLOBAL", 1)
+		~
+		GOTO XA_LD_IntroSaradush_2
+	END
+
+	IF ~~ THEN BEGIN XA_LD_IntroSaradush_2
+		SAY @42  /* ~~"Ah, there you are.  You are one of the many people to have been curious about me.  I am Morris, a gravetender in Athkatla and now here in Saradush."~ [xald1076]*/
 		
 		IF ~~ THEN REPLY @43  /* ~What made you come here?~*/
 		GOTO XA_LD_WhyComeToSaradush
 		
 		COPY_TRANS XALDGD XA_LD_IntroAthkatla
+	
 	END
-
 //}
+
+
 
 IF ~
 	True()

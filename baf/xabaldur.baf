@@ -1296,6 +1296,9 @@ END
 		ActionListEmpty()
 		!TriggerOverride(Player1,HaveSpellRES("xaldasst")) 
 		GlobalLT("XA_LD_AddAssistantTimerSet", "GLOBAL", 1)
+		OR(2)
+			GlobalGT("XA_LD_MetMorrisInSaradush", "GLOBAL", 0)
+			GlobalGT("XA_LD_MetMorrisInAthkatla", "GLOBAL", 0)
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
@@ -1309,6 +1312,9 @@ END
 		ActionListEmpty()
 		GlobalTimerExpired("XA_LD_AddAssistantTimer", "GLOBAL")
 		Global("XA_LD_AddAssistantTimerSet", "GLOBAL", 1)
+		OR(2)
+			GlobalGT("XA_LD_MetMorrisInSaradush", "GLOBAL", 0)
+			GlobalGT("XA_LD_MetMorrisInAthkatla", "GLOBAL", 0)
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)

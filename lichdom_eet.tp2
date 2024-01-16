@@ -799,4 +799,29 @@ BUT_ONLY
 			END 
 		//}
 	//}
+	
+	//{ Neh'taniel Mod
+		ACTION_IF FILE_EXISTS_IN_GAME ~SK#NEHTJ.dlg~ THEN BEGIN
+			PRINT @45 /* ~Neh'taniel NPC mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/neh/d/xaldsoa.d~ USING ~lichdom_eet/compat/neh/tra/english/xaldneh.tra~
+		END 
+		
+		ACTION_IF FILE_EXISTS_IN_GAME ~SK#NE25J.dlg~ THEN BEGIN
+			PRINT @45 /* ~Neh'taniel NPC mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/neh/d/xaldtob.d~ USING ~lichdom_eet/compat/neh/tra/english/xaldneh.tra~
+		END 
+	//}
+	
+	//{ Saradas Magic
+		ACTION_IF FILE_EXISTS_IN_GAME ~!SarJ.dlg~ THEN BEGIN
+			PRINT @46 /* ~Saradas Magic NPC mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/saradas/d/xaldsoa.d~ USING ~lichdom_eet/compat/saradas/tra/english/xaldsara.tra~
+		END 
+		
+		ACTION_IF FILE_EXISTS_IN_GAME ~!sar25j.dlg~ THEN BEGIN
+			PRINT @46 /* ~Saradas Magic NPC mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/saradas/d/xaldtob.d~ USING ~lichdom_eet/compat/saradas/tra/english/xaldsara.tra~
+		END 
+	
+	//}
 //}

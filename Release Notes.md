@@ -1,5 +1,9 @@
 ## Lichdom Release Notes
 
+# v0.1.14 beta 2024-01-16
+* The Lichdom Assistant ability will only be added once the player speaks to Morris in Athkatla or Saradush. The assistant ability can be disabled through the use of the debugger.
+* Added compatibility with the Neh'taniel NPC mod and the Saradas Magic mod.
+
 # v0.1.13 beta 2024-01-10
 * Added partial integration with Skitia NPC mod (Kale, Helga to-date).
 
