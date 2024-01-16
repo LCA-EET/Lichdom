@@ -1296,6 +1296,7 @@ END
 		ActionListEmpty()
 		!TriggerOverride(Player1,HaveSpellRES("xaldasst")) 
 		GlobalLT("XA_LD_AddAssistantTimerSet", "GLOBAL", 1)
+		GlobalLT("XA_LD_DisableAssistant", "GLOBAL", 1)
 		OR(2)
 			GlobalGT("XA_LD_MetMorrisInSaradush", "GLOBAL", 0)
 			GlobalGT("XA_LD_MetMorrisInAthkatla", "GLOBAL", 0)
@@ -1312,6 +1313,7 @@ END
 		ActionListEmpty()
 		GlobalTimerExpired("XA_LD_AddAssistantTimer", "GLOBAL")
 		Global("XA_LD_AddAssistantTimerSet", "GLOBAL", 1)
+		GlobalLT("XA_LD_DisableAssistant", "GLOBAL", 1)
 		OR(2)
 			GlobalGT("XA_LD_MetMorrisInSaradush", "GLOBAL", 0)
 			GlobalGT("XA_LD_MetMorrisInAthkatla", "GLOBAL", 0)
@@ -1323,8 +1325,23 @@ END
 			SetInterrupt(TRUE)
 			Continue()
 	END
+	
+	
 //}
 
+//{ Remove Assistant
+	IF
+		ActionListEmpty()
+		TriggerOverride(Player1,HaveSpellRES("xaldasst"))
+		Global("XA_LD_DisableAssistant", "GLOBAL", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ActionOverride(Player1, RemoveSpellRES("xaldasst"))
+			SetInterrupt(TRUE)
+			Continue()
+	END
+//}
 
 /* Block other execution if the player (lich) is dead, including the default game over. */
 IF

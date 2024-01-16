@@ -216,16 +216,34 @@ IF ~
 	~
 	EXIT
 	
-	IF ~~ THEN REPLY @48
+	IF ~~ THEN REPLY @48 /* ~Advance the time by 8 hours.~*/
 	DO ~
 		AdvanceTime(EIGHT_HOURS)
 	~
 	EXIT
 	
-	IF ~~ THEN REPLY @2
+	IF ~
+		Global("XA_LD_DisableAssistant", "GLOBAL", 1)
+	~
+	THEN REPLY @92  /* ~Remove Lichdom Assistant ability.~*/
+	DO ~
+		SetGlobal("XA_LD_DisableAssistant", "GLOBAL", 0)
+	~
+	GOTO XA_DebugInit
+	
+	IF ~
+		GlobalLT("XA_LD_DisableAssistant", "GLOBAL", 1)
+	~
+	THEN REPLY @91  /* ~Remove Lichdom Assistant ability.~*/
+	DO ~
+		SetGlobal("XA_LD_DisableAssistant", "GLOBAL", 1)
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @2 /* ~Exit.~*/
 	EXIT	
 	
-	IF ~~ THEN REPLY @47
+	IF ~~ THEN REPLY @47 /* ~Dismiss Debugger.~*/
 	DO ~
 		DestroySelf()
 	~
