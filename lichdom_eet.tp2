@@ -836,4 +836,16 @@ BUT_ONLY
 		END 
 	
 	//}
+	
+	//{ Baeloth BG2
+		ACTION_IF FILE_EXISTS_IN_GAME ~BG2BAEJ.dlg~ THEN BEGIN
+			PRINT @47 /* ~Baeloth BG2 mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/baeloth/d/xaldsoa.d~ USING ~lichdom_eet/compat/baeloth/tra/english/xaldbae.tra~
+		END 
+		
+		ACTION_IF FILE_EXISTS_IN_GAME ~BG2BAE25J.dlg~ THEN BEGIN
+			PRINT @47 /* ~Baeloth BG2 mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/baeloth/d/xaldtob.d~ USING ~lichdom_eet/compat/baeloth/tra/english/xaldbae.tra~
+		END 
+	//}
 //}

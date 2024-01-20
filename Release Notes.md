@@ -1,5 +1,8 @@
 ## Lichdom Release Notes
 
+# v0.1.16 beta 2024-01-19
+* Added integration with Baeloth BG2 mod.
+
 # v0.1.15 beta 2024-01-17
 * Added partial integration with Skitia NPC mod (Kale, Helga, Vienxay to-date).
 

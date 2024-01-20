@@ -62,6 +62,9 @@ APPEND X3VieJ
 		SAY @13 /*~Lichdom?  Yeah.  Sure.~*/
 		
 		IF ~~ THEN
+		DO ~
+			SetGlobal("XA_LD_TransformLich", "LOCALS", 1)
+		~
 		EXTERN XALDGD 74
 	END
 	

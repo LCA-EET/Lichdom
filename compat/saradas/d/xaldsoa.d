@@ -44,8 +44,8 @@ INTERJECT_COPY_TRANS2 XALDGD 77 XA_LD_!SarJ_77
 	~
 	@0 
 END
-
 */
+
 
 APPEND ~!SarJ~
 	IF ~~ THEN BEGIN XA_LD_ChooseSaradas
