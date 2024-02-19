@@ -1,0 +1,1363 @@
+
+//{ Crown of the Lich Undead Flag
+IF
+	!Race(Player1, LICH)
+	HasItemEquiped("xaldcrwn", Player1)
+	!General(Player1, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player1, UNDEAD)
+		Continue()
+END
+
+IF
+	!Race(Player2, LICH)
+	HasItemEquiped("xaldcrwn", Player2)
+	!General(Player2, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player2, UNDEAD)
+		Continue()
+END
+
+IF
+	!Race(Player3, LICH)
+	HasItemEquiped("xaldcrwn", Player3)
+	!General(Player3, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player3, UNDEAD)
+		Continue()
+END
+
+IF
+	!Race(Player4, LICH)
+	HasItemEquiped("xaldcrwn", Player4)
+	!General(Player4, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player4, UNDEAD)
+		Continue()
+END
+
+IF
+	!Race(Player5, LICH)
+	HasItemEquiped("xaldcrwn", Player5)
+	!General(Player5, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player5, UNDEAD)
+		Continue()
+END
+
+IF
+	!Race(Player6, LICH)
+	HasItemEquiped("xaldcrwn", Player6)
+	!General(Player6, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player6, UNDEAD)
+		Continue()
+END
+
+IF
+	!Race(Player1, LICH)
+	!HasItemEquiped("xaldcrwn", Player1)
+	General(Player1, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player1, HUMANOID)
+		Continue()
+END
+
+IF
+	!Race(Player2, LICH)
+	!HasItemEquiped("xaldcrwn", Player2)
+	General(Player2, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player2, HUMANOID)
+		Continue()
+END
+
+IF
+	!Race(Player3, LICH)
+	!HasItemEquiped("xaldcrwn", Player3)
+	General(Player3, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player3, HUMANOID)
+		Continue()
+END
+
+IF
+	!Race(Player4, LICH)
+	!HasItemEquiped("xaldcrwn", Player4)
+	General(Player4, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player4, HUMANOID)
+		Continue()
+END
+
+IF
+	!Race(Player5, LICH)
+	!HasItemEquiped("xaldcrwn", Player5)
+	General(Player5, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player5, HUMANOID)
+		Continue()
+END
+
+IF
+	!Race(Player6, LICH)
+	!HasItemEquiped("xaldcrwn", Player6)
+	General(Player6, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player6, HUMANOID)
+		Continue()
+END
+
+//}
+
+//{ Romance Termination
+IF
+	Race(Player1, LICH)
+	GlobalLT("XA_LD_RomanceTermination", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("AerieRomanceActive", "GLOBAL", 3)
+		SetGlobal("JaheiraRomanceActive", "GLOBAL", 3)
+		SetGlobal("ViconiaRomanceActive", "GLOBAL", 3)
+		SetGlobal("AnomenRomanceActive", "GLOBAL", 3)
+		SetGlobal("RasaadRomanceActive", "GLOBAL", 3)
+		SetGlobal("NeeraRomanceActive", "GLOBAL", 3)
+		SetGlobal("XA_LD_RomanceTermination", "GLOBAL", 1)
+		SetInterrupt(TRUE)
+		Continue()
+END
+//}
+
+//{ Departures after Lich Transformation
+IF
+	InParty("7XAJAN")
+	Race(Player1, LICH)
+	Global("XA_LD_AjantisWillLeave", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("XA_LD_AjantisLeft", "GLOBAL", 1)
+		ActionOverride("7XAJAN", SetLeavePartyDialogFile())
+		ActionOverride("7XAJAN", LeaveParty())
+		ActionOverride("7XAJAN", EscapeArea())
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	InParty("Keldorn")
+	Race(Player1, LICH)
+	Global("XA_LD_KeldornWillLeave", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("XA_LD_KeldornLeft", "GLOBAL", 1)
+		ActionOverride("Keldorn", SetLeavePartyDialogFile())
+		ActionOverride("Keldorn", LeaveParty())
+		ActionOverride("Keldorn", EscapeArea())
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	InParty("Mazzy")
+	Race(Player1, LICH)
+	Global("XA_LD_MazzyWillLeave", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("XA_LD_MazzyLeft", "GLOBAL", 1)
+		ActionOverride("Mazzy", SetLeavePartyDialogFile())
+		ActionOverride("Mazzy", LeaveParty())
+		ActionOverride("Mazzy", EscapeArea())
+		
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	InParty("Valygar")
+	Race(Player1, LICH)
+	Global("XA_LD_ValygarWillLeave", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("XA_LD_ValygarLeft", "GLOBAL", 1)
+		ActionOverride("Valygar", SetLeavePartyDialogFile())
+		ActionOverride("Valygar", LeaveParty())
+		ActionOverride("Valygar", EscapeArea())
+		SetInterrupt(TRUE)
+		Continue()
+END
+//}
+
+//{ Drop "allergic" Items
+IF
+	Race(Player1, LICH)
+	Global("XA_LD_LichEquip", "GLOBAL", 1)
+	OR(12)
+		HasItem("AX1H10", Player1) 		/* Azureedge + 3*/
+		HasItem("SW1H24", Player1) 		/* Flame Tongue + 1*/
+		HasItem("BLUN12", Player1) 		/* Mace of Disruption + 1*/
+		HasItem("BLUN25", Player1) 		/* Mace of Disruption + 2*/
+		HasItem("SCRL09", Player1) 		/* Scroll - Protection from Undead*/
+		HasItem("COMPS64", Player1) 	/* Purifier + 4*/
+		HasItem("COMPS65", Player1) 	/* Purifier + 5*/
+		HasItem("SW1H64", Player1) 		/* Purifier + 4*/ 
+		HasItem("SW1H65", Player1) 		/* Purifier + 5*/
+		HasItem("CARSOMYR", Player1) 	/* Carsomyr + 5*/
+		HasItem("SW2H10", Player1) 		/* Corsomyr + 5*/
+		HasItem("SW2H19", Player1) 		/* Carsomyr + 6*/
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player1, DropItem("AX1H10", [-1.-1]))
+		ActionOverride(Player1, DropItem("SW1H24", [-1.-1]))
+		ActionOverride(Player1, DropItem("BLUN12", [-1.-1]))
+		ActionOverride(Player1, DropItem("BLUN25", [-1.-1]))
+		ActionOverride(Player1, DropItem("SCRL09", [-1.-1]))
+		ActionOverride(Player1, DropItem("COMPS64", [-1.-1]))
+		ActionOverride(Player1, DropItem("COMPS65", [-1.-1]))
+		ActionOverride(Player1, DropItem("SW1H64", [-1.-1]))
+		ActionOverride(Player1, DropItem("SW1H65", [-1.-1]))
+		ActionOverride(Player1, DropItem("CARSOMYR", [-1.-1]))
+		ActionOverride(Player1, DropItem("SW2H10", [-1.-1]))
+		ActionOverride(Player1, DropItem("SW2H19", [-1.-1]))
+		DisplayStringHead(Player1, @1)
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	Race(Player2, LICH)
+	Global("XA_LD_LichEquip", "GLOBAL", 1)
+	OR(12)
+		HasItem("AX1H10", Player2) 		/* Azureedge + 3*/
+		HasItem("SW1H24", Player2) 		/* Flame Tongue + 1*/
+		HasItem("BLUN12", Player2) 		/* Mace of Disruption + 1*/
+		HasItem("BLUN25", Player2) 		/* Mace of Disruption + 2*/
+		HasItem("SCRL09", Player2) 		/* Scroll - Protection from Undead*/
+		HasItem("COMPS64", Player2) 	/* Purifier + 4*/
+		HasItem("COMPS65", Player2) 	/* Purifier + 5*/
+		HasItem("SW1H64", Player2) 		/* Purifier + 4*/ 
+		HasItem("SW1H65", Player2) 		/* Purifier + 5*/
+		HasItem("CARSOMYR", Player2) 	/* Carsomyr + 5*/
+		HasItem("SW2H10", Player2) 		/* Corsomyr + 5*/
+		HasItem("SW2H19", Player2) 		/* Carsomyr + 6*/
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player2, DropItem("AX1H10", [-1.-1]))
+		ActionOverride(Player2, DropItem("SW1H24", [-1.-1]))
+		ActionOverride(Player2, DropItem("BLUN12", [-1.-1]))
+		ActionOverride(Player2, DropItem("BLUN25", [-1.-1]))
+		ActionOverride(Player2, DropItem("SCRL09", [-1.-1]))
+		ActionOverride(Player2, DropItem("COMPS64", [-1.-1]))
+		ActionOverride(Player2, DropItem("COMPS65", [-1.-1]))
+		ActionOverride(Player2, DropItem("SW1H64", [-1.-1]))
+		ActionOverride(Player2, DropItem("SW1H65", [-1.-1]))
+		ActionOverride(Player2, DropItem("CARSOMYR", [-1.-1]))
+		ActionOverride(Player2, DropItem("SW2H10", [-1.-1]))
+		ActionOverride(Player2, DropItem("SW2H19", [-1.-1]))
+		DisplayStringHead(Player2, @1)
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	Race(Player3, LICH)
+	Global("XA_LD_LichEquip", "GLOBAL", 1)
+	OR(12)
+		HasItem("AX1H10", Player3) 		/* Azureedge + 3*/
+		HasItem("SW1H24", Player3) 		/* Flame Tongue + 1*/
+		HasItem("BLUN12", Player3) 		/* Mace of Disruption + 1*/
+		HasItem("BLUN25", Player3) 		/* Mace of Disruption + 2*/
+		HasItem("SCRL09", Player3) 		/* Scroll - Protection from Undead*/
+		HasItem("COMPS64", Player3) 	/* Purifier + 4*/
+		HasItem("COMPS65", Player3) 	/* Purifier + 5*/
+		HasItem("SW1H64", Player3) 		/* Purifier + 4*/ 
+		HasItem("SW1H65", Player3) 		/* Purifier + 5*/
+		HasItem("CARSOMYR", Player3) 	/* Carsomyr + 5*/
+		HasItem("SW2H10", Player3) 		/* Corsomyr + 5*/
+		HasItem("SW2H19", Player3) 		/* Carsomyr + 6*/
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player3, DropItem("AX1H10", [-1.-1]))
+		ActionOverride(Player3, DropItem("SW1H24", [-1.-1]))
+		ActionOverride(Player3, DropItem("BLUN12", [-1.-1]))
+		ActionOverride(Player3, DropItem("BLUN25", [-1.-1]))
+		ActionOverride(Player3, DropItem("SCRL09", [-1.-1]))
+		ActionOverride(Player3, DropItem("COMPS64", [-1.-1]))
+		ActionOverride(Player3, DropItem("COMPS65", [-1.-1]))
+		ActionOverride(Player3, DropItem("SW1H64", [-1.-1]))
+		ActionOverride(Player3, DropItem("SW1H65", [-1.-1]))
+		ActionOverride(Player3, DropItem("CARSOMYR", [-1.-1]))
+		ActionOverride(Player3, DropItem("SW2H10", [-1.-1]))
+		ActionOverride(Player3, DropItem("SW2H19", [-1.-1]))
+		DisplayStringHead(Player3, @1)
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	Race(Player4, LICH)
+	Global("XA_LD_LichEquip", "GLOBAL", 1)
+	OR(12)
+		HasItem("AX1H10", Player4) 		/* Azureedge + 3*/
+		HasItem("SW1H24", Player4) 		/* Flame Tongue + 1*/
+		HasItem("BLUN12", Player4) 		/* Mace of Disruption + 1*/
+		HasItem("BLUN25", Player4) 		/* Mace of Disruption + 2*/
+		HasItem("SCRL09", Player4) 		/* Scroll - Protection from Undead*/
+		HasItem("COMPS64", Player4) 	/* Purifier + 4*/
+		HasItem("COMPS65", Player4) 	/* Purifier + 5*/
+		HasItem("SW1H64", Player4) 		/* Purifier + 4*/ 
+		HasItem("SW1H65", Player4) 		/* Purifier + 5*/
+		HasItem("CARSOMYR", Player4) 	/* Carsomyr + 5*/
+		HasItem("SW2H10", Player4) 		/* Corsomyr + 5*/
+		HasItem("SW2H19", Player4) 		/* Carsomyr + 6*/
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player4, DropItem("AX1H10", [-1.-1]))
+		ActionOverride(Player4, DropItem("SW1H24", [-1.-1]))
+		ActionOverride(Player4, DropItem("BLUN12", [-1.-1]))
+		ActionOverride(Player4, DropItem("BLUN25", [-1.-1]))
+		ActionOverride(Player4, DropItem("SCRL09", [-1.-1]))
+		ActionOverride(Player4, DropItem("COMPS64", [-1.-1]))
+		ActionOverride(Player4, DropItem("COMPS65", [-1.-1]))
+		ActionOverride(Player4, DropItem("SW1H64", [-1.-1]))
+		ActionOverride(Player4, DropItem("SW1H65", [-1.-1]))
+		ActionOverride(Player4, DropItem("CARSOMYR", [-1.-1]))
+		ActionOverride(Player4, DropItem("SW2H10", [-1.-1]))
+		ActionOverride(Player4, DropItem("SW2H19", [-1.-1]))
+		DisplayStringHead(Player4, @1)
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	Race(Player5, LICH)
+	Global("XA_LD_LichEquip", "GLOBAL", 1)
+	OR(12)
+		HasItem("AX1H10", Player5) 		/* Azureedge + 3*/
+		HasItem("SW1H24", Player5) 		/* Flame Tongue + 1*/
+		HasItem("BLUN12", Player5) 		/* Mace of Disruption + 1*/
+		HasItem("BLUN25", Player5) 		/* Mace of Disruption + 2*/
+		HasItem("SCRL09", Player5) 		/* Scroll - Protection from Undead*/
+		HasItem("COMPS64", Player5) 	/* Purifier + 4*/
+		HasItem("COMPS65", Player5) 	/* Purifier + 5*/
+		HasItem("SW1H64", Player5) 		/* Purifier + 4*/ 
+		HasItem("SW1H65", Player5) 		/* Purifier + 5*/
+		HasItem("CARSOMYR", Player5) 	/* Carsomyr + 5*/
+		HasItem("SW2H10", Player5) 		/* Corsomyr + 5*/
+		HasItem("SW2H19", Player5) 		/* Carsomyr + 6*/
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player5, DropItem("AX1H10", [-1.-1]))
+		ActionOverride(Player5, DropItem("SW1H24", [-1.-1]))
+		ActionOverride(Player5, DropItem("BLUN12", [-1.-1]))
+		ActionOverride(Player5, DropItem("BLUN25", [-1.-1]))
+		ActionOverride(Player5, DropItem("SCRL09", [-1.-1]))
+		ActionOverride(Player5, DropItem("COMPS64", [-1.-1]))
+		ActionOverride(Player5, DropItem("COMPS65", [-1.-1]))
+		ActionOverride(Player5, DropItem("SW1H64", [-1.-1]))
+		ActionOverride(Player5, DropItem("SW1H65", [-1.-1]))
+		ActionOverride(Player5, DropItem("CARSOMYR", [-1.-1]))
+		ActionOverride(Player5, DropItem("SW2H10", [-1.-1]))
+		ActionOverride(Player5, DropItem("SW2H19", [-1.-1]))
+		DisplayStringHead(Player5, @1)
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	Race(Player6, LICH)
+	Global("XA_LD_LichEquip", "GLOBAL", 1)
+	OR(12)
+		HasItem("AX1H10", Player6) 		/* Azureedge + 3*/
+		HasItem("SW1H24", Player6) 		/* Flame Tongue + 1*/
+		HasItem("BLUN12", Player6) 		/* Mace of Disruption + 1*/
+		HasItem("BLUN25", Player6) 		/* Mace of Disruption + 2*/
+		HasItem("SCRL09", Player6) 		/* Scroll - Protection from Undead*/
+		HasItem("COMPS64", Player6) 	/* Purifier + 4*/
+		HasItem("COMPS65", Player6) 	/* Purifier + 5*/
+		HasItem("SW1H64", Player6) 		/* Purifier + 4*/ 
+		HasItem("SW1H65", Player6) 		/* Purifier + 5*/
+		HasItem("CARSOMYR", Player6) 	/* Carsomyr + 5*/
+		HasItem("SW2H10", Player6) 		/* Corsomyr + 5*/
+		HasItem("SW2H19", Player6) 		/* Carsomyr + 6*/
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player6, DropItem("AX1H10", [-1.-1]))
+		ActionOverride(Player6, DropItem("SW1H24", [-1.-1]))
+		ActionOverride(Player6, DropItem("BLUN12", [-1.-1]))
+		ActionOverride(Player6, DropItem("BLUN25", [-1.-1]))
+		ActionOverride(Player6, DropItem("SCRL09", [-1.-1]))
+		ActionOverride(Player6, DropItem("COMPS64", [-1.-1]))
+		ActionOverride(Player6, DropItem("COMPS65", [-1.-1]))
+		ActionOverride(Player6, DropItem("SW1H64", [-1.-1]))
+		ActionOverride(Player6, DropItem("SW1H65", [-1.-1]))
+		ActionOverride(Player6, DropItem("CARSOMYR", [-1.-1]))
+		ActionOverride(Player6, DropItem("SW2H10", [-1.-1]))
+		ActionOverride(Player6, DropItem("SW2H19", [-1.-1]))
+		DisplayStringHead(Player6, @1)
+		SetInterrupt(TRUE)
+		Continue()
+END
+//}
+
+//{ Paralyzing Touch Toggle
+IF
+	TriggerOverride(Player1, ActionListEmpty())
+	TriggerOverride(Player1, Global("xaldatt2", "LOCALS", 1))
+	!HasItemEquiped("xaldcla2", Player1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player1, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player1, CreateItem("xaldcla2", 0,0,0))
+		ActionOverride(Player1, SetItemFlags("xaldcla2", IDENTIFIED, TRUE))
+		ActionOverride(Player1, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player1, XEquipItem("xaldcla2",Myself,SLOT_WEAPON,EQUIP))
+		//DisplayStringHead(Myself, ~A~)
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player1, ActionListEmpty())
+	TriggerOverride(Player1, Global("xaldatt2", "LOCALS", 1))
+	HasItemEquiped("xaldcla2", Player1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player1, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player1, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player1, DestroyItem("xaldcla2"))
+		//DisplayStringHead(Myself, ~B~)
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player2, ActionListEmpty())
+	TriggerOverride(Player2, Global("xaldatt2", "LOCALS", 1))
+	!HasItemEquiped("xaldcla2", Player2)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player2, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player2, CreateItem("xaldcla2", 0,0,0))
+		ActionOverride(Player2, SetItemFlags("xaldcla2", IDENTIFIED, TRUE))
+		ActionOverride(Player2, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player2, XEquipItem("xaldcla2",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player2, ActionListEmpty())
+	TriggerOverride(Player2, Global("xaldatt2", "LOCALS", 1))
+	HasItemEquiped("xaldcla2", Player2)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player2, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player2, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player2, DestroyItem("xaldcla2"))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player3, ActionListEmpty())
+	TriggerOverride(Player3, Global("xaldatt2", "LOCALS", 1))
+	!HasItemEquiped("xaldcla2", Player3)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player3, SetGlobal("xaldatt2", "LOCALS",2))
+		ActionOverride(Player3, CreateItem("xaldcla2", 0,0,0))
+		ActionOverride(Player3, SetItemFlags("xaldcla2", IDENTIFIED, TRUE))
+		ActionOverride(Player3, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player3, XEquipItem("xaldcla2",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player3, ActionListEmpty())
+	TriggerOverride(Player3, Global("xaldatt2", "LOCALS", 1))
+	HasItemEquiped("xaldcla2", Player3)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player3, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player3, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player3, DestroyItem("xaldcla2"))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player4, ActionListEmpty())
+	TriggerOverride(Player4, Global("xaldatt2", "LOCALS", 1))
+	!HasItemEquiped("xaldcla2", Player4)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player4, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player4, CreateItem("xaldcla2", 0,0,0))
+		ActionOverride(Player4, SetItemFlags("xaldcla2", IDENTIFIED, TRUE))
+		ActionOverride(Player4, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player4, XEquipItem("xaldcla2",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player4, ActionListEmpty())
+	TriggerOverride(Player4, Global("xaldatt2", "LOCALS", 1))
+	HasItemEquiped("xaldcla2", Player4)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player4, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player4, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player4, DestroyItem("xaldcla2"))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player5, ActionListEmpty())
+	TriggerOverride(Player5, Global("xaldatt2", "LOCALS", 1))
+	!HasItemEquiped("xaldcla2", Player5)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player5, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player5, CreateItem("xaldcla2", 0,0,0))
+		ActionOverride(Player5, SetItemFlags("xaldcla2", IDENTIFIED, TRUE))
+		ActionOverride(Player5, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player5, XEquipItem("xaldcla2",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player5, ActionListEmpty())
+	TriggerOverride(Player5, Global("xaldatt2", "LOCALS", 1))
+	HasItemEquiped("xaldcla2", Player5)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player5, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player5, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player5, DestroyItem("xaldcla2"))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player6, ActionListEmpty())
+	TriggerOverride(Player6, Global("xaldatt2", "LOCALS", 1))
+	!HasItemEquiped("xaldcla2", Player6)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player6, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player6, CreateItem("xaldcla2", 0,0,0))
+		ActionOverride(Player6, SetItemFlags("xaldcla2", IDENTIFIED, TRUE))
+		ActionOverride(Player6, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player6, XEquipItem("xaldcla2",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player6, ActionListEmpty())
+	TriggerOverride(Player6, Global("xaldatt2", "LOCALS", 1))
+	HasItemEquiped("xaldcla2", Player6)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player6, SetGlobal("xaldatt2", "LOCALS", 2))
+		ActionOverride(Player6, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player6, DestroyItem("xaldcla2"))
+		SetInterrupt(TRUE)
+END
+
+
+IF
+	TriggerOverride(Player1, ActionListEmpty())
+	TriggerOverride(Player1, Global("xaldattk", "LOCALS", 1))
+	!HasItemEquiped("xaldclaw", Player1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player1, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player1, CreateItem("xaldclaw", 0,0,0))
+		ActionOverride(Player1, SetItemFlags("xaldclaw", IDENTIFIED, TRUE))
+		ActionOverride(Player1, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player1, XEquipItem("xaldclaw",Myself,SLOT_WEAPON,EQUIP))
+		//DisplayStringHead(Myself, ~A~)
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player1, ActionListEmpty())
+	TriggerOverride(Player1, Global("xaldattk", "LOCALS", 1))
+	HasItemEquiped("xaldclaw", Player1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player1, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player1, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player1, DestroyItem("xaldclaw"))
+		//DisplayStringHead(Myself, ~B~)
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player2, ActionListEmpty())
+	TriggerOverride(Player2, Global("xaldattk", "LOCALS", 1))
+	!HasItemEquiped("xaldclaw", Player2)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player2, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player2, CreateItem("xaldclaw", 0,0,0))
+		ActionOverride(Player2, SetItemFlags("xaldclaw", IDENTIFIED, TRUE))
+		ActionOverride(Player2, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player2, XEquipItem("xaldclaw",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player2, ActionListEmpty())
+	TriggerOverride(Player2, Global("xaldattk", "LOCALS", 1))
+	HasItemEquiped("xaldclaw", Player2)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player2, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player2, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player2, DestroyItem("xaldclaw"))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player3, ActionListEmpty())
+	TriggerOverride(Player3, Global("xaldattk", "LOCALS", 1))
+	!HasItemEquiped("xaldclaw", Player3)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player3, SetGlobal("xaldattk", "LOCALS",2))
+		ActionOverride(Player3, CreateItem("xaldclaw", 0,0,0))
+		ActionOverride(Player3, SetItemFlags("xaldclaw", IDENTIFIED, TRUE))
+		ActionOverride(Player3, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player3, XEquipItem("xaldclaw",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player3, ActionListEmpty())
+	TriggerOverride(Player3, Global("xaldattk", "LOCALS", 1))
+	HasItemEquiped("xaldclaw", Player3)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player3, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player3, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player3, DestroyItem("xaldclaw"))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player4, ActionListEmpty())
+	TriggerOverride(Player4, Global("xaldattk", "LOCALS", 1))
+	!HasItemEquiped("xaldclaw", Player4)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player4, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player4, CreateItem("xaldclaw", 0,0,0))
+		ActionOverride(Player4, SetItemFlags("xaldclaw", IDENTIFIED, TRUE))
+		ActionOverride(Player4, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player4, XEquipItem("xaldclaw",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player4, ActionListEmpty())
+	TriggerOverride(Player4, Global("xaldattk", "LOCALS", 1))
+	HasItemEquiped("xaldclaw", Player4)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player4, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player4, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player4, DestroyItem("xaldclaw"))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player5, ActionListEmpty())
+	TriggerOverride(Player5, Global("xaldattk", "LOCALS", 1))
+	!HasItemEquiped("xaldclaw", Player5)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player5, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player5, CreateItem("xaldclaw", 0,0,0))
+		ActionOverride(Player5, SetItemFlags("xaldclaw", IDENTIFIED, TRUE))
+		ActionOverride(Player5, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player5, XEquipItem("xaldclaw",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player5, ActionListEmpty())
+	TriggerOverride(Player5, Global("xaldattk", "LOCALS", 1))
+	HasItemEquiped("xaldclaw", Player5)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player5, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player5, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player5, DestroyItem("xaldclaw"))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player6, ActionListEmpty())
+	TriggerOverride(Player6, Global("xaldattk", "LOCALS", 1))
+	!HasItemEquiped("xaldclaw", Player6)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player6, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player6, CreateItem("xaldclaw", 0,0,0))
+		ActionOverride(Player6, SetItemFlags("xaldclaw", IDENTIFIED, TRUE))
+		ActionOverride(Player6, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player6, XEquipItem("xaldclaw",Myself,SLOT_WEAPON,EQUIP))
+		SetInterrupt(TRUE)
+END
+
+IF
+	TriggerOverride(Player6, ActionListEmpty())
+	TriggerOverride(Player6, Global("xaldattk", "LOCALS", 1))
+	HasItemEquiped("xaldclaw", Player6)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player6, SetGlobal("xaldattk", "LOCALS", 2))
+		ActionOverride(Player6, XEquipItem("",Myself,SLOT_WEAPON,EQUIP))
+		ActionOverride(Player6, DestroyItem("xaldclaw"))
+		SetInterrupt(TRUE)
+END
+//}
+
+//{ Re-add the Paralyzing Touch Ability once used
+IF
+	ActionListEmpty()
+	!TriggerOverride(Player1,HaveSpellRES("xaldattk"))
+	TriggerOverride(Player1, Global("xaldattk", "LOCALS", 2))
+	TriggerOverride(Player1, Global("XA_LD_LichTransformation", "LOCALS", 2)) 	
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player1, SetGlobal("xaldattk", "LOCALS", 0))
+		ActionOverride(Player1, AddSpecialAbility("xaldattk"))
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	ActionListEmpty()
+	!TriggerOverride(Player2,HaveSpellRES("xaldattk"))
+	TriggerOverride(Player2, Global("xaldattk", "LOCALS", 2))
+	TriggerOverride(Player2, Global("XA_LD_LichTransformation", "LOCALS", 2))  	
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player2, SetGlobal("xaldattk", "LOCALS", 0))
+		ActionOverride(Player2, AddSpecialAbility("xaldattk"))
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	ActionListEmpty()
+	!TriggerOverride(Player3,HaveSpellRES("xaldattk"))
+	TriggerOverride(Player3, Global("xaldattk", "LOCALS", 2))
+	TriggerOverride(Player3, Global("XA_LD_LichTransformation", "LOCALS", 2))  	
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player3, SetGlobal("xaldattk", "LOCALS", 0))
+		ActionOverride(Player3, AddSpecialAbility("xaldattk"))
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	ActionListEmpty()
+	!TriggerOverride(Player4,HaveSpellRES("xaldattk"))
+	TriggerOverride(Player4, Global("xaldattk", "LOCALS", 2))
+	TriggerOverride(Player4, Global("XA_LD_LichTransformation", "LOCALS", 2)) 	
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player4, SetGlobal("xaldattk", "LOCALS", 0))
+		ActionOverride(Player4, AddSpecialAbility("xaldattk"))
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	ActionListEmpty()
+	!TriggerOverride(Player5,HaveSpellRES("xaldattk"))
+	TriggerOverride(Player5, Global("xaldattk", "LOCALS", 2))
+	TriggerOverride(Player5, Global("XA_LD_LichTransformation", "LOCALS", 2))  	
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player5, SetGlobal("xaldattk", "LOCALS", 0))
+		ActionOverride(Player5, AddSpecialAbility("xaldattk"))
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	ActionListEmpty()
+	!TriggerOverride(Player6,HaveSpellRES("xaldattk"))
+	TriggerOverride(Player6, Global("xaldattk", "LOCALS", 2))
+	TriggerOverride(Player6, Global("XA_LD_LichTransformation", "LOCALS", 2)) 
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player6, SetGlobal("xaldattk", "LOCALS", 0))
+		ActionOverride(Player6, AddSpecialAbility("xaldattk"))
+		SetInterrupt(TRUE)
+		Continue()
+END
+//}
+
+//{ Rolling Eight Hour Timer
+IF
+	GlobalLT("XA_LD_RezTimerSet", "GLOBAL", 1)
+	Global("XA_LD_LichResurrection", "GLOBAL", 0)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("XA_LD_RezTimerSet", "GLOBAL", 1)
+		SetGlobalTimer("XA_LD_RezTimer", "GLOBAL", EIGHT_HOURS)
+		SetInterrupt(TRUE)
+END
+
+IF
+	!TriggerOverride(Player1, See([ENEMY]))
+	GlobalLT("XA_LD_LichRez1", "GLOBAL", 1)
+	Global("XA_LD_LichResurrection", "GLOBAL", 0)
+	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
+	TriggerOverride(Player1, GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	Race(Player1, Lich)
+	HPLT(Player1, 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_LichRez1", "GLOBAL", 7)
+		Continue()
+END
+
+IF
+	!TriggerOverride(Player2, See([ENEMY]))
+	GlobalLT("XA_LD_LichRez2", "GLOBAL", 1)
+	Global("XA_LD_LichResurrection", "GLOBAL", 0)
+	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
+	TriggerOverride(Player2, GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	Race(Player2, Lich)
+	HPLT(Player2, 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_LichRez2", "GLOBAL", 7)
+		Continue()
+END
+
+IF
+	!TriggerOverride(Player3, See([ENEMY]))
+	GlobalLT("XA_LD_LichRez3", "GLOBAL", 1)
+	Global("XA_LD_LichResurrection", "GLOBAL", 0)
+	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
+	TriggerOverride(Player3, GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	Race(Player3, Lich)
+	HPLT(Player3, 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_LichRez3", "GLOBAL", 7)
+		Continue()
+END
+
+IF
+	!TriggerOverride(Player4, See([ENEMY]))
+	GlobalLT("XA_LD_LichRez4", "GLOBAL", 1)
+	Global("XA_LD_LichResurrection", "GLOBAL", 0)
+	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
+	TriggerOverride(Player4, GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	Race(Player4, Lich)
+	HPLT(Player4, 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_LichRez4", "GLOBAL", 7)
+		Continue()
+END
+
+IF
+	!TriggerOverride(Player5, See([ENEMY]))
+	GlobalLT("XA_LD_LichRez5", "GLOBAL", 1)
+	Global("XA_LD_LichResurrection", "GLOBAL", 0)
+	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
+	TriggerOverride(Player5, GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	Race(Player5, Lich)
+	HPLT(Player5, 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_LichRez5", "GLOBAL", 7)
+		Continue()
+END
+
+IF
+	//!ActuallyInCombat()
+	NumInParty(6)
+	!TriggerOverride(Player6, See([ENEMY]))
+	GlobalLT("XA_LD_LichRez6", "GLOBAL", 1)
+	Global("XA_LD_LichResurrection", "GLOBAL", 0)
+	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
+	TriggerOverride(Player6, GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	Race(Player6, Lich)
+	HPLT(Player6, 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_LichRez6", "GLOBAL", 7)
+		Continue()
+END
+
+IF
+	//!ActuallyInCombat()
+	Global("XA_LD_LichResurrection", "GLOBAL", 0)
+	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobalTimer("XA_LD_RezTimer", "GLOBAL", EIGHT_HOURS)
+		Continue()
+END
+//}
+
+//{ Resurrect After Battle
+
+IF
+	!TriggerOverride(Player1, See([ENEMY]))
+	GlobalLT("XA_LD_LichRez1", "GLOBAL", 1)
+	Global("XA_LD_LichResurrection", "GLOBAL", 1)
+	TriggerOverride(Player1, GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	Race(Player1, Lich)
+	HPLT(Player1, 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_LichRez1", "GLOBAL", 7)
+		Continue()
+END
+
+IF
+	!TriggerOverride(Player2, See([ENEMY]))
+	GlobalLT("XA_LD_LichRez2", "GLOBAL", 1)
+	Global("XA_LD_LichResurrection", "GLOBAL", 1)
+	TriggerOverride(Player2, GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	Race(Player2, Lich)
+	HPLT(Player2, 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_LichRez2", "GLOBAL", 7)
+		Continue()
+END
+
+IF
+	!TriggerOverride(Player3, See([ENEMY]))
+	GlobalLT("XA_LD_LichRez3", "GLOBAL", 1)
+	Global("XA_LD_LichResurrection", "GLOBAL", 1)
+	TriggerOverride(Player3, GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	Race(Player3, Lich)
+	HPLT(Player3, 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_LichRez3", "GLOBAL", 7)
+		Continue()
+END
+
+IF
+	!TriggerOverride(Player4, See([ENEMY]))
+	GlobalLT("XA_LD_LichRez4", "GLOBAL", 1)
+	Global("XA_LD_LichResurrection", "GLOBAL", 1)
+	TriggerOverride(Player4, GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	Race(Player4, Lich)
+	HPLT(Player4, 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_LichRez4", "GLOBAL", 7)
+		Continue()
+END
+
+IF
+	!TriggerOverride(Player5, See([ENEMY]))
+	GlobalLT("XA_LD_LichRez5", "GLOBAL", 1)
+	Global("XA_LD_LichResurrection", "GLOBAL", 1)
+	TriggerOverride(Player5, GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	Race(Player5, Lich)
+	HPLT(Player5, 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_LichRez5", "GLOBAL", 7)
+		Continue()
+END
+
+IF
+	!TriggerOverride(Player6, See([ENEMY]))
+	GlobalLT("XA_LD_LichRez6", "GLOBAL", 1)
+	Global("XA_LD_LichResurrection", "GLOBAL", 1)
+	TriggerOverride(Player6, GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	Race(Player6, Lich)
+	HPLT(Player6, 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_LichRez6", "GLOBAL", 7)
+		Continue()
+END
+//}
+
+//{ Perform Resurrection & Apply script
+IF
+	Global("XA_LD_LichRez1", "GLOBAL", 7)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ReallyForceSpellRES("SPPR712", Player1)
+		ActionOverride(Player1, ChangeAIScript("xaldrez", CLASS))
+		SetGlobal("XA_LD_LichRez1", "GLOBAL", 0)
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	Global("XA_LD_LichRez2", "GLOBAL", 7)
+THEN
+	RESPONSE #200
+		SetInterrupt(FALSE)
+		ReallyForceSpellRES("SPPR712", Player2)
+		ActionOverride(Player2, ChangeAIScript("xaldrez", CLASS))
+		SetGlobal("XA_LD_LichRez2", "GLOBAL", 0)
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	Global("XA_LD_LichRez3", "GLOBAL", 7)
+THEN
+	RESPONSE #300
+		SetInterrupt(FALSE)
+		ReallyForceSpellRES("SPPR712", Player3)
+		ActionOverride(Player3, ChangeAIScript("xaldrez", CLASS))
+		SetGlobal("XA_LD_LichRez3", "GLOBAL", 0)
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	Global("XA_LD_LichRez4", "GLOBAL", 7)
+THEN
+	RESPONSE #400
+		SetInterrupt(FALSE)
+		ReallyForceSpellRES("SPPR712", Player4)
+		ActionOverride(Player4, ChangeAIScript("xaldrez", CLASS))
+		SetGlobal("XA_LD_LichRez4", "GLOBAL", 0)
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	Global("XA_LD_LichRez5", "GLOBAL", 7)
+THEN
+	RESPONSE #500
+		SetInterrupt(FALSE)
+		ReallyForceSpellRES("SPPR712", Player5)
+		ActionOverride(Player5, ChangeAIScript("xaldrez", CLASS))
+		SetGlobal("XA_LD_LichRez5", "GLOBAL", 0)
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	Global("XA_LD_LichRez6", "GLOBAL", 7)
+THEN
+	RESPONSE #600
+		SetInterrupt(FALSE)
+		ReallyForceSpellRES("SPPR712", Player6)
+		ActionOverride(Player6, ChangeAIScript("xaldrez", CLASS))
+		SetGlobal("XA_LD_LichRez6", "GLOBAL", 0)
+		SetInterrupt(TRUE)
+		Continue()
+END
+//}
+
+//{ Check if a player is a lich. If so, apply the lich transformation script.
+	//{ Player1
+	IF
+		Race(Player1, LICH)
+		TriggerOverride(Player1, ActionListEmpty())
+		TriggerOverride(Player1, GlobalLT("XA_LD_LichTransformation", "LOCALS", 1))
+	THEN
+		RESPONSE #100
+			ActionOverride(Player1, ChangeAIScript("xaldlich", CLASS))
+			//DisplayStringHead(Myself, ~C~)
+			Continue()
+	END
+	//}
+	
+	//{ Player2
+	IF
+		Race(Player2, LICH)
+		TriggerOverride(Player2, ActionListEmpty())
+		TriggerOverride(Player2, GlobalLT("XA_LD_LichTransformation", "LOCALS", 1))
+	THEN
+		RESPONSE #100
+			ActionOverride(Player2, ChangeAIScript("xaldlich", CLASS))
+			Continue()
+	END
+	//}
+	
+	//{ Player3
+	IF
+		Race(Player3, LICH)
+		TriggerOverride(Player3, ActionListEmpty())
+		TriggerOverride(Player3, GlobalLT("XA_LD_LichTransformation", "LOCALS", 1))
+	THEN
+		RESPONSE #100
+			ActionOverride(Player3, ChangeAIScript("xaldlich", CLASS))
+			Continue()
+	END
+	//}
+	
+	//{ Player4
+	IF
+		Race(Player4, LICH)
+		TriggerOverride(Player4, ActionListEmpty())
+		TriggerOverride(Player4, GlobalLT("XA_LD_LichTransformation", "LOCALS", 1))
+	THEN
+		RESPONSE #100
+			ActionOverride(Player4, ChangeAIScript("xaldlich", CLASS))
+			Continue()
+	END
+	//}
+	
+	//{ Player5
+	IF
+		Race(Player5, LICH)
+		TriggerOverride(Player5, ActionListEmpty())
+		TriggerOverride(Player5, GlobalLT("XA_LD_LichTransformation", "LOCALS", 1))
+	THEN
+		RESPONSE #100
+			ActionOverride(Player5, ChangeAIScript("xaldlich", CLASS))
+			Continue()
+	END
+	//}
+	
+	//{ Player6
+	IF
+		Race(Player6, LICH)
+		TriggerOverride(Player6, ActionListEmpty())
+		TriggerOverride(Player6, GlobalLT("XA_LD_LichTransformation", "LOCALS", 1))
+	THEN
+		RESPONSE #100
+			ActionOverride(Player6, ChangeAIScript("xaldlich", CLASS))
+			Continue()
+	END
+	//}
+//}
+
+//{ Death Scripting
+	IF
+		OR(2)
+			HPPercentLT(Player1, 10)
+			HPLT(Player1, 2)
+		Race(Player1, LICH)
+		TriggerOverride(Player1, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ActionOverride(Player1, ChangeAIScript("xalddead", CLASS)
+			ActionOverride(Player1, SetGlobal("XA_LD_LichDeathScript", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		OR(2)
+			HPPercentLT(Player2, 10)
+			HPLT(Player2, 2)
+		Race(Player2, LICH)
+		TriggerOverride(Player2, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ActionOverride(Player2, ChangeAIScript("xalddead", CLASS)
+			ActionOverride(Player2, SetGlobal("XA_LD_LichDeathScript", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		OR(2)
+			HPPercentLT(Player3, 10)
+			HPLT(Player3, 2)
+		Race(Player3, LICH)
+		TriggerOverride(Player3, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ActionOverride(Player3, ChangeAIScript("xalddead", CLASS)
+			ActionOverride(Player3, SetGlobal("XA_LD_LichDeathScript", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		OR(2)
+			HPPercentLT(Player4, 10)
+			HPLT(Player4, 2)
+		Race(Player4, LICH)
+		TriggerOverride(Player4, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ActionOverride(Player4, ChangeAIScript("xalddead", CLASS)
+			ActionOverride(Player4, SetGlobal("XA_LD_LichDeathScript", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		OR(2)
+			HPPercentLT(Player5, 10)
+			HPLT(Player5, 2)
+		Race(Player5, LICH)
+		TriggerOverride(Player5, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ActionOverride(Player5, ChangeAIScript("xalddead", CLASS)
+			ActionOverride(Player5, SetGlobal("XA_LD_LichDeathScript", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		OR(2)
+			HPPercentLT(Player6, 10)
+			HPLT(Player6, 2)
+		Race(Player6, LICH)
+		TriggerOverride(Player6, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ActionOverride(Player6, ChangeAIScript("xalddead", CLASS)
+			ActionOverride(Player6, SetGlobal("XA_LD_LichDeathScript", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+//}
+
+//{ Launch Lichdom Assistant
+	IF
+		Global("xaldasst", "GLOBAL", 1)
+	THEN
+		RESPONSE #100
+			ActionOverride(Player1,StartDialog("player1",Player1))
+	END
+//}
+
+//{ Add Lichdom Assistant
+	IF
+		ActionListEmpty()
+		!TriggerOverride(Player1,HaveSpellRES("xaldasst")) 
+		GlobalLT("XA_LD_AddAssistantTimerSet", "GLOBAL", 1)
+		GlobalLT("XA_LD_DisableAssistant", "GLOBAL", 1)
+		OR(2)
+			GlobalGT("XA_LD_MetMorrisInSaradush", "GLOBAL", 0)
+			GlobalGT("XA_LD_MetMorrisInAthkatla", "GLOBAL", 0)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			SetGlobal("XA_LD_AddAssistantTimerSet", "GLOBAL", 1)
+			SetGlobalTimer("XA_LD_AddAssistantTimer", "GLOBAL", ONE_ROUND)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		GlobalTimerExpired("XA_LD_AddAssistantTimer", "GLOBAL")
+		Global("XA_LD_AddAssistantTimerSet", "GLOBAL", 1)
+		GlobalLT("XA_LD_DisableAssistant", "GLOBAL", 1)
+		OR(2)
+			GlobalGT("XA_LD_MetMorrisInSaradush", "GLOBAL", 0)
+			GlobalGT("XA_LD_MetMorrisInAthkatla", "GLOBAL", 0)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ActionOverride(Player1, AddSpecialAbility("xaldasst"))
+			SetGlobal("XA_LD_AddAssistantTimerSet", "GLOBAL", 0)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	
+//}
+
+//{ Remove Assistant
+	IF
+		ActionListEmpty()
+		TriggerOverride(Player1,HaveSpellRES("xaldasst"))
+		Global("XA_LD_DisableAssistant", "GLOBAL", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ActionOverride(Player1, RemoveSpellRES("xaldasst"))
+			SetInterrupt(TRUE)
+			Continue()
+	END
+//}
+
+/* Block other execution if the player (lich) is dead, including the default game over. */
+IF
+	!InParty(Player1)
+	Global("XA_LD_Player1IsLich", "GLOBAL", 1)	
+THEN
+	RESPONSE #100
+		NoAction()
+END
+
+//{ ALlow the player to die if they are not a lich
+IF
+	!InParty(Player1)
+	!Global("XA_LD_Player1IsLich", "GLOBAL", 1)	
+THEN
+	RESPONSE #100
+		GameOver(19377)
+END
+

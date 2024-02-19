@@ -1,0 +1,7 @@
+ACTION_IF(bg2_carryover = 0) THEN BEGIN
+	INCLUDE ~%MOD_FOLDER%/bg2/xabg2_co.tph~
+END
+
+COPY ~%MOD_FOLDER%/bg2/cre/xaldgd.cre~ ~override~
+SAY NAME1 @19
+SAY NAME2 @19

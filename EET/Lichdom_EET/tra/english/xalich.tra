@@ -1,0 +1,97 @@
+@0 = ~Lichdom for the Enhanced Edition Trilogy (EET) of Baldur's Gate.~
+@1 = ~This mod requires the EET mod to be installed.~
+@2 = ~Shroud of the Lich~
+@3 = ~This ornate cloak is a phylactery that contains the soul of its wearer. Equipping it allows the wearer to automatically revive if they are killed, once they are out of combat and enough time has passed since their death.~
+@4 = ~Lich Dust~
+@5 = ~This gathering of dust is seemingly all that remains of a powerful Undead spellcaster known as a Lich.~
+@6 = ~Lich Transformation~
+@7 = ~Lichdom Assistant~
+@8 = ~Used to configure aspects of the Lichdom mod.~
+@9 = ~Lich AC Modification~
+@10 = ~Lich Mental Boost~
+@11 = ~Lich Magic Resistance Boost~
+@12 = ~Lich Spell Immunity~
+@13 = ~Lich Animation~
+@14 = ~True Death~
+@15 = ~Lich~
+@16 = ~Paralyzing Touch~
+@17 = ~Toggles the use of the Paralyzing Touch as a melee weapon.~
+@18 = ~Lich Mental Senses~
+@19 = ~Gravetender Morris~
+@20 = ~Debugger~
+@21 = ~I'm a lich. Yay.~
+@22 = ~Lich~
+@23 = ~Damaged Phylactery~
+@24 = ~This phylactery has been damaged, and as a result, it cannot restore the lich. Perhaps Morris can help.
+
+The phylactery is simultaneously the source of the lich's greatest power and its greatest, indeed its only significant physical weakness. Any independent lich should take pains to ensure its phylactery is kept secure at all times. Though not strictly necessary, the transition from mortal to lich is more easily achieved if the item which will store the transformee's soul (ie, the phylactery) is something with which they are familiar. This is particularly the case in Rituals of Becoming that are performed by a party other than the one undergoing transformation. The phylactery is small enough to be hidden within an unassuming item, as is the case here; it has been discreetly woven into the fibers of this cloak.~
+@25 = ~Morris' Price for Lichdom~
+@26 = ~The cost to perform the ritual is 120,000 gold.~
+@27 = ~The cost to perform the ritual is 100,000 gold.~
+@28 = ~The cost to perform the ritual is 75,000 gold.~
+@29 = ~The cost to perform the ritual is 50,000 gold.~
+@30 = ~The cost to perform the ritual is 40,000 gold.~
+@31 = ~Edwin gained great renown in his travels with <CHARNAME>, and in the years following their association, he would exploit that infamy. In time, he achieved enough influence to subjugate even the Red Wizards themselves, becoming the greatest leader they had known in recent memory.   He even outwitted Szass Tam, the Zulkir of Necromancy and gained Tam's respect.
+
+This respect led to a calm alliance between Tam and Edwin that lasted for years before Tam, using his influence over Undead, gently persuaded Edwin to step down from his post in Thay and take on greater challenges for the glory of the Red Wizards and himself.
+
+Edwin, having been unknowingly prodded on by Tam, prepared his absolute best and challenged Elminster of Shadowdale to a duel.  Elminster won - of course - but it was uncomfortably close for him.  Perhaps with another thousand years and Elminster's pointy hat, Edwin truly would have won.
+
+At least now Edwin has an indefinite amount of time to prepare for his next scheme.~
+@32 = ~Edwin gained great renown in his travels with <CHARNAME>, and in the years following their association, he would exploit that infamy. In time, he achieved enough influence to subjugate even the Red Wizards themselves, becoming the greatest leader they had known in recent memory.   He even outwitted Szass Tam, the Zulkir of Necromancy and gained Tam's respect.
+
+This respect led to a calm alliance between Tam and Edwin that lasted for years before Tam, using his influence over Undead, gently persuaded Edwin to step down from his post in Thay and take on greater challenges for the glory of the Red Wizards and himself.
+
+Edwin, having been unknowingly prodded on by Tam, prepared his absolute best and challenged Elminster of Shadowdale to a duel.  Elminster won - of course - but it was uncomfortably close for him.  Perhaps with another thousand years and Elminster's pointy hat, Edwin truly would have won.
+
+At least now Edwin has an indefinite amount of time to prepare for his next scheme.
+
+Edwina, however, tends bar in a Waterdeep tavern. She is a bitter, bitter woman.~
+@33 = ~Crown of the Lich~
+@34 = ~With this crown equipped, you gain many of the benefits of being a Lich without the entire transformation. While a Lich can equip this crown, most of its effects are redundant.
+
+Unlike a typical Lich, you have no phylactery and can't automatically revive if killed. Your alignment does not change. You don't gain the Lich Touch ability of a typical Lich.
+
+You gain the Undead flag, meaning you can be turned or rebuked. (If you had immunity to turning or rebuking from another source, you still keep that immunity.) This is unlike a typical Lichdom Lich who is immune to turning and rebuking.
+
+However, you gain many other abilities of a typical Lich:
+
+- Immunity to damage from nonmagical weapons.
+
+- Immune (100% resistant) to HP damage from cold, electricity, and poison.
+
+- Immune to the negative statuses of Berserk, Charm, Confusion, Domination, Disease, Fatigue/Exhaustion, Fear, Grease, Entangle, Hold/Paralysis, Level Drain/Negative Levels, Petrification, Polymorph Other, Sleep/Unconsciousness, Stun, and Web. Also immune to at least most instant death effects such as Disintegrate and Finger of Death.
+
+- Continual Detect Invisibility.
+
++1 to INT, WIS, and CHA scores to a maximum of 25 each.
+
+Natural AC improves by 3.
+
+You gain an innate ability usable at will which changes your character's appearance to that of a typical Lich. This ability is only cosmetic.~
+@35 = ~Normal Form~
+@36 = ~How many Crowns of the Lich should be for sale in Sister Garlena's shop?
+1. One crown. (Default)
+2. Two crowns.
+3. Three crowns.
+4. Four crowns.
+5. Five crowns.
+6. Six crowns.
+Provide a value from 1 to 6, then press Enter:~
+@37 = ~How much should the Lichdom Ritual cost?
+0. 120,000 gold. (Default)
+1. 100,000 gold.
+2. 75,000 gold.
+3. 50,000 gold.
+4. 40,000 gold.
+Provide a value from 0 to 4, then press Enter:~
+@38 = ~Love Conquers All (LCA) mod detected. Updating dialogs accordingly...~
+@39 = ~The Longer Road mod detected. Updating dialogs accordingly...~
+@40 = ~Hubelpot the Vegetable Merchant mod detected. Updating dialogs accordingly...~
+@41 = ~BG1 NPCs mod detected. Updating dialogs accordingly...~
+@42 = ~Reign of Terror (RoT) mod detected. Updating dialogs accordingly...~
+@43 = ~Dusk mod detected. Updating dialogs accordingly...~ 
+@44 = ~Skitia NPC mod detected. Updating dialogs accordingly...~
+@45 = ~Neh'taniel NPC mod detected. Updating dialogs accordingly...~
+@46 = ~Saradas Magic NPC mod detected. Updating dialogs accordingly...~
+@47 = ~Baeloth BG2 mod detected. Updating dialogs accordingly...~

@@ -1,0 +1,391 @@
+OUTER_SET bg2_carryover = 1
+
+//{ BAM
+	COPY 	~%MOD_FOLDER%/bg2/bam/xaiphyl.bam~ ~override~
+	COPY 	~%MOD_FOLDER%/bg2/bam/xaldasst.bam~ ~override~
+//}
+
+//{ BMP
+	COPY ~%MOD_FOLDER%/bg2/bmp/xaplichl.bmp~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/bmp/xaplichm.bmp~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/bmp/xaplichs.bmp~ ~override~
+//}
+
+//{ ITM
+
+	COPY ~%MOD_FOLDER%/bg2/itm/xaldcrwn.itm~ ~override~
+	SAY NAME1 @33
+	SAY NAME2 @33
+	SAY DESC @34
+
+	COPY ~%MOD_FOLDER%/bg2/itm/xaldclaw.itm~ ~override~
+	SAY NAME1 @16
+	SAY NAME2 @16
+
+	COPY ~%MOD_FOLDER%/bg2/itm/xaldcla2.itm~ ~override~
+	SAY NAME1 @16
+	SAY NAME2 @16
+
+	COPY ~%MOD_FOLDER%/bg2/itm/xaldphyl.itm~ ~override~
+	SAY NAME2 @2
+	SAY DESC @3
+
+	COPY ~%MOD_FOLDER%/bg2/itm/xaldphyd.itm~ ~override~
+	SAY NAME2 @23
+	SAY DESC @24
+
+	COPY ~%MOD_FOLDER%/bg2/itm/xaldlc00.itm~ ~override~
+	SAY NAME1 @25
+	SAY NAME2 @25
+	SAY DESC @26
+
+	COPY ~%MOD_FOLDER%/bg2/itm/xaldlc01.itm~ ~override~
+	SAY NAME1 @25
+	SAY NAME2 @25
+	SAY DESC @27
+
+	COPY ~%MOD_FOLDER%/bg2/itm/xaldlc02.itm~ ~override~
+	SAY NAME1 @25
+	SAY NAME2 @25
+	SAY DESC @28
+
+	COPY ~%MOD_FOLDER%/bg2/itm/xaldlc03.itm~ ~override~
+	SAY NAME1 @25
+	SAY NAME2 @25
+	SAY DESC @29
+
+	COPY ~%MOD_FOLDER%/bg2/itm/xaldlc04.itm~ ~override~
+	SAY NAME1 @25
+	SAY NAME2 @25
+	SAY DESC @30
+//}
+
+
+//{ SPL
+	//{ Lich Mental Senses
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldls00.spl~ ~override~
+		SAY NAME1 @18
+		SAY UNIDENTIFIED_DESC @18
+		SAY DESC @18
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldls01.spl~ ~override~
+		SAY NAME1 @18
+		SAY UNIDENTIFIED_DESC @18
+		SAY DESC @18
+	//}
+
+	//{ Paralyzing Touch
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldattk.spl~ ~override~
+		SAY NAME1 @16
+		SAY UNIDENTIFIED_DESC @17
+		SAY DESC @17
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldatt2.spl~ ~override~
+		SAY NAME1 @16
+		SAY UNIDENTIFIED_DESC @17
+		SAY DESC @17
+	//}
+	
+	//{ Lich Spell Immunities
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldsi01.spl~ ~override~
+		SAY NAME1 @12
+		SAY UNIDENTIFIED_DESC @12
+		SAY DESC @12
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldsi02.spl~ ~override~
+		SAY NAME1 @12
+		SAY UNIDENTIFIED_DESC @12
+		SAY DESC @12
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldsi03.spl~ ~override~
+		SAY NAME1 @12
+		SAY UNIDENTIFIED_DESC @12
+		SAY DESC @12
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldsi04.spl~ ~override~
+		SAY NAME1 @12
+		SAY UNIDENTIFIED_DESC @12
+		SAY DESC @12
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldsi05.spl~ ~override~
+		SAY NAME1 @12
+		SAY UNIDENTIFIED_DESC @12
+		SAY DESC @12
+	//}
+
+	//{ Lich Magic Resistance Boost
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr01.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+	
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr02.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr03.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr04.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr05.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr06.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr07.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr08.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr09.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr10.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr11.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr12.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr13.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr14.spl~ ~override~
+		SAY NAME1 @11
+		SAY UNIDENTIFIED_DESC @11
+		SAY DESC @11
+	//}
+	
+	//{ Lich Mental Boost
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldiwc0.spl~ ~override~
+		SAY NAME1 @10
+		SAY UNIDENTIFIED_DESC @10
+		SAY DESC @10
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldiwc1.spl~ ~override~
+		SAY NAME1 @10
+		SAY UNIDENTIFIED_DESC @10
+		SAY DESC @10
+	//}
+	
+	//{ Lich AC Modification
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldac00.spl~ ~override~
+		SAY NAME1 @9
+		SAY UNIDENTIFIED_DESC @9
+		SAY DESC @9
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldac01.spl~ ~override~
+		SAY NAME1 @9
+		SAY UNIDENTIFIED_DESC @9
+		SAY DESC @9
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldac02.spl~ ~override~
+		SAY NAME1 @9
+		SAY UNIDENTIFIED_DESC @9
+		SAY DESC @9
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldac03.spl~ ~override~
+		SAY NAME1 @9
+		SAY UNIDENTIFIED_DESC @9
+		SAY DESC @9
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldac04.spl~ ~override~
+		SAY NAME1 @9
+		SAY UNIDENTIFIED_DESC @9
+		SAY DESC @9
+	//}
+	
+	//{ Lich Amination
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldanim.spl~ ~override~
+		SAY NAME1 @13
+		SAY UNIDENTIFIED_DESC @13
+		SAY DESC @13
+	//}
+	
+	//{ Lich Amination
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldani2.spl~ ~override~
+		SAY NAME1 @13
+		SAY UNIDENTIFIED_DESC @13
+		SAY DESC @13
+	//}
+	
+	//{ Revert Amination
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldani3.spl~ ~override~
+		SAY NAME1 @35
+		SAY UNIDENTIFIED_DESC @35
+		SAY DESC @35
+	//}
+	
+	
+	//{ Portrait Change (Lich)
+		COPY ~%MOD_FOLDER%/bg2/spl/xaplich.spl~ ~override~
+	//}
+
+	//{ Lich Death
+		COPY ~%MOD_FOLDER%/bg2/spl/xalddest.spl~ ~override~
+		SAY NAME1 @14
+		SAY DESC @14
+	//}
+	
+	//{ Lich Transformation 
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldlich.spl~ ~override~
+		SAY NAME1 @6
+		SAY DESC @6
+	//}
+	
+	//{ Rename Paladin to Fallen Paladin
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldfpal.spl~ ~override~
+	//}
+	
+	//{ Rename Paladin to Fallen Ranger
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldfran.spl~ ~override~
+	//}
+//}
+
+//{ WAV
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1000.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1001.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1002.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1003.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1004.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1005.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1006.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1007.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1008.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1009.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1010.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1011.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1012.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1013.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1014.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1015.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1016.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1017.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1018.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1019.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1020.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1021.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1022.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1023.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1024.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1025.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1026.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1027.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1028.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1029.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1030.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1031.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1032.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1033.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1034.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1035.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1036.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1037.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1038.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1039.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1040.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1041.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1042.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1043.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1044.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1045.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1046.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1047.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1048.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1049.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1050.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1051.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1052.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1053.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1054.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1055.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1056.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1057.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1058.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1059.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1060.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1061.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1062.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1063.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1064.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1065.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1066.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1067.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1068.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1069.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1070.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1071.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1072.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1073.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1074.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1075.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1076.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1077.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1078.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1079.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1080.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1081.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1082.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1083.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1084.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1085.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1086.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1087.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1088.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1089.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1090.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1091.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1092.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1093.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1094.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1095.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1096.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1097.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1098.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1099.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1100.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1101.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1102.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1103.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1104.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1105.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1106.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1107.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1108.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1109.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1110.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1111.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1112.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1113.wav~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/wav/xald1114.wav~ ~override~
+
+//}

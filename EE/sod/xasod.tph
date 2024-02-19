@@ -1,0 +1,6 @@
+ACTION_IF(sod_carryover = 0) THEN BEGIN
+	INCLUDE ~%MOD_FOLDER%/sod/xasod_co.tph~
+END
+
+COPY_EXISTING ~bddlich.cre~ ~override~
+ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
