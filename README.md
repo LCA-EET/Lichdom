@@ -433,6 +433,8 @@ _We don't go through life alone.  We all get by with a little help from our form
 
 _Even Liches can change into Demiliches._
 
+[For a full list, check the tags page](https://github.com/LCA-EET/Lichdom/tags).
+
 **First Release: December 25, 2023 - Merry Lichmas!**
 
 -Initial Release.  Enjoy your undeath!
