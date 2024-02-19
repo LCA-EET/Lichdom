@@ -2,5 +2,17 @@ ACTION_IF(sod_carryover = 0) THEN BEGIN
 	INCLUDE ~%MOD_FOLDER%/sod/xasod_co.tph~
 END
 
+COPY_EXISTING ~bdcoldh.cre~ ~override~
+ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+
 COPY_EXISTING ~bddlich.cre~ ~override~
 ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+
+COPY_EXISTING ~bdzhadro.cre~ ~override~
+ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+
+ACTION_IF(isEET = 0) THEN BEGIN
+	EXTEND_TOP ~AR2600.BCS~		~%MOD_FOLDER%/bg2/baf/xaldprfm.baf~ //Debugging only
+END ELSE BEGIN
+	EXTEND_TOP ~BG2600.BCS~		~%MOD_FOLDER%/bg2/baf/xaldprfm.baf~ //Debugging only
+END

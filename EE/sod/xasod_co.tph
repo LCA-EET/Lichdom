@@ -1,4 +1,5 @@
 OUTER_SET sod_carryover = 1
+
 COPY ~%MOD_FOLDER%/sod/itm/xalddust.itm~ ~override~
 SAY NAME1 @4
 SAY NAME2 @4

@@ -1,3 +1,9 @@
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/d~
+
+ACTION_IF(sod_carryover = 0) THEN BEGIN
+	INCLUDE ~%MOD_FOLDER%/sod/xasod_co.tph~
+END
+
 ACTION_IF(bg2_carryover = 0) THEN BEGIN
 	INCLUDE ~%MOD_FOLDER%/bg2/xabg2_co.tph~
 END
@@ -5,3 +11,8 @@ END
 COPY ~%MOD_FOLDER%/bg2/cre/xaldgd.cre~ ~override~
 SAY NAME1 @19
 SAY NAME2 @19
+
+EXTEND_TOP ~BALDUR.BCS~ 	~%MOD_FOLDER%/bg2/baf/xabaldur.baf~
+EXTEND_TOP ~BALDUR.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldjrnl.baf~
+EXTEND_TOP ~AR0800.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaar0800.baf~
+EXTEND_TOP ~AR0800.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldprfm.baf~

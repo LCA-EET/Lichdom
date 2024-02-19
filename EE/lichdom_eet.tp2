@@ -29,110 +29,12 @@ OUTER_SET bg2_carryover = 0
 COMPILE EVALUATE_BUFFER ~lichdom_eet/d~
 COMPILE EVALUATE_BUFFER ~lichdom_eet/baf~ 
 
-//{ Config file processing
-
-PRINT @36 
-ACTION_READLN ~xald_crowns~
-
-OUTER_WHILE NOT(IS_AN_INT %xald_crowns%)
-BEGIN
-	PRINT @36
-	ACTION_READLN ~xald_crowns~
-END
-
-OUTER_WHILE (%xald_crowns% < 1) OR (%xald_crowns% > 6) 
-BEGIN
-	PRINT @36
-	ACTION_READLN ~xald_crowns~
-END
-
-COPY_EXISTING ~garlena.sto~ ~override~
-PATCH_IF (xald_crowns = 1) THEN BEGIN
-	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #1
-END
-
-PATCH_IF (xald_crowns = 2) THEN BEGIN
-	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #2
-END
-
-PATCH_IF (xald_crowns = 3) THEN BEGIN
-	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #3
-END
-
-PATCH_IF (xald_crowns = 4) THEN BEGIN
-	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #4
-END
-
-PATCH_IF (xald_crowns = 5) THEN BEGIN
-	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #5
-END
-
-PATCH_IF (xald_crowns = 6) THEN BEGIN
-	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #6
-END
-
-PRINT @37 
-ACTION_READLN ~xald_cost~
-
-OUTER_WHILE NOT(IS_AN_INT %xald_cost%)
-BEGIN
-	PRINT @37
-	ACTION_READLN ~xald_cost~
-END
-
-OUTER_WHILE (%xald_cost% < 0) OR (%xald_cost% > 6) 
-BEGIN
-	PRINT @37
-	ACTION_READLN ~xald_cost~
-END
-
-ACTION_IF (xald_cost = 1) THEN BEGIN
-	EXTEND_TOP ~BALDUR.BCS~ 	~lichdom_eet/baf/xaldc001.baf~
-	EXTEND_TOP ~BDBALDUR.BCS~ 	~lichdom_eet/baf/xaldc001.baf~
-	EXTEND_TOP ~BALDUR25.BCS~ 	~lichdom_eet/baf/xaldc001.baf~
-END
-
-ACTION_IF (xald_cost = 2) THEN BEGIN 
-	EXTEND_TOP ~BALDUR.BCS~ 	~lichdom_eet/baf/xaldc002.baf~
-	EXTEND_TOP ~BDBALDUR.BCS~ 	~lichdom_eet/baf/xaldc002.baf~
-	EXTEND_TOP ~BALDUR25.BCS~ 	~lichdom_eet/baf/xaldc002.baf~
-END
-
-ACTION_IF (xald_cost = 3)  THEN BEGIN
-	EXTEND_TOP ~BALDUR.BCS~ 	~lichdom_eet/baf/xaldc003.baf~
-	EXTEND_TOP ~BDBALDUR.BCS~ 	~lichdom_eet/baf/xaldc003.baf~
-	EXTEND_TOP ~BALDUR25.BCS~ 	~lichdom_eet/baf/xaldc003.baf~
-END
-
-ACTION_IF (xald_cost = 4)  THEN BEGIN
-	EXTEND_TOP ~BALDUR.BCS~ 	~lichdom_eet/baf/xaldc004.baf~
-	EXTEND_TOP ~BDBALDUR.BCS~ 	~lichdom_eet/baf/xaldc004.baf~
-	EXTEND_TOP ~BALDUR25.BCS~ 	~lichdom_eet/baf/xaldc004.baf~
-END
-
-//}
 
 
-
-//{ 2DA 
-
-	//OUTER_SET %desc% = RESOLVE_STR_REF(@21)
-	OUTER_SET %upper% = RESOLVE_STR_REF(@22)
-
-	COPY_EXISTING ~racetext.2da~ ~override~
-	INSERT_2DA_ROW 0 6 ~LICH 150 8457 -1 %upper% -1~
 	
-	COPY_EXISTING ~sodrace.2da~ ~override~
-	INSERT_2DA_ROW 0 6 ~LICH 150 8457 -1 %upper% -1~
+
 	
-	COPY_EXISTING ~bgractxt.2da~ ~override~
-	INSERT_2DA_ROW 0 6 ~LICH 150 8457 -1 %upper% -1~
 	
-	COPY ~lichdom_eet/2da/xaldedw1.2da~ ~override~
-	SET_2DA_ENTRY 3 2 2 RESOLVE_STR_REF(@31)
-	
-	COPY ~lichdom_eet/2da/xaldedw1.2da~ ~override~
-	SET_2DA_ENTRY 3 2 2 RESOLVE_STR_REF(@32)
 //}
 
 

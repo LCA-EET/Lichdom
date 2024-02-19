@@ -1,0 +1,171 @@
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/tob/d~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/tob/baf~ 
+
+ACTION_IF(sod_carryover = 0) THEN BEGIN
+	INCLUDE ~%MOD_FOLDER%/sod/xasod_co.tph~
+END
+
+ACTION_IF(bg2_carryover = 0) THEN BEGIN
+	INCLUDE ~%MOD_FOLDER%/bg2/xabg2_co.tph~
+END
+
+//{ 2DA
+	COPY ~%MOD_FOLDER%/tob/2da/xaldedw1.2da~ ~override~
+	SET_2DA_ENTRY 3 2 2 RESOLVE_STR_REF(@31)
+	
+	COPY ~%MOD_FOLDER%/tob/2da/xaldedw1.2da~ ~override~
+	SET_2DA_ENTRY 3 2 2 RESOLVE_STR_REF(@32)
+//}
+
+ACTION_IF (isEET = 0) THEN BEGIN
+	EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xabaldur.baf~
+	EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xalcjrnl.baf~
+	
+	ACTION_IF (xald_cost = 1) THEN BEGIN
+		EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldc001.baf~
+	END
+
+	ACTION_IF (xald_cost = 2) THEN BEGIN 
+		EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldc002.baf~
+	END
+
+	ACTION_IF (xald_cost = 3)  THEN BEGIN
+		EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldc003.baf~
+	END
+
+	ACTION_IF (xald_cost = 4)  THEN BEGIN
+		EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldc004.baf~
+	END
+END
+
+EXTEND_TOP ~AR5000.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaar5000.baf~
+EXTEND_TOP ~AR5000.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldprfm.baf~
+EXTEND_TOP ~AR6200.BCS~		~%MOD_FOLDER%/bg2/baf/xaar6200.baf~
+
+//{ Mod Integration
+	//{ The Longer Road
+	ACTION_IF FILE_EXISTS_IN_GAME ~lrirenic.dlg~ THEN BEGIN
+		PRINT @39 /* ~The Longer Road mod detected. Updating dialogs accordingly...~*/ 
+		COMPILE ~lichdom_eet/compat/tlr/d/xaldtob.d~ USING ~lichdom_eet/compat/tlr/tra/english/xaldtlr.tra~
+	END
+	//}
+	
+	//Only patch the *25 dialogs if the game is not EET.
+	ACTION_IF (isEET = 0) THEN BEGIN
+	//{ Mod Integration
+
+		//{ Love Conquers All (LCA)
+		ACTION_IF FILE_EXISTS_IN_GAME ~XACOR25J.dlg~ THEN BEGIN
+			PRINT @38 /* ~Love Conquers All (LCA) Mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/lca/d/xaldtob.d~ USING ~lichdom_eet/compat/lca/tra/english/xaldlca.tra~
+		END
+		//}
+
+				
+		//{ Vegetable Merchant
+		ACTION_IF FILE_EXISTS_IN_GAME ~SC#Hb25J.dlg~ THEN BEGIN
+			PRINT @40 /* ~Hubelpot the Vegetable Merchant mod detected. Updating dialogs accordingly...~*/ 
+			COMPILE ~lichdom_eet/compat/veg/d/xaldtob.d~ USING ~lichdom_eet/compat/veg/tra/english/xaldveg.tra~
+		END
+		//}
+		
+		//{ RoT
+		ACTION_IF FILE_EXISTS_IN_GAME ~DRIZ2.dlg~ THEN BEGIN
+			PRINT @42 /* ~Reign of Terror (RoT) mod detected. Updating dialogs accordingly...~*/ 
+			COMPILE ~lichdom_eet/compat/rot/d/xaldtob.d~ USING ~lichdom_eet/compat/rot/tra/english/xaldrot.tra~
+		END
+		//}
+		
+		//{ BG1
+			//{ Alora
+			ACTION_IF FILE_EXISTS_IN_GAME ~7XAlo25J.dlg~ THEN BEGIN
+				PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+				COMPILE ~lichdom_eet/compat/bg1/alora/xaldtob.d~ USING ~lichdom_eet/compat/bg1/tra/english/xaldbg1.tra~
+			END
+			//}
+			
+			//{ Branwen
+			ACTION_IF FILE_EXISTS_IN_GAME ~7XBra25J.dlg~ THEN BEGIN
+				PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+				COMPILE ~lichdom_eet/compat/bg1/branwen/xaldtob.d~ USING ~lichdom_eet/compat/bg1/tra/english/xaldbg1.tra~
+			END
+			//}
+
+			//{ Kivan
+			ACTION_IF FILE_EXISTS_IN_GAME ~7XKiv25J.dlg~ THEN BEGIN
+				PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+				COMPILE ~lichdom_eet/compat/bg1/kivan/xaldtob.d~ USING ~lichdom_eet/compat/bg1/tra/english/xaldbg1.tra~
+			END
+			//}
+			
+			//{ Ajantis
+			ACTION_IF FILE_EXISTS_IN_GAME ~7XAJA25J.dlg~ THEN BEGIN
+				PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+				COMPILE ~lichdom_eet/compat/bg1/ajantis/xaldtob.d~ USING ~lichdom_eet/compat/bg1/tra/english/xaldbg1.tra~
+			END
+			//}
+			
+			//{ Garrick
+			ACTION_IF FILE_EXISTS_IN_GAME ~7XGar25J.dlg~ THEN BEGIN
+				PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+				COMPILE ~lichdom_eet/compat/bg1/garrick/xaldtob.d~ USING ~lichdom_eet/compat/bg1/tra/english/xaldbg1.tra~
+			END
+			//}
+		//}
+		
+		//{ Dusk
+			ACTION_IF FILE_EXISTS_IN_GAME ~P_Dus25J.dlg~ THEN BEGIN
+				PRINT @43 /* ~Dusk mod detected. Updating dialogs accordingly...~ */ 
+				COMPILE ~lichdom_eet/compat/dusk/d/xaldtob.d~ USING ~lichdom_eet/compat/dusk/tra/english/xalddusk.tra~
+			END 
+		//}
+		
+		//{ Skitia NPCs
+		
+			//{ Helga
+				ACTION_IF FILE_EXISTS_IN_GAME ~X3Hel25J.dlg~ THEN BEGIN
+					PRINT @44 /* ~Skitia NPC mod detected. Updating dialogs accordingly...~ */ 
+					COMPILE ~lichdom_eet/compat/skitia/helga/xaldtob.d~ USING ~lichdom_eet/compat/skitia/tra/english/xaldskit.tra~
+				END 
+			//}
+			
+			//{ Kale
+				ACTION_IF FILE_EXISTS_IN_GAME ~X3Kal25J.dlg~ THEN BEGIN
+					PRINT @44 /* ~Skitia NPC mod detected. Updating dialogs accordingly...~ */ 
+					COMPILE ~lichdom_eet/compat/skitia/kale/xaldtob.d~ USING ~lichdom_eet/compat/skitia/tra/english/xaldskit.tra~
+				END 
+			//}
+			
+			//{ Vienxay
+				ACTION_IF FILE_EXISTS_IN_GAME ~X3Vie25J.dlg~ THEN BEGIN
+					PRINT @44 /* ~Skitia NPC mod detected. Updating dialogs accordingly...~ */ 
+					COMPILE ~lichdom_eet/compat/skitia/vienxay/xaldtob.d~ USING ~lichdom_eet/compat/skitia/tra/english/xaldskit.tra~
+				END 
+			//}
+		//}
+		
+		//{ Neh'taniel Mod
+			ACTION_IF FILE_EXISTS_IN_GAME ~SK#NE25J.dlg~ THEN BEGIN
+				PRINT @45 /* ~Neh'taniel NPC mod detected. Updating dialogs accordingly...~ */ 
+				COMPILE ~lichdom_eet/compat/neh/d/xaldtob.d~ USING ~lichdom_eet/compat/neh/tra/english/xaldneh.tra~
+			END 
+		//}
+		
+		//{ Saradas Magic
+			ACTION_IF FILE_EXISTS_IN_GAME ~!sar25j.dlg~ THEN BEGIN
+				PRINT @46 /* ~Saradas Magic NPC mod detected. Updating dialogs accordingly...~ */ 
+				COMPILE ~lichdom_eet/compat/saradas/d/xaldtob.d~ USING ~lichdom_eet/compat/saradas/tra/english/xaldsara.tra~
+			END 
+		
+		//}
+		
+		//{ Baeloth BG2
+			ACTION_IF FILE_EXISTS_IN_GAME ~BG2BAE25J.dlg~ THEN BEGIN
+				PRINT @47 /* ~Baeloth BG2 mod detected. Updating dialogs accordingly...~ */ 
+				COMPILE ~lichdom_eet/compat/baeloth/d/xaldtob.d~ USING ~lichdom_eet/compat/baeloth/tra/english/xaldbae.tra~
+			END 
+		//}
+	//}
+END
+//}
+

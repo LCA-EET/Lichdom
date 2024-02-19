@@ -1,5 +1,180 @@
 OUTER_SET bg2_carryover = 1
 
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~ 
+
+//{ Config file processing
+
+PRINT @36 
+ACTION_READLN ~xald_crowns~
+
+OUTER_WHILE NOT(IS_AN_INT %xald_crowns%)
+BEGIN
+	PRINT @36
+	ACTION_READLN ~xald_crowns~
+END
+
+OUTER_WHILE (%xald_crowns% < 1) OR (%xald_crowns% > 6) 
+BEGIN
+	PRINT @36
+	ACTION_READLN ~xald_crowns~
+END
+
+COPY_EXISTING ~garlena.sto~ ~override~
+PATCH_IF (xald_crowns = 1) THEN BEGIN
+	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #1
+END
+
+PATCH_IF (xald_crowns = 2) THEN BEGIN
+	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #2
+END
+
+PATCH_IF (xald_crowns = 3) THEN BEGIN
+	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #3
+END
+
+PATCH_IF (xald_crowns = 4) THEN BEGIN
+	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #4
+END
+
+PATCH_IF (xald_crowns = 5) THEN BEGIN
+	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #5
+END
+
+PATCH_IF (xald_crowns = 6) THEN BEGIN
+	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #6
+END
+
+PRINT @37 
+ACTION_READLN ~xald_cost~
+
+OUTER_WHILE NOT(IS_AN_INT %xald_cost%)
+BEGIN
+	PRINT @37
+	ACTION_READLN ~xald_cost~
+END
+
+OUTER_WHILE (%xald_cost% < 0) OR (%xald_cost% > 6) 
+BEGIN
+	PRINT @37
+	ACTION_READLN ~xald_cost~
+END
+
+ACTION_IF (xald_cost = 1) THEN BEGIN
+	EXTEND_TOP ~BALDUR.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldc001.baf~
+END
+
+ACTION_IF (xald_cost = 2) THEN BEGIN 
+	EXTEND_TOP ~BALDUR.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldc002.baf~
+END
+
+ACTION_IF (xald_cost = 3)  THEN BEGIN
+	EXTEND_TOP ~BALDUR.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldc003.baf~
+END
+
+ACTION_IF (xald_cost = 4)  THEN BEGIN
+	EXTEND_TOP ~BALDUR.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldc004.baf~
+END
+
+//}
+
+//{ Allows the protagonist to die (in conjunction with the modifications to BALDUR.BCS)~
+	COPY_EXISTING_REGEXP GLOB ~^.+\.are$~ ~override~ 
+	WRITE_LONG 0x14 THIS|16
+	BUT_ONLY
+//}
+
+//{ Add lich dust to liches in BG2 / ToB
+	COPY_EXISTING ~AMLICH01.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~CEDELICH.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~CELICH.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~DPMON02.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~FIRLCH01.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~GORLIC01.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~GORPRI1.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~GRVLCH01.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~HLKANG.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~HLLICH.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~HLSHADE.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~HLSHANG.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~JARLICH.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~LICH01.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~LICHEL01.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~NEVAZIAH.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~OHHDECOY.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~SENLICH.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~UDTRAP04.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~DEMILICH.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~HLDEMI.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~OHBDLI01.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~OHBDLI02.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~MELSUM06.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~MINDAL01.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~OHHALHOO.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	
+	COPY_EXISTING ~OHHGOXXA.CRE~ ~override~
+	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+//}
+
+//{ 2DA 
+
+	//OUTER_SET %desc% = RESOLVE_STR_REF(@21)
+	OUTER_SET upper = RESOLVE_STR_REF(@22)
+
+	COPY_EXISTING ~racetext.2da~ ~override~
+	INSERT_2DA_ROW 0 6 ~LICH 150 8457 -1 %upper% -1~
+//}
+
 //{ BAM
 	COPY 	~%MOD_FOLDER%/bg2/bam/xaiphyl.bam~ ~override~
 	COPY 	~%MOD_FOLDER%/bg2/bam/xaldasst.bam~ ~override~
@@ -9,6 +184,12 @@ OUTER_SET bg2_carryover = 1
 	COPY ~%MOD_FOLDER%/bg2/bmp/xaplichl.bmp~ ~override~
 	COPY ~%MOD_FOLDER%/bg2/bmp/xaplichm.bmp~ ~override~
 	COPY ~%MOD_FOLDER%/bg2/bmp/xaplichs.bmp~ ~override~
+//}
+
+//{ CRE
+	COPY ~%MOD_FOLDER%/bg2/cre/xaldgd.cre~ ~override~
+	SAY NAME1 @20
+	SAY NAME2 @20
 //}
 
 //{ ITM
@@ -62,6 +243,13 @@ OUTER_SET bg2_carryover = 1
 
 
 //{ SPL
+	//{ Lichdom Assistant
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldasst.spl~ ~override~
+		SAY NAME1 @7
+		SAY UNIDENTIFIED_DESC @8
+		SAY DESC @8
+	//}
+
 	//{ Lich Mental Senses
 		COPY ~%MOD_FOLDER%/bg2/spl/xaldls00.spl~ ~override~
 		SAY NAME1 @18
@@ -388,4 +576,118 @@ OUTER_SET bg2_carryover = 1
 	COPY ~%MOD_FOLDER%/bg2/wav/xald1113.wav~ ~override~
 	COPY ~%MOD_FOLDER%/bg2/wav/xald1114.wav~ ~override~
 
+//}
+
+
+//{ Mod Integration
+
+	//{ Love Conquers All (LCA)
+	ACTION_IF FILE_EXISTS_IN_GAME ~XACORWIJ.dlg~ THEN BEGIN
+		PRINT @38 /* ~Love Conquers All (LCA) Mod detected. Updating dialogs accordingly...~ */ 
+		COMPILE ~lichdom_eet/compat/lca/d/xaldsoa.d~ USING ~lichdom_eet/compat/lca/tra/english/xaldlca.tra~
+	END
+	//}
+	
+	//{ Vegetable Merchant
+	ACTION_IF FILE_EXISTS_IN_GAME ~SC#HubJ.dlg~ THEN BEGIN
+		PRINT @40 /* ~Hubelpot the Vegetable Merchant mod detected. Updating dialogs accordingly...~*/ 
+		COMPILE ~lichdom_eet/compat/veg/d/xaldsoa.d~ USING ~lichdom_eet/compat/veg/tra/english/xaldveg.tra~
+	END
+	//}
+	
+	//{ RoT
+	ACTION_IF FILE_EXISTS_IN_GAME ~DRIZ2.dlg~ THEN BEGIN
+		PRINT @42 /* ~Reign of Terror (RoT) mod detected. Updating dialogs accordingly...~*/ 
+		COMPILE ~lichdom_eet/compat/rot/d/xaldsoa.d~ USING ~lichdom_eet/compat/rot/tra/english/xaldrot.tra~
+	END
+	//}
+	
+	//{ BG1
+		//{ Alora
+		ACTION_IF FILE_EXISTS_IN_GAME ~7XAloraJ.dlg~ THEN BEGIN
+			PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/bg1/alora/xaldsoa.d~ USING ~lichdom_eet/compat/bg1/tra/english/xaldbg1.tra~
+		END
+		//}
+		
+		//{ Branwen
+		ACTION_IF FILE_EXISTS_IN_GAME ~7XBranJ.dlg~ THEN BEGIN
+			PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/bg1/branwen/xaldsoa.d~ USING ~lichdom_eet/compat/bg1/tra/english/xaldbg1.tra~
+		END
+		//}
+
+		//{ Kivan
+		ACTION_IF FILE_EXISTS_IN_GAME ~7XKIVAJ.dlg~ THEN BEGIN
+			PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/bg1/kivan/xaldsoa.d~ USING ~lichdom_eet/compat/bg1/tra/english/xaldbg1.tra~
+		END
+		//}
+		
+		//{ Ajantis
+		ACTION_IF FILE_EXISTS_IN_GAME ~7XAJANJ.dlg~ THEN BEGIN
+			PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/bg1/ajantis/xaldsoa.d~ USING ~lichdom_eet/compat/bg1/tra/english/xaldbg1.tra~
+		END
+		//}
+		
+		//{ Garrick
+		ACTION_IF FILE_EXISTS_IN_GAME ~7XGarJ.dlg~ THEN BEGIN
+			PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/bg1/garrick/xaldsoa.d~ USING ~lichdom_eet/compat/bg1/tra/english/xaldbg1.tra~
+		END
+		//}
+	//}
+	
+	//{ Dusk
+		ACTION_IF FILE_EXISTS_IN_GAME ~P_DuskJ.dlg~ THEN BEGIN
+			PRINT @43 /* ~Dusk mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/dusk/d/xaldsoa.d~ USING ~lichdom_eet/compat/dusk/tra/english/xalddusk.tra~
+		END 
+	//}
+	
+	//{ Skitia NPCs
+	
+		//{ Helga
+			ACTION_IF FILE_EXISTS_IN_GAME ~X3HelJ.dlg~ THEN BEGIN
+				PRINT @44 /*~Skitia NPC mod detected. Updating dialogs accordingly...~ */ 
+				COMPILE ~lichdom_eet/compat/skitia/helga/xaldsoa.d~ USING ~lichdom_eet/compat/skitia/tra/english/xaldskit.tra~
+			END 
+		//}
+		
+		//{ Kale
+			ACTION_IF FILE_EXISTS_IN_GAME ~X3KalJ.dlg~ THEN BEGIN
+				PRINT @44 /* ~Skitia NPC mod detected. Updating dialogs accordingly...~ */ 
+				COMPILE ~lichdom_eet/compat/skitia/kale/xaldsoa.d~ USING ~lichdom_eet/compat/skitia/tra/english/xaldskit.tra~
+			END 
+		//}
+		
+		//{ Vienxay
+			ACTION_IF FILE_EXISTS_IN_GAME ~X3VieJ.dlg~ THEN BEGIN
+				PRINT @44 /* ~Skitia NPC mod detected. Updating dialogs accordingly...~ */ 
+				COMPILE ~lichdom_eet/compat/skitia/vienxay/xaldsoa.d~ USING ~lichdom_eet/compat/skitia/tra/english/xaldskit.tra~
+			END 
+		//}
+	//}
+	
+	//{ Neh'taniel Mod
+		ACTION_IF FILE_EXISTS_IN_GAME ~SK#NEHTJ.dlg~ THEN BEGIN
+			PRINT @45 /* ~Neh'taniel NPC mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/neh/d/xaldsoa.d~ USING ~lichdom_eet/compat/neh/tra/english/xaldneh.tra~
+		END 
+	//}
+	
+	//{ Saradas Magic
+		ACTION_IF FILE_EXISTS_IN_GAME ~!SarJ.dlg~ THEN BEGIN
+			PRINT @46 /* ~Saradas Magic NPC mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/saradas/d/xaldsoa.d~ USING ~lichdom_eet/compat/saradas/tra/english/xaldsara.tra~
+		END 
+	//}
+	
+	//{ Baeloth BG2
+		ACTION_IF FILE_EXISTS_IN_GAME ~BG2BAEJ.dlg~ THEN BEGIN
+			PRINT @47 /* ~Baeloth BG2 mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~lichdom_eet/compat/baeloth/d/xaldsoa.d~ USING ~lichdom_eet/compat/baeloth/tra/english/xaldbae.tra~
+		END 
+	//}
 //}

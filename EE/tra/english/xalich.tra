@@ -1,5 +1,5 @@
-@0 = ~Lichdom for the Enhanced Edition Trilogy (EET) of Baldur's Gate.~
-@1 = ~This mod requires the EET mod to be installed.~
+@0 = ~Lichdom for the Baldur's Gate, Enhanced Edition Games.~
+@1 = ~Enhanced Edition Trilogy (EET) mod has been detected.~
 @2 = ~Shroud of the Lich~
 @3 = ~This ornate cloak is a phylactery that contains the soul of its wearer. Equipping it allows the wearer to automatically revive if they are killed, once they are out of combat and enough time has passed since their death.~
 @4 = ~Lich Dust~
@@ -95,3 +95,6 @@ Provide a value from 0 to 4, then press Enter:~
 @45 = ~Neh'taniel NPC mod detected. Updating dialogs accordingly...~
 @46 = ~Saradas Magic NPC mod detected. Updating dialogs accordingly...~
 @47 = ~Baeloth BG2 mod detected. Updating dialogs accordingly...~
+@48 = ~Baldur's Gate Enhanced Edition detected.~
+@49 = ~Siege of Dragonspear detected.~
+@50 = ~Baldur's Gate II Enhanced Edition detected.~
