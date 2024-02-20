@@ -98,3 +98,10 @@ Provide a value from 0 to 4, then press Enter:~
 @48 = ~Baldur's Gate Enhanced Edition detected.~
 @49 = ~Siege of Dragonspear detected.~
 @50 = ~Baldur's Gate II Enhanced Edition detected.~
+@51 = ~EET was not detected. Patching individual game(s) accordingly...~
+@52 = ~Processing Siege of Dragonspear changes...~
+@53 = ~Processing Siege of Dragonspear carry forwards...~
+@54 = ~Processing Shadows of Amn changes...~
+@55 = ~Processing Shadows of Amn carry forwards...~
+@56 = ~Processing Throne of Bhaal changes...~
+@57 = ~Installation was successful. Enjoy!~

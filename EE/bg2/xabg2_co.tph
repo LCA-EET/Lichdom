@@ -1,3 +1,5 @@
+PRINT @55  // ~Processing Shadows of Amn carry forwards...~
+
 OUTER_SET bg2_carryover = 1
 
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~ 
@@ -178,12 +180,18 @@ END
 //{ BAM
 	COPY 	~%MOD_FOLDER%/bg2/bam/xaiphyl.bam~ ~override~
 	COPY 	~%MOD_FOLDER%/bg2/bam/xaldasst.bam~ ~override~
+	COPY 	~%MOD_FOLDER%/bg2/bam/xaldcrwn.bam~ ~override~
+	COPY 	~%MOD_FOLDER%/bg2/bam/xaldicrw.bam~ ~override~
 //}
 
 //{ BMP
 	COPY ~%MOD_FOLDER%/bg2/bmp/xaplichl.bmp~ ~override~
 	COPY ~%MOD_FOLDER%/bg2/bmp/xaplichm.bmp~ ~override~
 	COPY ~%MOD_FOLDER%/bg2/bmp/xaplichs.bmp~ ~override~
+	
+	COPY ~%MOD_FOLDER%/bg2/bmp/xaldmorl.bmp~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/bmp/xaldmorm.bmp~ ~override~
+	COPY ~%MOD_FOLDER%/bg2/bmp/xaldmors.bmp~ ~override~
 //}
 
 //{ CRE

@@ -1,3 +1,5 @@
+PRINT @56  // ~Processing Throne of Bhaal changes...~
+
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/tob/d~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/tob/baf~ 
 
@@ -19,7 +21,7 @@ END
 
 ACTION_IF (isEET = 0) THEN BEGIN
 	EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xabaldur.baf~
-	EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xalcjrnl.baf~
+	EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldjrnl.baf~
 	
 	ACTION_IF (xald_cost = 1) THEN BEGIN
 		EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldc001.baf~
@@ -38,26 +40,30 @@ ACTION_IF (isEET = 0) THEN BEGIN
 	END
 END
 
-EXTEND_TOP ~AR5000.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaar5000.baf~
+EXTEND_TOP ~AR5000.BCS~ 	~%MOD_FOLDER%/tob/baf/xaar5000.baf~
 EXTEND_TOP ~AR5000.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldprfm.baf~
-EXTEND_TOP ~AR6200.BCS~		~%MOD_FOLDER%/bg2/baf/xaar6200.baf~
+EXTEND_TOP ~AR6200.BCS~		~%MOD_FOLDER%/tob/baf/xaar6200.baf~
+
+COPY ~%MOD_FOLDER%/tob/cre/xaldgd2.cre~ ~override~
+SAY NAME1 @19
+SAY NAME2 @19
 
 //{ Mod Integration
 	//{ The Longer Road
 	ACTION_IF FILE_EXISTS_IN_GAME ~lrirenic.dlg~ THEN BEGIN
 		PRINT @39 /* ~The Longer Road mod detected. Updating dialogs accordingly...~*/ 
-		COMPILE ~lichdom_eet/compat/tlr/d/xaldtob.d~ USING ~lichdom_eet/compat/tlr/tra/english/xaldtlr.tra~
+		COMPILE ~%MOD_FOLDER%/compat/tlr/d/xaldtob.d~ USING ~%MOD_FOLDER%/compat/tlr/tra/english/xaldtlr.tra~
 	END
 	//}
 	
 	//Only patch the *25 dialogs if the game is not EET.
-	ACTION_IF (isEET = 0) THEN BEGIN
+	//ACTION_IF (isEET = 0) THEN BEGIN
 	//{ Mod Integration
 
 		//{ Love Conquers All (LCA)
 		ACTION_IF FILE_EXISTS_IN_GAME ~XACOR25J.dlg~ THEN BEGIN
 			PRINT @38 /* ~Love Conquers All (LCA) Mod detected. Updating dialogs accordingly...~ */ 
-			COMPILE ~lichdom_eet/compat/lca/d/xaldtob.d~ USING ~lichdom_eet/compat/lca/tra/english/xaldlca.tra~
+			COMPILE ~%MOD_FOLDER%/compat/lca/d/xaldtob.d~ USING ~%MOD_FOLDER%/compat/lca/tra/english/xaldlca.tra~
 		END
 		//}
 
@@ -65,14 +71,14 @@ EXTEND_TOP ~AR6200.BCS~		~%MOD_FOLDER%/bg2/baf/xaar6200.baf~
 		//{ Vegetable Merchant
 		ACTION_IF FILE_EXISTS_IN_GAME ~SC#Hb25J.dlg~ THEN BEGIN
 			PRINT @40 /* ~Hubelpot the Vegetable Merchant mod detected. Updating dialogs accordingly...~*/ 
-			COMPILE ~lichdom_eet/compat/veg/d/xaldtob.d~ USING ~lichdom_eet/compat/veg/tra/english/xaldveg.tra~
+			COMPILE ~%MOD_FOLDER%/compat/veg/d/xaldtob.d~ USING ~%MOD_FOLDER%/compat/veg/tra/english/xaldveg.tra~
 		END
 		//}
 		
 		//{ RoT
 		ACTION_IF FILE_EXISTS_IN_GAME ~DRIZ2.dlg~ THEN BEGIN
 			PRINT @42 /* ~Reign of Terror (RoT) mod detected. Updating dialogs accordingly...~*/ 
-			COMPILE ~lichdom_eet/compat/rot/d/xaldtob.d~ USING ~lichdom_eet/compat/rot/tra/english/xaldrot.tra~
+			COMPILE ~%MOD_FOLDER%/compat/rot/d/xaldtob.d~ USING ~%MOD_FOLDER%/compat/rot/tra/english/xaldrot.tra~
 		END
 		//}
 		
@@ -80,35 +86,35 @@ EXTEND_TOP ~AR6200.BCS~		~%MOD_FOLDER%/bg2/baf/xaar6200.baf~
 			//{ Alora
 			ACTION_IF FILE_EXISTS_IN_GAME ~7XAlo25J.dlg~ THEN BEGIN
 				PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
-				COMPILE ~lichdom_eet/compat/bg1/alora/xaldtob.d~ USING ~lichdom_eet/compat/bg1/tra/english/xaldbg1.tra~
+				COMPILE ~%MOD_FOLDER%/compat/bg1/alora/xaldtob.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
 			END
 			//}
 			
 			//{ Branwen
 			ACTION_IF FILE_EXISTS_IN_GAME ~7XBra25J.dlg~ THEN BEGIN
 				PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
-				COMPILE ~lichdom_eet/compat/bg1/branwen/xaldtob.d~ USING ~lichdom_eet/compat/bg1/tra/english/xaldbg1.tra~
+				COMPILE ~%MOD_FOLDER%/compat/bg1/branwen/xaldtob.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
 			END
 			//}
 
 			//{ Kivan
 			ACTION_IF FILE_EXISTS_IN_GAME ~7XKiv25J.dlg~ THEN BEGIN
 				PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
-				COMPILE ~lichdom_eet/compat/bg1/kivan/xaldtob.d~ USING ~lichdom_eet/compat/bg1/tra/english/xaldbg1.tra~
+				COMPILE ~%MOD_FOLDER%/compat/bg1/kivan/xaldtob.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
 			END
 			//}
 			
 			//{ Ajantis
 			ACTION_IF FILE_EXISTS_IN_GAME ~7XAJA25J.dlg~ THEN BEGIN
 				PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
-				COMPILE ~lichdom_eet/compat/bg1/ajantis/xaldtob.d~ USING ~lichdom_eet/compat/bg1/tra/english/xaldbg1.tra~
+				COMPILE ~%MOD_FOLDER%/compat/bg1/ajantis/xaldtob.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
 			END
 			//}
 			
 			//{ Garrick
 			ACTION_IF FILE_EXISTS_IN_GAME ~7XGar25J.dlg~ THEN BEGIN
 				PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
-				COMPILE ~lichdom_eet/compat/bg1/garrick/xaldtob.d~ USING ~lichdom_eet/compat/bg1/tra/english/xaldbg1.tra~
+				COMPILE ~%MOD_FOLDER%/compat/bg1/garrick/xaldtob.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
 			END
 			//}
 		//}
@@ -116,7 +122,7 @@ EXTEND_TOP ~AR6200.BCS~		~%MOD_FOLDER%/bg2/baf/xaar6200.baf~
 		//{ Dusk
 			ACTION_IF FILE_EXISTS_IN_GAME ~P_Dus25J.dlg~ THEN BEGIN
 				PRINT @43 /* ~Dusk mod detected. Updating dialogs accordingly...~ */ 
-				COMPILE ~lichdom_eet/compat/dusk/d/xaldtob.d~ USING ~lichdom_eet/compat/dusk/tra/english/xalddusk.tra~
+				COMPILE ~%MOD_FOLDER%/compat/dusk/d/xaldtob.d~ USING ~%MOD_FOLDER%/compat/dusk/tra/english/xalddusk.tra~
 			END 
 		//}
 		
@@ -125,21 +131,21 @@ EXTEND_TOP ~AR6200.BCS~		~%MOD_FOLDER%/bg2/baf/xaar6200.baf~
 			//{ Helga
 				ACTION_IF FILE_EXISTS_IN_GAME ~X3Hel25J.dlg~ THEN BEGIN
 					PRINT @44 /* ~Skitia NPC mod detected. Updating dialogs accordingly...~ */ 
-					COMPILE ~lichdom_eet/compat/skitia/helga/xaldtob.d~ USING ~lichdom_eet/compat/skitia/tra/english/xaldskit.tra~
+					COMPILE ~%MOD_FOLDER%/compat/skitia/helga/xaldtob.d~ USING ~%MOD_FOLDER%/compat/skitia/tra/english/xaldskit.tra~
 				END 
 			//}
 			
 			//{ Kale
 				ACTION_IF FILE_EXISTS_IN_GAME ~X3Kal25J.dlg~ THEN BEGIN
 					PRINT @44 /* ~Skitia NPC mod detected. Updating dialogs accordingly...~ */ 
-					COMPILE ~lichdom_eet/compat/skitia/kale/xaldtob.d~ USING ~lichdom_eet/compat/skitia/tra/english/xaldskit.tra~
+					COMPILE ~%MOD_FOLDER%/compat/skitia/kale/xaldtob.d~ USING ~%MOD_FOLDER%/compat/skitia/tra/english/xaldskit.tra~
 				END 
 			//}
 			
 			//{ Vienxay
 				ACTION_IF FILE_EXISTS_IN_GAME ~X3Vie25J.dlg~ THEN BEGIN
 					PRINT @44 /* ~Skitia NPC mod detected. Updating dialogs accordingly...~ */ 
-					COMPILE ~lichdom_eet/compat/skitia/vienxay/xaldtob.d~ USING ~lichdom_eet/compat/skitia/tra/english/xaldskit.tra~
+					COMPILE ~%MOD_FOLDER%/compat/skitia/vienxay/xaldtob.d~ USING ~%MOD_FOLDER%/compat/skitia/tra/english/xaldskit.tra~
 				END 
 			//}
 		//}
@@ -147,14 +153,14 @@ EXTEND_TOP ~AR6200.BCS~		~%MOD_FOLDER%/bg2/baf/xaar6200.baf~
 		//{ Neh'taniel Mod
 			ACTION_IF FILE_EXISTS_IN_GAME ~SK#NE25J.dlg~ THEN BEGIN
 				PRINT @45 /* ~Neh'taniel NPC mod detected. Updating dialogs accordingly...~ */ 
-				COMPILE ~lichdom_eet/compat/neh/d/xaldtob.d~ USING ~lichdom_eet/compat/neh/tra/english/xaldneh.tra~
+				COMPILE ~%MOD_FOLDER%/compat/neh/d/xaldtob.d~ USING ~%MOD_FOLDER%/compat/neh/tra/english/xaldneh.tra~
 			END 
 		//}
 		
 		//{ Saradas Magic
 			ACTION_IF FILE_EXISTS_IN_GAME ~!sar25j.dlg~ THEN BEGIN
 				PRINT @46 /* ~Saradas Magic NPC mod detected. Updating dialogs accordingly...~ */ 
-				COMPILE ~lichdom_eet/compat/saradas/d/xaldtob.d~ USING ~lichdom_eet/compat/saradas/tra/english/xaldsara.tra~
+				COMPILE ~%MOD_FOLDER%/compat/saradas/d/xaldtob.d~ USING ~%MOD_FOLDER%/compat/saradas/tra/english/xaldsara.tra~
 			END 
 		
 		//}
@@ -162,10 +168,10 @@ EXTEND_TOP ~AR6200.BCS~		~%MOD_FOLDER%/bg2/baf/xaar6200.baf~
 		//{ Baeloth BG2
 			ACTION_IF FILE_EXISTS_IN_GAME ~BG2BAE25J.dlg~ THEN BEGIN
 				PRINT @47 /* ~Baeloth BG2 mod detected. Updating dialogs accordingly...~ */ 
-				COMPILE ~lichdom_eet/compat/baeloth/d/xaldtob.d~ USING ~lichdom_eet/compat/baeloth/tra/english/xaldbae.tra~
+				COMPILE ~%MOD_FOLDER%/compat/baeloth/d/xaldtob.d~ USING ~%MOD_FOLDER%/compat/baeloth/tra/english/xaldbae.tra~
 			END 
 		//}
 	//}
-END
+	//END
 //}
 

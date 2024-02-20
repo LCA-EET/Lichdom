@@ -1,5 +1,5 @@
-$forArchival = "Install_LichdomEET"
-$modName = "Lichdom_EET"
+$forArchival = "Install_Lichdom"
+$modName = "Lichdom"
 $archive = $forArchival  + ".zip"
 $exeName = "setup-" + $modName + ".exe"
 
@@ -8,17 +8,11 @@ Remove-Item $archive -Force
 Remove-Item $exeName -Force
 
 $folders = @(
-'2da',
-'baf',
-'bam',
-'bmp',
+'bg2',
 'compat',
-'cre',
-'d',
-'itm',
-'spl',
-'tra',
-'wav'
+'sod',
+'tob',
+'tra'
 )
 
 foreach($folder in $folders){
@@ -49,4 +43,4 @@ Start-SevenZip a -mx=9 $Target $Source
 Remove-Item -LiteralPath $forArchival -Force -Recurse
 Get-FileHash $archive -Algorithm SHA256 > SHA256.txt
 
-Copy-Item -Path $archive -Destination ("\\192.168.1.88\smbuser\Home\Installers\" + $archive)
+#Copy-Item -Path $archive -Destination ("\\192.168.1.88\smbuser\Home\Installers\" + $archive)

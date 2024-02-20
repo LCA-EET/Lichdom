@@ -1,3 +1,5 @@
+PRINT @52  // ~Processing Siege of Dragonspear changes...~
+
 ACTION_IF(sod_carryover = 0) THEN BEGIN
 	INCLUDE ~%MOD_FOLDER%/sod/xasod_co.tph~
 END
@@ -16,3 +18,4 @@ ACTION_IF(isEET = 0) THEN BEGIN
 END ELSE BEGIN
 	EXTEND_TOP ~BG2600.BCS~		~%MOD_FOLDER%/bg2/baf/xaldprfm.baf~ //Debugging only
 END
+

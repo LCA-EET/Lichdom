@@ -13,12 +13,12 @@ https://www.deviantart.com/artdeepmind/art/Lich-545596034
 
 */
 
-BACKUP ~lichdom/backup~
+BACKUP ~%MOD_FOLDER%/backup~
 
 SUPPORT ~Daniel Valle, dan@danielvalle.net~
 
-AUTO_TRA ~lichdom/tra/%s~ //automatically associate .tras to their respective .D files
-LANGUAGE ~English~ ~english~ ~lichdom_eet/tra/english/xalich.tra~
+AUTO_TRA ~%MOD_FOLDER%/tra/%s~ //automatically associate .tras to their respective .D files
+LANGUAGE ~English~ ~english~ ~%MOD_FOLDER%/tra/english/xalich.tra~
 
 BEGIN
 @0 /* ~Lichdom, for Baldur's Gate EET.~ */
@@ -34,6 +34,7 @@ ACTION_IF (GAME_IS ~eet~) THEN BEGIN
 	INCLUDE ~%MOD_FOLDER%/tob/xatob.tph~
 END ELSE BEGIN
 	OUTER_SET isEET = 0
+	PRINT @51  // ~EET was not detected. Patching individual game(s) accordingly...~ 
 	ACTION_IF(GAME_INCLUDES ~sod~) THEN BEGIN
 		PRINT @49  // ~Siege of Dragonspear detected.~ 
 		INCLUDE ~%MOD_FOLDER%/sod/xasod.tph~
@@ -41,6 +42,8 @@ END ELSE BEGIN
 	ACTION_IF(GAME_IS ~bg2ee~) THEN BEGIN
 		PRINT @50  // ~Baldur's Gate II Enhanced Edition detected.~ 
 		INCLUDE ~%MOD_FOLDER%/bg2/xabg2.tph~
+		INCLUDE ~%MOD_FOLDER%/tob/xatob.tph~
 	END
 END
 
+PRINT @57  // ~Installation was successful. Enjoy!~
