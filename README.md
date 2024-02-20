@@ -1,4 +1,4 @@
-# Lichdom: A Mod for the Enhanced Edition Trilogy (EET)!
+# Lichdom: A Mod for Baldur's Gate II: Enhanced Edition (BG2EE) and the Enhanced Edition Trilogy (EET)!
 
 [BEAMDOG FORUM THREAD](https://forums.beamdog.com/discussion/88122/lichdom-for-eet-bg2ee-side-merry-lichmas/p1?new=1)
 
@@ -432,6 +432,8 @@ _We don't go through life alone.  We all get by with a little help from our form
 ![Even Liches change.](https://github.com/LCA-EET/lichdom/blob/main/Documentation%20Images/Demilich-33.png)
 
 _Even Liches can change into Demiliches._
+
+[For a full list, check the tags page](https://github.com/LCA-EET/Lichdom/tags).
 
 **First Release: December 25, 2023 - Merry Lichmas!**
 
