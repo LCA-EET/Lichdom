@@ -3,7 +3,7 @@ IF
 THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
-		CreateCreature("XALDGD", [1100.1020], S)
+		CreateCreature("XALDGD2", [1100.1020], S)
 		SetGlobal("XA_LD_MorrisSpawned", "AR5000", 1)
 		SetInterrupt(TRUE)
 		Continue()
@@ -12,7 +12,7 @@ END
 IF
 	Global("XA_LD_MorrisSpawned", "AR5000", 1)
 	GlobalLT("XA_LD_MorrisKilledInSaradush", "AR5000", 1)
-	!InMyArea("XALDGD")
+	!InMyArea("XALDGD2")
 THEN
 	RESPONSE #100
 		SetGlobal("XA_LD_JournalEntry_5", "GLOBAL", 1)

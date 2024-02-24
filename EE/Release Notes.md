@@ -1,5 +1,8 @@
 ## Lichdom Release Notes
 
+# v0.2.0a beta 2024-02-23
+* Fixed an issue that caused the SoA version of Morris to spawn in Saradush, instead of the ToB version.
+
 # v0.2.0 beta 2024-02-19
 * The mod is now compatible with the individual EE games, in addition to the EET mod.
 
