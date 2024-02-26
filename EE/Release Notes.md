@@ -1,5 +1,8 @@
 ## Lichdom Release Notes
 
+# v0.2.0c beta 2024-02-26
+* Fixed a file path issue concerning mod integrations.
+
 # v0.2.0b beta 2024-02-25
 * Fixed an installation issue concerning BG2EE.
 
