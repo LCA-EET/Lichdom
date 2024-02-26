@@ -1,4 +1,4 @@
-APPEND ~XALDGD2~
+BEGIN ~XALDGD2~
 
 //{ Introductions
 
@@ -1660,4 +1660,3 @@ CHAIN VALYG25J XA_LD_Chain_ChooseValygar
 	@220 /*~<CHARNAME>, consider this your warning:  Had I not known and respected you as I have, your proposal would have driven me to violence against you.~*/
 END XALDGD2 XA_LD_ChooseAnother
 
-END
