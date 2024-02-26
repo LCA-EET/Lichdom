@@ -1,5 +1,8 @@
 ## Lichdom Release Notes
 
+# v0.2.0b beta 2024-02-25
+* Fixed an installation issue concerning BG2EE.
+
 # v0.2.0a beta 2024-02-23
 * Fixed an issue that caused the SoA version of Morris to spawn in Saradush, instead of the ToB version.
 
