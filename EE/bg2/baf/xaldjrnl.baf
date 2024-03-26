@@ -13,7 +13,7 @@ END
 IF
 	Global("XA_LD_JournalEntry_0", "GLOBAL", 1)
 	GlobalLT("XA_LD_JournalEntry_0_Done", "GLOBAL", 1)
-	AreaCheck("AR0800")
+	!AreaCheck("AR0800")
 THEN
 	RESPONSE #100
 		SetGlobal("XA_LD_JournalEntry_0", "GLOBAL", 2)
@@ -49,6 +49,7 @@ END
 IF
 	Global("XA_LD_JournalEntry_2", "GLOBAL", 1)
 	GlobalLT("XA_LD_JournalEntry_2_Done", "GLOBAL", 1)
+	!AreaCheck("AR0800")
 THEN
 	RESPONSE #100
 		SetGlobal("XA_LD_JournalEntry_2", "GLOBAL", 2)
@@ -96,7 +97,7 @@ END
 IF
 	Global("XA_LD_JournalEntry_5", "GLOBAL", 1)
 	GlobalLT("XA_LD_JournalEntry_5_Done", "GLOBAL", 1)
-	AreaCheck("AR0800")
+	!AreaCheck("AR0800")
 THEN
 	RESPONSE #100
 		SetGlobal("XA_LD_JournalEntry_5", "GLOBAL", 2)

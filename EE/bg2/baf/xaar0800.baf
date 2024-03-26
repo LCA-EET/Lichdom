@@ -19,3 +19,14 @@ THEN
 		Continue()
 END
 
+IF
+	Global("XA_LD_ElarynHostile", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_ElarynHostile", "GLOBAL", 0)
+		ActionOverride("QI#Ela", SetLeavePartyDialogFile())
+		ActionOverride("QI#Ela", LeaveParty())
+		ActionOverride("QI#Ela", Enemy())
+		ActionOverride("QI#Ela", Attack(Player1))
+		Continue()
+END

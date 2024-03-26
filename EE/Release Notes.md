@@ -1,5 +1,9 @@
 ## Lichdom Release Notes
 
+# v1.0 2024-03-31
+* Added integration with the Zarkrion and Beaulin Legacy mods.
+* Fixed a journaling bug.
+
 # v0.2.0c beta 2024-02-26
 * Fixed a file path issue concerning mod integrations.
 

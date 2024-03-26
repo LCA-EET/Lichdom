@@ -171,7 +171,20 @@ SAY NAME2 @19
 				COMPILE ~%MOD_FOLDER%/compat/baeloth/d/xaldtob.d~ USING ~%MOD_FOLDER%/compat/baeloth/tra/english/xaldbae.tra~
 			END 
 		//}
+		
+		//{ Beaurin Legacy
+			ACTION_IF FILE_EXISTS_IN_GAME ~QI#E25J.dlg~ THEN BEGIN
+				PRINT @58 /* ~Beaurin Legacy mod detected. Updating dialogs accordingly...~ */ 
+				COMPILE ~%MOD_FOLDER%/compat/beaurin/d/xaldtob.d~ USING ~%MOD_FOLDER%/compat/beaurin/tra/english/xaldbeau.tra~
+			END 
+		//}
+		
+		//{ Zakrion 
+			ACTION_IF FILE_EXISTS_IN_GAME ~QI#ZA25J.dlg~ THEN BEGIN
+				PRINT @59 /* ~Zakrion mod detected. Updating dialogs accordingly...~ */ 
+				COMPILE ~%MOD_FOLDER%/compat/zakrion/d/xaldtob.d~ USING ~%MOD_FOLDER%/compat/zakrion/tra/english/xaldzak.tra~
+			END 
+		//}
 	//}
-	//END
 //}
 

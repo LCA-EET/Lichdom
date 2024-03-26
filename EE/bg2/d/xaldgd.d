@@ -28,7 +28,7 @@ BEGIN ~XALDGD~
 		
 		IF ~~ THEN
 		DO ~
-			SetGlobal("XA_LD_JournalEntry_6", "GLOBAL", 1)
+			SetGlobal("XA_LD_JournalEntry_6", "GLOBAL", 1) // OK
 		~
 		GOTO XA_LD_IntroSaradush_0A
 	END
@@ -572,7 +572,7 @@ IF ~~ THEN BEGIN XA_LD_PayMoney_NoDialog
 	
 	IF ~~ THEN REPLY @240 /*~I need more time to make a decision.~*/
 	DO ~
-		SetGlobal("XA_LD_JournalEntry_4", "GLOBAL", 1)
+		SetGlobal("XA_LD_JournalEntry_3", "GLOBAL", 1) // OK
 	~
 	GOTO XA_LD_Reconsider
 END
@@ -817,19 +817,19 @@ IF ~~ THEN BEGIN XA_LD_GavePrice
 	
 	IF ~~ THEN REPLY @92  /* ~That’s your price for EACH!?  That’s ridiculously high!~*/
 	DO ~
-		SetGlobal("XA_LD_JournalEntry_2", "GLOBAL", 1)
+		SetGlobal("XA_LD_JournalEntry_2", "GLOBAL", 1) // OK
 	~
 	GOTO XA_LD_PriceIsHigh
 	
 	IF ~~ THEN REPLY @93  /* ~I can buy immortality with money?  What a bargain!~*/
 	DO ~
-		SetGlobal("XA_LD_JournalEntry_2", "GLOBAL", 1)
+		SetGlobal("XA_LD_JournalEntry_2", "GLOBAL", 1) // OK
 	~
 	GOTO XA_LD_Bargain
 	
 	IF ~~ THEN REPLY @94  /* ~When should I pay you?~*/
 	DO ~
-		SetGlobal("XA_LD_JournalEntry_2", "GLOBAL", 1)
+		SetGlobal("XA_LD_JournalEntry_2", "GLOBAL", 1) // OK
 	~
 	GOTO XA_LD_WhenToPay
 END
@@ -1146,7 +1146,7 @@ IF ~~ THEN BEGIN XA_LD_Proceed
 	
 	IF ~~ THEN
 	DO ~
-		SetGlobal("XA_LD_JournalEntry_1", "GLOBAL", 1)
+		SetGlobal("XA_LD_JournalEntry_1", "GLOBAL", 1) // OK
 		SetGlobal("XA_LD_DustQuest", "GLOBAL", 1)
 	~
 	EXIT
@@ -1210,7 +1210,7 @@ IF ~~ THEN BEGIN XA_LD_LastChance
 	DO ~
 		ActionOverride(Player1, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
 		SetGlobal("XA_LD_Player1IsLich", "GLOBAL", 1)
-		SetGlobal("XA_LD_JournalEntry_5", "GLOBAL", 1)
+		SetGlobal("XA_LD_JournalEntry_4", "GLOBAL", 1) // OK
 	~
 	GOTO XA_LD_Transform
 END
