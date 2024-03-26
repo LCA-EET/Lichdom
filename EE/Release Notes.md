@@ -1,7 +1,8 @@
 ## Lichdom Release Notes
 
 # v1.0 2024-03-31
-* Added integration with the Zarkrion and Beaulin Legacy mods.
+* Added partial integration with BG1 NPC mod (Ajantis, Alora, Branwen, Garrick, Kivan, Xan, Xzar to-date).
+* Added integration with the Zarkrion and Beaurin Legacy mods.
 * Fixed a journaling bug.
 
 # v0.2.0c beta 2024-02-26

@@ -611,6 +611,13 @@ END
 	//}
 	
 	//{ BG1
+		//{ Ajantis
+		ACTION_IF FILE_EXISTS_IN_GAME ~7XAJANJ.dlg~ THEN BEGIN
+			PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~%MOD_FOLDER%/compat/bg1/ajantis/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+		END
+		//}
+	
 		//{ Alora
 		ACTION_IF FILE_EXISTS_IN_GAME ~7XAloraJ.dlg~ THEN BEGIN
 			PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
@@ -624,6 +631,13 @@ END
 			COMPILE ~%MOD_FOLDER%/compat/bg1/branwen/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
 		END
 		//}
+		
+		//{ Garrick
+		ACTION_IF FILE_EXISTS_IN_GAME ~7XGarJ.dlg~ THEN BEGIN
+			PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+			COMPILE ~%MOD_FOLDER%/compat/bg1/garrick/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+		END
+		//}
 
 		//{ Kivan
 		ACTION_IF FILE_EXISTS_IN_GAME ~7XKIVAJ.dlg~ THEN BEGIN
@@ -632,17 +646,17 @@ END
 		END
 		//}
 		
-		//{ Ajantis
-		ACTION_IF FILE_EXISTS_IN_GAME ~7XAJANJ.dlg~ THEN BEGIN
+		//{ Xan
+		ACTION_IF FILE_EXISTS_IN_GAME ~7XXANJ.dlg~ THEN BEGIN
 			PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
-			COMPILE ~%MOD_FOLDER%/compat/bg1/ajantis/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+			COMPILE ~%MOD_FOLDER%/compat/bg1/xan/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
 		END
 		//}
 		
-		//{ Garrick
-		ACTION_IF FILE_EXISTS_IN_GAME ~7XGarJ.dlg~ THEN BEGIN
+		//{ Xzar
+		ACTION_IF FILE_EXISTS_IN_GAME ~7XXZARJ.dlg~ THEN BEGIN
 			PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
-			COMPILE ~%MOD_FOLDER%/compat/bg1/garrick/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+			COMPILE ~%MOD_FOLDER%/compat/bg1/xzar/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
 		END
 		//}
 	//}
