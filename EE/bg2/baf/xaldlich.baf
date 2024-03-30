@@ -242,33 +242,6 @@ END
 	END
 //}
 
-//{ Paralyzing Touch
-	IF
-		GlobalLT("XA_LD_TouchAbility_Done", "LOCALS", 1)
-		GlobalLT("XA_LD_Touch5", "GLOBAL", 1)
-	THEN
-		RESPONSE #100
-			SetInterrupt(FALSE)
-			AddSpecialAbility("xaldattk")
-			SetGlobal("XA_LD_TouchAbility_Done", "LOCALS", 1)
-			SetInterrupt(TRUE)
-			Continue()
-	END
-	
-	IF
-		GlobalLT("XA_LD_TouchAbility_Done", "LOCALS", 1)
-		Global("XA_LD_Touch5", "GLOBAL", 1)
-	THEN
-		RESPONSE #100
-			SetInterrupt(FALSE)
-			AddSpecialAbility("xaldatt2")
-			SetGlobal("XA_LD_Touch5", "GLOBAL", 0)
-			SetGlobal("XA_LD_TouchAbility_Done", "LOCALS", 1)
-			SetInterrupt(TRUE)
-			Continue()
-	END
-//}
-
 //{ Mental Adjustment
 	IF
 		Global("XA_LD_MentalBoost", "GLOBAL", 0)
@@ -606,7 +579,6 @@ IF
 	Global("XA_LD_LichAC_Done", "LOCALS", 1)
 	Global("XA_LD_LichSenses_Done", "LOCALS", 1)
 	HasItemEquiped("xaldphyl", Myself)
-	HasItemEquiped("xaldclaw", Myself)
 	Global("XA_LD_LichTransformation", "LOCALS", 1)
 THEN
 	RESPONSE #100

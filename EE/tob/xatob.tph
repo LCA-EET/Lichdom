@@ -19,26 +19,26 @@ END
 	SET_2DA_ENTRY 3 2 2 RESOLVE_STR_REF(@32)
 //}
 
-ACTION_IF (isEET = 0) THEN BEGIN
-	EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xabaldur.baf~
-	EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldjrnl.baf~
-	
-	ACTION_IF (xald_cost = 1) THEN BEGIN
-		EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldc001.baf~
-	END
 
-	ACTION_IF (xald_cost = 2) THEN BEGIN 
-		EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldc002.baf~
-	END
+EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xabaldur.baf~
+EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldjrnl.baf~
 
-	ACTION_IF (xald_cost = 3)  THEN BEGIN
-		EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldc003.baf~
-	END
-
-	ACTION_IF (xald_cost = 4)  THEN BEGIN
-		EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldc004.baf~
-	END
+ACTION_IF (xald_cost = 1) THEN BEGIN
+	EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldc001.baf~
 END
+
+ACTION_IF (xald_cost = 2) THEN BEGIN 
+	EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldc002.baf~
+END
+
+ACTION_IF (xald_cost = 3)  THEN BEGIN
+	EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldc003.baf~
+END
+
+ACTION_IF (xald_cost = 4)  THEN BEGIN
+	EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldc004.baf~
+END
+
 
 EXTEND_TOP ~AR5000.BCS~ 	~%MOD_FOLDER%/tob/baf/xaar5000.baf~
 EXTEND_TOP ~AR5000.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldprfm.baf~

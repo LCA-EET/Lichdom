@@ -277,11 +277,6 @@ END
 		SAY NAME1 @16
 		SAY UNIDENTIFIED_DESC @17
 		SAY DESC @17
-		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldatt2.spl~ ~override~
-		SAY NAME1 @16
-		SAY UNIDENTIFIED_DESC @17
-		SAY DESC @17
 	//}
 	
 	//{ Lich Spell Immunities
