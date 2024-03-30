@@ -1,0 +1,7 @@
+IF
+	GlobalLT("XA_Initial", "LOCALS", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_Initial", "LOCALS", 1)
+		StartDialogNoSet(Player1)
+END

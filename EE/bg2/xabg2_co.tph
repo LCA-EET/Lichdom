@@ -196,6 +196,10 @@ END
 	COPY ~%MOD_FOLDER%/bg2/cre/xaldgd.cre~ ~override~
 	SAY NAME1 @19
 	SAY NAME2 @19
+	
+	COPY ~%MOD_FOLDER%/bg2/cre/xabdbg.cre~ ~override~
+	SAY NAME1 @20
+	SAY NAME2 @20
 //}
 
 //{ ITM
