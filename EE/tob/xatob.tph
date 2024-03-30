@@ -45,8 +45,8 @@ EXTEND_TOP ~AR5000.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldprfm.baf~
 EXTEND_TOP ~AR6200.BCS~		~%MOD_FOLDER%/tob/baf/xaar6200.baf~
 
 COPY ~%MOD_FOLDER%/tob/cre/xaldgd2.cre~ ~override~
-SAY NAME1 @19
-SAY NAME2 @19
+SAY NAME1 @19 /*~Gravetender Morris~*/
+SAY NAME2 @19 /*~Gravetender Morris~*/
 
 //{ Mod Integration
 	//{ The Longer Road

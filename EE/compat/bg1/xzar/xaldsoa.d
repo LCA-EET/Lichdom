@@ -35,11 +35,13 @@ INTERJECT_COPY_TRANS2 XALDGD 76 XA_LD_7XXZARJ_76
 		IsValidForPartyDialogue("7XXZAR")
 	~
 	@34 /*~How long will you insist I live vicariously through your achievements?~*/
+	
+	== 7XXZARJ
 	IF ~
 		IsValidForPartyDialogue("7XXZAR")
 		!General("7XXZAR", UNDEAD)
 	~
-	= @32 /*~STOP HOLDING OUT ON ME!~*/
+	@32 /*~STOP HOLDING OUT ON ME!~*/
 END
 
 INTERJECT_COPY_TRANS2 XALDGD 77 XA_LD_7XXZARJ_77
@@ -48,11 +50,13 @@ INTERJECT_COPY_TRANS2 XALDGD 77 XA_LD_7XXZARJ_77
 		IsValidForPartyDialogue("7XXZAR")
 	~
 	@34 /*~How long will you insist I live vicariously through your achievements?~*/
+	
+	== 7XXZARJ
 	IF ~
 		IsValidForPartyDialogue("7XXZAR")
 		!General("7XXZAR", UNDEAD)
 	~
-	= @32 /*~STOP HOLDING OUT ON ME!~*/
+	@32 /*~STOP HOLDING OUT ON ME!~*/
 END
 
 //{ Xzar

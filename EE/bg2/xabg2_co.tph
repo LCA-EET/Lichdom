@@ -11,7 +11,7 @@ ACTION_READLN ~xald_crowns~
 
 OUTER_WHILE NOT(IS_AN_INT %xald_crowns%)
 BEGIN
-	PRINT @36
+	PRINT @36 /**/
 	ACTION_READLN ~xald_crowns~
 END
 
@@ -169,8 +169,6 @@ END
 //}
 
 //{ 2DA 
-
-	//OUTER_SET %desc% = RESOLVE_STR_REF(@21)
 	OUTER_SET upper = RESOLVE_STR_REF(@22)
 
 	COPY_EXISTING ~racetext.2da~ ~override~
@@ -196,8 +194,8 @@ END
 
 //{ CRE
 	COPY ~%MOD_FOLDER%/bg2/cre/xaldgd.cre~ ~override~
-	SAY NAME1 @20
-	SAY NAME2 @20
+	SAY NAME1 @19
+	SAY NAME2 @19
 //}
 
 //{ ITM
