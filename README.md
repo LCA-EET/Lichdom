@@ -387,7 +387,9 @@ Shroud of the Lich is also an intentional reference to [an ability of the same n
 **I transitioned from *Shadows of Amn* to *Throne of Bhaal* (SoA to ToB) by importing my saved game and recruitable characters who weren't in my party lost their Lichdom and other stats!  What happened?!**
 - Importing a save from SoA to ToB simply resets recruitable character stats to their base for ToB, even in vanilla BG2EE.  For example, it doesn't matter if Keldorn has Carsomyr and the best gear equipped in SoA if he's outside your party:  His gear and stats simply reset to their baseline for ToB.)  (I discovered this resetting phenomenon by accident in 2016 when I put some characters in the Watcher's Keep 'parking lot' to preserve them between campaigns.  These NPCs had awkward behavior.)
 
-- Playing on EET (Enhanced Edition Trilogy) *will* preserve the stats of recruitable characters between campaigns, regardless of whether they're in the party.
+- However, if you qualify for Lichdom in SoA by giving Morris the Lich Dust he requests, then import that save to ToB, your quest progress will be kept.  You won't need to get more Lich Dust to transform more party members into Liches.
+
+- Playing on EET (Enhanced Edition Trilogy) *will* preserve the stats of recruitable characters and your quest progress between campaigns, regardless of whether they're in the party.
 
 **What game versions and operating systems can run this mod?**
 - Lichdom will likely work on game version 2.5 or later.  It was tested on game version 2.6.6.
