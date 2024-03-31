@@ -3,6 +3,7 @@
 # v1.0 2024-03-31
 * Added partial integration with BG1 NPC mod (Ajantis, Alora, Branwen, Garrick, Kivan, Xan, Xzar to-date).
 * Added integration with the Zarkrion mod and The Beaurin Legacy mod.
+* Added integration with the Khalid BG2 mod.
 * Fixed a journaling bug.
 * Miscellaneous bug fixes.
 
