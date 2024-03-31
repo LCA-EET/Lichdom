@@ -56,8 +56,6 @@ SAY NAME2 @19 /*~Gravetender Morris~*/
 	END
 	//}
 	
-	//Only patch the *25 dialogs if the game is not EET.
-	//ACTION_IF (isEET = 0) THEN BEGIN
 	//{ Mod Integration
 
 		//{ Love Conquers All (LCA)
