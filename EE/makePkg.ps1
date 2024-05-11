@@ -15,12 +15,14 @@ $folders = @(
 'tra'
 )
 
+
+
 foreach($folder in $folders){
 	Copy-Item -Path ($folder) -Destination ($forArchival  + "/"  + $modName + "/" + $folder) -Recurse
 }
 
 Copy-Item -Path ("weidu.exe") -Destination ($forArchival  + "/" + $exeName)
-
+Copy-Item -Path ("F:\BGModding - LCA\Game\00783\LCA\EE\functions.tph") -Destination ($forArchival  + "/" + $modName + "/functions.tph")
 Copy-Item -Path ($modName + ".tp2") -Destination ($forArchival + "/" + $modName)
 
 Copy-Item -Path ("license.md") -Destination ($forArchival + "/"  )

@@ -18,6 +18,7 @@ BACKUP ~%MOD_FOLDER%/backup~
 SUPPORT ~Daniel Valle, dan@danielvalle.net~
 
 AUTO_TRA ~%MOD_FOLDER%/tra/%s~ //automatically associate .tras to their respective .D files
+AUTO_EVAL_STRINGS
 LANGUAGE ~English~ ~english~ ~%MOD_FOLDER%/tra/english/xalich.tra~
 
 BEGIN
@@ -25,6 +26,8 @@ BEGIN
 
 OUTER_SET sod_carryover = 0
 OUTER_SET bg2_carryover = 0
+
+INCLUDE ~%MOD_FOLDER%/functions.tph~
 
 ACTION_IF (GAME_IS ~eet~) THEN BEGIN
 	OUTER_SET isEET = 1
