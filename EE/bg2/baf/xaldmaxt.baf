@@ -1,0 +1,9 @@
+IF
+	InMyArea("xaldgd")
+	!GlobalLT("XA_LD_RitualsPerformed", "GLOBAL", 6686)
+THEN
+	RESPONSE #100
+		ForceSpellRes("xaldgd", "OHBTELWE")
+		Wait(2)
+		ActionOverride("xaldgd", DestroySelf())
+END

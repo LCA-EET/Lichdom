@@ -4,6 +4,7 @@ THEN
 	RESPONSE #100
 		CutSceneID(Player1)
 		SetGlobal("XA_LD_TransformLich", "LOCALS", 0)
+		IncrementGlobal("XA_LD_RitualsPerformed", "GLOBAL", 1)
 		SetSequence(SEQ_DIE)
 		Wait(1)
 		FadeToColor([30.0], 0)

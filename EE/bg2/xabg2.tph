@@ -23,3 +23,5 @@ END
 ACTION_IF(bg2_carryover = 0) THEN BEGIN
 	INCLUDE ~%MOD_FOLDER%/bg2/xabg2_co.tph~
 END
+
+EXTEND_TOP ~ar0800.bcs~ ~override/xaldmaxt.bcs~

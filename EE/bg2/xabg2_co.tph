@@ -38,6 +38,18 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 		REPLACE 6686 %xald_cost%
 	//}
 	
+	//{ Max Number of Rituals
+		LAF xa_determine_quantity
+			INT_VAR
+				xa_min_qty = 1
+				xa_max_qty = 10
+				xa_str_ref = RESOLVE_STR_REF(@21)
+			RET
+				xald_maxrituals = xa_quantity
+		END
+		COPY_EXISTING ~xaldmaxt.bcs~ ~override~
+		REPLACE 6686 %xald_maxrituals%
+	//}
 
 
 //}
@@ -401,6 +413,23 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 	//{ Rename Paladin to Fallen Ranger
 		COPY ~%MOD_FOLDER%/bg2/spl/xaldfran.spl~ ~override~
 	//}
+//}
+
+//{ Transformation Scripts
+	COPY_EXISTING ~xaldtr01.bcs~ ~xaldtr02.bcs~
+	REPLACE Player1 Player2
+	
+	COPY_EXISTING ~xaldtr01.bcs~ ~xaldtr03.bcs~
+	REPLACE Player1 Player3
+
+	COPY_EXISTING ~xaldtr01.bcs~ ~xaldtr04.bcs~
+	REPLACE Player1 Player4
+	
+	COPY_EXISTING ~xaldtr01.bcs~ ~xaldtr05.bcs~
+	REPLACE Player1 Player5
+	
+	COPY_EXISTING ~xaldtr01.bcs~ ~xaldtr06.bcs~
+	REPLACE Player1 Player6
 //}
 
 //{ Mod Integration
