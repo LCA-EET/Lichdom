@@ -3,7 +3,7 @@ IF
 	!GlobalLT("XA_LD_RitualsPerformed", "GLOBAL", 6686)
 THEN
 	RESPONSE #100
-		ForceSpellRes("xaldgd", "OHBTELWE")
+		ForceSpellRes("OHBTELWE", "xaldgd")
 		Wait(2)
 		ActionOverride("xaldgd", DestroySelf())
 END

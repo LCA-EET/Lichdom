@@ -35,7 +35,7 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 				xald_cost = xa_quantity
 		END
 		COPY_EXISTING ~xaldgd.dlg~ ~override~
-		REPLACE 6686 %xald_cost%
+		REPLACE_TEXTUALLY ~6686~ ~%xald_cost%~
 	//}
 	
 	//{ Max Number of Rituals
@@ -48,7 +48,7 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 				xald_maxrituals = xa_quantity
 		END
 		COPY_EXISTING ~xaldmaxt.bcs~ ~override~
-		REPLACE 6686 %xald_maxrituals%
+		REPLACE_TEXTUALLY ~6686~ ~%xald_maxrituals%~
 	//}
 
 
@@ -61,86 +61,42 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 //}
 
 //{ Add lich dust to liches in BG2 / ToB
-	COPY_EXISTING ~AMLICH01.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~CEDELICH.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~CELICH.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~DPMON02.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~FIRLCH01.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~GORLIC01.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~GORPRI1.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~GRVLCH01.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~HLKANG.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~HLLICH.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~HLSHADE.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~HLSHANG.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~JARLICH.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~LICH01.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~LICHEL01.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~NEVAZIAH.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~OHHDECOY.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~SENLICH.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~UDTRAP04.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~DEMILICH.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~HLDEMI.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~OHBDLI01.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~OHBDLI02.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~MELSUM06.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~MINDAL01.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~OHHALHOO.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
-	
-	COPY_EXISTING ~OHHGOXXA.CRE~ ~override~
-	ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	ACTION_DEFINE_ARRAY lich_cre
+	BEGIN
+		amlich01
+		cedelich
+		celich
+		demilich
+		dpmon02
+		firlch01
+		gorlic01
+		gorpri1
+		grvlch01
+		hldemi
+		hlkang
+		hllich
+		hlshade
+		hlshang
+		jarlich
+		lich01
+		lichel01
+		melsum06
+		mindal01
+		nevaziah
+		ohdecoy
+		ohbdli01
+		ohbdli02
+		ohhalhoo
+		ohhgoxxa
+		senlich
+		udtrap04
+	END
+		
+	ACTION_PHP_EACH lich_cre AS _ => lich_ref
+	BEGIN
+		COPY_EXISTING ~%lich_ref%.cre~ ~override~
+		ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	END
 //}
 
 //{ 2DA 

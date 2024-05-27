@@ -1,5 +1,11 @@
 ## Lichdom Release Notes
 
+# v1.1
+* Added new install options:
+*   Adjust the number of lich transformations that can be performed.
+*   Limit lich transformations to base game NPCs (See project readme for more details).  
+* Modified existing installer options to allow for greater flexibility.
+
 # v1.0.1 2024-05-11
 * Installer refactoring; no content changes.
 
