@@ -196,7 +196,6 @@ IF ~~ THEN BEGIN XA_LD_CanYouFix
 	
 	//{ Have Enough Money
 	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 0)
 		!PartyGoldLT(6686)
 	~ THEN REPLY @132  /* ~Please do~ */
 	GOTO XA_LD_HasMoneyToFix
@@ -204,7 +203,6 @@ IF ~~ THEN BEGIN XA_LD_CanYouFix
 	
 	//{ Not Enough Money
 	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 0)
 		PartyGoldLT(6686)
 	~ THEN REPLY @132  /* ~Please do~ */
 	GOTO XA_LD_NoMoneyToFix
