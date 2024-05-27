@@ -6,76 +6,39 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 
 //{ Config file processing
 
-PRINT @36 
-ACTION_READLN ~xald_crowns~
+	//{ Number of Crowns for Sale
+		LAF xa_determine_quantity
+			INT_VAR
+				xa_min_qty = 0
+				xa_max_qty = 10
+				xa_str_ref = RESOLVE_STR_REF(@36)
+			RET
+				xald_crowns = xa_quantity
+		END
+		COPY_EXISTING ~garlena.sto~ ~override~
+		LPF ADD_STORE_ITEM_EX
+			INT_VAR
+				stack = xald_crowns
+			STR_VAR
+				item_name = ~xaldcrwn~
+				flags = ~IDENTIFIED~
+		END
+	//}
+	
+	//{ Ritual Cost
+		LAF xa_determine_quantity
+			INT_VAR
+				xa_min_qty = 40000
+				xa_max_qty = 200000
+				xa_str_ref = RESOLVE_STR_REF(@37)
+			RET
+				xald_cost = xa_quantity
+		END
+		COPY_EXISTING ~xaldgd.dlg~ ~override~
+		REPLACE 6686 %xald_cost%
+	//}
+	
 
-OUTER_WHILE NOT(IS_AN_INT %xald_crowns%)
-BEGIN
-	PRINT @36 /**/
-	ACTION_READLN ~xald_crowns~
-END
-
-OUTER_WHILE (%xald_crowns% < 1) OR (%xald_crowns% > 6) 
-BEGIN
-	PRINT @36
-	ACTION_READLN ~xald_crowns~
-END
-
-COPY_EXISTING ~garlena.sto~ ~override~
-PATCH_IF (xald_crowns = 1) THEN BEGIN
-	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #1
-END
-
-PATCH_IF (xald_crowns = 2) THEN BEGIN
-	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #2
-END
-
-PATCH_IF (xald_crowns = 3) THEN BEGIN
-	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #3
-END
-
-PATCH_IF (xald_crowns = 4) THEN BEGIN
-	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #4
-END
-
-PATCH_IF (xald_crowns = 5) THEN BEGIN
-	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #5
-END
-
-PATCH_IF (xald_crowns = 6) THEN BEGIN
-	ADD_STORE_ITEM "xaldcrwn" #0 #0 #0 ~IDENTIFIED~ #6
-END
-
-PRINT @37 
-ACTION_READLN ~xald_cost~
-
-OUTER_WHILE NOT(IS_AN_INT %xald_cost%)
-BEGIN
-	PRINT @37
-	ACTION_READLN ~xald_cost~
-END
-
-OUTER_WHILE (%xald_cost% < 0) OR (%xald_cost% > 6) 
-BEGIN
-	PRINT @37
-	ACTION_READLN ~xald_cost~
-END
-
-ACTION_IF (xald_cost = 1) THEN BEGIN
-	EXTEND_TOP ~BALDUR.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldc001.baf~
-END
-
-ACTION_IF (xald_cost = 2) THEN BEGIN 
-	EXTEND_TOP ~BALDUR.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldc002.baf~
-END
-
-ACTION_IF (xald_cost = 3)  THEN BEGIN
-	EXTEND_TOP ~BALDUR.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldc003.baf~
-END
-
-ACTION_IF (xald_cost = 4)  THEN BEGIN
-	EXTEND_TOP ~BALDUR.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldc004.baf~
-END
 
 //}
 
@@ -221,30 +184,10 @@ END
 	SAY NAME2 @23
 	SAY DESC @24
 
-	COPY ~%MOD_FOLDER%/bg2/itm/xaldlc00.itm~ ~override~
+	COPY_EXISTING ~plot16b.itm~ ~override/xaldlc00.itm~
 	SAY NAME1 @25
 	SAY NAME2 @25
-	SAY DESC @26
-
-	COPY ~%MOD_FOLDER%/bg2/itm/xaldlc01.itm~ ~override~
-	SAY NAME1 @25
-	SAY NAME2 @25
-	SAY DESC @27
-
-	COPY ~%MOD_FOLDER%/bg2/itm/xaldlc02.itm~ ~override~
-	SAY NAME1 @25
-	SAY NAME2 @25
-	SAY DESC @28
-
-	COPY ~%MOD_FOLDER%/bg2/itm/xaldlc03.itm~ ~override~
-	SAY NAME1 @25
-	SAY NAME2 @25
-	SAY DESC @29
-
-	COPY ~%MOD_FOLDER%/bg2/itm/xaldlc04.itm~ ~override~
-	SAY NAME1 @25
-	SAY NAME2 @25
-	SAY DESC @30
+	SAY DESC ~The cost to perform the ritual is %xald_cost%.~
 //}
 
 

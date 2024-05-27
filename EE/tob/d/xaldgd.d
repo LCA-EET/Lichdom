@@ -771,43 +771,9 @@ END
 IF ~~ THEN BEGIN XA_LD_WhatHappensNext
 	SAY @89 /*  ~"The third price is money," he says, slowly holding out his hand.  "Lichdom is inherently expensive in costly ritual components.  That is why not every caster of weak or great power becomes one."  He raises his eyebrows at you.  "Each recipient of this ritual will require a substantial amount of gold."~ [xald1024]*/
 	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 0)
-	~ THEN
+	IF ~~ THEN
 	DO ~
 		GiveItemCreate("xaldlc00", LastTalkedToBy, 0,0,0)
-	~
-	GOTO XA_LD_GavePrice
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 1)
-	~ THEN
-	DO ~
-		GiveItemCreate("xaldlc01", LastTalkedToBy, 0,0,0)
-	~
-	GOTO XA_LD_GavePrice
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 2)
-	~ THEN
-	DO ~
-		GiveItemCreate("xaldlc02", LastTalkedToBy, 0,0,0)
-	~
-	GOTO XA_LD_GavePrice
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 3)
-	~ THEN
-	DO ~
-		GiveItemCreate("xaldlc03", LastTalkedToBy, 0,0,0)
-	~
-	GOTO XA_LD_GavePrice
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 4)
-	~ THEN
-	DO ~
-		GiveItemCreate("xaldlc04", LastTalkedToBy, 0,0,0)
 	~
 	GOTO XA_LD_GavePrice
 END

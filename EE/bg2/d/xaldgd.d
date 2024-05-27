@@ -197,31 +197,7 @@ IF ~~ THEN BEGIN XA_LD_CanYouFix
 	//{ Have Enough Money
 	IF ~
 		Global("XA_LD_TransformationCost", "GLOBAL", 0)
-		PartyGoldGT(119999)
-	~ THEN REPLY @132  /* ~Please do~ */
-	GOTO XA_LD_HasMoneyToFix
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 1)
-		PartyGoldGT(99999)
-	~ THEN REPLY @132  /* ~Please do~ */
-	GOTO XA_LD_HasMoneyToFix
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 2)
-		PartyGoldGT(74999)
-	~ THEN REPLY @132  /* ~Please do~ */
-	GOTO XA_LD_HasMoneyToFix
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 3)
-		PartyGoldGT(49999)
-	~ THEN REPLY @132  /* ~Please do~ */
-	GOTO XA_LD_HasMoneyToFix
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 4)
-		PartyGoldGT(39999)
+		!PartyGoldLT(6686)
 	~ THEN REPLY @132  /* ~Please do~ */
 	GOTO XA_LD_HasMoneyToFix
 	//}
@@ -229,31 +205,7 @@ IF ~~ THEN BEGIN XA_LD_CanYouFix
 	//{ Not Enough Money
 	IF ~
 		Global("XA_LD_TransformationCost", "GLOBAL", 0)
-		!PartyGoldGT(119999)
-	~ THEN REPLY @132  /* ~Please do~ */
-	GOTO XA_LD_NoMoneyToFix
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 1)
-		!PartyGoldGT(99999)
-	~ THEN REPLY @132  /* ~Please do~ */
-	GOTO XA_LD_NoMoneyToFix
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 2)
-		!PartyGoldGT(74999)
-	~ THEN REPLY @132  /* ~Please do~ */
-	GOTO XA_LD_NoMoneyToFix
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 3)
-		!PartyGoldGT(49999)
-	~ THEN REPLY @132  /* ~Please do~ */
-	GOTO XA_LD_NoMoneyToFix
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 4)
-		!PartyGoldGT(39999)
+		PartyGoldLT(6686)
 	~ THEN REPLY @132  /* ~Please do~ */
 	GOTO XA_LD_NoMoneyToFix
 	//}
@@ -329,48 +281,9 @@ END
 IF ~~ THEN BEGIN XA_LD_RepairedPhylactery
 	SAY @143 /* ~It is done. Treat it with care.~ */
 	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 0)
-		PartyGoldGT(119999)
-	~ THEN REPLY @144 /* ~Thank you!~ */
+	IF ~~ THEN REPLY @144 /* ~Thank you!~ */
 	DO ~
-		TakePartyGold(120000)
-	~
-	GOTO XA_LD_AnythingElse
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 1)
-		PartyGoldGT(99999)
-	~ THEN REPLY @144 /* ~Thank you!~ */
-	DO ~
-		TakePartyGold(100000)
-	~
-	GOTO XA_LD_AnythingElse
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 2)
-		PartyGoldGT(74999)
-	~ THEN REPLY @144 /* ~Thank you!~ */
-	DO ~
-		TakePartyGold(75000)
-	~
-	GOTO XA_LD_AnythingElse
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 3)
-		PartyGoldGT(49999)
-	~ THEN REPLY @144 /* ~Thank you!~ */
-	DO ~
-		TakePartyGold(50000)
-	~
-	GOTO XA_LD_AnythingElse
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 4)
-		PartyGoldGT(39999)
-	~ THEN REPLY @144 /* ~Thank you!~ */
-	DO ~
-		TakePartyGold(40000)
+		TakePartyGold(6686)
 	~
 	GOTO XA_LD_AnythingElse
 END
@@ -401,74 +314,11 @@ IF ~~ THEN BEGIN XA_LD_StartRitual
 	GOTO XA_LD_Later
 	
 	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 0)
 		Global("XA_LD_IgnoreDialog", "GLOBAL", 0)
-		PartyGoldGT(119999)
+		!PartyGoldLT(6686)
 	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
 	GOTO XA_LD_PayMoney
 	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 1)
-		Global("XA_LD_IgnoreDialog", "GLOBAL", 0)
-		PartyGoldGT(99999)
-	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
-	GOTO XA_LD_PayMoney
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 2)
-		Global("XA_LD_IgnoreDialog", "GLOBAL", 0)
-		PartyGoldGT(74999)
-	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
-	GOTO XA_LD_PayMoney
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 3)
-		Global("XA_LD_IgnoreDialog", "GLOBAL", 0)
-		PartyGoldGT(49999)
-	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
-	GOTO XA_LD_PayMoney
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 4)
-		Global("XA_LD_IgnoreDialog", "GLOBAL", 0)
-		PartyGoldGT(39999)
-	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
-	GOTO XA_LD_PayMoney
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 0)
-		Global("XA_LD_IgnoreDialog", "GLOBAL", 1)
-		PartyGoldGT(119999)
-	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
-	GOTO XA_LD_PayMoney_NoDialog
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 1)
-		Global("XA_LD_IgnoreDialog", "GLOBAL", 1)
-		PartyGoldGT(99999)
-	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
-	GOTO XA_LD_PayMoney_NoDialog
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 2)
-		Global("XA_LD_IgnoreDialog", "GLOBAL", 1)
-		PartyGoldGT(74999)
-	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
-	GOTO XA_LD_PayMoney_NoDialog
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 3)
-		Global("XA_LD_IgnoreDialog", "GLOBAL", 1)
-		PartyGoldGT(49999)
-	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
-	GOTO XA_LD_PayMoney_NoDialog
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 4)
-		Global("XA_LD_IgnoreDialog", "GLOBAL", 1)
-		PartyGoldGT(39999)
-	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
-	GOTO XA_LD_PayMoney_NoDialog
 END
 
 IF ~~ THEN BEGIN XA_LD_PayMoney_NoDialog
@@ -771,45 +621,12 @@ END
 IF ~~ THEN BEGIN XA_LD_WhatHappensNext
 	SAY @89 /*  ~"The third price is money," he says, slowly holding out his hand.  "Lichdom is inherently expensive in costly ritual components.  That is why not every caster of weak or great power becomes one."  He raises his eyebrows at you.  "Each recipient of this ritual will require a substantial amount of gold."~ [xald1024]*/
 	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 0)
-	~ THEN
+	IF ~~ THEN
 	DO ~
 		GiveItemCreate("xaldlc00", LastTalkedToBy, 0,0,0)
 	~
 	GOTO XA_LD_GavePrice
 	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 1)
-	~ THEN
-	DO ~
-		GiveItemCreate("xaldlc01", LastTalkedToBy, 0,0,0)
-	~
-	GOTO XA_LD_GavePrice
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 2)
-	~ THEN
-	DO ~
-		GiveItemCreate("xaldlc02", LastTalkedToBy, 0,0,0)
-	~
-	GOTO XA_LD_GavePrice
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 3)
-	~ THEN
-	DO ~
-		GiveItemCreate("xaldlc03", LastTalkedToBy, 0,0,0)
-	~
-	GOTO XA_LD_GavePrice
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 4)
-	~ THEN
-	DO ~
-		GiveItemCreate("xaldlc04", LastTalkedToBy, 0,0,0)
-	~
-	GOTO XA_LD_GavePrice
 END
 
 IF ~~ THEN BEGIN XA_LD_GavePrice
@@ -1243,61 +1060,15 @@ END
 IF ~~ THEN BEGIN XA_LD_Transform
 	SAY @233  /* ~Prepare yourself...~ */
 
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 0)
-		PartyGoldGT(119999)
-	~ THEN 
+	IF ~~ THEN 
 	DO ~
-		TakePartyGold(120000)
+		TakePartyGold(6686)
 		SetGlobal("XA_LD_GaveDust", "GLOBAL", 0)
 		SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
 		SetGlobal("XA_LD_Touch5", "GLOBAL", 1)
 	~
 	EXIT
 	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 1)
-		PartyGoldGT(99999)
-	~ THEN
-	DO ~
-		TakePartyGold(100000)
-		SetGlobal("XA_LD_GaveDust", "GLOBAL", 0)
-		SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
-	~
-	EXIT
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 2)
-		PartyGoldGT(74999)
-	~ THEN
-	DO ~
-		TakePartyGold(75000)
-		SetGlobal("XA_LD_GaveDust", "GLOBAL", 0)
-		SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
-	~
-	EXIT
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 3)
-		PartyGoldGT(49999)
-	~ THEN
-	DO ~
-		TakePartyGold(50000)
-		SetGlobal("XA_LD_GaveDust", "GLOBAL", 0)
-		SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
-	~
-	EXIT
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 4)
-		PartyGoldGT(39999)
-	~ THEN
-	DO ~
-		TakePartyGold(40000)
-		SetGlobal("XA_LD_GaveDust", "GLOBAL", 0)
-		SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
-	~
-	EXIT
 
 END
 

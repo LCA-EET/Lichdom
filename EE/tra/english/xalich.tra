@@ -26,11 +26,7 @@
 
 The phylactery is simultaneously the source of the lich's greatest power and its greatest, indeed its only significant physical weakness. Any independent lich should take pains to ensure its phylactery is kept secure at all times. Though not strictly necessary, the transition from mortal to lich is more easily achieved if the item which will store the transformee's soul (ie, the phylactery) is something with which they are familiar. This is particularly the case in Rituals of Becoming that are performed by a party other than the one undergoing transformation. The phylactery is small enough to be hidden within an unassuming item, as is the case here; it has been discreetly woven into the fibers of this cloak.~
 @25 = ~Morris' Price for Lichdom~
-@26 = ~The cost to perform the ritual is 120,000 gold.~
-@27 = ~The cost to perform the ritual is 100,000 gold.~
-@28 = ~The cost to perform the ritual is 75,000 gold.~
-@29 = ~The cost to perform the ritual is 50,000 gold.~
-@30 = ~The cost to perform the ritual is 40,000 gold.~
+
 @31 = ~Edwin gained great renown in his travels with <CHARNAME>, and in the years following their association, he would exploit that infamy. In time, he achieved enough influence to subjugate even the Red Wizards themselves, becoming the greatest leader they had known in recent memory.   He even outwitted Szass Tam, the Zulkir of Necromancy and gained Tam's respect.
 
 This respect led to a calm alliance between Tam and Edwin that lasted for years before Tam, using his influence over Undead, gently persuaded Edwin to step down from his post in Thay and take on greater challenges for the glory of the Red Wizards and himself.
@@ -70,21 +66,8 @@ Natural AC improves by 3.
 
 You gain an innate ability usable at will which changes your character's appearance to that of a typical Lich. This ability is only cosmetic.~
 @35 = ~Normal Form~
-@36 = ~How many Crowns of the Lich should be for sale in Sister Garlena's shop?
-1. One crown. (Default)
-2. Two crowns.
-3. Three crowns.
-4. Four crowns.
-5. Five crowns.
-6. Six crowns.
-Provide a value from 1 to 6, then press Enter:~
-@37 = ~How much should the Lichdom Ritual cost?
-0. 120,000 gold. (Default)
-1. 100,000 gold.
-2. 75,000 gold.
-3. 50,000 gold.
-4. 40,000 gold.
-Provide a value from 0 to 4, then press Enter:~
+@36 = ~How many Crowns of the Lich should be for sale in Sister Garlena's shop? Provide a value from 0 to 10, then press Enter:~
+@37 = ~How much should the Lichdom Ritual cost? Provide a value from 40000 to 200000, then press Enter:~
 @38 = ~Love Conquers All (LCA) mod detected. Updating dialogs accordingly...~
 @39 = ~The Longer Road mod detected. Updating dialogs accordingly...~
 @40 = ~Hubelpot the Vegetable Merchant mod detected. Updating dialogs accordingly...~
