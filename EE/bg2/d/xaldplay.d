@@ -35,6 +35,9 @@ APPEND ~PLAYER1~
 		IF ~~ THEN REPLY @67 /*~Change lich mental senses.~*/
 		GOTO XA_ChangeMentalSenses
 		
+		IF ~~ THEN REPLY @83 /* ~Change Lich Transformation Restrictions~*/
+		GOTO XA_LimitToBase
+		
 		IF ~~ THEN REPLY @57 /*~Change animation options.~*/
 		GOTO XA_ChangeAnimation
 		
@@ -49,6 +52,22 @@ APPEND ~PLAYER1~
 		
 		IF ~~ THEN REPLY @1 /*~Exit.~*/
 		GOTO XA_ExitAssistant
+	END
+	
+	IF ~~ THEN BEGIN XA_LimitToBase
+		SAY @83 /* ~Lich Transformation Restriction~*/
+		
+		IF ~~ THEN REPLY @82/*~Restrict lich transformation to base game characters only.~ */
+		DO ~
+			SetGlobal("XA_LD_LimitToBase", "GLOBAL", 1)
+		~
+		GOTO XA_ChangeProcessed
+		
+		IF ~~ THEN REPLY @84/* ~Allow lich transformation for any party member (subject to class & level restrictions).~*/
+		DO ~
+			SetGlobal("XA_LD_LimitToBase", "GLOBAL", 0)
+		~
+		GOTO XA_ChangeProcessed
 	END
 	
 	IF ~~ THEN BEGIN XA_ChangeDialogOptions

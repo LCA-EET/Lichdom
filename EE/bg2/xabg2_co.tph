@@ -51,7 +51,20 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 		REPLACE_TEXTUALLY ~6686~ ~%xald_maxrituals%~
 	//}
 
-
+	//{ Limit Lich Transformations to Base Game NPCs?
+		LAF xa_determine_quantity
+			INT_VAR
+				xa_min_qty = 0
+				xa_max_qty = 1
+				xa_str_ref = RESOLVE_STR_REF(@26)
+			RET
+				xald_baseonly = xa_quantity
+		END
+		ACTION_IF (xald_baseonly = 1) THEN BEGIN
+			EXTEND_TOP ~xaldgd.bcs~ ~%MOD_FOLDER%/bg2/baf/xaldlim1.baf~
+		END
+	//}
+	
 //}
 
 //{ Allows the protagonist to die (in conjunction with the modifications to BALDUR.BCS)~
@@ -83,7 +96,6 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 		melsum06
 		mindal01
 		nevaziah
-		ohdecoy
 		ohbdli01
 		ohbdli02
 		ohhalhoo

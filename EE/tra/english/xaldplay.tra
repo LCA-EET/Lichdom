@@ -80,3 +80,6 @@
 @79 = ~Lich Party Dialog Options.~
 @80 = ~Ignore party dialogs / objections concerning Lichdom.~
 @81 = ~Do not ignore party dialogs / objections concerning Lichdom. (Default)~
+@82 = ~Restrict lich transformation to base game characters only.~
+@83 = ~Change Lich Transformation Restrictions~
+@84 = ~Allow lich transformation for any party member (subject to class & level restrictions).~
