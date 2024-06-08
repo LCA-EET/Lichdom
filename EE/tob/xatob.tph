@@ -25,7 +25,7 @@ EXTEND_TOP ~BALDUR25.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldjrnl.baf~
 
 EXTEND_TOP ~AR5000.BCS~ 	~%MOD_FOLDER%/tob/baf/xaar5000.baf~
 EXTEND_TOP ~AR5000.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldprfm.baf~
-EXTEND_TOP ~ar0800.bcs~ 	~override/xaldmaxt.bcs~
+EXTEND_TOP ~AR5000.BCS~ 	~override/xaldmaxt.bcs~
 EXTEND_TOP ~AR6200.BCS~		~%MOD_FOLDER%/tob/baf/xaar6200.baf~
 
 COPY_EXISTING ~xaldgd.cre~ ~override/xaldgd2.cre~
