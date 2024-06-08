@@ -11,10 +11,7 @@ EXTEND_TOP ~BALDUR.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldjrnl.baf~
 EXTEND_TOP ~AR0800.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaar0800.baf~
 EXTEND_TOP ~AR0800.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldprfm.baf~
 
-LAF xa_copy_folder_contents
-	STR_VAR
-		xa_relative_path = ~%MOD_FOLDER%/bg2/wav~
-END
+COPY ~%MOD_FOLDER%/bg2/wav~ ~override~
 
 ACTION_IF(sod_carryover = 0) THEN BEGIN
 	INCLUDE ~%MOD_FOLDER%/sod/xasod_co.tph~
@@ -25,3 +22,7 @@ ACTION_IF(bg2_carryover = 0) THEN BEGIN
 END
 
 EXTEND_TOP ~ar0800.bcs~ ~override/xaldmaxt.bcs~
+
+OUTER_SET compiled = 0
+OUTER_SPRINT baldur_file ~baldur~ 
+INCLUDE ~%MOD_FOLDER%/lich/xalich.tph~

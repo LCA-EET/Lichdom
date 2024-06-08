@@ -10,6 +10,7 @@ Remove-Item $exeName -Force
 $folders = @(
 'bg2',
 'compat',
+'lich',
 'sod',
 'tob',
 'tra'

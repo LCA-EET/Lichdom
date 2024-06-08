@@ -31,6 +31,9 @@ EXTEND_TOP ~AR6200.BCS~		~%MOD_FOLDER%/tob/baf/xaar6200.baf~
 COPY_EXISTING ~xaldgd.cre~ ~override/xaldgd2.cre~
 WRITE_ASCII 0x2CC ~xaldgd2~ #8
 
+OUTER_SPRINT baldur_file ~baldur25~ 
+INCLUDE ~%MOD_FOLDER%/lich/xalich.tph~
+
 //{ Mod Integration
 	//{ The Longer Road
 	ACTION_IF FILE_EXISTS_IN_GAME ~lrirenic.dlg~ THEN BEGIN

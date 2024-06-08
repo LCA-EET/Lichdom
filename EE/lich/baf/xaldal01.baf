@@ -1,0 +1,37 @@
+//{ Drop "allergic" Items
+IF
+	Race(Player1, LICH)
+	Global("XA_LD_LichEquip", "GLOBAL", 1)
+	OR(12)
+		HasItem("AX1H10", Player1) 		/* Azureedge + 3*/
+		HasItem("SW1H24", Player1) 		/* Flame Tongue + 1*/
+		HasItem("BLUN12", Player1) 		/* Mace of Disruption + 1*/
+		HasItem("BLUN25", Player1) 		/* Mace of Disruption + 2*/
+		HasItem("SCRL09", Player1) 		/* Scroll - Protection from Undead*/
+		HasItem("COMPS64", Player1) 	/* Purifier + 4*/
+		HasItem("COMPS65", Player1) 	/* Purifier + 5*/
+		HasItem("SW1H64", Player1) 		/* Purifier + 4*/ 
+		HasItem("SW1H65", Player1) 		/* Purifier + 5*/
+		HasItem("CARSOMYR", Player1) 	/* Carsomyr + 5*/
+		HasItem("SW2H10", Player1) 		/* Corsomyr + 5*/
+		HasItem("SW2H19", Player1) 		/* Carsomyr + 6*/
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ActionOverride(Player1, DropItem("AX1H10", [-1.-1]))
+		ActionOverride(Player1, DropItem("SW1H24", [-1.-1]))
+		ActionOverride(Player1, DropItem("BLUN12", [-1.-1]))
+		ActionOverride(Player1, DropItem("BLUN25", [-1.-1]))
+		ActionOverride(Player1, DropItem("SCRL09", [-1.-1]))
+		ActionOverride(Player1, DropItem("COMPS64", [-1.-1]))
+		ActionOverride(Player1, DropItem("COMPS65", [-1.-1]))
+		ActionOverride(Player1, DropItem("SW1H64", [-1.-1]))
+		ActionOverride(Player1, DropItem("SW1H65", [-1.-1]))
+		ActionOverride(Player1, DropItem("CARSOMYR", [-1.-1]))
+		ActionOverride(Player1, DropItem("SW2H10", [-1.-1]))
+		ActionOverride(Player1, DropItem("SW2H19", [-1.-1]))
+		DisplayStringHead(Player1, @1)
+		SetInterrupt(TRUE)
+		Continue()
+END
+//}

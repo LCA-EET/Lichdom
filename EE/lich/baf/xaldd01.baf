@@ -1,0 +1,16 @@
+//{ Death Scripting
+	IF
+		OR(2)
+			HPPercentLT(Player1, 10)
+			HPLT(Player1, 2)
+		Race(Player1, LICH)
+		TriggerOverride(Player1, GlobalLT("XA_LD_LichDeathScript", "LOCALS", 1)) 
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ActionOverride(Player1, ChangeAIScript("xalddead", CLASS)
+			ActionOverride(Player1, SetGlobal("XA_LD_LichDeathScript", "LOCALS", 1)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+//}

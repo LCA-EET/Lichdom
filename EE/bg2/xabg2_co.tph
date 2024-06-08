@@ -50,7 +50,7 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 		COPY_EXISTING ~xaldmaxt.bcs~ ~override~
 		REPLACE_TEXTUALLY ~6686~ ~%xald_maxrituals%~
 	//}
-
+	/*
 	//{ Limit Lich Transformations to Base Game NPCs?
 		LAF xa_determine_quantity
 			INT_VAR
@@ -64,7 +64,7 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 			EXTEND_TOP ~xaldgd.bcs~ ~%MOD_FOLDER%/bg2/baf/xaldlim1.baf~
 		END
 	//}
-	
+	*/
 //}
 
 //{ Allows the protagonist to die (in conjunction with the modifications to BALDUR.BCS)~
@@ -384,20 +384,20 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 //}
 
 //{ Transformation Scripts
-	COPY_EXISTING ~xaldtr01.bcs~ ~xaldtr02.bcs~
-	REPLACE Player1 Player2
+	COPY_EXISTING ~xaldtr01.bcs~ ~override/xaldtr02.bcs~
+	REPLACE_TEXTUALLY Player1 Player2
 	
-	COPY_EXISTING ~xaldtr01.bcs~ ~xaldtr03.bcs~
-	REPLACE Player1 Player3
+	COPY_EXISTING ~xaldtr01.bcs~ ~override/xaldtr03.bcs~
+	REPLACE_TEXTUALLY Player1 Player3
 
-	COPY_EXISTING ~xaldtr01.bcs~ ~xaldtr04.bcs~
-	REPLACE Player1 Player4
+	COPY_EXISTING ~xaldtr01.bcs~ ~override/xaldtr04.bcs~
+	REPLACE_TEXTUALLY Player1 Player4
 	
-	COPY_EXISTING ~xaldtr01.bcs~ ~xaldtr05.bcs~
-	REPLACE Player1 Player5
+	COPY_EXISTING ~xaldtr01.bcs~ ~override/xaldtr05.bcs~
+	REPLACE_TEXTUALLY Player1 Player5
 	
-	COPY_EXISTING ~xaldtr01.bcs~ ~xaldtr06.bcs~
-	REPLACE Player1 Player6
+	COPY_EXISTING ~xaldtr01.bcs~ ~override/xaldtr06.bcs~
+	REPLACE_TEXTUALLY Player1 Player6
 //}
 
 //{ Mod Integration

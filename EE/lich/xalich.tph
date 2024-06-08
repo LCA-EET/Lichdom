@@ -1,0 +1,60 @@
+ACTION_IF (compiled = 0) THEN BEGIN
+	OUTER_SET compiled = 1
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/lich/baf~ 
+END
+
+//{ Death Scripts
+	LAF xa_replace_recompile
+		STR_VAR
+			xa_bcs = ~xaldd01~
+			xa_extend = ~%baldur_file%~
+			xa_prefix = ~xaldd0~
+	END
+//}
+
+//{ Crown of the Lich Undead Flag
+	LAF xa_replace_recompile
+		STR_VAR
+			xa_bcs = ~xaldcr01~
+			xa_extend = ~%baldur_file%~
+			xa_prefix = ~xaldcr0~
+	END
+//}
+
+//{ Drop Allergic Items
+	LAF xa_replace_recompile
+		STR_VAR
+			xa_bcs = ~xaldal01~
+			xa_extend = ~%baldur_file%~
+			xa_prefix = ~xaldal0~
+	END
+//}
+
+//{ Paralyzing Touch Toggle
+	LAF xa_replace_recompile
+		STR_VAR
+			xa_bcs = ~xaldpt01~
+			xa_extend = ~%baldur_file%~
+			xa_prefix = ~xaldpt0~
+	END
+//}
+
+//{ Apply Transformation Script
+	LAF xa_replace_recompile
+		STR_VAR
+			xa_bcs = ~xaldtf01~
+			xa_extend = ~%baldur_file%~
+			xa_prefix = ~xaldtf0~
+	END
+//}
+
+//{ Lich Resurrection
+	LAF xa_replace_recompile
+		STR_VAR
+			xa_bcs = ~xaldlr01~
+			xa_extend = ~%baldur_file%~
+			xa_prefix = ~xaldlr0~
+	END
+//}
+
+EXTEND_TOP ~%baldur_file%.bcs~ ~override/xaldtime.bcs~

@@ -1,0 +1,44 @@
+//{ Resurrect After Timer Expiration
+IF
+	!TriggerOverride(Player1, See([ENEMY]))
+	GlobalLT("XA_LD_LichRezPlayer1", "GLOBAL", 1)
+	Global("XA_LD_LichResurrection", "GLOBAL", 0)
+	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
+	TriggerOverride(Player1, GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	Race(Player1, Lich)
+	HPLT(Player1, 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_LichRezPlayer1", "GLOBAL", 7)
+		Continue()
+END
+//}
+
+//{ Resurrect After Battle
+IF
+	!TriggerOverride(Player1, See([ENEMY]))
+	GlobalLT("XA_LD_LichRezPlayer1", "GLOBAL", 1)
+	Global("XA_LD_LichResurrection", "GLOBAL", 1)
+	TriggerOverride(Player1, GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	Race(Player1, Lich)
+	HPLT(Player1, 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_LichRezPlayer1", "GLOBAL", 7)
+		Continue()
+END
+//}
+
+//{ Perform Resurrection & Apply Script
+IF
+	Global("XA_LD_LichRezPlayer1", "GLOBAL", 7)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		ReallyForceSpellRES("SPPR712", Player1)
+		ActionOverride(Player1, ChangeAIScript("xaldrez", CLASS))
+		SetGlobal("XA_LD_LichRezPlayer1", "GLOBAL", 0)
+		SetInterrupt(TRUE)
+		Continue()
+END
+//}
