@@ -5,6 +5,58 @@ IF ~
 ~ THEN BEGIN XA_DebugInit
 	SAY @0
 	
+	IF ~~ THEN REPLY @96
+	DO ~
+		SetGlobal("XA_LD_MetMorrisInAthkatla", "GLOBAL", 0)
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @97
+	DO ~
+		SetGlobal("XA_LD_MetMorrisInAthkatla", "GLOBAL", 1)
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @98
+	DO ~
+		SetGlobal("XA_LD_MetMorrisInSaradush", "GLOBAL", 0)
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @99
+	DO ~
+		SetGlobal("XA_LD_MetMorrisInSaradush", "GLOBAL", 1)
+	~
+	GOTO XA_DebugInit
+	
+	IF ~~ THEN REPLY @93
+	DO ~
+		ActionOverride(Player1, LeaveAreaLUA("AR0800", "", [0.0], N))
+		ActionOverride(Player2, LeaveAreaLUA("AR0800", "", [0.0], N))
+		ActionOverride(Player3, LeaveAreaLUA("AR0800", "", [0.0], N))
+		ActionOverride(Player4, LeaveAreaLUA("AR0800", "", [0.0], N))
+		ActionOverride(Player5, LeaveAreaLUA("AR0800", "", [0.0], N))
+		ActionOverride(Player6, LeaveAreaLUA("AR0800", "", [0.0], N))
+	~
+	EXIT
+	
+	IF ~~ THEN REPLY @94
+	DO ~
+		ActionOverride(Player1, LeaveAreaLUA("AR5000", "", [0.0], N))
+		ActionOverride(Player2, LeaveAreaLUA("AR5000", "", [0.0], N))
+		ActionOverride(Player3, LeaveAreaLUA("AR5000", "", [0.0], N))
+		ActionOverride(Player4, LeaveAreaLUA("AR5000", "", [0.0], N))
+		ActionOverride(Player5, LeaveAreaLUA("AR5000", "", [0.0], N))
+		ActionOverride(Player6, LeaveAreaLUA("AR5000", "", [0.0], N))
+	~
+	EXIT
+	
+	IF ~~ THEN REPLY @95
+	DO ~
+		GiveGoldForce(200000)
+	~
+	EXIT
+	
 	IF ~~ THEN REPLY @43
 	GOTO XA_ReportRace
 	

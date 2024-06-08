@@ -91,3 +91,10 @@
 @90 = ~Player 6 is NOT Undead.~
 @91 = ~Remove Lichdom Assistant ability.~
 @92 = ~Enable Lichdom Assistant ability.~
+@93 = ~Goto AR0800 (Graveyard District).~
+@94 = ~Goto AR5000 (Saradush).~
+@95 = ~Give 200,000 gold.~
+@96 = ~SetGlobal("XA_LD_MetMorrisInAthkatla", "GLOBAL", 0)~
+@97 = ~SetGlobal("XA_LD_MetMorrisInAthkatla", "GLOBAL", 1)~
+@98 = ~SetGlobal("XA_LD_MetMorrisInSaradush", "GLOBAL", 0)~
+@99 = ~SetGlobal("XA_LD_MetMorrisInSaradush", "GLOBAL", 1)~

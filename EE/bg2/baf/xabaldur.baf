@@ -1,4 +1,13 @@
 
+IF
+	AreaCheck("AR0602")
+	GlobalLT("XA_LD_DebuggerSpawn0602", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_DebuggerSpawn0602", "GLOBAL", 1)
+		CreateCreature("XABDBG", [3700.2900], N)
+END
+
 //{ Romance Termination
 IF
 	Race(Player1, LICH)
@@ -102,9 +111,7 @@ END
 			GlobalGT("XA_LD_MetMorrisInAthkatla", "GLOBAL", 0)
 	THEN
 		RESPONSE #100
-			SetInterrupt(FALSE)
 			ActionOverride(Player1, AddSpecialAbility("xaldasst"))
-			SetInterrupt(TRUE)
 			Continue()
 	END
 //}
@@ -116,9 +123,7 @@ END
 		Global("XA_LD_DisableAssistant", "GLOBAL", 1)
 	THEN
 		RESPONSE #100
-			SetInterrupt(FALSE)
 			ActionOverride(Player1, RemoveSpellRES("xaldasst"))
-			SetInterrupt(TRUE)
 			Continue()
 	END
 //}

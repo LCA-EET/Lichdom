@@ -119,17 +119,11 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 //}
 
 //{ BAM
-	LAF xa_copy_folder_contents
-		STR_VAR
-			xa_relative_path = ~%MOD_FOLDER%/bg2/bam~
-	END
+	COPY ~%MOD_FOLDER%/bg2/bam~ ~override~
 //}
 
 //{ BMP
-	LAF xa_copy_folder_contents
-		STR_VAR
-			xa_relative_path = ~%MOD_FOLDER%/bg2/bmp~
-	END
+	COPY ~%MOD_FOLDER%/bg2/bmp~ ~override~
 //}
 
 //{ CRE

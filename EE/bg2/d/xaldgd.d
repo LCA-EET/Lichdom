@@ -8,18 +8,19 @@ BEGIN ~XALDGD~
 			AreaCheck("AR0800")
 			Global("XA_LD_AR0800", "GLOBAL", 1)
 	~ THEN BEGIN XA_LD_IntroAthkatla_0
-		SAY @0 /*~<You see a man in ornate robes whose every motion seems intentional, calm, and slow.  His voice seems wise with a tone that reminds you of Gorion’s voice, but with more crackle and spoken more slowly.  He smells clean despite his nearness to the dead  His demeanor is of one of great importance who seems to be in absolutely no hurry.>~ [xald0000]*/
+		SAY @0 /*~(You see a man in ornate robes whose every motion seems intentional, calm, and slow.  His voice seems wise with a tone that reminds you of Gorion’s voice, but with more crackle and spoken more slowly.  He smells clean despite his nearness to the dead  His demeanor is of one of great importance who seems to be in absolutely no hurry.)~ [xald0000]*/
 		
 		IF ~~ THEN
 		DO ~
+			SetGlobal("XA_LD_WeiduBugFix", "GLOBAL", 1)
 			SetGlobal("XA_LD_MetMorrisInAthkatla", "GLOBAL", 1)
 		~
 		GOTO XA_LD_IntroAthkatla
 	END
 
 	IF ~
-		NumTimesTalkedTo(0)
 		Global("XA_LD_MetMorrisInAthkatla", "GLOBAL", 1)
+		GlobalLT("XA_LD_MetMorrisInSaradush", "GLOBAL", 0)
 		OR(2)
 			AreaCheck("AR5000")
 			Global("XA_LD_AR5000", "GLOBAL", 1)
@@ -29,6 +30,7 @@ BEGIN ~XALDGD~
 		IF ~~ THEN
 		DO ~
 			SetGlobal("XA_LD_JournalEntry_6", "GLOBAL", 1) // OK
+			SetGlobal("XA_LD_MetMorrisInSaradush", "GLOBAL", 1)
 		~
 		GOTO XA_LD_IntroSaradush_0A
 	END
@@ -66,11 +68,7 @@ BEGIN ~XALDGD~
 	END
 //}
 
-
-
-IF ~
-	True()
-~ THEN BEGIN XA_LD_IntroAthkatla
+IF ~~ THEN BEGIN XA_LD_IntroAthkatla
 	SAY @1 /*~Ah, there you are.  I am Morris, and you are one of many people to have been curious about me.~ [xald0001]*/
 	
 	IF ~~ THEN REPLY @2 /*~I am curious.  Who are you?~*/
@@ -189,6 +187,14 @@ IF ~
 	~ THEN REPLY @103  /* ~Lichdom still interests me despite the monetary cost.  Let’s deal, my friend!~*/
 	GOTO XA_LD_StartRitual
 	
+END
+
+IF ~
+	True()
+~ THEN BEGIN XA_LD_IntroAthkatla_AlreadyMet
+	SAY @1
+	
+	COPY_TRANS XALDGD XA_LD_IntroAthkatla
 END
 
 IF ~~ THEN BEGIN XA_LD_CanYouFix
