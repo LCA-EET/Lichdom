@@ -193,141 +193,115 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 	//}
 	
 	//{ Lich Spell Immunities
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldsi01.spl~ ~override~
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldsi.spl~ ~override/xaldsi01.spl~
+		WRITE_LONG 0x9E 1
 		SAY NAME1 @12
 		SAY UNIDENTIFIED_DESC @12
 		SAY DESC @12
 		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldsi02.spl~ ~override~
-		SAY NAME1 @12
-		SAY UNIDENTIFIED_DESC @12
-		SAY DESC @12
+		COPY_EXISTING ~xaldsi01.spl~ ~override/xaldsi02.spl~
+		WRITE_LONG 0x9E 2
 		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldsi03.spl~ ~override~
-		SAY NAME1 @12
-		SAY UNIDENTIFIED_DESC @12
-		SAY DESC @12
+		COPY_EXISTING ~xaldsi01.spl~ ~override/xaldsi03.spl~
+		WRITE_LONG 0x9E 3
 		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldsi04.spl~ ~override~
-		SAY NAME1 @12
-		SAY UNIDENTIFIED_DESC @12
-		SAY DESC @12
+		COPY_EXISTING ~xaldsi01.spl~ ~override/xaldsi04.spl~
+		WRITE_LONG 0x9E 4
 		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldsi05.spl~ ~override~
-		SAY NAME1 @12
-		SAY UNIDENTIFIED_DESC @12
-		SAY DESC @12
+		COPY_EXISTING ~xaldsi01.spl~ ~override/xaldsi05.spl~
+		WRITE_LONG 0x9E 5
 	//}
 
 	//{ Lich Magic Resistance Boost
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr01.spl~ ~override~
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr.spl~ ~override/xaldmr01.spl~
+		WRITE_LONG 0x9E 5
 		SAY NAME1 @11
 		SAY UNIDENTIFIED_DESC @11
 		SAY DESC @11
 	
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr02.spl~ ~override~
-		SAY NAME1 @11
-		SAY UNIDENTIFIED_DESC @11
-		SAY DESC @11
+		COPY_EXISTING ~xaldmr01.spl~ ~override/xaldmr02.spl~
+		WRITE_LONG 0x9E 10
 		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr03.spl~ ~override~
-		SAY NAME1 @11
-		SAY UNIDENTIFIED_DESC @11
-		SAY DESC @11
+		COPY_EXISTING ~xaldmr01.spl~ ~override/xaldmr03.spl~
+		WRITE_LONG 0x9E 20
 		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr04.spl~ ~override~
-		SAY NAME1 @11
-		SAY UNIDENTIFIED_DESC @11
-		SAY DESC @11
+		COPY_EXISTING ~xaldmr01.spl~ ~override/xaldmr04.spl~
+		WRITE_LONG 0x9E 25
 		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr05.spl~ ~override~
-		SAY NAME1 @11
-		SAY UNIDENTIFIED_DESC @11
-		SAY DESC @11
+		COPY_EXISTING ~xaldmr01.spl~ ~override/xaldmr05.spl~
+		WRITE_LONG 0x9E 30
 		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr06.spl~ ~override~
-		SAY NAME1 @11
-		SAY UNIDENTIFIED_DESC @11
-		SAY DESC @11
+		COPY_EXISTING ~xaldmr01.spl~ ~override/xaldmr06.spl~
+		WRITE_LONG 0x9E 33
 		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr07.spl~ ~override~
-		SAY NAME1 @11
-		SAY UNIDENTIFIED_DESC @11
-		SAY DESC @11
+		COPY_EXISTING ~xaldmr01.spl~ ~override/xaldmr07.spl~
+		WRITE_LONG 0x9E 40
 		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr08.spl~ ~override~
-		SAY NAME1 @11
-		SAY UNIDENTIFIED_DESC @11
-		SAY DESC @11
+		COPY_EXISTING ~xaldmr01.spl~ ~override/xaldmr08.spl~
+		WRITE_LONG 0x9E 50
 		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr09.spl~ ~override~
-		SAY NAME1 @11
-		SAY UNIDENTIFIED_DESC @11
-		SAY DESC @11
+		COPY_EXISTING ~xaldmr01.spl~ ~override/xaldmr09.spl~
+		WRITE_LONG 0x9E 60
 		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr10.spl~ ~override~
-		SAY NAME1 @11
-		SAY UNIDENTIFIED_DESC @11
-		SAY DESC @11
+		COPY_EXISTING ~xaldmr01.spl~ ~override/xaldmr10.spl~
+		WRITE_LONG 0x9E 70
 		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr11.spl~ ~override~
-		SAY NAME1 @11
-		SAY UNIDENTIFIED_DESC @11
-		SAY DESC @11
+		COPY_EXISTING ~xaldmr01.spl~ ~override/xaldmr11.spl~
+		WRITE_LONG 0x9E 75
 		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr12.spl~ ~override~
-		SAY NAME1 @11
-		SAY UNIDENTIFIED_DESC @11
-		SAY DESC @11
+		COPY_EXISTING ~xaldmr01.spl~ ~override/xaldmr12.spl~
+		WRITE_LONG 0x9E 80
 		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr13.spl~ ~override~
-		SAY NAME1 @11
-		SAY UNIDENTIFIED_DESC @11
-		SAY DESC @11
+		COPY_EXISTING ~xaldmr01.spl~ ~override/xaldmr13.spl~
+		WRITE_LONG 0x9E 90
 		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldmr14.spl~ ~override~
-		SAY NAME1 @11
-		SAY UNIDENTIFIED_DESC @11
-		SAY DESC @11
+		COPY_EXISTING ~xaldmr01.spl~ ~override/xaldmr14.spl~
+		WRITE_LONG 0x9E 100
 	//}
 	
 	//{ Lich Mental Boost
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldiwc0.spl~ ~override~
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldiwc.spl~ ~override/xaldiwc0.spl~
+		WRITE_LONG 0x9E 1
+		WRITE_LONG 0xCE 1
+		WRITE_LONG 0xFE 1
 		SAY NAME1 @10
 		SAY UNIDENTIFIED_DESC @10
 		SAY DESC @10
 		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldiwc1.spl~ ~override~
-		SAY NAME1 @10
-		SAY UNIDENTIFIED_DESC @10
-		SAY DESC @10
+		COPY_EXISTING ~xaldiwc0.spl~ ~override/xaldiwc1.spl~ 
+		WRITE_LONG 0x9E 2
+		WRITE_LONG 0xCE 2
+		WRITE_LONG 0xFE 2
 	//}
 	
 	//{ Lich AC Modification
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldac00.spl~ ~override~
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldac.spl~ ~override/xaldac00.spl~
 		SAY NAME1 @9
 		SAY UNIDENTIFIED_DESC @9
 		SAY DESC @9
+		WRITE_BYTE 0x9E 253 // -3, Crushing
+		WRITE_LONG 0xCE 3 // Piercing
+		WRITE_LONG 0xFE 3 // Slashing
 		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldac01.spl~ ~override~
-		SAY NAME1 @9
-		SAY UNIDENTIFIED_DESC @9
-		SAY DESC @9
+		COPY_EXISTING ~xaldac00.bcs~ ~override/xaldac01.bcs~
+		WRITE_BYTE 0x9E 255 // -1, Crushing
+		WRITE_LONG 0xCE 1 // Piercing
+		WRITE_LONG 0xFE 1 // Slashing
 		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldac02.spl~ ~override~
-		SAY NAME1 @9
-		SAY UNIDENTIFIED_DESC @9
-		SAY DESC @9
+		COPY_EXISTING ~xaldac00.bcs~ ~override/xaldac02.bcs~
+		WRITE_BYTE 0x9E 254 // -2, Crushing
+		WRITE_LONG 0xCE 2 // Piercing
+		WRITE_LONG 0xFE 2 // Slashing
 		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldac03.spl~ ~override~
-		SAY NAME1 @9
-		SAY UNIDENTIFIED_DESC @9
-		SAY DESC @9
+		COPY_EXISTING ~xaldac00.bcs~ ~override/xaldac03.bcs~
+		WRITE_BYTE 0x9E 252 // -4, Crushing
+		WRITE_LONG 0xCE 4 // Piercing
+		WRITE_LONG 0xFE 4 // Slashing
 		
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldac04.spl~ ~override~
-		SAY NAME1 @9
-		SAY UNIDENTIFIED_DESC @9
-		SAY DESC @9
+		COPY_EXISTING ~xaldac00.bcs~ ~override/xaldac04.bcs~
+		WRITE_BYTE 0x9E 251 // -5, Crushing
+		WRITE_LONG 0xCE 5 // Piercing
+		WRITE_LONG 0xFE 5 // Slashing
 	//}
 	
 	//{ Lich Amination
