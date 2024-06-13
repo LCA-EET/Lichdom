@@ -288,6 +288,7 @@ IF ~~ THEN BEGIN XA_LD_RepairedPhylactery
 	IF ~~ THEN REPLY @144 /* ~Thank you!~ */
 	DO ~
 		TakePartyGold(6686)
+		DestroyGold(6686)
 	~
 	GOTO XA_LD_AnythingElse
 END
@@ -1067,6 +1068,7 @@ IF ~~ THEN BEGIN XA_LD_Transform
 	IF ~~ THEN 
 	DO ~
 		TakePartyGold(6686)
+		DestroyGold(6686)
 		SetGlobal("XA_LD_GaveDust", "GLOBAL", 0)
 		SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
 		SetGlobal("XA_LD_Touch5", "GLOBAL", 1)
