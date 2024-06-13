@@ -130,6 +130,7 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 	COPY ~%MOD_FOLDER%/bg2/cre/xaldgd.cre~ ~override~
 	SAY NAME1 @19
 	SAY NAME2 @19
+	WRITE_ASCII 0x1EA8 ~xaldbag0~ #8
 	
 	COPY ~%MOD_FOLDER%/bg2/cre/xabdbg.cre~ ~override~
 	SAY NAME1 @20
@@ -137,6 +138,11 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 //}
 
 //{ ITM
+	//{ Morris' Bag of Holding (SoA)
+		COPY_EXISTING ~bag31.itm~ ~override/xaldbag0.itm~
+		COPY_EXISTING ~bag31.sto~ ~override/xaldbag0.sto~
+	//}
+	
 	COPY ~%MOD_FOLDER%/bg2/itm/xaldcrwn.itm~ ~override~
 	SAY NAME1 @33
 	SAY NAME2 @33
