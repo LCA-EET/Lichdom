@@ -289,22 +289,22 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 		WRITE_LONG 0xCE 3 // Piercing
 		WRITE_LONG 0xFE 3 // Slashing
 		
-		COPY_EXISTING ~xaldac00.bcs~ ~override/xaldac01.bcs~
+		COPY_EXISTING ~xaldac00.spl~ ~override/xaldac01.spl~
 		WRITE_BYTE 0x9E 255 // -1, Crushing
 		WRITE_LONG 0xCE 1 // Piercing
 		WRITE_LONG 0xFE 1 // Slashing
 		
-		COPY_EXISTING ~xaldac00.bcs~ ~override/xaldac02.bcs~
+		COPY_EXISTING ~xaldac00.spl~ ~override/xaldac02.spl~
 		WRITE_BYTE 0x9E 254 // -2, Crushing
 		WRITE_LONG 0xCE 2 // Piercing
 		WRITE_LONG 0xFE 2 // Slashing
 		
-		COPY_EXISTING ~xaldac00.bcs~ ~override/xaldac03.bcs~
+		COPY_EXISTING ~xaldac00.spl~ ~override/xaldac03.spl~
 		WRITE_BYTE 0x9E 252 // -4, Crushing
 		WRITE_LONG 0xCE 4 // Piercing
 		WRITE_LONG 0xFE 4 // Slashing
 		
-		COPY_EXISTING ~xaldac00.bcs~ ~override/xaldac04.bcs~
+		COPY_EXISTING ~xaldac00.spl~ ~override/xaldac04.spl~
 		WRITE_BYTE 0x9E 251 // -5, Crushing
 		WRITE_LONG 0xCE 5 // Piercing
 		WRITE_LONG 0xFE 5 // Slashing
