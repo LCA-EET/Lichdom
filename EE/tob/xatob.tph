@@ -3,6 +3,11 @@ PRINT @56  // ~Processing Throne of Bhaal changes...~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/tob/d~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/tob/baf~ 
 
+COPY_EXISTING ~xaldgd2.dlg~ ~override~
+DECOMPILE_AND_PATCH BEGIN
+	REPLACE_TEXTUALLY ~6686~ ~%xald_cost%~
+END
+
 ACTION_IF(sod_carryover = 0) THEN BEGIN
 	INCLUDE ~%MOD_FOLDER%/sod/xasod_co.tph~
 END

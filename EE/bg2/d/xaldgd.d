@@ -12,7 +12,6 @@ BEGIN ~XALDGD~
 		
 		IF ~~ THEN
 		DO ~
-			SetGlobal("XA_LD_WeiduBugFix", "GLOBAL", 1)
 			SetGlobal("XA_LD_MetMorrisInAthkatla", "GLOBAL", 1)
 		~
 		GOTO XA_LD_IntroAthkatla

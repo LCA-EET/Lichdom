@@ -57,5 +57,14 @@ Get-ChildItem $dPath -Filter *.d -Recurse | Foreach-Object {
 	while ($output.contains("  ")){
 		$output = $output.replace("  ", " ")
 	}
+	if($output.contains(", ")){
+		$output = $output.replace(", ", ",")
+	}
+	if($output.contains(" ~")){
+		$output = $output.replace(" ~", "~")
+	}
+	if($output.contains("~ ")){
+		$output = $output.replace("~ ", "~")
+	}
 	$output | Out-File -FilePath $_.FullName -Encoding ASCII
 }

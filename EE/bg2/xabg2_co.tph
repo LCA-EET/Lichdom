@@ -35,7 +35,9 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 				xald_cost = xa_quantity
 		END
 		COPY_EXISTING ~xaldgd.dlg~ ~override~
-		REPLACE_TEXTUALLY ~6686~ ~%xald_cost%~
+		DECOMPILE_AND_PATCH BEGIN
+			REPLACE_TEXTUALLY ~6686~ ~%xald_cost%~
+		END
 	//}
 	
 	//{ Max Number of Rituals
@@ -48,7 +50,10 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 				xald_maxrituals = xa_quantity
 		END
 		COPY_EXISTING ~xaldmaxt.bcs~ ~override~
-		REPLACE_TEXTUALLY ~6686~ ~%xald_maxrituals%~
+		DECOMPILE_AND_PATCH BEGIN
+			REPLACE_TEXTUALLY ~6686~ ~%xald_maxrituals%~
+		END
+		
 	//}
 	/*
 	//{ Limit Lich Transformations to Base Game NPCs?
@@ -359,19 +364,30 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 
 //{ Transformation Scripts
 	COPY_EXISTING ~xaldtr01.bcs~ ~override/xaldtr02.bcs~
-	REPLACE_TEXTUALLY Player1 Player2
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY Player1 Player2
+	END
 	
 	COPY_EXISTING ~xaldtr01.bcs~ ~override/xaldtr03.bcs~
-	REPLACE_TEXTUALLY Player1 Player3
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY Player1 Player3
+	END
 
 	COPY_EXISTING ~xaldtr01.bcs~ ~override/xaldtr04.bcs~
-	REPLACE_TEXTUALLY Player1 Player4
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY Player1 Player4
+	END
 	
 	COPY_EXISTING ~xaldtr01.bcs~ ~override/xaldtr05.bcs~
-	REPLACE_TEXTUALLY Player1 Player5
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY Player1 Player5
+	END
 	
 	COPY_EXISTING ~xaldtr01.bcs~ ~override/xaldtr06.bcs~
-	REPLACE_TEXTUALLY Player1 Player6
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY Player1 Player6
+	END
+	
 //}
 
 //{ Mod Integration

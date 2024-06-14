@@ -329,48 +329,10 @@ END
 IF ~~ THEN BEGIN XA_LD_RepairedPhylactery
 	SAY @143 /* ~It is done. Treat it with care.~ */
 	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 0)
-		PartyGoldGT(119999)
-	~ THEN REPLY @144 /* ~Thank you!~ */
+	IF ~~ THEN REPLY @144 /* ~Thank you!~ */
 	DO ~
-		TakePartyGold(120000)
-	~
-	GOTO XA_LD_AnythingElse
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 1)
-		PartyGoldGT(99999)
-	~ THEN REPLY @144 /* ~Thank you!~ */
-	DO ~
-		TakePartyGold(100000)
-	~
-	GOTO XA_LD_AnythingElse
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 2)
-		PartyGoldGT(74999)
-	~ THEN REPLY @144 /* ~Thank you!~ */
-	DO ~
-		TakePartyGold(75000)
-	~
-	GOTO XA_LD_AnythingElse
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 3)
-		PartyGoldGT(49999)
-	~ THEN REPLY @144 /* ~Thank you!~ */
-	DO ~
-		TakePartyGold(50000)
-	~
-	GOTO XA_LD_AnythingElse
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 4)
-		PartyGoldGT(39999)
-	~ THEN REPLY @144 /* ~Thank you!~ */
-	DO ~
-		TakePartyGold(40000)
+		TakePartyGold(6686)
+		DestroyGold(6686)
 	~
 	GOTO XA_LD_AnythingElse
 END
@@ -1209,59 +1171,13 @@ END
 IF ~~ THEN BEGIN XA_LD_Transform
 	SAY @233  /* ~Prepare yourself...~ */
 
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 0)
-		PartyGoldGT(119999)
-	~ THEN 
+	IF ~~ THEN 
 	DO ~
-		TakePartyGold(120000)
+		TakePartyGold(6686)
+		DestroyGold(6686)
 		SetGlobal("XA_LD_GaveDust", "GLOBAL", 0)
 		SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
 		SetGlobal("XA_LD_Touch5", "GLOBAL", 1)
-	~
-	EXIT
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 1)
-		PartyGoldGT(99999)
-	~ THEN
-	DO ~
-		TakePartyGold(100000)
-		SetGlobal("XA_LD_GaveDust", "GLOBAL", 0)
-		SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
-	~
-	EXIT
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 2)
-		PartyGoldGT(74999)
-	~ THEN
-	DO ~
-		TakePartyGold(75000)
-		SetGlobal("XA_LD_GaveDust", "GLOBAL", 0)
-		SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
-	~
-	EXIT
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 3)
-		PartyGoldGT(49999)
-	~ THEN
-	DO ~
-		TakePartyGold(50000)
-		SetGlobal("XA_LD_GaveDust", "GLOBAL", 0)
-		SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
-	~
-	EXIT
-	
-	IF ~
-		Global("XA_LD_TransformationCost", "GLOBAL", 4)
-		PartyGoldGT(39999)
-	~ THEN
-	DO ~
-		TakePartyGold(40000)
-		SetGlobal("XA_LD_GaveDust", "GLOBAL", 0)
-		SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
 	~
 	EXIT
 
