@@ -162,10 +162,12 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 	SAY NAME2 @16
 
 	COPY ~%MOD_FOLDER%/bg2/itm/xaldphyl.itm~ ~override~
+	WRITE_ASCII 0x3A ~xaiphyl~ #8
 	SAY NAME2 @2
 	SAY DESC @3
 
 	COPY ~%MOD_FOLDER%/bg2/itm/xaldphyd.itm~ ~override~
+	WRITE_ASCII 0x3A ~xaiphyl~ #8
 	SAY NAME2 @23
 	SAY DESC @24
 

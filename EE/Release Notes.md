@@ -1,10 +1,13 @@
 ## Lichdom Release Notes
 
-# v1.1
+# v1.1 2024-06-16
 * Added a new install option:
 *   Adjust the maximum number of lich transformations that can be performed. 
 * Modified existing installer options to allow for greater flexibility.
 * Refactoring to improve maintainability moving forward.
+* Fixed a bug concerning Morris' Bag of Holding.
+* Gold paid to Morris to perform a Lich transformation ritual will now be destroyed, instead of being held indefinitely by Morris.
+* Corrected an icon issue with the Shroud of the Lich.
 
 # v1.0.1 2024-05-11
 * Installer refactoring; no content changes.
