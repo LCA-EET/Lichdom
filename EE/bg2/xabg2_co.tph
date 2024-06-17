@@ -174,7 +174,7 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 	COPY_EXISTING ~plot16b.itm~ ~override/xaldlc00.itm~
 	SAY NAME1 @25
 	SAY NAME2 @25
-	SAY DESC ~The cost to perform the ritual is %xald_cost%.~
+	SAY DESC ~The cost to perform the ritual is %xald_cost% gold.~
 //}
 
 
