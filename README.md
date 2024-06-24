@@ -321,9 +321,7 @@ _What's going on here?  I too want to know!_
 - Lichdom is intended as a high initial cost, high long-time return for the character who undergoes this transformation.  The auto-revival aspect matters more in no reload runs.
 
 **How am I meant to get 120,000 or more coins to afford this transformation at 12, the lowest possible level?!  That's nuts!**
-- I wondered the same thing about the [D&D 3.5 Lich](https://www.d20srd.org/srd/monsters/lich.htm) that only needs caster level 11 to undergo the ritual when the expected wealth by level means that characters who become Liches are likely doing it MUCH later, like level 15+.
-
-The truest answer is, "Adventure!"  Remember, you don't NEED to undergo the Lichdom ritual ASAP!
+- I wondered the same thing about the [D&D 3.5 Lich](https://www.d20srd.org/srd/monsters/lich.htm) that only needs caster level 11 to undergo the ritual when the expected wealth by level means that characters who become Liches are likely doing it MUCH later, like level 15+.  The truest answer is, "Adventure!"  Remember, you don't NEED to undergo the Lichdom ritual ASAP!
 
 **Why require only level 12 in a casting class to become a Lich?**
 - That's inspired by the [D&D 3.5 Lich](https://www.d20srd.org/srd/monsters/lich.htm) which requires caster level 11.  Since caster levels don't work well as prerequisites in the Infinity Engine, I rounded up to 12 since that's when full casters (Cleric, Druid/Shaman, and Sorcerer/Wizard) start to get their level 6 spell slots in the Infinity Engine games.
@@ -332,9 +330,6 @@ The truest answer is, "Adventure!"  Remember, you don't NEED to undergo the Lich
 
 **What plans do you have for BG1 (BGEE) or SoD content for Liches?**
 - None.  Lichdom is simply a high-level thing, just like ascending to godhood is assumed to only be for high levels.
-
-**What plans do you have to make a BG2EE version of Lichdom that doesn't require EET??**
-- LCA, the coder of this mod, has an estimated release date of 2024 which he set to allow himself time for all relevant projects.
 
 **Why make the phylactery a cloak instead of a more traditional amulet or crown?**
 - Amulets: Edwin's Amulet is normally glued to his neck, and I wanted Liches to be able to use [https://baldursgate.fandom.com/wiki/Amulet_of_Power](Amulets of Power).
@@ -358,7 +353,7 @@ Shroud of the Lich is also an intentional reference to [an ability of the same n
 - If this happens to you, it's from a technical limitation.
 
 **Why make Lichdom Liches immune to Turn Undead and Rebuke Undead?**
-- This way, classes that can use these abilities won't affect themselves nor their Lichdom Lich party members.  (No sense in blowing up your allies because you misclicked the Turn Undead button.)
+- This way, classes that can use these abilities won't affect themselves nor their Lichdom Lich party members.  (No sense in blowing up your allies because you misclicked the Turn Undead button.)  Also, enemy priests were not likely to use Turn Undead or Rebuke Undead on the party.
 
 **Why make a mod about becoming a Lich?**
 - In Infinity Engine games, Lichdom is like _dimension door_ - it seems like plenty of creatures can use it _except_ you!  Also, the notion of being able to use this option that's been in the D&D books for decades in various forms appealed to me.
@@ -385,11 +380,16 @@ Shroud of the Lich is also an intentional reference to [an ability of the same n
   - Minsc
 
 **I transitioned from *Shadows of Amn* to *Throne of Bhaal* (SoA to ToB) by importing my saved game and recruitable characters who weren't in my party lost their Lichdom and other stats!  What happened?!**
-- Importing a save from SoA to ToB simply resets recruitable character stats to their base for ToB, even in vanilla BG2EE.  For example, it doesn't matter if Keldorn has Carsomyr and the best gear equipped in SoA if he's outside your party:  His gear and stats simply reset to their baseline for ToB.)  (I discovered this resetting phenomenon by accident in 2016 when I put some characters in the Watcher's Keep 'parking lot' to preserve them between campaigns.  These NPCs had awkward behavior.)
+- Importing a save from SoA to ToB simply resets recruitable character stats to their base for ToB, even in vanilla BG2EE.  For example, it doesn't matter if Keldorn has Carsomyr and the best gear equipped in SoA if he's outside your party:  His gear and stats simply reset to their baseline for ToB.  (I discovered this resetting phenomenon by accident in 2016 when I put some characters in the Watcher's Keep 'parking lot' to preserve them between campaigns.  These NPCs had awkward behavior.)
 
 - However, if you qualify for Lichdom in SoA by giving Morris the Lich Dust he requests, then import that save to ToB, your quest progress will be kept.  You won't need to get more Lich Dust to transform more party members into Liches.
 
 - Playing on EET (Enhanced Edition Trilogy) *will* preserve the stats of recruitable characters and your quest progress between campaigns, regardless of whether they're in the party.
+
+**How do I get Lich Dusts?**
+- Remember, killing ANY Lich or Demilich or Alhoon (Illithid Lich) or Elemental Lich should drop 1 Lich Dust per kill.  Vanilla locations for these creatures still apply.
+
+- If you use any mods that add any Liches of the aforementioned types to the game and install Lichdom after these mods, these creatures should also drop these Lich Dust items.
 
 **What should I do with the extra Lich Dust items I find?**
 - As of this writing, the party only needs 3 Lich Dusts to begin the transformation from Morris.  Any spares can be sold, dropped, kept, or whatever you feel like doing with them.  If you want to make a mod that uses Lich Dust from Lichdom, such as in item crafting, go ahead!
