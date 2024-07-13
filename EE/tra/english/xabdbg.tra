@@ -98,3 +98,5 @@
 @97 = ~SetGlobal("XA_LD_MetMorrisInAthkatla", "GLOBAL", 1)~
 @98 = ~SetGlobal("XA_LD_MetMorrisInSaradush", "GLOBAL", 0)~
 @99 = ~SetGlobal("XA_LD_MetMorrisInSaradush", "GLOBAL", 1)~
+@100 = ~Spawn Morris (XALDGD2).~
+@101 = ~Create six godbows.~

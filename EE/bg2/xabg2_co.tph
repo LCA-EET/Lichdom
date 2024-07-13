@@ -4,6 +4,10 @@ OUTER_SET bg2_carryover = 1
 
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~ 
 
+ACTION_IF(xalddebug = 1) THEN BEGIN
+	EXTEND_TOP ~baldur.bcs~ ~override/xalddbg.bcs~
+END
+
 //{ Config file processing
 
 	//{ Number of Crowns for Sale

@@ -69,6 +69,23 @@ IF ~
 	~
 	EXIT
 	
+	IF ~~ THEN REPLY @100
+	DO ~
+		CreateCreature("XALDGD2", [-1.-1], N)
+	~
+	EXIT
+	
+	IF ~~ THEN REPLY @101
+	DO ~
+		GiveItemCreate("godbow", Player1, 0,0,0)
+		GiveItemCreate("godbow", Player1, 0,0,0)
+		GiveItemCreate("godbow", Player1, 0,0,0)
+		GiveItemCreate("godbow", Player1, 0,0,0)
+		GiveItemCreate("godbow", Player1, 0,0,0)
+		GiveItemCreate("godbow", Player1, 0,0,0)
+	~
+	EXIT
+	
 	IF ~~ THEN REPLY @52
 	DO ~
 		SetGlobal("XA_LD_AR0800", "GLOBAL", 1)

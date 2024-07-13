@@ -17,5 +17,6 @@ IF
 		PickPocketFailed([ANYONE])
 THEN
 	RESPONSE #100
+		SetGlobal("XA_LD_MorrisDD800", "GLOBAL", 1)
 		ReallyForceSpellRES("OHBTELWE",Myself)
 END

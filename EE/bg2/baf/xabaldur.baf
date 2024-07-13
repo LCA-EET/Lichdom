@@ -1,13 +1,3 @@
-
-IF
-	AreaCheck("AR0602")
-	GlobalLT("XA_LD_DebuggerSpawn0602", "GLOBAL", 1)
-THEN
-	RESPONSE #100
-		SetGlobal("XA_LD_DebuggerSpawn0602", "GLOBAL", 1)
-		CreateCreature("XABDBG", [3700.2900], N)
-END
-
 //{ Romance Termination
 IF
 	Race(Player1, LICH)

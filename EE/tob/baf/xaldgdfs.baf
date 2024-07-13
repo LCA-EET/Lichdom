@@ -39,9 +39,11 @@ THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
 		DisplayString(Myself,@1)  // Spell Trigger—Fired
+		DisplayString(Myself,@3)  // ~Abi-Dalzim's Horrid Wilting~
 		ApplySpell(NearestEnemyOf(Myself), WIZARD_ABI_DALZIMS_HORRID_WILTING)
 		ApplySpell(NearestEnemyOf(Myself), WIZARD_ABI_DALZIMS_HORRID_WILTING)
 		ApplySpell(NearestEnemyOf(Myself), WIZARD_ABI_DALZIMS_HORRID_WILTING)
+		DisplayString(Myself,@4)  // Stoneskin
 		ApplySpell(Myself, WIZARD_STONE_SKIN)			
 		SetInterrupt(TRUE)
 		Continue()

@@ -1,0 +1,9 @@
+//{ Add the Assistant for Debugging Purposes
+IF
+	!TriggerOverride(Player1,HaveSpellRES("xaldasst")) 
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_DisableAssistant", "GLOBAL", 0)
+		ActionOverride(Player1, AddSpecialAbility("xaldasst"))
+END
+//}

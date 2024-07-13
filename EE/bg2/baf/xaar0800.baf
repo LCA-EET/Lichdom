@@ -30,3 +30,12 @@ THEN
 		ActionOverride("QI#Ela", Attack(Player1))
 		Continue()
 END
+
+IF 
+	Global("XA_LD_MorrisDD800", "GLOBAL", 1)
+	InMyArea("xaldgd")
+	!Dead("xaldgd")
+THEN
+	RESPONSE #100
+		ActionOverride("xaldgd", DestroySelf())
+END
