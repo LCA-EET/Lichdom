@@ -36,6 +36,7 @@ EXTEND_TOP ~AR6200.BCS~		~%MOD_FOLDER%/tob/baf/xaar6200.baf~
 COPY_EXISTING ~xaldgd.cre~ ~override/xaldgd2.cre~
 WRITE_ASCII 0x1EA8 ~xaldbag1~ #8
 WRITE_ASCII 0x2CC ~xaldgd2~ #8
+WRITE_ASCII 0x250 ~xaldgdfs~ #8
 
 OUTER_SPRINT baldur_file ~baldur25~ 
 INCLUDE ~%MOD_FOLDER%/lich/xalich.tph~

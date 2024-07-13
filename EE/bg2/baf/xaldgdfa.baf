@@ -1,0 +1,21 @@
+// Athkatla Combat Script
+
+IF
+	PickPocketFailed([ANYONE])
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		DisplayStringHead(Myself, @0) // ~I despise your thievery. Goodbye.~ [xald1114]
+		SetInterrupt(TRUE)
+		Continue()
+END
+
+IF
+	OR(3)
+		See(NearestEnemyOf(Myself))
+		AttackedBy([ANYONE], DEFAULT)
+		PickPocketFailed([ANYONE])
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("OHBTELWE",Myself)
+END

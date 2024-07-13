@@ -1,5 +1,8 @@
 ## Lichdom Release Notes
 
+# v1.1a 2024-07-13
+* Improved Morris' combat scripting.
+
 # v1.1 2024-06-16
 * Added a new install option:
 *   Adjust the maximum number of lich transformations that can be performed. 

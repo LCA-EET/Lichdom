@@ -66,5 +66,32 @@ Get-ChildItem $dPath -Filter *.d -Recurse | Foreach-Object {
 	if($output.contains("~ ")){
 		$output = $output.replace("~ ", "~")
 	}
+	if($output.contains(" =")){
+		$output = $output.replace(" =", "=")
+	}
+	if($output.contains("= ")){
+		$output = $output.replace("= ", "=")
+	}
+	if($output.contains("IF~~THEN REPLY")){
+		$output = $output.replace("IF~~THEN REPLY", "++")
+	}
+	if($output.contains(" ++ ")){
+		$output = $output.replace(" ++ ", "++")
+	}
+	if($output.contains(" GOTO ")){
+		$output = $output.replace(" GOTO ", "+")
+	}
+	if($output.contains(" GOTO")){
+		$output = $output.replace(" GOTO", "+")
+	}
+	if($output.contains("GOTO ")){
+		$output = $output.replace("GOTO ", "+")
+	}
+	if($output.contains(") ")){
+		$output = $output.replace(") ", ")")
+	}
+	if($output.contains(" @")){
+		$output = $output.replace(" @", "@")
+	}
 	$output | Out-File -FilePath $_.FullName -Encoding ASCII
 }

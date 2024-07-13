@@ -136,6 +136,7 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 	SAY NAME1 @19
 	SAY NAME2 @19
 	WRITE_ASCII 0x1EA8 ~xaldbag0~ #8
+	WRITE_ASCII 0x250 ~xaldgdfa~ #8
 	
 	COPY ~%MOD_FOLDER%/bg2/cre/xabdbg.cre~ ~override~
 	SAY NAME1 @20
