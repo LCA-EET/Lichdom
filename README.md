@@ -256,7 +256,7 @@ Specifically, Lichdom has a small amount of cross-mod content AKA crossmod conte
 
 - Mods that port BG1 NPCs to BG2EE.  Use of these characters is permissible as per Wizards of the Coast's Fan Content Policy.
 
-Lichdom should be installed BEFORE these mods if you use them:  [EET End](https://github.com/Gibberlings3/EET).  Installing most mods after EET End is a *bad idea* that an corrupt your game or otherwise produce undesirable effects!
+Lichdom should be installed BEFORE these mods if you use them:  [EET End](https://github.com/Gibberlings3/EET).  Installing most mods after EET End is a *bad idea* that can corrupt your game or otherwise produce undesirable effects!
 
 # New Ability and Item Descriptions
 ![This Lich admires his new phylactery.  His life is in his hands.](https://github.com/LCA-EET/lichdom/blob/main/Documentation%20Images/Force-Chest-Phylactery-33.png)
@@ -427,6 +427,8 @@ _We don't go through life alone.  We all get by with a little help from our form
 - [Endarire](https://paypal.me/Endarire/10): He did the design, voice acting, and writing for this mod - including this documentation!
 
 - [LCA](https://patreon.com/EETMods): He coded this mod and proofread various documentation.
+
+- RubyFeeedback: Thanks to your passion for Lichdom and helping to fix stuff.
 
 - k4thos and others involved in making and publishing [Protagonist Can Die](https://forums.beamdog.com/discussion/74528/mod-player1-can-die) which was sometimes called Player1 Can Die.  No code from this mod was used for Lichdom, but its existence was an inspiration for the possibility of Lichdom's auto-revival being implemented!  k4thos also made EET, and there was much rejoicing!
 
