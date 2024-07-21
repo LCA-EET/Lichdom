@@ -1,5 +1,8 @@
 ## Lichdom Release Notes
 
+# v1.1b 2024-07-20
+* Lich phylacteries are no longer considered critical items. With this change, the death of a lich party member will no longer result in their phylactery being transferred to Player1's inventory.
+
 # v1.1a 2024-07-13
 * Improved Morris' combat scripting.
 

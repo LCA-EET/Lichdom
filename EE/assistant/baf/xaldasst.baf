@@ -1,0 +1,55 @@
+//{ Add Lichdom Assistant
+	IF
+		ActionListEmpty()
+		!TriggerOverride(Player1,HaveSpellRES("XALDASST"))
+		Global("XA_LD_DisableAssistant", "GLOBAL", 0) 
+		GlobalLT("XA_LD_AddLDAssistantTimerSet", "GLOBAL", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			SetGlobal("XA_LD_AddLDAssistantTimerSet", "GLOBAL", 1)
+			SetGlobalTimer("XA_LD_AddLDAssistantTimer", "GLOBAL", ONE_ROUND)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		GlobalTimerExpired("XA_LD_AddLDAssistantTimer", "GLOBAL")
+		Global("XA_LD_DisableAssistant", "GLOBAL", 0)
+		Global("XA_LD_AddLDAssistantTimerSet", "GLOBAL", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ActionOverride(Player1, AddSpecialAbility("XALDASST"))
+			SetGlobal("XA_LD_AddLDAssistantTimerSet", "GLOBAL", 0)
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		TriggerOverride(Player1,HaveSpellRES("XALDASST"))
+		Global("XA_LD_DisableAssistant", "GLOBAL", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			ActionOverride(Player1, RemoveSpellRES("XALDASST"))
+			SetInterrupt(TRUE)
+			Continue()
+	END
+	
+//}
+
+//{ Launch Lichdom Assistant
+	IF
+		Global("XALDASST", "GLOBAL", 1)
+	THEN
+		RESPONSE #100
+			SetInterrupt(FALSE)
+			SetGlobal("XALDASST","GLOBAL",0)
+			SetGlobal("XA_LD_DebugInit", "GLOBAL", 1)
+			ActionOverride(Player1, CreateCreature("XALDDBG", [-1.-1], N))
+			SetInterrupt(TRUE)
+	END
+//}
