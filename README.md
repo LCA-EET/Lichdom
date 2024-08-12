@@ -428,6 +428,8 @@ _We don't go through life alone.  We all get by with a little help from our form
 
 - [LCA](https://patreon.com/EETMods): He coded this mod and proofread various documentation.
 
+- mogui45: He provided a Chinese translation.
+
 - RubyFeeedback: Thanks to your passion for Lichdom and helping to fix stuff.
 
 - k4thos and others involved in making and publishing [Protagonist Can Die](https://forums.beamdog.com/discussion/74528/mod-player1-can-die) which was sometimes called Player1 Can Die.  No code from this mod was used for Lichdom, but its existence was an inspiration for the possibility of Lichdom's auto-revival being implemented!  k4thos also made EET, and there was much rejoicing!
