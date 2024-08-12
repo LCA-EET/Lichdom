@@ -1,5 +1,8 @@
 ## Lichdom Release Notes
 
+# v1.2.1 2024-08-12
+* Added simplified Chinese translation, courtesy of mogui45.
+
 # v1.2 2024-07-21
 * Lich phylacteries are no longer considered critical items. With this change, the death of a lich party member will no longer result in their phylactery being transferred to Player1's inventory.
 * Made the Lichdom Assistant an optional component.
