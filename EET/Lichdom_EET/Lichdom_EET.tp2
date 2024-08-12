@@ -19,7 +19,7 @@ SUPPORT ~Daniel Valle, dan@danielvalle.net~
 
 AUTO_TRA ~lichdom_eet/tra/%s~ //automatically associate .tras to their respective .D files
 LANGUAGE ~English~ ~english~ ~lichdom_eet/tra/english/xalich.tra~
-
+LANGUAGE ~Simplified Chinese（by mogui45）~ ~schinese~ ~lichdom_eet/tra/schinese/xalich.tra~
 BEGIN
 @0 /* ~Lichdom, for Baldur's Gate EET.~ */
 REQUIRE_PREDICATE GAME_IS ~bgee eet~ @1 /* ~This mod requires the EET mod to be installed.~ */
