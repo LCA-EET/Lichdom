@@ -86,7 +86,8 @@ INCLUDE ~%MOD_FOLDER%/lich/xalich.tph~
 			//{ Ajantis
 			ACTION_IF FILE_EXISTS_IN_GAME ~7XAJA25J.dlg~ THEN BEGIN
 				PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
-				COMPILE ~%MOD_FOLDER%/compat/bg1/ajantis/xaldtob.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+				COMPILE ~%MOD_FOLDER%/compat/bg1/ajantis/d/xaldtob.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+				EXTEND_TOP ~BALDUR25.BCS~ ~%MOD_FOLDER%/compat/bg1/ajantis/baf/xabaldur.baf~
 			END
 			//}
 		

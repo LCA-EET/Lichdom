@@ -1,7 +1,7 @@
 BEGIN ~XALDDBG~
 
 	IF ~
-		Global("xaldasst", "GLOBAL", 1)
+		True()
 	~ BEGIN XA_MainMenu
 		SAY @0 /*~Welcome to the Lichdom assistant. Select one of the options below.~*/
 		
@@ -44,11 +44,15 @@ BEGIN ~XALDDBG~
 		IF ~~ THEN REPLY @79 /*~Lich Party Dialog Options.~*/
 		GOTO XA_ChangeDialogOptions
 		
-		IF ~~ THEN REPLY @78
-		DO ~
-			CreateCreature("xabdbg", [-1.-1], N)
-		~
-		GOTO XA_ExitAssistant
+		IF ~
+			GlobalLT("XA_LD_DebugAcknowledge", "GLOBAL", 1)
+		~ THEN REPLY @78/* ~Open Debugger.~*/
+		GOTO XA_LaunchDebugger
+		
+		IF ~
+			Global("XA_LD_DebugAcknowledge", "GLOBAL", 1)
+		~ THEN REPLY @78/* ~Open Debugger.~*/
+		GOTO XA_DebugInit
 		
 		IF ~~ THEN REPLY @1 /*~Exit.~*/
 		GOTO XA_ExitAssistant
@@ -549,9 +553,7 @@ BEGIN ~XALDDBG~
 		EXIT
 	END
 	
-	IF ~
-		True()
-	~ THEN BEGIN XA_DebugInit
+	IF ~~ THEN BEGIN XA_DebugInit
 		SAY @100
 		
 		IF ~~ THEN REPLY @196
@@ -1093,5 +1095,18 @@ BEGIN ~XALDDBG~
 		
 		IF ~~ THEN
 		GOTO XA_DebugInit
+	END
+	
+	IF ~~ THEN BEGIN XA_LaunchDebugger
+		SAY @202 /*~WARNING: The debugger is meant to be used for testing purposes only. Improper alterations to the game state can crash the game, or make it so that you cannot complete the game.~ */
+		
+		IF ~~ THEN REPLY @203 /* ~I understand the risks. Proceed.~*/
+		DO ~
+			SetGlobal("XA_LD_DebugAcknowledge", "GLOBAL", 1)
+		~
+		GOTO XA_DebugInit
+		
+		IF ~~ THEN REPLY @204
+		GOTO XA_MainMenu
 	END
 //}

@@ -8,6 +8,7 @@ Remove-Item $archive -Force
 Remove-Item $exeName -Force
 
 $folders = @(
+'assistant',
 'bg2',
 'compat',
 'lich',

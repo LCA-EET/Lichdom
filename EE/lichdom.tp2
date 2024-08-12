@@ -50,4 +50,19 @@ END ELSE BEGIN
 	END
 END
 
+OUTER_SET xald_ia = 0
+
+LAF xa_determine_quantity
+	INT_VAR
+		xa_min_qty = 0
+		xa_max_qty = 1
+		xa_str_ref = RESOLVE_STR_REF(@67)
+	RET
+		xald_ia = xa_quantity
+END
+ACTION_IF (xald_ia = 1) THEN BEGIN
+	INCLUDE ~%MOD_FOLDER%/assistant/xaassistant.tph~
+END
+
 PRINT @57  // ~Installation was successful. Enjoy!~
+

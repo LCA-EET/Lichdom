@@ -1,39 +1,36 @@
-PRINT @850  /* ~Processing LCA Assistant...~ */
+PRINT @63 /* ~Processing Lichdom Assistant...~ */
 
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/assistant/baf~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/assistant/d~
 
 ACTION_IF FILE_EXISTS_IN_GAME ~BALDUR.BCS~ THEN BEGIN
-	EXTEND_BOTTOM ~BALDUR.BCS~ ~%MOD_FOLDER%/assistant/baf/xalcasst.baf~
-	PRINT @852
+	EXTEND_BOTTOM ~BALDUR.BCS~ ~%MOD_FOLDER%/assistant/baf/xaldasst.baf~
+	PRINT @61
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~BDBALDUR.BCS~ THEN BEGIN
-	EXTEND_BOTTOM ~BDBALDUR.BCS~ ~%MOD_FOLDER%/assistant/baf/xalcasst.baf~
-	PRINT @853
+	EXTEND_BOTTOM ~BDBALDUR.BCS~ ~%MOD_FOLDER%/assistant/baf/xaldasst.baf~
+	PRINT @64
 END
 
 ACTION_IF FILE_EXISTS_IN_GAME ~BALDUR25.BCS~ THEN BEGIN
-	EXTEND_BOTTOM ~BALDUR25.BCS~ ~%MOD_FOLDER%/assistant/baf/xalcasst.baf~
-	PRINT @854
+	EXTEND_BOTTOM ~BALDUR25.BCS~ ~%MOD_FOLDER%/assistant/baf/xaldasst.baf~
+	PRINT @62
 END
 
 //{ bam
-	COPY ~%MOD_FOLDER%/assistant/bam/xalcasst.bam~ ~override~
+	COPY ~%MOD_FOLDER%/assistant/bam/xaldasst.bam~ ~override~
 //}
 
 //{ cre
-	COPY ~%MOD_FOLDER%/assistant/cre/xalcdbg.cre~ ~override~
-	SAY NAME1 @851/* ~LCA Assistant~ */
-	SAY NAME2 @851/* ~LCA Assistant~*/
+	COPY ~%MOD_FOLDER%/assistant/cre/xalddbg.cre~ ~override~
+	SAY NAME1 @7/* ~Lichdom Assistant~ */
+	SAY NAME2 @7/* ~Lichdom Assistant~*/
 	
-	COPY ~%MOD_FOLDER%/assistant/cre/xadummy.cre~ ~override~
-	SAY NAME1 @855/* ~Target Dummy~ */
-	SAY NAME2 @855/* ~Target Dummy~*/
 //}
 
 //{ spl
-	COPY ~%MOD_FOLDER%/assistant/spl/xalcasst.spl~ ~override~
-	SAY NAME1 @851/* ~LCA Assistant~ */
-	SAY NAME2 @851/* ~LCA Assistant~*/
+	COPY ~%MOD_FOLDER%/assistant/spl/xaldasst.spl~ ~override~
+	SAY NAME1 @7/* ~Lichdom Assistant~ */
+	SAY NAME2 @7/* ~Lichdom Assistant~*/
 //}

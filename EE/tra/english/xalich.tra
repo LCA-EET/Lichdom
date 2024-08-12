@@ -93,7 +93,17 @@ Provide a value from 40000 to 200000, then press Enter: ~
 @54 = ~Processing Shadows of Amn changes...~
 @55 = ~Processing Shadows of Amn carry forwards...~
 @56 = ~Processing Throne of Bhaal changes...~
-@57 = ~Installation was successful. Enjoy!~
+@57 = ~Lichdom installation was successful. Enjoy!~
 @58 = ~Beaurin Legacy mod detected. Updating dialogs accordingly...~
 @59 = ~Zakrion mod detected. Updating dialogs accordingly...~
 @60 = ~Khalid BG2 mod detected. Updating dialogs accordingly...~
+@61 = ~Added Lichdom Assistant to Baldur.bcs~
+@62 = ~Added Lichdom Assistant to Baldur25.bcs~
+@63 = ~Processing Lichdom Assistant...~
+@64 = ~Added Lichdom Assistant to BDBaldur.bcs~
+@65 = ~Lichdom Assistant~
+@66 = ~This component requires the Lichdom mod to be installed first. Please install the Lichdom mod, then try again.~
+@67 = ~Install Lichdom Assistant?
+0.) No.
+1.) Yes.
+Enter a value: ~

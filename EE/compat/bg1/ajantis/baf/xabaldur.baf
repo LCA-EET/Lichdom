@@ -1,0 +1,14 @@
+IF
+	InParty("7XAJAN")
+	Race(Player1, LICH)
+	Global("XA_LD_AjantisWillLeave", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("XA_LD_AjantisLeft", "GLOBAL", 1)
+		ActionOverride("7XAJAN", SetLeavePartyDialogFile())
+		ActionOverride("7XAJAN", LeaveParty())
+		ActionOverride("7XAJAN", EscapeArea())
+		SetInterrupt(TRUE)
+		Continue()
+END

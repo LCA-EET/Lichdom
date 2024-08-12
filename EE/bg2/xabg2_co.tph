@@ -141,10 +141,6 @@ END
 	SAY NAME2 @19
 	WRITE_ASCII 0x1EA8 ~xaldbag0~ #8
 	WRITE_ASCII 0x250 ~xaldgdfa~ #8
-	
-	COPY ~%MOD_FOLDER%/bg2/cre/xabdbg.cre~ ~override~
-	SAY NAME1 @20
-	SAY NAME2 @20
 //}
 
 //{ ITM
@@ -424,7 +420,8 @@ END
 		//{ Ajantis
 		ACTION_IF FILE_EXISTS_IN_GAME ~7XAJANJ.dlg~ THEN BEGIN
 			PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
-			COMPILE ~%MOD_FOLDER%/compat/bg1/ajantis/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+			COMPILE ~%MOD_FOLDER%/compat/bg1/ajantis/d/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+			EXTEND_TOP ~BALDUR.BCS~ ~%MOD_FOLDER%/compat/bg1/ajantis/baf/xabaldur.baf~
 		END
 		//}
 	

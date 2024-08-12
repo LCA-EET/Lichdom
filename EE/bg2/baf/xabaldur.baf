@@ -19,21 +19,6 @@ END
 
 //{ Departures after Lich Transformation
 IF
-	InParty("7XAJAN")
-	Race(Player1, LICH)
-	Global("XA_LD_AjantisWillLeave", "GLOBAL", 1)
-THEN
-	RESPONSE #100
-		SetInterrupt(FALSE)
-		SetGlobal("XA_LD_AjantisLeft", "GLOBAL", 1)
-		ActionOverride("7XAJAN", SetLeavePartyDialogFile())
-		ActionOverride("7XAJAN", LeaveParty())
-		ActionOverride("7XAJAN", EscapeArea())
-		SetInterrupt(TRUE)
-		Continue()
-END
-
-IF
 	InParty("Keldorn")
 	Race(Player1, LICH)
 	Global("XA_LD_KeldornWillLeave", "GLOBAL", 1)
@@ -78,44 +63,6 @@ THEN
 		SetInterrupt(TRUE)
 		Continue()
 END
-//}
-
-
-
-//{ Launch Lichdom Assistant
-	IF
-		Global("xaldasst", "GLOBAL", 1)
-	THEN
-		RESPONSE #100
-			ActionOverride(Player1,StartDialog("player1",Player1))
-	END
-//}
-
-//{ Add Lichdom Assistant
-	IF
-		ActionListEmpty()
-		!TriggerOverride(Player1,HaveSpellRES("xaldasst")) 
-		GlobalLT("XA_LD_DisableAssistant", "GLOBAL", 1)
-		OR(2)
-			GlobalGT("XA_LD_MetMorrisInSaradush", "GLOBAL", 0)
-			GlobalGT("XA_LD_MetMorrisInAthkatla", "GLOBAL", 0)
-	THEN
-		RESPONSE #100
-			ActionOverride(Player1, AddSpecialAbility("xaldasst"))
-			Continue()
-	END
-//}
-
-//{ Remove Assistant
-	IF
-		ActionListEmpty()
-		TriggerOverride(Player1,HaveSpellRES("xaldasst"))
-		Global("XA_LD_DisableAssistant", "GLOBAL", 1)
-	THEN
-		RESPONSE #100
-			ActionOverride(Player1, RemoveSpellRES("xaldasst"))
-			Continue()
-	END
 //}
 
 /* Block other execution if the player (lich) is dead, including the default game over. */

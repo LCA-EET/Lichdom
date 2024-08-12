@@ -186,3 +186,6 @@
 @199 = ~SetGlobal("XA_LD_MetMorrisInSaradush", "GLOBAL", 1)~
 @200 = ~Spawn Morris (XALDGD2).~
 @201 = ~Create six godbows.~
+@202=~WARNING: The debugger is meant to be used for testing purposes only. Improper alterations to the game state can crash the game, or make it so that you cannot complete the game.~
+@203=~I understand the risks. Proceed.~
+@204=~Return to the prior menu.~
