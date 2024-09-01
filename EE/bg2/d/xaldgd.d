@@ -186,12 +186,13 @@ IF ~~ THEN BEGIN XA_LD_IntroAthkatla
 	~ THEN REPLY @103  /* ~Lichdom still interests me despite the monetary cost.  Let’s deal, my friend!~*/
 	GOTO XA_LD_StartRitual
 	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~
 	True()
 ~ THEN BEGIN XA_LD_IntroAthkatla_AlreadyMet
-	SAY @1
+	SAY @1 /* ~Ah, there you are.  I am Morris, and you are one of many people to have been curious about me.~ [xald1001] */
 	
 	COPY_TRANS XALDGD XA_LD_IntroAthkatla
 END
@@ -215,6 +216,8 @@ IF ~~ THEN BEGIN XA_LD_CanYouFix
 	
 	IF ~~ THEN REPLY @133 /*~Let us discuss something else.~*/
 	GOTO XA_LD_DiscussSomethingElse
+	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_HasMoneyToFix
@@ -273,6 +276,8 @@ IF ~~ THEN BEGIN XA_LD_HasMoneyToFix
 	
 	IF ~~ THEN REPLY @133 /*~Let us discuss something else.~*/
 	GOTO XA_LD_DiscussSomethingElse
+	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_Nevermind
@@ -303,6 +308,8 @@ IF ~~ THEN BEGIN XA_LD_NoMoneyToFix
 	
 	IF ~~ THEN REPLY @133 /*~Let us discuss something else.~*/
 	GOTO XA_LD_DiscussSomethingElse
+	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_DiscussSomethingElse
@@ -323,6 +330,7 @@ IF ~~ THEN BEGIN XA_LD_StartRitual
 	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
 	GOTO XA_LD_PayMoney
 	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_PayMoney_NoDialog
@@ -429,6 +437,8 @@ IF ~~ THEN BEGIN XA_LD_PayMoney_NoDialog
 		SetGlobal("XA_LD_JournalEntry_3", "GLOBAL", 1) // OK
 	~
 	GOTO XA_LD_Reconsider
+	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_PayMoney
@@ -566,6 +576,8 @@ IF ~~ THEN BEGIN XA_LD_PayMoney
 	
 	IF ~~ THEN REPLY @240 /*~I need more time to make a decision.~*/
 	GOTO XA_LD_Reconsider
+	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_ChooseImoen_NoSoul
@@ -620,6 +632,8 @@ IF ~~ THEN BEGIN XA_LD_GaveDust
 	
 	IF ~~ THEN REPLY @88  /* ~Answer my previous question.  What happens next?~ */
 	GOTO XA_LD_WhatHappensNext
+	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_WhatHappensNext
@@ -653,6 +667,8 @@ IF ~~ THEN BEGIN XA_LD_GavePrice
 		SetGlobal("XA_LD_JournalEntry_2", "GLOBAL", 1) // OK
 	~
 	GOTO XA_LD_WhenToPay
+	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_PriceIsHigh
@@ -678,6 +694,8 @@ IF ~~ THEN BEGIN XA_LD_SecondPrice
 	
 	IF ~~ THEN REPLY @86  /* ~How will I be better?~*/
 	GOTO XA_LD_Better
+	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_Better
@@ -715,6 +733,8 @@ IF ~~ THEN BEGIN XA_LD_ThoughtsOnRitual
 	
 	IF ~~ THEN REPLY @73 /*~Did you find anyone else to lichify after you left Athkatla?~*/
 	GOTO XA_LD_ThoughtsOnRitual_5
+	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_ThoughtsOnRitual_1
@@ -758,6 +778,8 @@ IF ~~ THEN BEGIN XA_LD_Alive
 	
 	IF ~~ THEN REPLY @60 /*~I killed you once and I’ll do it again!~*/
 	GOTO XA_LD_KillAgain
+	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_MadAboutBeingKilled
@@ -783,6 +805,8 @@ IF ~~ THEN BEGIN XA_LD_KillAgain
 	
 	IF ~~ THEN REPLY @65 /*~I accept your forgiveness.  Thanks.~*/
 	GOTO XA_LD_Forgive
+	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_WontFight
@@ -826,6 +850,8 @@ IF ~~ THEN BEGIN XA_LD_WhereToNext
 	
 	IF ~~ THEN REPLY @49 /* ~Thanks, I think.~*/
 	GOTO XA_LD_WhereToNext_End3
+	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 
@@ -855,6 +881,8 @@ IF ~~ THEN BEGIN XA_LD_WhoAreYou
 	
 	IF ~~ THEN REPLY @6 /*~What do you think about death?~*/
 	GOTO XA_LD_ThoughtsOnDeath
+	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_WhyAreYouHere
@@ -865,6 +893,8 @@ IF ~~ THEN BEGIN XA_LD_WhyAreYouHere
 	
 	IF ~~ THEN REPLY @6 /*~What do you think about death?~*/
 	GOTO XA_LD_ThoughtsOnDeath
+	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_Siege
@@ -873,6 +903,7 @@ IF ~~ THEN BEGIN XA_LD_Siege
 	IF ~~ THEN REPLY @33 /*~Leave how?  When?  To where?~*/
 	GOTO XA_HowWillYouLeave
 
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_HowWillYouLeave
@@ -886,6 +917,8 @@ IF ~~ THEN BEGIN XA_LD_Looting
 	
 	IF ~~ THEN REPLY @29 /*~Why are you so concerned about Undead?~*/
 	GOTO XA_LD_Concerned
+	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_Concerned
@@ -908,6 +941,8 @@ IF ~~ THEN BEGIN XA_LD_AreYouUndead2
 	
 	IF ~~ THEN REPLY @23 /*~Any regrets about becoming Undead?~*/
 	GOTO XA_LD_Regrets
+	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_Regrets
@@ -916,6 +951,7 @@ IF ~~ THEN BEGIN XA_LD_Regrets
 	IF ~~ THEN REPLY @25 /*~What sorts of things did you regret?~ */
 	GOTO XA_LD_Regrets2
 	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_Regrets2
@@ -936,6 +972,7 @@ IF ~~ THEN BEGIN XA_LD_ThoughtsOnDeath
 	IF ~~ THEN REPLY @8 /*~Then are you fond of death?~*/
 	GOTO XA_LD_FondOfDeath
 	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_FondOfDeath
@@ -943,6 +980,8 @@ IF ~~ THEN BEGIN XA_LD_FondOfDeath
 	
 	IF ~~ THEN REPLY @10 /*~Do you mean -undeath?-~*/
 	GOTO XA_LD_Undeath
+	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_Undeath
@@ -950,6 +989,8 @@ IF ~~ THEN BEGIN XA_LD_Undeath
 	
 	IF ~~ THEN REPLY @12 /*~What sort of price?~*/
 	GOTO XA_LD_Price
+	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_Price
@@ -1034,6 +1075,8 @@ IF ~~ THEN BEGIN XA_LD_LastChance
 		SetGlobal("XA_LD_JournalEntry_4", "GLOBAL", 1) // OK
 	~
 	GOTO XA_LD_Transform
+	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_Cancel
@@ -1046,6 +1089,8 @@ IF ~~ THEN BEGIN XA_LD_LoseFlesh
 	SAY @177  /* ~Morris slowly shakes his head as if to say “no” in an exaggerated fashion.~ [xald1044] */
 	
 	COPY_TRANS XALDGD XA_LD_LastChance
+	
+	
 END
 
 IF ~~ THEN BEGIN XA_LD_Undo
@@ -1053,6 +1098,8 @@ IF ~~ THEN BEGIN XA_LD_Undo
 	
 	IF ~~ THEN REPLY @180  /*~Who’s the right person?~ */
 	GOTO XA_LD_Undo2
+	
+	COPY_TRANS XALDGD XA_LD_Goodbye
 END
 
 IF ~~ THEN BEGIN XA_LD_Undo2
@@ -1075,6 +1122,12 @@ IF ~~ THEN BEGIN XA_LD_Transform
 	EXIT
 	
 
+END
+
+IF ~~ THEN BEGIN XA_LD_Goodbye
+	SAY @242 /* ~I must get going. Goodbye.~ */
+	
+	IF ~~ THEN EXIT
 END
 
 CHAIN XALDGD XA_LD_Chain_ConfirmCharname1
