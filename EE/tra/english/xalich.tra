@@ -107,3 +107,14 @@ Provide a value from 40000 to 200000, then press Enter: ~
 0.) No.
 1.) Yes.
 Enter a value: ~
+@68 = ~Paralyzing Touch
+(Necromancy)
+
+Level: 6
+Range: Touch
+Duration: 5 Rounds
+Casting Time: 1
+Area of Effect: 1 creature
+Saving Throw: Death
+
+On a successful touch from the lich, the spell will deal 1d10 cold damage to the selected target. The next attack that the lich makes will inflict this effect; however, <PRO_HESHE> only has 2 rounds to make the attack before the spell fizzles. If the lich misses the target creature, the spell is wasted. Failure to Save vs. Death will cause the target to be paralyzed for 5 rounds.~

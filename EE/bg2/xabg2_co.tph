@@ -201,12 +201,22 @@ END
 		SAY DESC @18
 	//}
 
+	/*
 	//{ Paralyzing Touch
 		COPY ~%MOD_FOLDER%/bg2/spl/xaldattk.spl~ ~override~
 		SAY NAME1 @16
 		SAY UNIDENTIFIED_DESC @17
 		SAY DESC @17
 	//}
+	*/
+	
+	//{ Paralyzing Touch
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldpt.spl~ ~override~
+		SAY NAME1 @16
+		SAY UNIDENTIFIED_DESC @68
+		SAY DESC @68
+	//}
+	
 	
 	//{ Lich Spell Immunities
 		COPY ~%MOD_FOLDER%/bg2/spl/xaldsi.spl~ ~override/xaldsi01.spl~
