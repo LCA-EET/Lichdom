@@ -154,13 +154,15 @@ END
 	SAY NAME2 @33
 	SAY DESC @34
 
-	COPY ~%MOD_FOLDER%/bg2/itm/xaldclaw.itm~ ~override~
-	SAY NAME1 @16
-	SAY NAME2 @16
+	/*
+		COPY ~%MOD_FOLDER%/bg2/itm/xaldclaw.itm~ ~override~
+		SAY NAME1 @16
+		SAY NAME2 @16
 
-	COPY ~%MOD_FOLDER%/bg2/itm/xaldcla2.itm~ ~override~
-	SAY NAME1 @16
-	SAY NAME2 @16
+		COPY ~%MOD_FOLDER%/bg2/itm/xaldcla2.itm~ ~override~
+		SAY NAME1 @16
+		SAY NAME2 @16
+	*/
 
 	COPY ~%MOD_FOLDER%/bg2/itm/xaldphyl.itm~ ~override~
 	WRITE_ASCII 0x3A ~xaiphyl~ #8

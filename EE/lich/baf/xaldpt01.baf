@@ -1,16 +1,30 @@
 //{ Initial Skill Addition
 	IF
 		ActionListEmpty()
-		!TriggerOverride(Player1,HaveSpellRES("xaldattk"))
+		!TriggerOverride(Player1,HaveSpellRES("xaldpt"))
 		Race(Player1, LICH)
 		TriggerOverride(Player1, GlobalLT("XA_LichTouchAdded", "LOCALS", 1))
 	THEN
 		RESPONSE #100
 			ActionOverride(Player1, SetGlobal("XA_LichTouchAdded", "LOCALS", 1))
-			ActionOverride(Player1, AddSpecialAbility("xaldattk"))
+			ActionOverride(Player1, AddSpecialAbility("xaldpt"))
+			Continue()
 	END
 //}
 
+//{ Destroy Old Lich Claw
+	IF
+		HasItemEquiped("xaldclaw", Player1)
+		HasItemEquiped("xaldcla2", Player1)
+	THEN
+		RESPONSE #100
+			ActionOverride(Player1, DestroyItem("xaldclaw"))
+			ActionOverride(Player1, DestroyItem("xaldcla2"))
+			Continue()
+	END
+//}
+
+/*
 //{ Disengage Lich Touch
 	IF
 		ActionListEmpty()
@@ -63,4 +77,4 @@
 			ActionOverride(Player1, XEquipItem("xaldcla2",Myself,SLOT_WEAPON,EQUIP))
 	END
 //}
-	
+*/	

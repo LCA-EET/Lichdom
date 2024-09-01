@@ -30,7 +30,7 @@ END
 	END
 //}
 
-//{ Paralyzing Touch Toggle
+//{ Paralyzing Touch Ability
 	LAF xa_replace_recompile
 		STR_VAR
 			xa_bcs = ~xaldpt01~
