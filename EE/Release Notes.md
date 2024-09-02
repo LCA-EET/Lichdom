@@ -1,7 +1,7 @@
 ## Lichdom Release Notes
 
-# v1.2.2 2024-09-01
-* Dialog improvements, changed Paralyzing Touch from a weapon to a target-able ability.
+# v1.3 2024-09-01
+* Dialog improvements, changed Paralyzing Touch from a weapon to a targetable ability.
 
 # v1.2.1 2024-08-12
 * Added simplified Chinese translation, courtesy of mogui45.

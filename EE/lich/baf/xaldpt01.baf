@@ -3,10 +3,35 @@
 		ActionListEmpty()
 		!TriggerOverride(Player1,HaveSpellRES("xaldpt"))
 		Race(Player1, LICH)
-		TriggerOverride(Player1, GlobalLT("XA_LichTouchAdded", "LOCALS", 1))
+		TriggerOverride(Player1, GlobalLT("XA_LD_LichTouchAdded", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ActionOverride(Player1, SetGlobal("XA_LichTouchAdded", "LOCALS", 1))
+			ActionOverride(Player1, SetGlobal("XA_LD_LichTouchAdded", "LOCALS", 1))
+			ActionOverride(Player1, AddSpecialAbility("xaldpt"))
+			Continue()
+	END
+//}
+
+//{ Cooldown Timer
+	IF
+		!TriggerOverride(Player1,HaveSpellRES("xaldpt"))
+		TriggerOverride(Player1, Global("XA_LD_LichTouchAdded", "LOCALS", 1))
+		TriggerOverride(Player1, GlobalLT("XA_LD_TouchCooldownTimerSet", "LOCALS", 1))
+	THEN
+		RESPONSE #100
+			ActionOverride(Player1, SetGlobal("XA_LD_TouchCooldownTimerSet", "LOCALS", 1))
+			ActionOverride(Player1, SetGlobalTimer("XA_LD_TouchCooldownTimer", "LOCALS", 10)
+			Continue()
+	END
+	
+	IF
+		!TriggerOverride(Player1,HaveSpellRES("xaldpt"))
+		TriggerOverride(Player1, Global("XA_LD_LichTouchAdded", "LOCALS", 1))
+		TriggerOverride(Player1, Global("XA_LD_TouchCooldownTimerSet", "LOCALS", 1))
+		TriggerOverride(Player1, GlobalTimerExpired("XA_LD_TouchCooldownTimer", "LOCALS"))
+	THEN
+		RESPONSE #100
+			ActionOverride(Player1, SetGlobal("XA_LD_TouchCooldownTimerSet", "LOCALS", 0))
 			ActionOverride(Player1, AddSpecialAbility("xaldpt"))
 			Continue()
 	END
