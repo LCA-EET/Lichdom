@@ -178,6 +178,21 @@ END
 	SAY DESC ~The cost to perform the ritual is %xald_cost% gold.~
 //}
 
+//{ Crown Turn Undead Immunity
+	LAF xa_determine_quantity
+		INT_VAR
+			xa_min_qty = 0
+			xa_max_qty = 1
+			xa_str_ref = RESOLVE_STR_REF(@69)
+		RET
+			xald_immune = xa_quantity
+	END
+	ACTION_IF(xald_immune = 1) THEN BEGIN
+		COPY_EXISTING ~xaldcrwn.itm~ ~override~
+		WRITE_BYTE 0x5F4 100
+		WRITE_BYTE 0x620 100
+	END
+//}
 
 //{ SPL
 	//{ Lichdom Assistant

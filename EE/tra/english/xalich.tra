@@ -120,3 +120,7 @@ Saving Throw: Death
 On a successful touch from the lich, the spell will deal 1d10 cold damage to the selected target. The next attack that the lich makes will inflict this effect; however, <PRO_HESHE> only has 2 rounds to make the attack before the spell fizzles. If the lich misses the target creature, the spell is wasted. Failure to Save vs. Death will cause the target to be paralyzed for 5 rounds. 
 
 This spell has a ten second cooldown.~
+@69 = ~Should the Crown of the Lich grant immunity to Turn Undead?
+0.) No. (Default)
+1.) Yes.
+Enter a value: ~
