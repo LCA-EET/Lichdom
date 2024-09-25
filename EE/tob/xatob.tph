@@ -64,6 +64,7 @@ WRITE_ASCII 0x250 ~xaldgdfs~ #8
 OUTER_SPRINT baldur_file ~baldur25~ 
 INCLUDE ~%MOD_FOLDER%/lich/xalich.tph~
 
+
 //{ Morris' Bag of Holding (ToB)
 	COPY_EXISTING ~bag31.itm~ ~override/xaldbag1.itm~
 	COPY_EXISTING ~bag31.sto~ ~override/xaldbag1.sto~
