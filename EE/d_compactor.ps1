@@ -78,6 +78,9 @@ Get-ChildItem $dPath -Filter *.d -Recurse | Foreach-Object {
 	if($output.contains(" ++ ")){
 		$output = $output.replace(" ++ ", "++")
 	}
+	if($output.contains("~GOTO")){
+		$output = $output.replace("~GOTO", "~+")
+	}
 	if($output.contains(" GOTO ")){
 		$output = $output.replace(" GOTO ", "+")
 	}

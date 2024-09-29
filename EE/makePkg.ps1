@@ -33,6 +33,7 @@ Copy-Item -Path ("F:\BGModding - LCA\Game\00783\LCA\EE\d_compactor.ps1") -Destin
 Copy-Item -Path ($modName + ".tp2") -Destination ($forArchival + "/" + $modName)
 
 Copy-Item -Path ("license.md") -Destination ($forArchival + "/"  )
+Copy-Item -Path "Discord Server.url" -Destination ($forArchival + "/Discord Server.url")
 
 Copy-Item -Path ("Release Notes.md") -Destination ($forArchival + "/Lichdom Release Notes.md"  )
 
