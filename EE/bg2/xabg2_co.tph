@@ -190,7 +190,7 @@ END
 	ACTION_IF(xald_immune = 1) THEN BEGIN
 		COPY_EXISTING ~xaldcrwn.itm~ ~override~
 		WRITE_BYTE 0x5F4 100
-		WRITE_BYTE 0x620 100
+		WRITE_BYTE 0x624 100
 	END
 //}
 
