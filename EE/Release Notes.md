@@ -1,5 +1,8 @@
 ## Lichdom Release Notes
 
+# v1.3.1 2024-09-29
+* An install option has been added controlling whether the Crown of the Lich will provide immunity to Turn Undead.
+
 # v1.3 2024-09-01
 * Dialog improvements, changed Paralyzing Touch from a weapon to a targetable ability.
 
