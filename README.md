@@ -416,6 +416,7 @@ For clarity:  This mod (Lichdom) is unofficial Fan Content permitted under the F
 
 # Requests of the Community
 ![A mod where the party can fight a Dracolich seems wonderful!  Don't to expect to find it here!](https://github.com/LCA-EET/lichdom/blob/main/Documentation%20Images/Dracolich.png)
+
 _A mod where the party can fight a Dracolich seems wonderful!  Don't to expect to find it here!_
 
 I know I'm not the only Lich fan out there!  This section is meant as inspiration for the community for anyone else who wants to make a Lich-themed mod to please me.  Perhaps have a ship or an airship of adventurers fight a Dracolich mid-flight and prevent its corpse from crashing into a town below.  And of course tracking down its phylactery and handling that seems interesting.  But I've enjoyed Dracoliches.
