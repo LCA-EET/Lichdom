@@ -1,5 +1,8 @@
 ## Lichdom Release Notes
 
+# v1.3.1a 2024-09-29
+* Fixed a compatibility issue concerning integration with The Longer Road mod.
+
 # v1.3.1 2024-09-29
 * An install option has been added controlling whether the Crown of the Lich will provide immunity to Turn Undead.
 
