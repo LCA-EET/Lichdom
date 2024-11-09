@@ -121,10 +121,12 @@ END
 //}
 
 //{ 2DA 
+	// thanks, Kelian
 	OUTER_SET upper = RESOLVE_STR_REF(@22)
-
 	COPY_EXISTING ~racetext.2da~ ~override~
-	INSERT_2DA_ROW 0 6 ~LICH 150 8457 -1 %upper% -1~
+	COUNT_2DA_COLS cols
+	COUNT_2DA_ROWS cols rows
+	INSERT_2DA_ROW rows 6 ~LICH 150 8457 -1 %upper% -1~
 //}
 
 //{ BAM

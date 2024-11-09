@@ -35,6 +35,7 @@ Copy-Item -Path ($modName + ".tp2") -Destination ($forArchival + "/" + $modName)
 
 Copy-Item -Path ("license.md") -Destination ($forArchival + "/"  )
 Copy-Item -Path "Discord Server.url" -Destination ($forArchival + "/" + $modName + " Discord Server.url")
+Copy-Item -Path "Venmo.url" -Destination ($forArchival + "/" + $modName + " Venmo.url")
 
 Copy-Item -Path ("Release Notes.md") -Destination ($forArchival + "/Lichdom Release Notes.md"  )
 
@@ -54,4 +55,4 @@ Start-SevenZip a -mx=9 $Target $Source
 Remove-Item -LiteralPath $forArchival -Force -Recurse
 Get-FileHash $archive -Algorithm SHA256 > SHA256.txt
 
-#Copy-Item -Path $archive -Destination ("\\192.168.1.88\smbuser\Home\Installers\" + $archive)
+Copy-Item -Path $archive -Destination ("\\192.168.1.88\smbuser\Home\Installers\" + $archive)

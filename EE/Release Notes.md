@@ -1,5 +1,11 @@
 ## Lichdom Release Notes
 
+# v1.3.1c 2024-11-09
+* Fixed a potential issue concerning racetext.2da.
+
+# v1.3.1b 2024-11-09
+* Fixed another compatibility issue concerning integration with The Longer Road mod.
+
 # v1.3.1a 2024-11-01
 * Fixed a compatibility issue concerning integration with The Longer Road mod.
 

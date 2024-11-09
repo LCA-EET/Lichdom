@@ -5,7 +5,7 @@ EXTEND_BOTTOM XALDGD2 15
 		LevelGT("lrIrenic", 11)
 	~
 	THEN REPLY @5 /*~(Choose Irenicus.)~*/
-	EXTERN JONEL25J XA_LD_ChooseIrenicus
+	EXTERN XALDGD2 XA_LD_ChooseIrenicus_Chain
 END
 
 EXTEND_BOTTOM XALDGD2 18
@@ -15,11 +15,10 @@ EXTEND_BOTTOM XALDGD2 18
 		LevelGT("lrIrenic", 11)
 	~
 	THEN REPLY @5 /*~(Choose Irenicus.)~*/
-	EXTERN JONEL25J XA_LD_ChooseIrenicus
+	EXTERN XALDGD2 XA_LD_ChooseIrenicus_Chain
 END
 
 CHAIN XALDGD2 XA_LD_ChooseIrenicus_Chain
-	== XALDGD2
 	@3 /*~Morris looks inquisitively at Irenicus.  “Is this not what you wanted - your immortality returned?”~ [xald1037]*/
 	== JONEL25J
 	@4 /*~I see you possess at least a basic repertoire of useful knowledge.  This is an offer I -will- accept!~ [xald1098]*/
