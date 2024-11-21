@@ -63,4 +63,15 @@ END
 	END
 //}
 
+//{ Phylactery Assignment
+	LAF xa_replace_recompile_iterate
+		INT_VAR
+			xa_max_iterations = xald_maxrituals
+			xa_find = 100
+		STR_VAR
+			xa_bcs = ~xaldphas~
+			xa_extend = ~xaldlich~
+	END	
+//}
+
 EXTEND_TOP ~%baldur_file%.bcs~ ~override/xaldtime.bcs~

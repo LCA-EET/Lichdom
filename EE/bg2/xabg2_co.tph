@@ -59,21 +59,6 @@ END
 		END
 		
 	//}
-	/*
-	//{ Limit Lich Transformations to Base Game NPCs?
-		LAF xa_determine_quantity
-			INT_VAR
-				xa_min_qty = 0
-				xa_max_qty = 1
-				xa_str_ref = RESOLVE_STR_REF(@26)
-			RET
-				xald_baseonly = xa_quantity
-		END
-		ACTION_IF (xald_baseonly = 1) THEN BEGIN
-			EXTEND_TOP ~xaldgd.bcs~ ~%MOD_FOLDER%/bg2/baf/xaldlim1.baf~
-		END
-	//}
-	*/
 //}
 
 //{ Allows the protagonist to die (in conjunction with the modifications to BALDUR.BCS)~
@@ -163,17 +148,24 @@ END
 	COPY ~%MOD_FOLDER%/bg2/itm/xaldcla2.itm~ ~override~
 	SAY NAME1 @16
 	SAY NAME2 @16
+
+	//{ Create Phylacteries
+		OUTER_SET xa_phylactery_index = 0
+		OUTER_WHILE (xa_phylactery_index < xald_maxrituals) BEGIN
+			COPY ~%MOD_FOLDER%/bg2/itm/xaldphyl.itm~ ~override/xaldph0%xa_phylactery_index%.itm~
+			WRITE_ASCII 0x3A ~xaiphyl~ #8
+			SAY NAME2 @2
+			SAY DESC @3
+		
+			COPY ~%MOD_FOLDER%/bg2/itm/xaldphyd.itm~ ~override/xaldpd0%xa_phylactery_index%.itm~
+			WRITE_ASCII 0x3A ~xaiphyl~ #8
+			SAY NAME2 @23
+			SAY DESC @24
+			
+			OUTER_SET xa_phylactery_index = (xa_phylactery_index + 1)
+		END	
+	//}
 	
-	COPY ~%MOD_FOLDER%/bg2/itm/xaldphyl.itm~ ~override~
-	WRITE_ASCII 0x3A ~xaiphyl~ #8
-	SAY NAME2 @2
-	SAY DESC @3
-
-	COPY ~%MOD_FOLDER%/bg2/itm/xaldphyd.itm~ ~override~
-	WRITE_ASCII 0x3A ~xaiphyl~ #8
-	SAY NAME2 @23
-	SAY DESC @24
-
 	COPY_EXISTING ~plot16b.itm~ ~override/xaldlc00.itm~
 	SAY NAME1 @25
 	SAY NAME2 @25
