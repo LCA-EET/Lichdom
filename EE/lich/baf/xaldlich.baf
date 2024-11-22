@@ -550,26 +550,6 @@ END
 	END
 //}
 
-//{ Create and Equip Phylactery
-IF
-	!HasItem("xaldphyl", Myself)
-THEN
-	RESPONSE #100
-		SetInterrupt(FALSE)
-		CreateItem("xaldphyl", 0,0,0)
-		SetItemFlags("xaldphyl", IDENTIFIED, TRUE)
-		SetInterrupt(TRUE) 
-		Continue()
-END
-
-IF
-	!HasItemEquiped("xaldphyl", Myself)
-THEN
-	RESPONSE #100
-		XEquipItem("xaldphyl",Myself,SLOT_CLOAK,EQUIP)
-		Continue()
-END
-//}
 IF
 	Global("XA_LD_ChangeAlignment", "LOCALS", 1)
 	Global("XA_LD_Animation_Done", "LOCALS", 1)

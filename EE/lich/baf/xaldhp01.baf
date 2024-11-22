@@ -1,0 +1,21 @@
+IF
+	Race(Player1, LICH)
+	GlobalLT("XA_LD_HasPhylactery", "LOCALS", 1)
+	Global("XA_LD_PhylacteryAssigned", "LOCALS", 100)
+	PartyHasItem("xaldph0100")
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_HasPhylactery", "LOCALS", 1)
+		Continue()
+END
+
+IF
+	Race(Player1, LICH)
+	Global("XA_LD_HasPhylactery", "LOCALS", 1)
+	Global("XA_LD_PhylacteryAssigned", "LOCALS", 100)
+	!PartyHasItem("xaldph0100")
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_HasPhylactery", "LOCALS", 10
+		Continue()
+END

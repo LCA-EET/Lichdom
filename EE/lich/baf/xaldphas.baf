@@ -3,6 +3,7 @@ IF
 THEN
 	RESPONSE #100
 		CreateItem("xaldph0100", 0,0,0)
+		SetItemFlags("xaldph0100", IDENTIFIED, TRUE)
 		IncrementGlobal("XA_LD_PhylacteriesCreated", "GLOBAL", 1)
 		SetGlobal("XA_LD_PhylacteryAssigned", "LOCALS", 100)
 		Continue()

@@ -39,7 +39,6 @@ END
 			xa_replace = ~Player1~
 			xa_bcs = ~xaldpt01~
 			xa_extend = ~%baldur_file%~
-			xa_prefix = ~xaldpt0~
 	END
 //}
 
@@ -49,7 +48,6 @@ END
 			xa_replace = ~Player1~
 			xa_bcs = ~xaldtf01~
 			xa_extend = ~%baldur_file%~
-			xa_prefix = ~xaldtf0~
 	END
 //}
 
@@ -59,7 +57,6 @@ END
 			xa_replace = ~Player1~
 			xa_bcs = ~xaldlr01~
 			xa_extend = ~%baldur_file%~
-			xa_prefix = ~xaldlr0~
 	END
 //}
 
@@ -72,6 +69,15 @@ END
 			xa_bcs = ~xaldphas~
 			xa_extend = ~xaldlich~
 	END	
+//}
+
+//{ See if the party has a player's phylactery
+	LAF xa_replace_recompile
+		STR_VAR
+			xa_replace = ~Player1~
+			xa_bcs = ~xaldhp01~
+			xa_extend = ~xaldhp~
+	END
 //}
 
 EXTEND_TOP ~%baldur_file%.bcs~ ~override/xaldtime.bcs~
