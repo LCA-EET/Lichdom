@@ -1,0 +1,9 @@
+IF
+	Race(Player1, LICH)
+	TriggerOverride(Player1, Die())
+	TriggerOverride(Player1, GlobalLT("XA_LD_HasPhylactery", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("xalddest", Player1)
+		GameOver(19377)
+END

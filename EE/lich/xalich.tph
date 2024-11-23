@@ -5,13 +5,17 @@ END
 
 //{ Death Scripts
 	LAF xa_replace_recompile
+		INT_VAR
+			xa_indexStart = 2
+			xa_extendTop = 0
 		STR_VAR
-			xa_replace = ~Player1~
-			xa_bcs = ~xaldd01~
-			xa_extend = ~%baldur_file%~
-			xa_prefix = ~xaldd0~
+			xa_replace = ~Player2~
+			xa_bcs = ~xaldd02~
+			xa_extend = ~xalddeath~
 	END
 //}
+
+EXTEND_TOP ~%baldur_file%.bcs~ ~xalddeath.bcs~
 
 //{ Crown of the Lich Undead Flag
 	LAF xa_replace_recompile
@@ -19,7 +23,6 @@ END
 			xa_replace = ~Player1~
 			xa_bcs = ~xaldcr01~
 			xa_extend = ~%baldur_file%~
-			xa_prefix = ~xaldcr0~
 	END
 //}
 
@@ -29,7 +32,6 @@ END
 			xa_replace = ~Player1~
 			xa_bcs = ~xaldal01~
 			xa_extend = ~%baldur_file%~
-			xa_prefix = ~xaldal0~
 	END
 //}
 
@@ -77,6 +79,15 @@ END
 			xa_replace = ~Player1~
 			xa_bcs = ~xaldhp01~
 			xa_extend = ~xaldhp~
+	END
+	
+	LAF xa_replace_recompile_iterate
+		INT_VAR
+			xa_max_iterations = xald_maxrituals
+			xa_find = 100
+		STR_VAR
+			xa_bcs = ~xaldhp~
+			xa_extend = ~%baldur_file%.bcs~
 	END
 //}
 

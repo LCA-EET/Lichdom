@@ -1,0 +1,12 @@
+//{ Death Scripting
+	
+	IF
+		Race(Player2, LICH)
+		TriggerOverride(Player2, Die())
+		TriggerOverride(Player2, GlobalLT("XA_LD_HasPhylactery", "LOCALS", 1))
+	THEN
+		RESPONSE #100
+			ActionOverride(Player2, LeaveParty())
+			ReallyForceSpellRES("xalddest", Player2)
+	END
+//}
