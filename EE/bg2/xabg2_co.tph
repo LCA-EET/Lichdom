@@ -150,14 +150,14 @@ END
 	SAY NAME2 @16
 
 	//{ Create Phylacteries
-		OUTER_SET xa_phylactery_index = 0
-		OUTER_WHILE (xa_phylactery_index < xald_maxrituals) BEGIN
-			COPY ~%MOD_FOLDER%/bg2/itm/xaldphyl.itm~ ~override/xaldph0%xa_phylactery_index%.itm~
+		OUTER_SET xa_phylactery_index = 1
+		OUTER_WHILE (xa_phylactery_index <= xald_maxrituals) BEGIN
+			COPY ~%MOD_FOLDER%/bg2/itm/xaldphyl.itm~ ~override/xaldph%xa_phylactery_index%.itm~
 			WRITE_ASCII 0x3A ~xaiphyl~ #8
 			SAY NAME2 @2
 			SAY DESC @3
 		
-			COPY ~%MOD_FOLDER%/bg2/itm/xaldphyd.itm~ ~override/xaldpd0%xa_phylactery_index%.itm~
+			COPY ~%MOD_FOLDER%/bg2/itm/xaldphyd.itm~ ~override/xaldpd%xa_phylactery_index%.itm~
 			WRITE_ASCII 0x3A ~xaiphyl~ #8
 			SAY NAME2 @23
 			SAY DESC @24

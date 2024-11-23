@@ -6,6 +6,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("XA_LD_HasPhylactery", "LOCALS", 1)
+		DisplayStringHead(Player1, ~I've regained my phylactery.~)
 		Continue()
 END
 
@@ -16,6 +17,7 @@ IF
 	!PartyHasItem("xaldph100")
 THEN
 	RESPONSE #100
-		SetGlobal("XA_LD_HasPhylactery", "LOCALS", 1)
+		SetGlobal("XA_LD_HasPhylactery", "LOCALS", 0)
+		DisplayStringHead(Player1, ~I lost my phylactery.~)
 		Continue()
 END
