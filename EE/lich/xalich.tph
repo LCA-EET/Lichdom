@@ -17,7 +17,7 @@ END
 	END
 //}
 
-EXTEND_TOP ~%baldur_file%.bcs~ ~xalddeath.bcs~
+EXTEND_TOP ~%baldur_file%.bcs~ ~override/xalddeath.bcs~
 
 //{ Crown of the Lich Undead Flag
 	LAF xa_replace_recompile
@@ -89,7 +89,7 @@ EXTEND_TOP ~%baldur_file%.bcs~ ~xalddeath.bcs~
 			xa_find = 100
 		STR_VAR
 			xa_bcs = ~xaldhp~
-			xa_extend = ~%baldur_file%.bcs~
+			xa_extend = ~%baldur_file%~
 	END
 //}
 

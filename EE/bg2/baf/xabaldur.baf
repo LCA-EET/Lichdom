@@ -1,3 +1,13 @@
+//{
+IF
+	GlobalLT("XA_LD_PhylacteriesCreated", "GLOBAL", 0)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_PhylacteriesCreated", "GLOBAL", 1)
+		Continue()
+END
+//}
+
 //{ Romance Termination
 IF
 	Race(Player1, LICH)
