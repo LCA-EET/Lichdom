@@ -1,6 +1,8 @@
 ACTION_IF (compiled = 0) THEN BEGIN
 	OUTER_SET compiled = 1
 	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/lich/baf~ 
+	PRINT ~Lich component script compilation successful.~
+	SILENT
 END
 
 //{ Death Scripts

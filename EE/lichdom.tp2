@@ -27,6 +27,7 @@ BEGIN
 OUTER_SET sod_carryover = 0
 OUTER_SET bg2_carryover = 0
 OUTER_SET xalddebug = 0
+OUTER_SET xa_tempID = 0
 
 INCLUDE ~%MOD_FOLDER%/functions.tph~
 
