@@ -16,6 +16,6 @@ IF
 	!PartyHasItem("xaldph0100")
 THEN
 	RESPONSE #100
-		SetGlobal("XA_LD_HasPhylactery", "LOCALS", 10
+		SetGlobal("XA_LD_HasPhylactery", "LOCALS", 1)
 		Continue()
 END
