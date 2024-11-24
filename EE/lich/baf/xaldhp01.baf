@@ -1,23 +1,25 @@
 IF
 	Race(Player1, LICH)
-	GlobalLT("XA_LD_HasPhylactery", "LOCALS", 1)
-	Global("XA_LD_PhylacteryAssigned", "LOCALS", 100)
+	HPGT(Player1, 0)
+	TriggerOverride(Player1, GlobalLT("XA_LD_HasPhylactery", "LOCALS", 1))
+	TriggerOverride(Player1, Global("XA_LD_PhylacteryAssigned", "LOCALS", 100))
 	PartyHasItem("xaldph100")
 THEN
 	RESPONSE #100
-		SetGlobal("XA_LD_HasPhylactery", "LOCALS", 1)
+		ActionOverride(Player1, SetGlobal("XA_LD_HasPhylactery", "LOCALS", 1))
 		DisplayStringHead(Player1, ~I've regained my phylactery.~)
 		Continue()
 END
 
 IF
 	Race(Player1, LICH)
-	Global("XA_LD_HasPhylactery", "LOCALS", 1)
-	Global("XA_LD_PhylacteryAssigned", "LOCALS", 100)
+	HPGT(Player1, 0)
+	TriggerOverride(Player1, Global("XA_LD_HasPhylactery", "LOCALS", 1))
+	TriggerOverride(Player1, Global("XA_LD_PhylacteryAssigned", "LOCALS", 100))
 	!PartyHasItem("xaldph100")
 THEN
 	RESPONSE #100
-		SetGlobal("XA_LD_HasPhylactery", "LOCALS", 0)
+		ActionOverride(Player1, SetGlobal("XA_LD_HasPhylactery", "LOCALS", 0))
 		DisplayStringHead(Player1, ~I lost my phylactery.~)
 		Continue()
 END

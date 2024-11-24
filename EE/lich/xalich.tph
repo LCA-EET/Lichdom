@@ -67,7 +67,8 @@ EXTEND_TOP ~%baldur_file%.bcs~ ~override/xalddeath.bcs~
 //{ Phylactery Assignment
 	LAF xa_replace_recompile_iterate
 		INT_VAR
-			xa_max_iterations = xald_maxrituals
+			xa_max_iterations = (xald_maxrituals + 1)
+			xa_iterations = 1
 			xa_find = 100
 		STR_VAR
 			xa_bcs = ~xaldphas~
@@ -85,7 +86,8 @@ EXTEND_TOP ~%baldur_file%.bcs~ ~override/xalddeath.bcs~
 	
 	LAF xa_replace_recompile_iterate
 		INT_VAR
-			xa_max_iterations = xald_maxrituals
+			xa_max_iterations = (xald_maxrituals + 1)
+			xa_iterations = 1
 			xa_find = 100
 		STR_VAR
 			xa_bcs = ~xaldhp~

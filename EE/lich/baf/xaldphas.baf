@@ -1,10 +1,12 @@
 IF
 	Global("XA_LD_PhylacteriesCreated", "GLOBAL", 100)
+	GlobalLT("XA_LD_PhylacteryCreated", "LOCALS", 1)
 THEN
 	RESPONSE #100
 		CreateItem("xaldph100", 0,0,0)
 		SetItemFlags("xaldph100", IDENTIFIED, TRUE)
 		IncrementGlobal("XA_LD_PhylacteriesCreated", "GLOBAL", 1)
+		SetGlobal("XA_LD_PhylacteryCreated", "LOCALS", 1)
 		SetGlobal("XA_LD_PhylacteryAssigned", "LOCALS", 100)
 		Continue()
 END

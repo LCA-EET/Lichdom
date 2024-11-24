@@ -1,6 +1,6 @@
 //{
 IF
-	GlobalLT("XA_LD_PhylacteriesCreated", "GLOBAL", 0)
+	GlobalLT("XA_LD_PhylacteriesCreated", "GLOBAL", 1)
 THEN
 	RESPONSE #100
 		SetGlobal("XA_LD_PhylacteriesCreated", "GLOBAL", 1)

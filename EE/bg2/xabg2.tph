@@ -1,4 +1,5 @@
 PRINT @54  // ~Processing Shadows of Amn changes...~
+SILENT
 
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/d~
 

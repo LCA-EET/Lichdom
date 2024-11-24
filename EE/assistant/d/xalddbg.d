@@ -681,38 +681,43 @@ BEGIN ~XALDDBG~
 		
 		IF ~~ THEN REPLY @137
 		DO ~
-			ChangeRace(Player1, LICH)
-			SetGlobal("XA_LD_Player1IsLich", "GLOBAL", 1)
+			ActionOverride(Player1, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+			SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
 		~
 		EXIT
 		
 		IF ~~ THEN REPLY @138
 		DO ~
-			ChangeRace(Player2, LICH)
+			ActionOverride(Player2, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+			SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
 		~
 		EXIT
 		
 		IF ~~ THEN REPLY @139
 		DO ~
-			ChangeRace(Player3, LICH)
+			ActionOverride(Player3, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+			SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
 		~
 		EXIT
 		
 		IF ~~ THEN REPLY @140
 		DO ~
-			ChangeRace(Player4, LICH)
+			ActionOverride(Player4, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+			SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
 		~
 		EXIT
 		
 		IF ~~ THEN REPLY @141
 		DO ~
-			ChangeRace(Player5, LICH)
+			ActionOverride(Player5, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+			SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
 		~
 		EXIT
 		
 		IF ~~ THEN REPLY @142
 		DO ~
-			ChangeRace(Player6, LICH)
+			ActionOverride(Player6, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+			SetGlobal("XA_LD_PerformRitual", "GLOBAL", 1)
 		~
 		EXIT
 		
@@ -842,6 +847,9 @@ BEGIN ~XALDDBG~
 		~
 		EXIT
 		
+		IF ~~ THEN REPLY @205
+		GOTO XA_LD_CheckPhylacteries
+		
 		IF ~
 			Global("XA_LD_DisableAssistant", "GLOBAL", 1)
 		~
@@ -868,6 +876,46 @@ BEGIN ~XALDDBG~
 			DestroySelf()
 		~
 		EXIT
+	END
+
+	IF ~~ THEN BEGIN XA_LD_CheckPhylacteries
+		SAY @205
+		
+		IF ~Global("XA_LD_PhylacteriesCreated","GLOBAL",0)~ THEN REPLY @206
+		GOTO XA_DebugInit
+		
+		IF ~Global("XA_LD_PhylacteriesCreated","GLOBAL",1)~ THEN REPLY @207
+		GOTO XA_DebugInit
+		
+		IF ~Global("XA_LD_PhylacteriesCreated","GLOBAL",2)~ THEN REPLY @208
+		GOTO XA_DebugInit
+		
+		IF ~Global("XA_LD_PhylacteriesCreated","GLOBAL",3)~ THEN REPLY @209
+		GOTO XA_DebugInit
+		
+		IF ~Global("XA_LD_PhylacteriesCreated","GLOBAL",4)~ THEN REPLY @210
+		GOTO XA_DebugInit
+		
+		IF ~Global("XA_LD_PhylacteriesCreated","GLOBAL",5)~ THEN REPLY @211
+		GOTO XA_DebugInit
+		
+		IF ~Global("XA_LD_PhylacteriesCreated","GLOBAL",6)~ THEN REPLY @212
+		GOTO XA_DebugInit
+		
+		IF ~Global("XA_LD_PhylacteriesCreated","GLOBAL",7)~ THEN REPLY @213
+		GOTO XA_DebugInit
+		
+		IF ~Global("XA_LD_PhylacteriesCreated","GLOBAL",8)~ THEN REPLY @214
+		GOTO XA_DebugInit
+		
+		IF ~Global("XA_LD_PhylacteriesCreated","GLOBAL",9)~ THEN REPLY @215
+		GOTO XA_DebugInit
+		
+		IF ~Global("XA_LD_PhylacteriesCreated","GLOBAL",10)~ THEN REPLY @216
+		GOTO XA_DebugInit
+		
+		IF ~~ THEN REPLY @177
+		GOTO XA_DebugInit
 	END
 
 	IF ~~ THEN BEGIN XA_UndeadCheck

@@ -189,3 +189,15 @@
 @202=~WARNING: The debugger is meant to be used for testing purposes only. Improper alterations to the game state can crash the game, or make it so that you cannot complete the game.~
 @203=~I understand the risks. Proceed.~
 @204=~Return to the prior menu.~
+@205=~Check Phylacteries Created~
+@206=~Global("XA_LD_PhylacteriesCreated","GLOBAL",0)~
+@207=~Global("XA_LD_PhylacteriesCreated","GLOBAL",1)~
+@208=~Global("XA_LD_PhylacteriesCreated","GLOBAL",2)~
+@209=~Global("XA_LD_PhylacteriesCreated","GLOBAL",3)~
+@210=~Global("XA_LD_PhylacteriesCreated","GLOBAL",4)~
+@211=~Global("XA_LD_PhylacteriesCreated","GLOBAL",5)~
+@212=~Global("XA_LD_PhylacteriesCreated","GLOBAL",6)~
+@213=~Global("XA_LD_PhylacteriesCreated","GLOBAL",7)~
+@214=~Global("XA_LD_PhylacteriesCreated","GLOBAL",8)~
+@215=~Global("XA_LD_PhylacteriesCreated","GLOBAL",9)~
+@216=~Global("XA_LD_PhylacteriesCreated","GLOBAL",10)~
