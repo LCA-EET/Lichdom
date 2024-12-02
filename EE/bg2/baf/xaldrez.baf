@@ -1,4 +1,5 @@
 //{ If the phylactery is not broken, recreate it upon the lich's resurrection
+/*
 IF
 	GlobalLT("XA_LD_PhylacteryBroken", "LOCALS", 1)
 THEN
@@ -10,9 +11,11 @@ THEN
 		SetInterrupt(TRUE)
 		Continue()
 END
+*/
 //}
 
 //{ If the phylactery is broken, create the broken phylactery instead of the intact one
+/*
 IF
 	Global("XA_LD_PhylacteryBroken", "LOCALS", 1)
 THEN
@@ -24,6 +27,7 @@ THEN
 		SetInterrupt(TRUE)
 		Continue()
 END
+*/
 //}
 
 IF

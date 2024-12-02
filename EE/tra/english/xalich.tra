@@ -1,7 +1,7 @@
 @0 = ~Lichdom for the Baldur's Gate, Enhanced Edition Games.~
 @1 = ~Enhanced Edition Trilogy (EET) mod has been detected.~
-@2 = ~Shroud of the Lich~
-@3 = ~This ornate cloak is a phylactery that contains the soul of its wearer. Equipping it allows the wearer to automatically revive if they are killed, once they are out of combat and enough time has passed since their death.~
+@2 = ~Phylactery~
+@3 = ~The phylactery is simultaneously the source of the lich's greatest power and its greatest, indeed its only significant physical weakness. Any independent lich should take pains to ensure its phylactery is kept secure at all times. Though not strictly necessary, the transition from mortal to lich is more easily achieved if the item which will store the transformee's soul (ie, the phylactery) is something with which they are familiar. This is particularly the case in Rituals of Becoming that are performed by a party other than the one undergoing transformation.~
 @4 = ~Lich Dust~
 @5 = ~This gathering of dust is seemingly all that remains of a powerful Undead spellcaster known as a Lich.~
 @6 = ~Lich Transformation~
@@ -25,7 +25,7 @@ Provide a value from 1 to 10, then press Enter: ~
 @23 = ~Damaged Phylactery~
 @24 = ~This phylactery has been damaged, and as a result, it cannot restore the lich. Perhaps Morris can help.
 
-The phylactery is simultaneously the source of the lich's greatest power and its greatest, indeed its only significant physical weakness. Any independent lich should take pains to ensure its phylactery is kept secure at all times. Though not strictly necessary, the transition from mortal to lich is more easily achieved if the item which will store the transformee's soul (ie, the phylactery) is something with which they are familiar. This is particularly the case in Rituals of Becoming that are performed by a party other than the one undergoing transformation. The phylactery is small enough to be hidden within an unassuming item, as is the case here; it has been discreetly woven into the fibers of this cloak.~
+The phylactery is simultaneously the source of the lich's greatest power and its greatest, indeed its only significant physical weakness. Any independent lich should take pains to ensure its phylactery is kept secure at all times. Though not strictly necessary, the transition from mortal to lich is more easily achieved if the item which will store the transformee's soul (ie, the phylactery) is something with which they are familiar. This is particularly the case in Rituals of Becoming that are performed by a party other than the one undergoing transformation.~
 @25 = ~Morris' Price for Lichdom~
 @26 = ~Restrict lich transformation to base game NPCs only?
 0: No
