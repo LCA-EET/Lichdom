@@ -78,7 +78,7 @@ END
 /* Block other execution if the player (lich) is dead, including the default game over. */
 IF
 	!InParty(Player1)
-	Global("XA_LD_Player1IsLich", "GLOBAL", 1)	
+	Race(Player1, LICH)
 THEN
 	RESPONSE #100
 		NoAction()
@@ -87,7 +87,7 @@ END
 //{ ALlow the player to die if they are not a lich
 IF
 	!InParty(Player1)
-	!Global("XA_LD_Player1IsLich", "GLOBAL", 1)	
+	!Race(Player1, LICH)
 THEN
 	RESPONSE #100
 		GameOver(19377)
