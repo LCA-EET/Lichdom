@@ -156,18 +156,18 @@ END
 			COPY ~%MOD_FOLDER%/bg2/itm/xaldphyl.itm~ ~override/xaldph%xa_phylactery_index%.itm~
 			WRITE_ASCII 0x3A ~xaiphyl~ #8 // icon
 			WRITE_ASCII 0x58 ~xaphyl~ #8 // desc image
-			WRITE_LONG 0x8 RESOLVE_STR_REF @2 // General Name
-			WRITE_LONG 0xC RESOLVE_STR_REF @2 // Identified Name
-			WRITE_LONG 0x50 RESOLVE_STR_REF @3 // General Description
-			WRITE_LONG 0x54 RESOLVE_STR_REF @3 // Identified Description
+			WRITE_LONG 0x8 RESOLVE_STR_REF(@2) // General Name
+			WRITE_LONG 0xC RESOLVE_STR_REF(@2) // Identified Name
+			WRITE_LONG 0x50 RESOLVE_STR_REF(@3) // General Description
+			WRITE_LONG 0x54 RESOLVE_STR_REF(@3) // Identified Description
 	
 			COPY ~%MOD_FOLDER%/bg2/itm/xaldphyd.itm~ ~override/xaldpd%xa_phylactery_index%.itm~
 			WRITE_ASCII 0x3A ~xaiphyl~ #8
 			WRITE_ASCII 0x58 ~xaphyl~ #8 // desc image
-			WRITE_LONG 0x8 RESOLVE_STR_REF @23 // General Name
-			WRITE_LONG 0xC RESOLVE_STR_REF @23 // Identified Name
-			WRITE_LONG 0x50 RESOLVE_STR_REF @24 // General Description
-			WRITE_LONG 0x54 RESOLVE_STR_REF @24 // Identified Description
+			WRITE_LONG 0x8 RESOLVE_STR_REF(@23) // General Name
+			WRITE_LONG 0xC RESOLVE_STR_REF(@23) // Identified Name
+			WRITE_LONG 0x50 RESOLVE_STR_REF(@24) // General Description
+			WRITE_LONG 0x54 RESOLVE_STR_REF(@24) // Identified Description
 			
 			OUTER_SET xa_phylactery_index = (xa_phylactery_index + 1)
 		END	
