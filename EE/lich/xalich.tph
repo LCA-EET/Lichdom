@@ -1,8 +1,22 @@
+// Used for updates that apply to both baldur.bcs and baldur25.bcs
+
 ACTION_IF (compiled = 0) THEN BEGIN
 	OUTER_SET compiled = 1
 	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/lich/baf~ 
 	PRINT ~Lich component script compilation successful.~
 	SILENT
+	
+	//{ Phylactery Assignment
+	LAF xa_replace_recompile_iterate
+		INT_VAR
+			xa_max_iterations = (xald_maxrituals + 1)
+			xa_iterations = 1
+			xa_find = 100
+		STR_VAR
+			xa_bcs = ~xaldphas~
+			xa_extend = ~xaldlich~
+	END	
+//}
 END
 
 //{ Death Scripts
@@ -64,17 +78,7 @@ EXTEND_TOP ~%baldur_file%.bcs~ ~override/xalddeath.bcs~
 	END
 //}
 
-//{ Phylactery Assignment
-	LAF xa_replace_recompile_iterate
-		INT_VAR
-			xa_max_iterations = (xald_maxrituals + 1)
-			xa_iterations = 1
-			xa_find = 100
-		STR_VAR
-			xa_bcs = ~xaldphas~
-			xa_extend = ~xaldlich~
-	END	
-//}
+
 
 //{ See if the party has a player's phylactery
 	LAF xa_replace_recompile
