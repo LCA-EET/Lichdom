@@ -29,14 +29,14 @@ THEN
 END
 //}
 
-//{ Perform Resurrection & Apply Script
+//{ Perform Resurrection // & Apply Script
 IF
 	Global("XA_LD_LichRezPlayer1", "GLOBAL", 7)
 THEN
 	RESPONSE #100
 		SetInterrupt(FALSE)
 		ReallyForceSpellRES("SPPR712", Player1)
-		ActionOverride(Player1, ChangeAIScript("xaldrez", CLASS))
+		//ActionOverride(Player1, ChangeAIScript("xaldrez", CLASS))
 		SetGlobal("XA_LD_LichRezPlayer1", "GLOBAL", 0)
 		SetInterrupt(TRUE)
 		Continue()
