@@ -556,6 +556,13 @@ BEGIN ~XALDDBG~
 	IF ~~ THEN BEGIN XA_DebugInit
 		SAY @100
 		
+		IF ~~ THEN REPLY @217
+		DO ~
+			CreateCreature("EDWIN12", [-1.-1], N)
+			ActionOverride("Edwin", JoinParty())
+		~
+		EXIT
+		
 		IF ~~ THEN REPLY @196
 		DO ~
 			SetGlobal("XA_LD_MetMorrisInAthkatla", "GLOBAL", 0)

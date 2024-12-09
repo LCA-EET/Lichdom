@@ -18,6 +18,7 @@ THEN
 	RESPONSE #100
 		ActionOverride(Player1, RemovePaladinHood())
 		ReallyForceSpellRes("xaldfpal", Player1)
+		//DisplayStringHead(Player1, ~A~)
 		Continue()
 END
 
@@ -30,6 +31,7 @@ THEN
 	RESPONSE #100
 		ActionOverride(Player1, RemoveRangerHood())
 		ReallyForceSpellRes("xaldfran", Player1)
+		//DisplayStringHead(Player1, ~B~)
 		Continue()
 END
 //}
@@ -42,6 +44,7 @@ END
 	THEN
 		RESPONSE #100
 			ChangeAlignment(Player1, LAWFUL_EVIL)
+			//DisplayStringHead(Player1, ~C~)
 			Continue()
 	END
 	//}
@@ -53,6 +56,7 @@ END
 	THEN
 		RESPONSE #100
 			ChangeAlignment(Player1, NEUTRAL_EVIL)
+			//DisplayStringHead(Player1, ~D~)
 			Continue()
 	END
 	//}
@@ -64,6 +68,7 @@ END
 	THEN
 		RESPONSE #100
 			ChangeAlignment(Player1, CHAOTIC_EVIL)
+			//DisplayStringHead(Player1, ~E~)
 			Continue()
 	END
 	//}
@@ -75,6 +80,7 @@ END
 	THEN
 		RESPONSE #100
 			ChangeAlignment(Player1, LAWFUL_EVIL)
+			//DisplayStringHead(Player1, ~F~)
 			Continue()
 	END
 	//}
@@ -86,6 +92,7 @@ END
 	THEN
 		RESPONSE #100
 			ChangeAlignment(Player1, NEUTRAL_EVIL)
+			//DisplayStringHead(Player1, ~G~)
 			Continue()
 	END
 	//}
@@ -97,6 +104,7 @@ END
 	THEN
 		RESPONSE #100
 			ChangeAlignment(Player1, CHAOTIC_EVIL)
+			//DisplayStringHead(Player1, ~H~)
 			Continue()
 	END
 	//}
@@ -109,8 +117,9 @@ END
 		Global("XA_LD_LichSenses", "GLOBAL", 0)
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldls00", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldls00", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_LichSenses_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~I~)
 			Continue()
 	END
 	
@@ -120,8 +129,9 @@ END
 		Global("XA_LD_LichSenses", "GLOBAL", 1)
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldls01", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldls01", Player1))
 			ActionOverride(Player1, SetGlobal("XA_LD_LichSenses_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~J~)
 			Continue()
 	END
 //}
@@ -133,6 +143,7 @@ END
 	THEN
 		RESPONSE #100
 			ChangeGeneral(Player1, UNDEAD)
+			//DisplayStringHead(Player1, ~K~)
 			Continue()
 	END
 
@@ -144,8 +155,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_LichAC_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldac00", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldac00", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_LichAC_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~L~)
 			Continue()
 	END
 
@@ -155,8 +167,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_LichAC_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldac01", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldac01", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_LichAC_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~M~)
 			Continue()
 	END
 	
@@ -166,8 +179,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_LichAC_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldac02", Player1)
+			ActionOverride(Player1,ReallyForceSpellRES("xaldac02", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_LichAC_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~N~)
 			Continue()
 	END
 	
@@ -177,8 +191,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_LichAC_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldac03", Player1)
+			ActionOverride(Player1,ReallyForceSpellRES("xaldac03", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_LichAC_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~O~)
 			Continue()
 	END
 	
@@ -188,8 +203,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_LichAC_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldac04", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldac04", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_LichAC_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~P~)
 			Continue()
 	END
 //}
@@ -201,8 +217,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_MentalBoost_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldiwc0", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldiwc0", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_MentalBoost_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~Q~)
 			Continue()
 	END
 	
@@ -212,8 +229,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_MentalBoost_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldiwc1", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldiwc1", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_MentalBoost_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~R~)
 			Continue()
 	END
 //}
@@ -225,8 +243,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldmr01", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldmr01", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~S~)
 			Continue()
 	END
 	
@@ -236,8 +255,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldmr02", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldmr02", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~T~)
 			Continue()
 	END
 	
@@ -247,8 +267,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldmr03", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldmr03", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~U~)
 			Continue()
 	END
 	
@@ -258,8 +279,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldmr04", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldmr04", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~V~)
 			Continue()
 	END
 	
@@ -269,8 +291,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldmr05", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldmr05", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~W~)
 			Continue()
 	END
 	
@@ -280,8 +303,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldmr06", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldmr06", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~X~)
 			Continue()
 	END
 	
@@ -291,8 +315,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldmr07", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldmr07", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~Y~)
 			Continue()
 	END
 	
@@ -302,8 +327,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldmr08", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldmr08", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~Z~)
 			Continue()
 	END
 	
@@ -313,8 +339,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldmr09", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldmr09", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~AA~)
 			Continue()
 	END
 	
@@ -324,8 +351,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldmr10", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldmr10", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~AB~)
 			Continue()
 	END
 	
@@ -335,8 +363,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldmr11", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldmr11", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~AC~)
 			Continue()
 	END
 	
@@ -346,8 +375,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldmr12", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldmr12", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~AD~)
 			Continue()
 	END
 	
@@ -357,8 +387,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldmr13", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldmr13", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~AE~)
 			Continue()
 	END
 	
@@ -368,8 +399,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_SpellResistance_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldmr14", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldmr14", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_SpellResistance_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~AF~)
 			Continue()
 	END
 //}
@@ -381,8 +413,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldsi01", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldsi01", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~AG~)
 			Continue()
 	END
 	
@@ -392,8 +425,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldsi02", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldsi02", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~AH~)
 			Continue()
 	END
 	
@@ -403,8 +437,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldsi03", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldsi03", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~AI~)
 			Continue()
 	END
 	
@@ -414,8 +449,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldsi04", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldsi04", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~AJ~)
 			Continue()
 	END
 	
@@ -425,8 +461,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldsi05", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldsi05", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_SpellImmunityLevel_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~AK~)
 			Continue()
 	END
 //}
@@ -438,8 +475,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_Animation_Done", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldanim", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldanim", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_Animation_Done", "LOCALS", 1))
+			//DisplayStringHead(Player1, ~AL~)
 			Continue()
 	END
 //}
@@ -450,8 +488,9 @@ END
 		TriggerOverride(Player1, GlobalLT("XA_LD_LichTransformationDone", "LOCALS", 1))
 	THEN
 		RESPONSE #100
-			ReallyForceSpellRES("xaldlich", Player1)
+			ActionOverride(Player1, ReallyForceSpellRES("xaldlich", Myself))
 			ActionOverride(Player1, SetGlobal("XA_LD_LichTransformation", "LOCALS", 2))
+			//DisplayStringHead(Player1, ~AM~)
 			Continue()
 	END
 //}
