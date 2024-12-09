@@ -214,15 +214,6 @@ END
 		SAY UNIDENTIFIED_DESC @18
 		SAY DESC @18
 	//}
-
-	/*
-	//{ Paralyzing Touch
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldattk.spl~ ~override~
-		SAY NAME1 @16
-		SAY UNIDENTIFIED_DESC @17
-		SAY DESC @17
-	//}
-	*/
 	
 	//{ Paralyzing Touch
 		COPY ~%MOD_FOLDER%/bg2/spl/xaldpt.spl~ ~override~
@@ -350,21 +341,6 @@ END
 		SAY UNIDENTIFIED_DESC @13
 		SAY DESC @13
 	//}
-	
-	//{ Lich Amination
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldani2.spl~ ~override~
-		SAY NAME1 @13
-		SAY UNIDENTIFIED_DESC @13
-		SAY DESC @13
-	//}
-	
-	//{ Revert Amination
-		COPY ~%MOD_FOLDER%/bg2/spl/xaldani3.spl~ ~override~
-		SAY NAME1 @35
-		SAY UNIDENTIFIED_DESC @35
-		SAY DESC @35
-	//}
-	
 	
 	//{ Portrait Change (Lich)
 		COPY ~%MOD_FOLDER%/bg2/spl/xaplich.spl~ ~override~
