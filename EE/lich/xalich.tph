@@ -16,7 +16,23 @@ ACTION_IF (compiled = 0) THEN BEGIN
 			xa_bcs = ~xaldphas~
 			xa_extend = ~xaldlich~
 	END	
-//}
+	//}
+	
+	//{ Area Script Extensions
+		LAF xa_replace_recompile
+			STR_VAR
+				xa_replace = ~Player1~
+				xa_bcs = ~xaldlich~
+				xa_extend = ~ar0800~
+		END
+		
+		LAF xa_replace_recompile
+			STR_VAR
+				xa_replace = ~Player1~
+				xa_bcs = ~xaldlich~
+				xa_extend = ~ar5000~
+		END
+	//}
 END
 
 //{ Death Scripts
@@ -56,15 +72,6 @@ EXTEND_TOP ~%baldur_file%.bcs~ ~override/xalddeath.bcs~
 		STR_VAR
 			xa_replace = ~Player1~
 			xa_bcs = ~xaldpt01~
-			xa_extend = ~%baldur_file%~
-	END
-//}
-
-//{ Apply Transformation Script
-	LAF xa_replace_recompile
-		STR_VAR
-			xa_replace = ~Player1~
-			xa_bcs = ~xaldtf01~
 			xa_extend = ~%baldur_file%~
 	END
 //}
