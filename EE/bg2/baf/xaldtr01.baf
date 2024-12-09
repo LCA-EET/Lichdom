@@ -13,7 +13,7 @@ THEN
 		Wait(1)
 		SetSequence(SEQ_AWAKE)
 		Wait(1)
-		ChangeRace(Myself, LICH)
+		SetGlobal("XA_LC_LichChange", "LOCALS", 1)
 		ReputationInc(-4)
 		EndCutSceneMode()
 END

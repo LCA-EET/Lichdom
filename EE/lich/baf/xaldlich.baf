@@ -1,3 +1,13 @@
+//{ Race Change to LICH
+IF
+	TriggerOverride(Player1, Global("XA_LC_LichChange", "LOCALS", 1))
+	!Race(Player1, LICH)
+THEN
+	RESPONSE #100
+		ChangeRace(Player1, LICH)
+END
+//}
+
 //{ Change Title, if Paladin or Ranger
 IF
 	Race(Player1, LICH)
