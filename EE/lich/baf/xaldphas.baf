@@ -1,4 +1,5 @@
 IF
+	Race(Player1, LICH)
 	Global("XA_LD_PhylacteriesCreated", "GLOBAL", 100)
 	TriggerOverride(Player1, GlobalLT("XA_LD_PhylacteryCreated", "LOCALS", 1))
 THEN
