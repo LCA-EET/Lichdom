@@ -1,5 +1,4 @@
 //{ Death Scripting
-	
 	IF
 		Race(Player2, LICH)
 		TriggerOverride(Player2, Die())
