@@ -489,7 +489,7 @@ END
 	THEN
 		RESPONSE #100
 			ActionOverride(Player1, ReallyForceSpellRES("xaldlich", Myself))
-			ActionOverride(Player1, SetGlobal("XA_LD_LichTransformation", "LOCALS", 2))
+			ActionOverride(Player1, SetGlobal("XA_LD_LichTransformationDone", "LOCALS", 1))
 			//DisplayStringHead(Player1, ~AM~)
 			Continue()
 	END
