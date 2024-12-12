@@ -202,3 +202,9 @@
 @215=~Global("XA_LD_PhylacteriesCreated","GLOBAL",9)~
 @216=~Global("XA_LD_PhylacteriesCreated","GLOBAL",10)~
 @217=~Create Edwin and add him to the party.~
+@218 = ~Resurrect Player 1~
+@219 = ~Resurrect Player 2~
+@220 = ~Resurrect Player 3~
+@221 = ~Resurrect Player 4~
+@222 = ~Resurrect Player 5~
+@223 = ~Resurrect Player 6~

@@ -1,7 +1,6 @@
 BEGIN ~XALDGD~
 
 //{ Introductions
-
 	IF ~
 		NumTimesTalkedTo(0)
 		OR(2)
@@ -63,7 +62,7 @@ BEGIN ~XALDGD~
 		GOTO XA_LD_WhyComeToSaradush
 		
 		COPY_TRANS XALDGD XA_LD_IntroAthkatla
-	
+		
 		COPY_TRANS XALDGD XA_LD_Exit
 	END
 //}
@@ -187,7 +186,6 @@ IF ~~ THEN BEGIN XA_LD_IntroAthkatla
 	~ THEN REPLY @103  /* ~Lichdom still interests me despite the monetary cost.  Let’s deal, my friend!~*/
 	GOTO XA_LD_StartRitual
 	
-	
 END
 
 IF ~
@@ -302,8 +300,6 @@ IF ~~ THEN BEGIN XA_LD_AnythingElse
 	SAY @146 /*~Was there something else?~*/
 	
 	COPY_TRANS XALDGD XA_LD_IntroAthkatla
-	
-	COPY_TRANS XALDGD XA_LD_Exit
 END
 
 IF ~~ THEN BEGIN XA_LD_NoMoneyToFix
@@ -1122,9 +1118,10 @@ IF ~~ THEN BEGIN XA_LD_Transform
 END
 
 IF ~~ THEN BEGIN XA_LD_Exit
-	SAY @242 /* ~I must get going. Goodbye.~ */
+	SAY @242 	
 	
-	IF ~~ THEN EXIT
+	IF ~~ THEN REPLY @242
+	EXIT
 END
 
 CHAIN XALDGD XA_LD_Chain_ConfirmCharname1

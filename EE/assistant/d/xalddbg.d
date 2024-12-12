@@ -857,6 +857,42 @@ BEGIN ~XALDDBG~
 		IF ~~ THEN REPLY @205
 		GOTO XA_LD_CheckPhylacteries
 		
+		IF ~~ THEN REPLY @218
+		DO ~
+			ReallyForceSpellRES("SPPR712", Player1)
+		~
+		EXIT
+		
+		IF ~~ THEN REPLY @219
+		DO ~
+			ReallyForceSpellRES("SPPR712", Player2)
+		~
+		EXIT
+		
+		IF ~~ THEN REPLY @220
+		DO ~
+			ReallyForceSpellRES("SPPR712", Player3)
+		~
+		EXIT
+		
+		IF ~~ THEN REPLY @221
+		DO ~
+			ReallyForceSpellRES("SPPR712", Player4)
+		~
+		EXIT
+		
+		IF ~~ THEN REPLY @222
+		DO ~
+			ReallyForceSpellRES("SPPR712", Player5)
+		~
+		EXIT
+		
+		IF ~~ THEN REPLY @223
+		DO ~
+			ReallyForceSpellRES("SPPR712", Player6)
+		~
+		EXIT
+		
 		IF ~
 			Global("XA_LD_DisableAssistant", "GLOBAL", 1)
 		~
