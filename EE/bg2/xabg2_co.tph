@@ -196,6 +196,11 @@ END
 //}
 
 //{ SPL
+	//{ Lich Resurrection
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldrez.spl~ ~override~
+		SAY NAME1 @71
+	//}
+
 	//{ Lichdom Assistant
 		COPY ~%MOD_FOLDER%/bg2/spl/xaldasst.spl~ ~override~
 		SAY NAME1 @7
