@@ -1,4 +1,3 @@
-
 IF
 	TriggerOverride(Player1, Global("XA_LD_TransformLich", "LOCALS", 1))
 THEN
