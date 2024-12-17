@@ -1,0 +1,167 @@
+IF
+	TriggerOverride("Aerie", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("Aerie", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("Anomen", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("Anomen", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("Cernd", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("Cernd", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("Dorn", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("Dorn", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("Edwin", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("Edwin", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("HaerDalis", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("HaerDalis", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("Hexxat", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("Hexxat", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("Imoen2", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("Imoen2", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("Jaheira", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("Jaheira", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("Jan", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("Jan", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("Keldorn", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("Keldorn", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("Korgan", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("Korgan", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("Mazzy", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("Mazzy", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("Minsc", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("Minsc", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("Nalia", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("Nalia", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("Neera", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("Neera", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("Valygar", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("Valygar", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("Viconia", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("Viconia", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("Rasaad", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("Rasaad", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("Sarevok", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("Sarevok", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("Yoshimo", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("Yoshimo", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END

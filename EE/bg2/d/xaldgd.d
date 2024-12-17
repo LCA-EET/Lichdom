@@ -329,6 +329,12 @@ IF ~~ THEN BEGIN XA_LD_StartRitual
 	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
 	GOTO XA_LD_PayMoney
 	
+	IF ~
+		GlobalGT("XA_LD_IgnoreDialog", "GLOBAL", 0)
+		!PartyGoldLT(6686)
+	~ THEN REPLY @106  /* ~Here is your money.  Let’s do this!~ */
+	GOTO XA_LD_PayMoney_NoDialog
+	
 	COPY_TRANS XALDGD XA_LD_Exit
 END
 
