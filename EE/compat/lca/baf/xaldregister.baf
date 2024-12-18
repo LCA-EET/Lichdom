@@ -1,0 +1,15 @@
+IF
+	TriggerOverride("XACAELAR", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("XACAELAR", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("XACORWIN", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("XACORWIN", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END

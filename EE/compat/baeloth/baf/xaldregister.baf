@@ -1,0 +1,7 @@
+IF
+	TriggerOverride("BG2BAE", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("BG2BAE", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END

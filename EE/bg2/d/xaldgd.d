@@ -579,6 +579,76 @@ IF ~~ THEN BEGIN XA_LD_PayMoney
 	~ THEN REPLY @198 /* (Choose Yosihmo.)*/
 	GOTO XA_LD_NoYoshimo
 	
+	IF ~
+		TriggerOverride(Player2, GlobalLT("XA_LD_Registered", "LOCALS", 1))
+		!Class(Player2, FIGHTER)
+		!Class(Player2, THIEF)
+		!Class(Player2, FIGHTER_THIEF)
+		!Kit(Player2, WIZARDSLAYER)
+		!General(Player2, UNDEAD)
+		LevelGT(Player2, 11)
+	~ THEN REPLY @235
+	DO ~
+		ActionOverride(Player2, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+	~
+	GOTO XA_LD_Transform
+	
+	IF ~
+		TriggerOverride(Player3, GlobalLT("XA_LD_Registered", "LOCALS", 1))
+		!Class(Player3, FIGHTER)
+		!Class(Player3, THIEF)
+		!Class(Player3, FIGHTER_THIEF)
+		!Kit(Player3, WIZARDSLAYER)
+		!General(Player3, UNDEAD)
+		LevelGT(Player3, 11)
+	~ THEN REPLY @236
+	DO ~
+		ActionOverride(Player3, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+	~
+	GOTO XA_LD_Transform
+	
+	IF ~
+		TriggerOverride(Player4, GlobalLT("XA_LD_Registered", "LOCALS", 1))
+		!Class(Player4, FIGHTER)
+		!Class(Player4, THIEF)
+		!Class(Player4, FIGHTER_THIEF)
+		!Kit(Player4, WIZARDSLAYER)
+		!General(Player4, UNDEAD)
+		LevelGT(Player4, 11)
+	~ THEN REPLY @237
+	DO ~
+		ActionOverride(Player4, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+	~
+	GOTO XA_LD_Transform
+	
+	IF ~
+		TriggerOverride(Player5, GlobalLT("XA_LD_Registered", "LOCALS", 1))
+		!Class(Player5, FIGHTER)
+		!Class(Player5, THIEF)
+		!Class(Player5, FIGHTER_THIEF)
+		!Kit(Player5, WIZARDSLAYER)
+		!General(Player5, UNDEAD)
+		LevelGT(Player5, 11)
+	~ THEN REPLY @238
+	DO ~
+		ActionOverride(Player5, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+	~
+	GOTO XA_LD_Transform
+	
+	IF ~
+		TriggerOverride(Player6, GlobalLT("XA_LD_Registered", "LOCALS", 1))
+		!Class(Player6, FIGHTER)
+		!Class(Player6, THIEF)
+		!Class(Player6, FIGHTER_THIEF)
+		!Kit(Player6, WIZARDSLAYER)
+		!General(Player6, UNDEAD)
+		LevelGT(Player6, 11)
+	~ THEN REPLY @239
+	DO ~
+		ActionOverride(Player6, SetGlobal("XA_LD_TransformLich", "LOCALS", 1))
+	~
+	GOTO XA_LD_Transform
+	
 	IF ~~ THEN REPLY @240 /*~I need more time to make a decision.~*/
 	GOTO XA_LD_Reconsider
 	

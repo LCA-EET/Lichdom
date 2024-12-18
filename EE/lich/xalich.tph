@@ -51,6 +51,10 @@ END
 
 EXTEND_TOP ~%baldur_file%.bcs~ ~override/xalddeath.bcs~
 
+//{ Register
+	EXTEND_TOP ~%baldur_file%.bcs~ ~override/xaldregister.bcs~
+//}
+
 //{ Crown of the Lich Undead Flag
 	LAF xa_replace_recompile
 		STR_VAR
