@@ -65,5 +65,7 @@ ACTION_IF (xald_ia = 1) THEN BEGIN
 	INCLUDE ~%MOD_FOLDER%/assistant/xaassistant.tph~
 END
 
+INCLUDE ~%MOD_FOLDER%/compat/compat.tph~
+
 PRINT @57  // ~Installation was successful. Enjoy!~
 

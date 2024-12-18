@@ -1,0 +1,23 @@
+IF
+	TriggerOverride("X3Hel", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("X3Hel", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("X3Kal", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("X3Kal", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("X3Vie", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("X3Vie", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END

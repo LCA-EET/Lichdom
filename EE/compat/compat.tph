@@ -1,0 +1,15 @@
+//{ Mod Integration
+	INCLUDE ~%MOD_FOLDER%/compat/baeloth/baeloth.tph~
+	INCLUDE ~%MOD_FOLDER%/compat/beaurin/beaurin.tph~
+	INCLUDE ~%MOD_FOLDER%/compat/bg1/bg1.tph~
+	INCLUDE ~%MOD_FOLDER%/compat/dusk/dusk.tph~
+	INCLUDE ~%MOD_FOLDER%/compat/khalid/khalid.tph~
+	INCLUDE ~%MOD_FOLDER%/compat/lca/lca.tph~
+	INCLUDE ~%MOD_FOLDER%/compat/neh/neh.tph~
+	INCLUDE ~%MOD_FOLDER%/compat/rot/rot.tph~
+	INCLUDE ~%MOD_FOLDER%/compat/saradas/saradas.tph~
+	INCLUDE ~%MOD_FOLDER%/compat/skitia/skitia.tph~
+	INCLUDE ~%MOD_FOLDER%/compat/tlr/tlr.tph~
+	INCLUDE ~%MOD_FOLDER%/compat/veg/veg.tph~
+	INCLUDE ~%MOD_FOLDER%/compat/zakrion/zakrion.tph~
+//}

@@ -1,0 +1,7 @@
+IF
+	TriggerOverride("L#KHALID", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("L#KHALID", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END

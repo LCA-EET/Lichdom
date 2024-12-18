@@ -1,0 +1,11 @@
+//{ Beaurin Legacy
+	ACTION_IF FILE_EXISTS_IN_GAME ~QI#ELAJ.dlg~ THEN BEGIN
+		PRINT @58 /* ~Beaurin Legacy mod detected. Updating dialogs accordingly...~ */ 
+		SILENT
+		COMPILE ~%MOD_FOLDER%/compat/beaurin/d/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/beaurin/tra/english/xaldbeau.tra~
+		COMPILE ~%MOD_FOLDER%/compat/beaurin/d/xaldtob.d~ USING ~%MOD_FOLDER%/compat/beaurin/tra/english/xaldbeau.tra~
+		
+		EXTEND_TOP ~baldur.bcs~ ~%MOD_FOLDER%/compat/beaurin/baf/xaldregister.baf~
+		EXTEND_TOP ~baldur25.bcs~ ~%MOD_FOLDER%/compat/beaurin/baf/xaldregister.baf~
+	END 
+//}

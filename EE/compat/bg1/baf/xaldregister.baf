@@ -1,0 +1,55 @@
+IF
+	TriggerOverride("7XAJAN", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("7XAJAN", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("7XALORA", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("7XALORA", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("7XBRAN", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("7XBRAN", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("7XGAR", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("7XGAR", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("7XKIVA", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("7XKIVA", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("7XXAN", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("7XXAN", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+
+IF
+	TriggerOverride("7XXZAR", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("7XXZAR", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END

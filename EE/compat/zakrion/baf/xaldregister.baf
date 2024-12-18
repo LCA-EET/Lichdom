@@ -1,0 +1,8 @@
+IF
+	TriggerOverride("QI#ZAK2", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("QI#ZAK2", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+

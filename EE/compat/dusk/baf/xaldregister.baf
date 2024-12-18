@@ -1,0 +1,7 @@
+IF
+	TriggerOverride("P_Dusk", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("P_Dusk", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END

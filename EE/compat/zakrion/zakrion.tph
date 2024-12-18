@@ -1,0 +1,8 @@
+//{ Zakrion 
+	ACTION_IF FILE_EXISTS_IN_GAME ~QI#ZAK2J.dlg~ THEN BEGIN
+		PRINT @59 /* ~Zakrion mod detected. Updating dialogs accordingly...~ */ 
+		SILENT
+		COMPILE ~%MOD_FOLDER%/compat/zakrion/d/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/zakrion/tra/english/xaldzak.tra~
+		COMPILE ~%MOD_FOLDER%/compat/zakrion/d/xaldtob.d~ USING ~%MOD_FOLDER%/compat/zakrion/tra/english/xaldzak.tra~
+	END 
+//}

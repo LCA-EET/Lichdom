@@ -1,0 +1,66 @@
+//{ BG1
+	//{ Ajantis
+	ACTION_IF FILE_EXISTS_IN_GAME ~7XAJANJ.dlg~ THEN BEGIN
+		PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+		SILENT
+		COMPILE ~%MOD_FOLDER%/compat/bg1/ajantis/d/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+		COMPILE ~%MOD_FOLDER%/compat/bg1/ajantis/d/xaldtob.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+		EXTEND_TOP ~BALDUR.BCS~ ~%MOD_FOLDER%/compat/bg1/ajantis/baf/xabaldur.baf~
+		EXTEND_TOP ~BALDUR25.BCS~ ~%MOD_FOLDER%/compat/bg1/ajantis/baf/xabaldur.baf~
+	END
+	//}
+
+	//{ Alora
+	ACTION_IF FILE_EXISTS_IN_GAME ~7XAloraJ.dlg~ THEN BEGIN
+		PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+		SILENT
+		COMPILE ~%MOD_FOLDER%/compat/bg1/alora/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+		COMPILE ~%MOD_FOLDER%/compat/bg1/alora/xaldtob.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+	END
+	//}
+	
+	//{ Branwen
+	ACTION_IF FILE_EXISTS_IN_GAME ~7XBranJ.dlg~ THEN BEGIN
+		PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+		SILENT
+		COMPILE ~%MOD_FOLDER%/compat/bg1/branwen/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+		COMPILE ~%MOD_FOLDER%/compat/bg1/branwen/xaldtob.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+	END
+	//}
+	
+	//{ Garrick
+	ACTION_IF FILE_EXISTS_IN_GAME ~7XGarJ.dlg~ THEN BEGIN
+		PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+		SILENT
+		COMPILE ~%MOD_FOLDER%/compat/bg1/garrick/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+		COMPILE ~%MOD_FOLDER%/compat/bg1/garrick/xaldtob.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+	END
+	//}
+
+	//{ Kivan
+	ACTION_IF FILE_EXISTS_IN_GAME ~7XKIVAJ.dlg~ THEN BEGIN
+		PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+		SILENT
+		COMPILE ~%MOD_FOLDER%/compat/bg1/kivan/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+		COMPILE ~%MOD_FOLDER%/compat/bg1/kivan/xaldtob.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+	END
+	//}
+	
+	//{ Xan
+	ACTION_IF FILE_EXISTS_IN_GAME ~7XXANJ.dlg~ THEN BEGIN
+		PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+		SILENT
+		COMPILE ~%MOD_FOLDER%/compat/bg1/xan/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+		COMPILE ~%MOD_FOLDER%/compat/bg1/xan/xaldtob.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+	END
+	//}
+	
+	//{ Xzar
+	ACTION_IF FILE_EXISTS_IN_GAME ~7XXZARJ.dlg~ THEN BEGIN
+		PRINT @41 /* ~BG1 NPCs mod detected. Updating dialogs accordingly...~ */ 
+		SILENT
+		COMPILE ~%MOD_FOLDER%/compat/bg1/xzar/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+		COMPILE ~%MOD_FOLDER%/compat/bg1/xzar/xaldtob.d~ USING ~%MOD_FOLDER%/compat/bg1/tra/english/xaldbg1.tra~
+	END
+	//}
+//}
