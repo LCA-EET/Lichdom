@@ -121,7 +121,7 @@ On a successful touch from the lich, the spell will deal 1d10 cold damage to the
 
 This spell has a ten second cooldown.~
 @69 = ~Should the Crown of the Lich grant immunity to Turn Undead?
-0.) No. (Default)
+0.) No.
 1.) Yes.
 Enter a value: ~
 @70 = ~Include voiced dialog files?
@@ -129,3 +129,8 @@ Enter a value: ~
 1.) Yes.
 Enter a value: ~
 @71 = ~Eternal Night~
+@72 = ~Install with default options?
+0.) No.
+1.) Yes.
+Enter a value: ~
+@73 = ~Loaded default parameters from defaults.tph.~

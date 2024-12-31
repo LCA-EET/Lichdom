@@ -31,6 +31,21 @@ OUTER_SET xa_tempID = 0
 
 INCLUDE ~%MOD_FOLDER%/functions.tph~
 
+OUTER_SET xald_use_defaults = 0
+
+LAF xa_determine_quantity
+	INT_VAR
+		xa_min_qty = 0
+		xa_max_qty = 1
+		xa_str_ref = RESOLVE_STR_REF(@72)
+	RET
+		xald_use_defaults = xa_quantity
+END
+
+ACTION_IF (xald_use_defaults = 1) THEN BEGIN
+	INCLUDE ~%MOD_FOLDER%/defaults.tph~
+END
+
 ACTION_IF (GAME_IS ~eet~) THEN BEGIN
 	OUTER_SET isEET = 1
 	PRINT @1  // ~Enhanced Edition Trilogy (EET) mod has been detected.~ 

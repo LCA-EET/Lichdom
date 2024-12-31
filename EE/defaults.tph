@@ -1,0 +1,7 @@
+OUTER_SET xald_copywav = 1
+OUTER_SET xald_crowns = 5
+OUTER_SET xald_cost = 120000
+OUTER_SET xald_maxrituals = 5
+OUTER_SET xald_immune = 0
+PRINT @73
+SILENT

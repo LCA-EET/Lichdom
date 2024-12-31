@@ -12,14 +12,17 @@ END
 //{ Config file processing
 
 	//{ Number of Crowns for Sale
-		LAF xa_determine_quantity
-			INT_VAR
-				xa_min_qty = 0
-				xa_max_qty = 10
-				xa_str_ref = RESOLVE_STR_REF(@36)
-			RET
-				xald_crowns = xa_quantity
+		ACTION_IF (xald_use_defaults = 0) THEN BEGIN
+			LAF xa_determine_quantity
+				INT_VAR
+					xa_min_qty = 0
+					xa_max_qty = 10
+					xa_str_ref = RESOLVE_STR_REF(@36)
+				RET
+					xald_crowns = xa_quantity
+			END
 		END
+		SILENT
 		COPY_EXISTING ~garlena.sto~ ~override~
 		LPF ADD_STORE_ITEM_EX
 			INT_VAR
@@ -28,16 +31,19 @@ END
 				item_name = ~xaldcrwn~
 				flags = ~IDENTIFIED~
 		END
+		SILENT
 	//}
 	
 	//{ Ritual Cost
-		LAF xa_determine_quantity
-			INT_VAR
-				xa_min_qty = 40000
-				xa_max_qty = 200000
-				xa_str_ref = RESOLVE_STR_REF(@37)
-			RET
-				xald_cost = xa_quantity
+		ACTION_IF (xald_use_defaults = 0) THEN BEGIN
+			LAF xa_determine_quantity
+				INT_VAR
+					xa_min_qty = 40000
+					xa_max_qty = 200000
+					xa_str_ref = RESOLVE_STR_REF(@37)
+				RET
+					xald_cost = xa_quantity
+			END
 		END
 		COPY_EXISTING ~xaldgd.dlg~ ~override~
 		DECOMPILE_AND_PATCH BEGIN
@@ -46,13 +52,15 @@ END
 	//}
 	
 	//{ Max Number of Rituals
-		LAF xa_determine_quantity
-			INT_VAR
-				xa_min_qty = 1
-				xa_max_qty = 10
-				xa_str_ref = RESOLVE_STR_REF(@21)
-			RET
-				xald_maxrituals = xa_quantity
+		ACTION_IF (xald_use_defaults = 0) THEN BEGIN
+			LAF xa_determine_quantity
+				INT_VAR
+					xa_min_qty = 1
+					xa_max_qty = 10
+					xa_str_ref = RESOLVE_STR_REF(@21)
+				RET
+					xald_maxrituals = xa_quantity
+			END
 		END
 		COPY_EXISTING ~xaldmaxt.bcs~ ~override~
 		DECOMPILE_AND_PATCH BEGIN
@@ -61,7 +69,7 @@ END
 		
 	//}
 //}
-
+SILENT
 //{ Allows the protagonist to die (in conjunction with the modifications to BALDUR.BCS)~
 	COPY_EXISTING_REGEXP GLOB ~^.+\.are$~ ~override~ 
 	WRITE_LONG 0x14 THIS|16
@@ -180,13 +188,15 @@ END
 //}
 
 //{ Crown Turn Undead Immunity
-	LAF xa_determine_quantity
-		INT_VAR
-			xa_min_qty = 0
-			xa_max_qty = 1
-			xa_str_ref = RESOLVE_STR_REF(@69)
-		RET
-			xald_immune = xa_quantity
+	ACTION_IF (xald_use_defaults = 0) THEN BEGIN
+		LAF xa_determine_quantity
+			INT_VAR
+				xa_min_qty = 0
+				xa_max_qty = 1
+				xa_str_ref = RESOLVE_STR_REF(@69)
+			RET
+				xald_immune = xa_quantity
+		END
 	END
 	ACTION_IF(xald_immune = 1) THEN BEGIN
 		COPY_EXISTING ~xaldcrwn.itm~ ~override~

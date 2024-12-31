@@ -26,6 +26,7 @@ foreach($folder in $folders){
 
 Copy-Item -Path ("weidu.exe") -Destination ($forArchival  + "/" + $exeName)
 Copy-Item -Path ("F:\BGModding - LCA\Game\00783\LCA\EE\functions.tph") -Destination ($forArchival  + "/" + $modName + "/functions.tph")
+Copy-Item -Path ("defaults.tph") -Destination ($forArchival  + "/" + $modName + "/defaults.tph")
 
 Copy-Item -Path ("F:\BGModding - LCA\Game\00783\LCA\EE\d_compactor.ps1") -Destination $PSScriptRoot
 
