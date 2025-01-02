@@ -17,9 +17,6 @@ BEGIN ~XALDDBG~
 		IF ~~ THEN REPLY @74 /* ~Lich equipment options.~ */
 		GOTO XA_LichEquip
 		
-		IF ~~ THEN REPLY @9 /*~Change phylactery chance to shatter on death.~*/
-		GOTO XA_PhylacteryBreak
-		
 		IF ~~ THEN REPLY @20 /*~Change spell level immunities.~*/
 		GOTO XA_SpellImmunities
 		
@@ -414,90 +411,7 @@ BEGIN ~XALDDBG~
 		GOTO XA_MainMenu
 	END
 
-	IF ~~ THEN BEGIN XA_PhylacteryBreak
-		SAY @9 /*~Change phylactery chance to shatter on death.~*/
-		
-		IF ~~ THEN REPLY @10 /*~0% (Default).~*/
-		DO ~
-			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 0)
-		~
-		GOTO XA_ChangeProcessed
-		
-		IF ~~ THEN REPLY @11 /*~1%.~*/
-		DO ~
-			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 1)
-		~
-		GOTO XA_ChangeProcessed
-		
-		IF ~~ THEN REPLY @12 /*~3%.~*/
-		DO ~
-			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 2)
-		~
-		GOTO XA_ChangeProcessed
-		
-		IF ~~ THEN REPLY @13 /*~5%.~*/
-		DO ~
-			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 3)
-		~
-		GOTO XA_ChangeProcessed
-		
-		IF ~~ THEN REPLY @14 /*~10%.~*/
-		DO ~
-			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 4)
-		~
-		GOTO XA_ChangeProcessed
-		
-		IF ~~ THEN REPLY @15 /*~15%.~*/
-		DO ~
-			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 5)
-		~
-		GOTO XA_ChangeProcessed
-		
-		IF ~~ THEN REPLY @16 /*~20%.~*/
-		DO ~
-			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 6)
-		~
-		GOTO XA_ChangeProcessed
-		
-		IF ~~ THEN REPLY @17 /*~25%.~*/
-		DO ~
-			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 7)
-		~
-		GOTO XA_ChangeProcessed
-		
-		IF ~~ THEN REPLY @18 /*~33%.~*/
-		DO ~
-			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 8)
-		~
-		GOTO XA_ChangeProcessed
-		
-		IF ~~ THEN REPLY @19 /*~50%.~*/
-		DO ~
-			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 9)
-		~
-		GOTO XA_ChangeProcessed
-		
-		IF ~~ THEN REPLY @58 /*~67%.~*/
-		DO ~
-			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 10)
-		~
-		GOTO XA_ChangeProcessed
-		
-		IF ~~ THEN REPLY @59 /*~80%.~*/
-		DO ~
-			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 11)
-		~
-		GOTO XA_ChangeProcessed
-		
-		IF ~~ THEN REPLY @60 /*~100%.~*/
-		DO ~
-			SetGlobal("XA_LD_PhylacteryBreak", "GLOBAL", 12)
-		~
-		GOTO XA_ChangeProcessed
-		
-		IF ~~ THEN REPLY @28 /*Back to main menu.*/
-		GOTO XA_MainMenu
-	END
+	
 
 	IF ~~ THEN BEGIN XA_LichCost
 		SAY @3 /*~Change Lichdom transformation cost.~*/

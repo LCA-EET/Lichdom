@@ -19,7 +19,7 @@
 @18 = ~Lich Mental Senses~
 @19 = ~Gravetender Morris~
 @20 = ~Debugger~
-@21 = ~What is the maximum number of characters that can undergo the lich transformation ritual?
+@21 = ~What is the maximum number of characters that can undergo the lich transformation ritual? Default is 5.
 Provide a value from 1 to 10, then press Enter: ~
 @22 = ~Lich~
 @23 = ~Damaged Phylactery~
@@ -27,7 +27,7 @@ Provide a value from 1 to 10, then press Enter: ~
 
 The phylactery is simultaneously the source of the lich's greatest power and its greatest, indeed its only significant physical weakness. Any independent lich should take pains to ensure its phylactery is kept secure at all times. Though not strictly necessary, the transition from mortal to lich is more easily achieved if the item which will store the transformee's soul (ie, the phylactery) is something with which they are familiar. This is particularly the case in Rituals of Becoming that are performed by a party other than the one undergoing transformation.~
 @25 = ~Morris' Price for Lichdom~
-@26 = ~Restrict lich transformation to base game NPCs only?
+@26 = ~Restrict lich transformation to base game NPCs only? Default is No.
 0: No
 1: Yes
 Provide a response (either 0 or 1), then press Enter.~
@@ -103,7 +103,7 @@ Provide a value from 40000 to 200000, then press Enter: ~
 @64 = ~Added Lichdom Assistant to BDBaldur.bcs~
 @65 = ~Lichdom Assistant~
 @66 = ~This component requires the Lichdom mod to be installed first. Please install the Lichdom mod, then try again.~
-@67 = ~Install Lichdom Assistant?
+@67 = ~Install Lichdom Assistant? Default is Yes.
 0.) No.
 1.) Yes.
 Enter a value: ~
@@ -120,11 +120,11 @@ Saving Throw: Death
 On a successful touch from the lich, the spell will deal 1d10 cold damage to the selected target. The next attack that the lich makes will inflict this effect; however, <PRO_HESHE> only has 2 rounds to make the attack before the spell fizzles. If the lich misses the target creature, the spell is wasted. Failure to Save vs. Death will cause the target to be paralyzed for 5 rounds. 
 
 This spell has a ten second cooldown.~
-@69 = ~Should the Crown of the Lich grant immunity to Turn Undead?
+@69 = ~Should the Crown of the Lich grant immunity to Turn Undead? Default is No.
 0.) No.
 1.) Yes.
 Enter a value: ~
-@70 = ~Include voiced dialog files?
+@70 = ~Include voiced dialog files? Default is Yes.
 0.) No.
 1.) Yes.
 Enter a value: ~
@@ -134,3 +134,4 @@ Enter a value: ~
 1.) Yes.
 Enter a value: ~
 @73 = ~Loaded default parameters from defaults.tph.~
+@74= ~Provide the percentage chance (0 - 100) that a phylactery will break after resurrecting a lich. Default is 25. ~

@@ -34,6 +34,20 @@ END
 		SILENT
 	//}
 	
+	//{ Chance to Break
+		ACTION_IF (xald_use_defaults = 0) THEN BEGIN
+			LAF xa_determine_quantity
+				INT_VAR
+					xa_min_qty = 0
+					xa_max_qty = 100
+					xa_str_ref = RESOLVE_STR_REF(@74)
+				RET
+					xald_breakchance = xa_quantity
+			END
+		END
+		SILENT
+	//}
+	
 	//{ Ritual Cost
 		ACTION_IF (xald_use_defaults = 0) THEN BEGIN
 			LAF xa_determine_quantity

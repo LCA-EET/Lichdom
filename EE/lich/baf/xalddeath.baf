@@ -1,0 +1,14 @@
+//{ If the player dies without a phylactery, game over. 
+IF
+	Race(Player1, LICH)
+	TriggerOverride(Player1, GlobalLT("XA_LD_HasPhylactery", "LOCALS", 1))
+	TriggerOverride(Player1, GlobalLT("XA_LD_LichDestroyed", "LOCALS", 1))
+	OR(2)
+		StateCheck(Player1, STATE_DEAD)
+		StateCheck(Player1, STATE_REALLY_DEAD)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("xalddest", Player1)
+		GameOver(19377)
+END
+//}

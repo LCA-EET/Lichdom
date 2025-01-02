@@ -37,6 +37,7 @@ THEN
 		SetInterrupt(FALSE)
 		ReallyForceSpellRES("xaldrez", Player1)
 		SetGlobal("XA_LD_LichRezPlayer1", "GLOBAL", 0)
+		ActionOverride(Player1, SetGlobal("XA_LD_PhylacteryUsed", "LOCALS", 1))
 		SetInterrupt(TRUE)
 		Continue()
 END

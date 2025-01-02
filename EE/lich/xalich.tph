@@ -6,6 +6,20 @@ ACTION_IF (compiled = 0) THEN BEGIN
 	PRINT ~Lich component script compilation successful.~
 	SILENT
 	
+	//{ Phylactery Usage
+		LAF xa_replace_recompile
+			STR_VAR
+				xa_replace = ~Player1~
+				xa_bcs = ~xaldup01~
+				xa_extend = ~xaldup~
+		END
+		COPY_EXISTING ~xaldup.bcs~ ~override/xaldupex.bcs~
+		DECOMPILE_AND_PATCH BEGIN
+			REPLACE_TEXTUALLY ~6686~ ~%xald_breakchance%~
+		END
+		SILENT
+	//}
+	
 	//{ Area Script Extensions
 		//{ Phylactery Assignment
 			LAF xa_replace_recompile_iterate
@@ -35,21 +49,23 @@ ACTION_IF (compiled = 0) THEN BEGIN
 			END
 		//}
 	//}
+	
+	//{ Death Scripts
+		LAF xa_replace_recompile
+			INT_VAR
+				xa_indexStart = 2
+				xa_extendTop = 0
+			STR_VAR
+				xa_replace = ~Player2~
+				xa_bcs = ~xaldd02~
+				xa_extend = ~xalddeath~
+		END
+	//}
 END
 
-//{ Death Scripts
-	LAF xa_replace_recompile
-		INT_VAR
-			xa_indexStart = 2
-			xa_extendTop = 0
-		STR_VAR
-			xa_replace = ~Player2~
-			xa_bcs = ~xaldd02~
-			xa_extend = ~xalddeath~
-	END
-//}
-
 EXTEND_TOP ~%baldur_file%.bcs~ ~override/xalddeath.bcs~
+
+EXTEND_TOP ~%baldur_file%.bcs~ ~override/xaldupex.bcs~
 
 //{ Register
 	EXTEND_TOP ~%baldur_file%.bcs~ ~override/xaldregister.bcs~
