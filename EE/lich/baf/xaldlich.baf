@@ -13,9 +13,10 @@ IF
 	Race(Player1, LICH)
 	TriggerOverride(Player1, GlobalLT("XA_LC_Attune", "LOCALS", 1))
 THEN
-	ActionOverride(Player1, SetGlobal("XA_LD_Attune", "LOCALS", 1))
-	ActionOverride(Player1, AddSpecialAbility("XALDASST"))
-	Continue()
+	RESPONSE #100
+		ActionOverride(Player1, SetGlobal("XA_LD_Attune", "LOCALS", 1))
+		ActionOverride(Player1, AddSpecialAbility("XALDPCHK"))
+		Continue()
 END
 
 //}

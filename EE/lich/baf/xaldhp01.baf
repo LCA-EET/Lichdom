@@ -30,7 +30,9 @@ IF
 THEN
 	RESPONSE #100
 		DisplayStringHead(Player1, @2)
+		ActionOverride(Player1, AddSpecialAbility("XALDPCHK"))
 		ActionOverride(Player1, SetGlobal("xaldpchk", "LOCALS", 0))
+		Continue()
 END
 
 IF
@@ -40,7 +42,9 @@ IF
 THEN
 	RESPONSE #100
 		DisplayStringHead(Player1, @3)
+		ActionOverride(Player1, AddSpecialAbility("XALDPCHK"))
 		ActionOverride(Player1, SetGlobal("xaldpchk", "LOCALS", 0))
+		Continue()
 END
 
 IF
@@ -50,5 +54,7 @@ IF
 THEN
 	RESPONSE #100
 		DisplayStringHead(Player1, @4)
+		ActionOverride(Player1, AddSpecialAbility("XALDPCHK"))
 		ActionOverride(Player1, SetGlobal("xaldpchk", "LOCALS", 0))
+		Continue()
 END
