@@ -1,10 +1,10 @@
 IF
 	TriggerOverride(Player1, Global("XA_LD_PhylacteryUsed", "LOCALS", 1))
 	RandomNumGT(100, 6686)
-	Global("XA_LD_PhylacteryBreak", "GLOBAL", 1)
 THEN
 	RESPONSE #100
 		ActionOverride(Player1, SetGlobal("XA_LD_PhylacteryUsed", "LOCALS", 0))
+		ActionOverride(Player1, SetGlobal("XA_LD_PhylacteryBroken", "LOCALS", 1))
 		DisplayStringHead(Player1, @0)
 		Continue()
 END

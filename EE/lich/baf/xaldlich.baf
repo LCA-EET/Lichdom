@@ -8,6 +8,18 @@ THEN
 END
 //}
 
+//{ Add Attune Special Ability
+IF
+	Race(Player1, LICH)
+	TriggerOverride(Player1, GlobalLT("XA_LC_Attune", "LOCALS", 1))
+THEN
+	ActionOverride(Player1, SetGlobal("XA_LD_Attune", "LOCALS", 1))
+	ActionOverride(Player1, AddSpecialAbility("XALDASST"))
+	Continue()
+END
+
+//}
+
 //{ Change Title, if Paladin or Ranger
 IF
 	Race(Player1, LICH)

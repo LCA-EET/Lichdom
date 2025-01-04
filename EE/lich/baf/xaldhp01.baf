@@ -7,7 +7,7 @@ IF
 THEN
 	RESPONSE #100
 		ActionOverride(Player1, SetGlobal("XA_LD_HasPhylactery", "LOCALS", 1))
-		DisplayStringHead(Player1, ~I've regained my phylactery.~)
+		DisplayStringHead(Player1, @0)
 		Continue()
 END
 
@@ -20,6 +20,35 @@ IF
 THEN
 	RESPONSE #100
 		ActionOverride(Player1, SetGlobal("XA_LD_HasPhylactery", "LOCALS", 0))
-		DisplayStringHead(Player1, ~I lost my phylactery.~)
+		DisplayStringHead(Player1, @1)
 		Continue()
+END
+
+IF
+	TriggerOverride(Player1, Global("xaldpchk", "LOCALS", 1))
+	!PartyHasItem("xaldph100")
+THEN
+	RESPONSE #100
+		DisplayStringHead(Player1, @2)
+		ActionOverride(Player1, SetGlobal("xaldpchk", "LOCALS", 0))
+END
+
+IF
+	TriggerOverride(Player1, Global("xaldpchk", "LOCALS", 1))
+	TriggerOverride(Player1, Global("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	PartyHasItem("xaldph100")
+THEN
+	RESPONSE #100
+		DisplayStringHead(Player1, @3)
+		ActionOverride(Player1, SetGlobal("xaldpchk", "LOCALS", 0))
+END
+
+IF
+	TriggerOverride(Player1, Global("xaldpchk", "LOCALS", 1))
+	TriggerOverride(Player1, Global("XA_LD_PhylacteryBroken", "LOCALS", 0))
+	PartyHasItem("xaldph100")
+THEN
+	RESPONSE #100
+		DisplayStringHead(Player1, @4)
+		ActionOverride(Player1, SetGlobal("xaldpchk", "LOCALS", 0))
 END
