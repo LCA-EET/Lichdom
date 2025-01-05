@@ -66,9 +66,8 @@ END ELSE BEGIN
 	END
 END
 
-OUTER_SET xald_assistant = 0
-
 ACTION_IF (xald_use_defaults = 0) THEN BEGIN
+	OUTER_SET xald_assistant = 0
 	LAF xa_determine_quantity
 		INT_VAR
 			xa_min_qty = 0

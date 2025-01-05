@@ -13,6 +13,7 @@ END
 
 	//{ Number of Crowns for Sale
 		ACTION_IF (xald_use_defaults = 0) THEN BEGIN
+			OUTER_SET xald_crowns = 0
 			LAF xa_determine_quantity
 				INT_VAR
 					xa_min_qty = 0
@@ -36,6 +37,7 @@ END
 	
 	//{ Chance to Break
 		ACTION_IF (xald_use_defaults = 0) THEN BEGIN
+			OUTER_SET xald_breakchance = 0
 			LAF xa_determine_quantity
 				INT_VAR
 					xa_min_qty = 0
@@ -50,6 +52,7 @@ END
 	
 	//{ Ritual Cost
 		ACTION_IF (xald_use_defaults = 0) THEN BEGIN
+			OUTER_SET xald_cost = 0
 			LAF xa_determine_quantity
 				INT_VAR
 					xa_min_qty = 40000
@@ -67,6 +70,7 @@ END
 	
 	//{ Max Number of Rituals
 		ACTION_IF (xald_use_defaults = 0) THEN BEGIN
+			OUTER_SET xald_maxrituals = 0
 			LAF xa_determine_quantity
 				INT_VAR
 					xa_min_qty = 1
@@ -203,6 +207,7 @@ SILENT
 
 //{ Crown Turn Undead Immunity
 	ACTION_IF (xald_use_defaults = 0) THEN BEGIN
+		OUTER_SET xald_immune = 0
 		LAF xa_determine_quantity
 			INT_VAR
 				xa_min_qty = 0

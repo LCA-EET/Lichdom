@@ -11,7 +11,7 @@ END
 //{ Add Attune Special Ability
 IF
 	Race(Player1, LICH)
-	TriggerOverride(Player1, GlobalLT("XA_LC_Attune", "LOCALS", 1))
+	TriggerOverride(Player1, GlobalLT("XA_LD_Attune", "LOCALS", 1))
 THEN
 	RESPONSE #100
 		ActionOverride(Player1, SetGlobal("XA_LD_Attune", "LOCALS", 1))

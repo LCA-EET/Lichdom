@@ -37,4 +37,5 @@ END
 	COPY ~%MOD_FOLDER%/assistant/spl/xaldasst.spl~ ~override~
 	SAY NAME1 @7/* ~Lichdom Assistant~ */
 	SAY NAME2 @7/* ~Lichdom Assistant~*/
+	WRITE_LONG 0x50 RESOLVE_STR_REF(@76)
 //}

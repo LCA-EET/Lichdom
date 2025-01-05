@@ -12,9 +12,8 @@ EXTEND_TOP ~BALDUR.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldjrnl.baf~
 EXTEND_TOP ~AR0800.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaar0800.baf~
 EXTEND_TOP ~AR0800.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldprfm.baf~
 
-OUTER_SET xald_copywav = 0
-
 ACTION_IF (xald_use_defaults = 0) THEN BEGIN
+	OUTER_SET xald_copywav = 0
 	LAF xa_determine_quantity
 		INT_VAR
 			xa_min_qty = 0

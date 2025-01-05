@@ -136,3 +136,4 @@ Enter a value: ~
 @73 = ~Loaded default parameters from defaults.tph.~
 @74= ~Provide the percentage chance (0 - 100) that a phylactery will break after resurrecting a lich. Default is 25. ~
 @75= ~Attune~
+@76= ~Activate this ability to launch the Lichdom Assistant.~
