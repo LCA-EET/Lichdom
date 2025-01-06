@@ -1,5 +1,14 @@
 ## Lichdom Release Notes
 
+# v1.4 2024-11-09
+* Major changes
+	- The lich phylactery no longer needs to be equipped in order for it to function. It only needs to be in the party's inventory.
+	- The lich phylactery was changed from a shroud to a crystal.
+	- The Resurrection spell is no longer used to resurrect the lich. 
+	- An Attune special ability was added to allow the lich to check the status of their phylactery. 
+	- Added some additional installation options, as well as an option to install with default parameters (see defaults.tph).
+	- Miscellaneous improvements.
+
 # v1.3.1c 2024-11-09
 * Fixed a potential issue concerning racetext.2da.
 

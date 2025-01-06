@@ -13,9 +13,10 @@ ACTION_IF (compiled = 0) THEN BEGIN
 				xa_bcs = ~xaldup01~
 				xa_extend = ~xaldup~
 		END
-		COPY_EXISTING ~xaldup.bcs~ ~override/xaldupex.bcs~
+		OUTER_SET xald_chanceToBreak = (100 - xald_breakchance)
+		COPY_EXISTING ~xaldup.bcs~ ~override/xaldupex.bcs~		
 		DECOMPILE_AND_PATCH BEGIN
-			REPLACE_TEXTUALLY ~6686~ ~%xald_breakchance%~
+			REPLACE_TEXTUALLY ~6686~ ~%xald_chanceToBreak%~
 		END
 		SILENT
 	//}
