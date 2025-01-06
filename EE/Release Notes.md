@@ -1,6 +1,6 @@
 ## Lichdom Release Notes
 
-# v1.4 2024-11-09
+# v1.4 2025-01-05
 * Major changes
 	- The lich phylactery no longer needs to be equipped in order for it to function. It only needs to be in the party's inventory.
 	- The lich phylactery was changed from a shroud to a crystal.
