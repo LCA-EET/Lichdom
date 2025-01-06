@@ -26,6 +26,7 @@ END
 
 IF
 	TriggerOverride(Player1, Global("xaldpchk", "LOCALS", 1))
+	TriggerOverride(Player1, Global("XA_LD_PhylacteryAssigned", "LOCALS", 100))
 	!PartyHasItem("xaldph100")
 THEN
 	RESPONSE #100
@@ -38,6 +39,7 @@ END
 IF
 	TriggerOverride(Player1, Global("xaldpchk", "LOCALS", 1))
 	TriggerOverride(Player1, Global("XA_LD_PhylacteryBroken", "LOCALS", 1))
+	TriggerOverride(Player1, Global("XA_LD_PhylacteryAssigned", "LOCALS", 100))
 	PartyHasItem("xaldph100")
 THEN
 	RESPONSE #100
@@ -50,6 +52,7 @@ END
 IF
 	TriggerOverride(Player1, Global("xaldpchk", "LOCALS", 1))
 	TriggerOverride(Player1, Global("XA_LD_PhylacteryBroken", "LOCALS", 0))
+	TriggerOverride(Player1, Global("XA_LD_PhylacteryAssigned", "LOCALS", 100))
 	PartyHasItem("xaldph100")
 THEN
 	RESPONSE #100
