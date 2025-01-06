@@ -1,11 +1,13 @@
 //{ Death Scripting
 	IF
 		Race(Player2, LICH)
-		TriggerOverride(Player2, GlobalLT("XA_LD_HasPhylactery", "LOCALS", 1))
 		TriggerOverride(Player2, GlobalLT("XA_LD_LichDestroyed", "LOCALS", 1))
 		OR(2)
 			StateCheck(Player2, STATE_DEAD)
 			StateCheck(Player2, STATE_REALLY_DEAD)
+		OR(2)
+			TriggerOverride(Player2, GlobalLT("XA_LD_HasPhylactery", "LOCALS", 1))
+			TriggerOverride(Player2, Global("XA_LD_PhylacteryBroken", "LOCALS", 1))
 	THEN
 		RESPONSE #100
 			SetInterrupt(FALSE)
