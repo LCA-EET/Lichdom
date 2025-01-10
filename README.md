@@ -267,7 +267,7 @@ With this crown equipped, you gain many of the benefits of being a Lich without 
 
 Unlike a typical Lich, you have no phylactery and can't automatically revive if killed.  Your alignment does not change.  You don't gain the Lich Touch ability of a typical Lich.
 
-You gain the Undead flag, but you can't be turned or rebuked.  (If you had immunity to turning or rebuking from another source, you still keep that immunity.)  This is unlike a typical Lichdom Lich who is immune to turning and rebuking.
+You gain the Undead flag, but you can't be turned or rebuked.  (If you had immunity to turning or rebuking from another source, you still keep that immunity.)
 
 However, you gain many other abilities of a typical Lich:
 
@@ -296,6 +296,8 @@ Mod Source: Lichdom
 This ornate cloak is a phylactery that contains the soul of <UNIT>.  Equipping it or allows <UNIT> to automatically revive if <PRO_HESHE> is killed, <PRO_HESHE> is out of combat, and enough time has passed since <PRO_HISHER> death.  (By default, this auto-revival is near instant once the subject is out of combat.)
 
 Mod Source: Lichdom
+
+NOTE: As of version 1.4, the Shroud of the Lich is no longer used as a phylactery.  Instead, gems held in inventory are used.
 
 # Q & A (FAQ)
 ![What's going on here?  I too want to know!](https://github.com/LCA-EET/lichdom/blob/main/Documentation%20Images/Vile-Death-Spell-Lich-33.png)
@@ -326,9 +328,13 @@ _What's going on here?  I too want to know!_
 - None.  Lichdom is simply a high-level thing, just like ascending to godhood is assumed to only be for high levels.
 
 **How does the phylactery work?**
-- The phylactery is a gem that, if held in the inventory of a current party member, will allow auto-revival of the Lich attuned to it.  If a 
+- The phylactery is a gem that, if held in the inventory of a current party member, will allow auto-revival of the Lich attuned to it.
 
-- If a phylactery has a chance to break on auto-revival, that chance is rolled u
+- Since a phylactery is a gem, it fits in a Gem Bag, Bag of Holding, or other container that holds gems.
+
+- If a phylactery has a chance to break on auto-revival, that chance is rolled upon the Lich's auto-revival.
+
+- If a phylactery breaks or is removed from inventory, the owner mentions this in the text window.
 
 **Why make the phylactery a gem instead of a more traditional amulet or crown?**
 - Gems: The Lichdom ritual has improved since previous versions of this mod (pre-1.4).  Unlike previous versions of this mod, an inventory-held gem called Phylactery is a Lich's phylactery.  Each phylactery looks alike as of this writing, and a a 
