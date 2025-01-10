@@ -338,6 +338,8 @@ _What's going on here?  I too want to know!_
 
 - If a phylactery breaks or is removed from inventory, the owner mentions this in the text window.
 
+- If a Lich dies without an intact phylactery, the character is dead and may be unrevivable.
+
 **Why make the phylactery a gem instead of a more traditional amulet or crown?**
 - Gems: The Lichdom ritual has improved since previous versions of this mod (pre-1.4).  Unlike previous versions of this mod, an inventory-held gem called Phylactery is a Lich's phylactery.  Each phylactery looks alike as of this writing, and a a 
 
