@@ -67,13 +67,7 @@ The default effects and requirements were heavily inspired by [Liches in _Baldur
 
 - Unlike a typical Lich in BG2, you have no racial immunity to spells of a certain level.
 
-- All Liches start with their phylactery - a cloak called the Shroud of the Lich.  This shroud is unstealable and undroppable.  (For technical reasons, the Lich's phylactery - the Shroud of the Lich - is put onto an item instead of something else like a slotless script.)
-
-- Because a phylactery is undroppable, it remains permanently equipped in your cloak slot while it is on your person.  Your phylactery must be on you for you to auto-revive out of combat.  (This auto-revival normally happens immediately after combat ends, but the script may need a few seconds to catch up.)
-
 By default, your phylactery can't break upon your character's death, but this can be configured to have a chance of breaking upon death.
-
-Regardless of settings, certain SoA events _will_ remove CHARNAME's (the protagonist's) phylactery for a time.
 
 - The UI changes your displayed race to Lich.  Mechanically, you're still a member of your original race such as Human or Gnome.
 
@@ -273,7 +267,7 @@ With this crown equipped, you gain many of the benefits of being a Lich without 
 
 Unlike a typical Lich, you have no phylactery and can't automatically revive if killed.  Your alignment does not change.  You don't gain the Lich Touch ability of a typical Lich.
 
-You gain the Undead flag, meaning you can be turned or rebuked.  (If you had immunity to turning or rebuking from another source, you still keep that immunity.)  This is unlike a typical Lichdom Lich who is immune to turning and rebuking.
+You gain the Undead flag, but you can't be turned or rebuked.  (If you had immunity to turning or rebuking from another source, you still keep that immunity.)  This is unlike a typical Lichdom Lich who is immune to turning and rebuking.
 
 However, you gain many other abilities of a typical Lich:
 
@@ -281,7 +275,7 @@ However, you gain many other abilities of a typical Lich:
 
 - Immune (100% resistant) to HP damage from cold, electricity, and poison.
 
-- Immune to the negative statuses of Berserk, Charm, Confusion, Domination, Disease, Fatigue/Exhaustion, Fear, Grease, Entangle, Hold/Paralysis, Level Drain/Negative Levels, Petrification, Polymorph Other, Sleep/Unconsciousness, Stun, and Web.  Also immune to at least most instant death effects such as Disintegrate and Finger of Death.
+- Immune to the negative statuses of Berserk, Charm, Confusion, Domination, Disease, Entangle, Fatigue/Exhaustion, Fear, Grease, Hold/Paralysis, Level Drain/Negative Levels, Petrification, Polymorph Other, Sleep/Unconsciousness, Stun, and Web.  Also immune to at least most instant death effects such as Disintegrate and Finger of Death.
 
 - Continual Detect Invisibliity.
 
@@ -324,7 +318,7 @@ _What's going on here?  I too want to know!_
 - I wondered the same thing about the [D&D 3.5 Lich](https://www.d20srd.org/srd/monsters/lich.htm) that only needs caster level 11 to undergo the ritual when the expected wealth by level means that characters who become Liches are likely doing it MUCH later, like level 15+.  The truest answer is, "Adventure!"  Remember, you don't NEED to undergo the Lichdom ritual ASAP!
 
 **Why require only level 12 in a casting class to become a Lich?**
-- That's inspired by the [D&D 3.5 Lich](https://www.d20srd.org/srd/monsters/lich.htm) which requires caster level 11.  Since caster levels don't work well as prerequisites in the Infinity Engine, I rounded up to 12 since that's when full casters (Cleric, Druid/Shaman, and Sorcerer/Wizard) start to get their level 6 spell slots in the Infinity Engine games.
+- That's inspired by the [D&D 3.5 Lich](https://www.d20srd.org/srd/monsters/lich.htm) which requires caster level 11.  Since caster levels don't work well as prerequisites in the Infinity Engine, I rounded up to 12 since that's when full casters (Cleric, Druid/Shaman, and Sorcerer/Wizard) start to get their level 6 spell slots in the Infinity Engine games by default.
 
 - As a solo single-classed character, reaching level 12 is probably easy in BG2, even if you start in SoA.  Reaching it as a triple-classed character in a party of 6, depending on your mod wad and the content you do, may take you until late SoA or even ToB to reach this point.  In short, Lichdom is meant to be attainable by characters in SoA with a variety of play styles.
 
