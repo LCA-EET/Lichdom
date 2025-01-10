@@ -328,7 +328,9 @@ _What's going on here?  I too want to know!_
 - None.  Lichdom is simply a high-level thing, just like ascending to godhood is assumed to only be for high levels.
 
 **How does the phylactery work?**
-- The phylactery is a gem that, if held in the inventory of a current party member, will allow auto-revival of the Lich attuned to it.
+- The phylactery is a gem called Phylactery that, if held in the inventory of a current party member, will allow auto-revival of the Lich attuned to it.  For technical reasons, all phylactery gems are called Phylactery.
+
+- A Lich can use the Attune innate ability to check the status of his phylactery.
 
 - Since a phylactery is a gem, it fits in a Gem Bag, Bag of Holding, or other container that holds gems.
 
