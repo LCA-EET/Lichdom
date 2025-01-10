@@ -106,7 +106,7 @@ Note that configuration options in this section ONLY apply to Lich characters fr
 
 - 40,000G
 
-**% Chance for Phylactery to Break Upon Lich's Death (In-Game Configuration Option - Applies to current character)**
+**% Chance for Phylactery to Break Upon Lich's Auto-Revival (In-Game Configuration Option - Applies to current character)**
 - None (Default)
 
 - 1%
@@ -325,12 +325,19 @@ _What's going on here?  I too want to know!_
 **What plans do you have for BG1 (BGEE) or SoD content for Liches?**
 - None.  Lichdom is simply a high-level thing, just like ascending to godhood is assumed to only be for high levels.
 
-**Why make the phylactery a cloak instead of a more traditional amulet or crown?**
+**How does the phylactery work?**
+- The phylactery is a gem that, if held in the inventory of a current party member, will allow auto-revival of the Lich attuned to it.  If a 
+
+- If a phylactery has a chance to break on auto-revival, that chance is rolled u
+
+**Why make the phylactery a gem instead of a more traditional amulet or crown?**
+- Gems: The Lichdom ritual has improved since previous versions of this mod (pre-1.4).  Unlike previous versions of this mod, an inventory-held gem called Phylactery is a Lich's phylactery.  Each phylactery looks alike as of this writing, and a a 
+
 - Amulets: Edwin's Amulet is normally glued to his neck, and I wanted Liches to be able to use [https://baldursgate.fandom.com/wiki/Amulet_of_Power](Amulets of Power).
 
 - Crown: I like Ioun Stones, and the Crown of the Lich mentioned elsewhere in this document allows anyone to temporarily get most of the effects of Lichdom.
 
-- Cloak: Cloaks are generally a low-power item slot despite rare exceptions in vanilla.  Maybe there are mods which give high-powered cloaks to casters.)  In short, giving up a cloak slot is generally easier than giving up most other thematic slots.
+- Cloak: Cloaks are generally a low-power item slot despite rare exceptions in vanilla.  Maybe there are mods which give high-powered cloaks to casters.)  In short, giving up a cloak slot is generally easier than giving up most other thematic slots.  Pre-1.4 versions of the Lichdom ritual used a personal-bound cloak called the Shroud of the Lich to determine resurrection.
 
 Shroud of the Lich is also an intentional reference to [an ability of the same name from DDO AKA _Dungeons & Dragons Online_](https://ddocompendium.com/w/Shroud_of_the_Lich).
 
