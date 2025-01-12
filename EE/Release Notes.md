@@ -1,5 +1,8 @@
 ## Lichdom Release Notes
 
+# v1.4.1 2025-01-12
+* Fixed a potential compatibility issue with certain components of the BG1NPCSoA mod.
+
 # v1.4 2025-01-05
 * Major changes
 	- The lich phylactery no longer needs to be equipped in order for it to function. It only needs to be in the party's inventory.
