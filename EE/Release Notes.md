@@ -1,6 +1,6 @@
 ## Lichdom Release Notes
 
-# v1.4.1 2025-01-12
+# v1.4a 2025-01-12
 * Fixed a potential compatibility issue with certain components of the BG1NPCSoA mod.
 
 # v1.4 2025-01-05
