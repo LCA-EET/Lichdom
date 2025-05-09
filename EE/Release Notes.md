@@ -1,5 +1,8 @@
 ## Lichdom Release Notes
 
+# v1.4b 2025-05-09
+* Fixed a bug that could cause the Lichdom Assistant to interrupt a Shamanic Dance.
+
 # v1.4a 2025-01-12
 * Fixed a potential compatibility issue with certain components of the BG1NPCSoA mod.
 
