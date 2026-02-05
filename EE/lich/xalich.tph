@@ -99,7 +99,7 @@ EXTEND_TOP ~%baldur_file%.bcs~ ~override/xaldupex.bcs~
 	END
 //}
 
-/*
+
 //{ Animation Change
 	LAF xa_replace_recompile
 		STR_VAR
@@ -108,7 +108,7 @@ EXTEND_TOP ~%baldur_file%.bcs~ ~override/xaldupex.bcs~
 			xa_extend = ~%baldur_file%~
 	END
 //}
-*/
+
 //{ Lich Resurrection
 	LAF xa_replace_recompile
 		STR_VAR

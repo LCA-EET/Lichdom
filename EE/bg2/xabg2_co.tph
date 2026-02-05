@@ -379,10 +379,20 @@ SILENT
 		SAY NAME1 @13
 		SAY UNIDENTIFIED_DESC @79
 		SAY DESC @79
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldani2.spl~ ~override~
+		SAY NAME1 @13
+		SAY UNIDENTIFIED_DESC @79
+		SAY DESC @79
 	//}
 	
 	//{ Lich Amination Reversion
 		COPY ~%MOD_FOLDER%/bg2/spl/xaldrvrt.spl~ ~override~
+		SAY NAME1 @77
+		SAY UNIDENTIFIED_DESC @78
+		SAY DESC @78
+		
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldrvr2.spl~ ~override~
 		SAY NAME1 @77
 		SAY UNIDENTIFIED_DESC @78
 		SAY DESC @78

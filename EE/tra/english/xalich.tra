@@ -11,7 +11,7 @@
 @10 = ~Lich Mental Boost~
 @11 = ~Lich Magic Resistance Boost~
 @12 = ~Lich Spell Immunity~
-@13 = ~Lich Animation~
+@13 = ~Reveal~
 @14 = ~True Death~
 @15 = ~Lich~
 @16 = ~Paralyzing Touch~
@@ -137,6 +137,6 @@ Enter a value: ~
 @74= ~Provide the percentage chance (0 - 100) that a phylactery will break after resurrecting a lich. Default is 25. ~
 @75= ~Attune~
 @76= ~Activate this ability to launch the Lichdom Assistant.~
-@77= ~Masquerade~
-@78= ~Changes your appearance to reflect what it was prior to your transformation.~
-@79= ~Changes your appearance to that of a lich.~
+@77= ~Glamour~
+@78= ~Changes the caster's appearance to reflect what it was prior to their transformation into a lich.~
+@79= ~Reveals the caster's true appearance.~

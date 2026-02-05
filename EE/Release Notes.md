@@ -1,5 +1,9 @@
 ## Lichdom Release Notes
 
+# v1.4c 2026-02-05
+* Fixed a bug that prevented the player from using the lich animation.
+* Added two new abilities, Glamour and Reveal, to toggle between the lich animation and the character's pre-transformation appearance.
+
 # v1.4b 2025-05-09
 * Fixed a bug that could cause the Lichdom Assistant to interrupt a Shamanic Dance.
 
