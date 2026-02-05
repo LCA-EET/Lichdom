@@ -13,6 +13,7 @@ $folders = @(
 'compat',
 'lich',
 'sod',
+'ogg',
 'temp',
 'tob',
 'tra'

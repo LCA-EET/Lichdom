@@ -1,0 +1,24 @@
+//{ Initial Skill Addition
+	IF
+		ActionListEmpty()
+		TriggerOverride(Player1, GlobalLT("xaldanim", "LOCALS", 1))
+		Race(Player1, LICH)
+	THEN
+		RESPONSE #100
+			ActionOverride(Player1, AddSpecialAbility("xaldanim"))
+			ActionOverride(Player1, SetGlobal("xaldanim", "LOCALS", 1))
+			Continue()
+	END
+	
+	IF
+		ActionListEmpty()
+		TriggerOverride(Player1, GlobalLT("xaldrvrt", "LOCALS", 1))
+		Race(Player1, LICH)
+	THEN
+		RESPONSE #100
+			ActionOverride(Player1, AddSpecialAbility("xaldrvrt"))
+			ActionOverride(Player1, SetGlobal("xaldrvrt", "LOCALS", 1))
+			Continue()
+	END
+//}
+

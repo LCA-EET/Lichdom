@@ -12,22 +12,6 @@ EXTEND_TOP ~BALDUR.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldjrnl.baf~
 EXTEND_TOP ~AR0800.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaar0800.baf~
 EXTEND_TOP ~AR0800.BCS~ 	~%MOD_FOLDER%/bg2/baf/xaldprfm.baf~
 
-ACTION_IF (xald_use_defaults = 0) THEN BEGIN
-	OUTER_SET xald_copywav = 0
-	LAF xa_determine_quantity
-		INT_VAR
-			xa_min_qty = 0
-			xa_max_qty = 1
-			xa_str_ref = RESOLVE_STR_REF(@70)
-		RET
-			xald_copywav = xa_quantity
-	END
-END
-
-ACTION_IF (xald_copywav = 1) THEN BEGIN
-	COPY ~%MOD_FOLDER%/bg2/wav~ ~override~
-END
-
 ACTION_IF(sod_carryover = 0) THEN BEGIN
 	INCLUDE ~%MOD_FOLDER%/sod/xasod_co.tph~
 END

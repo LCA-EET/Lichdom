@@ -137,3 +137,6 @@ Enter a value: ~
 @74= ~Provide the percentage chance (0 - 100) that a phylactery will break after resurrecting a lich. Default is 25. ~
 @75= ~Attune~
 @76= ~Activate this ability to launch the Lichdom Assistant.~
+@77= ~Masquerade~
+@78= ~Changes your appearance to reflect what it was prior to your transformation.~
+@79= ~Changes your appearance to that of a lich.~

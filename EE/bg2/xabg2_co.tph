@@ -377,8 +377,15 @@ SILENT
 	//{ Lich Amination
 		COPY ~%MOD_FOLDER%/bg2/spl/xaldanim.spl~ ~override~
 		SAY NAME1 @13
-		SAY UNIDENTIFIED_DESC @13
-		SAY DESC @13
+		SAY UNIDENTIFIED_DESC @79
+		SAY DESC @79
+	//}
+	
+	//{ Lich Amination Reversion
+		COPY ~%MOD_FOLDER%/bg2/spl/xaldrvrt.spl~ ~override~
+		SAY NAME1 @77
+		SAY UNIDENTIFIED_DESC @78
+		SAY DESC @78
 	//}
 	
 	//{ Portrait Change (Lich)

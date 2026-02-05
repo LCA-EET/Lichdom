@@ -15,7 +15,7 @@ https://www.deviantart.com/artdeepmind/art/Lich-545596034
 
 BACKUP ~Lichdom/backup~
 
-SUPPORT ~Daniel Valle, dan@danielvalle.net~
+SUPPORT ~support@fosiemods.net~
 
 AUTO_TRA ~%MOD_FOLDER%/tra/%s~ //automatically associate .tras to their respective .D files
 AUTO_EVAL_STRINGS
@@ -30,6 +30,7 @@ OUTER_SET xalddebug = 0
 OUTER_SET xa_tempID = 0
 
 INCLUDE ~%MOD_FOLDER%/functions.tph~
+INCLUDE ~%MOD_FOLDER%/ogg/ogg.tph~
 
 OUTER_SET xald_use_defaults = 0
 

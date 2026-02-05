@@ -648,6 +648,12 @@ BEGIN ~XALDDBG~
 		~
 		EXIT
 		
+		IF ~~ THEN REPLY @224
+		DO ~
+			ActionOverride(Player1, ReallyForceSpellRES("xaldrvrt", Myself))
+		~
+		EXIT
+		
 		IF ~~ THEN REPLY @131
 		DO ~
 			ActionOverride(Player1, ReallyForceSpellRES("xaldsi01", Myself))

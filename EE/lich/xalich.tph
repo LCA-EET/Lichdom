@@ -99,6 +99,16 @@ EXTEND_TOP ~%baldur_file%.bcs~ ~override/xaldupex.bcs~
 	END
 //}
 
+/*
+//{ Animation Change
+	LAF xa_replace_recompile
+		STR_VAR
+			xa_replace = ~Player1~
+			xa_bcs = ~xaldan01~
+			xa_extend = ~%baldur_file%~
+	END
+//}
+*/
 //{ Lich Resurrection
 	LAF xa_replace_recompile
 		STR_VAR
