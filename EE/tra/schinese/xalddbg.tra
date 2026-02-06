@@ -191,4 +191,26 @@
 @199 = ~设置全局变量（"XA_LD_MetMorrisInSaradush", "GLOBAL", 1）未遇见萨拉督许的莫里斯。~
 @200 = ~生成莫里斯（XALDGD2）。~
 @201 = ~创造六个神弓。~
-
+@202=~警告：调试器仅用于测试目的。对游戏状态的不当修改可能导致游戏崩溃，或使您无法完成游戏。~
+@203=~我了解风险，继续。~
+@204=~返回上一级菜单。~
+@205=~检查已创建的命匣~
+@206=~Global("XA_LD_PhylacteriesCreated","GLOBAL",0)~
+@207=~Global("XA_LD_PhylacteriesCreated","GLOBAL",1)~
+@208=~Global("XA_LD_PhylacteriesCreated","GLOBAL",2)~
+@209=~Global("XA_LD_PhylacteriesCreated","GLOBAL",3)~
+@210=~Global("XA_LD_PhylacteriesCreated","GLOBAL",4)~
+@211=~Global("XA_LD_PhylacteriesCreated","GLOBAL",5)~
+@212=~Global("XA_LD_PhylacteriesCreated","GLOBAL",6)~
+@213=~Global("XA_LD_PhylacteriesCreated","GLOBAL",7)~
+@214=~Global("XA_LD_PhylacteriesCreated","GLOBAL",8)~
+@215=~Global("XA_LD_PhylacteriesCreated","GLOBAL",9)~
+@216=~Global("XA_LD_PhylacteriesCreated","GLOBAL",10)~
+@217=~创建艾德温并将其加入队伍。~
+@218 = ~巫妖复活玩家 1~
+@219 = ~巫妖复活玩家 2~
+@220 = ~巫妖复活玩家 3~
+@221 = ~巫妖复活玩家 4~
+@222 = ~巫妖复活玩家 5~
+@223 = ~巫妖复活玩家 6~
+@224 = ~xaldrvrt~
