@@ -20,7 +20,9 @@ SUPPORT ~support@fosiemods.net~
 AUTO_TRA ~%MOD_FOLDER%/tra/%s~ //automatically associate .tras to their respective .D files
 AUTO_EVAL_STRINGS
 LANGUAGE ~English~ ~english~ ~%MOD_FOLDER%/tra/english/xalich.tra~
+LANGUAGE ~Portuguese（by lyanzeira）~ ~portuguese~ ~%MOD_FOLDER%/tra/portuguese/xalich.tra~
 LANGUAGE ~Simplified Chinese（by mogui45）~ ~schinese~ ~%MOD_FOLDER%/tra/schinese/xalich.tra~
+
 BEGIN
 @0 /* ~Lichdom, for Baldur's Gate EET.~ */
 

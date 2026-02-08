@@ -1,0 +1,142 @@
+@0 = ~Lichismo para os jogos Baldur's Gate, Enhanced Edition.~
+@1 = ~O mod Enhanced Edition Trilogy (EET) foi detectado.~
+@2 = ~Filactéria~
+@3 = ~A filactéria é simultaneamente a fonte do maior poder do lich e sua maior — na verdade, sua única — fraqueza física significativa. Qualquer lich independente deve se esforçar para garantir que sua filactéria seja mantida segura o tempo todo. Embora não seja estritamente necessário, a transição de mortal para lich é alcançada mais facilmente se o item que armazenará a alma do transformado (ou seja, a filactéria) for algo com o qual ele esteja familiarizado. Este é particularmente o caso em Rituais de Ascensão realizados por um grupo diferente daquele que está passando pela transformação.~
+@4 = ~Pó de Lich~
+@5 = ~Este punhado de pó parece ser tudo o que resta de um poderoso conjurador Morto-Vivo conhecido como Lich.~
+@6 = ~Transformação em Lich~
+@7 = ~Assistente de Lichismo~
+@8 = ~Usado para configurar aspectos do mod Lichdom.~
+@9 = ~Modificação de CA de Lich~
+@10 = ~Bônus Mental de Lich~
+@11 = ~Bônus de Resistência à Magia de Lich~
+@12 = ~Imunidade a Magia de Lich~
+@13 = ~Revelar~
+@14 = ~Morte Verdadeira~
+@15 = ~Lich~
+@16 = ~Toque Paralisante~
+@17 = ~Alterna o uso do Toque Paralisante como uma arma de combate corpo a corpo.~
+@18 = ~Sentidos Mentais de Lich~
+@19 = ~Morris, o Zelador de Túmulos~
+@20 = ~Depurador (Debugger)~
+@21 = ~Qual é o número máximo de personagens que podem passar pelo ritual de transformação em lich? O padrão é 5.
+Forneça um valor de 1 a 10 e pressione Enter: ~
+@22 = ~Lich~
+@23 = ~Filactéria Danificada~
+@24 = ~Esta filactéria foi danificada e, como resultado, não pode restaurar o lich. Talvez Morris possa ajudar.
+
+A filactéria é simultaneamente a fonte do maior poder do lich e sua maior — na verdade, sua única — fraqueza física significativa. Qualquer lich independente deve se esforçar para garantir que sua filactéria seja mantida segura o tempo todo. Embora não seja estritamente necessário, a transição de mortal para lich é alcançada mais facilmente se o item que armazenará a alma do transformado (ou seja, a filactéria) for algo com o qual ele esteja familiarizado. Este é particularmente o caso em Rituais de Ascensão realizados por um grupo diferente daquele que está passando pela transformação.~
+@25 = ~Preço de Morris para o Lichismo~
+@26 = ~Restringir a transformação em lich apenas para NPCs do jogo base? O padrão é Não.
+0: Não
+1: Sim
+Forneça uma resposta (0 ou 1) e pressione Enter.~
+@31 = ~Edwin ganhou grande renome em suas viagens com <CHARNAME> e, nos anos que se seguiram à associação deles, ele exploraria essa infâmia. Com o tempo, ele alcançou influência suficiente para subjugar até os próprios Magos Vermelhos, tornando-se o maior líder que conheceram em memória recente. Ele até superou Szass Tam, o Zulkir da Necromancia, e ganhou o respeito de Tam.
+
+Este respeito levou a uma aliança pacífica entre Tam e Edwin que durou anos antes de Tam, usando sua influência sobre os Mortos-Vivos, persuadir gentilmente Edwin a deixar seu posto em Thay e assumir desafios maiores para a glória dos Magos Vermelhos e de si mesmo.
+
+Edwin, tendo sido incitado sem saber por Tam, preparou seu melhor absoluto e desafiou Elminster de Shadowdale para um duelo. Elminster venceu — é claro — mas foi desconfortavelmente difícil para ele. Talvez com mais mil anos e o chapéu pontudo de Elminster, Edwin realmente teria vencido.
+
+Pelo menos agora Edwin tem uma quantidade indefinida de tempo para se preparar para seu próximo plano.~
+@32 = ~Edwin ganhou grande renome em suas viagens com <CHARNAME> e, nos anos que se seguiram à associação deles, ele exploraria essa infâmia. Com o tempo, ele alcançou influência suficiente para subjugar até os próprios Magos Vermelhos, tornando-se o maior líder que conheceram em memória recente. Ele até superou Szass Tam, o Zulkir da Necromancia, e ganhou o respeito de Tam.
+
+Este respeito levou a uma aliança pacífica entre Tam e Edwin que durou anos antes de Tam, usando sua influência sobre os Mortos-Vivos, persuadir gentilmente Edwin a deixar seu posto em Thay e assumir desafios maiores para a glória dos Magos Vermelhos e de si mesmo.
+
+Edwin, tendo sido incitado sem saber por Tam, preparou seu melhor absoluto e desafiou Elminster de Shadowdale para um duelo. Elminster venceu — é claro — mas foi desconfortavelmente difícil para ele. Talvez com mais mil anos e o chapéu pontudo de Elminster, Edwin realmente teria vencido.
+
+Pelo menos agora Edwin tem uma quantidade indefinida de tempo para se preparar para seu próximo plano.
+
+Edwina, no entanto, trabalha como taverneira em uma taverna de Águas Profundas. Ela é uma mulher extremamente amarga.~
+@33 = ~Coroa do Lich~
+@34 = ~Com esta coroa equipada, você ganha muitos dos benefícios de ser um Lich sem a transformação completa. Embora um Lich possa equipar esta coroa, a maioria de seus efeitos são redundantes.
+
+Ao contrário de um Lich típico, você não possui uma filactéria e não pode reviver automaticamente se for morto. Seu alinhamento não muda. Você não ganha a habilidade Toque do Lich de um Lich comum.
+
+Você recebe a característica Morto-Vivo, o que significa que pode ser expulso ou repreendido. (Se você tinha imunidade a expulsão de outra fonte, ainda manterá essa imunidade.) Isso é diferente de um Lich transformado, que é imune a expulsão e repreensão.
+
+No entanto, você ganha muitas outras habilidades de um Lich típico:
+
+- Imunidade a dano de armas não mágicas.
+
+- Imunidade (100% de resistência) a dano de frio, eletricidade e veneno.
+
+- Imunidade aos estados negativos de Fúria, Enfeitiçar, Confusão, Dominação, Doença, Fadiga/Exaustão, Medo, Graxa, Emaranhar, Paralisia, Dreno de Nível, Petrificaçao, Polimorfia, Sono/Inconsciência, Atordoamento e Teia. Também é imune à maioria dos efeitos de morte instantânea, como Desintegrar e Dedo da Morte.
+
+- Detectar Invisibilidade contínuo.
+
+- +1 nos valores de INT, SAB e CAR até o máximo de 25 cada.
+
+- A CA natural melhora em 3.
+
+Você ganha uma habilidade inata usável à vontade que muda a aparência do seu personagem para a de um Lich típico. Esta habilidade é apenas cosmética.~
+@35 = ~Forma Normal~
+@36 = ~Quantas Coroas do Lich devem estar à venda na loja da Irmã Garlena? 
+Forneça um valor de 0 a 10 e pressione Enter: ~
+@37 = ~Quanto deve custar o Ritual de Lichismo?
+Forneça um valor de 40000 a 200000 e pressione Enter: ~
+@38 = ~Mod "Love Conquers All" (LCA) detectado. Atualizando diálogos...~
+@39 = ~Mod "The Longer Road" detectado. Atualizando diálogos...~
+@40 = ~Mod "Hubelpot the Vegetable Merchant" detectado. Atualizando diálogos...~
+@41 = ~Mod "BG1 NPCs" detectado. Atualizando diálogos...~
+@42 = ~Mod "Reign of Terror" (RoT) detectado. Atualizando diálogos...~
+@43 = ~Mod "Dusk" detectado. Atualizando diálogos...~ 
+@44 = ~Mod "Skitia NPC" detectado. Atualizando diálogos...~
+@45 = ~Mod "Neh'taniel NPC" detectado. Atualizando diálogos...~
+@46 = ~Mod "Saradas Magic NPC" detectado. Atualizando diálogos...~
+@47 = ~Mod "Baeloth BG2" detectado. Atualizando diálogos...~
+@48 = ~Baldur's Gate Enhanced Edition detectado.~
+@49 = ~Siege of Dragonspear detectado.~
+@50 = ~Baldur's Gate II Enhanced Edition detectado.~
+@51 = ~EET não foi detectado. Aplicando correções nos jogos individuais...~
+@52 = ~Processando mudanças de Siege of Dragonspear...~
+@53 = ~Processando transferências de Siege of Dragonspear...~
+@54 = ~Processando mudanças de Shadows of Amn...~
+@55 = ~Processando transferências de Shadows of Amn...~
+@56 = ~Processando mudanças de Throne of Bhaal...~
+@57 = ~A instalação do Lichismo foi bem-sucedida. Divirta-se!~
+@58 = ~Mod "Beaurin Legacy" detectado. Atualizando diálogos...~
+@59 = ~Mod "Zakrion" detectado. Atualizando diálogos...~
+@60 = ~Mod "Khalid BG2" detectado. Atualizando diálogos...~
+@61 = ~Adicionado Assistente de Lichismo a Baldur.bcs~
+@62 = ~Adicionado Assistente de Lichismo a Baldur25.bcs~
+@63 = ~Processando Assistente de Lichismo...~
+@64 = ~Adicionado Assistente de Lichismo a BDBaldur.bcs~
+@65 = ~Assistente de Lichismo~
+@66 = ~Este componente requer que o mod Lichdom seja instalado primeiro. Por favor, instale o mod Lichdom e tente novamente.~
+@67 = ~Instalar Assistente de Lichismo? O padrão é Sim.
+0.) Não.
+1.) Sim.
+Insira um valor: ~
+@68 = ~Toque Paralisante
+(Necromancia)
+
+Nível: 6
+Alcance: Toque
+Duração: 5 Rodadas
+Tempo de Conjuração: 1
+Área de Efeito: 1 criatura
+Jogada de Salvamento: Morte
+
+Ao realizar um toque bem-sucedido, o lich causará 1d10 de dano de frio ao alvo selecionado. O próximo ataque que o lich realizar aplicará este efeito; no entanto, ele tem apenas 2 rodadas para realizar o ataque antes que a magia se dissipe. Se o lich errar o alvo, a magia é perdida. Se falhar em uma Jogada de Salvamento vs. Morte, o alvo ficará paralisado por 5 rodadas. 
+
+Esta magia tem um tempo de recarga de dez segundos.~
+@69 = ~A Coroa do Lich deve conceder imunidade a Expulsar Mortos-Vivos? O padrão é Não.
+0.) Não.
+1.) Sim.
+Insira um valor: ~
+@70 = ~Incluir arquivos de diálogo com voz? O padrão é Sim.
+0.) Não.
+1.) Sim.
+Insira um valor: ~
+@71 = ~Noite Eterna~
+@72 = ~Instalar com as opções padrão?
+0.) No.
+1.) Yes.
+Insira um valor: ~
+@73 = ~Parâmetros padrão carregados de defaults.tph.~
+@74= ~Forneça a chance percentual (0 - 100) de uma filactéria quebrar após ressucitar um lich. O padrão é 25. ~
+@75= ~Sintonizar~
+@76= ~Ative esta habilidade para iniciar o Assistente de Lichismo.~
+@77= ~Glamour~
+@78= ~Altera a aparência do conjurador para refletir como era antes de sua transformação em lich.~
+@79= ~Revela a verdadeira aparência do conjurador.~

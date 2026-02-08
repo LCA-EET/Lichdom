@@ -1,5 +1,9 @@
 ## Lichdom Release Notes
 
+# v1.5 2026-02-08
+* Added the Portuguese translation, courtesy of lyanzeira.
+* Updated the Simplified Chinese translation, courtesy of MephistoSatanDevil.
+
 # v1.4c 2026-02-05
 * Fixed a bug that prevented the player from using the lich animation.
 * Added two new abilities, Glamour and Reveal, to toggle between the lich animation and the character's pre-transformation appearance.
