@@ -412,6 +412,9 @@ Shroud of the Lich is also an intentional reference to [an ability of the same n
 
 - Lichdom was not tested on every operating system, but if your operating system can run a version of _Baldur's Gate II: Enhanced Edition_ with WeiDU mods, it can likely also run Lichdom.
 
+**Does Lichdom modify any existing maps or areas?**
+- Lichdom modifies Athkatla Graveyard District (AR0800) and the intact version of Saradush (AR5000) to add the Gravedigger Morris NPC.  The area scripts of these two areas are modified as well.
+
 # License, Editing, and Redistribution/Rehosting
 ![Just as there's more than one type of Lich, there are others who may want to edit this Lichdom mod.](https://github.com/LCA-EET/lichdom/blob/main/Documentation%20Images/Alhoon.png)
 
