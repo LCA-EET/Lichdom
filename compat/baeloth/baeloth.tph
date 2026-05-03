@@ -1,0 +1,11 @@
+//{ Baeloth BG2
+	ACTION_IF FILE_EXISTS_IN_GAME ~BG2BAEJ.dlg~ THEN BEGIN
+		PRINT @47 /* ~Baeloth BG2 mod detected. Updating dialogs accordingly...~ */ 
+		SILENT
+		COMPILE ~%MOD_FOLDER%/compat/baeloth/d/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/baeloth/tra/english/xaldbae.tra~
+		COMPILE ~%MOD_FOLDER%/compat/baeloth/d/xaldtob.d~ USING ~%MOD_FOLDER%/compat/baeloth/tra/english/xaldbae.tra~
+		
+		EXTEND_TOP ~baldur.bcs~ ~%MOD_FOLDER%/compat/baeloth/baf/xaldregister.baf~
+		EXTEND_TOP ~baldur25.bcs~ ~%MOD_FOLDER%/compat/baeloth/baf/xaldregister.baf~
+	END 
+//}

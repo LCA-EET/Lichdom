@@ -1,0 +1,9 @@
+IF
+	Global("XA_LD_DebugInit", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("XA_LD_DebugInit", "GLOBAL", 0)
+		StartDialog("XALDDBG", Player1)
+		SetInterrupt(TRUE)
+END

@@ -1,0 +1,142 @@
+// Used for updates that apply to both baldur.bcs and baldur25.bcs
+
+ACTION_IF (compiled = 0) THEN BEGIN
+	OUTER_SET compiled = 1
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/lich/baf~ 
+	PRINT ~Lich component script compilation successful.~
+	SILENT
+	
+	//{ Phylactery Usage
+		LAF xa_replace_recompile
+			STR_VAR
+				xa_replace = ~Player1~
+				xa_bcs = ~xaldup01~
+				xa_extend = ~xaldup~
+		END
+		OUTER_SET xald_chanceToBreak = (100 - xald_breakchance)
+		COPY_EXISTING ~xaldup.bcs~ ~override/xaldupex.bcs~		
+		DECOMPILE_AND_PATCH BEGIN
+			REPLACE_TEXTUALLY ~6686~ ~%xald_chanceToBreak%~
+		END
+		SILENT
+	//}
+	
+	//{ Area Script Extensions
+		//{ Phylactery Assignment
+			LAF xa_replace_recompile_iterate
+				INT_VAR
+					xa_max_iterations = (xald_maxrituals + 1)
+					xa_iterations = 1
+					xa_find = 100
+				STR_VAR
+					xa_bcs = ~xaldphas~
+					xa_extend = ~xaldlich~
+			END	
+		//}
+	
+		//{ Lich Transformation & Buff Applications
+			LAF xa_replace_recompile
+				STR_VAR
+					xa_replace = ~Player1~
+					xa_bcs = ~xaldlich~
+					xa_extend = ~ar0800~
+			END
+			
+			LAF xa_replace_recompile
+				STR_VAR
+					xa_replace = ~Player1~
+					xa_bcs = ~xaldlich~
+					xa_extend = ~ar5000~
+			END
+		//}
+	//}
+	
+	//{ Death Scripts
+		LAF xa_replace_recompile
+			INT_VAR
+				xa_indexStart = 2
+				xa_extendTop = 0
+			STR_VAR
+				xa_replace = ~Player2~
+				xa_bcs = ~xaldd02~
+				xa_extend = ~xalddeath~
+		END
+	//}
+END
+
+EXTEND_TOP ~%baldur_file%.bcs~ ~override/xalddeath.bcs~
+
+EXTEND_TOP ~%baldur_file%.bcs~ ~override/xaldupex.bcs~
+
+//{ Register
+	EXTEND_TOP ~%baldur_file%.bcs~ ~override/xaldregister.bcs~
+//}
+
+//{ Crown of the Lich Undead Flag
+	LAF xa_replace_recompile
+		STR_VAR
+			xa_replace = ~Player1~
+			xa_bcs = ~xaldcr01~
+			xa_extend = ~%baldur_file%~
+	END
+//}
+
+//{ Drop Allergic Items
+	LAF xa_replace_recompile
+		STR_VAR
+			xa_replace = ~Player1~
+			xa_bcs = ~xaldal01~
+			xa_extend = ~%baldur_file%~
+	END
+//}
+
+//{ Paralyzing Touch Ability
+	LAF xa_replace_recompile
+		STR_VAR
+			xa_replace = ~Player1~
+			xa_bcs = ~xaldpt01~
+			xa_extend = ~%baldur_file%~
+	END
+//}
+
+
+//{ Animation Change
+	LAF xa_replace_recompile
+		STR_VAR
+			xa_replace = ~Player1~
+			xa_bcs = ~xaldan01~
+			xa_extend = ~%baldur_file%~
+	END
+//}
+
+//{ Lich Resurrection
+	LAF xa_replace_recompile
+		STR_VAR
+			xa_replace = ~Player1~
+			xa_bcs = ~xaldlr01~
+			xa_extend = ~%baldur_file%~
+	END
+//}
+
+
+
+//{ See if the party has a player's phylactery
+	LAF xa_replace_recompile
+		STR_VAR
+			xa_replace = ~Player1~
+			xa_bcs = ~xaldhp01~
+			xa_extend = ~xaldhp~
+	END
+	
+	LAF xa_replace_recompile_iterate
+		INT_VAR
+			xa_max_iterations = (xald_maxrituals + 1)
+			xa_iterations = 1
+			xa_find = 100
+		STR_VAR
+			xa_bcs = ~xaldhp~
+			xa_extend = ~%baldur_file%~
+	END
+//}
+
+EXTEND_TOP ~%baldur_file%.bcs~ ~override/xaldtime.bcs~

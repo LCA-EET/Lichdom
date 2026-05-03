@@ -1,0 +1,8 @@
+IF
+	GlobalLT("XA_LD_LimitToBaseParam", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LD_LimitToBaseParam", "GLOBAL", 1)
+		SetGlobal("XA_LD_LimitToBase", "GLOBAL", 1)
+		Continue()
+END

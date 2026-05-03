@@ -1,0 +1,9 @@
+//{ RoT
+	ACTION_IF FILE_EXISTS_IN_GAME ~DRIZ2.dlg~ THEN BEGIN
+		PRINT @42 /* ~Reign of Terror (RoT) mod detected. Updating dialogs accordingly...~*/ 
+		SILENT
+		COMPILE ~%MOD_FOLDER%/compat/rot/d/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/rot/tra/english/xaldrot.tra~
+		COMPILE ~%MOD_FOLDER%/compat/rot/d/xaldtob.d~ USING ~%MOD_FOLDER%/compat/rot/tra/english/xaldrot.tra~
+	END
+//}
+	

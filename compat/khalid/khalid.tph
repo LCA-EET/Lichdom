@@ -1,0 +1,8 @@
+//{ Khalid BG2
+	ACTION_IF FILE_EXISTS_IN_GAME ~L#KHAJ.dlg~ THEN BEGIN
+		PRINT @60 /* ~Khalid BG2 mod detected. Updating dialogs accordingly...~ */ 
+		SILENT
+		COMPILE ~%MOD_FOLDER%/compat/khalid/d/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/khalid/tra/english/xaldkhal.tra~
+		COMPILE ~%MOD_FOLDER%/compat/khalid/d/xaldtob.d~ USING ~%MOD_FOLDER%/compat/khalid/tra/english/xaldkhal.tra~
+	END 
+//}

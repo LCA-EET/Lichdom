@@ -1,0 +1,10 @@
+IF
+	!Allegiance(Myself, Enemy)
+	OnScreen(Myself)
+THEN
+	RESPONSE #100
+		FaceObject(Player1)
+		Continue()
+END
+
+

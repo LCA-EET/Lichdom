@@ -1,0 +1,11 @@
+//{ Love Conquers All (LCA)
+	ACTION_IF FILE_EXISTS_IN_GAME ~XACORWIJ.dlg~ THEN BEGIN
+		PRINT @38 /* ~Love Conquers All (LCA) Mod detected. Updating dialogs accordingly...~ */ 
+		SILENT
+		COMPILE ~%MOD_FOLDER%/compat/lca/d/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/lca/tra/english/xaldlca.tra~
+		COMPILE ~%MOD_FOLDER%/compat/lca/d/xaldtob.d~ USING ~%MOD_FOLDER%/compat/lca/tra/english/xaldlca.tra~
+		
+		EXTEND_TOP ~baldur.bcs~ ~%MOD_FOLDER%/compat/lca/baf/xaldregister.baf~
+		EXTEND_TOP ~baldur25.bcs~ ~%MOD_FOLDER%/compat/lca/baf/xaldregister.baf~
+	END
+//}

@@ -1,0 +1,29 @@
+//{ Skitia NPCs
+	
+	//{ Helga
+		ACTION_IF FILE_EXISTS_IN_GAME ~X3HelJ.dlg~ THEN BEGIN
+			PRINT @44 /*~Skitia NPC mod detected. Updating dialogs accordingly...~ */ 
+			SILENT
+			COMPILE ~%MOD_FOLDER%/compat/skitia/helga/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/skitia/tra/english/xaldskit.tra~
+			COMPILE ~%MOD_FOLDER%/compat/skitia/helga/xaldtob.d~ USING ~%MOD_FOLDER%/compat/skitia/tra/english/xaldskit.tra~
+		END 
+	//}
+	
+	//{ Kale
+		ACTION_IF FILE_EXISTS_IN_GAME ~X3KalJ.dlg~ THEN BEGIN
+			PRINT @44 /* ~Skitia NPC mod detected. Updating dialogs accordingly...~ */ 
+			SILENT
+			COMPILE ~%MOD_FOLDER%/compat/skitia/kale/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/skitia/tra/english/xaldskit.tra~
+			COMPILE ~%MOD_FOLDER%/compat/skitia/kale/xaldtob.d~ USING ~%MOD_FOLDER%/compat/skitia/tra/english/xaldskit.tra~
+		END 
+	//}
+	
+	//{ Vienxay
+		ACTION_IF FILE_EXISTS_IN_GAME ~X3VieJ.dlg~ THEN BEGIN
+			PRINT @44 /* ~Skitia NPC mod detected. Updating dialogs accordingly...~ */ 
+			SILENT
+			COMPILE ~%MOD_FOLDER%/compat/skitia/vienxay/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/skitia/tra/english/xaldskit.tra~
+			COMPILE ~%MOD_FOLDER%/compat/skitia/vienxay/xaldtob.d~ USING ~%MOD_FOLDER%/compat/skitia/tra/english/xaldskit.tra~
+		END 
+	//}
+//}

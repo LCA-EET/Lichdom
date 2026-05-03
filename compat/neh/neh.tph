@@ -1,0 +1,8 @@
+//{ Neh'taniel Mod
+	ACTION_IF FILE_EXISTS_IN_GAME ~SK#NEHTJ.dlg~ THEN BEGIN
+		PRINT @45 /* ~Neh'taniel NPC mod detected. Updating dialogs accordingly...~ */ 
+		SILENT
+		COMPILE ~%MOD_FOLDER%/compat/neh/d/xaldsoa.d~ USING ~%MOD_FOLDER%/compat/neh/tra/english/xaldneh.tra~
+		COMPILE ~%MOD_FOLDER%/compat/neh/d/xaldtob.d~ USING ~%MOD_FOLDER%/compat/neh/tra/english/xaldneh.tra~
+	END 
+//}

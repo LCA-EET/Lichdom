@@ -1,0 +1,8 @@
+IF
+	TriggerOverride("Driz2", GlobalLT("XA_LD_Registered", "LOCALS", 1))
+THEN
+	RESPONSE #100
+		ActionOverride("Driz2", SetGlobal("XA_LD_Registered", "LOCALS", 1))
+		Continue()
+END
+

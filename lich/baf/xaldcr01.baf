@@ -1,0 +1,21 @@
+//{ Crown of the Lich Undead Flag
+IF
+	!Race(Player1, LICH)
+	HasItemEquiped("xaldcrwn", Player1)
+	!General(Player1, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player1, UNDEAD)
+		Continue()
+END
+
+IF
+	!Race(Player1, LICH)
+	!HasItemEquiped("xaldcrwn", Player1)
+	General(Player1, UNDEAD)
+THEN
+	RESPONSE #100
+		ChangeGeneral(Player1, HUMANOID)
+		Continue()
+END
+//}

@@ -1,0 +1,22 @@
+//{ Rolling Eight Hour Resurrection Timer
+IF
+	GlobalLT("XA_LD_RezTimerSet", "GLOBAL", 1)
+	Global("XA_LD_LichResurrection", "GLOBAL", 0)
+THEN
+	RESPONSE #100
+		SetInterrupt(FALSE)
+		SetGlobal("XA_LD_RezTimerSet", "GLOBAL", 1)
+		SetGlobalTimer("XA_LD_RezTimer", "GLOBAL", EIGHT_HOURS)
+		SetInterrupt(TRUE)
+END
+
+IF
+	//!ActuallyInCombat()
+	Global("XA_LD_LichResurrection", "GLOBAL", 0)
+	GlobalTimerExpired("XA_LD_RezTimer", "GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobalTimer("XA_LD_RezTimer", "GLOBAL", EIGHT_HOURS)
+		Continue()
+END
+//}

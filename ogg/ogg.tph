@@ -1,0 +1,9 @@
+PRINT ~Processing audio files... please wait.~
+
+SILENT 
+
+LAF HANDLE_AUDIO
+	STR_VAR
+		audio_path= ~%MOD_FOLDER%/ogg/files~
+		oggdec_path= ~%MOD_FOLDER%/ogg~
+END

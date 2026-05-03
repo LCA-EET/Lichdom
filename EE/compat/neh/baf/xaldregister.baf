@@ -1,8 +1,0 @@
-IF
-	TriggerOverride("SK#Neht", GlobalLT("XA_LD_Registered", "LOCALS", 1))
-THEN
-	RESPONSE #100
-		ActionOverride("SK#Neht", SetGlobal("XA_LD_Registered", "LOCALS", 1))
-		Continue()
-END
-

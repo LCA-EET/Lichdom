@@ -1,0 +1,7 @@
+//{ The Longer Road
+	ACTION_IF FILE_EXISTS_IN_GAME ~lrirenic.dlg~ THEN BEGIN
+		PRINT @39 /* ~The Longer Road mod detected. Updating dialogs accordingly...~*/ 
+		SILENT
+		COMPILE ~%MOD_FOLDER%/compat/tlr/d/xaldtob.d~ USING ~%MOD_FOLDER%/compat/tlr/tra/english/xaldtlr.tra~
+	END
+//}

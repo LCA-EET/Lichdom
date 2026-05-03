@@ -1,0 +1,27 @@
+PRINT @52  // ~Processing Siege of Dragonspear changes...~
+
+ACTION_IF(sod_carryover = 0) THEN BEGIN
+	INCLUDE ~%MOD_FOLDER%/sod/xasod_co.tph~
+END
+
+//{ Add lich dust to SoD Liches
+	ACTION_DEFINE_ARRAY lich_cre
+	BEGIN
+		bdcoldh
+		bddlich
+		bdzhadro
+	END
+			
+	ACTION_PHP_EACH lich_cre AS _ => lich_ref
+	BEGIN
+		COPY_EXISTING ~%lich_ref%.cre~ ~override~
+		ADD_CRE_ITEM ~xalddust~ #0 #0 #0 ~identified&unstealable~ ~inv15~
+	END
+//}
+
+ACTION_IF(isEET = 0) THEN BEGIN
+	EXTEND_TOP ~AR2600.BCS~		~%MOD_FOLDER%/bg2/baf/xaldprfm.baf~ //Debugging only
+END ELSE BEGIN
+	EXTEND_TOP ~BG2600.BCS~		~%MOD_FOLDER%/bg2/baf/xaldprfm.baf~ //Debugging only
+END
+
