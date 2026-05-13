@@ -343,9 +343,9 @@ _What's going on here?  I too want to know!_
 - If a Lich dies without an intact phylactery, the character is dead and may be unrevivable.
 
 **Why make the phylactery a gem instead of a more traditional amulet or crown?**
-- Gems: The Lichdom ritual has improved since previous versions of this mod (pre-1.4).  Unlike previous versions of this mod, an inventory-held gem called Phylactery is a Lich's phylactery.  Each phylactery looks alike as of this writing, and a a 
+- Gems: The Lichdom ritual has improved since previous versions of this mod (pre-1.4).  Unlike previous versions of this mod, an inventory-held gem called Phylactery is a Lich's phylactery.  Each phylactery looks alike as of this writing, and mousing over a phylactery is meant to show you whose phylactery it is.
 
-- Amulets: Edwin's Amulet is normally glued to his neck, and I wanted Liches to be able to use [https://baldursgate.fandom.com/wiki/Amulet_of_Power](Amulets of Power).
+- Amulets: Edwin's Amulet is normally glued to his neck, and I wanted Liches to be able to use [Amulets of Power](https://baldursgate.fandom.com/wiki/Amulet_of_Power).
 
 - Crown: I like Ioun Stones, and the Crown of the Lich mentioned elsewhere in this document allows anyone to temporarily get most of the effects of Lichdom.
 
@@ -366,12 +366,12 @@ Shroud of the Lich is also an intentional reference to [an ability of the same n
 - If this happens to you, it's from a technical limitation.
 
 **Why make Lichdom Liches immune to Turn Undead and Rebuke Undead?**
-- This way, classes that can use these abilities won't affect themselves nor their Lichdom Lich party members.  (No sense in blowing up your allies because you misclicked the Turn Undead button.)  Also, enemy priests were not likely to use Turn Undead or Rebuke Undead on the party.
+- This way, classes that can use these abilities won't affect themselves nor their Lichdom Lich party members.  (No sense in blowing up your allies because you misclicked the Turn Undead button.)  Also, enemy priests were not likely to use Turn Undead or Rebuke Undead on the party.  While becoming a Lich does have its negatives, annoying players via Turn Undead or Rebuke Undead was not my idea of a good time.
 
 **Why make a mod about becoming a Lich?**
 - In Infinity Engine games, Lichdom is like _dimension door_ - it seems like plenty of creatures can use it _except_ you!  Also, the notion of being able to use this option that's been in the D&D books for decades in various forms appealed to me.
 
-- In short, it's unique.  For the EE games, I know of no other mods which apply 'templates' to player characters like Lycanthrope, Lich, or Vampire.  (I'm not counting recruitable NPCs that are these sorts of creatures, nor shapeshifting abilities to mimic these templates.)  Maybe someone will soon make and public release a mod to turn characters into Werechihuahuas or other Lycanthropes, or into Angels, Constructs Demons, Devils, Elementals, Genies, Oozes, or Plants!
+- In short, it's unique.  For the EE games, I know of no other mods which apply 'templates' to player characters like Lycanthrope, Lich, or Vampire.  (I'm not counting recruitable NPCs that are these sorts of creatures, nor shapeshifting abilities to mimic these templates.)  Maybe someone will soon make and public release a mod to turn characters into Werechihuahuas or other Lycanthropes, or into Angels, Constructs, Demons, Devils, Elementals, Genies, Oozes, or Plants!
 
 **How does this mod interact with other mods that involve becoming a Lich?**
 - Most likely, they are totally separate.  Maybe they are also mechanically compatible.
