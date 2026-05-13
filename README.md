@@ -252,7 +252,7 @@ Lichdom should be installed BEFORE these mods if you use them:
 
 - [Love Conquers All AKA LCA (Caelar & Corwin)](https://github.com/LCA-EET/LCA).  Unlike many NPC mods, LCA already accounted for Lichdom.
 
--[EET End](https://github.com/Gibberlings3/EET).  Installing most mods after EET End is a *bad idea* that can corrupt your game or otherwise produce undesirable effects!
+- [EET End](https://github.com/Gibberlings3/EET).  Installing most mods after EET End is a *bad idea* that can corrupt your game or otherwise produce undesirable effects!
 
 # New Ability and Item Descriptions
 ![This Lich admires his new phylactery.  His life is in his hands.](https://github.com/LCA-EET/lichdom/blob/main/Documentation%20Images/Force-Chest-Phylactery-33.png)
