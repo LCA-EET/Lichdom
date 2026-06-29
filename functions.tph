@@ -1,0 +1,896 @@
+/*
+Copyright © 2026 FOSIE Mods (https://www.fosiemods.net)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+//{ Action Functions
+DEFINE_ACTION_FUNCTION xa_copyspellbook
+	INT_VAR
+		strrefID = 0
+	BEGIN
+		OUTER_SET bookID = 0
+		ACTION_DEFINE_ASSOCIATIVE_ARRAY spellbooks
+			BEGIN
+				misc3a => spwi513 // Breach
+				misc3a1 => spwi405 // Improved Invisibility
+				misc3a2 => spwi313 // Skull Trap
+				misc3a3 => spwi613 // Improved Haste
+				misc3a4 => spwi705 // Warding Whip
+				misc3a5 => spwi408 // Stoneskin
+				misc3a6 => spwi608 // Pierce Magic
+				misc3a7 => spwi118 // Chromatic Orb
+				misc3a8 => sppr504 // Raise Dead
+				misc3a9 => spwi721 // Mass Invisibility
+				misc3aa => spwi717 // Summon Efreeti
+			END
+			ACTION_PHP_EACH spellbooks AS book => spell
+				BEGIN
+					OUTER_SET refID = 0
+					OUTER_SET address = 0x156
+					//PRINT ~%book%.itm %bookID%~ 
+					COPY_EXISTING ~%book%.itm~ ~override/xabook%bookID%.itm~
+					WRITE_ASCII 0x3A ~xaibook~ #8
+					WRITE_ASCII 0x76 ~xaibook~ #8
+					WRITE_LONG 0xC RESOLVE_STR_REF(@4197)
+					PATCH_IF(bookID != 9) BEGIN
+						WRITE_ASCII 0xAE ~xaibook~ #8
+						WRITE_LONG 0xE6 14 // spell level
+						WRITE_ASCII 0xF6 ~%spell%~ #8
+						WRITE_ASCII 0x126 ~xabook%bookID%~ #8
+						WHILE(refID < 10)
+							BEGIN
+								WRITE_ASCII %address% ~xabook%refID%~ #8
+								address = address + 0x30
+								refID = refID + 1
+							END
+					END ELSE BEGIN
+						WRITE_LONG 0xAE 14 // spell level
+						WRITE_ASCII 0xBE ~%spell%~ #8
+					END
+					bookID = bookID + 1
+				END
+	END
+	
+
+DEFINE_ACTION_FUNCTION xa_cleartempfiles
+	BEGIN
+		DELETE ~%MOD_FOLDER%/temp/*~
+	END
+
+DEFINE_ACTION_FUNCTION xa_build_banter_interaction
+	STR_VAR
+		xa_name = ~~
+		xa_scriptName = ~~
+		xa_outputbcs = ~~
+	BEGIN
+		COPY_EXISTING ~xalccs04.bcs~ ~%MOD_FOLDER%/temp/%xa_tempID%.bcs~
+		DECOMPILE_AND_PATCH
+		BEGIN
+			REPLACE_TEXTUALLY ~\[NAME\]~ ~%xa_name%~
+			REPLACE_TEXTUALLY ~\[SN\]~ ~%xa_scriptName%~
+		END
+		OUTER_SET xa_basefileID = xa_tempID
+		EXTEND_BOTTOM ~%xa_outputbcs%.bcs~ ~%MOD_FOLDER%/temp/%xa_tempID%.bcs~
+		xa_tempID = xa_tempID + 1
+		OUTER_SET xa_index = 2
+		OUTER_WHILE (xa_index < 7) BEGIN
+			COPY_EXISTING ~%MOD_FOLDER%/temp/%xa_basefileID%.bcs~ ~%MOD_FOLDER%/temp/%xa_tempID%.bcs~
+			DECOMPILE_AND_PATCH
+			BEGIN
+				REPLACE_TEXTUALLY ~Player1~ ~Player%xa_index%~
+			END
+			EXTEND_BOTTOM ~%xa_outputbcs%.bcs~ ~%MOD_FOLDER%/temp/%xa_tempID%.bcs~
+			xa_tempID = xa_tempID + 1
+			xa_index = xa_index + 1
+		END
+	END
+DEFINE_ACTION_FUNCTION xa_build_banter_pending_script
+	STR_VAR
+		xa_toReplace = ~\[NAME\]~
+		xa_replacement = ~~
+		xa_bcs = ~~
+		xa_extendTo = ~~
+	BEGIN
+		COPY_EXISTING ~%xa_bcs%.bcs~ ~%MOD_FOLDER%/temp/%xa_tempID%.bcs~
+		DECOMPILE_AND_PATCH
+		BEGIN
+			REPLACE_TEXTUALLY ~%xa_toReplace%~ ~%xa_replacement%~
+		END
+
+		OUTER_SET xa_basefileID = xa_tempID
+		OUTER_SET xa_index = 1
+		OUTER_WHILE (xa_index < 7) BEGIN
+			OUTER_SET xa_tempID = xa_tempID + 1
+			COPY_EXISTING ~%MOD_FOLDER%/temp/%xa_basefileID%.bcs~ ~%MOD_FOLDER%/temp/%xa_tempID%.bcs~
+			DECOMPILE_AND_PATCH
+			BEGIN
+				REPLACE_TEXTUALLY ~Player1~ ~Player%xa_index%~
+				REPLACE_TEXTUALLY ~100~ ~%xa_index%~
+			END
+			EXTEND_BOTTOM ~%xa_extendTo%.bcs~ ~%MOD_FOLDER%/temp/%xa_tempID%.bcs~
+			xa_index = xa_index + 1
+		END
+END
+DEFINE_ACTION_FUNCTION xa_replace_recompile_string3
+	INT_VAR
+		xa_top = 1
+	STR_VAR
+		xa_strToReplace1 = ~~
+		xa_replacement1 = ~~
+		xa_strToReplace2 = ~~
+		xa_replacement2 = ~~
+		xa_bcs = ~~
+		xa_extend = ~~
+	BEGIN
+		COPY_EXISTING ~%xa_bcs%.bcs~ ~%xa_tempID%.bcs~
+		DECOMPILE_AND_PATCH
+		BEGIN
+			REPLACE_TEXTUALLY ~%xa_strToReplace1%~ ~%xa_replacement1%~
+			REPLACE_TEXTUALLY ~%xa_strToReplace2%~ ~%xa_replacement2%~
+		END
+		ACTION_IF(xa_top = 1) BEGIN
+			EXTEND_TOP ~%xa_extend%.bcs~ ~%xa_tempID%.bcs~
+		END ELSE BEGIN
+			EXTEND_BOTTOM ~%xa_extend%.bcs~ ~%xa_tempID%.bcs~
+		END
+		OUTER_SET xa_tempID = xa_tempID + 1
+	END
+DEFINE_ACTION_FUNCTION xa_replace_recompile_string2
+	INT_VAR
+		xa_top = 1
+	STR_VAR
+		xa_strToReplace = ~~
+		xa_replacement = ~~
+		xa_bcs = ~~
+		xa_extend = ~~
+	BEGIN
+		COPY_EXISTING ~%xa_bcs%.bcs~ ~%xa_tempID%.bcs~
+		DECOMPILE_AND_PATCH
+		BEGIN
+			REPLACE_TEXTUALLY ~%xa_strToReplace%~ ~%xa_replacement%~
+		END
+		ACTION_IF(xa_top = 1) BEGIN
+			EXTEND_TOP ~%xa_extend%.bcs~ ~%xa_tempID%.bcs~
+		END ELSE BEGIN
+			EXTEND_BOTTOM ~%xa_extend%.bcs~ ~%xa_tempID%.bcs~
+		END
+		OUTER_SET xa_tempID = xa_tempID + 1
+	END
+DEFINE_ACTION_FUNCTION xa_replace_recompile_string
+	STR_VAR
+		xa_strToReplace = ~~
+		xa_replacement = ~~
+		xa_output = ~~
+		xa_bcs = ~~
+	BEGIN
+		COPY_EXISTING ~%xa_bcs%.bcs~ ~%xa_output%.bcs~
+		DECOMPILE_AND_PATCH
+		BEGIN
+			REPLACE_TEXTUALLY ~%xa_strToReplace%~ ~%xa_replacement%~
+		END
+		ACTION_IF(xa_top = 1) BEGIN
+			EXTEND_TOP ~%xa_extend%.bcs~ ~%xa_output%.bcs~
+		END ELSE BEGIN
+			EXTEND_BOTTOM ~%xa_extend%.bcs~ ~%xa_output%.bcs~
+		END
+	END
+DEFINE_ACTION_FUNCTION xa_extendScripts
+	INT_VAR
+		xa_extendTop = 1
+	STR_VAR
+		xa_extension = ~~
+	BEGIN
+		ACTION_PHP_EACH xa_scriptsToExtend AS _ => xa_scriptToExtend
+		BEGIN
+			ACTION_IF(xa_extendTop = 1) BEGIN
+				EXTEND_TOP ~%xa_scriptToExtend%.bcs~ ~%xa_extension%~
+			END ELSE BEGIN
+				EXTEND_BOTTOM ~%xa_scriptToExtend%.bcs~ ~%xa_extension%~
+			END
+		END
+	END
+
+DEFINE_ACTION_FUNCTION xa_replaceIn
+	INT_VAR
+		xa_extendTop = 1
+		xa_extendBottom = 0
+	STR_VAR
+		xa_copyFrom = ~~
+		xa_extendTarget = ~~
+		xa_fileextension = ~bcs~
+		xa_strToReplace = ~TO_REPLACE~
+	BEGIN
+		OUTER_SET xa_id = 0
+		ACTION_PHP_EACH xa_replacements AS _ => xa_replacement
+		BEGIN
+			COPY_EXISTING ~%xa_copyFrom%.%xa_fileextension%~ ~override/%xa_copyFrom%%xa_id%.%xa_fileextension%~
+			DECOMPILE_AND_PATCH BEGIN
+				REPLACE_TEXTUALLY ~TO_REPLACE~ ~%xa_replacement%~
+			END
+			
+			ACTION_IF (xa_extendTop = 1) THEN BEGIN
+				EXTEND_TOP ~%xa_extendTarget%.%xa_fileextension%~ 	~override/%xa_copyFrom%%xa_id%.%xa_fileextension%~
+			END
+			ACTION_IF (xa_extendBottom = 1) THEN BEGIN
+				EXTEND_BOTTOM ~%xa_extendTarget%.%xa_fileextension%~ 	~override/%xa_copyFrom%%xa_id%.%xa_fileextension%~
+			END
+			OUTER_SET xa_id = (xa_id + 1)
+		END
+		
+END
+DEFINE_ACTION_FUNCTION xa_copy_area_music
+	STR_VAR
+		xa_sourcearea = ~~
+		xa_destinationarea = ~~
+	BEGIN
+		OUTER_SET xa_day = 0
+		OUTER_SET xa_night = 0
+		OUTER_SET xa_victory = 0
+		OUTER_SET xa_battle = 0
+		OUTER_SET xa_defeat = 0
+		
+		COPY_EXISTING ~%xa_sourcearea%~ ~override~
+		READ_LONG 0xBC xa_songsoffset
+		READ_LONG xa_songsoffset xa_day
+		READ_LONG (xa_songsoffset + 4) xa_night
+		READ_LONG (xa_songsoffset + 8) xa_victory
+		READ_LONG (xa_songsoffset + 12) xa_battle
+		READ_LONG (xa_songsoffset + 16) xa_defeat
+			
+		COPY ~%xa_destinationarea%~ ~override~
+		READ_LONG 0xBC xa_songsoffset
+		WRITE_LONG xa_songsoffset xa_day
+		WRITE_LONG (xa_songsoffset + 4) xa_night
+		WRITE_LONG (xa_songsoffset + 8) xa_victory
+		WRITE_LONG (xa_songsoffset + 12) xa_battle
+		WRITE_LONG (xa_songsoffset + 16) xa_defeat
+END
+
+DEFINE_ACTION_FUNCTION xa_replace_recompile_iterate
+	INT_VAR
+		xa_max_iterations = 0
+		xa_iterations = 0
+		xa_find = 0
+	STR_VAR
+		xa_bcs = ~~
+		xa_extend = ~~
+	BEGIN
+		OUTER_WHILE (xa_iterations < xa_max_iterations) BEGIN
+			OUTER_SET xa_basefileID = xa_tempID
+			COPY_EXISTING ~%xa_bcs%.bcs~ ~%MOD_FOLDER%/temp/%xa_tempID%.bcs~
+			DECOMPILE_AND_PATCH
+			BEGIN
+				REPLACE_TEXTUALLY ~%xa_find%~ ~%xa_iterations%~
+			END
+			EXTEND_TOP ~%xa_extend%.bcs~ ~%MOD_FOLDER%/temp/%xa_tempID%.bcs~
+			xa_iterations = xa_iterations + 1
+			OUTER_SET xa_tempID = xa_tempID + 1
+		END
+	END
+
+DEFINE_ACTION_FUNCTION xa_replace_recompile
+	INT_VAR
+		xa_indexStart = 1
+		xa_includeInitial = 1
+		xa_extendTop = 1
+	STR_VAR
+		xa_bcs = ~~
+		xa_extend = ~~
+		xa_replace = ~Player2~
+	BEGIN
+		ACTION_IF(xa_includeInitial = 1) THEN BEGIN
+			ACTION_IF (xa_extendTop = 1) THEN BEGIN
+				EXTEND_TOP ~%xa_extend%.bcs~ ~override/%xa_bcs%.bcs~
+			END ELSE BEGIN
+				EXTEND_BOTTOM ~%xa_extend%.bcs~ ~override/%xa_bcs%.bcs~
+			END
+		END
+		OUTER_SET index = xa_indexStart
+		OUTER_WHILE(index < 6) BEGIN
+			OUTER_SET index = (index + 1)
+			COPY_EXISTING ~%xa_bcs%.bcs~ ~%MOD_FOLDER%/temp/%xa_tempID%.bcs~
+			DECOMPILE_AND_PATCH
+			BEGIN
+				REPLACE_TEXTUALLY ~%xa_replace%~ ~Player%index%~
+			END
+			ACTION_IF (xa_extendTop = 1) THEN BEGIN
+				EXTEND_TOP ~%xa_extend%.bcs~ ~%MOD_FOLDER%/temp/%xa_tempID%.bcs~
+			END ELSE BEGIN
+				EXTEND_BOTTOM ~%xa_extend%.bcs~ ~%MOD_FOLDER%/temp/%xa_tempID%.bcs~
+			END
+			
+			OUTER_SET xa_tempID = xa_tempID + 1
+		END
+	END
+
+DEFINE_ACTION_FUNCTION xa_copy_folder_contents
+	STR_VAR 
+		xa_relative_path = ~~
+	BEGIN
+		GET_FILE_ARRAY xa_files ~%xa_relative_path%~ ~$*~
+		ACTION_PHP_EACH xa_files AS _ => xa_file
+		BEGIN 
+			COPY ~%xa_file%~ ~override~
+		END
+	END
+	
+DEFINE_ACTION_FUNCTION xa_determine_quantity
+	INT_VAR
+		xa_str_ref = 0
+		xa_min_qty = 0
+		xa_max_qty = 0
+	RET
+		xa_quantity
+	BEGIN
+		ACTION_GET_STRREF xa_str_ref xa_prompt
+		PRINT ~%xa_prompt%~
+		ACTION_READLN ~xa_quantity~
+		
+		OUTER_WHILE NOT(IS_AN_INT %xa_quantity%)
+		BEGIN
+			PRINT ~%xa_prompt%~
+			ACTION_READLN ~xa_quantity~
+		END
+	
+		OUTER_WHILE (%xa_quantity% < %xa_min_qty%) OR (%xa_quantity% > %xa_max_qty%) 
+		BEGIN
+			PRINT ~%xa_prompt%~
+			ACTION_READLN ~xa_quantity~
+		END
+		SILENT
+	END
+
+DEFINE_ACTION_FUNCTION xa_inc_cre_difficulty_newref
+	INT_VAR
+		xa_diff_factor = 1
+		xa_hp_divisor = 3
+		xa_exp_divisor = 6
+	STR_VAR
+		xa_creref_old = ~~
+		xa_creref_new = ~~
+	BEGIN
+		COPY_EXISTING ~%xa_creref_old%.cre~ ~override/%xa_creref_new%.cre~
+		LPF xa_inc_cre_difficulty
+			INT_VAR
+				xa_factor = xa_diff_factor
+				xa_hpdivisor = xa_hp_divisor
+				xa_expdivisor = xa_exp_divisor
+		END
+END
+
+//}
+
+//{ Patch Functions
+DEFINE_PATCH_FUNCTION xa_lcaring_activate_vitality
+	BEGIN
+		WRITE_BYTE 0x444 100
+		WRITE_BYTE 0x474 100
+		WRITE_BYTE 0x4A4 100
+		WRITE_BYTE 0x4D4 100
+		WRITE_BYTE 0x504 100
+		WRITE_BYTE 0x5F4 100
+		WRITE_BYTE 0x624 100
+		WRITE_BYTE 0x654 100
+		WRITE_BYTE 0x684 100
+		WRITE_BYTE 0x6B4 100
+		WRITE_BYTE 0x954 100
+END
+
+DEFINE_PATCH_FUNCTION xa_lcaring_activate_speed
+	BEGIN
+		WRITE_BYTE 0x3E4 100
+		WRITE_BYTE 0x414 100
+END
+
+DEFINE_PATCH_FUNCTION xa_lcaring_activate_magic
+	BEGIN
+		WRITE_BYTE 0x174 100
+		WRITE_BYTE 0x1A4 100
+		WRITE_BYTE 0x1D4 100
+		WRITE_BYTE 0x204 100
+		WRITE_BYTE 0x234 100
+		WRITE_BYTE 0x264 100
+		WRITE_BYTE 0x294 100
+		WRITE_BYTE 0x594 100
+		WRITE_BYTE 0x5C4 100
+END
+
+DEFINE_PATCH_FUNCTION xa_lcaring_activate_physical
+	BEGIN
+		WRITE_BYTE 0x84 100
+		WRITE_BYTE 0xB4 100
+		WRITE_BYTE 0xE4 100
+		WRITE_BYTE 0x114 100
+		WRITE_BYTE 0x144 100
+END
+
+DEFINE_PATCH_FUNCTION xa_lcaring_activate_mind
+	BEGIN
+		WRITE_BYTE 0x2C4 100
+		WRITE_BYTE 0x2F4 100
+		WRITE_BYTE 0x324 100
+		WRITE_BYTE 0x354 100
+		WRITE_BYTE 0x384 100
+		WRITE_BYTE 0x3B4 100
+		WRITE_BYTE 0x564 100
+		WRITE_BYTE 0x6E4 100
+		WRITE_BYTE 0x714 100
+		WRITE_BYTE 0x744 100
+		WRITE_BYTE 0x774 100
+		WRITE_BYTE 0x7A4 100
+		WRITE_BYTE 0x7D4 100
+		WRITE_BYTE 0x804 100
+		WRITE_BYTE 0x834 100
+		WRITE_BYTE 0x864 100
+		WRITE_BYTE 0x894 100
+		WRITE_BYTE 0x8C4 100
+		WRITE_BYTE 0x8F4 100
+		WRITE_BYTE 0x924 100
+END
+
+DEFINE_PATCH_FUNCTION xa_remove_cre_equipment
+	BEGIN
+		READ_LONG 0x2B8 xa_index // Item slots offset
+		SET xa_eqRef = (0 - 1)
+		SET xa_endIndex = (xa_index + 0x4A)
+		WHILE(xa_index <= xa_endIndex) BEGIN
+			WRITE_SHORT xa_index xa_eqRef
+			xa_index = (xa_index + 2)
+		END
+END
+
+DEFINE_PATCH_FUNCTION xa_remove_cre_sounds
+	BEGIN
+		SET xa_sound_ref = (0 - 1)
+		SET xa_sound_offset = 0xA4
+		SET xa_sound_endOffset = 0x230
+		
+		WHILE(xa_sound_offset <= xa_sound_endOffset) BEGIN
+			WRITE_LONG xa_sound_offset xa_sound_ref
+			xa_sound_offset = (xa_sound_offset + 4)
+		END
+END
+DEFINE_PATCH_FUNCTION xa_inc_cre_difficulty
+	INT_VAR
+		xa_factor = 1
+		xa_hpdivisor = 3
+		xa_expdivisor = 10
+	BEGIN
+		READ_SHORT 0x24 xa_currentHP
+		READ_BYTE 0x52 xa_thac0
+		READ_SHORT 0x46 xa_ac
+		READ_LONG 0x14 xa_exp
+		
+		SET xa_newHP = xa_currentHP + ((xa_currentHP / xa_hpdivisor ) * xa_factor) // each factor increase hp by a third
+		SET xa_newTHAC0 = xa_thac0 - xa_factor 
+		SET xa_newAC = xa_ac - xa_factor 
+		SET xa_newXP = xa_exp + ((xa_exp / xa_expdivisor) * xa_factor) // each factor increase xp by a tenth
+		
+		WRITE_SHORT 0x24 xa_newHP
+		WRITE_SHORT 0x26 xa_newHP
+		WRITE_BYTE 0x52 xa_newTHAC0
+		WRITE_SHORT 0x46 xa_newAC
+		WRITE_SHORT 0x48 xa_newAC
+		WRITE_LONG 0x14 xa_newXP
+END
+
+DEFINE_PATCH_FUNCTION xa_replacesongs
+	INT_VAR
+		xa_day = 0
+		xa_night = 0
+		xa_victory = 0
+		xa_battle = 0
+		xa_defeat = 0
+		xa_day_alt = 0
+		xa_night_alt = 0
+		xa_victory_alt = 0
+		xa_battle_alt = 0
+		xa_defeat_alt = 0
+	BEGIN
+		SET xa_songsOffset = 0
+		READ_LONG 0xBC xa_songsOffset
+		PATCH_IF(xa_day > 0) THEN BEGIN
+			WRITE_LONG xa_songsOffset xa_day
+		END
+		xa_songsOffset = (xa_songsOffset + 4)
+		PATCH_IF(xa_night > 0) THEN BEGIN
+			WRITE_LONG xa_songsOffset xa_night
+		END
+		xa_songsOffset = (xa_songsOffset + 4)
+		PATCH_IF(xa_victory > 0) THEN BEGIN
+			WRITE_LONG xa_songsOffset xa_victory
+		END
+		xa_songsOffset = (xa_songsOffset + 4)
+		PATCH_IF(xa_battle > 0) THEN BEGIN
+			WRITE_LONG xa_songsOffset xa_battle
+		END
+		xa_songsOffset = (xa_songsOffset + 4)
+		PATCH_IF(xa_defeat > 0) THEN BEGIN
+			WRITE_LONG xa_songsOffset xa_defeat
+		END
+		xa_songsOffset = (xa_songsOffset + 4)
+		PATCH_IF(xa_day_alt > 0) THEN BEGIN
+			WRITE_LONG xa_songsOffset xa_day_alt
+		END
+		xa_songsOffset = (xa_songsOffset + 4)
+		PATCH_IF(xa_night_alt > 0) THEN BEGIN
+			WRITE_LONG xa_songsOffset xa_night_alt
+		END
+		xa_songsOffset = (xa_songsOffset + 4)
+		PATCH_IF(xa_victory_alt > 0) THEN BEGIN
+			WRITE_LONG xa_songsOffset xa_victory_alt
+		END
+		xa_songsOffset = (xa_songsOffset + 4)
+		PATCH_IF(xa_battle_alt > 0) THEN BEGIN
+			WRITE_LONG xa_songsOffset xa_battle_alt
+		END
+		xa_songsOffset = (xa_songsOffset + 4)
+		PATCH_IF(xa_defeat_alt > 0) THEN BEGIN
+			WRITE_LONG xa_songsOffset xa_defeat_alt
+		END
+	END
+
+DEFINE_PATCH_FUNCTION xa_mapdoublelink
+	INT_VAR
+		xa_distance_scale = 0
+		xa_encounter_probability = 0
+	STR_VAR
+		xa_area_a = ~~
+		xa_area_a_entry = ~~
+		xa_area_a_exit_node = ~~
+		xa_area_b = ~~
+		xa_area_b_entry = ~~
+		xa_area_b_exit_node = ~~
+	BEGIN
+		LPF ADD_WORLDMAP_LINKS // A to B
+			INT_VAR
+				distance_scale = xa_distance_scale
+				encounter_probability = xa_encounter_probability
+			STR_VAR
+				entry = ~%xa_area_b_entry%~
+				from_area = ~%xa_area_a%~
+				from_node = ~%xa_area_a_exit_node%~
+				to_area = ~%xa_area_b%~
+		END
+		
+		LPF ADD_WORLDMAP_LINKS // B to A
+			INT_VAR
+				distance_scale = xa_distance_scale
+				encounter_probability = xa_encounter_probability
+			STR_VAR
+				entry = ~%xa_area_a_entry%~
+				from_area = ~%xa_area_b%~
+				from_node = ~%xa_area_b_exit_node%~
+				to_area = ~%xa_area_a%~
+		END
+	END
+
+DEFINE_PATCH_FUNCTION xa_dlgb_soa_to_tob
+	BEGIN
+		REPLACE_TEXTUALLY ~BAERIE~ ~BAERIE25~
+		REPLACE_TEXTUALLY ~BANOMEN~ ~BANOME25~
+		REPLACE_TEXTUALLY ~BCERND~ ~BCERND25~
+		REPLACE_TEXTUALLY ~BDORN~ ~BDORN25~
+		REPLACE_TEXTUALLY ~BEDWIN~ ~BEDWIN25~
+		REPLACE_TEXTUALLY ~BHAERDA~ ~BHAERD25~
+		REPLACE_TEXTUALLY ~BHEXXAT~ ~BHEXXA25~
+		REPLACE_TEXTUALLY ~BIMOEN2~ ~BIMOEN25~
+		REPLACE_TEXTUALLY ~BJAHEIR~ ~BJAHEI25~
+		REPLACE_TEXTUALLY ~BJAN~ ~BJAN25~
+		REPLACE_TEXTUALLY ~BKELDOR~ ~BKELDO25~
+		REPLACE_TEXTUALLY ~BKORGAN~ ~BKORGA25~
+		REPLACE_TEXTUALLY ~BMAZZY~ ~BMAZZY25~
+		REPLACE_TEXTUALLY ~BMINSC~ ~BMINSC25~
+		REPLACE_TEXTUALLY ~BNALIA~ ~BNALIA25~
+		REPLACE_TEXTUALLY ~BNEERA~ ~BNEERA25~
+		REPLACE_TEXTUALLY ~BRASAAD~ ~BRASAA25~
+		REPLACE_TEXTUALLY ~BVALYGA~ ~BVALYG25~
+		REPLACE_TEXTUALLY ~BVICONI~ ~BVICON25~
+	END
+
+DEFINE_PATCH_FUNCTION xa_replaceSpawns
+	STR_VAR
+		xa_spawnRef = ~~
+	BEGIN
+		READ_LONG 0x60 xa_spawnOffset
+		READ_LONG 0x64 xa_spawnPoints
+		xa_spawnOffset = (xa_spawnOffset + 36)
+		SET xa_spawnsProcessed = 0
+		SET xa_creatureID = 0
+		SET xa_writeOffset = 0
+		SET xa_nextIndex = 0
+		WHILE (xa_spawnsProcessed < xa_spawnPoints) BEGIN
+			READ_SHORT (xa_spawnOffset + 80) xa_numCreatures 
+			WHILE(xa_creatureID < xa_numCreatures) BEGIN
+				xa_writeOffset = xa_spawnOffset + (xa_creatureID * 8)
+				WRITE_ASCIIE xa_writeOffset ~%xa_spawnRef%~ #8
+				xa_creatureID = (xa_creatureID + 1)
+			END
+			xa_creatureID = 0
+			xa_spawnOffset = (xa_spawnOffset + 0xC8)
+			xa_spawnsProcessed = (xa_spawnsProcessed + 1)
+		END
+	END 
+
+/*	Doesn't work because SPRINT can reference a variable. It needs a fixed index to read from an array.
+DEFINE_PATCH_FUNCTION xa_replaceSpawns
+	INT_VAR
+		xa_arrayLength = 0
+	BEGIN
+		READ_LONG 0x60 xa_spawnOffset
+		READ_LONG 0x64 xa_spawnPoints
+		xa_spawnOffset = (xa_spawnOffset + 36)
+		SET xa_nextArrayIndex = 0
+		SET xa_spawnsProcessed = 0
+		SET xa_creatureID = 0
+		SET xa_writeOffset = 0
+		WHILE (xa_spawnsProcessed < xa_spawnPoints) BEGIN
+			READ_SHORT (xa_spawnOffset + 80) xa_numCreatures 
+			WHILE(xa_creatureID < xa_numCreatures) BEGIN
+				SPRINT xa_replacementRef $xa_spawnRefs(%xa_nextArrayIndex%) <-- Doesn't work
+				xa_writeOffset = xa_spawnOffset + (xa_creatureID * 8)
+				WRITE_ASCIIE xa_writeOffset ~%xa_replacementRef%~ #8
+				PATCH_IF((xa_nextArrayIndex + 1) = xa_arrayLength) THEN BEGIN
+					xa_nextArrayIndex = 0
+				END ELSE BEGIN
+					xa_nextArrayIndex = (xa_nextArrayIndex + 1)
+				END
+				xa_creatureID = (xa_creatureID + 1)
+			END
+			xa_creatureID = 0
+			xa_spawnOffset = (xa_spawnOffset + 0xC8)
+			xa_spawnsProcessed = (xa_spawnsProcessed + 1)
+		END
+	END 
+*/
+DEFINE_PATCH_FUNCTION xa_delete_are_components
+	INT_VAR
+		xa_component_count_offset = 0
+		xa_count_to_delete = 0
+	STR_VAR
+		xa_component_type = ~~
+	BEGIN
+		PATCH_IF(xa_count_to_delete = 0) THEN BEGIN
+			READ_SHORT xa_component_count_offset xa_count_to_delete
+		END
+		SET xa_itemsProcessed = 0
+		WHILE (xa_itemsProcessed < xa_count_to_delete) BEGIN
+			LPF fj_are_structure
+				INT_VAR
+					fj_delete_mode = 0
+				STR_VAR
+					fj_structure_type = ~%xa_component_type%~
+			END
+			xa_itemsProcessed = (xa_itemsProcessed + 1)
+		END
+	END
+	
+DEFINE_PATCH_FUNCTION xa_delete_are_spawns 	
+	INT_VAR
+		xa_component_count = 0
+	BEGIN
+		LPF xa_delete_are_components
+			INT_VAR
+				xa_component_count_offset = 0x64
+				xa_count_to_delete = xa_component_count
+			STR_VAR
+				xa_component_type = ~spawn~
+		END
+	END 
+
+DEFINE_PATCH_FUNCTION xa_delete_are_actors
+	INT_VAR
+		xa_component_count = 0 	
+	BEGIN
+		LPF xa_delete_are_components
+			INT_VAR
+				xa_component_count_offset = 0x58
+				xa_count_to_delete = xa_component_count
+			STR_VAR
+				xa_component_type = ~actor~
+		END
+	END 
+	
+DEFINE_PATCH_FUNCTION xa_delete_are_containers	
+	INT_VAR
+		xa_component_count = 0 	
+	BEGIN
+		LPF xa_delete_are_components
+			INT_VAR
+				xa_component_count_offset = 0x74
+				xa_count_to_delete = xa_component_count
+			STR_VAR
+				xa_component_type = ~container~
+		END
+	END
+	
+DEFINE_PATCH_FUNCTION xa_delete_are_triggers
+	INT_VAR
+		xa_component_count = 0
+	BEGIN
+		LPF xa_delete_are_components
+			INT_VAR
+				xa_component_count_offset = 0x5A
+				xa_count_to_delete = xa_component_count
+			STR_VAR
+				xa_component_type = ~region~
+		END
+	END
+
+DEFINE_PATCH_FUNCTION xa_replace_trigger_scripts
+	STR_VAR
+		xa_newscript = ~None~
+	BEGIN
+		READ_LONG 0x5C xa_triggeroffset
+		READ_SHORT 0x5A xa_numtriggers
+		SET xa_idx = 0
+		WHILE (xa_idx < xa_numtriggers) BEGIN
+			WRITE_ASCIIE ((xa_triggeroffset + 124) + (xa_idx * 0xC4)) ~%xa_newscript%~ #8
+			xa_idx = (xa_idx + 1)
+		END
+	END
+	
+DEFINE_PATCH_FUNCTION xa_delete_actor_at_index 
+	INT_VAR xa_index = 0
+	
+	BEGIN
+		LPF fj_are_structure
+			INT_VAR
+				fj_delete_mode = xa_index
+			STR_VAR
+				fj_structure_type = actor
+		END
+	END
+
+
+	
+DEFINE_PATCH_FUNCTION xa_reset_cre
+	STR_VAR 
+		xa_dialog = ~~
+		xa_scriptName = ~~
+		xa_override = ~~
+		xa_class = ~~
+		xa_race = ~~
+		xa_general = ~~
+		xa_default = ~~
+	BEGIN
+		WRITE_ASCIIE 0x2CC ~%xa_dialog%~ #8 	// Dialogue
+		WRITE_ASCIIE 0x280 ~%xa_scriptName%~ #20  	// Script Name
+		WRITE_ASCIIE 0x248 ~%xa_override%~ #8		// Override Script
+		WRITE_ASCIIE 0x250 ~%xa_class%~ #8		// Class Script
+		WRITE_ASCIIE 0x258 ~%xa_race%~ #8		// Race Script
+		WRITE_ASCIIE 0x260 ~%xa_general%~ #8		// General Script
+		WRITE_ASCIIE 0x268 ~%xa_default%~ #8		// Default Script
+	END
+	
+DEFINE_PATCH_FUNCTION xa_add_extras
+	INT_VAR
+		xa_minX = 0
+		xa_maxX = 0
+		xa_minY = 0
+		xa_maxY = 0
+		xa_numToGenerate = 0
+		xa_orientation = 16
+	BEGIN
+		SET xa_extrasAdded = 0 
+		WHILE (xa_extrasAdded < xa_numToGenerate) BEGIN
+			PATCH_PHP_EACH xa_extras AS _ => xa_creRef
+			BEGIN
+				PATCH_IF (xa_orientation = 16) BEGIN
+					SET xa_direction = RANDOM(0 15)
+				END ELSE BEGIN
+					SET xa_direction = xa_orientation
+				END
+				PATCH_IF (xa_extrasAdded < xa_numToGenerate) BEGIN
+					SET xa_xCoord = RANDOM (xa_minX xa_maxX)
+					SET xa_yCoord = RANDOM (xa_minY xa_maxY)
+					LPF fj_are_structure 
+						INT_VAR 
+							fj_loc_x = xa_xCoord 
+							fj_loc_y = xa_yCoord 
+							fj_orientation = xa_direction
+						STR_VAR 
+							fj_structure_type = actor 
+							fj_cre_resref = ~%xa_creRef%~ 
+							fj_name = ~extra~
+					END
+					xa_extrasAdded = (xa_extrasAdded + 1)
+				END
+			END
+			
+		END
+	END
+	
+DEFINE_PATCH_FUNCTION xa_rescript_actors
+	STR_VAR 
+		xa_override = ~~
+		xa_class = ~~
+		xa_race = ~~
+		xa_general = ~~
+		xa_default = ~~
+		xa_specifics = ~~
+	BEGIN
+		READ_SHORT 0x58 xa_numactors
+		READ_LONG 0x54 xa_actors_offset
+		SET xa_actor_index = 0
+		
+		WHILE (xa_actor_index < xa_numactors) BEGIN
+			SET xa_override_offset = (xa_actors_offset + 0x50)
+			SET xa_general_offset = (xa_override_offset + 0x8)
+			SET xa_class_offset = (xa_general_offset + 0x8)
+			SET xa_race_offset = (xa_class_offset + 0x8)
+			SET xa_default_offset = (xa_race_offset + 0x8)
+			SET xa_specifics_offset = (xa_default_offset + 0x8)
+			
+			WRITE_ASCII xa_override_offset ~%xa_override%~ #8
+			WRITE_ASCII xa_general_offset ~%xa_general%~ #8
+			WRITE_ASCII xa_class_offset ~%xa_class%~ #8
+			WRITE_ASCII xa_race_offset ~%xa_race%~ #8
+			WRITE_ASCII xa_default_offset ~%xa_default%~ #8
+			WRITE_ASCII xa_specifics_offset ~%xa_specifics%~ #8
+			
+			SET xa_actors_offset = (xa_actors_offset + 0x110)
+			SET xa_actor_index = (xa_actor_index + 1)
+		END
+	END
+
+DEFINE_PATCH_FUNCTION xa_add_extras_rescript
+	INT_VAR
+		xa_minX = 0
+		xa_maxX = 0
+		xa_minY = 0
+		xa_maxY = 0
+		xa_numToGenerate = 0
+		xa_orientation = 16
+	STR_VAR 
+		xa_override = ~~
+		xa_class = ~~
+		xa_race = ~~
+		xa_general = ~~
+		xa_default = ~~
+		xa_specifics = ~~
+	BEGIN
+		SET xa_extrasAdded = 0 
+		WHILE (xa_extrasAdded < xa_numToGenerate) BEGIN
+			PATCH_PHP_EACH xa_extras AS _ => xa_creRef
+			BEGIN
+				PATCH_IF (xa_orientation = 16) BEGIN
+					SET xa_direction = RANDOM(0 15)
+				END ELSE BEGIN
+					SET xa_direction = xa_orientation
+				END
+				PATCH_IF (xa_extrasAdded < xa_numToGenerate) BEGIN
+					SET xa_xCoord = RANDOM (xa_minX xa_maxX)
+					SET xa_yCoord = RANDOM (xa_minY xa_maxY)
+					LPF fj_are_structure 
+						INT_VAR 
+							fj_loc_x = xa_xCoord 
+							fj_loc_y = xa_yCoord 
+							fj_orientation = xa_direction
+						STR_VAR 
+							fj_structure_type = actor 
+							fj_cre_resref = ~%xa_creRef%~ 
+							fj_name = ~extra~
+							fj_bcs_override = ~%xa_override%~
+							fj_bcs_general = ~%xa_general%~
+							fj_bcs_class = ~%xa_class%~
+							fj_bcs_race = ~%xa_race%~
+							fj_bcs_default = ~%xa_default%~
+							fj_bcs_specific = ~%xa_specifics%~
+					END
+					xa_extrasAdded = (xa_extrasAdded + 1)
+				END
+			END
+			
+		END
+	END
+//}
+
+	
+
+

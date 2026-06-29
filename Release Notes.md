@@ -1,5 +1,8 @@
 ## Lichdom Release Notes
 
+# v1.5.1 2026-06-29
+* Updated the Simplified Chinese translation, courtesy of MephistoSatanDevil.
+
 # v1.5 2026-02-08
 * Added the Portuguese translation, courtesy of lyanzeira.
 * Updated the Simplified Chinese translation, courtesy of MephistoSatanDevil.
