@@ -3,17 +3,16 @@ IF
 	!Race(Player1, LICH)
 	HasItemEquiped("xaldcrwn", Player1)
 	!General(Player1, UNDEAD)
-	GlobalLT("XA_LC_AssignGeneral", "LOCALS", 1)
+	TriggerOverride(Player1, GlobalLT("XA_LC_AssignGeneral", "LOCALS", 1))
 THEN
 	RESPONSE #100
-		SetGlobal("XA_LC_AssignGeneral", "LOCALS", 1)
+		ActionOverride(Player1, SetGlobal("XA_LC_AssignGeneral", "LOCALS", 1))
 		Continue()
 END
 
 /* 
 	Record the characters original General attribute
 	Humanoid = 1
-	Undead = 2
 	Animal = 3
 	GiantHumanoid = 4
 	Plant = 5
@@ -21,70 +20,60 @@ END
 
 */
 IF
-	Global("XA_LC_AssignGeneral", "LOCALS", 1)
+	TriggerOverride(Player1, Global("XA_LC_AssignGeneral", "LOCALS", 1))
 	General(Player1, HUMANOID)
 THEN
 	RESPONSE #100
-		SetGlobal("XA_LC_AssignGeneral", "LOCALS", 2)
-		SetGlobal("XA_LC_PriorGeneral", "LOCALS", 1)
+		ActionOverride(Player1, SetGlobal("XA_LC_AssignGeneral", "LOCALS", 2))
+		ActionOverride(Player1, SetGlobal("XA_LC_PriorGeneral", "LOCALS", 1))
 		Continue()
 END
 
 IF
-	Global("XA_LC_AssignGeneral", "LOCALS", 1)
-	General(Player1, UNDEAD)
-THEN
-	RESPONSE #100
-		SetGlobal("XA_LC_AssignGeneral", "LOCALS", 2)
-		SetGlobal("XA_LC_PriorGeneral", "LOCALS", 2)
-		Continue()
-END
-
-IF
-	Global("XA_LC_AssignGeneral", "LOCALS", 1)
+	TriggerOverride(Player1, Global("XA_LC_AssignGeneral", "LOCALS", 1))
 	General(Player1, ANIMAL)
 THEN
 	RESPONSE #100
-		SetGlobal("XA_LC_AssignGeneral", "LOCALS", 2)
-		SetGlobal("XA_LC_PriorGeneral", "LOCALS", 3)
+		ActionOverride(Player1, SetGlobal("XA_LC_AssignGeneral", "LOCALS", 2))
+		ActionOverride(Player1, SetGlobal("XA_LC_PriorGeneral", "LOCALS", 3))
 		Continue()
 END
 
 IF
-	Global("XA_LC_AssignGeneral", "LOCALS", 1)
+	TriggerOverride(Player1, Global("XA_LC_AssignGeneral", "LOCALS", 1))
 	General(Player1, GIANTHUMANOID)
 THEN
 	RESPONSE #100
-		SetGlobal("XA_LC_AssignGeneral", "LOCALS", 2)
-		SetGlobal("XA_LC_PriorGeneral", "LOCALS", 4)
+		ActionOverride(Player1, SetGlobal("XA_LC_AssignGeneral", "LOCALS", 2))
+		ActionOverride(Player1, SetGlobal("XA_LC_PriorGeneral", "LOCALS", 4))
 		Continue()
 END
 
 IF
-	Global("XA_LC_AssignGeneral", "LOCALS", 1)
+	TriggerOverride(Player1, Global("XA_LC_AssignGeneral", "LOCALS", 1))
 	General(Player1, PLANT)
 THEN
 	RESPONSE #100
-		SetGlobal("XA_LC_AssignGeneral", "LOCALS", 2)
-		SetGlobal("XA_LC_PriorGeneral", "LOCALS", 5)
+		ActionOverride(Player1, SetGlobal("XA_LC_AssignGeneral", "LOCALS", 2))
+		ActionOverride(Player1, SetGlobal("XA_LC_PriorGeneral", "LOCALS", 5))
 		Continue()
 END
 
 IF
-	Global("XA_LC_AssignGeneral", "LOCALS", 1)
+	TriggerOverride(Player1, Global("XA_LC_AssignGeneral", "LOCALS", 1))
 	General(Player1, MONSTER)
 THEN
 	RESPONSE #100
-		SetGlobal("XA_LC_AssignGeneral", "LOCALS", 2)
-		SetGlobal("XA_LC_PriorGeneral", "LOCALS", 6)
+		ActionOverride(Player1, SetGlobal("XA_LC_AssignGeneral", "LOCALS", 2))
+		ActionOverride(Player1, SetGlobal("XA_LC_PriorGeneral", "LOCALS", 6))
 		Continue()
 END
 
 IF
-	Global("XA_LC_AssignGeneral", "LOCALS", 2)
+	TriggerOverride(Player1, Global("XA_LC_AssignGeneral", "LOCALS", 2))
 THEN
 	RESPONSE #100
-		SetGlobal("XA_LC_AssignGeneral", "LOCALS", 0)
+		ActionOverride(Player1, SetGlobal("XA_LC_AssignGeneral", "LOCALS", 0))
 		ChangeGeneral(Player1, UNDEAD)
 		Continue()
 END
@@ -95,7 +84,7 @@ IF
 	!Race(Player1, LICH)
 	!HasItemEquiped("xaldcrwn", Player1)
 	General(Player1, UNDEAD)
-	Global("XA_LC_PriorGeneral", "LOCALS", 1)
+	TriggerOverride(Player1, Global("XA_LC_PriorGeneral", "LOCALS", 1))
 THEN
 	RESPONSE #100
 		ChangeGeneral(Player1, HUMANOID)
@@ -106,18 +95,7 @@ IF
 	!Race(Player1, LICH)
 	!HasItemEquiped("xaldcrwn", Player1)
 	General(Player1, UNDEAD)
-	Global("XA_LC_PriorGeneral", "LOCALS", 2)
-THEN
-	RESPONSE #100
-		ChangeGeneral(Player1, UNDEAD)
-		Continue()
-END
-
-IF
-	!Race(Player1, LICH)
-	!HasItemEquiped("xaldcrwn", Player1)
-	General(Player1, UNDEAD)
-	Global("XA_LC_PriorGeneral", "LOCALS", 3)
+	TriggerOverride(Player1, Global("XA_LC_PriorGeneral", "LOCALS", 3))
 THEN
 	RESPONSE #100
 		ChangeGeneral(Player1, ANIMAL)
@@ -128,7 +106,7 @@ IF
 	!Race(Player1, LICH)
 	!HasItemEquiped("xaldcrwn", Player1)
 	General(Player1, UNDEAD)
-	Global("XA_LC_PriorGeneral", "LOCALS", 4)
+	TriggerOverride(Player1, Global("XA_LC_PriorGeneral", "LOCALS", 4))
 THEN
 	RESPONSE #100
 		ChangeGeneral(Player1, GIANTHUMANOID)
@@ -139,7 +117,7 @@ IF
 	!Race(Player1, LICH)
 	!HasItemEquiped("xaldcrwn", Player1)
 	General(Player1, UNDEAD)
-	Global("XA_LC_PriorGeneral", "LOCALS", 5)
+	TriggerOverride(Player1, Global("XA_LC_PriorGeneral", "LOCALS", 5))
 THEN
 	RESPONSE #100
 		ChangeGeneral(Player1, PLANT)
@@ -150,10 +128,11 @@ IF
 	!Race(Player1, LICH)
 	!HasItemEquiped("xaldcrwn", Player1)
 	General(Player1, UNDEAD)
-	Global("XA_LC_PriorGeneral", "LOCALS", 6)
+	TriggerOverride(Player1, Global("XA_LC_PriorGeneral", "LOCALS", 6))
 THEN
 	RESPONSE #100
 		ChangeGeneral(Player1, MONSTER)
 		Continue()
 END
 //}
+

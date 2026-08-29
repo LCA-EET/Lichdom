@@ -167,6 +167,8 @@ SILENT
 	SAY NAME1 @33
 	SAY NAME2 @33
 	SAY DESC @34
+	WRITE_LONG 0x50 RESOLVE_STR_REF(@34) // unidentified desc
+	WRITE_SHORT 0x42 0 // Lore
 
 	COPY ~%MOD_FOLDER%/bg2/itm/xaldclaw.itm~ ~override~
 	SAY NAME1 @16
