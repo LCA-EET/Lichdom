@@ -1,5 +1,8 @@
 ## Lichdom Release Notes
 
+# v1.5.1a 2026-08-29
+* Fixed a bug concerning the Crown of the Lich (https://github.com/LCA-EET/Lichdom/issues/29).
+
 # v1.5.1 2026-06-29
 * Updated the Simplified Chinese translation, courtesy of MephistoSatanDevil.
 
